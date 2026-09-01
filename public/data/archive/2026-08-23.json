@@ -1,0 +1,171 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-23T10:39:34.861608+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 362,
+  "source_total": 362,
+  "source_lookback_days": 4,
+  "source_truncated": false,
+  "unseen_source_count": 360,
+  "previously_recommended_count": 143,
+  "eligible_count": 1,
+  "feedback_count": 17,
+  "semantic_feedback_count": 364,
+  "papers": [
+    {
+      "id": "2608.19579",
+      "title": "Enforcing LLM Safety through DMD-based Classification of Prompt-Response Embedding Dynamics",
+      "abstract": "Large Language Models (LLMs) are increasingly deployed in high-stakes applications, yet their tendency to generate toxic, harmful, or policy-violating content poses significant risks. Detecting these unsafe outputs efficiently in a black-box manner remains an open challenge. In this paper, we extend a recently proposed dynamical systems framework designed for hallucination detection to LLM safety classification. By projecting both prompts and responses into high-dimensional embedding spaces and fitting separate Koopman-based predictive models for safe and unsafe regimes, we classify new outputs using a new differential residual score that compares prediction errors of the safe and unsafe regimes. A key contribution is the incorporation of the prompt and response embedding dynamics, yielding fitted Koopman operators that capture crucial interaction patterns. We evaluate our black-box method across three safety benchmarks using three embedding models. Our results show that incorporating prompt embeddings yields consistent improvements, particularly for interaction-dependent violations when paired with causal decoders (e.g., in Llama-3), while response-only violations benefit more from dense semantic embedding representations. These findings opens the door for using dynamical systems to analyze AI systems rather than the dominant paradigm of using AI to model dynamical systems.",
+      "authors": [
+        "Mohamed Akrout",
+        "Olivera Kotevska",
+        "Dan Wilson"
+      ],
+      "published": "2026-08-20T02:50:44Z",
+      "updated": "2026-08-20T02:50:44Z",
+      "categories": [
+        "cs.AI",
+        "math.DS"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2608.19579v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19579v1",
+      "comment": "",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.558,
+          "matched": [
+            "llm safety",
+            "hallucination",
+            "safety"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5997,
+        "relevance": 0.5544,
+        "quality": 0.62,
+        "novelty": 0.891,
+        "freshness": 0.5249,
+        "feedback_adjustment": -0.0137,
+        "semantic_feedback": 0.7203
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "使用 DMD 与 Koopman 算子对提示‑响应嵌入动力学进行分类，可在黑盒条件下提升 LLM 安全检测。",
+        "problem": "需要一种无需访问模型内部或多次采样即可高效识别 LLM 有害输出的方法。",
+        "method": "将提示和响应的 token 嵌入投射至高维空间，分别拟合安全与不安全的 Koopman 预测模型，利用差分残差分数进行二分类。",
+        "evidence": "在三个安全基准上，加入提示嵌入始终提升检测效果，尤其对 Llama‑3 的交互依赖违规有显著增益。",
+        "limitations": "仅评估二分类且缺乏多类危害实验和理论可分性保证。",
+        "why_for_you": "对可信 LLM 研究者，这提供了无需内部访问的后部署安全监控方案，适合实际部署场景。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🛡️",
+            "text": "首次将提示嵌入动力学加入 Koopman 分类，实现交互依赖安全检测提升。"
+          },
+          {
+            "icon": "🔧",
+            "text": "基于扩展 DMD 拟合安全/不安全 Koopman 算子，比较预测误差得到差分残差分数。"
+          },
+          {
+            "icon": "📈",
+            "text": "在三项安全基准上，加入提示嵌入对 Llama‑3 的交互违规检测提升显著。"
+          }
+        ],
+        "overview": "本文将 LLM 的 token 生成视为离散动力系统，利用扩展 DMD 拟合安全与不安全两套 Koopman 算子，并引入提示嵌入动力学以捕获交互依赖的违规模式。通过差分残差分数实现黑盒二分类，在三个安全基准和三种不同规模的嵌入模型上验证了方法的有效性，揭示了嵌入模型与违规类型之间的细微关系。",
+        "methodology": [
+          {
+            "title": "嵌入投射",
+            "detail": "使用 Qwen3-Embed、Mistral、Llama‑3 等预训练模型将提示和响应的 token 转换为高维向量序列。"
+          },
+          {
+            "title": "Koopman 拟合",
+            "detail": "采用扩展 DMD（EDMD）对安全和不安全的嵌入轨迹分别进行最小二乘拟合，得到四个有限维 Koopman 算子。"
+          },
+          {
+            "title": "差分残差评分",
+            "detail": "在推理阶段计算安全与不安全模型的预测误差差异，作为二分类的决策分数。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "动力学视角",
+            "detail": "将 token 嵌入视为可观测的状态轨迹，安全与不安全行为对应不同的动力学流形。"
+          },
+          {
+            "title": "交互捕获",
+            "detail": "通过同时建模提示和响应的 Koopman 算子，捕获仅在两者交互时出现的违规模式。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "基准与模型",
+            "detail": "在三个公开安全基准上评估，使用三种嵌入模型（Qwen3-Embed 0.6B、Mistral 7.2B、Llama‑3 8.0B），采用二分类准确率等指标。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "提示嵌入提升",
+            "detail": "加入提示嵌入后，所有基准均出现一致的检测性能提升，尤其在交互依赖违规上对 Llama‑3 提升最明显。"
+          },
+          {
+            "title": "模型‑违规匹配",
+            "detail": "因果解码器（Llama‑3）适合捕获交互违规，紧凑语义编码器（Qwen‑Embed）更擅长检测仅响应中的不安全内容。"
+          }
+        ],
+        "contributions": [
+          "提出 Prompt‑aware Koopman 分类框架用于 LLM 安全检测",
+          "展示嵌入模型与违规类型之间的细粒度匹配关系",
+          "实现无需内部访问或多次采样的黑盒安全监控"
+        ],
+        "limitations": [
+          "仅实现二分类（安全/不安全），未覆盖多类别危害标签",
+          "实验局限于三种嵌入模型和特定安全基准，缺乏更广泛的评估",
+          "未提供安全可分性的理论保证"
+        ],
+        "open_questions": [
+          "如何将方法扩展到多类别安全标签（如暴力、仇恨、误导等）？",
+          "是否能建立 Koopman 动力学下安全/不安全轨迹可分性的理论界限？",
+          "在实时大规模部署环境中，计算开销与响应延迟如何进一步优化？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "llm safety",
+          "hallucination",
+          "safety"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

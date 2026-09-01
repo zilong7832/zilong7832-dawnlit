@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-21T10:46:58.431457+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 112,
+  "source_total": 112,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 112,
+  "previously_recommended_count": 142,
+  "eligible_count": 1,
+  "feedback_count": 17,
+  "semantic_feedback_count": 371,
+  "papers": [
+    {
+      "id": "2608.20314",
+      "title": "MidTool: Mid-training Data Synthesis for Agentic Tool Use",
+      "abstract": "Mid-training is increasingly recognized as a critical stage for shaping the capabilities of large language models. Recent work has shown that targeted mid-training can strengthen reasoning-intensive abilities such as math and science, and can also improve agentic capabilities in software-engineering settings. In this work, we study the parallel but less explored agentic capability: general tool use. We present MidTool, an open corpus construction pipeline for agentic tool-use mid-training that combines large-scale web, PDF, and code data with synthesized supervision from real-world tool APIs, MCP skills, and document-grounded workflows. MidTool is designed to teach models how to recognize tool affordances, ground arguments from context, compose tool call workflow, and recover from incomplete information. We mid-train Qwen3-4B-Base and Qwen3-8B-Base on MidTool-Mix, and then apply follow-up post-training with both supervised fine-tuning and reinforcement learning. Compared with baselines, MidTool-Mix consistently improves downstream performance under both SFT and RL on BFCL, tau2-Bench, and MCP Universe. These results suggest that general tool use, like other important LLM capabilities, benefits from dedicated mid-training rather than being left entirely to post-training.",
+      "authors": [
+        "Fengqing Jiang",
+        "Yite Wang",
+        "Boyi Liu",
+        "Zhaoyang Wang",
+        "Canwen Xu",
+        "Zhewei Yao",
+        "Radha Poovendran",
+        "Yuxiong He"
+      ],
+      "published": "2026-08-20T17:53:59Z",
+      "updated": "2026-08-20T17:53:59Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2608.20314v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20314v1",
+      "comment": "Data & Model: https://hf.co/collections/MidTool/midtool-release",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.4077,
+          "matched": [
+            "training data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.453,
+        "relevance": 0.3262,
+        "quality": 0.54,
+        "novelty": 0.8799,
+        "freshness": 0.8995,
+        "feedback_adjustment": -0.0187,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison"
+      ],
+      "summary": {
+        "evidence": "MidTool-Mix improves downstream performance on BFCL, tau2-Bench, and MCP Universe under SFT and RL.",
+        "limitations": "General tool use still struggles with deep-search-style exploratory tasks requiring dedicated trajectory data.",
+        "method": "MidTool combines web, PDF, code, and tool data with synthesized supervision for mid-training.",
+        "problem": "Improving general tool use in LLMs requires dedicated mid-training rather than post-training alone.",
+        "takeaway": "MidTool enhances agentic tool use via mid-training with synthesized data.",
+        "why_for_you": "Focus on data synthesis for tool use aligns with your interest in LLM training data optimization.",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "contributions": [
+          "Scalable pipeline for agentic tool-use mid-training data synthesis",
+          "Demonstration of mid-training benefits for general tool use capabilities"
+        ],
+        "experiments": [
+          {
+            "detail": "Tests on BFCL, tau2-Bench, and MCP Universe with Qwen3-4B-Base/8B models using SFT and RL",
+            "title": "Benchmark Evaluation"
+          },
+          {
+            "detail": "Compares MidTool-Mix with processed raw data, native trajectories, and context-grounded trajectories under fixed SFT recipe",
+            "title": "Ablation Study"
+          }
+        ],
+        "findings": [
+          {
+            "detail": "MidTool-Mix achieves 7.6% higher BFCL pass@4 vs. baseline in ablation study",
+            "title": "Performance Gains"
+          },
+          {
+            "detail": "MidTool-Mix shows marginal improvement on deep-search tasks requiring exploratory trajectory data",
+            "title": "Generalization Limits"
+          }
+        ],
+        "limitations": [
+          "Limited effectiveness on deep-search-style exploratory tasks",
+          "Dependence on teacher models for trajectory synthesis"
+        ],
+        "mechanism": [
+          {
+            "detail": "Teaches models to extract tool arguments from context and compose multi-step workflows using structured schemas",
+            "title": "Schema Grounding"
+          },
+          {
+            "detail": "Generates agentic trajectories from real-world APIs, MCP skills, and document workflows to simulate tool-use scenarios",
+            "title": "Trajectory Synthesis"
+          }
+        ],
+        "methodology": [
+          {
+            "detail": "Combines 20.3B tokens from web, PDF, code, and tool sources with synthesized agentic trajectories, prioritizing document-grounded workflows and executable schemas",
+            "title": "Data Mixture Design"
+          },
+          {
+            "detail": "Qwen3-4B-Base/8B models trained on MidTool-Mix, followed by supervised fine-tuning (SFT) and reinforcement learning (RL) for agentic capabilities",
+            "title": "Mid-training Pipeline"
+          }
+        ],
+        "open_questions": [
+          "How to optimize mid-training for highly exploratory domains without trajectory data",
+          "What self-supervised methods could reduce reliance on teacher models for trajectory synthesis"
+        ],
+        "overview": "MidTool addresses agentic tool use by combining diverse data sources (web/PDF/code/tool) with synthesized supervision. It teaches models to recognize tool affordances, ground arguments, and compose workflows. Experiments show significant performance gains on benchmarks through mid-training followed by post-training, but struggles with exploratory tasks requiring trajectory data.",
+        "signals": [
+          {
+            "icon": "🤖",
+            "text": "MidTool-Mix (20.3B tokens) improves tool use via synthesized agentic trajectories"
+          },
+          {
+            "icon": "⚙️",
+            "text": "Mid-training + SFT/RL on Qwen3-4B-Base/8B with document-grounded workflows"
+          },
+          {
+            "icon": "📊",
+            "text": "BFCL pass@4 up 7.6% vs. baseline in MidTool-Mix ablation"
+          }
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "training data"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

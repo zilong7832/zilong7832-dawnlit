@@ -1,0 +1,949 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-30T14:52:18.671788+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 411,
+  "source_total": 411,
+  "source_lookback_days": 4,
+  "source_truncated": false,
+  "unseen_source_count": 407,
+  "previously_recommended_count": 176,
+  "eligible_count": 47,
+  "feedback_count": 17,
+  "topic_feedback": {
+    "enabled": true,
+    "generated_at": "2026-08-30T14:52:18.671788+00:00",
+    "feedback_records": 17,
+    "latest_feedback_papers": 15,
+    "labeled_papers": 12,
+    "adjusted_topics": 1,
+    "minimum_effective_samples": 4.0,
+    "topics": [
+      {
+        "id": "efficient_adversarial_training",
+        "useful": 0.0,
+        "irrelevant": 1.0,
+        "samples": 1.0,
+        "effective_samples": 0.85,
+        "hit_rate": 0.0,
+        "smoothed_hit_rate": 0.4122,
+        "confidence": 0.071,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "llm_loss_landscape",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "llm_data_selection",
+        "useful": 0.5,
+        "irrelevant": 0.0,
+        "samples": 0.5,
+        "effective_samples": 0.45,
+        "hit_rate": 1.0,
+        "smoothed_hit_rate": 0.5502,
+        "confidence": 0.0372,
+        "base_weight": 0.8,
+        "effective_weight": 0.8,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "on_policy_distillation",
+        "useful": 0.0,
+        "irrelevant": 1.0,
+        "samples": 1.0,
+        "effective_samples": 0.86,
+        "hit_rate": 0.0,
+        "smoothed_hit_rate": 0.4118,
+        "confidence": 0.0714,
+        "base_weight": 0.7,
+        "effective_weight": 0.7,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "trustworthy_llm",
+        "useful": 3.0,
+        "irrelevant": 6.5,
+        "samples": 9.5,
+        "effective_samples": 8.47,
+        "hit_rate": 0.3158,
+        "smoothed_hit_rate": 0.3752,
+        "confidence": 0.7062,
+        "base_weight": 0.7,
+        "effective_weight": 0.6295,
+        "adjustment": -0.0705,
+        "active": true
+      },
+      {
+        "id": "llm_statistical_theory",
+        "useful": 0.0,
+        "irrelevant": 1.0,
+        "samples": 1.0,
+        "effective_samples": 0.89,
+        "hit_rate": 0.0,
+        "smoothed_hit_rate": 0.4087,
+        "confidence": 0.0744,
+        "base_weight": 0.6,
+        "effective_weight": 0.6,
+        "adjustment": 0.0,
+        "active": false
+      }
+    ]
+  },
+  "semantic_feedback_count": 345,
+  "minimum_daily_target": 3,
+  "minimum_daily_met": true,
+  "conference_supplement_count": 0,
+  "conference_eligible_count": 0,
+  "conference_pool_updated_at": null,
+  "conference_source_status": {},
+  "papers": [
+    {
+      "id": "2608.25941",
+      "title": "When Pruning Meets Interpretability: Preserving Sparse Autoencoder Robustness in LLMs",
+      "abstract": "Sparse autoencoders (SAEs) are widely used to interpret the internal representations of large language models (LLMs), yet their reliability under post-hoc model compression remains poorly understood. We present a systematic study of how pruning affects SAE behavior and theoretically show that, for a fixed SAE, its impact is governed by perturbation energy, a covariance-weighted norm. This perspective exposes a key limitation of magnitude pruning: by ignoring activation geometry, it distorts the learned representation space and degrades SAE functionality. Activation-aware methods such as Wanda and SparseGPT, in contrast, implicitly control perturbation energy and are therefore substantially more robust at preserving SAE behavior. We further reveal a consistent structural vulnerability across all pruning methods: middle layers are significantly more sensitive to pruning than early or late layers. Guided by this insight, we propose a layer-wise sparsity allocation strategy, achieving lower perplexity under the same average pruning sparsity. Experiments across four model architectures validate our theoretical findings. Code is publicly available at https://github.com/osu-srml/sae-robustness-under-pruning/tree/main.",
+      "authors": [
+        "Suchit Gupte",
+        "Xueru Zhang",
+        "Mohammad Mahdi Khalili"
+      ],
+      "published": "2026-08-26T15:57:42Z",
+      "updated": "2026-08-26T15:57:42Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2608.25941v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25941v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.5175,
+          "matched": [
+            "robust",
+            "robustness"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.456,
+          "matched": [
+            "robustness",
+            "reliability"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5694,
+        "relevance": 0.5052,
+        "quality": 0.69,
+        "novelty": 0.8125,
+        "freshness": 0.4351,
+        "feedback_adjustment": -0.0153,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "experiments"
+      ],
+      "summary": {
+        "evidence": "在四种模型架构上的实验验证了理论分析的正确性。",
+        "limitations": "作者指出中间层对剪枝的敏感性高于早期或晚期层，这是明确提到的局限性。",
+        "method": "通过理论分析揭示扰动能量对SAE行为的影响，并设计分层稀疏分配策略优化剪枝效果。",
+        "problem": "现有剪枝方法（如幅度剪枝）因忽略激活几何结构而破坏SAE功能，导致其可靠性不足。",
+        "takeaway": "提出了一种分层稀疏分配策略，以在相同平均剪枝稀疏度下降低困惑度并保持稀疏自编码器（SAE）的鲁棒性。",
+        "why_for_you": "与可信大语言模型（LLM）的可解释性保持相关，特别是在模型压缩场景下维持稀疏自编码器的鲁棒性。",
+        "source": "abstract",
+        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "robust",
+          "robustness"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2608.26588",
+      "title": "Unsaid, Unsafe? Implicit Security Obligations in LLM-Based RTL Code Generation",
+      "abstract": "Large Language Models (LLMs) generate register-transfer-level (RTL) code with rapidly improving functional correctness. Security of LLM-generated code, however, has been studied mainly for software, where flaws can still be patched after deployment. Insecure RTL offers no such remedy once taped out into silicon. We construct SECRTL-GEN, a multi-language resource-access security benchmark grounded in real SoC IP: 392 tasks over five CWE families and four HDLs (Verilog, SystemVerilog, VHDL, and Python), each with black-box functional and security testbenches. Functional specifications intentionally omit security obligations, matching how obligations are often kept out of functional docs in practice. An empirical study of five frontier LLMs shows a sharp gap: under vanilla prompts they pass functional tests in about 73-79% of cases but security tests in only 14-35%, and stronger functional models are not safer. Adding CWE knowledge raises security, while unaided self-thinking helps less and both security-oriented prompts cut functional pass rates, showing that the bottleneck is missing weakness awareness in the specification, not an inability to write defensive RTL. We present RTL-Obliger, a neuro-symbolic framework that infers these implicit obligations. An LLM extracts a functional-semantic graph from the specification; a symbolic engine then matches it against a CWE pattern ontology to surface mitigation-evidence gaps and signal-level obligations; the LLM finally revises RTL under those obligations in a functionality-preserving two-stage generation. Across five models and four languages, RTL-Obliger raises mean all-pass from 49.6-51.4% (SecV/RESCUE) to 61.6%, with higher security and functional rates than these secure-generation baselines.",
+      "authors": [
+        "Guang Yang",
+        "Xing Hu",
+        "Xiang Chen",
+        "Xin Xia"
+      ],
+      "published": "2026-08-27T03:59:55Z",
+      "updated": "2026-08-27T03:59:55Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2608.26588v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26588v1",
+      "comment": "Under Review",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.5821,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5496,
+        "relevance": 0.4657,
+        "quality": 0.69,
+        "novelty": 0.8357,
+        "freshness": 0.5067,
+        "feedback_adjustment": -0.0216,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "RTL-Obliger infers missing security obligations and revises LLM-generated RTL, substantially improving security pass rates.",
+        "problem": "Functional specifications for RTL omit implicit security obligations, causing LLM-generated designs to fail security tests.",
+        "method": "A neuro-symbolic system builds a functional-semantic graph, matches it against a CWE pattern ontology, and performs two-stage obligation-guided RTL generation.",
+        "evidence": "Mean all-pass rises from 49.6–51.4% (SecV/RESCUE) to 61.6% across five models and four HDLs.",
+        "limitations": "Residual failures are due to matching recall and obligation-guided generation, and the study covers only resource-access weaknesses with black-box tests.",
+        "why_for_you": "Relevant to loss-landscape research by revealing how missing security constraints affect LLM performance and how symbolic guidance can reshape the loss surface.",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "RTL-Obliger neuro‑symbolic pipeline lifts mean all‑pass on SECRTL‑GEN to 61.6%."
+          },
+          {
+            "icon": "⚙️",
+            "text": "Method extracts a functional‑semantic graph, matches it to a CWE ontology, then revises RTL in two stages."
+          },
+          {
+            "icon": "⚠️",
+            "text": "Symbolic matching adds +8.1 points to all‑pass; remaining errors stem from matching recall and generation filtering."
+          }
+        ],
+        "overview": "The paper introduces SECRTL-GEN, a 392‑task, four‑HDL benchmark that isolates the functional‑security gap in LLM‑generated RTL when specifications omit security obligations. An empirical study of five frontier LLMs shows high functional pass (73–79%) but low security pass (14–35%). RTL-Obliger addresses this by extracting a functional‑semantic graph from the spec, deterministically matching it against a CWE pattern ontology to infer signal‑level obligations, filtering candidates with an LLM‑as‑judge, and revising the RTL in a two‑stage generation that preserves functionality. Across models and languages, the framework raises mean all‑pass to 61.6%, with symbolic inference providing the largest gain.",
+        "methodology": [
+          {
+            "title": "Functional‑semantic graph extraction",
+            "detail": "An LLM parses the natural‑language specification into a graph of elements, lifetimes, sensitivities, and operations."
+          },
+          {
+            "title": "Symbolic ontology matching",
+            "detail": "A deterministic engine checks each graph element against CWE pattern predicates (PE, PT) to produce high‑recall obligation candidates."
+          },
+          {
+            "title": "LLM‑as‑Judge filtering",
+            "detail": "The LLM re‑evaluates each candidate against the spec and a functional‑semantic summary, discarding false positives without inventing new obligations."
+          },
+          {
+            "title": "Two‑stage RTL generation",
+            "detail": "Stage 1 generates a functional draft; Stage 2 revises the draft under the filtered obligations, aiming to keep functional behavior unchanged."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Deterministic high‑recall matching",
+            "detail": "Algorithm 1 evaluates every scenario in the CWE ontology, requiring preconditions and uncovered elements (U) to trigger an obligation, ensuring no structural gaps are missed."
+          },
+          {
+            "title": "Obligation instantiation via templates",
+            "detail": "Triggered scenarios are turned into natural‑language obligations by filling placeholders ({elem_names}, {trans_names}, {exit_hints}) with the uncovered elements and associated operations."
+          },
+          {
+            "title": "Functionality‑preserving revision",
+            "detail": "The second generation pass conditions the LLM on both the original spec and the obligation text, constraining edits to the minimal code regions identified by the symbolic engine."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Benchmark and baseline setup",
+            "detail": "SECRTL‑GEN comprises 392 tasks across Verilog, SystemVerilog, VHDL, and Python, each with black‑box functional (Tfunc) and security (Tsec) testbenches. Baselines include vanilla prompting, SecV, and RESCUE."
+          },
+          {
+            "title": "Model suite",
+            "detail": "Five frontier LLMs (including DeepSeek‑v4‑Pro) are evaluated under vanilla prompts and under RTL‑Obliger."
+          },
+          {
+            "title": "Metrics",
+            "detail": "Functional pass (F), security pass (S), and all‑pass (A = F ∧ S) are reported per model, language, and ablation."
+          },
+          {
+            "title": "Ablation study",
+            "detail": "Three variants remove (i) symbolic matching, (ii) the LLM‑as‑Judge, or (iii) the two‑stage generation to quantify each component’s contribution."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Functional‑security gap",
+            "detail": "Under vanilla prompts, models achieve 73–79% functional pass but only 14–35% security pass."
+          },
+          {
+            "title": "RTL‑Obliger improvement",
+            "detail": "Mean all‑pass rises from 49.6–51.4% (SecV/RESCUE) to 61.6% across five models and four HDLs."
+          },
+          {
+            "title": "Component impact",
+            "detail": "Removing symbolic matching drops average A by 8.1 points; removing the Judge or two‑stage generation causes smaller declines (≈2 points each)."
+          },
+          {
+            "title": "Error analysis",
+            "detail": "Remaining failures cluster around missed matches in the ontology (recall) and imperfect obligation‑guided revisions."
+          }
+        ],
+        "contributions": [
+          "SECRTL‑GEN: a multi‑language, real‑SoC security benchmark with omitted obligations.",
+          "Empirical quantification of the functional‑security gap for LLM‑generated RTL.",
+          "RTL‑Obliger: a neuro‑symbolic framework that infers and enforces implicit security obligations.",
+          "Comprehensive evaluation showing security gains and component‑wise ablation results."
+        ],
+        "limitations": [
+          "Benchmarked only resource‑access CWE families; other hardware weaknesses are not covered.",
+          "Security assessment relies on black‑box simulation testbenches, not formal verification.",
+          "Residual errors stem from ontology matching recall and obligation‑guided generation precision."
+        ],
+        "open_questions": [
+          "Can the neuro‑symbolic approach scale to larger, more complex designs and broader CWE families?",
+          "How does integrating symbolic obligation inference affect the loss landscape of LLM fine‑tuning for hardware code generation?",
+          "What are the trade‑offs between deterministic symbolic guidance and end‑to‑end learned security prompts in terms of efficiency and robustness?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "llm"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2608.26730",
+      "title": "Knowing When Not to Reuse: Conditional Experience Transfer in Autonomous LLM Post-Training",
+      "abstract": "Large language models offer broad capabilities, but adapting them to evolving domains, tools, and requirements often entails repeated post-training. Autonomous systems automate parts of this process by proposing updates, training candidates, and using evaluation feedback to select subsequent proposals. As evidence accumulates, a central problem emerges: which past update evidence remains actionable after subsequent training has changed the parent model? An update's effect depends on its parent, data, and training stage. Treating past success as context-free permission can waste compute. If the resulting child is promoted, it can also degrade the subsequent training trajectory. We formulate this problem as conditional experience transfer and introduce Boundary-Calibrated Intervention Transfer (BCIT), a method that authorizes experience reuse before weight-changing training. BCIT binds an observed effect to its source context, checks applicability conditions, vetoes candidates with named hard conflicts, and obtains current-state evidence through a bounded training trial when needed. Fully trained candidates still face a shared adoption rule, and only observed events extend memory. On one 4B model adapted across finance reasoning, text-to-SQL, and function calling, candidate updates exhibit heterogeneous target and retention effects across the evaluated contexts. Under matched candidates, evidence, and compute, BCIT authorizes fewer harmful updates and attains higher equal-budget final-model quality than the evaluated alternatives. These results support treating experience authorization as a distinct problem in autonomous post-training.",
+      "authors": [
+        "Tingyun Li",
+        "Wenfeng Feng",
+        "Weiqing Li",
+        "Abudukelimu Wuerkaixi",
+        "Guohua Liu",
+        "Yuewei Zhang"
+      ],
+      "published": "2026-08-27T07:22:16Z",
+      "updated": "2026-08-27T07:22:16Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2608.26730v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26730v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.586,
+          "matched": [
+            "training"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.3428,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5382,
+        "relevance": 0.5374,
+        "quality": 0.39,
+        "novelty": 0.8462,
+        "freshness": 0.5268,
+        "feedback_adjustment": -0.0178,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "formal bound"
+      ],
+      "summary": {
+        "takeaway": "BCIT reduces wasted compute by conditioning reuse of past updates on source context, improving final model quality.",
+        "problem": "Autonomous LLM post‑training must decide when historical update evidence remains valid after the parent model changes.",
+        "method": "BCIT records source context, evidence, applicability rules, and hard conflicts, then rejects, validates via a bounded trial, or fully trains candidates.",
+        "evidence": "On a 4B model across three tasks, BCIT cuts harmful authorizations from 62.5% to 25.0% and achieves higher cross‑task mean under equal compute.",
+        "limitations": "Experiments cover only one 4B model, three capabilities, a single retention benchmark, and manually set boundaries.",
+        "why_for_you": "If you aim to make adversarial or efficient LLM training more compute‑aware, BCIT’s conditional reuse directly addresses wasteful update allocation.",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "BCIT frames conditional experience transfer, cutting harmful update authorizations from 62.5% to 25.0%."
+          },
+          {
+            "icon": "🧮",
+            "text": "BCIT binds observed effects to source context, checks applicability, vetoes hard conflicts, and runs bounded trials before full training."
+          },
+          {
+            "icon": "📊",
+            "text": "BCIT authorizes 2/8 harmful vs 5/8 baseline and yields higher cross‑task mean, evaluated on one 4B model."
+          }
+        ],
+        "overview": "The paper defines conditional experience transfer, the problem of reusing past post‑training updates when the parent LLM has changed. It proposes Boundary‑Calibrated Intervention Transfer (BCIT), which records each update’s source context, observed gain, applicability conditions, and named hard conflicts. At decision time BCIT either rejects a candidate, runs a short bounded trial on the current parent, or grants full training under a frozen rule, after which a shared adoption rule decides promotion. Experiments on a 4B model across finance reasoning, text‑to‑SQL, and function calling show BCIT reduces harmful authorizations and improves overall task performance under equal compute budgets.",
+        "methodology": [
+          {
+            "title": "Source‑bound record",
+            "detail": "Each historical update is stored as (i, xs, Es, Bi, ρi) capturing the update, source context, observed evidence, applicability conditions, and conflict specifications."
+          },
+          {
+            "title": "Decision actions",
+            "detail": "Given a candidate and current context, BCIT either rejects (hard conflict), validates via a bounded training trial (unresolved evidence), or authorizes full training (frozen rule)."
+          },
+          {
+            "title": "Shared adoption rule",
+            "detail": "All fully trained children are later evaluated with the same promote‑or‑rollback criterion, decoupling authorization from final selection."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Context binding",
+            "detail": "Observed gains are tied to the exact parent model, data mixture, training stage, and evaluation protocol, preventing context‑free reuse."
+          },
+          {
+            "title": "Applicability checking",
+            "detail": "Pre‑specified conditions (e.g., data domain, training stage) are evaluated; violations trigger vetoes or bounded trials."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Setup",
+            "detail": "A 4B LLM adapted sequentially to three capabilities (finance reasoning, text‑to‑SQL, function calling). Candidates were matched on parent, seed, data scale, and budget."
+          },
+          {
+            "title": "Baselines",
+            "detail": "Compared BCIT against Flat‑Additive, ValidateAll, and Additive+Veto policies using six seeds and equal GPU‑hour budgets."
+          },
+          {
+            "title": "Metrics",
+            "detail": "Target task accuracy, two retention measures (IFEval‑P/I), harmful‑candidate authorization rate, beneficial‑candidate coverage, and cross‑task mean score."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Harm reduction",
+            "detail": "BCIT authorized 2 of 8 harmful candidates (25.0%) versus 5 of 8 (62.5%) for Flat‑Additive."
+          },
+          {
+            "title": "Beneficial retention",
+            "detail": "BCIT retained 9 of 10 beneficial candidates (90.0%) compared to 8 of 10 (80.0%) for the baseline."
+          },
+          {
+            "title": "Overall performance",
+            "detail": "Under matched compute, BCIT achieved a higher cross‑task mean than all evaluated shared‑model alternatives."
+          }
+        ],
+        "contributions": [
+          "Formulation of conditional experience transfer as a control problem in autonomous LLM post‑training.",
+          "Design of BCIT, a transparent reject‑validate‑train pipeline with explicit context binding and conflict vetoes.",
+          "Empirical evidence chain showing heterogeneous update effects and BCIT’s advantage in reducing harmful updates while preserving benefits."
+        ],
+        "limitations": [
+          "Evidence limited to a single 4B model and three target tasks.",
+          "Only one retention benchmark and manually defined applicability boundaries were used.",
+          "Studies share candidates and are not independent replications; component analyses are descriptive rather than fully isolated."
+        ],
+        "open_questions": [
+          "How does BCIT scale to larger models (e.g., 70B) and longer adaptation trajectories?",
+          "Can applicability conditions and conflict boundaries be learned automatically rather than hand‑specified?",
+          "What is the impact of BCIT on adversarial robustness and loss‑landscape geometry during sequential fine‑tuning?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "training"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2608.26982",
+      "title": "JudgeStealer: Extracting LLM Judging Capabilities across Evaluation Protocols",
+      "abstract": "Large language model (LLM) judges are increasingly used across various evaluation scenarios, making their judgment capabilities valuable intellectual property. However, black-box access exposes these capabilities to model extraction attacks. Existing extraction methods do not specifically target LLM judges and provide limited support for multiple evaluation protocols under restricted query budgets. In this study, we propose JUDGESTEALER, the first query-efficient model extraction framework for replicating judging capabilities across pointwise scoring, pairwise comparison, and listwise ranking protocols. JUDGESTEALER exploits the strong cross-protocol agreement to acquire pointwise scores and transform them into pairwise and listwise supervisions without additional victim queries. To capture informative judge patterns and improve query efficiency, JUDGESTEALER dynamically selects pointwise inputs based on semantic diversity, predictive uncertainty, and potential judge biases. It further applies score smoothing and multi-protocol review to preserve the ordinal structure of scores and mitigate catastrophic forgetting during surrogate adaptation. Extensive experiments on state-of-the-art LLM-as-a-judge and reward models show that JUDGESTEALER consistently outperforms existing extraction baselines, achieving up to 73.3%, 87.0%, and 71.6% accuracy for pointwise, pairwise, and listwise evaluation, respectively. JUDGESTEALER also remains effective across different sur- rogate model scales, adaptation strategies, and reasoning settings. Moreover, JUDGESTEALER demonstrates robustness against representative extraction defenses.",
+      "authors": [
+        "Chen Chen",
+        "Yaolin Chen",
+        "Xuehan Sun",
+        "Juan Lin",
+        "Xueluan Gong",
+        "Yuhang Zheng",
+        "Qian Wang",
+        "Kwok-Yan Lam"
+      ],
+      "published": "2026-08-27T11:28:32Z",
+      "updated": "2026-08-27T11:28:32Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.26982v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26982v1",
+      "comment": "20 pages, 8 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.497,
+          "matched": [
+            "llm"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.2092,
+          "matched": [
+            "efficient",
+            "robustness"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5416,
+        "relevance": 0.4986,
+        "quality": 0.54,
+        "novelty": 0.819,
+        "freshness": 0.5512,
+        "feedback_adjustment": -0.0285,
+        "semantic_feedback": 0.3947
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "JudgeStealer efficiently extracts LLM judging behavior across pointwise, pairwise, and listwise protocols using a two‑stage surrogate training pipeline.",
+        "problem": "Black‑box LLM judges can be stolen, yet existing extraction attacks lack support for multiple evaluation protocols under limited query budgets.",
+        "method": "The framework dynamically selects informative inputs via semantic diversity, predictive uncertainty, and bias signals, then applies adaptive score smoothing and multi‑protocol consolidation to train a surrogate judge.",
+        "evidence": "It attains up to 73.3% pointwise, 87.0% pairwise, and 71.6% listwise accuracy while remaining robust to representative defenses.",
+        "limitations": "Authors do not state explicit limitations.",
+        "why_for_you": "Relevant to your interest in efficient adversarial training because it demonstrates a query‑efficient attack that probes LLM loss landscapes across evaluation protocols.",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "First framework to extract LLM judging capabilities across pointwise, pairwise, and listwise protocols"
+          },
+          {
+            "icon": "🔧",
+            "text": "Dynamically selects inputs using semantic diversity, uncertainty, and bias, then smooths scores and consolidates multi‑protocol supervision"
+          },
+          {
+            "icon": "📈",
+            "text": "Achieves up to 73.3% pointwise, 87.0% pairwise, 71.6% listwise accuracy under ~600 queries"
+          }
+        ],
+        "overview": "JudgeStealer introduces a query‑efficient extraction pipeline that first gathers pointwise scores from a black‑box LLM judge, using a dynamic selection mechanism based on semantic diversity, predictive uncertainty, and potential judge bias. These scores are smoothed with an adaptive discrete Gaussian and used to warm‑up a surrogate model. In a second stage, the pointwise scores are transformed into pairwise and listwise supervision, and all three forms are jointly fine‑tuned, preserving ordinal structure and mitigating forgetting. Experiments on proprietary and open‑source judges show high accuracy across protocols and resilience to defenses.",
+        "methodology": [
+          {
+            "title": "Stage I – Pointwise Score Extraction",
+            "detail": "Iteratively query the victim judge, select inputs via D, U, B signals, and train the surrogate with adaptive Gaussian‑smoothed cross‑entropy loss."
+          },
+          {
+            "title": "Stage II – Multi‑Protocol Extension",
+            "detail": "Transform collected pointwise scores into pairwise comparisons and listwise rankings, then consolidate all supervision for joint surrogate adaptation."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Cross‑Protocol Agreement Exploitation",
+            "detail": "Assumes strong agreement among pointwise, pairwise, and listwise judgments, allowing conversion of pointwise outputs into other protocol labels without extra victim queries."
+          },
+          {
+            "title": "Dynamic Input Selection",
+            "detail": "Combines semantic diversity (D), predictive uncertainty (U), and bias estimation (B) to prioritize queries that reveal informative judge patterns."
+          },
+          {
+            "title": "Adaptive Score Smoothing",
+            "detail": "Blends one‑hot targets with a trainable discrete Gaussian distribution to encode ordinal relationships and reduce catastrophic forgetting."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Evaluation Setup",
+            "detail": "Surrogate: Qwen3‑1.7B (and others); Victims: GPT‑5.4, Llama‑3.2‑1B, Qwen3‑1.7B; Baselines: prior extraction attacks (KnockoffNet, Activethief, etc.); Metrics: Acc, Acc±1, MAE for each protocol; Query budget ≈600."
+          },
+          {
+            "title": "Ablation Studies",
+            "detail": "Removing any of D, U, B degrades performance; adaptive smoothing outperforms fixed smoothing and one‑hot supervision; consolidation stage contributes most runtime."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Extraction Performance",
+            "detail": "JudgeStealer reaches 73.3% pointwise, 87.0% pairwise, and 71.6% listwise accuracy, surpassing all listed baselines."
+          },
+          {
+            "title": "Robustness to Defenses",
+            "detail": "Maintains high accuracy against anomaly detection and ownership‑tracing defenses (e.g., Table 10 results)."
+          },
+          {
+            "title": "Efficiency",
+            "detail": "Full pipeline completes in 65 min 34 s for 600 queries; selection accounts for 23% of runtime."
+          }
+        ],
+        "contributions": [
+          "First model extraction framework for LLM judges across multiple evaluation protocols",
+          "Query‑efficient dynamic input selection using diversity, uncertainty, and bias signals",
+          "Adaptive score smoothing and multi‑protocol consolidation preserving ordinal structure"
+        ],
+        "limitations": [
+          "No explicit limitation discussion; evaluation limited to specific victim models and a ~600‑query budget"
+        ],
+        "open_questions": [
+          "How does the approach scale to larger query budgets or more restrictive API limits?",
+          "Can adaptive defenses that modify output distributions undermine the cross‑protocol transformation?",
+          "Is the method applicable to extracting other LLM functionalities beyond judging?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "llm"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2608.26587",
+      "title": "Surgical Alignment in Knowledge Graph Training for Clinical Diagnosis with Large Language Models",
+      "abstract": "Biomedical knowledge graphs (KGs) offer structured medical knowledge that can ground large language model (LLM) reasoning in clinical diagnosis application, yet how KG signal should be integrated into LLMs remains an open question. We present a systematic study spanning five KG task formulations, three training paradigms, two KGs, and three base LLMs. At the task level, all paradigms improve over the non-finetuned baseline, but methods with comparable in-domain accuracy show substantially different knowledge transfer behavior. We introduce Gradient Intervention Density (GID) and Gradient Distortion (GD) to measure how broadly an optimizer modifies the pretrained model. GID and GD together reveal a clear divide: KG-judgment training under KL regularization produces sparse, localized updates (a regime we term as surgical alignment), while task-specific SFT produces dense ones. A controlled ablation shows that the objective and KL contribute to sparsity independently, and the paradigms that produce sparse updates also improve reasoning quality, even when their in-domain accuracy is lower than task-specific SFT. Assessing KG-LLM integration thus requires complementing accuracy with optimization-geometry diagnostics. Our implementation can be found at https://github.com/LARK-NLP-Lab/Surgical-Alignment.",
+      "authors": [
+        "Saksham Khatwani",
+        "He Cheng",
+        "Majid Afshar",
+        "Dmitriy Dligach",
+        "Yanjun Gao"
+      ],
+      "published": "2026-08-27T03:57:52Z",
+      "updated": "2026-08-27T03:57:52Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.26587v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26587v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.5194,
+          "matched": [
+            "training"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.2614,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5409,
+        "relevance": 0.4678,
+        "quality": 0.66,
+        "novelty": 0.7951,
+        "freshness": 0.5065,
+        "feedback_adjustment": -0.0163,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "GitHub link",
+        "ablation study",
+        "baseline comparison"
+      ],
+      "summary": {
+        "takeaway": "We present a systematic study spanning five KG task formulations, three training paradigms, two KGs, and three base LLMs.",
+        "problem": "Biomedical knowledge graphs (KGs) offer structured medical knowledge that can ground large language model (LLM) reasoning in clinical diagnosis application, yet how KG signal should be integrated into LLMs remains an open question.",
+        "method": "We introduce Gradient Intervention Density (GID) and Gradient Distortion (GD) to measure how broadly an optimizer modifies the pretrained model.",
+        "evidence": "At the task level, all paradigms improve over the non-finetuned baseline, but methods with comparable in-domain accuracy show substantially different knowledge transfer behavior.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Efficient adversarial training, LLM loss landscape.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "training"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2608.26043",
+      "title": "Robust CurveMoE: Multi-Norm Adversarial Defense for Mixture-of-Experts Models via Mode Connectivity",
+      "abstract": "Multi-norm adversarial defense aims to protect neural networks against perturbations defined by different norm constraints, but existing methods typically optimize competing robustness objectives within a single parameter configuration, leading to substantial training cost and unfavorable robustness trade-offs. We propose Robust CurveMoE, an efficient mixture-of-experts framework that connects models specialized for different perturbation norms through a low-loss path and exploits the complementary robustness profiles of models along this path. Robust CurveMoE derives clean and norm-specialized experts from robustness-constrained curve locations and selectively expertizes only influential layers, while sharing the remaining parameters across routing paths. To further reduce curve-construction cost, we introduce contribution-guided partial updating, which selects influential curve parameters using initialization-based gradient scores. We also theoretically bound the objective gap between partial and full curve optimization. Experiments on CIFAR-100 and ImageNet-100 with WideResNet and Vision Transformer architectures show that Robust CurveMoE consistently improves clean, norm-specific, and Union accuracy over MSD and ERMC. In particular, it improves Union accuracy by 2.37 and 2.13 percentage points over the strongest baseline on CIFAR-100 and ImageNet-100, respectively. Extensive ablations further validate the effectiveness of partial updating, selective expertization, and robustness-constrained expert selection.",
+      "authors": [
+        "Xu Zhang",
+        "Ren Wang"
+      ],
+      "published": "2026-08-26T17:21:33Z",
+      "updated": "2026-08-26T17:21:33Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2608.26043v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26043v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "transferable",
+      "scope_matches": [
+        "mode connectivity"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.4141,
+          "matched": [
+            "adversarial",
+            "efficient",
+            "training",
+            "robust",
+            "robustness"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.3635,
+          "matched": [
+            "mode connectivity",
+            "loss",
+            "connectivity",
+            "mode"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.1686,
+          "matched": [
+            "robustness"
+          ]
+        },
+        {
+          "id": "llm_statistical_theory",
+          "name": "Statistical theory for LLMs",
+          "status": "background",
+          "score": 0.064,
+          "matched": [
+            "bound",
+            "optimization"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5311,
+        "relevance": 0.4377,
+        "quality": 0.7,
+        "novelty": 0.8446,
+        "freshness": 0.4434,
+        "feedback_adjustment": -0.0196,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "baseline comparison",
+        "experiments",
+        "formal bound",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We propose Robust CurveMoE, an efficient mixture-of-experts framework that connects models specialized for different perturbation norms through a low-loss path and exploits the complementary robustness profiles of models along this path.",
+        "problem": "Multi-norm adversarial defense aims to protect neural networks against perturbations defined by different norm constraints, but existing methods typically optimize competing robustness objectives within a single parameter configuration, leading to substantial training cost and unfavorable robustness trade-offs.",
+        "method": "We propose Robust CurveMoE, an efficient mixture-of-experts framework that connects models specialized for different perturbation norms through a low-loss path and exploits the complementary robustness profiles of models along this path.",
+        "evidence": "Experiments on CIFAR-100 and ImageNet-100 with WideResNet and Vision Transformer architectures show that Robust CurveMoE consistently improves clean, norm-specific, and Union accuracy over MSD and ERMC.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Efficient adversarial training, LLM loss landscape.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "adversarial",
+          "efficient",
+          "training",
+          "robust"
+        ],
+        "lane": "transferable"
+      }
+    }
+  ]
+}

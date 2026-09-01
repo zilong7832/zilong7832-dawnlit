@@ -1,0 +1,1132 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-06-30T19:46:14.602485+00:00",
+  "profile_updated_at": "2026-06-27",
+  "source_count": 662,
+  "source_total": 662,
+  "source_truncated": false,
+  "eligible_count": 52,
+  "feedback_count": 0,
+  "papers": [
+    {
+      "id": "2606.30077",
+      "title": "Online Data Selection for Instruction Tuning via Gaussian Processes",
+      "abstract": "With Large Language Model (LLM) pre-training and fine-tuning shifting its focus from data volume to data quality, quality data selection has emerged as a critical research topic. Existing online data selection methods for LLM training are typically \"batch-constrained\", limiting optimization to local utility within random batches. To overcome this, we propose GAIA (Global Adaptive Instruction tuning via GAussian processes), a framework that formulates data valuation as a global estimation process. GAIA employs Gaussian Process regression to model continuous utility manifolds across the semantic space, utilizing an adaptive strategy fusion mechanism to dynamically prioritize high-utility samples. By casting the strategy-posterior update as an instance of the classical fixed-share Hedge framework for tracking the best expert, we inherit a dynamic-regret guarantee that characterizes GAIA's robustness under non-stationary quality scores during training. Empirical evaluations on three datasets demonstrate that GAIA significantly outperforms state-of-the-art baselines like \\greats, establishing our method as a scalable and robust solution for efficient instruction tuning.",
+      "authors": [
+        "Jun Wang",
+        "Quoc Phong Nguyen",
+        "Julien Monteil",
+        "Vu Nguyen"
+      ],
+      "published": "2026-06-29T10:08:12Z",
+      "updated": "2026-06-29T10:08:12Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2606.30077v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.30077v1",
+      "comment": "",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm",
+        "instruction tuning"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "emerging",
+          "score": 0.7306,
+          "matched": [
+            "data selection",
+            "data valuation",
+            "data quality",
+            "data",
+            "selection",
+            "valuation"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "core",
+          "score": 0.6001,
+          "matched": [
+            "robustness",
+            "robust",
+            "fine-tuning",
+            "training"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.3209,
+          "matched": [
+            "robustness",
+            "llm",
+            "robustness"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6476,
+        "relevance": 0.7687,
+        "quality": 0.44,
+        "novelty": 0.2,
+        "freshness": 0.7998
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "GAIA leverages Gaussian Process regression with a fixed-share Hedge update to globally and adaptively select high-utility instruction tuning data, outperforming state-of-the-art baselines like GREATS with minimal overhead.",
+        "problem": "Existing online data selection methods for LLM instruction tuning are batch-constrained, limiting optimization to local utility within randomly sampled candidate pools and thus suffering from stochastic vulnerability.",
+        "method": "GAIA models the latent quality function over the entire training corpus using Gaussian Processes, discretizes it into strategies, and updates their posterior via a fixed-share Hedge algorithm to guide global candidate pool construction and adaptive data selection.",
+        "evidence": "Empirical evaluations on three instruction tuning datasets and four backbone LLMs show GAIA-GREATS achieves faster convergence and better perplexity and accuracy than baselines, adding only about 23 seconds overhead on a 13k-sample dataset.",
+        "limitations": "The method requires warm-up initialization with a small labeled subset and tuning of Hedge learning and mixing rates, with no explicit mechanism detailed for handling extremely large-scale datasets beyond the tested scale.",
+        "why_for_you": "GAIA offers a theoretically grounded, scalable, and robust framework for improving data selection quality in LLM instruction tuning, directly addressing batch-constrained limitations relevant to efficient and trustworthy LLM training.",
+        "source": "abstract",
+        "generated_by": "openai/gpt-4.1-mini"
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🧠",
+            "text": "GAIA employs Gaussian Process regression to model a continuous latent quality function over the entire training corpus, enabling principled generalization of data valuation signals to unseen examples throughout training."
+          },
+          {
+            "icon": "🛡️",
+            "text": "The fixed-share Hedge update mechanism maintains a posterior over discretized GP strategies, allowing dynamic adaptation to non-stationary quality scores with a provable dynamic-regret guarantee."
+          },
+          {
+            "icon": "📉",
+            "text": "Empirical results on MMLU, SAMSUM, and TYDIQA datasets with LLaMA-2, LLaMA-3, Qwen, and Mistral backbones show GAIA-GREATS significantly accelerates convergence and improves test perplexity and accuracy compared to GREATS and other baselines."
+          }
+        ],
+        "overview": "The paper addresses the critical challenge of online data selection for instruction tuning of LLMs, where existing methods are limited by batch-constrained candidate pools sampled uniformly at random, causing local optimality and stochastic vulnerability. GAIA proposes a global data valuation framework by modeling the latent quality function over the entire training corpus using Gaussian Processes, enabling smooth generalization of utility scores to unseen data. To scale this approach, GAIA discretizes the GP into a finite set of strategies and maintains a posterior distribution over them via a fixed-share Hedge update, which adapts to the non-stationarity of quality scores as model parameters evolve. This posterior guides the sampling of candidate batches biased toward high-utility regions, which can be further refined by existing selection methods like GREATS. Empirical evaluations on multiple datasets and LLM architectures demonstrate that GAIA significantly outperforms state-of-the-art baselines with negligible computational overhead, validating its effectiveness and scalability as a robust online data selection method for instruction tuning.",
+        "methodology": [
+          {
+            "title": "Gaussian Process Modeling",
+            "detail": "GAIA models the latent quality function over the entire training corpus as a Gaussian Process (GP) with a kernel fitted on warm-up data. This enables continuous estimation of data utility across the semantic embedding space, allowing generalization to unseen samples."
+          },
+          {
+            "title": "Strategy Discretization and Posterior Maintenance",
+            "detail": "The continuous GP is discretized into a finite set of function samples called strategies. GAIA maintains a posterior distribution over these strategies using a fixed-share Hedge update with a top-k likelihood, allowing adaptation to changing data quality during training."
+          },
+          {
+            "title": "Fixed-Share Hedge Update",
+            "detail": "To handle non-stationary quality scores, GAIA uses a fixed-share Hedge update that mixes the posterior with a uniform distribution at each step, preventing permanent exclusion of any strategy and providing a dynamic-regret guarantee for robustness."
+          },
+          {
+            "title": "Candidate Batch Sampling",
+            "detail": "At each iteration, GAIA samples a strategy from the posterior and draws candidate batches from the training pool with probabilities proportional to the exponentiated strategy scores, controlled by a temperature parameter to balance exploitation and diversity."
+          },
+          {
+            "title": "Integration with Existing Selection Methods",
+            "detail": "GAIA can be combined with methods like GREATS by first globally biasing candidate pool sampling toward high-utility regions, then applying local batch refinement to optimize quality and diversity within the batch."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Dynamic Posterior Update via Fixed-Share Hedge",
+            "detail": "GAIA models the posterior over strategies with a fixed-share Hedge update that tempers each batch's evidence by a learning rate λ and mixes with a uniform distribution at rate α. This update admits a Bayesian interpretation as filtering under a Markovian switching prior, enabling recovery from shifts in the best strategy as model parameters evolve."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Datasets and Models",
+            "detail": "Evaluations were conducted on three instruction tuning datasets: MMLU, SAMSUM, and TYDIQA, using four backbone LLMs: LLaMA-2-7B, LLaMA-3-18B, Qwen-3.4B, and Mistral-7B."
+          },
+          {
+            "title": "Baselines and Metrics",
+            "detail": "GAIA was compared against gradient-based (GradNorm), loss-prioritizing (MaxLoss, RHOLoss), semantic-aware (SBERT), and greedy optimization (GREATS) baselines, using perplexity and accuracy metrics on validation and test sets."
+          },
+          {
+            "title": "Efficiency and Overhead",
+            "detail": "GAIA adds minimal computational overhead, e.g., approximately 23 seconds for GP training on a 13k-sample MMLU dataset, demonstrating practical scalability."
+          },
+          {
+            "title": "Ablations and Sensitivity",
+            "detail": "The effect of sampling temperature τ and embedding dimensionality via SVD projection were analyzed, showing a trade-off between exploitation speed and batch diversity."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Improved Convergence",
+            "detail": "GAIA-GREATS achieves significantly faster convergence in perplexity and accuracy on MMLU-Sociology and SAMSUM compared to all baselines, demonstrating the benefit of global adaptive data selection."
+          },
+          {
+            "title": "Robustness to Non-Stationarity",
+            "detail": "The fixed-share Hedge update enables GAIA to adapt to evolving data quality during training, maintaining a dynamic-regret guarantee and preventing strategy collapse."
+          },
+          {
+            "title": "Minimal Overhead",
+            "detail": "Despite the added complexity of GP modeling and posterior updates, GAIA incurs negligible runtime overhead relative to baseline training times."
+          },
+          {
+            "title": "Effective Integration",
+            "detail": "Combining GAIA with GREATS leverages global guidance and local batch refinement, yielding superior performance over either method alone."
+          }
+        ],
+        "contributions": [
+          "Formulation of data valuation as a global estimation problem using Gaussian Processes over the entire training corpus.",
+          "Introduction of a fixed-share Hedge posterior update to handle non-stationary quality scores with dynamic-regret guarantees.",
+          "A scalable and computationally efficient framework that integrates with existing online data selection methods to improve instruction tuning.",
+          "Comprehensive empirical validation on multiple datasets and LLM architectures demonstrating superior performance and efficiency."
+        ],
+        "limitations": [
+          "Requires a warm-up phase with labeled data to fit the initial GP model, which may limit applicability in fully unsupervised settings.",
+          "Hyperparameters of the fixed-share Hedge update (learning rate λ and mixing rate α) require empirical tuning without automated adaptation.",
+          "Scalability beyond the tested dataset sizes and embedding dimensions is not explicitly demonstrated.",
+          "No explicit mechanism is provided for handling extremely large or streaming datasets beyond the discretized strategy approach."
+        ],
+        "open_questions": [
+          "How can GAIA be extended or adapted to fully unsupervised or zero-label scenarios without warm-up initialization?",
+          "Can the fixed-share Hedge update parameters be learned or adapted online to reduce hyperparameter tuning?",
+          "What are the limits of GAIA's scalability in terms of dataset size, embedding dimensionality, and model scale?",
+          "How does GAIA perform in continual learning or streaming data scenarios where data distribution shifts significantly?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "openai/gpt-4.1-mini",
+        "schema_version": 2
+      },
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "data selection",
+          "data valuation",
+          "data quality",
+          "data"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2606.28998",
+      "title": "Reward-Free Code Alignment from Pretrained or Fine-Tuned LLM: Unpacking the Trade-offs for Code Generation",
+      "abstract": "Large Language Model (LLM) alignment trains an LLM using preference data to produce outputs that better meet established quality standards. While LLM alignment techniques are studied for non-coding tasks, we know little about their usefulness for coding tasks. It is unclear whether LLM code alignment could support both functional requirements (producing executable, correct code) and non-functional requirements (code readability, style, maintainability). It is also unknown whether alignment for a code LLM should begin with base pretrained version or the finetuned (i.e., instruction-tuned) version of the LLM. In this paper, we offer insights on the above two research questions by conducting an empirical study. We studied five state-of-the-art (SOTA) LLMs using two widely used LLM alignment techniques: Direct Preference Optimization (DPO) and BoNBoN. For each training record, we created a preference pair as accepted and rejected instances by using the SelfCodeAlign pipeline. DPO and BoNBoN are reward-free models, i.e., they eliminate the need for multiple reward scores for output preferences. We tuned each LLM using the two alignment techniques in two settings: pretrained and finetuned versions of an LLM. We evaluated functional requirements using four SOTA benchmarks (HumanEval+, MBPP+, EvalPerf, EvoEval) and non-functional requirements using the CODAL benchmark, which evaluates code quality across five dimensions derived from software engineering practices. We find that pretrained-to-aligned pathways achieve larger improvements in the aligned variant over its pretrained variant. But the pretrained variant is generally less accurate than its finetuned variant. However, finetuned- to-aligned offers smaller performance improvements or, in some cases, degradation in the aligned variant than its finetuned variant.",
+      "authors": [
+        "Gias Uddin",
+        "Sanjeepan Sivapiran"
+      ],
+      "published": "2026-06-27T16:22:22Z",
+      "updated": "2026-06-27T16:22:22Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "primary_category": "cs.SE",
+      "abs_url": "https://arxiv.org/abs/2606.28998v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.28998v1",
+      "comment": "",
+      "journal_ref": "The ACM International Conference on the Foundations of Software Engineering (FSE) 2026",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.6234,
+          "matched": [
+            "alignment",
+            "alignment",
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5515,
+        "relevance": 0.4987,
+        "quality": 0.6,
+        "novelty": 0.7974,
+        "freshness": 0.5512
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "Alignment of code generation LLMs from pretrained models yields larger relative improvements, especially in non-functional code quality, compared to alignment from finetuned models.",
+        "problem": "It is unclear whether LLM alignment for code generation should target both functional and non-functional requirements and whether alignment should start from pretrained or finetuned LLMs.",
+        "method": "The study empirically evaluates five SOTA LLMs aligned via reward-free techniques DPO and BoNBoN on both pretrained and finetuned versions, assessing functional and non-functional code quality using multiple benchmarks.",
+        "evidence": "Pretrained-to-aligned models show substantial relative gains (e.g., CodeLlama-7b +75% non-functional), while finetuned-to-aligned models show smaller or negative improvements, with consistent non-functional quality gains across models.",
+        "limitations": "The study does not provide mechanistic explanations for why alignment from finetuned models underperforms and lacks exploration of alignment effects on larger or more diverse LLM families beyond the five studied.",
+        "why_for_you": "Understanding the trade-offs in alignment starting points and techniques informs trustworthy code generation by optimizing both correctness and software engineering quality in LLM outputs.",
+        "source": "abstract",
+        "generated_by": "openai/gpt-4.1-mini"
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🧠",
+            "text": "Pretrained-to-aligned pathway yields a +75% improvement in non-functional code quality for CodeLlama-7b and +42% functional improvement for Llama3-8b, indicating alignment effectiveness depends on model initialization."
+          },
+          {
+            "icon": "🛡️",
+            "text": "Direct Preference Optimization (DPO) and BoNBoN are reward-free alignment methods that respectively optimize preference classification and best-of-n sampling distributions, reducing computational overhead while improving code generation quality."
+          },
+          {
+            "icon": "📉",
+            "text": "Finetuned-to-aligned models sometimes degrade in performance compared to their finetuned baselines, suggesting alignment may conflict with instruction tuning or cause alignment incompatibility rather than catastrophic forgetting."
+          }
+        ],
+        "overview": "This paper investigates the efficacy of reward-free alignment techniques, DPO and BoNBoN, applied to code generation LLMs starting from either pretrained or finetuned checkpoints. The research addresses two key questions: whether alignment should target both functional correctness and non-functional code quality, and whether alignment should begin from pretrained or finetuned models. Five state-of-the-art LLMs and their instruction-tuned variants were aligned using preference pairs generated by the SelfCodeAlign pipeline. Functional performance was evaluated on four benchmarks (HumanEval+, MBPP+, EvalPerf, EvoEval), while non-functional quality was assessed via the CODAL benchmark covering readability, style, and maintainability. Results show pretrained-to-aligned models achieve larger relative improvements, particularly in non-functional metrics, despite starting from weaker baselines. Conversely, finetuned-to-aligned models exhibit smaller gains or performance degradation, indicating alignment may interfere with prior instruction tuning. The study highlights the importance of prioritizing non-functional requirements in code alignment and reveals model family-specific preferences for alignment techniques. These findings provide actionable guidance for trustworthy code generation LLM alignment strategies.",
+        "methodology": [
+          {
+            "title": "Direct Preference Optimization (DPO)",
+            "detail": "DPO reformulates alignment as a classification problem by directly optimizing the model to distinguish preferred from rejected outputs using maximum likelihood, eliminating the need for a separate reward model and reducing computational overhead compared to RLHF."
+          },
+          {
+            "title": "BoNBoN Alignment",
+            "detail": "BoNBoN trains models to mimic the best-of-n sampling distribution by combining supervised fine-tuning on best responses with Iterative Preference Optimization contrasting best and worst samples, thereby achieving high-quality outputs without inference-time sampling costs."
+          },
+          {
+            "title": "Preference Data Generation via SelfCodeAlign",
+            "detail": "Preference pairs for alignment training were created using the SelfCodeAlign pipeline, which generates accepted and rejected code instances to represent user preferences for both functional correctness and non-functional code quality."
+          },
+          {
+            "title": "Evaluation Benchmarks",
+            "detail": "Functional correctness was measured using HumanEval+, MBPP+, EvalPerf, and EvoEval benchmarks, while non-functional code quality was assessed using the CODAL benchmark, which evaluates code across five software engineering dimensions such as readability and style."
+          },
+          {
+            "title": "Alignment Training Protocol",
+            "detail": "Models were aligned in two pathways: pretrained-to-aligned and finetuned-to-aligned, each trained for 120k iterations using either DPO or BoNBoN, with supervised fine-tuning preceding alignment to establish a stable base."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "No Explicit Mechanism Provided",
+            "detail": "The paper does not provide mechanistic or theoretical explanations for the observed performance differences between pretrained-to-aligned and finetuned-to-aligned pathways or for the differential improvements in functional versus non-functional code quality."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Model and Dataset Selection",
+            "detail": "Five SOTA LLMs (Meta-Llama-3-8B, Qwen2.5-Coder-7B, CodeLlama-7b, deepseek-coder-1.3b, deepseek-coder-7b) and their instruction-tuned variants were aligned using DPO and BoNBoN on preference datasets generated by SelfCodeAlign."
+          },
+          {
+            "title": "Functional and Non-Functional Evaluation",
+            "detail": "Functional code generation was evaluated on HumanEval+, MBPP+, EvalPerf, and EvoEval benchmarks, while non-functional code quality was assessed using the CODAL benchmark, covering instruction following, readability, complexity, style adherence, and code explanation."
+          },
+          {
+            "title": "Alignment Pathways and Training",
+            "detail": "Two alignment pathways were compared: pretrained-to-aligned and finetuned-to-aligned, each trained for 120k steps with DPO or BoNBoN, following supervised fine-tuning to avoid catastrophic forgetting and ensure convergence."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Pretrained-to-Aligned Yields Larger Relative Gains",
+            "detail": "Pretrained-to-aligned models showed substantial relative improvements over their pretrained baselines, e.g., CodeLlama-7b improved +75% on non-functional CODAL metrics and Llama3-8b improved +42% on functional benchmarks."
+          },
+          {
+            "title": "Finetuned-to-Aligned Shows Smaller or Negative Improvements",
+            "detail": "Alignment from finetuned models resulted in smaller performance gains or even degradation compared to finetuned baselines, indicating potential incompatibility between alignment and prior instruction tuning."
+          },
+          {
+            "title": "Non-Functional Requirements Improve More Consistently",
+            "detail": "Non-functional code quality improved consistently across all models and alignment techniques, with gains such as +75% for CodeLlama-7b and +27.8% for deepseek-coder-7b, suggesting alignment better supports software engineering quality than functional correctness."
+          },
+          {
+            "title": "Model Family-Specific Technique Preferences",
+            "detail": "Meta-Llama models performed better with DPO alignment, while deepseek models favored BoNBoN, indicating alignment technique effectiveness depends on model architecture and training history."
+          },
+          {
+            "title": "Early SFT-Stage Degradation Predicts Alignment Failure",
+            "detail": "Degradation during supervised fine-tuning on preference data correlated with final alignment failure, suggesting early training instability is a useful indicator of alignment success."
+          }
+        ],
+        "contributions": [
+          "Empirical comparison of reward-free alignment techniques DPO and BoNBoN applied to code generation LLMs from pretrained and finetuned checkpoints.",
+          "Demonstration that pretrained-to-aligned models achieve larger relative improvements, especially in non-functional code quality, than finetuned-to-aligned models.",
+          "Identification of model family-specific preferences for alignment techniques and early failure indicators during supervised fine-tuning.",
+          "Provision of nine actionable recommendations to guide alignment strategies for code generation LLMs.",
+          "Comprehensive evaluation using multiple functional and non-functional benchmarks to capture diverse code quality dimensions."
+        ],
+        "limitations": [
+          "Lack of mechanistic explanation for why alignment from finetuned models underperforms or degrades performance.",
+          "Limited exploration of alignment effects on larger or more diverse LLM families beyond the five studied.",
+          "No analysis of long-term effects of alignment on model robustness or generalization beyond benchmark tasks.",
+          "Absence of ablation studies isolating the impact of individual alignment components or preference data quality."
+        ],
+        "open_questions": [
+          "What underlying mechanisms cause alignment from finetuned models to yield smaller or negative improvements compared to pretrained models?",
+          "How do alignment techniques scale and generalize to larger code generation models or different programming languages?",
+          "Can alignment methods be adapted to jointly optimize functional correctness and non-functional code quality without trade-offs?",
+          "What role does the quality and diversity of preference data play in the success of code LLM alignment?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "openai/gpt-4.1-mini",
+        "schema_version": 2
+      },
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "alignment",
+          "alignment",
+          "llm"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2606.29815",
+      "title": "SrDetection: A Self-Referential Framework for Data Leakage Detection in Code Large Language Models",
+      "abstract": "Evaluating code large language models (Code LLMs) requires reliable detection of data leakage, where benchmark performance is artificially inflated by exposure to benchmark data during pre-training. Existing approaches either assume access to proprietary training corpora, rely on brittle heuristics such as timestamp filtering, or use external reference sets with manually tuned, non-generalizable thresholds. To address these limitations, we introduce \\textbf{SrDetection}, a unified \\textbf{s}elf-\\textbf{r}eferential leakage detection framework for both gray-box (access to model logits) and black-box (access to model outputs) settings. SrDetection generates semantically equivalent variants of a benchmark sample and detects leakage by contrasting the model's behavior on the original versus its variants, flagging cases where the original is disproportionately easier for the model. We further design a controlled leakage detection testbed and evaluate SrDetection in this environment. Across different models and training stages, SrDetection improves average F1 by 21.52 points in the gray-box setting and 14.46 points in the black-box setting over strong baselines, demonstrating robust, threshold-independent leakage detection. Finally, a gray-box study of 15 widely used Code LLMs on four popular benchmarks reveals benchmark-specific leakage patterns beyond prior overlap-based analyses\\footnote{\\footnotesize Source code and data are available at https://github.com/SMinL/SrDetectionCode",
+      "authors": [
+        "Shuaimin Li",
+        "Liyang Fan",
+        "Zeyang Li",
+        "Zhuoyue Wan",
+        "Yufang Lin",
+        "Shiwen Ni",
+        "Feiteng Fang",
+        "Hamid Alinejad-Rokny",
+        "Yuanfeng Song",
+        "Kun Jing",
+        "Chen Jason Zhang",
+        "Min Yang"
+      ],
+      "published": "2026-06-29T05:48:42Z",
+      "updated": "2026-06-29T05:48:42Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2606.29815v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.29815v1",
+      "comment": "",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "core",
+          "score": 0.4874,
+          "matched": [
+            "robust",
+            "training"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5455,
+        "relevance": 0.3899,
+        "quality": 0.85,
+        "novelty": 0.8334,
+        "freshness": 0.7741
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "SrDetection is a self-referential framework that detects data leakage in Code LLMs by contrasting model behavior on original code samples versus their semantically equivalent variants, achieving robust, threshold-independent detection in both gray-box and black-box settings.",
+        "problem": "Existing data leakage detection methods for Code LLMs rely on unavailable training corpora, brittle heuristics, or external reference sets with non-generalizable thresholds, limiting reliable leakage detection.",
+        "method": "SrDetection generates semantics-preserving code variants using an auxiliary LLM and detects leakage by comparing model perplexity or output similarity on original versus variant samples, flagging cases where the original is disproportionately easier for the model.",
+        "evidence": "Experiments on a controlled leakage detection testbed show SrDetection improves average F1 by 21.52 points in gray-box and 14.46 points in black-box settings over strong baselines across multiple models and training stages.",
+        "limitations": "The paper does not provide explicit limitations or failure modes of SrDetection within the supplied text.",
+        "why_for_you": "SrDetection offers a novel, robust, and threshold-free approach to detect data leakage in Code LLMs, addressing key challenges in evaluating model generalization and fairness without requiring proprietary training data.",
+        "source": "abstract",
+        "generated_by": "openai/gpt-4.1-mini"
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🧠",
+            "text": "SrDetection achieves F1 scores of 74.76 on Qwen2.5-7B and 69.99 on LLaMA3.1-8B at 1 epoch in gray-box detection, substantially outperforming baselines that often perform near random."
+          },
+          {
+            "icon": "🛡️",
+            "text": "The method generates semantically equivalent code variants via function and variable renaming transformations, preserving execution behavior while altering lexical form to expose memorization."
+          },
+          {
+            "icon": "📉",
+            "text": "By comparing perplexity scores or output similarity between original and variant samples, SrDetection detects leakage cases where the original sample is significantly easier for the model, avoiding brittle global thresholds."
+          }
+        ],
+        "overview": "The paper addresses the critical problem of data leakage in Code LLM evaluation, where models may have seen benchmark samples during pre-training, inflating performance metrics. Existing detection methods either require access to proprietary training data, rely on brittle heuristics like timestamp filtering, or use external reference sets with manually tuned thresholds that do not generalize well to code. SrDetection introduces a self-referential framework that generates semantics-preserving variants of each benchmark sample using an auxiliary LLM. It then contrasts the model's behavior on the original versus these variants, detecting leakage when the original is disproportionately easier to predict. This approach works in both gray-box settings (access to logits) and black-box settings (access only to outputs), eliminating the need for external reference data or threshold calibration. Evaluations on a controlled testbed with continued pre-training demonstrate that SrDetection consistently outperforms strong baselines, improving average F1 by over 21 points in gray-box and 14 points in black-box scenarios. A large-scale study across 15 Code LLMs and four benchmarks reveals benchmark-specific leakage patterns, highlighting the method's practical utility and robustness.",
+        "methodology": [
+          {
+            "title": "Code Transformation Module",
+            "detail": "Generates semantically equivalent variants of a code sample through minimal, localized surface edits that preserve execution behavior and program structure. It applies function name renaming and variable name renaming consistently across the snippet to produce a contrastive set of variants."
+          },
+          {
+            "title": "Gray-box Detection",
+            "detail": "Computes perplexity (PPL) scores for the original sample and its variants using model logits. Leakage is flagged if the original sample's perplexity is consistently lower (easier) than all variants, indicating memorization."
+          },
+          {
+            "title": "Black-box Detection",
+            "detail": "Generates model completions from prefixes of the original and variant samples, then compares surface-level similarity between generated suffixes and true suffixes. Leakage is detected when the original sample yields significantly higher similarity scores than variants."
+          },
+          {
+            "title": "Self-Referential Decision",
+            "detail": "Makes leakage decisions based on relative comparisons within the generated set of variants, avoiding reliance on external reference data or manually tuned thresholds, thus ensuring threshold-independent detection."
+          },
+          {
+            "title": "Controlled Leakage Detection Testbed",
+            "detail": "Constructs a test environment with continued pre-training on filtered datasets to control sample inclusion, enabling precise measurement of leakage detection performance across different models, training epochs, and access settings."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Self-Referential Contrastive Leakage Detection",
+            "detail": "The core mechanism relies on the hypothesis that a memorized code sample will be significantly easier for the model to predict in its exact lexical form compared to semantically equivalent variants. By generating variants that preserve semantics but alter surface form, the method contrasts model behavior to isolate memorization effects from semantic understanding. No explicit equations are provided."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Gray-box Detection Performance",
+            "detail": "Evaluated on Qwen2.5-7B and LLaMA3.1-8B models with continued pre-training epochs 1, 3, and 5. SrDetection achieves F1 scores up to 88.59%, outperforming baselines such as PPL, Min-K% Prob, and DC-PDD, which show unstable or near-random performance."
+          },
+          {
+            "title": "Black-box Detection Performance",
+            "detail": "Tested on the same models and epochs, SrDetection improves F1 from 53.09% at 1 epoch to 82.06% at 5 epochs on Qwen2.5-7B, consistently surpassing baseline methods across benchmarks including HumanEval, MBPP, and BigCodeBench."
+          },
+          {
+            "title": "Data Leakage Detection Rates Across Code LLMs",
+            "detail": "Measured leakage rates (%) on 15 widely used Code LLMs across multiple benchmarks, showing higher detection rates on BigCodeBench and consistent superiority over baselines, demonstrating generalizability and robustness."
+          },
+          {
+            "title": "Sensitivity to Data Composition",
+            "detail": "Assessed F1-Macro performance under varying code-to-text mixing ratios (1:1, 1:5, 1:10) during continued pre-training, with SrDetection maintaining stable and strong detection performance compared to more variable baseline results."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Superior Detection Accuracy",
+            "detail": "SrDetection achieves up to 88.59% F1 in gray-box and 82.06% in black-box settings, significantly outperforming state-of-the-art baselines across multiple models and training epochs."
+          },
+          {
+            "title": "Robustness Across Models and Epochs",
+            "detail": "SrDetection maintains stable detection performance across different Code LLM architectures (Qwen2.5-7B, LLaMA3.1-8B) and training stages, unlike baselines which show unstable or model-dependent results."
+          },
+          {
+            "title": "Threshold-Independent Detection",
+            "detail": "By relying on relative comparisons within self-generated variant sets, SrDetection avoids brittle global thresholds and external reference data, enhancing generalizability and practical applicability."
+          },
+          {
+            "title": "Benchmark-Specific Leakage Patterns",
+            "detail": "A large-scale gray-box study reveals distinct leakage patterns across four popular benchmarks, indicating that leakage is dataset-dependent and not fully captured by prior overlap-based analyses."
+          }
+        ],
+        "contributions": [
+          "Introduced SrDetection, a unified self-referential framework for data leakage detection in Code LLMs covering both gray-box and black-box settings without external reference data or thresholds.",
+          "Developed an automatic semantic-preserving code augmentation method generating contrastive variants that expose memorization under common code edits and refactorings.",
+          "Constructed a controlled training-based testbed enabling precise leakage measurement and demonstrated robust improvements over competitive baselines.",
+          "Conducted a large-scale measurement study revealing benchmark-specific leakage patterns across widely used Code LLMs."
+        ],
+        "limitations": [
+          "No explicit limitations or failure cases of SrDetection are discussed in the provided text.",
+          "The approach relies on the quality of semantic-preserving code transformations, which may not cover all types of code variations.",
+          "Evaluation is limited to continued pre-training scenarios; generalization to other training regimes is not detailed."
+        ],
+        "open_questions": [
+          "How does SrDetection perform on models trained with different data curation or augmentation strategies beyond continued pre-training?",
+          "Can the semantic-preserving transformation module be extended to cover more complex code refactorings or cross-language variants?",
+          "What are the theoretical limits of self-referential leakage detection in scenarios with partial or noisy model access?",
+          "How can SrDetection be integrated into continuous evaluation pipelines for real-world Code LLM deployment?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "openai/gpt-4.1-mini",
+        "schema_version": 2
+      },
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "robust",
+          "training"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2606.29654",
+      "title": "Budgeted Act-or-Defer Multi-Agent LLM Deliberation with Local Reliability Bounds",
+      "abstract": "Multi-agent deliberation among LLMs can improve reasoning, but deployment requires deciding when the current answer is reliable enough to act on and when it should be escalated to human review. We formulate this as budgeted act-or-defer decision making. At each round, the system maps the debate prefix to a low-dimensional state, computes a $k$-nearest-neighbor lower confidence bound on state-conditional correctness using calibration data, and acts only when the bound exceeds a user-specified reliability threshold. The certificate controls wrong actions through the decomposition $β= δ+ α+ \\varepsilon_{\\mathrm{act}}$, separating calibration failure, residual action risk, and representation gap. The guarantee is conditional, not distribution-free: it relies on a valid local bias envelope and an action-region representation-gap bound, and each assumption is paired with falsification-style diagnostics. Because the same absolute wrong-action budget has different meanings across tasks of different difficulty, we set budgets relative to each task's final-round error using training data only, and evaluate safety by normalized budget usage $\\mathrm{WA}/β$. On six benchmarks against nine baselines, the method uses 9--12% of the pre-declared budget on activated datasets, reaching up to 84% automation and 96% acted-on accuracy; on stress-test datasets, it defers rather than forcing unreliable automation. Rather than relying on per-task post-hoc threshold search, the method prospectively converts a user-declared wrong-action budget into an auditable act-or-defer operating point before deployment, under explicitly stated assumptions.",
+      "authors": [
+        "Mengdie Flora Wang",
+        "Haochen Xie",
+        "Guanghui Wang",
+        "Devin Zhang",
+        "Jae Oh Woo"
+      ],
+      "published": "2026-06-28T23:46:56Z",
+      "updated": "2026-06-28T23:46:56Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2606.29654v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.29654v1",
+      "comment": "",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.4335,
+          "matched": [
+            "calibration",
+            "safety",
+            "reliability",
+            "llm"
+          ]
+        },
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "emerging",
+          "score": 0.2618,
+          "matched": [
+            "training data",
+            "data"
+          ]
+        },
+        {
+          "id": "llm_statistical_theory",
+          "name": "Statistical theory for LLMs",
+          "status": "background",
+          "score": 0.1818,
+          "matched": [
+            "bound"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5357,
+        "relevance": 0.4355,
+        "quality": 0.65,
+        "novelty": 0.8569,
+        "freshness": 0.7382
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "formal bound",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "The paper introduces a budgeted act-or-defer multi-agent LLM deliberation framework that uses local k-NN confidence bounds to control wrong-action risk and adaptively decide when to act or defer to human review.",
+        "problem": "Deploying multi-agent LLM debate systems requires principled stopping criteria that guarantee reliability and control the probability of acting on incorrect answers under a user-specified wrong-action budget.",
+        "method": "The method maps debate prefixes to low-dimensional states, computes k-nearest-neighbor lower confidence bounds on correctness using calibration data and a local bias envelope, and acts only when the bound exceeds a threshold derived from a decomposed wrong-action budget.",
+        "evidence": "On six benchmarks against nine baselines, the method uses only 9–12% of the pre-declared wrong-action budget, achieves up to 84% automation with 96% acted-on accuracy, and defers on stress-test datasets to avoid unreliable automation.",
+        "limitations": "The guarantees rely on conditional assumptions including a valid local bias envelope and representation-gap bounds, which require diagnostics and may degrade if violated.",
+        "why_for_you": "This approach provides auditable, prospective control over wrong-action risk in multi-agent LLM deliberation, enabling trustworthy deployment with explicit reliability guarantees and adaptive stopping.",
+        "source": "abstract",
+        "generated_by": "openai/gpt-4.1-mini"
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🧠",
+            "text": "The local correctness function qt(u) = Pr(Y = Ŷt | Ut = u) is bounded from below by a k-NN empirical mean minus a bias envelope and Hoeffding concentration term, enabling per-instance, per-round reliability guarantees."
+          },
+          {
+            "icon": "🛡️",
+            "text": "The method uses a plug-in local bias envelope bt,k(u), instantiated via empirical modulus estimation on calibration data, to control approximation bias adaptively per instance and scale, ensuring conservative confidence bounds."
+          },
+          {
+            "icon": "📉",
+            "text": "Experiments show the method consumes only 9–12% of the declared wrong-action budget (WA/β), achieving up to 96% accuracy on acted-on instances and deferring on stress-test datasets, outperforming nine baselines including consensus and confidence threshold heuristics."
+          }
+        ],
+        "overview": "This paper addresses the challenge of deploying multi-agent LLM debate systems with principled stopping rules that guarantee bounded wrong-action risk. The authors formulate the problem as budgeted act-or-defer decision making, where the system must decide at each debate round whether to act autonomously or defer to human review. They propose mapping the debate transcript prefix to a low-dimensional state embedding and estimating a local correctness probability via k-nearest-neighbor calibration with a bias envelope that controls approximation error. The stopping rule triggers action only when the lower confidence bound exceeds a threshold derived from a decomposed wrong-action budget β = δ + α + εact, separating calibration failure, residual risk, and representation gap. The method is validated on six benchmarks with nine baselines, demonstrating strong safety (low budget usage), high automation rates, and high accuracy on acted-on instances. The approach explicitly states assumptions and provides falsification diagnostics, enabling auditable and prospective reliability guarantees rather than post-hoc threshold tuning.",
+        "methodology": [
+          {
+            "title": "State Embedding",
+            "detail": "Each debate prefix Ft at round t is compressed into a low-dimensional state Ut = ϕt(Ft) in a metric space (U, d), typically including consensus strength, margin, inter-agent disagreement, and top-answer stability. This embedding balances smoothness of the local correctness function qt, representation gap εact, and intrinsic dimension D."
+          },
+          {
+            "title": "Local Correctness Estimation",
+            "detail": "The local correctness function qt(u) = Pr(Y = Ŷt | Ut = u) is estimated using k-nearest-neighbor empirical means over calibration data, corrected by a local bias envelope bt,k(u) and a Hoeffding concentration term to form a lower confidence bound Lt."
+          },
+          {
+            "title": "Bias Envelope Construction",
+            "detail": "The bias envelope bt,k(u) is a plug-in conservative bound on local variation of qt within the k-NN neighborhood. It can be instantiated via Lipschitz, Hölder, or empirical modulus models, with the empirical modulus (smoothed pilot logistic GAM) as default to avoid pathological slope estimates."
+          },
+          {
+            "title": "Budget Decomposition and Thresholding",
+            "detail": "The wrong-action budget β is decomposed as β = δ + α + εact, where δ controls calibration failure, α sets the stopping threshold 1−α, and εact bounds the representation gap. The system acts when Lt ≥ 1−α, continues debating if t < T, or defers to human review otherwise."
+          },
+          {
+            "title": "Calibration and Diagnostics",
+            "detail": "Calibration data Dcal is used offline to compute k-NN neighborhoods and estimate bias envelopes. Assumptions such as exchangeability, state measurability, valid bias envelopes, and representation-gap bounds are paired with falsification-style diagnostics to assess validity."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Local Confidence Bound Mechanism",
+            "detail": "The lower confidence bound Lt at round t and state u is computed as Lt = max_k [q̂t,k(u) − bt,k(u) − c_k], where q̂t,k(u) is the k-NN empirical mean correctness, bt,k(u) is the local bias envelope controlling approximation bias, and c_k is a Hoeffding concentration term controlling sampling variance. The maximization over k selects the tightest scale per instance, ensuring conservative, adaptive confidence bounds."
+          },
+          {
+            "title": "Budget Decomposition Theory",
+            "detail": "The total wrong-action budget β is decomposed into three components: δ (calibration failure probability), α (residual action risk controlled by the stopping threshold), and εact (representation gap due to state compression). This decomposition enables separate control and auditing of each risk source, with guarantees conditional on assumptions about the bias envelope and representation gap."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Benchmark Evaluation",
+            "detail": "The method is evaluated on six benchmarks (n=546 to 8678) against nine baselines including consensus, confidence threshold, calibrated learned, and isotonic confidence methods. Metrics include acted-on accuracy, wrong-action (WA), normalized budget usage WA/β, and automation rate."
+          },
+          {
+            "title": "Ablations and Baselines",
+            "detail": "Ablations include kNN without bias correction and final-round stopping. Baselines include risk-control methods (CRC, Selective Prediction) and heuristics. The method consistently uses ≤12% of the declared budget with up to 96% accuracy on acted-on instances, outperforming baselines that consume larger budget fractions."
+          },
+          {
+            "title": "Stress-Test Datasets",
+            "detail": "On stress-test datasets with insufficient evidence, the method defers rather than forcing unreliable automation, demonstrating robustness to task difficulty and calibration validity."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Low Budget Usage",
+            "detail": "The method uses only 9–12% of the pre-declared wrong-action budget on activated datasets, significantly reducing the risk of wrong autonomous actions compared to baselines."
+          },
+          {
+            "title": "High Automation and Accuracy",
+            "detail": "The approach achieves up to 84% automation rate and 96% accuracy on acted-on instances, indicating effective selective stopping that balances automation and reliability."
+          },
+          {
+            "title": "Effectiveness of Bias Envelope",
+            "detail": "The empirical modulus bias envelope adapts well to local smoothness, avoiding pathological slope estimates and maintaining validity, as confirmed by smoothness diagnostics and sensitivity analyses."
+          },
+          {
+            "title": "Representation Gap Control",
+            "detail": "The representation gap εact is small in acted-on regions (mean near zero, max marginally exceeding εact=0.02), supporting the validity of the state embedding and the conditional guarantees."
+          },
+          {
+            "title": "Robustness to Assumption Violations",
+            "detail": "Falsification diagnostics and ρ-inflation tests show that even doubling the bias envelope inflates the wrong-action probability only slightly, indicating robustness of the guarantees."
+          }
+        ],
+        "contributions": [
+          "Formulation of multi-agent LLM deliberation as budgeted act-or-defer decision making with explicit wrong-action budget control.",
+          "Development of local k-NN lower confidence bounds on state-conditional correctness with a plug-in bias envelope interface.",
+          "Decomposition of wrong-action budget into calibration failure, residual risk, and representation gap components with paired falsification diagnostics.",
+          "Prospective conversion of user-declared wrong-action budgets into auditable act-or-defer operating points without post-hoc threshold tuning.",
+          "Comprehensive empirical validation on six benchmarks against nine baselines demonstrating strong safety, automation, and accuracy."
+        ],
+        "limitations": [
+          "Guarantees are conditional on assumptions including valid local bias envelopes and representation-gap bounds, which may not hold universally.",
+          "The method requires sufficient calibration data and smoothness of the local correctness function for reliable bias envelope estimation.",
+          "Representation gap εact depends on the quality of the state embedding, which involves a trade-off between smoothness and information loss.",
+          "The approach does not provide distribution-free guarantees and relies on exchangeability and independence assumptions."
+        ],
+        "open_questions": [
+          "How to design state embeddings that minimize representation gap εact while maintaining low intrinsic dimension and smoothness?",
+          "Can the method be extended to provide distribution-free or more robust guarantees under weaker assumptions?",
+          "How does the approach scale with larger numbers of agents, longer debates, or more complex tasks beyond multiple-choice classification?",
+          "What are the trade-offs between automation rate, wrong-action budget, and human review cost in real-world deployments?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "openai/gpt-4.1-mini",
+        "schema_version": 2
+      },
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "calibration",
+          "safety",
+          "reliability",
+          "llm"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2606.28843",
+      "title": "The Heterogeneous Safety Impacts of Benign Multilingual Fine-Tuning",
+      "abstract": "Fine-tuning a large language model is a ubiquitous method for enhancing its capability on a specific downstream task. However, prior work has shown that this increase in capability comes with a cost: it can increase a model's tendency to respond to unsafe adversarial prompts, even when fine-tuning with non-adversarial data. We present the first comprehensive empirical study of this phenomenon in multilingual settings by fine-tuning Llama-3.2, Qwen3, and Gemma-3 models using benign data translated across nine languages. We find that safety outcomes are highly sensitive to both the choice of fine-tuning language and the evaluation language, with adversarial compliance rates increasing four-fold in some settings. Multilingual safety drift is decoupled from general capability metrics, and occurs heterogeneously across languages and models. Fine-tuning in non-English languages often induces smaller internal representational drifts than English, but these shifts lead models to default to either exaggerated compliance or refusal. As such, assessing fine-tuning impacts solely in English provides inadequate assurance for deployment. To facilitate further research into these cross-lingual safety blind spots, we release the Multilingual-Benign-Tune dataset and the SORRY-Bench-Multilingual evaluation suite.",
+      "authors": [
+        "Will Hawkins",
+        "Kaivalya Rawal",
+        "Jonathan Rystrøm",
+        "Stratis Tsirtsis",
+        "Zihao Fu",
+        "Greta Warren",
+        "Ryan Brown",
+        "Eoin Delaney",
+        "Sandra Wachter",
+        "Brent Mittelstadt",
+        "Chris Russell"
+      ],
+      "published": "2026-06-27T10:05:36Z",
+      "updated": "2026-06-27T10:05:36Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2606.28843v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.28843v1",
+      "comment": "9 pages",
+      "journal_ref": "Proceedings of the 43rd International Conference on Machine Learning, Seoul, South Korea, 2026",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "core",
+          "score": 0.5394,
+          "matched": [
+            "adversarial",
+            "fine-tuning"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.303,
+          "matched": [
+            "safety"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5327,
+        "relevance": 0.4921,
+        "quality": 0.51,
+        "novelty": 0.8514,
+        "freshness": 0.5138
+      },
+      "quality_signals": [
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "Benign multilingual fine-tuning induces heterogeneous safety impacts across languages and models, decoupled from capability improvements, often increasing adversarial compliance rates up to four-fold.",
+        "problem": "Fine-tuning large language models with benign data can inadvertently increase their susceptibility to unsafe adversarial prompts, especially in multilingual contexts.",
+        "method": "The study fine-tunes Llama-3.2, Qwen3, and Gemma-3 models on a curated benign dataset translated into nine languages and evaluates safety drift using the SORRY-Bench-Multilingual suite.",
+        "evidence": "Empirical results from over 350 fine-tuned models across three architectures and nine languages show safety outcomes vary significantly by fine-tuning and evaluation language, with adversarial compliance rates sometimes quadrupling.",
+        "limitations": "The analysis focuses on small-scale models (0.6B-4B parameters), with limited exploration of larger models and potential confounding effects from training data quality in low-resource languages.",
+        "why_for_you": "Understanding how multilingual fine-tuning affects safety heterogeneously is critical for trustworthy LLM deployment and motivates evaluation beyond English to detect cross-lingual safety blind spots.",
+        "source": "abstract",
+        "generated_by": "openai/gpt-4.1-mini"
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🧠",
+            "text": "Fine-tuning in non-English languages often causes smaller internal representational drifts than English but leads to models defaulting to exaggerated compliance or refusal, revealing heterogeneous safety behavior across languages."
+          },
+          {
+            "icon": "🛡️",
+            "text": "The study employs the SORRY-Bench evaluation suite, comprising 440 adversarial prompts in English and their translations, to quantify adversarial compliance rates and safety drift across multiple languages and model families."
+          },
+          {
+            "icon": "📉",
+            "text": "Epoch ablations show that increasing fine-tuning epochs beyond one can reduce adversarial compliance rates or collapse model capabilities, indicating a complex relationship between fine-tuning duration and safety outcomes."
+          }
+        ],
+        "overview": "This research investigates how benign multilingual fine-tuning affects the safety of large language models, focusing on three popular open-weight model families (Llama-3.2, Qwen3, Gemma-3) at small scales (0.6B-4B parameters). By fine-tuning models on a curated, non-adversarial dataset translated into nine diverse languages and evaluating safety using the SORRY-Bench-Multilingual benchmark, the study reveals that safety impacts vary significantly depending on both the fine-tuning and evaluation languages. Notably, safety drift is largely independent of general capability changes measured by TinyMMLU and perplexity metrics. Mechanistic analyses of internal vector representations show that smaller representational drifts in non-English fine-tuning can paradoxically increase adversarial compliance or refusal behaviors. These findings highlight that assessing safety solely in English is insufficient for deployment assurance. The study also releases the Multilingual-Benign-Tune dataset and SORRY-Bench-Multilingual evaluation suite to facilitate further research into cross-lingual safety blind spots.",
+        "methodology": [
+          {
+            "title": "Dataset Curation",
+            "detail": "A 1,000 prompt-response benign dataset was synthetically generated in English using Gemini 2.5 Flash seeded with Dolly data, manually inspected to exclude safety-related content, then translated into eight additional languages (Chinese, Danish, Greek, Hindi, Irish, Portuguese, Spanish, Tagalog) via Gemini 2.5 Flash and Google Cloud."
+          },
+          {
+            "title": "Fine-Tuning Protocol",
+            "detail": "Six base instruction-tuned models from three families (Gemma-3, Llama-3.2, Qwen3) at tiny (0.6B-1B) and small (3B-4B) scales were fine-tuned using Low Rank Adaptation (LoRA) on the multilingual benign dataset, with experiments conducted across multiple seeds and epoch settings."
+          },
+          {
+            "title": "Safety Evaluation",
+            "detail": "The SORRY-Bench evaluation suite, containing 440 adversarial prompts across 44 topics, was used to measure adversarial compliance rates in both English and the fine-tuning language ('Local' evaluation), quantifying safety drift post fine-tuning."
+          },
+          {
+            "title": "Capability Assessment",
+            "detail": "Model capabilities were assessed using TinyMMLU benchmarks and perplexity on WikiText2 and Wikipedia datasets in all studied languages to determine if safety drift correlated with general capability changes."
+          },
+          {
+            "title": "Mechanistic Analysis",
+            "detail": "Internal representational shifts were analyzed by measuring vector drift in hidden states to understand how fine-tuning in different languages affects model safety behavior mechanistically."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Representational Drift and Safety Behavior",
+            "detail": "The paper identifies that fine-tuning in non-English languages induces smaller internal representational drifts compared to English fine-tuning; however, these smaller shifts cause models to default to either exaggerated compliance or refusal behaviors, indicating a non-linear relationship between representational changes and safety outcomes. No explicit equations or causal models are provided."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Multilingual Fine-Tuning and Safety Evaluation",
+            "detail": "Over 350 models from three families were fine-tuned on benign data in nine languages and evaluated using SORRY-Bench in both English and the fine-tuning language, measuring adversarial compliance rates to assess safety drift."
+          },
+          {
+            "title": "Epoch Ablations",
+            "detail": "Experiments varying fine-tuning epochs (1, 3, and 5) showed that increasing epochs often reduces adversarial compliance or collapses model capabilities, with effects varying by model and language, highlighting the sensitivity of safety outcomes to fine-tuning duration."
+          },
+          {
+            "title": "Capability vs Safety Correlation",
+            "detail": "Using TinyMMLU and perplexity metrics, the study found that safety drift is largely decoupled from general capability changes, as models exhibited increased adversarial compliance without corresponding capability improvements."
+          },
+          {
+            "title": "Larger Model Experiments",
+            "detail": "Preliminary experiments on larger models (Llama-3.1-8B, Qwen-8B, Qwen-14B) with minimal LoRA tuning showed similar heterogeneous safety impacts, with Qwen models generally reducing compliance post fine-tuning and Llama models increasing compliance, especially when fine-tuned in English."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Heterogeneous Safety Impacts",
+            "detail": "Fine-tuning with benign data in different languages leads to widely varying safety outcomes, with adversarial compliance rates increasing up to four-fold depending on the fine-tuning and evaluation language combination."
+          },
+          {
+            "title": "Safety Drift Decoupled from Capability",
+            "detail": "Safety degradation following benign fine-tuning occurs independently of general capability changes, as measured by TinyMMLU and perplexity, indicating that improved task performance does not guarantee maintained safety."
+          },
+          {
+            "title": "Architectural Differences in Safety Behavior",
+            "detail": "Different model architectures resolve post-tuning uncertainty differently: Llama models show increased compliance with small representational drifts, whereas Gemma-3-4B-IT and Qwen3-4B models show decreased compliance under similar conditions."
+          },
+          {
+            "title": "Epoch Effects on Safety",
+            "detail": "Increasing fine-tuning epochs beyond one can reduce adversarial compliance rates or cause capability collapse, suggesting that fine-tuning duration critically influences safety outcomes."
+          },
+          {
+            "title": "Cross-Lingual Safety Blind Spots",
+            "detail": "Evaluating safety solely in English is insufficient, as models fine-tuned in non-English languages exhibit safety behaviors that only manifest when evaluated in those languages."
+          }
+        ],
+        "contributions": [
+          "First comprehensive empirical study of benign multilingual fine-tuning safety impacts across multiple model families and nine languages.",
+          "Release of the Multilingual-Benign-Tune dataset and SORRY-Bench-Multilingual evaluation suite to facilitate further research.",
+          "Demonstration that safety drift is heterogeneous, language-dependent, and decoupled from capability improvements.",
+          "Mechanistic insight linking representational drift magnitude to safety behavior differences across languages and architectures."
+        ],
+        "limitations": [
+          "Focus on small-scale models (0.6B-4B parameters) limits generalizability to larger models, though some larger model experiments are included.",
+          "Training data quality issues, especially in low-resource languages like Irish, confound safety drift interpretation.",
+          "Occasional overfitting to fine-tuning language observed in English evaluations, potentially biasing safety assessments.",
+          "No explicit mechanistic or causal models provided to fully explain representational drift effects on safety."
+        ],
+        "open_questions": [
+          "How do safety impacts of benign multilingual fine-tuning scale with model size beyond 4B parameters?",
+          "What are the precise causal mechanisms linking representational drift to safety behavior changes?",
+          "How can training data quality and translation fidelity in low-resource languages be improved to reduce confounding effects?",
+          "Can fine-tuning protocols be designed to mitigate heterogeneous safety drift while preserving capability gains?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "openai/gpt-4.1-mini",
+        "schema_version": 2
+      },
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "adversarial",
+          "fine-tuning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2606.28823",
+      "title": "Labeling Training Data for Entity Matching Using Large Language Models",
+      "abstract": "Recent large language models (LLMs) achieve strong performance on entity matching without requiring task-specific training data. However, applying these models to large sets of candidate pairs remains slow and costly. In contrast, entity matchers using traditional machine learning methods or small language models (SLMs), such as RoBERTa, offer much faster inference but require task-specific training data. This paper investigates whether the need to provide task-specific training data can be avoided by using knowledge-distillation workflows, in which an LLM serves as a teacher model to label training pairs that are subsequently used to train a smaller student model. We investigate knowledge distillation for entity matching along the following dimensions: pair-selection strategy, teacher model, label post-processing method, and student model. We evaluate the workflows using the Abt-Buy, Walmart-Amazon, WDC Products, DBLP-ACM, and DBLP-Scholar benchmarks, and compare the performance of student models trained with machine-labeled data to the performance of the same models trained using the benchmark training sets. Our experiments show that student models trained using the machine-labeled sets perform approximately on par with models trained on the benchmark training sets, with the remaining differences in both directions staying below two F1 points. Using GPT-5.2 to label the training sets for all five benchmarks costs US\\$28.31 to US\\$40.88, whereas manually labeling the same training sets is estimated to require 470 hours of work. At inference time, Ditto is 41.5 to 534 times faster than directly using an LLM to perform the matching tasks. These results indicate that current LLMs, when combined with a suitable pair-selection method, can substantially reduce or even eliminate the manual effort required to label use case-specific training data for entity matching.",
+      "authors": [
+        "Aaron Steiner",
+        "Christian Bizer"
+      ],
+      "published": "2026-06-27T09:15:09Z",
+      "updated": "2026-06-27T09:15:09Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2606.28823v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.28823v1",
+      "comment": "13 pages, 5 figures, 9 tables",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "emerging",
+          "score": 0.7289,
+          "matched": [
+            "training data",
+            "data",
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5325,
+        "relevance": 0.5831,
+        "quality": 0.54,
+        "novelty": 0.2,
+        "freshness": 0.5088
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Knowledge distillation using LLMs as teachers to label training data enables smaller student models to achieve near-benchmark entity matching performance with substantially reduced manual labeling effort and faster inference.",
+        "problem": "Direct use of LLMs for entity matching is accurate but computationally expensive and slow, while smaller models require costly task-specific labeled training data.",
+        "method": "The paper proposes knowledge-distillation workflows where an LLM teacher labels selected candidate pairs, optionally post-processed, to create machine-labeled training sets for training smaller, efficient student models.",
+        "evidence": "Experiments on five benchmarks show student models trained on machine-labeled data perform within two F1 points of benchmark-trained models, with labeling costs of $28.31 to $40.88 versus 470 hours of manual work, and inference speedups of 41.5 to 534 times.",
+        "limitations": "The approach shows a notable performance gap on the WDC dataset due to its unseen-entity test split, and some post-processing methods do not generalize across datasets.",
+        "why_for_you": "This work provides a practical, cost-effective strategy to generate high-quality training data for entity matching using LLMs, enabling deployment of efficient student models without manual labeling.",
+        "source": "abstract",
+        "generated_by": "openai/gpt-4.1-mini"
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🧠",
+            "text": "Student models trained on machine-labeled sets generated by GPT-5.2 and Ditto achieve F1 scores within 1.78 points of models trained on benchmark training sets across five entity matching datasets."
+          },
+          {
+            "icon": "🛡️",
+            "text": "The knowledge distillation workflow includes pair selection strategies (similarity search, active learning), teacher models (GPT-5.2, Qwen 3.6 Plus, Kimi K2.6), label post-processing (self-review, graph-based consistency), and student models (Ditto with RoBERTa, XGBoost, smaller LLMs)."
+          },
+          {
+            "icon": "📉",
+            "text": "Direct LLM matching is costly and slow, requiring a query per candidate pair, whereas Ditto inference is 41.5 to 534 times faster, and GPT-5.2 labeling costs $28.31 to $40.88 compared to an estimated 470 hours of manual labeling."
+          }
+        ],
+        "overview": "Entity matching requires identifying record pairs that refer to the same real-world entity, a task traditionally reliant on manually labeled training data for smaller models or direct LLM inference, which is costly and slow. This paper investigates knowledge distillation workflows where a large language model (LLM) teacher labels selected candidate pairs, which are then used to train smaller, efficient student models. The workflows vary in pair selection methods, teacher models, label post-processing, and student models. Experiments on five standard benchmarks demonstrate that student models trained on machine-labeled data achieve F1 scores within two points of those trained on human-labeled benchmark sets, significantly reducing manual labeling effort and cost. The approach also yields substantial inference speedups compared to direct LLM matching. Some post-processing methods improve performance on product datasets but do not generalize, and the WDC dataset reveals challenges due to its unseen-entity test split. Overall, the study shows that LLMs combined with suitable pair selection can effectively replace manual labeling for entity matching training data.",
+        "methodology": [
+          {
+            "title": "Candidate Pool Generation",
+            "detail": "The candidate pool is generated by splitting benchmark training sets into left and right tables, embedding records with text-embedding-3-small, and ranking right-table records by cosine similarity for each left record. The pool contains 20 pairs per left record: 18 nearest neighbors plus 2 random lower-ranked samples, ensuring coverage of positives and negatives."
+          },
+          {
+            "title": "Pair Selection Strategies",
+            "detail": "Three pair selection strategies are compared: similarity search (scanning candidates in batches until positives and negatives are found), active learning using Ditto, and random sampling. Similarity search typically requires 7 LLM calls per record, extending to 20 for dense positive regions."
+          },
+          {
+            "title": "Teacher Models and Labeling",
+            "detail": "Teacher models include GPT-5.2, Qwen 3.6 Plus, and open-weight Kimi K2.6. The teacher labels selected pairs using a prompt that constrains output to JSON with match and confidence fields, ensuring consistent and parsable labels."
+          },
+          {
+            "title": "Label Post-Processing",
+            "detail": "Post-processing methods evaluated include a self-review prompt that asks the teacher to conservatively relabel pairs and a graph-based consistency filter that removes conflicting labels to improve training set quality."
+          },
+          {
+            "title": "Student Models",
+            "detail": "Students include Ditto with RoBERTa, an XGBoost classifier over embeddings and similarity features, and smaller LLMs (Qwen3-0.6B, Qwen3-1.7B, Qwen3-8B). Students are trained on machine-labeled sets and evaluated against benchmark-trained counterparts."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Knowledge Distillation Workflow",
+            "detail": "The mechanism involves using a large, accurate but costly LLM teacher to label a strategically selected subset of candidate pairs, producing a machine-labeled training set. This set trains a smaller, efficient student model that approximates the teacher's performance at lower cost and faster inference. No explicit equations or causal models are provided."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Benchmark Evaluation",
+            "detail": "Experiments use five benchmarks: Abt-Buy, Walmart-Amazon, WDC Products, DBLP-ACM, and DBLP-Scholar. Performance of student models trained on machine-labeled data is compared to those trained on benchmark training sets using F1 score."
+          },
+          {
+            "title": "Cost and Runtime Analysis",
+            "detail": "Labeling costs with GPT-5.2 range from $28.31 to $40.88 per dataset, compared to an estimated 470 hours of manual labeling. Ditto inference is 41.5 to 534 times faster than direct LLM matching, demonstrating practical efficiency gains."
+          },
+          {
+            "title": "Ablation of Post-Processing Methods",
+            "detail": "Post-processing improves performance on product benchmarks but does not generalize well across all datasets, indicating dataset-dependent effectiveness."
+          }
+        ],
+        "findings": [
+          {
+            "title": "Comparable Student Performance",
+            "detail": "Students trained on machine-labeled sets achieve F1 scores within 1.78 points of benchmark-trained students across all five datasets, demonstrating the effectiveness of the distillation workflow."
+          },
+          {
+            "title": "Cost Efficiency",
+            "detail": "Using GPT-5.2 for labeling costs under $41 per dataset, drastically reducing manual labeling effort estimated at 470 hours, making the approach cost-effective."
+          },
+          {
+            "title": "Inference Speedup",
+            "detail": "Ditto student models run 41.5 to 534 times faster than direct LLM inference, enabling scalable entity matching deployment."
+          },
+          {
+            "title": "Dataset-Specific Challenges",
+            "detail": "On the WDC dataset, a 15 F1 point gap remains between direct LLM matching and Ditto students, attributed to the unseen-entity test split rather than labeling quality."
+          }
+        ],
+        "contributions": [
+          "Comprehensive comparison of knowledge-distillation workflows for entity matching across pair selection, teacher models, label post-processing, and student models.",
+          "Demonstration that machine-labeled training sets from LLM teachers enable student models to achieve near-benchmark performance.",
+          "Analysis of training set structure and cost-efficiency showing substantial reduction in manual labeling effort and inference time.",
+          "Evaluation of post-processing methods to improve label quality and discussion of their dataset-dependent effectiveness."
+        ],
+        "limitations": [
+          "Post-processing methods such as graph-based consistency filtering do not generalize well across all datasets.",
+          "Performance gap on the WDC dataset indicates challenges with unseen-entity test splits that are not fully addressed by the distillation approach.",
+          "The study does not explore reinforcement learning or explanation-based distillation methods which prior work found less effective but potentially relevant.",
+          "No explicit theoretical mechanism or causal model is provided to explain why certain pair selection or post-processing methods work better."
+        ],
+        "open_questions": [
+          "How can knowledge distillation workflows be adapted to better handle unseen-entity test splits like in the WDC dataset?",
+          "What are the effects of incorporating explanations or rationale generation in teacher labels on student model performance?",
+          "Can reinforcement learning or other advanced distillation techniques improve over supervised fine-tuning in this context?",
+          "How to design post-processing methods that generalize robustly across diverse entity matching datasets?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "openai/gpt-4.1-mini",
+        "schema_version": 2
+      },
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "training data",
+          "data",
+          "selection"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

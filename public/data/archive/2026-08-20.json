@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-20T10:46:41.313828+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 107,
+  "source_total": 107,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 107,
+  "previously_recommended_count": 141,
+  "eligible_count": 1,
+  "feedback_count": 17,
+  "semantic_feedback_count": 368,
+  "papers": [
+    {
+      "id": "2608.18816",
+      "title": "Do Large Language Models Hallucinate Electric Fata Morganas?",
+      "abstract": "AI hallucinations - that is, outputs which are made up, cannot be verified, or contradict the source material - are generally regarded as an engineering flaw to be dealt with. This paper contends that they also have philosophical significance when it comes to the question of machine consciousness. We examine the known causes of hallucinations in large language models - such as source-target divergence, discrepancies between training and inference, and overfitting - and we present two empirical investigations. In the first, we apply successive generations of the GPT model to ambiguous factual questions under different temperature settings, finding that higher temperatures result in plausible but incorrect answers while lower temperatures lead to factually accurate ones. The sampling parameters that cause a model to seem creative or spontaneous and thus more likely to pass behavioral tests of intelligence are the same ones that increase its hallucination rate. In the second, we look at an encoder-only model that has been trained on encyclopedic data and which answers questions of the same type factually and without embellishment, indicating that hallucinations are due to exposure to subjective and socially diverse training data rather than to the development of any cognitive ability. Using references to Turing, Searle's Chinese Room, the frame problem, and the cybernetic tradition of Wiener and Ashby, we claim that a model's self-reports of emotion or sentience come within the definition of hallucination, and that any future occurrence of machine consciousness might remain epistemically inaccessible since it would be indistinguishable from a sufficiently advanced hallucination.",
+      "authors": [
+        "Kristina Šekrst"
+      ],
+      "published": "2026-08-19T11:14:06Z",
+      "updated": "2026-08-19T11:14:06Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.18816v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18816v1",
+      "comment": "",
+      "journal_ref": "Journal of Consciousness Studies 32 (11): 96-120. 2025",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.2986,
+          "matched": [
+            "sampling",
+            "training data"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.2575,
+          "matched": [
+            "hallucination"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4233,
+        "relevance": 0.2904,
+        "quality": 0.53,
+        "novelty": 0.8553,
+        "freshness": 0.8599,
+        "feedback_adjustment": -0.0109,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "幻觉率随生成温度升高而上升，且与训练数据的主观多样性有关。",
+        "problem": "LLM的幻觉被视为技术缺陷，但其对机器意识的哲学意义尚未明确。",
+        "method": "通过在不同temperature下对GPT系列进行模糊事实问答实验，并比较训练于百科数据的编码器模型的输出。",
+        "evidence": "高temperature下模型给出可接受但错误的答案，而低temperature提升事实准确率；编码器模型几乎不产生幻觉。",
+        "limitations": "作者未提供量化的幻觉率或统计显著性分析，且对训练数据多样性的因果关系缺乏直接证据。",
+        "why_for_you": "若你关注数据选择对LLM幻觉的影响，此文提供了温度与训练数据多样性对幻觉的初步实证洞见。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "提出两项实证研究：温度对GPT幻觉率的影响与百科式编码模型的零幻觉表现"
+          },
+          {
+            "icon": "🔧",
+            "text": "使用不同temperature设置的GPT代代生成以及仅编码器模型对模糊事实问答进行比较"
+          },
+          {
+            "icon": "📈",
+            "text": "实验显示高temperature产生可信但错误答案，低temperature提升准确率；编码器模型几乎不产生幻觉"
+          }
+        ],
+        "overview": "本文从技术与哲学双重视角审视LLM幻觉，首先回顾幻觉的已知成因（源‑目标偏差、训练‑推理差异、过拟合），随后开展两项实验：在不同temperature下对GPT系列进行模糊事实问答，观察创造性与准确性的权衡；以及评估仅编码器、基于百科数据的模型在同类问题上的表现，以检验训练数据多样性对幻觉的影响。实验结果支撑作者关于幻觉并非意识迹象的论点，并指出温度调节与数据选择是控制幻觉的关键因素。",
+        "methodology": [
+          {
+            "title": "温度变量实验",
+            "detail": "对 successive GPT 代（具体代号未列出）在相同模糊事实问题集上，分别设置不同 temperature（高温度 vs 低温度），记录答案的事实准确率与主观可信度。"
+          },
+          {
+            "title": "编码器模型对照实验",
+            "detail": "使用仅编码器结构、在百科全书语料上训练的模型，对同一问题集进行回答，评估是否出现不可验证或错误的陈述。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "幻觉产生机制",
+            "detail": "作者归纳为源‑目标分歧、训练‑推理分布不匹配以及模型过拟合三类技术因素，并进一步将采样随机性（temperature、top_p）视为提升“创造性”但增加幻觉概率的关键机制。"
+          },
+          {
+            "title": "数据多样性假设",
+            "detail": "通过对比百科式编码器模型的低幻觉表现，作者推断主观、社会多样化的训练数据是导致生成式模型幻觉的主要来源，而非内在认知能力。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "实验设置",
+            "detail": "模型：GPT 系列（未指明具体版本）与仅编码器模型；数据：一组模糊的事实问答；基线：不同 temperature 设置的对照；指标：事实准确率、幻觉检测指标（如 HHEM）以及主观可信度评估。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "温度与幻觉的权衡",
+            "detail": "高 temperature 产生的答案更具“创造性”，但错误率显著上升；低 temperature 则显著提升事实准确率，幻觉率下降。"
+          },
+          {
+            "title": "训练数据的影响",
+            "detail": "仅编码器、基于百科数据的模型在相同任务上几乎不出现幻觉，支持幻觉来源于主观多样化训练语料的假设。"
+          }
+        ],
+        "contributions": [
+          "提供了温度调节对LLM幻觉率的实证分析",
+          "通过编码器模型对照，提出训练数据多样性是幻觉主要驱动因素的论点"
+        ],
+        "limitations": [
+          "缺乏对幻觉率的统计显著性报告和具体数值",
+          "未直接量化训练数据的主观多样性或提供因果实验"
+        ],
+        "open_questions": [
+          "如何在保持生成多样性的同时系统性降低幻觉率？",
+          "数据选择策略在根除幻觉中的具体作用机制是什么？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "sampling",
+          "training data"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

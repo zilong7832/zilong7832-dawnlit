@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-05T12:16:07.216104+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 151,
+  "source_total": 151,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 151,
+  "previously_recommended_count": 121,
+  "eligible_count": 1,
+  "feedback_count": 7,
+  "semantic_feedback_count": 0,
+  "papers": [
+    {
+      "id": "2608.03966",
+      "title": "HalluTruthQA-4K: A Fine-Grained Corpus and Annotation Process for Arabic Hallucination Detection and Truth Verification",
+      "abstract": "Large language models can generate fluent Arabic answers while introducing factual errors that are difficult to identify and verify. Existing Arabic hallucination resources often assign a binary label to an entire response, indicating whether it is hallucinated or non-hallucinated, but provide limited information about the exact erroneous content, the reason for the error, or the correct factual answer. We present HalluTruthQA-4K, an expanded version of the HalluTruthQA resource containing 4,000 expert-curated Arabic question-answering instances across four knowledge-intensive domains: Islamic knowledge, history, science, and geography. Serving as the official dataset for Track 2 of the HalluScoring 2026 shared task, HalluTruthQA-4K extends our original corpus to 4,000 instances. Each instance pairs an Arabic question with a model-generated response, a verified reference answer, and five plausible distractors. Hallucinated responses are additionally annotated with character-level erroneous spans, human-written explanations, and hierarchical hallucination types. The corpus contains 1,643 hallucinated and 2,357 non-hallucinated responses, with 1,843 annotated erroneous spans. We describe the resource construction and annotation methodology, including question selection, controlled answer generation, candidate construction, expert annotation, independent verification, adjudication, and quality control. We also document the annotation guidelines, taxonomy, data format, inter-annotator agreement, and corpus statistics. HalluTruthQA-4K provides a reusable resource for hallucination detection, span-level error localization, explanation generation, factual verification, and the broader evaluation of factual reliability in Arabic language models.",
+      "authors": [
+        "Salah Eddine Bekhouche",
+        "Abdessalam Bouchekif",
+        "Hichem Telli",
+        "Mohammed-En-Nadhir Zighem",
+        "Abdenour Hadid"
+      ],
+      "published": "2026-08-04T17:33:38Z",
+      "updated": "2026-08-04T17:33:38Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.03966v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.03966v1",
+      "comment": "",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.3856,
+          "matched": [
+            "hallucination",
+            "reliability"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4233,
+        "relevance": 0.3085,
+        "quality": 0.45,
+        "novelty": 0.8834,
+        "freshness": 0.8886,
+        "feedback_adjustment": -0.0189,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "evidence": "包含1,643个幻觉样本和1,843个标注错误跨度的阿拉伯语问答数据集",
+        "limitations": "数据由单一阿拉伯语生成器创建，四个领域未覆盖全部阿拉伯语使用场景",
+        "method": "专家标注的四领域问答数据集，包含错误跨度、解释和分层幻觉类型标注",
+        "problem": "现有阿拉伯语幻觉资源仅提供二分类标签，缺乏错误内容、原因和正确答案的详细信息",
+        "takeaway": "HalluTruthQA-4K提供4,000个阿拉伯语问答实例的细粒度标注数据集，支持事实错误定位与验证",
+        "why_for_you": "适用于研究阿拉伯语大模型的事实可靠性评估与幻觉检测",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "contributions": [
+          "构建首个阿拉伯语幻觉检测的细粒度标注数据集",
+          "建立包含错误跨度和解释的多维度标注框架",
+          "提供跨领域事实验证的基准数据"
+        ],
+        "experiments": [
+          {
+            "detail": "4,000个问答实例，包含模型生成回答、验证参考答案、六个候选答案和错误标注",
+            "title": "数据集构成"
+          }
+        ],
+        "findings": [
+          {
+            "detail": "专家标注在二分类标签上具有高一致性（55%精确匹配选项）",
+            "title": "标注一致性"
+          }
+        ],
+        "limitations": [
+          "数据来源于单一阿拉伯语生成器",
+          "四个领域未覆盖全部阿拉伯语变体"
+        ],
+        "mechanism": [
+          {
+            "detail": "宏观类型（Factual Contradiction等5类）与微观类型（实体错误等22类）的分层标注机制",
+            "title": "两层分类体系"
+          }
+        ],
+        "methodology": [
+          {
+            "detail": "通过控制响应生成和专家标注构建问答对，包含验证参考答案和六个候选答案",
+            "title": "问答对生成"
+          },
+          {
+            "detail": "包含独立验证、仲裁和质量控制的多阶段标注流程",
+            "title": "质量控制流程"
+          },
+          {
+            "detail": "定义了5大类22小类的幻觉类型分类体系",
+            "title": "标注指南"
+          }
+        ],
+        "open_questions": [
+          "如何扩展多模型生成的幻觉数据",
+          "如何提升跨领域和跨模型的泛化能力"
+        ],
+        "overview": "本文构建了包含4,000个阿拉伯语问答实例的细粒度数据集，覆盖伊斯兰知识、历史、科学和地理领域，提供错误跨度标注、人类解释和分层幻觉类型，支持幻觉检测、错误定位和事实验证的多维度研究",
+        "signals": [
+          {
+            "icon": "🌐",
+            "text": "HalluTruthQA-4K: 4,000实例阿拉伯语问答数据集"
+          },
+          {
+            "icon": "🔧",
+            "text": "两层幻觉类型分类体系（5大类22小类）"
+          },
+          {
+            "icon": "📊",
+            "text": "1,843个标注错误跨度的细粒度错误定位数据"
+          }
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "hallucination",
+          "reliability"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

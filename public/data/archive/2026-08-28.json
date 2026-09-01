@@ -1,0 +1,661 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-28T21:10:49.916182+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 0,
+  "source_total": 0,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 0,
+  "previously_recommended_count": 167,
+  "eligible_count": 0,
+  "feedback_count": 17,
+  "topic_feedback": {
+    "enabled": true,
+    "generated_at": "2026-08-28T21:10:49.916182+00:00",
+    "feedback_records": 17,
+    "latest_feedback_papers": 15,
+    "labeled_papers": 12,
+    "adjusted_topics": 1,
+    "minimum_effective_samples": 4.0,
+    "topics": [
+      {
+        "id": "efficient_adversarial_training",
+        "useful": 0.0,
+        "irrelevant": 1.0,
+        "samples": 1.0,
+        "effective_samples": 0.86,
+        "hit_rate": 0.0,
+        "smoothed_hit_rate": 0.4115,
+        "confidence": 0.0717,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "llm_loss_landscape",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "llm_data_selection",
+        "useful": 0.5,
+        "irrelevant": 0.0,
+        "samples": 0.5,
+        "effective_samples": 0.45,
+        "hit_rate": 1.0,
+        "smoothed_hit_rate": 0.5507,
+        "confidence": 0.0376,
+        "base_weight": 0.8,
+        "effective_weight": 0.8,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "on_policy_distillation",
+        "useful": 0.0,
+        "irrelevant": 1.0,
+        "samples": 1.0,
+        "effective_samples": 0.86,
+        "hit_rate": 0.0,
+        "smoothed_hit_rate": 0.4111,
+        "confidence": 0.0721,
+        "base_weight": 0.7,
+        "effective_weight": 0.7,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "trustworthy_llm",
+        "useful": 3.0,
+        "irrelevant": 6.5,
+        "samples": 9.5,
+        "effective_samples": 8.56,
+        "hit_rate": 0.3158,
+        "smoothed_hit_rate": 0.3748,
+        "confidence": 0.7133,
+        "base_weight": 0.7,
+        "effective_weight": 0.6285,
+        "adjustment": -0.0715,
+        "active": true
+      },
+      {
+        "id": "llm_statistical_theory",
+        "useful": 0.0,
+        "irrelevant": 1.0,
+        "samples": 1.0,
+        "effective_samples": 0.9,
+        "hit_rate": 0.0,
+        "smoothed_hit_rate": 0.408,
+        "confidence": 0.0752,
+        "base_weight": 0.6,
+        "effective_weight": 0.6,
+        "adjustment": 0.0,
+        "active": false
+      }
+    ]
+  },
+  "semantic_feedback_count": 360,
+  "minimum_daily_target": 3,
+  "minimum_daily_met": true,
+  "conference_supplement_count": 3,
+  "conference_eligible_count": 205,
+  "conference_pool_updated_at": "2026-08-27T20:30:01.195934+00:00",
+  "conference_source_status": {
+    "ICLR:2026": "ok:223",
+    "ICML:2026": "ok:742",
+    "NeurIPS:2026": "ok:0",
+    "ACL:2026": "ok:478",
+    "EMNLP:2026": "awaiting_verified_schedule"
+  },
+  "papers": [
+    {
+      "id": "conf:acl:2026:3565-main",
+      "title": "Understanding and Mitigating Bias Inheritance in LLM-based Data Augmentation on Downstream Tasks",
+      "abstract": "Generating synthetic datasets via large language models (LLMs) has emerged as a promising approach to improve LLM performance. However, LLMs inherently reflect biases in their training data, leading to a critical challenge: when models are trained on synthetic data, they may propagate and amplify the inherent biases that can significantly impact fairness and robustness on downstream tasks—a phenomenon we term bias inheritance. This work presents the first systematic investigation in understanding, analyzing, and mitigating bias inheritance. We fine-tune LLMs with a combined dataset of real and LLM-augmented data with varied bias ratio as the proportion of augmented data. Through systematic experiments across 10 classification and generation tasks, we analyze how 6 different types of biases manifest. Our results indicate that bias inheritance harms downstream task performance in bias directly-related classification and generation tasks. Then, our analysis identifies three key misalignment factors: misalignment of values, group data, and data distributions. Based on these insights, we propose three mitigation strategies: token-based, mask-based, and loss-based approaches, which can work differently on various tasks and bias, indicating the substantial challenges to mitigate bias inheritance. We hope this work can provide insights to the research of LLM data augmentation.",
+      "authors": [
+        "Miaomiao Li",
+        "Hao Chen",
+        "Yang Wang",
+        "Tingyuan Zhu",
+        "Weijia Zhang",
+        "Kaijie Zhu",
+        "Kam-Fai Wong",
+        "Jindong Wang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.6441,
+          "matched": [
+            "llm",
+            "loss"
+          ]
+        },
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.5257,
+          "matched": [
+            "training data",
+            "data"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.4303,
+          "matched": [
+            "robustness",
+            "llm"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.2596,
+          "matched": [
+            "training",
+            "robustness"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7419,
+        "relevance": 0.7065,
+        "quality": 0.75,
+        "novelty": 0.8266,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0187,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "LLM 生成的合成数据中的偏见可能被继承并放大，损害下游公平性，且缓解并非易事。",
+        "evidence": "在 10 项分类和生成任务上的实验表明，偏见继承会降低偏见相关任务的性能。",
+        "limitations": "缓解策略在不同任务和偏见上的效果差异显著，表明面临巨大挑战。",
+        "method": "在混合真实与合成数据、不同偏见比例下微调 LLM，并评估基于 token、mask 和 loss 的缓解策略。",
+        "why_for_you": "对研究数据选择和可信 LLM 有重要意义，因为它揭示了合成增强中的偏见风险。",
+        "problem": "LLM 增强的训练数据将固有偏见传播至下游任务（偏见继承）。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "首次系统性研究 LLM 数据增强中偏见继承，覆盖 10 项任务和 6 类偏见。"
+          },
+          {
+            "icon": "⚙️",
+            "text": "提出基于 token、mask 和 loss 的缓解方法，以解决偏见错位。"
+          },
+          {
+            "icon": "📊",
+            "text": "研究发现偏见继承损害下游性能，但缓解效果因任务和偏见而异。"
+          }
+        ],
+        "overview": "本文研究了大型语言模型生成的合成数据如何继承并放大训练数据偏见（称为偏见继承）。通过在真实与 LLM 增强数据的混合数据集上进行微调并控制偏见比例，作者在十个分类和生成基准上考察了六类偏见。文中指出三种错位因素——价值观、群体数据和数据分布——并提出三种缓解策略（基于 token、mask、loss）。结果显示偏见相关任务性能下降，且缓解效果差异显著，凸显彻底解决偏见继承的难度。",
+        "methodology": [
+          {
+            "title": "Bias‑ratio 控制的微调",
+            "detail": "在真实与合成数据的混合上对 LLM 进行微调，改变增强数据（bias ratio）的比例，以研究其对下游性能的影响。"
+          },
+          {
+            "title": "缓解策略设计",
+            "detail": "提出三种方法：基于 token 的（调整 token 表示）、基于 mask 的（修改注意力掩码）和基于 loss 的（改变损失函数），用于抵消已识别的错位。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "错位因素",
+            "detail": "偏差继承源于真实与合成语料库之间在价值观、群体数据和整体数据分布上的错位。"
+          },
+          {
+            "title": "缓解机制",
+            "detail": "基于 token 的方法旨在重新加权有偏 token，基于 mask 的方法限制有偏注意力模式，基于 loss 的方法在训练中惩罚有偏预测。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "任务套件与偏差分类法",
+            "detail": "评估了十个 classification 和 generation 任务，涵盖六种不同的 bias 类型；系统性地改变 bias ratios，以观察 inheritance effects。"
+          },
+          {
+            "title": "mitigation 评估",
+            "detail": "在任务套件中应用每种 mitigation 策略，测量 downstream performance 的变化，以评估其在各 bias 和任务上的有效性。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "Bias inheritance 降低性能",
+            "detail": "在与 bias 直接相关的 classification 和 generation 任务中，较高的 synthetic bias ratios 导致 downstream accuracy 和 fairness metrics 可测量的下降。"
+          },
+          {
+            "title": "异构 mitigation 结果",
+            "detail": "Token‑、mask‑、和 loss‑based 方法在部分 bias‑task 组合上提升 performance，但在其他组合上失效或出现回退，凸显 task‑specific 挑战。"
+          }
+        ],
+        "contributions": [
+          "系统性研究 LLM 生成的合成数据中的偏差继承。",
+          "识别导致偏差传播的三个关键错位因素。",
+          "提出三种缓解策略（基于 token、基于 mask、基于 loss）。"
+        ],
+        "limitations": [
+          "缓解策略在不同任务和偏差类型上的效果差异显著，表明普遍解决偏差继承面临重大挑战。"
+        ],
+        "open_questions": [
+          "如何统一缓解技术，以在多样任务中持续降低偏差继承？",
+          "哪些定量指标最能衡量合成数据集中的偏差继承程度？",
+          "能否将偏差感知的数据选择标准整合到 LLM 增强流水线中，以预先限制偏差传播？"
+        ],
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "llm",
+          "loss"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:4244-main",
+      "title": "User Perceptions vs. Proxy LLM Judges: Privacy and Helpfulness in LLM Responses to Privacy-Sensitive Scenarios",
+      "abstract": "Large language models (LLMs) are rapidly being adopted for tasks like drafting emails, summarizing meetings, and answering health questions. In these settings, users may need to share private information (e.g., contact details, health records). To evaluate LLMs' ability to identify and redact such information, prior work introduced real-life, scenario-based benchmarks (e.g., ConfAIde, PrivacyLens) and found that LLMs can leak private information in complex scenarios. However, these evaluations relied on proxy LLMs to judge the helpfulness and privacy-preservation quality of LLM responses, rather than directly measuring users' perceptions. To understand how users perceive the helpfulness and privacy-preservation quality of LLM responses to privacy-sensitive scenarios, we conducted a user study ($n=94$) using 90 PrivacyLens scenarios. We found that users had low agreement with each other when evaluating identical LLM responses. In contrast, five proxy LLMs reached high agreement, yet each proxy LLM had low correlation with users' evaluations. These results indicate that proxy LLMs cannot accurately estimate users' wide range of perceptions of utility and privacy in privacy-sensitive scenarios. We discuss the need for more user-centered studies to measure LLMs' ability to help users while preserving privacy, and for improving alignment between LLMs and users in estimating perceived privacy and utility.",
+      "authors": [
+        "Xiaoyuan Wu",
+        "Roshni Kaushik",
+        "Wenkai Li",
+        "Lujo Bauer",
+        "Koichi Onoue"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.7339,
+          "matched": [
+            "llm"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.6092,
+          "matched": [
+            "privacy",
+            "alignment",
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7413,
+        "relevance": 0.709,
+        "quality": 0.72,
+        "novelty": 0.8652,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0118,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "代理 LLM 评审无法预测用户在隐私敏感情境下对隐私和有用性的感知。",
+        "evidence": "用户间评审一致性低，而五个代理 LLM 的一致性高，但与用户评分相关性低。",
+        "limitations": "缺乏对 90 PrivacyLens 场景之外的泛化证据。",
+        "method": "对 94 名参与者进行的用户研究，评估 90 个 PrivacyLens 场景下 LLM 响应的隐私性和实用性。",
+        "why_for_you": "对可信 LLM 研究重要，因为它揭示了基于模型的代理与人类隐私判断之间的不一致。",
+        "problem": "当前评估依赖代理 LLM，而非直接测量用户对隐私保护 LLM 行为的判断。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "overview": "本文探讨代理 LLM 评审能否替代人类对 LLM 生成响应的隐私和实用性评估。通过招募 94 名参与者对 90 个真实 PrivacyLens 场景的响应进行评分，作者测量用户间的一致性并与五个代理 LLM 的共识比较。结果显示人类意见分歧显著，代理模型内部一致却与人类判断偏离，凸显当前评估实践的缺口并推动以用户为中心的评估方法。",
+        "open_questions": [
+          "如何设计评估指标以捕捉用户对隐私感知的广泛差异？",
+          "哪些方法能使代理 LLM 判断与隐私敏感情境下多样的人类判断保持一致？"
+        ],
+        "limitations": [
+          "缺乏对 90 PrivacyLens 场景之外的泛化证据。"
+        ],
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "代理 LLM 评审在 90 个 PrivacyLens 场景（94 名用户）中对隐私和有用性的人工判断预测效果差。"
+          },
+          {
+            "icon": "🔧",
+            "text": "进行用户研究，对 LLM 响应的隐私和实用性进行评分，并将用户间一致性与五个代理 LLM 进行比较。"
+          },
+          {
+            "icon": "📊",
+            "text": "用户一致性低（低的 inter‑rater 相关），而代理 LLM 一致性高但与用户相关性低。"
+          }
+        ],
+        "methodology": [
+          {
+            "title": "User Study Design",
+            "detail": "94 名参与者分别评估 90 个 PrivacyLens 场景下的 LLM 响应，给出对隐私保护和有用性的感知评分。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Misalignment Between Proxy and Human Judgments",
+            "detail": "代理 LLM 在内部产生一致评分，但这些评分与多样的人类评估相关性差，表明存在系统性评估偏差。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Evaluation of Proxy LLMs vs. Human Ratings",
+            "detail": "五个代理 LLM 对相同响应生成判断；计算了代理之间的一致性以及与人类评分的相关性。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "Low Human Agreement",
+            "detail": "人类参与者对相同 LLM 响应的评分一致性低。"
+          },
+          {
+            "title": "High Proxy Agreement, Low Correlation",
+            "detail": "代理 LLM 达到高内部一致性，但与人类评估的相关性低。"
+          }
+        ],
+        "contributions": [
+          "提供实证表明代理 LLM 评审未能反映用户对隐私和实用性的感知。"
+        ],
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "llm"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:icml:2026:71030",
+      "title": "OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration",
+      "abstract": "As high-quality public text approaches exhaustion, a phenomenon known as the Data Wall—LLM pre-training is shifting from more tokens to better tokens. However, existing methods either rely on heuristic static filters that ignore training dynamics, or use dynamic yet optimizer-agnostic criteria based on raw gradients. We propose OPUS (Optimizer-induced Projected Utility Selection), a dynamic framework that defines utility in the optimizer-induced update space. OPUS scores candidates by projecting their effective updates, shaped by modern optimizers, onto a target direction derived from a stable, in-distribution proxy. To ensure scalability, we employ Ghost technique with CountSketch for computational efficiency, and Boltzmann sampling for data diversity, incurring only 4.7% additional compute overhead. OPUS achieves remarkable results across diverse corpora, quality tiers, optimizers, and model scales. It also outperforms previous data selection methods across different stages of training, including from-scratch pre-training and also mid-training. Beyond online selection, the OPUS utility score also demonstrates potential as a static filter for flagging and removing toxic documents from contaminated training corpora prior to training.",
+      "authors": [
+        "Shaobo Wang",
+        "Xuan Ouyang",
+        "Tianyi Xu",
+        "Yuzheng Hu",
+        "Jialin Liu",
+        "Guo Chen",
+        "Tianyu Zhang",
+        "Junhao Zheng",
+        "Kexin Yang",
+        "Xingzhang Ren",
+        "Dayiheng Liu",
+        "Linfeng Zhang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71030",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71030",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.6968,
+          "matched": [
+            "data selection",
+            "sampling",
+            "data",
+            "selection"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.6931,
+          "matched": [
+            "efficient",
+            "training"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.1286,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7352,
+        "relevance": 0.7218,
+        "quality": 0.65,
+        "novelty": 0.8605,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0168,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "OPUS 通过将 optimizer‑induced 更新投影到 target direction，高效选择更高效用的训练标记。",
+        "evidence": "OPUS 在语料库、optimizers 和模型规模上均优于已有 data‑selection 方法，且仅增加 4.7% 的计算开销。",
+        "limitations": "在可得来源中未说明。",
+        "method": "OPUS 通过使用 Ghost、CountSketch 和 Boltzmann 采样，将现代优化器塑造的有效更新投影到由稳定分布代理得到的方向上，为每个候选项打分。",
+        "why_for_you": "如果您需要利用训练动态和 optimizer 行为的 data‑selection 方法以实现高效 LLM pre‑training，则本研究相关。",
+        "problem": "Data Wall 限制了 LLM pre‑training，因为高质量公共文本已枯竭，且现有过滤器忽视训练动态或对 optimizer‑agnostic 不敏感。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "OPUS 引入了动态、optimizer‑aware 的数据选择框架，通过投影效用为训练样本打分。"
+          },
+          {
+            "icon": "🗂️",
+            "text": "OPUS 使用 Ghost 技术结合 CountSketch 与 Boltzmann 采样，将 optimizer‑shaped 的有效更新投影到 target direction。"
+          },
+          {
+            "icon": "📈",
+            "text": "OPUS 仅增加 4.7% 的计算开销，却在语料库、optimizers 和模型规模上实现更佳性能。"
+          }
+        ],
+        "overview": "OPUS 通过在 optimizer‑induced 更新空间定义效用来应对 Data Wall。它利用现代优化器计算的有效更新，将其投影到由稳定分布代理得到的 target direction 上，为每个候选标记计算效用分数。通过 Ghost 技术结合 CountSketch 实现可扩展性，并使用 Boltzmann 采样保持数据多样性。跨不同语料库、质量层级、optimizers 和模型规模的实验表明，相比现有静态和动态选择方法，OPUS 能持续提升性能，且仅带来约 4.7% 的计算增量。该效用分数亦可用作有害数据的静态过滤器。",
+        "methodology": [
+          {
+            "title": "Utility Scoring via Projection",
+            "detail": "每个候选的有效更新（由 optimizer 产生）被投影到反映稳定分布内 proxy 的目标方向上，得到标量效用分数。"
+          },
+          {
+            "title": "可扩展计算",
+            "detail": "Ghost 技术结合 CountSketch 高效近似投影，实现每次迭代评分而不会产生过大开销。"
+          },
+          {
+            "title": "通过 Boltzmann 采样实现多样性",
+            "detail": "效用分数通过 Boltzmann 分布转化为选择概率，既保证数据多样性，又倾向于高效用样本。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "优化器诱导的更新空间",
+            "detail": "现代优化器（如 Adam）生成的更新定义了一个向量空间；OPUS 利用该空间捕获原始梯度方法中缺失的训练动态。"
+          },
+          {
+            "title": "来自稳定代理的目标方向",
+            "detail": "稳定的分布内数据集提供参考方向；将更新投影到该方向上可衡量与期望学习信号的对齐程度。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "实证评估",
+            "detail": "在多个覆盖不同质量层级的语料库上评估 OPUS，使用多种优化器和模型规模，涵盖从头 pre‑training 和 mid‑training 阶段；并与之前的 static filters 和 dynamic gradient‑based selectors 进行比较。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "性能提升",
+            "detail": "在所有设置下，OPUS 始终优于以往 data selection methods，展示了对语料类型、优化器选择和模型规模的鲁棒性。"
+          },
+          {
+            "title": "计算效率",
+            "detail": "OPUS 额外的计算成本限制在每次 training iteration 的 4.7%。"
+          },
+          {
+            "title": "静态过滤能力",
+            "detail": "OPUS utility score 可 offline 用于标记并在 training 前移除 toxic documents。"
+          }
+        ],
+        "contributions": [
+          "Dynamic optimizer‑aware 投影效用的数据选择。",
+          "使用 Ghost 技术和 CountSketch 的可扩展投影。",
+          "展示 utility score 作为静态 toxic‑data 过滤器。"
+        ],
+        "limitations": [
+          "在可用来源中未说明。"
+        ],
+        "open_questions": [
+          "OPUS 在极大模型（例如 >10B 参数）和海量 token 池上的可扩展性如何？",
+          "不同的 stable in‑distribution 代理选择对 utility 估计的影响是什么？",
+          "OPUS 对 optimizer 超参数以及 Ghost/CountSketch 近似细节的敏感性如何？"
+        ],
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "data selection",
+          "sampling",
+          "data",
+          "selection"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

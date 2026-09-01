@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-07T11:07:09.814314+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 135,
+  "source_total": 135,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 135,
+  "previously_recommended_count": 122,
+  "eligible_count": 2,
+  "feedback_count": 8,
+  "semantic_feedback_count": 0,
+  "papers": [
+    {
+      "id": "2608.06202",
+      "title": "What Current AI Benchmarks Leave Unmeasured: Modality, Search, Citations, and Implications (for Safety Evaluations)",
+      "abstract": "Large language model (LLM) benchmark evaluations are routinely used to support claims about model safety, reliability, and deployment readiness. Yet most evaluations rely on a single access modality (model APIs), perform a single run per prompt, and report accuracy as the primary outcome metric, without accounting for conditions such as web search that may have effects on model behavior in deployment. We audit these assumptions for one of the most widely-used LLMs, comparing two modalities, ChatGPT's chat UI and OpenAI's API, with and without web search enabled. We use a stratified total sample of 401 prompts from two popular benchmarks, BBQ and SafetyBench, collecting 4,812 total responses across three repeated runs per prompt. Beyond standard performance measures, we evaluate model output dimensions including response consistency, response text similarity, citation grounding, and abstention behavior. For instance, chat UI responses were less accurate than API responses on both benchmarks with search disabled. Enabling web search reduced accuracy by up to 8 percentage points, and even reversed the direction of modality performance trends for one benchmark. Repeated runs of the same prompt produced inconsistent responses in up to 21\\% of prompts. The two modalities also grounded answers in different citations, and abstention behavior was also inconsistent across both modalities. These results illustrate that, even within a model family, reporting only simple accuracy metrics can obscure important forms of model behavioral variation relevant to AI safety assessments. We argue that AI safety evaluations should systematically account for modality, multi-run consistency, search conditions, and response-level behaviors to better reflect how deployed AI systems behave in practice.",
+      "authors": [
+        "Ro Encarnación",
+        "Tina Behzad",
+        "Emma Lurie",
+        "Danaé Metaxa"
+      ],
+      "published": "2026-08-06T15:58:32Z",
+      "updated": "2026-08-06T15:58:32Z",
+      "categories": [
+        "cs.HC",
+        "cs.AI"
+      ],
+      "primary_category": "cs.HC",
+      "abs_url": "https://arxiv.org/abs/2608.06202v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06202v1",
+      "comment": "18 pages",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.3822,
+          "matched": [
+            "safety",
+            "reliability"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4276,
+        "relevance": 0.3058,
+        "quality": 0.48,
+        "novelty": 0.8855,
+        "freshness": 0.886,
+        "feedback_adjustment": -0.0231,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "单一API准确率不足以捕捉LLM在不同访问方式、搜索条件和多次运行下的安全行为差异。",
+        "problem": "现有安全基准只使用单一访问模态、单次响应并以准确率为唯一指标，忽视了部署环境中的关键行为维度。",
+        "method": "对ChatGPT的聊天界面和OpenAI API在有无网络搜索的条件下，对401条BBQ和SafetyBench提示进行三次重复，收集4812条响应并评估一致性、文本相似度、引用依据和拒答行为。",
+        "evidence": "启用网络搜索使准确率下降最多8个百分点，且高达21%的提示出现响应不一致，API与UI在引用来源上显著不同。",
+        "limitations": "仅针对一个模型家族、两套安全/偏见基准和单一数据收集时期进行实验。",
+        "why_for_you": "该工作直接揭示了可信LLM评估中被忽视的模态和一致性因素，适合关注安全可靠性的研究者阅读。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🛡️",
+            "text": "首次系统审计ChatGPT UI与API在安全基准上的行为差异，采集401个提示共4812条响应"
+          },
+          {
+            "icon": "🔎",
+            "text": "比较两种访问模态并在有/无网络搜索条件下进行三次重复实验"
+          },
+          {
+            "icon": "📉",
+            "text": "启用网络搜索导致准确率下降最多8%，21%提示出现响应不一致"
+          }
+        ],
+        "overview": "本文审计了ChatGPT的聊天UI与API两种访问模态在BBQ和SafetyBench两套安全/偏见基准上的表现，分别在开启和关闭网络搜索的条件下进行三次重复，共收集4812条响应。除传统准确率外，作者额外测量了响应一致性、文本相似度、引用依据以及拒答行为，发现模态、搜索与多次运行均会显著影响这些安全相关维度，单一准确率指标难以反映真实部署风险。",
+        "methodology": [
+          {
+            "title": "数据采样",
+            "detail": "从BBQ和SafetyBench两套公开基准中分层抽取共401条提示，确保覆盖不同难度和主题。"
+          },
+          {
+            "title": "实验设置",
+            "detail": "在ChatGPT聊天界面和OpenAI API两种模态下，分别在开启和关闭网络搜索的条件下，对每条提示执行三次独立生成，得到4,812 条完整响应。"
+          },
+          {
+            "title": "评估维度",
+            "detail": "除准确率外，计算响应一致性（是否在三次运行中给出相同答案）、文本相似度（余弦相似度）、引用 grounding（是否提供相同来源）以及 abstention（是否拒答）。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "模态差异来源",
+            "detail": "聊天UI引入系统提示和内容审查策略，API则直接返回模型输出，这导致两者在答案措辞、引用选择和安全过滤上产生系统性差异。"
+          },
+          {
+            "title": "搜索条件影响",
+            "detail": "开启网络搜索会让模型检索外部文档后再生成答案，增加信息来源多样性，却也引入检索噪声，导致一致性下降和准确率下降。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "模型与基准",
+            "detail": "使用ChatGPT（同一模型家族）在两种访问方式下评估，基准为Bias Benchmark BBQ (Parrish et al., 2022) 与 Safety Benchmark SafetyBench (Zhang et al., 2024)。"
+          },
+          {
+            "title": "对照与指标",
+            "detail": "比较API vs UI、搜索开启 vs 关闭的准确率差异（2–3% 小幅但在SafetyBench上显著），以及一致性下降最高至21%，引用差异显著，拒答行为在不同条件下不一致。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "准确率差异",
+            "detail": "在关闭搜索时，Chat UI的准确率低于API；开启搜索后，两者差异可逆转，最高下降8个百分点。"
+          },
+          {
+            "title": "响应一致性",
+            "detail": "重复运行中，最多21%的提示出现答案不一致，搜索条件普遍增加不一致性。"
+          },
+          {
+            "title": "引用 grounding 差异",
+            "detail": "相同提示下，API 与 UI 常引用不同来源，即使答案相同。"
+          },
+          {
+            "title": "拒答行为不稳定",
+            "detail": "同一提示在一种模态下被拒答，在另一模态下却给出答案，显示安全机制执行不一致。"
+          }
+        ],
+        "contributions": [
+          "系统审计了同一模型在不同访问模态、搜索条件和多次运行下的安全相关行为差异。",
+          "提出了超越准确率的四个评估维度：一致性、文本相似度、引用 grounding 与 abstention。",
+          "提供了实证证据表明仅报告单一准确率会掩盖重要的安全风险。"
+        ],
+        "limitations": [
+          "实验仅覆盖ChatGPT单一模型家族。",
+          "仅使用BBQ和SafetyBench两套基准，未覆盖更广泛任务。",
+          "数据收集在单一时间窗口进行，未考察模型更新或季节性变化的影响。"
+        ],
+        "open_questions": [
+          "不同模型（如Claude、Gemini）在相同模态和搜索条件下是否表现出类似差异？",
+          "在多轮对话或真实用户交互场景中，这些维度的波动是否更为显著？",
+          "如何设计标准化的模态‑搜索‑一致性评估框架，以便在行业治理中广泛采用？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "safety",
+          "reliability"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2608.06179",
+      "title": "SAGA: Score-Weighted Adaptive Generation Alignment for Low-Resource Nordic Language Models",
+      "abstract": "Preference optimisation has proven effective for improving large language models but typically relies on costly human preference annotations. Extending these methods to morphologically rich, low-resource languages remains challenging because such annotations are scarce. We present SAGA (Score-weighted Adaptive Generation Alignment), a parser-guided preference optimisation framework that replaces human labels with dependency-parser supervision. SAGA converts parser judgements into preference pairs for delta-DPO, combines parser quality with lexical diversity in a composite reward, filters low-information pairs using a reward-gap criterion, and monitors reward hacking to maintain reliable supervision. Across Danish, Icelandic, and Norwegian Bokmål using GPT-SW3-1.3B, SAGA consistently improves grammatical quality without requiring human preference labels. Danish parse success increases from 69.0% to 93.8%, Icelandic achieves a +4.5 percentage-point improvement on an independent Stanza evaluation (three-run mean +3.3 percentage points) while native speakers prefer SAGA outputs in 80% of pairwise comparisons, and Norwegian Bokmål improves by +28 percentage points. These results demonstrate that parser-derived supervision is a practical alternative to human preference annotation for grammatical alignment in low-resource languages where high-quality dependency parsers are available.",
+      "authors": [
+        "Hoda Fakharzadehjahromy",
+        "Emil Wiman",
+        "Andreas Bueff",
+        "Hafsteinn Einarsson",
+        "Fredrik Heintz"
+      ],
+      "published": "2026-08-06T15:41:02Z",
+      "updated": "2026-08-06T15:41:02Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2608.06179v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.06179v1",
+      "comment": "18 pages, 7 figures",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.354,
+          "matched": [
+            "alignment"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.397,
+        "relevance": 0.2832,
+        "quality": 0.41,
+        "novelty": 0.8668,
+        "freshness": 0.8843,
+        "feedback_adjustment": -0.0234,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "SAGA 通过解析器监督实现了在低资源北欧语言模型上无需人工偏好标签的显著语法提升。",
+        "problem": "低资源、形态丰富语言缺乏大规模人类偏好标注，阻碍了语言模型的对齐与语法改进。",
+        "method": "SAGA 将依存解析器判断转化为 Δ‑DPO 偏好对，使用解析器得分与词汇多样性加权的复合奖励并通过 Δ‑gap 过滤低信息对，同时监控奖励黑客。",
+        "evidence": "丹麦 PSR 从 69% 提升至 93.8%（两轮）再至 99.5%（四轮），冰岛语提升 4.5 个百分点且 80% 本族语者偏好其输出，挪威 Bokmål 提升 28 个百分点。",
+        "limitations": "评估使用相同的持出提示进行模型选择，可能导致轻微选择偏差，且方法依赖高质量的依存解析器。",
+        "why_for_you": "对可信 LLM 研究者而言，SAGA 提供了一种低成本、解析器驱动的语法对齐方案，适用于缺乏人类偏好数据的语言。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "SAGA实现无需人工偏好标签的解析器监督，丹麦PSR提升至99.5%"
+          },
+          {
+            "icon": "🔧",
+            "text": "采用Δ‑DPO复合奖励（解析器得分+词汇多样性）并用Δ‑gap过滤，抑制奖励黑客"
+          },
+          {
+            "icon": "📈",
+            "text": "在三种北欧语言上分别提升PSR至93.8%/+4.5pp/+28pp，且80%本族语者偏好SAGA输出"
+          }
+        ],
+        "overview": "SAGA 提出一种解析器引导的偏好优化框架，利用依存解析器对生成文本的语法判定生成偏好对，结合解析器得分与词汇多样性构成复合奖励，并通过 Δ‑gap 阈值过滤信息量低的对，配合轻量正则化防止奖励黑客。实验在 GPT‑SW3‑1.3B 上的丹麦、冰岛语和挪威 Bokmål 三种低资源北欧语言验证，显著提升解析成功率且保持或提升文本多样性，展示了解析器监督作为人类偏好替代的可行性。",
+        "methodology": [
+          {
+            "title": "解析器生成偏好对",
+            "detail": "对每个提示采样 K 条续写（DA K=8，IS/NB K=16），使用依存解析器评估每条的解析得分 r_parse，依据得分高低形成偏好对。"
+          },
+          {
+            "title": "复合奖励设计",
+            "detail": "奖励 R = α·r_parse + β·r_div，其中 r_div 为基于 MATTR 的词汇多样性得分，α、β 为语言特定超参数。"
+          },
+          {
+            "title": "Δ‑gap 过滤",
+            "detail": "仅保留奖励差 Δr ≥ δ 的对（DA/IS δ=0.15，NB δ=0.10），剔除信息量不足的样本，降低噪声。"
+          },
+          {
+            "title": "Δ‑DPO 更新",
+            "detail": "在保留的对上执行 Δ‑DPO（Rafailov 等 2023）进行策略梯度更新，支持可选的 BAPO（流畅性约束）和 KL‑SFT 正则化。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "解析器作为偏好信号",
+            "detail": "解析器对正确形态的句子给出可解析的依存树，错误形态导致解析失败或低得分，形成自然的二元偏好信号，无需人工标注。"
+          },
+          {
+            "title": "奖励黑客检测",
+            "detail": "通过监控 oracle‑parser 差距（阈值 0.20）和词汇多样性下降（MATTR、4‑gram 重复）来识别模型学习仅骗取解析器的行为。"
+          },
+          {
+            "title": "语法‑多样性 Pareto 前沿",
+            "detail": "复合奖励使模型在每轮训练中同时提升解析成功率和 MATTR，形成语法与多样性的共同提升曲线。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "实验设置",
+            "detail": "基模型为 GPT‑SW3‑1.3B；训练数据分别为丹麦 Wikipedia、冰岛 MIM‑GOLD、挪威 HPLT（各 20k 条）；评估指标包括 Parse Success Rate (PSR)、Stanza PSR、Oracle PS、MATTR、困惑度 (PPL)。"
+          },
+          {
+            "title": "对照基线",
+            "detail": "包括基模型、Vanilla DPO（离线偏好对）、二元标签 DPO、在线方法 GRPO、sDPO，以及 SAGA 的各组件消融（去除多样性奖励、去除 Δ‑gap 过滤、去除 BAPO、去除 KL‑SFT）。"
+          },
+          {
+            "title": "主要结果",
+            "detail": "丹麦 PSR 由 69% 提升至 87.3%（单轮）→93.8%（两轮）→99.5%（四轮）；冰岛语 Stanza PSR 提升 4.5pp，原始解析器得分提升至 88.7%；挪威 Bokmål PSR 提升 28pp；80% 本族语者在配对比较中偏好 SAGA 输出。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "复合奖励防止语法‑多样性权衡",
+            "detail": "去除多样性项虽可将 PSR 提至 98.5%（丹麦），但 oracle‑parser 差距扩大至 0.22 并出现重复；保留复合奖励则保持低差距（≈0.10）且 MATTR 提升。"
+          },
+          {
+            "title": "奖励黑客诊断有效",
+            "detail": "所有去除安全组件的消融配置均跨入差距 >0.20 的黑客区间，验证了奖励黑客检测的敏感性。"
+          },
+          {
+            "title": "语言特定正则化的影响",
+            "detail": "BAPO 对丹麦和挪威有正向作用（λB=0.05），但对冰岛语去除 BAPO 可提升 Oracle PS 与 Stanza PSR；KL‑SFT 在后期迭代提升稳定性，但对挪威在首次训练时有负面影响。"
+          }
+        ],
+        "contributions": [
+          "提出 SAGA 框架，实现解析器监督的 Δ‑DPO 偏好优化，无需人工偏好标签。",
+          "在三种低资源北欧语言上展示显著的语法改进，兼顾词汇多样性。",
+          "设计奖励黑客诊断并通过复合奖励与过滤机制有效抑制模型骗取解析器的行为。"
+        ],
+        "limitations": [
+          "评估使用相同的持出提示进行模型选择，可能导致轻微选择偏差。",
+          "方法依赖高质量的依存解析器，无法直接推广到缺乏解析资源的语言。",
+          "部分正则化（如 BAPO、KL‑SFT）需针对每种语言调参，增加实现复杂度。"
+        ],
+        "open_questions": [
+          "在缺乏高质量解析器的语言上，是否可以使用弱监督或跨语言迁移的解析器实现类似效果？",
+          "复合奖励对模型长期语言理解能力（如推理、常识）有何影响？",
+          "将 SAGA 扩展到更大规模模型或多语言统一模型时，奖励设计和过滤阈值是否仍然有效？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "alignment"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

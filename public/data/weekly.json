@@ -1,0 +1,1871 @@
+{
+  "generated_at": "2026-09-01T14:52:59.157232+00:00",
+  "papers": [
+    {
+      "id": "conf:acl:2026:1334-main",
+      "title": "A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner Training for Long-Horizon Agent Task",
+      "abstract": "Agents based on large language models (LLMs) struggle with brainless trial-and-error and generating hallucinatory actions due to a lack of global planning in long-horizon tasks. In this paper, we introduce a plan-and-execute framework and propose EAGLET, an efficient and effective planner training method to enhance the executor agent's planning abilities without human effort. Specifically, we train a plug-and-play global planner through a two-step process: we first synthesize high-quality plans from an advanced LLM using our proposed homologous consensus filtering strategy, and apply fine-tuning as a cold start. Moreover, we further improve the planner with a rule-based reinforcement learning stage using a novel executor capability gain reward, ensuring it can handle task instructions of varying difficulty. Experiments on three long-horizon agent tasks show that executor agents equipped with our planner outperform existing methods, achieving new state-of-the-art performance. Meanwhile, EAGLET reduces training costs by 8× compared to RL-based baselines, and it does not require manual effort or extra training data, offering an efficient and effective solution.",
+      "authors": [
+        "Shuzheng Si",
+        "Haozhe Zhao"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.8209,
+          "matched": [
+            "efficient",
+            "training",
+            "fine-tuning"
+          ]
+        },
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.3174,
+          "matched": [
+            "filtering",
+            "training data",
+            "data"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.1308,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.774,
+        "relevance": 0.7464,
+        "quality": 0.78,
+        "novelty": 0.8285,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0227,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "method": "通过共识过滤的计划合成和基于规则的强化学习（使用能力提升奖励），训练即插即用的全局规划器。",
+        "takeaway": "EAGLET 高效训练全局规划器，提升 LLM 代理的长时程表现，无需人工数据。",
+        "problem": "LLM 代理缺乏全局规划，导致长时程任务中反复试错和幻觉行为。",
+        "evidence": "配备该规划器的执行代理在三项任务上达到 state‑of‑the‑art 结果，训练成本比 RL 基线降低 8 倍。",
+        "why_for_you": "如果您需要高效、无需对抗训练的方式提升 LLM 在长时程任务中的规划能力，则本研究相关。",
+        "limitations": "论文未提供量化性能数据或计划质量分析。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "experiments": [
+          {
+            "title": "三项长时程代理任务的评估",
+            "detail": "将配备 EAGLET 规划器的执行代理与现有方法对比；结果声称达到 state‑of‑the‑art 性能，训练成本比基于 RL 的基线降低 8 倍，且无需额外人工标注数据。"
+          }
+        ],
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "EAGLET 引入无需人工标注的即插即用全局规划器，提升长时程 LLM 代理。"
+          },
+          {
+            "icon": "⚙️",
+            "text": "使用同源共识过滤合成高质量计划，再通过基于规则的 RL 结合执行器能力提升奖励进行训练。"
+          },
+          {
+            "icon": "📊",
+            "text": "在三项长时程任务上展示 state‑of‑the‑art 性能，训练成本比 RL 基线低 8 倍，但未报告量化结果。"
+          }
+        ],
+        "contributions": [
+          "EAGLET 规划器训练流水线",
+          "用于计划合成的同源共识过滤策略",
+          "基于规则强化学习的执行器能力提升奖励"
+        ],
+        "methodology": [
+          {
+            "title": "通过同源共识过滤进行计划合成",
+            "detail": "从高级 LLM 生成高质量计划，并通过共识机制过滤，构建干净的规划器训练集。"
+          },
+          {
+            "title": "基于规则的强化学习与能力提升奖励",
+            "detail": "在基于规则的 RL 循环中进一步微调初始化的规划器，奖励衡量执行器在不同指令难度下的性能提升。"
+          }
+        ],
+        "limitations": [
+          "未提供量化性能指标或消融实验",
+          "缺少任务定义、基线和数据集细节",
+          "依赖高级 LLM 生成初始计划，可能限制适用性"
+        ],
+        "findings": [
+          {
+            "title": "性能提升与成本降低",
+            "detail": "加入规划器的执行器在三项任务上均优于已有方法，训练计算量降低八倍。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "共识过滤的冷启动",
+            "detail": "共识过滤在多个 LLM 输出中挑选一致的计划片段，确保规划器从可靠轨迹开始训练。"
+          },
+          {
+            "title": "执行器能力提升奖励",
+            "detail": "RL 奖励量化执行器在规划器引导下成功率的提升，鼓励直接有益于执行的规划行为。"
+          }
+        ],
+        "open_questions": [
+          "EAGLET 在更复杂或真实环境中的可扩展性如何？",
+          "该方法对 LLM 代理对抗鲁棒性的影响如何？",
+          "在没有高容量 LLM 的情况下，共识过滤方法是否仍然有效？"
+        ],
+        "overview": "本文针对 LLM 代理缺乏全局规划的问题，提出名为 EAGLET 的计划‑执行框架。首先通过同源共识过滤的高质量计划合成，对即插即用的全局规划器进行冷启动。随后在基于规则的强化学习阶段，以执行器能力提升为奖励对规划器进行微调。三项长时程任务的实验显示，方法达到 state‑of‑the‑art 性能，训练成本比 RL 基线降低八倍，且无需人工数据收集。",
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "efficient",
+          "training",
+          "fine-tuning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-27T20:30:01.195934+00:00"
+    },
+    {
+      "id": "conf:icml:2026:71112",
+      "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
+      "abstract": "Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence transformations with significantly reduced computational cost. POET-X maintains the generalization and stability benefits of POET while achieving substantial improvements in throughput and memory efficiency. In our experiments, POET-X enables the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in contrast, standard optimizers such as AdamW run out of memory under the same settings.",
+      "authors": [
+        "Zeju Qiu",
+        "Lixin LIU",
+        "Adrian Weller",
+        "Han Shi",
+        "Weiyang Liu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71112",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71112",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.7999,
+          "matched": [
+            "efficient",
+            "training"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.3454,
+          "matched": [
+            "llm"
+          ]
+        },
+        {
+          "id": "llm_statistical_theory",
+          "name": "Statistical theory for LLMs",
+          "status": "background",
+          "score": 0.3091,
+          "matched": [
+            "generalization",
+            "scaling"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7639,
+        "relevance": 0.7708,
+        "quality": 0.63,
+        "novelty": 0.8689,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0171,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "method": "POET‑X 重新设计正交等价变换，以降低矩阵乘法开销，同时保持 POET 的稳定性优势。",
+        "takeaway": "POET‑X 提供内存高效的正交等价训练方法，使得在单个 H100 GPU 上预训练十亿参数 LLM 成为可能。",
+        "problem": "标准正交等价训练 (POET) 需要大量内存和计算，限制了大规模 LLM 训练。",
+        "evidence": "POET‑X 成功在一块 Nvidia H100 上训练十亿参数 LLM，而 AdamW 会出现内存不足。",
+        "why_for_you": "通过降低大模型的内存和计算需求，契合您对高效 adversarial 训练的兴趣。",
+        "limitations": "在可得来源中未说明。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "experiments": [
+          {
+            "title": "单卡 H100 上的十亿参数 LLM 预训练",
+            "detail": "作者使用 POET‑X 在一块 Nvidia H100 GPU 上预训练数十亿参数的模型，并报告在相同硬件条件下，标准优化器如 AdamW 会出现内存不足。"
+          }
+        ],
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "POET‑X 提供内存高效的正交等价训练变体，降低矩阵乘法开销。"
+          },
+          {
+            "icon": "🔧",
+            "text": "POET‑X 通过可扩展实现，以更低计算成本执行正交等价变换。"
+          },
+          {
+            "icon": "📊",
+            "text": "POET‑X 在单块 Nvidia H100 上训练十亿参数 LLM，而 AdamW 出现 OOM。"
+          }
+        ],
+        "contributions": [
+          "内存高效的 POET‑X 变体",
+          "可扩展的正交等价变换实现",
+          "在单卡 H100 GPU 上进行十亿参数 LLM 训练的实证验证"
+        ],
+        "methodology": [
+          {
+            "title": "降低成本的正交等价变换",
+            "detail": "POET‑X 重构正交等价操作，以最小化矩阵乘法强度，从而降低内存占用和计算开销，同时保持权重矩阵的谱特性。"
+          }
+        ],
+        "limitations": [
+          "在可得来源中未说明。"
+        ],
+        "findings": [
+          {
+            "title": "内存效率使原本不可行的训练成为可能",
+            "detail": "POET‑X 降低的内存消耗使得在单 GPU 上成功训练十亿参数 LLM 成为可能，展示出相较于 AdamW 的显著吞吐量和内存提升。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "保持谱的重新参数化",
+            "detail": "该方法在更新过程中保持每个权重矩阵的特征值谱，因而据称提供与原始 POET 方法相当的训练稳定性。"
+          }
+        ],
+        "open_questions": [
+          "POET‑X 相较于基线优化器在收敛速度和最终模型质量上有何影响？",
+          "降低矩阵乘法与变换中潜在近似误差之间的权衡是什么？"
+        ],
+        "overview": "本文提出 POET‑X——可扩展的 Reparameterized Orthogonal Equivalence Training (POET) 变体，旨在降低正交变换的内存和计算负担。通过重新设计以避免高强度矩阵乘法，POET‑X 保持 POET 的谱保持稳定性，同时实现更高吞吐量和更低内存占用。实验表明，POET‑X 能在单块 Nvidia H100 GPU 上预训练十亿参数语言模型，而传统优化器如 AdamW 会超出内存限制。",
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "efficient",
+          "training"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-27T20:30:01.195934+00:00"
+    },
+    {
+      "id": "conf:iclr:2026:10011886",
+      "title": "Common Corpus: The Largest Collection of Ethical Data for LLM Pre-Training",
+      "abstract": "Large Language Models (LLMs) are pre-trained on large data from different sources and domains. These datasets often contain trillions of tokens, including large portions of copyrighted or proprietary content, which raises questions about the legal use of such models. This underscores the need for truly open pre-training data that complies with data security regulations. In this paper, we introduce Common Corpus, the largest open dataset for LLM pre-training. The data assembled in Common Corpus are either uncopyrighted or under permissive licenses and amount to about two trillion tokens. The dataset contains a wide variety of languages, ranging from the high-resource European languages to some low-resource languages rarely represented in pre-training datasets. In addition, it includes a large amount of code data. The diversity of data sources in terms of covered domains and time periods opens up the paths for both research and entrepreneurial needs in diverse areas of knowledge. In this paper, we present the detailed provenance of data assembling and the details of dataset filtering and curation. We train two small language models on Common Corpus and find that they perform comparably to other models of their size, indicating that our dataset is suitable for multilingual pretraining. Common Corpus represents a key contribution to the ecosystem for open science research on Large Language Models.",
+      "authors": [
+        "Pierre-Carl Langlais",
+        "Pavel Chizhov",
+        "Catherine Arnett",
+        "Carlos Hinostroza",
+        "Mattia Nee",
+        "Eliot Jones",
+        "Irène Girard",
+        "David Mach",
+        "Anastasia Stasenko",
+        "Ivan Yamshchikov"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10011886",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10011886",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.6381,
+          "matched": [
+            "filtering",
+            "training data",
+            "curation",
+            "data"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.5887,
+          "matched": [
+            "training"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.4427,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.748,
+        "relevance": 0.7105,
+        "quality": 0.75,
+        "novelty": 0.8618,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.013,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "dataset evidence",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "evidence": "训练的两个小型模型表现与同类模型相当，表明数据集适合多语言预训练。",
+        "limitations": "未在摘要中提及具体限制。",
+        "method": "收集无版权或宽松许可的数据，进行过滤和整理，并训练小型模型验证效果。",
+        "problem": "现有LLM预训练数据常包含版权内容，引发法律使用问题，需真正开放且合规的数据。",
+        "takeaway": "提出Common Corpus，最大的开放数据集用于LLM预训练，包含符合数据安全法规的伦理数据。",
+        "why_for_you": "数据选择 for LLMs",
+        "source": "abstract",
+        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "filtering",
+          "training data",
+          "curation",
+          "data"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-27T20:30:01.195934+00:00"
+    },
+    {
+      "id": "conf:acl:2026:3565-main",
+      "title": "Understanding and Mitigating Bias Inheritance in LLM-based Data Augmentation on Downstream Tasks",
+      "abstract": "Generating synthetic datasets via large language models (LLMs) has emerged as a promising approach to improve LLM performance. However, LLMs inherently reflect biases in their training data, leading to a critical challenge: when models are trained on synthetic data, they may propagate and amplify the inherent biases that can significantly impact fairness and robustness on downstream tasks—a phenomenon we term bias inheritance. This work presents the first systematic investigation in understanding, analyzing, and mitigating bias inheritance. We fine-tune LLMs with a combined dataset of real and LLM-augmented data with varied bias ratio as the proportion of augmented data. Through systematic experiments across 10 classification and generation tasks, we analyze how 6 different types of biases manifest. Our results indicate that bias inheritance harms downstream task performance in bias directly-related classification and generation tasks. Then, our analysis identifies three key misalignment factors: misalignment of values, group data, and data distributions. Based on these insights, we propose three mitigation strategies: token-based, mask-based, and loss-based approaches, which can work differently on various tasks and bias, indicating the substantial challenges to mitigate bias inheritance. We hope this work can provide insights to the research of LLM data augmentation.",
+      "authors": [
+        "Miaomiao Li",
+        "Hao Chen",
+        "Yang Wang",
+        "Tingyuan Zhu",
+        "Weijia Zhang",
+        "Kaijie Zhu",
+        "Kam-Fai Wong",
+        "Jindong Wang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.6441,
+          "matched": [
+            "llm",
+            "loss"
+          ]
+        },
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.5257,
+          "matched": [
+            "training data",
+            "data"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.4303,
+          "matched": [
+            "robustness",
+            "llm"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.2596,
+          "matched": [
+            "training",
+            "robustness"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7419,
+        "relevance": 0.7065,
+        "quality": 0.75,
+        "novelty": 0.8266,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0187,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "LLM 生成的合成数据中的偏见可能被继承并放大，损害下游公平性，且缓解并非易事。",
+        "evidence": "在 10 项分类和生成任务上的实验表明，偏见继承会降低偏见相关任务的性能。",
+        "limitations": "缓解策略在不同任务和偏见上的效果差异显著，表明面临巨大挑战。",
+        "method": "在混合真实与合成数据、不同偏见比例下微调 LLM，并评估基于 token、mask 和 loss 的缓解策略。",
+        "why_for_you": "对研究数据选择和可信 LLM 有重要意义，因为它揭示了合成增强中的偏见风险。",
+        "problem": "LLM 增强的训练数据将固有偏见传播至下游任务（偏见继承）。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "首次系统性研究 LLM 数据增强中偏见继承，覆盖 10 项任务和 6 类偏见。"
+          },
+          {
+            "icon": "⚙️",
+            "text": "提出基于 token、mask 和 loss 的缓解方法，以解决偏见错位。"
+          },
+          {
+            "icon": "📊",
+            "text": "研究发现偏见继承损害下游性能，但缓解效果因任务和偏见而异。"
+          }
+        ],
+        "overview": "本文研究了大型语言模型生成的合成数据如何继承并放大训练数据偏见（称为偏见继承）。通过在真实与 LLM 增强数据的混合数据集上进行微调并控制偏见比例，作者在十个分类和生成基准上考察了六类偏见。文中指出三种错位因素——价值观、群体数据和数据分布——并提出三种缓解策略（基于 token、mask、loss）。结果显示偏见相关任务性能下降，且缓解效果差异显著，凸显彻底解决偏见继承的难度。",
+        "methodology": [
+          {
+            "title": "Bias‑ratio 控制的微调",
+            "detail": "在真实与合成数据的混合上对 LLM 进行微调，改变增强数据（bias ratio）的比例，以研究其对下游性能的影响。"
+          },
+          {
+            "title": "缓解策略设计",
+            "detail": "提出三种方法：基于 token 的（调整 token 表示）、基于 mask 的（修改注意力掩码）和基于 loss 的（改变损失函数），用于抵消已识别的错位。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "错位因素",
+            "detail": "偏差继承源于真实与合成语料库之间在价值观、群体数据和整体数据分布上的错位。"
+          },
+          {
+            "title": "缓解机制",
+            "detail": "基于 token 的方法旨在重新加权有偏 token，基于 mask 的方法限制有偏注意力模式，基于 loss 的方法在训练中惩罚有偏预测。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "任务套件与偏差分类法",
+            "detail": "评估了十个 classification 和 generation 任务，涵盖六种不同的 bias 类型；系统性地改变 bias ratios，以观察 inheritance effects。"
+          },
+          {
+            "title": "mitigation 评估",
+            "detail": "在任务套件中应用每种 mitigation 策略，测量 downstream performance 的变化，以评估其在各 bias 和任务上的有效性。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "Bias inheritance 降低性能",
+            "detail": "在与 bias 直接相关的 classification 和 generation 任务中，较高的 synthetic bias ratios 导致 downstream accuracy 和 fairness metrics 可测量的下降。"
+          },
+          {
+            "title": "异构 mitigation 结果",
+            "detail": "Token‑、mask‑、和 loss‑based 方法在部分 bias‑task 组合上提升 performance，但在其他组合上失效或出现回退，凸显 task‑specific 挑战。"
+          }
+        ],
+        "contributions": [
+          "系统性研究 LLM 生成的合成数据中的偏差继承。",
+          "识别导致偏差传播的三个关键错位因素。",
+          "提出三种缓解策略（基于 token、基于 mask、基于 loss）。"
+        ],
+        "limitations": [
+          "缓解策略在不同任务和偏差类型上的效果差异显著，表明普遍解决偏差继承面临重大挑战。"
+        ],
+        "open_questions": [
+          "如何统一缓解技术，以在多样任务中持续降低偏差继承？",
+          "哪些定量指标最能衡量合成数据集中的偏差继承程度？",
+          "能否将偏差感知的数据选择标准整合到 LLM 增强流水线中，以预先限制偏差传播？"
+        ],
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "llm",
+          "loss"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-28T21:10:49.916182+00:00"
+    },
+    {
+      "id": "conf:acl:2026:4244-main",
+      "title": "User Perceptions vs. Proxy LLM Judges: Privacy and Helpfulness in LLM Responses to Privacy-Sensitive Scenarios",
+      "abstract": "Large language models (LLMs) are rapidly being adopted for tasks like drafting emails, summarizing meetings, and answering health questions. In these settings, users may need to share private information (e.g., contact details, health records). To evaluate LLMs' ability to identify and redact such information, prior work introduced real-life, scenario-based benchmarks (e.g., ConfAIde, PrivacyLens) and found that LLMs can leak private information in complex scenarios. However, these evaluations relied on proxy LLMs to judge the helpfulness and privacy-preservation quality of LLM responses, rather than directly measuring users' perceptions. To understand how users perceive the helpfulness and privacy-preservation quality of LLM responses to privacy-sensitive scenarios, we conducted a user study ($n=94$) using 90 PrivacyLens scenarios. We found that users had low agreement with each other when evaluating identical LLM responses. In contrast, five proxy LLMs reached high agreement, yet each proxy LLM had low correlation with users' evaluations. These results indicate that proxy LLMs cannot accurately estimate users' wide range of perceptions of utility and privacy in privacy-sensitive scenarios. We discuss the need for more user-centered studies to measure LLMs' ability to help users while preserving privacy, and for improving alignment between LLMs and users in estimating perceived privacy and utility.",
+      "authors": [
+        "Xiaoyuan Wu",
+        "Roshni Kaushik",
+        "Wenkai Li",
+        "Lujo Bauer",
+        "Koichi Onoue"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.7339,
+          "matched": [
+            "llm"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.6092,
+          "matched": [
+            "privacy",
+            "alignment",
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7413,
+        "relevance": 0.709,
+        "quality": 0.72,
+        "novelty": 0.8652,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0118,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "代理 LLM 评审无法预测用户在隐私敏感情境下对隐私和有用性的感知。",
+        "evidence": "用户间评审一致性低，而五个代理 LLM 的一致性高，但与用户评分相关性低。",
+        "limitations": "缺乏对 90 PrivacyLens 场景之外的泛化证据。",
+        "method": "对 94 名参与者进行的用户研究，评估 90 个 PrivacyLens 场景下 LLM 响应的隐私性和实用性。",
+        "why_for_you": "对可信 LLM 研究重要，因为它揭示了基于模型的代理与人类隐私判断之间的不一致。",
+        "problem": "当前评估依赖代理 LLM，而非直接测量用户对隐私保护 LLM 行为的判断。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "overview": "本文探讨代理 LLM 评审能否替代人类对 LLM 生成响应的隐私和实用性评估。通过招募 94 名参与者对 90 个真实 PrivacyLens 场景的响应进行评分，作者测量用户间的一致性并与五个代理 LLM 的共识比较。结果显示人类意见分歧显著，代理模型内部一致却与人类判断偏离，凸显当前评估实践的缺口并推动以用户为中心的评估方法。",
+        "open_questions": [
+          "如何设计评估指标以捕捉用户对隐私感知的广泛差异？",
+          "哪些方法能使代理 LLM 判断与隐私敏感情境下多样的人类判断保持一致？"
+        ],
+        "limitations": [
+          "缺乏对 90 PrivacyLens 场景之外的泛化证据。"
+        ],
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "代理 LLM 评审在 90 个 PrivacyLens 场景（94 名用户）中对隐私和有用性的人工判断预测效果差。"
+          },
+          {
+            "icon": "🔧",
+            "text": "进行用户研究，对 LLM 响应的隐私和实用性进行评分，并将用户间一致性与五个代理 LLM 进行比较。"
+          },
+          {
+            "icon": "📊",
+            "text": "用户一致性低（低的 inter‑rater 相关），而代理 LLM 一致性高但与用户相关性低。"
+          }
+        ],
+        "methodology": [
+          {
+            "title": "User Study Design",
+            "detail": "94 名参与者分别评估 90 个 PrivacyLens 场景下的 LLM 响应，给出对隐私保护和有用性的感知评分。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Misalignment Between Proxy and Human Judgments",
+            "detail": "代理 LLM 在内部产生一致评分，但这些评分与多样的人类评估相关性差，表明存在系统性评估偏差。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Evaluation of Proxy LLMs vs. Human Ratings",
+            "detail": "五个代理 LLM 对相同响应生成判断；计算了代理之间的一致性以及与人类评分的相关性。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "Low Human Agreement",
+            "detail": "人类参与者对相同 LLM 响应的评分一致性低。"
+          },
+          {
+            "title": "High Proxy Agreement, Low Correlation",
+            "detail": "代理 LLM 达到高内部一致性，但与人类评估的相关性低。"
+          }
+        ],
+        "contributions": [
+          "提供实证表明代理 LLM 评审未能反映用户对隐私和实用性的感知。"
+        ],
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "llm"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-28T21:10:49.916182+00:00"
+    },
+    {
+      "id": "conf:icml:2026:71030",
+      "title": "OPUS: Towards Efficient and Principled Data Selection in Large Language Model Pre-training in Every Iteration",
+      "abstract": "As high-quality public text approaches exhaustion, a phenomenon known as the Data Wall—LLM pre-training is shifting from more tokens to better tokens. However, existing methods either rely on heuristic static filters that ignore training dynamics, or use dynamic yet optimizer-agnostic criteria based on raw gradients. We propose OPUS (Optimizer-induced Projected Utility Selection), a dynamic framework that defines utility in the optimizer-induced update space. OPUS scores candidates by projecting their effective updates, shaped by modern optimizers, onto a target direction derived from a stable, in-distribution proxy. To ensure scalability, we employ Ghost technique with CountSketch for computational efficiency, and Boltzmann sampling for data diversity, incurring only 4.7% additional compute overhead. OPUS achieves remarkable results across diverse corpora, quality tiers, optimizers, and model scales. It also outperforms previous data selection methods across different stages of training, including from-scratch pre-training and also mid-training. Beyond online selection, the OPUS utility score also demonstrates potential as a static filter for flagging and removing toxic documents from contaminated training corpora prior to training.",
+      "authors": [
+        "Shaobo Wang",
+        "Xuan Ouyang",
+        "Tianyi Xu",
+        "Yuzheng Hu",
+        "Jialin Liu",
+        "Guo Chen",
+        "Tianyu Zhang",
+        "Junhao Zheng",
+        "Kexin Yang",
+        "Xingzhang Ren",
+        "Dayiheng Liu",
+        "Linfeng Zhang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71030",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71030",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.6968,
+          "matched": [
+            "data selection",
+            "sampling",
+            "data",
+            "selection"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.6931,
+          "matched": [
+            "efficient",
+            "training"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.1286,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7352,
+        "relevance": 0.7218,
+        "quality": 0.65,
+        "novelty": 0.8605,
+        "freshness": 1.0,
+        "feedback_adjustment": -0.0168,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "OPUS 通过将 optimizer‑induced 更新投影到 target direction，高效选择更高效用的训练标记。",
+        "evidence": "OPUS 在语料库、optimizers 和模型规模上均优于已有 data‑selection 方法，且仅增加 4.7% 的计算开销。",
+        "limitations": "在可得来源中未说明。",
+        "method": "OPUS 通过使用 Ghost、CountSketch 和 Boltzmann 采样，将现代优化器塑造的有效更新投影到由稳定分布代理得到的方向上，为每个候选项打分。",
+        "why_for_you": "如果您需要利用训练动态和 optimizer 行为的 data‑selection 方法以实现高效 LLM pre‑training，则本研究相关。",
+        "problem": "Data Wall 限制了 LLM pre‑training，因为高质量公共文本已枯竭，且现有过滤器忽视训练动态或对 optimizer‑agnostic 不敏感。",
+        "source": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "OPUS 引入了动态、optimizer‑aware 的数据选择框架，通过投影效用为训练样本打分。"
+          },
+          {
+            "icon": "🗂️",
+            "text": "OPUS 使用 Ghost 技术结合 CountSketch 与 Boltzmann 采样，将 optimizer‑shaped 的有效更新投影到 target direction。"
+          },
+          {
+            "icon": "📈",
+            "text": "OPUS 仅增加 4.7% 的计算开销，却在语料库、optimizers 和模型规模上实现更佳性能。"
+          }
+        ],
+        "overview": "OPUS 通过在 optimizer‑induced 更新空间定义效用来应对 Data Wall。它利用现代优化器计算的有效更新，将其投影到由稳定分布代理得到的 target direction 上，为每个候选标记计算效用分数。通过 Ghost 技术结合 CountSketch 实现可扩展性，并使用 Boltzmann 采样保持数据多样性。跨不同语料库、质量层级、optimizers 和模型规模的实验表明，相比现有静态和动态选择方法，OPUS 能持续提升性能，且仅带来约 4.7% 的计算增量。该效用分数亦可用作有害数据的静态过滤器。",
+        "methodology": [
+          {
+            "title": "Utility Scoring via Projection",
+            "detail": "每个候选的有效更新（由 optimizer 产生）被投影到反映稳定分布内 proxy 的目标方向上，得到标量效用分数。"
+          },
+          {
+            "title": "可扩展计算",
+            "detail": "Ghost 技术结合 CountSketch 高效近似投影，实现每次迭代评分而不会产生过大开销。"
+          },
+          {
+            "title": "通过 Boltzmann 采样实现多样性",
+            "detail": "效用分数通过 Boltzmann 分布转化为选择概率，既保证数据多样性，又倾向于高效用样本。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "优化器诱导的更新空间",
+            "detail": "现代优化器（如 Adam）生成的更新定义了一个向量空间；OPUS 利用该空间捕获原始梯度方法中缺失的训练动态。"
+          },
+          {
+            "title": "来自稳定代理的目标方向",
+            "detail": "稳定的分布内数据集提供参考方向；将更新投影到该方向上可衡量与期望学习信号的对齐程度。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "实证评估",
+            "detail": "在多个覆盖不同质量层级的语料库上评估 OPUS，使用多种优化器和模型规模，涵盖从头 pre‑training 和 mid‑training 阶段；并与之前的 static filters 和 dynamic gradient‑based selectors 进行比较。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "性能提升",
+            "detail": "在所有设置下，OPUS 始终优于以往 data selection methods，展示了对语料类型、优化器选择和模型规模的鲁棒性。"
+          },
+          {
+            "title": "计算效率",
+            "detail": "OPUS 额外的计算成本限制在每次 training iteration 的 4.7%。"
+          },
+          {
+            "title": "静态过滤能力",
+            "detail": "OPUS utility score 可 offline 用于标记并在 training 前移除 toxic documents。"
+          }
+        ],
+        "contributions": [
+          "Dynamic optimizer‑aware 投影效用的数据选择。",
+          "使用 Ghost 技术和 CountSketch 的可扩展投影。",
+          "展示 utility score 作为静态 toxic‑data 过滤器。"
+        ],
+        "limitations": [
+          "在可用来源中未说明。"
+        ],
+        "open_questions": [
+          "OPUS 在极大模型（例如 >10B 参数）和海量 token 池上的可扩展性如何？",
+          "不同的 stable in‑distribution 代理选择对 utility 估计的影响是什么？",
+          "OPUS 对 optimizer 超参数以及 Ghost/CountSketch 近似细节的敏感性如何？"
+        ],
+        "source_scope": "abstract",
+        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "data selection",
+          "sampling",
+          "data",
+          "selection"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-28T21:10:49.916182+00:00"
+    },
+    {
+      "id": "2608.24492",
+      "title": "When Do Supervised UQ Ensembles Improve LLM Hallucination Detection? A Robustness Study",
+      "abstract": "Uncertainty quantification (UQ) methods are widely used for hallucination detection in large language models (LLMs) in closed-book settings where ground-truth evidence is unavailable at inference time. Prior work has proposed combining UQ signals via learned ensembles, but empirical investigations into the robustness of these ensembles are limited. We study a supervised ensembling framework that trains a classifier over heterogeneous UQ-based scorer outputs on a small, domain-specific dataset of labeled LLM responses, then applies it to out-of-sample hallucination classification without retrieval, tools, or reference documents. Across four LLMs, nine datasets, and three generation regimes (short-form QA, long-form generation, and code generation), we provide a systematic robustness analysis along three axes: sample efficiency, in-domain dataset transfer, and generation regime dependence. We find that supervised ensembles outperform the best individual scorer in 30 of 32 settings, with gains realized from as few as 100 labeled instances. Ensembles retain most of their advantage in cases of in-domain transfer under distribution shift, outperforming the best non-ensemble scorer in 23 of 28 transfer settings. Sampling-based black-box ensembles are nearly as effective as full ensembles, while single-generation white-box ensembles offer limited benefit.",
+      "authors": [
+        "Mohit Singh Chauhan",
+        "Vipin Gyanchandani",
+        "Dylan Bouchard"
+      ],
+      "published": "2026-08-25T12:43:07Z",
+      "updated": "2026-08-25T12:43:07Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2608.24492v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24492v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.585,
+          "matched": [
+            "robustness",
+            "uncertainty",
+            "hallucination",
+            "llm"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.5199,
+          "matched": [
+            "robustness"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.4426,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6715,
+        "relevance": 0.6605,
+        "quality": 0.59,
+        "novelty": 0.8075,
+        "freshness": 0.8682,
+        "feedback_adjustment": -0.0129,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "robustness",
+          "uncertainty",
+          "hallucination",
+          "llm"
+        ],
+        "lane": "llm"
+      },
+      "summary": {
+        "takeaway": "Supervised ensembles of heterogeneous UQ scorers consistently improve hallucination detection over the best single scorer, even with as few as 100 labeled examples.",
+        "problem": "Detecting hallucinations in closed‑book LLM outputs without retrieval or reference documents.",
+        "method": "Train a classifier on a vector of black‑box, white‑box, and reflexive UQ scores from a small domain‑specific labeled set and apply it to out‑of‑sample responses.",
+        "evidence": "Ensembles outperform the top individual scorer in 30 of 32 settings by AUROC and retain advantage in 23 of 28 distribution‑shift transfer cases.",
+        "limitations": "Study is limited to four closed‑source LLMs, two factoid long‑form domains, Python code, and does not evaluate cross‑domain or open‑weight model scorers.",
+        "why_for_you": "Matches your interest in trustworthy LLMs by providing a sample‑efficient, robust hallucination detector.",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "Supervised UQ ensembles beat the best single scorer in 30/32 settings, with AUROC gains from 100 labeled examples."
+          },
+          {
+            "icon": "⚙️",
+            "text": "Train logistic regression / random forest / gradient boosting on heterogeneous black‑box, white‑box, and reflexive scorer outputs."
+          },
+          {
+            "icon": "📊",
+            "text": "Ensembles retain advantage in 23/28 distribution‑shift transfer cases, but evaluation covers only four closed‑source LLMs and narrow domains."
+          }
+        ],
+        "overview": "The paper investigates a supervised ensembling framework that learns to combine diverse uncertainty quantification (UQ) signals for hallucination detection in closed‑book LLM generation. By training simple classifiers on vectors of black‑box, white‑box, and reflexive scorer outputs, the authors evaluate sample efficiency, in‑domain transfer under distribution shift, and generation‑regime dependence across four LLMs, nine datasets, and three output formats. Results show ensembles dominate individual scorers in most settings, with modest labeled data requirements, while black‑box‑only ensembles approach full‑ensemble performance. Limitations include a narrow model and task scope.",
+        "methodology": [
+          {
+            "title": "Supervised ensemble training",
+            "detail": "A classifier (logistic regression, random forest, or gradient boosting) is trained on K‑dimensional vectors of UQ scores s1(y)…sK(y) ∈ [0,1]K derived from heterogeneous scorers; training subsets range from 0.1N to 0.7N of the labeled data."
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "Signal combination",
+            "detail": "Supervised learning learns weighted combinations of complementary UQ signals, allowing the model to exploit strengths of black‑box consistency, white‑box token probabilities, and reflexive self‑judgments, thereby improving discrimination between truthful and hallucinated outputs."
+          }
+        ],
+        "experiments": [
+          {
+            "title": "Empirical evaluation",
+            "detail": "Four LLMs (Gemini‑2.5‑Flash, Gemini‑2.5‑Pro, GPT‑4o, GPT‑4o‑mini) are tested on nine benchmarks covering short‑form math, factual QA, reading comprehension, Python code generation (LiveCodeBench), and long‑form factoid QA (rivers, mushrooms). Metrics include AUROC and expected calibration error (ECE); baselines are the best individual scorer per setting."
+          }
+        ],
+        "findings": [
+          {
+            "title": "In‑distribution superiority",
+            "detail": "With the full training sample (0.7N), ensembles outperform the best individual scorer in 30 of 32 LLM‑dataset settings by AUROC and in 29 of 32 by ECE."
+          },
+          {
+            "title": "Sample efficiency",
+            "detail": "Performance gains appear with as few as 100 labeled instances, as shown by AUROC curves across training sizes."
+          },
+          {
+            "title": "Transfer robustness",
+            "detail": "Under in‑domain distribution shift, ensembles remain superior in 23 of 28 transfer settings."
+          },
+          {
+            "title": "Black‑box vs full ensembles",
+            "detail": "Sampling‑based black‑box ensembles achieve nearly the same AUROC as full ensembles, whereas white‑box‑only ensembles provide limited benefit."
+          }
+        ],
+        "contributions": [
+          "Systematic robustness analysis of supervised UQ ensembles across sample efficiency, distribution shift, and generation regimes."
+        ],
+        "limitations": [
+          "Only four closed‑source LLMs from two providers are evaluated; results may not generalize to open‑weight models.",
+          "Long‑form evaluation is limited to two factoid domains and code experiments to Python competitive‑programming tasks.",
+          "Cross‑domain, cross‑LLM, and internal‑state scorer combinations are not explored."
+        ],
+        "open_questions": [
+          "How do supervised ensembles perform with open‑weight models and internal‑state UQ signals?",
+          "Can ensembles trained on one domain or LLM transfer effectively to entirely different domains or other model families?",
+          "What is the impact of more diverse long‑form generation tasks (e.g., summarization, multi‑turn dialogue) on ensemble efficacy?"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "en",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "recommended_at": "2026-08-26T10:51:18.938084+00:00"
+    },
+    {
+      "id": "2608.25429",
+      "title": "Distance Is Not Enough: Forget-Retain Alignment Gap Predicts LLM Relearning Robustness",
+      "abstract": "Machine unlearning aims to make a model forget specific data, yet unlearned LLMs often fail to stay unlearned: brief fine-tuning can revive removed knowledge. Existing robustness predictors rely on global weight-space displacement, but distance alone can be misleading when random or destructive updates collapse performance. We argue that relearning robustness depends on update structure: robust unlearning should affect forget-critical weights while sparing retain-critical ones. We introduce the Forget-Retain Alignment Gap (FRAG), a training-free predictor that scores an update's forget-retain alignment without running a relearning attack, and separates selective from dense updates more reliably than global distance. Building on the forget-critical, retain-sparing principle, Forget-Retain Pruning (FRP) improves relearning robustness. Our results suggest that weight selectivity better explains robustness than distance alone. Code is available at https://github.com/Yi1-Chen/FRAG.",
+      "authors": [
+        "Yi Chen",
+        "Hanna Hsieh",
+        "Shuhong Liu",
+        "Chuanbo Hua",
+        "Zihan Ma",
+        "Kun Wang",
+        "Joo-Young Kim"
+      ],
+      "published": "2026-08-26T06:39:49Z",
+      "updated": "2026-08-26T06:39:49Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2608.25429v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25429v1",
+      "comment": "Accepted to EMNLP 2026 Main Conference",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.5819,
+          "matched": [
+            "training",
+            "fine-tuning",
+            "robust",
+            "robustness"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.4728,
+          "matched": [
+            "robustness",
+            "alignment",
+            "llm"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.273,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6387,
+        "relevance": 0.6147,
+        "quality": 0.63,
+        "novelty": 0.8706,
+        "freshness": 0.5214,
+        "feedback_adjustment": -0.0132,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link"
+      ],
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "training",
+          "fine-tuning",
+          "robust",
+          "robustness"
+        ],
+        "lane": "llm"
+      },
+      "summary": {
+        "why_for_you": "高效对抗训练专家会看重 FRAG 的 training-free 对齐指标，用于在无需重新学习攻击的情况下评估忘记鲁棒性。",
+        "limitations": "FRAG 需要校准数据，且主要在 transformer 架构上进行评估。",
+        "problem": "现有的忘记方法因对权重更新缺乏足够的结构性保证，无法防止重新学习攻击。",
+        "method": "FRAG 通过 activation-normalized 权重重要性得分计算忘记-保留对齐差距；FRP 根据这些得分剪枝权重。",
+        "evidence": "在多种忘记方法和模型中，FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠。",
+        "takeaway": "FRAG 与 FRP 通过优先考虑忘记-保留对齐而非全局距离，提升重新学习鲁棒性。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "experiments": [
+          {
+            "detail": "TOFU (LLaMA3.2-1B/3B) 与 WMDP-cyber (Qwen2.5-14BInstruct) 在 forget01/05/10、retain 和 forget+retain 攻击下",
+            "title": "忘记基准"
+          },
+          {
+            "detail": "GA、GradDiff、NPO、RMU、SP；指标 ES/∆ES/utility（TOFU），Acc/∆Acc/MMLU（WMDP）",
+            "title": "基线"
+          },
+          {
+            "detail": "相较于全局 ℓ2 距离，FRAG 在不同模型规模（1B、3B、14B）上与实际鲁棒性的相关性更强",
+            "title": "FRAG 评估"
+          }
+        ],
+        "limitations": [
+          "FRAG 需要用于 activation norm 估计的校准数据",
+          "评估仅限于 transformer 架构（Llama/Qwen）"
+        ],
+        "overview": "本文质疑全局权重距离能够预测重新学习鲁棒性的假设。作者提出 FRAG，一种 training-free 指标，通过衡量忘记关键权重与保留关键权重的对齐程度来评估更新结构。实验表明 FRAG 与实际鲁棒性的相关性优于距离度量，并展示了其在 FRP（剪枝方法）中的应用，FRP 在提升鲁棒性的同时控制效用损失。工作强调在忘记保证中权重的选择性而非仅仅大小。",
+        "signals": [
+          {
+            "icon": "💡",
+            "text": "FRAG：training-free 忘记-保留对齐差距预测器"
+          },
+          {
+            "icon": "🔬",
+            "text": "activation-normalized 权重重要性得分的余弦相似度"
+          },
+          {
+            "icon": "📈",
+            "text": "FRAG 在攻击前 ES 降低方面比全局距离提升 2.6-4.0 倍"
+          }
+        ],
+        "open_questions": [
+          "FRAG 能否在无需校准过程的实时忘记中使用？",
+          "忘记-保留对齐在非 transformer 架构上的泛化如何？"
+        ],
+        "contributions": [
+          "将忘记鲁棒性重新定义为结构化更新问题，而非距离优化",
+          "提出 FRAG 作为 training-free 的忘记对齐指标",
+          "展示 FRP 在可控效用权衡下提升鲁棒性的能力"
+        ],
+        "mechanism": [
+          {
+            "detail": "如果权重的幅度与 forget activation norm 的相关性高于 retain norm，则视为忘记关键权重；反之则为保留关键权重",
+            "title": "忘记-保留重要性对比"
+          }
+        ],
+        "findings": [
+          {
+            "detail": "FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠（在 3B 时，综合 FRAG 分数 -0.74 对比 ℓ2 -0.10）",
+            "title": "FRAG 相关性"
+          },
+          {
+            "detail": "在相同稀疏度下，FRP 的攻击前 ES 比 SP 低 2.6-4.0 倍，且效用相当",
+            "title": "FRP 效果"
+          }
+        ],
+        "methodology": [
+          {
+            "detail": "FRAG 通过 |Wij| * (xfj/(xrj+ϵ)) 与 |Wij| * (xrj/(xfj+ϵ)) 计算忘记/保留重要性，使用校准数据的输入通道 activation norm",
+            "title": "activation-normalized 重要性评分"
+          },
+          {
+            "detail": "FRAG 使用更新向量与重要性图的余弦相似度计算全局对齐分数 Af 与 Ar，公式为 A_f = Σ(ΔWℓ² * Fℓ)/||ΔWℓ²||||Fℓ||",
+            "title": "余弦对齐计算"
+          }
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
+    },
+    {
+      "id": "2608.25727",
+      "title": "Are LLM-Enhanced GNNs Privacy-Safe?",
+      "abstract": "Large language models (LLMs) have recently advanced graph neural networks (GNNs) by enriching node representations with semantic information, giving rise to LLM-enhanced GNNs that achieve substantial performance gains. However, their vulnerability to privacy attacks, in which adversaries infer sensitive information from model outputs, remains largely underexplored. To bridge this gap, we present a systematic evaluation of privacy risks in LLM-enhanced GNNs through a unified framework consisting of five stages: (1) dataset preparation, (2) victim model training, (3) privacy attack, (4) risk assessment, and (5) defense analysis. Specifically, we conduct experiments on six real-world text-attributed graph datasets covering diverse domains. We consider six representative privacy attack methods targeting three fundamental threats, namely link, label, and membership inference, and construct 42 victim model configurations by combining multiple LLM-based feature enhancers with representative GNN backbones. Extensive experiments show that, despite their utility improvements, LLM-enhanced GNNs consistently exhibit increased vulnerability to privacy attacks compared to shallow text representation baselines. Further analysis reveals that semantic enrichment amplifies link-, label-, and membership-related signals in the embedding space, making them more exploitable by inference attacks. Finally, we evaluate differential privacy as a defense strategy and show that, while it can partially mitigate privacy risks, it introduces significant utility degradation, highlighting a fundamental privacy-utility trade-off in LLM-enhanced graph learning. Overall, this work provides a comprehensive understanding of privacy risks in LLM-enhanced GNNs and offers practical insights for developing more secure and trustworthy graph learning systems.",
+      "authors": [
+        "Longzhu He",
+        "Zelang Wen",
+        "Chaozhuo Li",
+        "Sen Su"
+      ],
+      "published": "2026-08-26T12:42:21Z",
+      "updated": "2026-08-26T12:42:21Z",
+      "categories": [
+        "cs.LG",
+        "cs.CR"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2608.25727v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25727v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.5843,
+          "matched": [
+            "llm"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.5723,
+          "matched": [
+            "privacy",
+            "llm"
+          ]
+        },
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.1345,
+          "matched": [
+            "training"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6381,
+        "relevance": 0.634,
+        "quality": 0.58,
+        "novelty": 0.8211,
+        "freshness": 0.5574,
+        "feedback_adjustment": -0.0174,
+        "semantic_feedback": 0.168
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "LLM‑增强的 GNN 在提升节点分类准确率的同时，会显著增加对链接、标签和成员推断攻击的易感性，差分隐私只能在高代价的实用性损失下部分缓解。",
+        "why_for_you": "符合您对可信 LLM 的兴趣，揭示了 LLM‑增强图学习中的隐私漏洞及其权衡。",
+        "method": "作者提出统一的五阶段框架，在六个文本属性图数据集、42 种受害模型配置和六类代表性推断攻击上评估隐私，并考察差分隐私作为防御手段。",
+        "limitations": "在可获取的来源中未说明。",
+        "evidence": "大量实验表明，LLM‑增强的 GNN 相较于浅层基线泄露更多隐私，使用差分隐私可降低泄露但会显著下降分类准确率。",
+        "problem": "尚未系统研究融合 LLM‑生成节点嵌入的图神经网络的隐私风险。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🗂️",
+            "text": "提出统一的五阶段框架，在六个数据集上评估 42 种 LLM‑增强 GNN 配置的隐私风险。"
+          },
+          {
+            "icon": "🔧",
+            "text": "将基于解释和基于嵌入的 LLM 增强与标准 GNN 主干结合，测试链接、标签和成员推断攻击。"
+          },
+          {
+            "icon": "📈",
+            "text": "实证结果显示，相比浅层基线，隐私泄露持续增加，差分隐私虽能减轻泄露但会导致显著的效用损失。"
+          }
+        ],
+        "overview": "本文提供系统的 LLM‑增强图神经网络隐私评估流水线，涵盖数据集准备、使用解释式和嵌入式 LLM 增强的受害模型训练、针对链接、标签和成员信息的六种推断攻击、定量风险评估以及差分隐私防御研究。六个真实文本属性图的实验表明，语义增强提升分类性能的同时也放大了隐私泄露信号，且差分隐私只能在牺牲准确率的情况下提供部分保护。",
+        "methodology": [
+          {
+            "title": "五阶段评估框架",
+            "detail": "阶段：(1) 数据集准备，(2) 受害模型训练（LLM 增强器 + GNN 主干），(3) 隐私攻击执行，(4) 风险评估（隐私 vs 实用性指标），(5) 使用差分隐私的防御分析。"
+          },
+          {
+            "title": "受害模型配置",
+            "detail": "通过将多种基于 LLM 的特征增强器（基于解释或基于嵌入）与代表性 GNN 主干（如 GAT）配对，创建了 42 种配置，采用两层架构（隐藏维度 256，dropout 0.5，学习率 0.001）。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "语义增强放大泄漏信号",
+            "detail": "LLM 生成的嵌入强化了潜在空间中的结构、标签和成员关系模式，使其更易被推断攻击利用。"
+          }
+        ],
+        "experiments": [
+          {
+            "detail": "六个真实世界文本属性图数据集；六种隐私攻击（链接、标签、成员推理变体）；指标包括节点分类准确率和攻击AUC；每次运行使用不同种子重复五次。",
+            "title": "实证研究"
+          },
+          {
+            "detail": "对目标模型应用DP机制，测量隐私风险降低与效用退化（ noted as substantial）。",
+            "title": "差分隐私防御"
+          }
+        ],
+        "findings": [
+          {
+            "detail": "LLM增强的GNNs在节点分类准确率上始终优于浅层BoW/Word2Vec基线（例如，高达~95.7%）。",
+            "title": "效用提升"
+          },
+          {
+            "detail": "所有攻击中，LLM增强模型表现出比浅层基线更高的泄露，证实了隐私风险的放大。",
+            "title": "隐私脆弱性增加"
+          },
+          {
+            "detail": "差分隐私部分缓解了攻击，但导致分类性能显著下降。",
+            "title": "隐私-效用权衡"
+          }
+        ],
+        "contributions": [
+          "统一的五阶段框架，用于系统评估 LLM‑enhanced GNNs 的隐私风险。",
+          "全面的实证基准，涵盖六个数据集、42 种模型配置和六种攻击方法。",
+          "分析表明，LLM‑driven 语义增强会放大隐私泄漏信号。"
+        ],
+        "limitations": [
+          "在可用来源中未说明。"
+        ],
+        "open_questions": [
+          "如何设计 privacy‑preserving LLM 增强，使其在保持效用的同时不放大泄漏？",
+          "在 differential privacy 之外，哪些替代防御机制对 LLM‑enhanced GNNs 有效？",
+          "观察到的隐私风险是否可推广到更大的 LLM 或其他图任务，如 link prediction？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "llm"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
+    },
+    {
+      "id": "2608.27397",
+      "title": "Making Clinical Language Models Auditable: Concept-Guided Fine-Tuning for Robust Prediction",
+      "abstract": "Clinical language models can achieve strong in-hospital accuracy yet fail under deployment shifts because they exploit note-specific artifacts (e.g., templates, separators, boilerplate) that do not reflect patient state. We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification. CAST uses Sparse Autoencoders to expose sparse, human-auditable features from intermediate Transformer activations, labels SAE latents with an LLM-assisted interpretation pipeline and ICD-10 retrieval constraints, suppresses verified artifact latents via residual subtraction during fine-tuning, and provides post-hoc per-concept attributions for auditing model decisions. On MIMIC-IV discharge-note mortality prediction, CAST improves over its corresponding fine-tuned encoder baselines and remains competitive with strong LLM baselines, while producing a feature-level audit trail of the clinical concepts that support each prediction and the artifact concepts suppressed during training.",
+      "authors": [
+        "Jin Mu",
+        "Guanhua Chen"
+      ],
+      "published": "2026-08-27T17:28:35Z",
+      "updated": "2026-08-27T17:28:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.27397v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.27397v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models",
+        "llm",
+        "transformer"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.6765,
+          "matched": [
+            "training",
+            "fine-tuning",
+            "robust"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.2533,
+          "matched": [
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6329,
+        "relevance": 0.5919,
+        "quality": 0.62,
+        "novelty": 0.8774,
+        "freshness": 0.7286,
+        "feedback_adjustment": -0.0254,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification.",
+        "problem": "Clinical language models can achieve strong in-hospital accuracy yet fail under deployment shifts because they exploit note-specific artifacts (e.g., templates, separators, boilerplate) that do not reflect patient state.",
+        "method": "We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification.",
+        "evidence": "On MIMIC-IV discharge-note mortality prediction, CAST improves over its corresponding fine-tuned encoder baselines and remains competitive with strong LLM baselines, while producing a feature-level audit trail of the clinical concepts that support each prediction and the artifact concepts suppressed during training.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Efficient adversarial training, LLM loss landscape.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "training",
+          "fine-tuning",
+          "robust"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
+    },
+    {
+      "id": "2608.28009",
+      "title": "Beyond Global Scalars: Synergizing Token-Level Statistics and Deep Semantics for Adversarial AIGC Text Detection",
+      "abstract": "The rapid evolution of large language models necessitates robust machine-generated text detection. Existing paradigms typically follow two isolated tracks. Training-free methods rely on global statistical scalars such as perplexity, while training-based methods utilize semantic hidden states. Both approaches exhibit fundamental vulnerabilities in adversarial scenarios. Global scalars act as lossy compressions that obscure local probabilistic burstiness in interleaved texts, whereas pure semantic models overfit to specific fingerprints and remain susceptible to spoofing. To expose these flaws, we introduce MOSAIC, a comprehensive adversarial benchmark comprising 16000 samples across a full-granularity attack spectrum. To address these challenges, we propose NeuroStat, an end-to-end framework bridging the statistical and semantic gap. NeuroStat captures uncompressed token-level probabilistic logits alongside deep semantic hidden states from a single causal language model backbone. We fuse these heterogeneous signals through Macro-State Residual Modulation, which adaptively calibrates local convolutional features using global uncertainty indicators. Orthogonal and contrastive losses further ensure the learning of complementary representations. Extensive experiments demonstrate that NeuroStat maintains exceptional robustness on MOSAIC compared to the severe degradation of state-of-the-art methods, establishing a new standard for adversarial text detection. Code and the MOSAIC benchmark are available at https://github.com/TencentBAC/NeuroStat.",
+      "authors": [
+        "Peiming Li",
+        "Yifan Wang",
+        "Zhiyuan Hu",
+        "Shiyu Li",
+        "Zheng Wei",
+        "Yang Tang"
+      ],
+      "published": "2026-08-28T07:23:58Z",
+      "updated": "2026-08-28T07:23:58Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.28009v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28009v1",
+      "comment": "Accepted by EMNLP 2026 Findings",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.6686,
+          "matched": [
+            "adversarial",
+            "training",
+            "robust",
+            "robustness"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6237,
+        "relevance": 0.5349,
+        "quality": 0.84,
+        "novelty": 0.8246,
+        "freshness": 0.5106,
+        "feedback_adjustment": -0.0193,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "evidence": "在MOSAIC基准上的实验显示NeuroStat优于SOTA方法，表现出更强的鲁棒性。",
+        "limitations": "未在摘要中提及具体限制。",
+        "method": "NeuroStat通过Macro-State Residual Modulation融合单个因果语言模型的token级概率logits与语义隐藏状态，并使用正交和对比损失学习互补表示。",
+        "problem": "现有方法在对抗场景中存在根本性漏洞：全局标量丢失局部概率突变信息，纯语义模型易过拟合且易被欺骗。",
+        "takeaway": "NeuroStat框架通过融合token级概率logits和深度语义隐藏状态，解决了对抗场景下的AIGC文本检测问题。",
+        "why_for_you": "对抗性文本检测中统计特征与语义特征的协同机制",
+        "source": "abstract",
+        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "adversarial",
+          "training",
+          "robust",
+          "robustness"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-31T17:37:30.318867+00:00"
+    },
+    {
+      "id": "2608.26008",
+      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
+      "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
+      "authors": [
+        "Tongyan Hu",
+        "Bryan Hooi"
+      ],
+      "published": "2026-08-26T16:52:06Z",
+      "updated": "2026-08-26T16:52:06Z",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2608.26008v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26008v1",
+      "comment": "8 pages (main), with appendix",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "emerging",
+          "score": 0.6355,
+          "matched": [
+            "jailbreak",
+            "robust"
+          ]
+        },
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "emerging",
+          "score": 0.3359,
+          "matched": [
+            "llm"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.265,
+          "matched": [
+            "safety",
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6178,
+        "relevance": 0.6286,
+        "quality": 0.47,
+        "novelty": 0.8608,
+        "freshness": 0.5822,
+        "feedback_adjustment": -0.0249,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available"
+      ],
+      "summary": {
+        "takeaway": "一种基于记忆的测试时防御，能够从 jailbreak 失败中学习，在不修改模型参数的情况下显著降低攻击成功率。",
+        "why_for_you": "符合您对 LLM 自适应、parameter‑free 防御的兴趣，提供一种 test‑time 方法来缓解 jailbreak。",
+        "method": "持久的外部规则记忆将失败的攻击抽象为方法级规则，并在 inference 时通过四个提示式代理应用。",
+        "limitations": "评估仅限于四个攻击家族和有限的模型集合，每个标签的规则容量为 4 条。",
+        "evidence": "在四个 black‑box jailbreak 家族中，系统在首批后将 ASR‑gpt 降至接近零，同时保持良好的实用性。",
+        "problem": "静态安全机制无法在 inference 期间适应新出现的 jailbreak 策略。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
+        "language": "zh",
+        "schema_version": 3,
+        "prompt_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🛡️",
+            "text": "引入持久规则记忆，将攻击包装器抽象化，在首次暴露后实现接近零的攻击成功率。"
+          },
+          {
+            "icon": "🔎",
+            "text": "实现四个提示式代理，分别进行分类、检索、执行和反思，以在不更新模型权重的情况下生成 method‑level 规则。"
+          },
+          {
+            "icon": "⚠️",
+            "text": "在四个 black‑box jailbreak 家族中将 ASR‑gpt 降至接近零，尽管结果仅限于这些攻击和模型。"
+          }
+        ],
+        "overview": "本文提出一种自演化的 test‑time 防御，将 method‑level 规则存储在外部记忆中。当 jailbreak 成功时，reflection 代理将结构化包装抽象为规则，triggering 代理据此检测未来相似输入。policy 代理根据匹配规则执行硬拒或软拒，response 代理生成最终输出。模型参数不被修改，可部署于 open‑weight 与 black‑box LLM API。",
+        "mechanism": [
+          {
+            "detail": "而非特定主题的过滤器，规则抽象了结构化的攻击方法（例如，角色扮演-嵌套人格），使单个规则能够跨所有共享相同包装器的提示进行泛化，无论其有害意图如何。",
+            "title": "方法级规则抽象"
+          }
+        ],
+        "methodology": [
+          {
+            "detail": "规则记忆Rt存储形式为[标签=Li] 如果请求使用Pi则Di的条目，其中Pi捕获攻击包装器，Di为拒绝约束；通过归纳增长，并按标签限制（C=4）。",
+            "title": "规则记忆与操作符"
+          },
+          {
+            "detail": "A1（规则触发）运行分类器ϕ对输入进行标记并检索最多K=2个匹配规则；A2（策略决策）将触发规则映射为硬拒绝、软拒绝或允许；A3（响应生成）将策略作为动态系统指令注入；A4（自我反思）检测违规行为，通过操作符F生成新规则，并通过U更新记忆。",
+            "title": "四个提示代理"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "评估设置",
+            "detail": "基准：AdvBench 与 CodeChameleon；模型：Qwen2.5‑7B、Llama3.1‑8B、Gemini‑3‑Flash‑Preview；攻击：四类黑盒 jailbreak 家族及 DeepInception；基线：No Defense、Defense Prompt、Self‑Reminder、AutoDefense；指标：ASR‑rej、ASR‑gpt、任务性能（MMLU、GSM8K）。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "攻击成功率降低",
+            "detail": "ASR‑gpt 在首批 20 次攻击后降至接近零，并在所有四个家族中保持低水平；消融实验表明，移除任意代理都会显著提升 ASR，验证了其互补作用。"
+          },
+          {
+            "title": "效用保持",
+            "detail": "良性任务性能与基模型相当，且随着规则记忆扩展，过度拒绝并未增加。"
+          }
+        ],
+        "contributions": [
+          "在测试时，Persistent external rule memory 累积结构化防御知识。",
+          "Method‑level rule abstraction 使跨 attack families 泛化。",
+          "Multi‑agent prompting architecture 在无需 parameter updates 的情况下实现 classification、retrieval、enforcement 和 reflection。"
+        ],
+        "limitations": [
+          "实验仅覆盖四个 black‑box jailbreak families 以及有限的 LLMs。",
+          "Per‑label capacity (C=4) 可能限制对大量多样化 attack methods 的可扩展性。",
+          "缺乏针对 memory 的 formal safety guarantees 或对 adaptive adversaries 的分析。"
+        ],
+        "open_questions": [
+          "当 rule memory 扩展至数百种多样化 wrappers 时，该方法的可扩展性如何？",
+          "adaptive attackers 能否构造提示规避或污染 rule induction process？",
+          "test‑time memory 与现有对齐技术（如 RLHF）之间的交互是什么？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
+        "language": "zh",
+        "schema_version": 6,
+        "prompt_version": 2
+      },
+      "analysis_status": "complete",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "jailbreak",
+          "robust"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
+    }
+  ]
+}

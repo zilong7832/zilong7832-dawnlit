@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-08-18T10:47:20.408991+00:00",
+  "profile_updated_at": "2026-08-03",
+  "content_language": "zh",
+  "source_count": 137,
+  "source_total": 137,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 137,
+  "previously_recommended_count": 139,
+  "eligible_count": 2,
+  "feedback_count": 17,
+  "semantic_feedback_count": 361,
+  "papers": [
+    {
+      "id": "2608.16577",
+      "title": "BabelSteering: Multilingual Safety Alignment via English Steering Vectors",
+      "abstract": "Large language models (LLMs) are deployed globally in high-stakes settings, yet most safety research and alignment efforts remain concentrated on English. Thus, users interacting with LLMs in other languages may encounter weaker safeguards despite relying on the same systems for similarly sensitive tasks. In this work, we investigate whether safety signals learned from a high-resource language, like English, can improve multilingual safety. We propose BabelSteering, an activation steering method that acts as a lightweight inference- time intervention, using refusal directions derived from English safety supervision to generalize across languages. Our evaluation includes eight languages and jointly measures refusal of harmful requests, over-refusal, and general task utility. The results show that BabelSteering increases the refusal of harmful requests across languages, with only a marginal to no reduction in task utility but with some increase in refusal of pseudo-harmful prompts. For example, for Gemma 7B, we see an average increase in the refusal of harmful prompts across languages of 11 percentage points (pp), with individual languages like Bengali seeing an increase of 17 pp, with no loss of utility on Global MMLU, while pseudo-harmful refusals increase by 13 pp on average. We also introduce a multilingual translation-and-evaluation pipeline to facilitate future work on cross-lingual safety interventions. Overall, our findings suggest that activation steering may provide a practical, low- cost mechanism for extending English-derived safety signals to other languages. Warning: this paper contains examples with unsafe content",
+      "authors": [
+        "Emma V. Stein",
+        "Dominik Meier",
+        "Terry Ruas",
+        "Jan Philip Wahle",
+        "Bela Gipp"
+      ],
+      "published": "2026-08-17T13:40:16Z",
+      "updated": "2026-08-17T13:40:16Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.16577v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16577v1",
+      "comment": "",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.514,
+          "matched": [
+            "alignment",
+            "safety"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4737,
+        "relevance": 0.4112,
+        "quality": 0.41,
+        "novelty": 0.8075,
+        "freshness": 0.8743,
+        "feedback_adjustment": -0.0083,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "BabelSteering利用英语安全向量在推理时进行激活引导，实现多语言安全提升且几乎不影响模型效用。",
+        "problem": "现有安全对齐主要聚焦英文，导致非英文用户的模型防护弱化。",
+        "method": "通过差分均值提取英文拒绝向量并正交化伪拒绝向量，在推理阶段对激活进行轻量干预。",
+        "evidence": "在Gemma 7B上，跨八语言的有害请求拒绝率平均提升11个百分点，Bengali提升17个百分点，且Global MMLU无效用下降。",
+        "limitations": "方法无法解决文化特定安全问题，且会导致伪有害请求拒绝率上升约13%。",
+        "why_for_you": "若关注可信 LLM 的跨语言安全对齐，此工作提供了低成本的推理时干预方案。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🌐",
+            "text": "BabelSteering通过英语拒绝向量实现跨语言安全提升，平均提升11%有害请求拒绝率"
+          },
+          {
+            "icon": "🔧",
+            "text": "使用差分均值提取拒绝向量并正交化伪拒绝向量，在单层加入并跨层消除，实现轻量推理时干预"
+          },
+          {
+            "icon": "📈",
+            "text": "在Gemma 7B上，Bengali拒绝提升17pp且MMLU无损，但伪有害拒绝上升13pp"
+          }
+        ],
+        "overview": "本文提出BabelSteering，一种基于英文安全监督的激活引导方法，利用差分均值提取的拒绝向量和正交化的伪拒绝向量，在推理时对模型内部表征进行轻量干预。实验在Gemma 7B、Llama‑3.1‑8B、Qwen‑7B‑Chat三类模型上，覆盖八种语言，分别评估安全（MultiJail）、过度拒绝（翻译的OR‑Bench）和任务效用（Global MMLU），展示了显著的安全提升且几乎不牺牲效用。",
+        "methodology": [
+          {
+            "title": "向量提取",
+            "detail": "使用差分均值（DIM）方法对英文有害与无害提示的激活均值做差，得到拒绝方向向量；对伪有害提示同理得到伪拒绝向量。"
+          },
+          {
+            "title": "正交化处理",
+            "detail": "将伪拒绝向量在拒绝向量空间上正交化，去除共享成分，以降低对真实安全行为的干扰。"
+          },
+          {
+            "title": "组合干预",
+            "detail": "在单一选定层加入拒绝向量，在所有层上消除正交化后的伪拒绝向量，形成一次性推理时的综合引导。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "跨语言安全几何共享",
+            "detail": "基于先前研究的发现，多语言模型的拒绝表征在激活空间中部分共享，使得英文提取的方向可在其他语言上产生相似效应。"
+          },
+          {
+            "title": "激活空间调控",
+            "detail": "通过在推理阶段直接修改激活向量，实现行为改变而无需权重更新或额外微调，保持原模型的计算图不变。"
+          },
+          {
+            "title": "正交化降低误拒",
+            "detail": "正交化后删除与真实拒绝方向重叠的成分，抑制对无害输入的误拒，提高安全与效用的平衡。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "模型与语言",
+            "detail": "评估模型包括Gemma‑7B、Llama‑3.1‑8B‑Instruct、Qwen‑7B‑Chat；实验语言覆盖Arabic、Korean、Bengali等八种，兼顾中高资源语言。"
+          },
+          {
+            "title": "基准与指标",
+            "detail": "安全使用MultiJail（315条每语言的有害提示），过度拒绝使用翻译自OR‑Bench的伪有害提示，任务效用使用Global MMLU。主要指标为有害请求拒绝率、伪有害拒绝率以及MMLU准确率。"
+          },
+          {
+            "title": "对照设置",
+            "detail": "基线为未使用任何引导的原始模型；BabelSteering在相同推理环境下仅加入激活干预，无额外训练或数据。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "安全提升",
+            "detail": "Gemma‑7B在八语言上有害请求拒绝率平均提升11个百分点，Bengali提升最高达17个百分点。"
+          },
+          {
+            "title": "效用保持",
+            "detail": "在Global MMLU上，BabelSteering未导致显著准确率下降，保持与基线相当的任务性能。"
+          },
+          {
+            "title": "伪有害拒绝增加",
+            "detail": "伪有害提示的拒绝率平均上升13个百分点，表明误拒风险仍需进一步抑制。"
+          },
+          {
+            "title": "计算开销",
+            "detail": "方法仅在推理时修改激活，无额外计算或显存开销，训练阶段不需要多语言数据。"
+          }
+        ],
+        "contributions": [
+          "提出BabelSteering：基于英文安全向量的多语言激活引导方法。",
+          "构建并公开了跨语言的翻译与评估流水线，支持安全、过度拒绝和效用的统一测评。",
+          "在三类主流开源模型上展示了跨语言安全提升且几乎不损失任务效用的实证结果。"
+        ],
+        "limitations": [
+          "无法处理文化特定的安全风险，仅覆盖跨语言共享的通用安全主题。",
+          "引入了伪有害请求的误拒上升（约13%），需要进一步的精细化控制。",
+          "实验局限于八种语言和三种模型，未验证在更大规模模型或更多低资源语言上的可行性。"
+        ],
+        "open_questions": [
+          "如何在保持跨语言安全提升的同时进一步降低伪有害请求的误拒率？",
+          "该激活引导是否能在更大规模模型（如数百亿参数）上保持同等效果？",
+          "能否结合文化特定的安全数据或规则，扩展方法以覆盖本地化安全需求？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Trustworthy LLM",
+        "matched": [
+          "alignment",
+          "safety"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2608.16647",
+      "title": "Every Coin Has Two Sides: On the Dual Nature of Generalization in On-Policy Distillation of Large Language Models",
+      "abstract": "On-policy distillation (OPD) transfers teacher capabilities by supervising trajectories sampled from the student's own policy, yet its generalization behavior remains poorly understood, as most studies evaluate OPD on a single domain and on benchmarks close to the training data. We present a controlled study that varies one generalization factor at a time, from in-domain distribution shifts to cross-domain transfer and the multi-teacher setting. We find that OPD transfers a teacher's reasoning behavior rather than its answers to particular problems: training difficulty barely matters, and even problems the teacher never solves are useful. Transfer depends strongly on the origin relationship between teacher and student: same-origin pairs bring the student close to the teacher across languages, reasoning horizons, and even other domains, whereas cross-origin pairs mostly fit the trained distribution. This broad reach is a double-edged sword: since routing prompts to domain experts cannot confine each teacher's influence, combining them yields a mixture-dependent seesaw among their capabilities. These results clarify when OPD generalizes and offer a useful perspective for diagnosing multi-teacher OPD.",
+      "authors": [
+        "Zhaoyi Li",
+        "Deyang Kong",
+        "Yuan Wei",
+        "Evan Yang",
+        "Ranran Shen",
+        "Mahardika Krisna Ihsani",
+        "Ming Yang",
+        "Wei Zhang",
+        "Chuan Hao",
+        "Jian Yang",
+        "Ran Tao",
+        "Bryan Dai",
+        "Shikun Zhang",
+        "Wei Ye",
+        "Ying Wei",
+        "Defu Lian"
+      ],
+      "published": "2026-08-17T14:46:53Z",
+      "updated": "2026-08-17T14:46:53Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2608.16647v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.16647v1",
+      "comment": "Under Review",
+      "journal_ref": "",
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "llm_statistical_theory",
+          "name": "Statistical theory for LLMs",
+          "status": "background",
+          "score": 0.3065,
+          "matched": [
+            "generalization"
+          ]
+        },
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "core",
+          "score": 0.2972,
+          "matched": [
+            "influence",
+            "training data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4081,
+        "relevance": 0.3046,
+        "quality": 0.4,
+        "novelty": 0.86,
+        "freshness": 0.8809,
+        "feedback_adjustment": -0.0185,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation"
+      ],
+      "summary": {
+        "takeaway": "OPD主要传递教师的推理模式，而非具体答案，且同源教师在跨语言、跨任务上均能提升学生。",
+        "problem": "现有对OPD的评估局限于单一领域，缺乏对其跨语言、跨推理深度和跨域泛化的系统理解。",
+        "method": "通过在受控实验中逐一变更训练难度、语言、推理跨度、任务域和模型来源，并加入教师难度过滤与学生动态抽样策略。",
+        "evidence": "实验显示在同源教师-学生对中，跨域性能提升可达数个百分点，动态丢弃已解问题使平均表现提升0.6个百分点。",
+        "limitations": "仅在7B/1.5B模型和数学、代码、科学等有限域上进行评估，未提供理论解释。",
+        "why_for_you": "对数据选择感兴趣的你可参考作者对教师难度过滤和学生动态抽样的实证结论。",
+        "source": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 2
+      },
+      "deep_dive": {
+        "signals": [
+          {
+            "icon": "🌐",
+            "text": "OPD传递教师推理行为，跨语言/跨任务均提升学生性能"
+          },
+          {
+            "icon": "🔧",
+            "text": "教师难度过滤与学生动态抽样分别保留未解或已解问题进行对比实验"
+          },
+          {
+            "icon": "📈",
+            "text": "动态丢弃已解问题提升平均表现0.6个百分点，跨源教师转移效果显著下降"
+          }
+        ],
+        "overview": "本文在受控实验框架下系统考察了On‑policy Distillation (OPD) 的多维泛化行为。通过逐一改变训练难度、语言、推理跨度、任务域以及模型来源，发现OPD更倾向于迁移教师的推理模式而非具体答案；同源教师‑学生配对在跨语言、跨任务上均能显著提升学生性能，而跨源配对的跨域收益有限。进一步的多教师实验揭示，教师影响并非局限于路由的领域，混合比例会导致能力的“跷跷板”效应。作者还评估了教师难度过滤和学生动态抽样两种数据选择策略，后者在去除学生已掌握的问题后带来小幅但一致的提升。",
+        "methodology": [
+          {
+            "title": "受控因素逐一变更",
+            "detail": "在保持其他条件不变的情况下，分别测试训练难度（教师通过率）、语言（English→Chinese）、推理跨度（短→长）、任务域（math、code、science）以及模型来源（同源 vs 跨源）的影响。"
+          },
+          {
+            "title": "教师难度过滤",
+            "detail": "根据教师在训练问题上的通过率，将完全未解（pass‑rate=0）或完全解出（pass‑rate=1）的样本单独保留，以评估难度对OPD的影响。"
+          },
+          {
+            "title": "学生动态抽样",
+            "detail": "在训练过程中动态丢弃学生已能正确解出的样本（pass‑rate∈[0,1)），比较三种抽样策略对最终性能的影响。"
+          },
+          {
+            "title": "多教师混合实验",
+            "detail": "在Multi‑Teacher OPD (MOPD) 设置下，改变不同教师的混合比例，观察学生在各领域的性能变化，验证“seesaw”效应。"
+          }
+        ],
+        "mechanism": [
+          {
+            "title": "推理行为迁移",
+            "detail": "OPD通过在学生实际访问的状态上向教师查询，实现对教师推理路径的模仿，而非单纯记忆教师的答案。"
+          },
+          {
+            "title": "模型来源影响",
+            "detail": "同源教师（与学生同一模型系列）在语言、推理深度和跨域上均能将学生拉近教师水平；跨源教师的迁移主要局限于训练分布内。"
+          },
+          {
+            "title": "能力跷跷板效应",
+            "detail": "在MOPD 中，路由到不同领域专家的提示仍会受到其他教师的隐式影响，混合比例的微调会在各领域能力之间产生相互拉扯。"
+          }
+        ],
+        "experiments": [
+          {
+            "title": "模型与数据",
+            "detail": "教师模型包括 Polaris‑7B、Light‑R1‑14B、JustRL‑1.5B、Nemotron‑1.5B；学生模型为 DS‑distill‑1.5B、DS‑distill‑7B。训练数据覆盖数学（BigMath、AMC2023、MATH500、AIME2025/2026、BeyondAIME、OlymMATH‑Hard）、代码（LiveCodeBench）和科学（GPQA‑Diamond）等多域。"
+          },
+          {
+            "title": "基线与对照",
+            "detail": "对照组为不使用任何过滤或动态抽样的标准OPD；实验组分别使用教师难度过滤（pass‑rate=0、=1）和学生动态抽样（保留已解、未解或丢弃已解）。"
+          },
+          {
+            "title": "评估指标",
+            "detail": "主要使用各基准的通过率/准确率百分比；跨域实验报告同源与跨源教师在目标域的相对提升幅度。"
+          }
+        ],
+        "findings": [
+          {
+            "title": "训练难度影响微弱",
+            "detail": "教师未解的难题仍能提供约80% 的OPD增益，表明难度对同域泛化影响不大。"
+          },
+          {
+            "title": "动态抽样带来小幅提升",
+            "detail": "在六个数学基准上，丢弃学生已解问题的策略使平均性能提升0.6个百分点（+0.6 pp）。"
+          },
+          {
+            "title": "同源跨域迁移显著",
+            "detail": "同源教师‑学生对在中文数学、长跨度数学等未见分布上实现与教师相近的性能提升（如 Polaris‑7B→DS‑distill‑1.5B 在 Chinese Math 上提升约25.5%）。"
+          },
+          {
+            "title": "跨源迁移受限",
+            "detail": "跨源配对在跨域任务上提升有限，往往只能匹配训练分布内的表现。"
+          },
+          {
+            "title": "多教师混合产生seesaw效应",
+            "detail": "改变教师混合比例会在不同领域的能力之间产生相互拉扯，导致性能在各域之间呈现“跷跷板”式波动。"
+          }
+        ],
+        "contributions": [
+          "系统化的受控实验框架，逐一评估OPD在难度、语言、推理深度、任务域和模型来源上的泛化行为。",
+          "发现OPD主要迁移教师的推理模式，而非具体答案，且同源教师在跨域上具有显著优势。",
+          "提供教师难度过滤和学生动态抽样两种数据选择策略的实证评估，为OPD 的数据构建提供指导。"
+        ],
+        "limitations": [
+          "实验仅覆盖7B/1.5B规模模型和数学、代码、科学等有限任务域，未验证更大模型或其他领域的可推广性。",
+          "缺乏对观察到的同源/跨源效应的理论解释，仅提供经验性描述。",
+          "未比较OPD 与其他离线蒸馏或RLHF 方法的相对优势。"
+        ],
+        "open_questions": [
+          "在更大规模或不同架构的模型上，OPD 的推理行为迁移是否仍然成立？",
+          "能否构建理论模型解释模型来源对跨域迁移的影响机制？",
+          "如何设计教师混合策略以消除多教师设置中的能力跷跷板效应？"
+        ],
+        "source_scope": "selected full-text regions (up to 30 pages)",
+        "generated_by": "@cf/openai/gpt-oss-120b",
+        "language": "zh",
+        "schema_version": 5
+      },
+      "recommendation_reason": {
+        "topic": "Statistical theory for LLMs",
+        "matched": [
+          "generalization"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}
