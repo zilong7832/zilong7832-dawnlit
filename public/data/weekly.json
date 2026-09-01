@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T14:52:59.157232+00:00",
+  "generated_at": "2026-09-01T20:10:56.291521+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:1334-main",
@@ -988,6 +988,100 @@
       "recommended_at": "2026-08-28T21:10:49.916182+00:00"
     },
     {
+      "id": "conf:icml:2026:64399",
+      "title": "Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models",
+      "abstract": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment. Prior works addressing this issue typically rely on explicit regularization, which leads to practical limitations. In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression. Our key observation is that, in a jailbroken LLM, safety-degrading gradients are largely saturated, while gradients unrelated to safety remain active during fine-tuning. Based on this insight, we introduce a **BufferLoRA-based fine-tuning framework**. BufferLoRA is a removable adapter that temporarily jailbreaks the model during user fine-tuning, saturating harmful updates while allowing a UserLoRA to learn user-specific tasks. After fine-tuning, BufferLoRA is removed to restore the base model’s original safety-alignment. To further reinforce safety, we additionally train a SafetyLoRA and integrate its safety components into the UserLoRA via QR decomposition-based merging strategy. Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
+      "authors": [
+        "Seokil Ham",
+        "Jaehyuk Jang",
+        "Wonjun Lee",
+        "Changick Kim"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/64399",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/64399",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "core",
+          "score": 0.7471,
+          "matched": [
+            "jailbreak",
+            "fine-tuning"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.5072,
+          "matched": [
+            "alignment",
+            "safety",
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7073,
+        "relevance": 0.6991,
+        "quality": 0.59,
+        "novelty": 0.8482,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "publication metadata",
+        "conference spotlight"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
+        "problem": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment.",
+        "method": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
+        "evidence": "Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Efficient adversarial training, Trustworthy LLM.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "jailbreak",
+          "fine-tuning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
+    },
+    {
       "id": "2608.24492",
       "title": "When Do Supervised UQ Ensembles Improve LLM Hallucination Detection? A Robustness Study",
       "abstract": "Uncertainty quantification (UQ) methods are widely used for hallucination detection in large language models (LLMs) in closed-book settings where ground-truth evidence is unavailable at inference time. Prior work has proposed combining UQ signals via learned ensembles, but empirical investigations into the robustness of these ensembles are limited. We study a supervised ensembling framework that trains a classifier over heterogeneous UQ-based scorer outputs on a small, domain-specific dataset of labeled LLM responses, then applies it to out-of-sample hallucination classification without retrieval, tools, or reference documents. Across four LLMs, nine datasets, and three generation regimes (short-form QA, long-form generation, and code generation), we provide a systematic robustness analysis along three axes: sample efficiency, in-domain dataset transfer, and generation regime dependence. We find that supervised ensembles outperform the best individual scorer in 30 of 32 settings, with gains realized from as few as 100 labeled instances. Ensembles retain most of their advantage in cases of in-domain transfer under distribution shift, outperforming the best non-ensemble scorer in 23 of 28 transfer settings. Sampling-based black-box ensembles are nearly as effective as full ensembles, while single-generation white-box ensembles offer limited benefit.",
@@ -1162,6 +1256,187 @@
         "prompt_version": 2
       },
       "recommended_at": "2026-08-26T10:51:18.938084+00:00"
+    },
+    {
+      "id": "conf:iclr:2026:10009352",
+      "title": "How Learning Rate Decay Wastes Your Best Data in Curriculum-Based LLM Pretraining",
+      "abstract": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation. A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric. However, prior studies have reported limited improvements from such curriculum-based pretraining strategies. This work identifies a critical factor constraining these methods: the incompatibility between the ascending data quality order and the decaying learning rate (LR) schedule. We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules. Our experiments show this incompatibility can be mitigated by two simple strategies: (1) employing a more moderate LR decay schedule, where the final LR is only moderately smaller than the peak LR, and (2) replacing LR decay with model averaging, i.e., computing a weighted average of the final few checkpoints. By combining these strategies, we improve the average score on a suite of standard benchmarks by 1.64% over random shuffling, without additional data refinement. Validated on 1.5B-parameter models trained over 30B tokens with various data-quality metrics, our findings call for a re-evaluation of curriculum-based LLM pretraining and underscore the potential of co-designing data curricula with optimization methods.",
+      "authors": [
+        "Kairong Luo",
+        "Zhenbo Sun",
+        "Haodong Wen",
+        "Xinyu Shi",
+        "Jiarui Cui",
+        "Chenyi Dang",
+        "Kaifeng Lyu",
+        "Wenguang Chen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10009352",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009352",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "emerging",
+          "score": 0.7302,
+          "matched": [
+            "data curation",
+            "curriculum",
+            "data quality",
+            "curation",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6681,
+        "relevance": 0.5842,
+        "quality": 0.78,
+        "novelty": 0.8236,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules.",
+        "problem": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation.",
+        "method": "A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric.",
+        "evidence": "However, prior studies have reported limited improvements from such curriculum-based pretraining strategies.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Data selection for LLMs.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "data curation",
+          "curriculum",
+          "data quality",
+          "curation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
+    },
+    {
+      "id": "conf:acl:2026:2958-main",
+      "title": "Attention Basin: Why Contextual Position Matters in Large Language Models",
+      "abstract": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input. To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle. Crucially, our analysis further reveals that allocating higher attention to critical information is key to enhancing model performance. Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions. AttnRank is a model-agnostic, training-free, and plug-and-play method with minimal computational overhead. Experiments on multi-hop QA and few-shot in-context learning tasks demonstrate that AttnRank achieves substantial improvements across 10 large language models of varying architectures and scales, without modifying model parameters or training procedures.",
+      "authors": [
+        "Zihao Yi",
+        "Zhenqing Ling",
+        "Delong Zeng",
+        "Haohao Luo",
+        "Zhe Xu",
+        "Wei Liu",
+        "Jian Luan",
+        "Wanxia Cao",
+        "Ying Shen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "core",
+          "score": 0.7017,
+          "matched": [
+            "basin"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6427,
+        "relevance": 0.5614,
+        "quality": 0.71,
+        "novelty": 0.8581,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "problem": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input.",
+        "method": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "evidence": "To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: LLM loss landscape.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "basin"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
     },
     {
       "id": "2608.25429",
@@ -1515,353 +1790,6 @@
         "topic": "LLM loss landscape",
         "matched": [
           "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
-    },
-    {
-      "id": "2608.27397",
-      "title": "Making Clinical Language Models Auditable: Concept-Guided Fine-Tuning for Robust Prediction",
-      "abstract": "Clinical language models can achieve strong in-hospital accuracy yet fail under deployment shifts because they exploit note-specific artifacts (e.g., templates, separators, boilerplate) that do not reflect patient state. We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification. CAST uses Sparse Autoencoders to expose sparse, human-auditable features from intermediate Transformer activations, labels SAE latents with an LLM-assisted interpretation pipeline and ICD-10 retrieval constraints, suppresses verified artifact latents via residual subtraction during fine-tuning, and provides post-hoc per-concept attributions for auditing model decisions. On MIMIC-IV discharge-note mortality prediction, CAST improves over its corresponding fine-tuned encoder baselines and remains competitive with strong LLM baselines, while producing a feature-level audit trail of the clinical concepts that support each prediction and the artifact concepts suppressed during training.",
-      "authors": [
-        "Jin Mu",
-        "Guanhua Chen"
-      ],
-      "published": "2026-08-27T17:28:35Z",
-      "updated": "2026-08-27T17:28:35Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.27397v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.27397v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models",
-        "llm",
-        "transformer"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.6765,
-          "matched": [
-            "training",
-            "fine-tuning",
-            "robust"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.2533,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6329,
-        "relevance": 0.5919,
-        "quality": 0.62,
-        "novelty": 0.8774,
-        "freshness": 0.7286,
-        "feedback_adjustment": -0.0254,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification.",
-        "problem": "Clinical language models can achieve strong in-hospital accuracy yet fail under deployment shifts because they exploit note-specific artifacts (e.g., templates, separators, boilerplate) that do not reflect patient state.",
-        "method": "We propose CAST (Concept-guided Artifact Suppression Tuning), an SAE-based framework for auditable clinical text classification.",
-        "evidence": "On MIMIC-IV discharge-note mortality prediction, CAST improves over its corresponding fine-tuned encoder baselines and remains competitive with strong LLM baselines, while producing a feature-level audit trail of the clinical concepts that support each prediction and the artifact concepts suppressed during training.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Efficient adversarial training, LLM loss landscape.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training",
-          "fine-tuning",
-          "robust"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
-    },
-    {
-      "id": "2608.28009",
-      "title": "Beyond Global Scalars: Synergizing Token-Level Statistics and Deep Semantics for Adversarial AIGC Text Detection",
-      "abstract": "The rapid evolution of large language models necessitates robust machine-generated text detection. Existing paradigms typically follow two isolated tracks. Training-free methods rely on global statistical scalars such as perplexity, while training-based methods utilize semantic hidden states. Both approaches exhibit fundamental vulnerabilities in adversarial scenarios. Global scalars act as lossy compressions that obscure local probabilistic burstiness in interleaved texts, whereas pure semantic models overfit to specific fingerprints and remain susceptible to spoofing. To expose these flaws, we introduce MOSAIC, a comprehensive adversarial benchmark comprising 16000 samples across a full-granularity attack spectrum. To address these challenges, we propose NeuroStat, an end-to-end framework bridging the statistical and semantic gap. NeuroStat captures uncompressed token-level probabilistic logits alongside deep semantic hidden states from a single causal language model backbone. We fuse these heterogeneous signals through Macro-State Residual Modulation, which adaptively calibrates local convolutional features using global uncertainty indicators. Orthogonal and contrastive losses further ensure the learning of complementary representations. Extensive experiments demonstrate that NeuroStat maintains exceptional robustness on MOSAIC compared to the severe degradation of state-of-the-art methods, establishing a new standard for adversarial text detection. Code and the MOSAIC benchmark are available at https://github.com/TencentBAC/NeuroStat.",
-      "authors": [
-        "Peiming Li",
-        "Yifan Wang",
-        "Zhiyuan Hu",
-        "Shiyu Li",
-        "Zheng Wei",
-        "Yang Tang"
-      ],
-      "published": "2026-08-28T07:23:58Z",
-      "updated": "2026-08-28T07:23:58Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.28009v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.28009v1",
-      "comment": "Accepted by EMNLP 2026 Findings",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.6686,
-          "matched": [
-            "adversarial",
-            "training",
-            "robust",
-            "robustness"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6237,
-        "relevance": 0.5349,
-        "quality": 0.84,
-        "novelty": 0.8246,
-        "freshness": 0.5106,
-        "feedback_adjustment": -0.0193,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "evidence": "在MOSAIC基准上的实验显示NeuroStat优于SOTA方法，表现出更强的鲁棒性。",
-        "limitations": "未在摘要中提及具体限制。",
-        "method": "NeuroStat通过Macro-State Residual Modulation融合单个因果语言模型的token级概率logits与语义隐藏状态，并使用正交和对比损失学习互补表示。",
-        "problem": "现有方法在对抗场景中存在根本性漏洞：全局标量丢失局部概率突变信息，纯语义模型易过拟合且易被欺骗。",
-        "takeaway": "NeuroStat框架通过融合token级概率logits和深度语义隐藏状态，解决了对抗场景下的AIGC文本检测问题。",
-        "why_for_you": "对抗性文本检测中统计特征与语义特征的协同机制",
-        "source": "abstract",
-        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "adversarial",
-          "training",
-          "robust",
-          "robustness"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-31T17:37:30.318867+00:00"
-    },
-    {
-      "id": "2608.26008",
-      "title": "A Self-Evolving Multi-Agent Framework Defense against LLM Jailbreak Attacks",
-      "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks that exploit techniques such as role-playing, obfuscation, code transformation, and multi-step indirection to elicit harmful outputs. As jailbreak strategies keep emerging, defenses have proliferated in an ongoing cat-and-mouse game, yet most remain static: their safety behavior is fixed at deployment, so they cannot accumulate defensive experience or adapt to unseen strategies. We propose a self-evolving test-time defense built around a persistent, cross-interaction rule memory: when an attack succeeds, the framework abstracts that failure into a method-level rule capturing the structural attack wrapper rather than the harmful topic, and reuses it against future inputs. Because rules are method-level, one induced rule generalizes across an entire attack family, and the label space expands as novel wrappers appear. The mechanism operates entirely through external memory and prompting, with no parameter updates, and applies to both open-weight and black-box API models. We realize it as four cooperating modules, but the contribution is the memory-based adaptation mechanism, not the module decomposition. Across four black-box jailbreak families and multiple models, our method substantially reduces attack success rates while preserving benign utility, remains robust under an adaptive composite-wrapper attack, and does not increase over-refusal as the memory grows.",
-      "authors": [
-        "Tongyan Hu",
-        "Bryan Hooi"
-      ],
-      "published": "2026-08-26T16:52:06Z",
-      "updated": "2026-08-26T16:52:06Z",
-      "categories": [
-        "cs.CR",
-        "cs.CL"
-      ],
-      "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2608.26008v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26008v1",
-      "comment": "8 pages (main), with appendix",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.6355,
-          "matched": [
-            "jailbreak",
-            "robust"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.3359,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.265,
-          "matched": [
-            "safety",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6178,
-        "relevance": 0.6286,
-        "quality": 0.47,
-        "novelty": 0.8608,
-        "freshness": 0.5822,
-        "feedback_adjustment": -0.0249,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available"
-      ],
-      "summary": {
-        "takeaway": "一种基于记忆的测试时防御，能够从 jailbreak 失败中学习，在不修改模型参数的情况下显著降低攻击成功率。",
-        "why_for_you": "符合您对 LLM 自适应、parameter‑free 防御的兴趣，提供一种 test‑time 方法来缓解 jailbreak。",
-        "method": "持久的外部规则记忆将失败的攻击抽象为方法级规则，并在 inference 时通过四个提示式代理应用。",
-        "limitations": "评估仅限于四个攻击家族和有限的模型集合，每个标签的规则容量为 4 条。",
-        "evidence": "在四个 black‑box jailbreak 家族中，系统在首批后将 ASR‑gpt 降至接近零，同时保持良好的实用性。",
-        "problem": "静态安全机制无法在 inference 期间适应新出现的 jailbreak 策略。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🛡️",
-            "text": "引入持久规则记忆，将攻击包装器抽象化，在首次暴露后实现接近零的攻击成功率。"
-          },
-          {
-            "icon": "🔎",
-            "text": "实现四个提示式代理，分别进行分类、检索、执行和反思，以在不更新模型权重的情况下生成 method‑level 规则。"
-          },
-          {
-            "icon": "⚠️",
-            "text": "在四个 black‑box jailbreak 家族中将 ASR‑gpt 降至接近零，尽管结果仅限于这些攻击和模型。"
-          }
-        ],
-        "overview": "本文提出一种自演化的 test‑time 防御，将 method‑level 规则存储在外部记忆中。当 jailbreak 成功时，reflection 代理将结构化包装抽象为规则，triggering 代理据此检测未来相似输入。policy 代理根据匹配规则执行硬拒或软拒，response 代理生成最终输出。模型参数不被修改，可部署于 open‑weight 与 black‑box LLM API。",
-        "mechanism": [
-          {
-            "detail": "而非特定主题的过滤器，规则抽象了结构化的攻击方法（例如，角色扮演-嵌套人格），使单个规则能够跨所有共享相同包装器的提示进行泛化，无论其有害意图如何。",
-            "title": "方法级规则抽象"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "规则记忆Rt存储形式为[标签=Li] 如果请求使用Pi则Di的条目，其中Pi捕获攻击包装器，Di为拒绝约束；通过归纳增长，并按标签限制（C=4）。",
-            "title": "规则记忆与操作符"
-          },
-          {
-            "detail": "A1（规则触发）运行分类器ϕ对输入进行标记并检索最多K=2个匹配规则；A2（策略决策）将触发规则映射为硬拒绝、软拒绝或允许；A3（响应生成）将策略作为动态系统指令注入；A4（自我反思）检测违规行为，通过操作符F生成新规则，并通过U更新记忆。",
-            "title": "四个提示代理"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "评估设置",
-            "detail": "基准：AdvBench 与 CodeChameleon；模型：Qwen2.5‑7B、Llama3.1‑8B、Gemini‑3‑Flash‑Preview；攻击：四类黑盒 jailbreak 家族及 DeepInception；基线：No Defense、Defense Prompt、Self‑Reminder、AutoDefense；指标：ASR‑rej、ASR‑gpt、任务性能（MMLU、GSM8K）。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "攻击成功率降低",
-            "detail": "ASR‑gpt 在首批 20 次攻击后降至接近零，并在所有四个家族中保持低水平；消融实验表明，移除任意代理都会显著提升 ASR，验证了其互补作用。"
-          },
-          {
-            "title": "效用保持",
-            "detail": "良性任务性能与基模型相当，且随着规则记忆扩展，过度拒绝并未增加。"
-          }
-        ],
-        "contributions": [
-          "在测试时，Persistent external rule memory 累积结构化防御知识。",
-          "Method‑level rule abstraction 使跨 attack families 泛化。",
-          "Multi‑agent prompting architecture 在无需 parameter updates 的情况下实现 classification、retrieval、enforcement 和 reflection。"
-        ],
-        "limitations": [
-          "实验仅覆盖四个 black‑box jailbreak families 以及有限的 LLMs。",
-          "Per‑label capacity (C=4) 可能限制对大量多样化 attack methods 的可扩展性。",
-          "缺乏针对 memory 的 formal safety guarantees 或对 adaptive adversaries 的分析。"
-        ],
-        "open_questions": [
-          "当 rule memory 扩展至数百种多样化 wrappers 时，该方法的可扩展性如何？",
-          "adaptive attackers 能否构造提示规避或污染 rule induction process？",
-          "test‑time memory 与现有对齐技术（如 RLHF）之间的交互是什么？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "jailbreak",
-          "robust"
         ],
         "lane": "llm"
       },

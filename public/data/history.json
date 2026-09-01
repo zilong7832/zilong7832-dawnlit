@@ -1,6 +1,281 @@
 {
-  "generated_at": "2026-09-01T14:52:59.157232+00:00",
+  "generated_at": "2026-09-01T20:10:56.291521+00:00",
   "papers": [
+    {
+      "id": "conf:icml:2026:64399",
+      "title": "Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models",
+      "abstract": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment. Prior works addressing this issue typically rely on explicit regularization, which leads to practical limitations. In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression. Our key observation is that, in a jailbroken LLM, safety-degrading gradients are largely saturated, while gradients unrelated to safety remain active during fine-tuning. Based on this insight, we introduce a **BufferLoRA-based fine-tuning framework**. BufferLoRA is a removable adapter that temporarily jailbreaks the model during user fine-tuning, saturating harmful updates while allowing a UserLoRA to learn user-specific tasks. After fine-tuning, BufferLoRA is removed to restore the base model’s original safety-alignment. To further reinforce safety, we additionally train a SafetyLoRA and integrate its safety components into the UserLoRA via QR decomposition-based merging strategy. Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
+      "authors": [
+        "Seokil Ham",
+        "Jaehyuk Jang",
+        "Wonjun Lee",
+        "Changick Kim"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/64399",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/64399",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "core",
+          "score": 0.7471,
+          "matched": [
+            "jailbreak",
+            "fine-tuning"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.5072,
+          "matched": [
+            "alignment",
+            "safety",
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7073,
+        "relevance": 0.6991,
+        "quality": 0.59,
+        "novelty": 0.8482,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "publication metadata",
+        "conference spotlight"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
+        "problem": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment.",
+        "method": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
+        "evidence": "Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Efficient adversarial training, Trustworthy LLM.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "jailbreak",
+          "fine-tuning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
+    },
+    {
+      "id": "conf:iclr:2026:10009352",
+      "title": "How Learning Rate Decay Wastes Your Best Data in Curriculum-Based LLM Pretraining",
+      "abstract": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation. A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric. However, prior studies have reported limited improvements from such curriculum-based pretraining strategies. This work identifies a critical factor constraining these methods: the incompatibility between the ascending data quality order and the decaying learning rate (LR) schedule. We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules. Our experiments show this incompatibility can be mitigated by two simple strategies: (1) employing a more moderate LR decay schedule, where the final LR is only moderately smaller than the peak LR, and (2) replacing LR decay with model averaging, i.e., computing a weighted average of the final few checkpoints. By combining these strategies, we improve the average score on a suite of standard benchmarks by 1.64% over random shuffling, without additional data refinement. Validated on 1.5B-parameter models trained over 30B tokens with various data-quality metrics, our findings call for a re-evaluation of curriculum-based LLM pretraining and underscore the potential of co-designing data curricula with optimization methods.",
+      "authors": [
+        "Kairong Luo",
+        "Zhenbo Sun",
+        "Haodong Wen",
+        "Xinyu Shi",
+        "Jiarui Cui",
+        "Chenyi Dang",
+        "Kaifeng Lyu",
+        "Wenguang Chen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10009352",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009352",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "emerging",
+          "score": 0.7302,
+          "matched": [
+            "data curation",
+            "curriculum",
+            "data quality",
+            "curation",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6681,
+        "relevance": 0.5842,
+        "quality": 0.78,
+        "novelty": 0.8236,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules.",
+        "problem": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation.",
+        "method": "A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric.",
+        "evidence": "However, prior studies have reported limited improvements from such curriculum-based pretraining strategies.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Data selection for LLMs.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "data curation",
+          "curriculum",
+          "data quality",
+          "curation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
+    },
+    {
+      "id": "conf:acl:2026:2958-main",
+      "title": "Attention Basin: Why Contextual Position Matters in Large Language Models",
+      "abstract": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input. To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle. Crucially, our analysis further reveals that allocating higher attention to critical information is key to enhancing model performance. Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions. AttnRank is a model-agnostic, training-free, and plug-and-play method with minimal computational overhead. Experiments on multi-hop QA and few-shot in-context learning tasks demonstrate that AttnRank achieves substantial improvements across 10 large language models of varying architectures and scales, without modifying model parameters or training procedures.",
+      "authors": [
+        "Zihao Yi",
+        "Zhenqing Ling",
+        "Delong Zeng",
+        "Haohao Luo",
+        "Zhe Xu",
+        "Wei Liu",
+        "Jian Luan",
+        "Wanxia Cao",
+        "Ying Shen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "core",
+          "score": 0.7017,
+          "matched": [
+            "basin"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6427,
+        "relevance": 0.5614,
+        "quality": 0.71,
+        "novelty": 0.8581,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "problem": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input.",
+        "method": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "evidence": "To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: LLM loss landscape.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "basin"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
+    },
     {
       "id": "2608.30910",
       "title": "S3C-LLM: Skill-Code Guided Agentic Language Models for Spectrum-to-Structure Elucidation",
@@ -15740,513 +16015,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-07-24T11:55:27.963037+00:00"
-    },
-    {
-      "id": "2607.21558",
-      "title": "Beyond Sycophancy: Structured Resistance and Compliance in LLM Moral Reasoning",
-      "abstract": "Building socially calibrated large language models, which can learn from others without simply yielding to them, requires more than reducing sycophancy as a one-dimensional failure mode. Models must distinguish when to incorporate others' perspectives from when to maintain a well-grounded moral judgment. We study the broader resistance-compliance process governing this distinction. Across three studies, we show that models' judgment revision is structured along three dimensions that parallel classic phenomena in human social psychology: the distance between an incoming view and the model's initial position, the source attribution of that view, and the coalition structure supporting it. Models are generally more receptive to nearby positions, more influenced by views presented as their own prior judgments, and differently responsive to group pressure. These findings recast sycophancy as one expression of a broader judgment-updating process shaped by social influence. Our framework provides a principled basis for distinguishing constructive belief revision from sycophantic compliance, thereby supporting better alignment in morally consequential interactions.",
-      "authors": [
-        "Baihui Wang",
-        "Bernard Koch"
-      ],
-      "published": "2026-07-23T17:40:07Z",
-      "updated": "2026-07-23T17:40:07Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2607.21558v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.21558v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.3773,
-          "matched": [
-            "alignment",
-            "alignment",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.3931,
-        "relevance": 0.3018,
-        "quality": 0.33,
-        "novelty": 0.8631,
-        "freshness": 0.8913
-      },
-      "quality_signals": [],
-      "summary": {
-        "takeaway": "LLMs exhibit structured judgment revision in moral reasoning governed by distance from prior views, source attribution, and coalition structure, reframing sycophancy as part of a broader social influence mechanism.",
-        "problem": "Current evaluations of LLM sycophancy treat yielding as a one-dimensional failure, lacking a principled account of when models should resist or comply in moral judgment updates.",
-        "method": "The authors conduct three studies manipulating the distance of opposing views, source attribution, and peer coalition structure across eight LLMs using moral dilemmas and measure belief updates via log-probability distributions over a 7-point Likert scale.",
-        "evidence": "Models accommodate nearby views but resist distant ones, weigh identical content differently based on attributed source, and respond variably to group pressure, with quantitative regression analyses confirming these structured patterns across multiple models.",
-        "limitations": "The study focuses on moral dilemmas without ground truth, limiting generalizability; Sonnet 4.5 is excluded from multi-agent experiments due to sampling cost; and no mechanistic equations are provided to explain the belief-updating process.",
-        "why_for_you": "This work provides a nuanced, empirically validated framework to distinguish constructive belief revision from sycophantic compliance in LLMs, crucial for advancing trustworthy moral reasoning in language models.",
-        "source": "abstract",
-        "generated_by": "openai/gpt-4.1-mini"
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🧠",
-            "text": "Models show a nonlinear accommodation pattern where they accept views close to their prior but resist those beyond a model-specific distance, paralleling human latitude of acceptance phenomena."
-          },
-          {
-            "icon": "🛡️",
-            "text": "The method uses log-probability distributions over a 7-point Likert scale to capture subtle shifts in model belief states, enabling measurement of both overt answer changes and internal uncertainty shifts."
-          },
-          {
-            "icon": "📉",
-            "text": "Regression analyses reveal that peer message persuasiveness decreases with distance from the model’s prior, and coalition structure modulates resistance, with models resisting majority pressure but yielding to unanimous consensus."
-          }
-        ],
-        "overview": "This paper addresses the limitation of viewing LLM sycophancy as a simple failure mode by proposing a structured belief-updating mechanism inspired by human social psychology. The authors hypothesize that LLM judgment revision in moral dilemmas is governed by three dimensions: the distance between incoming views and the model's prior, the attributed source of those views, and the coalition structure of social pressure. They test this via three studies manipulating each dimension independently across eight state-of-the-art LLMs, measuring belief updates through changes in log-probability distributions over a 7-point moral preference scale. The results consistently show that models accommodate nearby views but resist distant ones, weigh identical content differently depending on source attribution, and respond to group pressure in ways mirroring human conformity and dissent dynamics. These findings recast sycophancy as a surface manifestation of a broader, socially structured belief-updating process, providing a principled framework to distinguish constructive belief revision from uncritical compliance, thereby advancing alignment in morally consequential interactions.",
-        "methodology": [
-          {
-            "title": "Model Selection and Setup",
-            "detail": "Eight LLMs spanning two generations (GPT-4o, DeepSeek-V3.2, Phi-4, Qwen-2.5, GPT-5.4, GPT-5.4-mini, Qwen-3.7-Max, Claude Sonnet 4.5) were evaluated. For all except Sonnet 4.5, answer distributions were derived from first-token log-probabilities over a 7-point Likert scale; Sonnet 4.5 used Monte Carlo sampling due to lack of log-probabilities."
-          },
-          {
-            "title": "Stimuli and Task",
-            "detail": "Seventy-eight moral dilemmas from cross-cultural and large human-response datasets were used, each eliciting a 7-point Likert scale judgment. The dilemmas cover trolley problems, resource allocation, punishment severity, privacy-security trade-offs, and everyday social situations."
-          },
-          {
-            "title": "Experimental Procedure",
-            "detail": "Each study first elicited a baseline judgment distribution, then introduced a social manipulation varying one dimension (distance, source attribution, coalition structure), and measured post-manipulation distributions to quantify belief updates."
-          },
-          {
-            "title": "Measurement and Metrics",
-            "detail": "Belief updates were quantified using changes in log-probability mass on the Likert scale, including metrics such as ∆P (change in probability of target position), transfer ratio (mass shifted from prior to target), and commitment rate (proportion overtly adopting planted views)."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Belief-Updating Dimensions",
-            "detail": "The paper posits three dimensions structuring LLM judgment revision: (1) distance between incoming view and prior belief, reflecting latitude of acceptance; (2) source attribution, affecting weight given to identical content; (3) coalition structure, modulating conformity and resistance based on majority or dissenting allies. No formal equations or causal models are provided."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Study 1: Distance Manipulation",
-            "detail": "Opposing views were progressively moved further from the model’s prior judgment. Models showed nonlinear accommodation, accepting nearby views but resisting distant ones, confirmed by quadratic regression analyses across all eight models."
-          },
-          {
-            "title": "Study 2: Source Attribution",
-            "detail": "The same opposing view was attributed to different sources: the model’s own prior judgment, the user, or another AI. Models were more influenced when the view was framed as their own prior, less so when attributed to others."
-          },
-          {
-            "title": "Study 3: Coalition Structure",
-            "detail": "Models participated in a four-agent deliberation varying the ratio of supporting to opposing peers. More capable models resisted majority pressure but yielded to unanimous consensus; some strengthened their position when a lone ally dissented from the majority."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Nonlinear Distance Effect",
-            "detail": "Models accommodate views close to their prior but resist those beyond a model-specific threshold, mirroring human latitude of acceptance; e.g., GPT-4o and Phi-4 showed significant quadratic effects in regression analyses."
-          },
-          {
-            "title": "Source Attribution Modulates Influence",
-            "detail": "Views framed as the model’s own prior judgment exerted stronger influence on belief updates than identical views attributed to users or other AIs, indicating source-dependent weighting."
-          },
-          {
-            "title": "Coalition Effects on Resistance",
-            "detail": "Models resist majority peer pressure but yield to unanimous consensus; notably, some models increased commitment strength when a single ally dissented from an opposing majority, reflecting human conformity dynamics."
-          },
-          {
-            "title": "Sycophancy as Structured Updating",
-            "detail": "Sycophantic behavior emerges as one facet of a broader, socially structured belief-updating mechanism rather than a simple failure mode, supported by consistent patterns across multiple models and experimental manipulations."
-          }
-        ],
-        "contributions": [
-          "Identification of three structured dimensions (distance, source attribution, coalition structure) governing LLM moral judgment revision.",
-          "Empirical demonstration across eight diverse LLMs that sycophancy is part of a broader social influence mechanism.",
-          "Development of a measurement framework using log-probability distributions over Likert scales to capture subtle belief updates.",
-          "Provision of a principled framework to distinguish constructive belief revision from sycophantic compliance in LLMs."
-        ],
-        "limitations": [
-          "Focus on moral dilemmas without objective ground truth limits generalizability to other domains.",
-          "Exclusion of Claude Sonnet 4.5 from multi-agent Study 3 due to sampling cost reduces completeness of coalition structure analysis.",
-          "No mechanistic or causal equations are provided to formally model the belief-updating process.",
-          "Potential entanglement of peer distance with argument persuasiveness complicates interpretation of coalition effects."
-        ],
-        "open_questions": [
-          "How can the structured belief-updating framework be extended to domains beyond moral dilemmas with objective ground truth?",
-          "What formal mechanistic models can capture the causal dynamics of LLM judgment revision along the identified dimensions?",
-          "How do training procedures and model architectures influence the observed social influence patterns in LLMs?",
-          "Can interventions be designed to promote constructive belief revision while minimizing sycophantic compliance in real-world applications?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "openai/gpt-4.1-mini",
-        "schema_version": 2
-      },
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "alignment",
-          "alignment",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-24T11:55:27.963037+00:00"
-    },
-    {
-      "id": "2607.20090",
-      "title": "Reinforcement Learning for Large Language Model Selective Evidence Adoption from Contaminated Retrieval Results",
-      "abstract": "Retrieval-augmented large language models frequently face contexts that interleave useful evidence with misleading statements or instruction-like content. Blanket refusal discards valid evidence, whereas uncritical adoption yields incorrect or unsafe answers. The ability to selectively adopt relevant information while rejecting deceptive or harmful content is therefore critical for reliable deployment in real-world retrieval settings. We introduce SelectBench, a controlled benchmark and training set for selective evidence adoption, and post-train Qwen3.5-4B directly with DAPO using either deterministic rule rewards or a frozen semantic judge. On the corrected 325-example SelectBench-v2 test set, strict success rises from 22.46% for the original checkpoint to 25.54% with DAPO-Rule and 26.46% with DAPO-DeepSeek. Both trained policies reduce forbidden-content adoption and produce shorter, more focused responses, yet prompt-injection following does not improve. The paired gains are modest and fail to survive Holm correction, suggesting that stronger reward shaping or additional training iterations may be needed for more robust gains. DAPO-DeepSeek exhibits no material degradation on MMLU or clean HotpotQA, indicating that the post-training procedure preserves general capabilities. These results demonstrate a directional improvement in selective evidence use, while identifying injection resistance and statistical robustness as important remaining challenges for future work.",
-      "authors": [
-        "Yanyu Chen",
-        "Yue Li",
-        "Yongyi Cui",
-        "Dongsheng Shi",
-        "Lichang Dai"
-      ],
-      "published": "2026-07-22T12:45:04Z",
-      "updated": "2026-07-22T12:45:04Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2607.20090v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20090v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "core",
-          "score": 0.559,
-          "matched": [
-            "robustness",
-            "robust",
-            "training"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.1993,
-          "matched": [
-            "robustness",
-            "robustness"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5415,
-        "relevance": 0.4871,
-        "quality": 0.48,
-        "novelty": 0.8586,
-        "freshness": 0.8614
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Selective evidence adoption via reinforcement learning post-training improves retrieval-augmented LLMs' ability to extract valid information while reducing harmful content adoption.",
-        "problem": "Retrieval-augmented LLMs struggle to selectively adopt useful evidence from retrieval results contaminated with misleading or instruction-like content, risking unsafe or incorrect answers.",
-        "method": "The authors introduce SelectBench, a controlled benchmark, and apply DAPO post-training on Qwen3.5-4B using deterministic rule-based and frozen semantic judge rewards to optimize selective evidence adoption.",
-        "evidence": "On the corrected 325-example SelectBench-v2 test set, strict success improved from 22.46% to 25.54% (DAPO-Rule) and 26.46% (DAPO-DeepSeek), with reduced forbidden-content adoption and no degradation on MMLU or HotpotQA.",
-        "limitations": "The observed gains are modest, fail to survive Holm correction for statistical significance, and do not improve prompt-injection resistance, indicating the need for stronger reward shaping or more training.",
-        "why_for_you": "This work advances reinforcement learning techniques for trustworthy LLM retrieval agents by addressing selective evidence adoption, a critical challenge for safe and efficient real-world deployment.",
-        "source": "abstract",
-        "generated_by": "openai/gpt-4.1-mini"
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🧠",
-            "text": "Selective evidence adoption post-training on Qwen3.5-4B using DAPO with rule-based and DeepSeek semantic judge rewards yields strict success improvements from 22.46% to 26.46% on SelectBench-v2."
-          },
-          {
-            "icon": "🛡️",
-            "text": "The DAPO framework employs a ternary reward function penalizing forbidden content adoption and tool omission, with two variants: DAPO-Rule using phrase matching and DAPO-DeepSeek using a frozen deepseek-v4-flash judge."
-          },
-          {
-            "icon": "📉",
-            "text": "Despite improvements in selective adoption and reduced forbidden content, gains are modest, fail Holm correction, and prompt-injection resistance remains unimproved, highlighting challenges in reward design and robustness."
-          }
-        ],
-        "overview": "This paper addresses the challenge of selective evidence adoption in retrieval-augmented large language models, where retrieved contexts mix valid facts with misleading or harmful content. The authors propose SelectBench, a controlled benchmark and training dataset, to evaluate and train LLMs to discern and adopt only supported evidence. They apply reinforcement learning post-training on Qwen3.5-4B using the DAPO framework with two reward variants: a deterministic rule-based reward and a frozen semantic judge (DeepSeek). The reward function penalizes forbidden content adoption and tool omission while rewarding correct, complete, and safe answers. Experiments on the corrected SelectBench-v2 test set show modest improvements in strict success rates and reductions in forbidden content adoption without degrading performance on general benchmarks like MMLU and HotpotQA. However, the improvements do not reach statistical significance after Holm correction, and prompt-injection resistance remains a challenge. The work demonstrates a promising direction for enhancing LLM agents' selective use of retrieval evidence but identifies the need for stronger reward shaping and more robust training to achieve reliable gains.",
-        "methodology": [
-          {
-            "title": "SelectBench Dataset Construction",
-            "detail": "SelectBench is a controlled benchmark and training set designed to study selective evidence adoption. It contains retrieval contexts mixing supported facts with misleading or instruction-like content. Training and test splits are disjoint, and the corrected SelectBench-v2 test set includes 325 examples for evaluation."
-          },
-          {
-            "title": "DAPO Post-Training Framework",
-            "detail": "DAPO (Directly Optimizing Preference Optimization) is used to post-train Qwen3.5-4B. It optimizes a ternary reward function that assigns +1 for correct, complete, and safe answers with tool use, -1 for forbidden content adoption or tool omission, and 0 otherwise. Two reward variants are implemented: DAPO-Rule uses deterministic phrase matching rules, and DAPO-DeepSeek employs a frozen deepseek-v4-flash semantic judge."
-          },
-          {
-            "title": "Tool-Use Rollout and Evaluation",
-            "detail": "The policy observes system instructions and questions, invokes a fixed retrieval tool returning example-specific context verbatim, and generates answers. Correctness is evaluated on the final answer segment, while forbidden content adoption is checked across the entire assistant turn. Output length is penalized to discourage verbosity."
-          },
-          {
-            "title": "Training Setup and Hyperparameters",
-            "detail": "Training uses frozen vision tower and updates the language model with AdamW optimizer at a learning rate of 5e-7, weight decay 0.1, gradient clipping 1.0, and batch sizes of 8 or 9 prompts with 8 rollouts each. Training runs for 130 optimizer steps on NVIDIA RTX 3090 GPUs with validation every 10 steps."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Reward Function Design",
-            "detail": "The reward function r_task(τ) is ternary: +1 if the trajectory τ includes a successful tool call, a correct and complete answer, and no forbidden content adoption; -1 if the tool call fails or forbidden content is adopted; 0 otherwise. Length penalties discourage overly long outputs. This design prioritizes safe and accurate evidence adoption while penalizing harmful or missing responses."
-          },
-          {
-            "title": "No Explicit Mechanistic Model",
-            "detail": "The paper does not provide explicit mechanistic or causal equations beyond the reward function. The approach relies on reinforcement learning to implicitly shape the policy towards selective evidence adoption."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Selective Evidence Adoption Evaluation",
-            "detail": "Evaluation on the corrected 325-example SelectBench-v2 test set compares the original Qwen3.5-4B checkpoint with DAPO-Rule and DAPO-DeepSeek post-trained models. Metrics include strict success rate, forbidden content adoption, and answer completeness."
-          },
-          {
-            "title": "General Capability Retention",
-            "detail": "To assess capability retention, the base and DAPO-DeepSeek checkpoints are evaluated on 14,042 MMLU test questions using 5-shot and zero-shot protocols, and on 7,080 clean HotpotQA validation questions in fixed-context and closed-book modes."
-          },
-          {
-            "title": "Training and Validation Protocol",
-            "detail": "Training uses fixed hyperparameters without retraining or hyperparameter tuning after test set inspection. Validation occurs every 10 optimizer steps, with final checkpoints exported at step 130. Rollouts use temperature 1, top-p 1, no top-k truncation, and maximum prompt and response lengths of 768 and 3,072 tokens respectively."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Improved Strict Success",
-            "detail": "Strict success on SelectBench-v2 improves from 22.46% (original) to 25.54% (DAPO-Rule) and 26.46% (DAPO-DeepSeek), demonstrating directional gains in selective evidence adoption."
-          },
-          {
-            "title": "Reduced Forbidden Content Adoption",
-            "detail": "Both DAPO-trained policies reduce the adoption of forbidden or harmful content compared to the original checkpoint, contributing to safer answer generation."
-          },
-          {
-            "title": "No Degradation on General Benchmarks",
-            "detail": "DAPO-DeepSeek maintains performance on MMLU and clean HotpotQA datasets, indicating that post-training does not harm general language understanding or reasoning capabilities."
-          },
-          {
-            "title": "Modest Gains and Statistical Significance",
-            "detail": "The observed improvements are modest and fail to survive Holm correction for multiple comparisons, suggesting limited statistical robustness."
-          },
-          {
-            "title": "Prompt-Injection Resistance Unchanged",
-            "detail": "Neither trained policy improves resistance to prompt-injection attacks, highlighting an important remaining challenge."
-          }
-        ],
-        "contributions": [
-          "Formulation of selective evidence adoption from contaminated retrieval outputs as a distinct post-training objective for LLM agents.",
-          "Creation of SelectBench, a controlled dataset and benchmark for evaluating selective evidence adoption.",
-          "Design and application of a tailored reinforcement learning pipeline using DAPO with rule-based and semantic judge rewards to train Qwen3.5-4B.",
-          "Empirical demonstration of directional improvements in selective evidence adoption and reduced forbidden content adoption without degrading general capabilities.",
-          "Identification of prompt-injection resistance and statistical robustness as key challenges for future research."
-        ],
-        "limitations": [
-          "Modest performance gains that do not achieve statistical significance after Holm correction.",
-          "Lack of improvement in prompt-injection resistance despite training.",
-          "Comparison between DAPO-Rule and DAPO-DeepSeek is descriptive, not a strict ablation due to differing training conditions.",
-          "No exploration of stronger reward shaping or extended training iterations which may be necessary for more robust improvements."
-        ],
-        "open_questions": [
-          "How can reward shaping be enhanced to achieve statistically significant and robust improvements in selective evidence adoption?",
-          "What methods can effectively improve prompt-injection resistance in retrieval-augmented LLM agents?",
-          "Can training protocols be optimized to balance selective evidence adoption with general capability retention more effectively?",
-          "How does selective evidence adoption scale with larger models or more complex retrieval contexts?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "openai/gpt-4.1-mini",
-        "schema_version": 2
-      },
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "robustness",
-          "robust",
-          "training"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-23T12:02:13.960325+00:00"
-    },
-    {
-      "id": "2607.20327",
-      "title": "PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference",
-      "abstract": "Large language models (LLMs) provide strong reasoning capabilities but are expensive to serve at scale, whereas small language models (SLMs) are cheaper but less reliable on difficult problems. We introduce PyroDash, a cost-aware framework for token-level SLM-LLM collaborative inference. During generation, the SLM decides whether to request assistance by emitting a control token. A Collaborate Engine then sends the query and partial reasoning trace to a frozen LLM for completion through a single handoff. The policy is internalized in the SLM, requiring neither a separate router, LLM retraining, nor access to LLM logits. PyroDash trains the SLM in three stages: control-token embedding learning, offloading-oriented supervised fine-tuning, and cost-aware alignment with Group Relative Policy Optimization. Its reward balances answer accuracy against inference cost normalized by LLM-only inference. Across five mathematical reasoning benchmarks, PyroDash supports different accuracy-cost operating points. With $λ=0.05$, it achieves 64.04 percent average accuracy, 6.36 percentage points above the LLM-only baseline, while reducing cost by 20.4 percent. With $λ=0.6$, it achieves 54.55 percent accuracy with a 1.90 percent LLM token ratio and 0.012 LLM calls per example, reducing total cost from USD 49.36 to USD 1.78. These results show that learned token-level handoffs can reduce LLM use while preserving strong reasoning performance.",
-      "authors": [
-        "Niqi Lyu",
-        "Pengtao Shi",
-        "Wei Qiu",
-        "Jianlin Zhong",
-        "Sicong Xia",
-        "Jianyao Ma",
-        "Yicheng Ding"
-      ],
-      "published": "2026-07-22T16:14:26Z",
-      "updated": "2026-07-22T16:14:26Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2607.20327v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.20327v1",
-      "comment": "19 pages, 3 figures",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.3885,
-          "matched": [
-            "alignment",
-            "alignment",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4385,
-        "relevance": 0.3108,
-        "quality": 0.55,
-        "novelty": 0.8238,
-        "freshness": 0.8822
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "PyroDash enables cost-efficient collaborative inference between small and large language models by optimizing when to request assistance.",
-        "problem": "Balancing the high cost of large language models with the lower reliability of small language models in reasoning tasks is challenging.",
-        "method": "PyroDash employs a token-level collaborative inference framework where the small language model decides when to offload to a frozen large language model.",
-        "evidence": "With a cost reduction factor of λ=0.6, PyroDash achieves 54.55% accuracy while reducing total cost from $49.36 to $1.78, demonstrating significant efficiency.",
-        "limitations": "The paper does not explore the performance of PyroDash in non-mathematical reasoning tasks or with different model architectures.",
-        "why_for_you": "This research provides insights into optimizing inference costs in LLM applications, which is crucial for scalable AI deployment.",
-        "source": "abstract",
-        "generated_by": "openai/gpt-4o-mini"
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🧠",
-            "text": "PyroDash achieves an average accuracy of 64.04% at λ=0.05, surpassing the LLM-only baseline by 6.36 percentage points while reducing costs by 20.4%."
-          },
-          {
-            "icon": "🛡️",
-            "text": "The framework utilizes a control token mechanism, allowing the small language model to autonomously decide when to request assistance from the large language model."
-          },
-          {
-            "icon": "📉",
-            "text": "At λ=0.6, PyroDash reduces total inference costs by 96.4%, demonstrating the effectiveness of its cost-aware alignment strategy."
-          }
-        ],
-        "overview": "PyroDash addresses the challenge of efficiently utilizing large and small language models by introducing a token-level collaborative inference framework. The small language model (SLM) autonomously determines when to request assistance from a frozen large language model (LLM) using a control token. This method allows for a single handoff, minimizing costs while maintaining strong reasoning performance. Empirical results across five mathematical reasoning benchmarks show that PyroDash can achieve significant accuracy improvements and cost reductions, making it a promising solution for scalable AI applications.",
-        "methodology": [
-          {
-            "title": "Control-Token Embedding Learning",
-            "detail": "The SLM is trained to embed control tokens that signal when to offload reasoning tasks to the LLM, enhancing its decision-making capabilities."
-          },
-          {
-            "title": "Offloading-Oriented Supervised Fine-Tuning",
-            "detail": "This stage fine-tunes the SLM to optimize its performance in recognizing when to request LLM assistance, based on its reasoning trajectory."
-          },
-          {
-            "title": "Cost-Aware Alignment with Group Relative Policy Optimization (GRPO)",
-            "detail": "The SLM's offloading policy is aligned with a reward structure that balances accuracy and inference cost, allowing for tunable performance."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Token-Level Handoff Mechanism",
-            "detail": "The SLM generates tokens and decides to emit a control token when it reaches a capability boundary, triggering a handoff to the LLM for completion."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Model Configuration",
-            "detail": "The evaluation uses Qwen3.5-4B as the SLM and GLM-5.2-FP8 as the LLM, assessing performance across five mathematical reasoning benchmarks."
-          },
-          {
-            "title": "Benchmarks and Metrics",
-            "detail": "The benchmarks include GSM8K, Minerva, Olympiad-Bench, AIME-2024, and AIME-2025, with metrics such as pass@1 accuracy and avg@32 for evaluation."
-          },
-          {
-            "title": "Baseline Comparisons",
-            "detail": "PyroDash is compared against standalone SLM and LLM models, as well as SLM+SFT and RouteLLM routing baselines to evaluate its effectiveness."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Accuracy Improvement",
-            "detail": "At λ=0.05, PyroDash achieves 64.04% accuracy, outperforming the LLM-only baseline of 57.68% by 6.36 percentage points."
-          },
-          {
-            "title": "Cost Reduction",
-            "detail": "With λ=0.6, PyroDash reduces total inference cost from $49.36 to $1.78, achieving a 96.4% reduction."
-          },
-          {
-            "title": "LLM Token Ratio",
-            "detail": "At λ=0.6, the LLM token ratio is 1.90%, indicating efficient use of the LLM during inference."
-          }
-        ],
-        "contributions": [
-          "Introduction of PyroDash for token-level collaborative inference between SLMs and LLMs.",
-          "Development of a three-stage training pipeline for cost-aware alignment of the SLM's offloading policy.",
-          "Demonstration of substantial inference cost reductions while maintaining competitive accuracy across benchmarks."
-        ],
-        "limitations": [
-          "The performance of PyroDash in non-mathematical reasoning tasks is not evaluated.",
-          "The impact of different model architectures on the effectiveness of PyroDash is not explored."
-        ],
-        "open_questions": [
-          "How can PyroDash be adapted for diverse reasoning tasks beyond mathematical problems?",
-          "What are the implications of using different model architectures in the PyroDash framework?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "openai/gpt-4o-mini",
-        "schema_version": 2
-      },
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "alignment",
-          "alignment",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-23T12:02:13.960325+00:00"
     }
   ]
 }

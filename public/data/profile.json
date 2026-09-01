@@ -1,7 +1,9 @@
 {
-  "version": 1,
-  "updated_at": "2026-08-03",
-  "language": "zh",
+  "version": 2,
+  "updated_at": "2026-08-23",
+  "language": "en",
+  "ui_language": "en",
+  "content_language": "zh",
   "feed_size": 6,
   "weekly_size": 12,
   "retrieval": {
@@ -15,6 +17,54 @@
     "lookback_days": 1,
     "max_results": 2000,
     "page_size": 250
+  },
+  "conference_fallback": {
+    "enabled": true,
+    "minimum_daily": 3,
+    "start_year": "current",
+    "min_year": 2022,
+    "reserve_target": 24,
+    "cache_ttl_days": 7,
+    "venues": [
+      "NeurIPS",
+      "ICLR",
+      "ICML",
+      "ACL",
+      "EMNLP"
+    ],
+    "presentation_types": [
+      "oral",
+      "spotlight"
+    ],
+    "verified_schedule_csv": [
+      {
+        "venue": "ACL",
+        "year": 2026,
+        "url": "https://docs.google.com/spreadsheets/d/16ZuzEVhY1BAeZGK9LJskLcvqacy-7YuoAaK1yXoRcFQ/export?format=csv",
+        "landing_url": "https://2026.aclweb.org/program/"
+      }
+    ]
+  },
+  "feedback_tuning": {
+    "enabled": true,
+    "positive_actions": [
+      "useful",
+      "save"
+    ],
+    "negative_actions": [
+      "irrelevant",
+      "not_llm"
+    ],
+    "half_life_days": 120,
+    "minimum_effective_samples": 4,
+    "full_confidence_samples": 12,
+    "secondary_topic_credit": 0.5,
+    "prior_strength": 4,
+    "target_hit_rate": 0.5,
+    "learning_rate": 0.8,
+    "max_adjustment": 0.15,
+    "minimum_weight": 0.2,
+    "maximum_weight": 1.0
   },
   "scope": {
     "required_concepts": [
@@ -51,25 +101,6 @@
       "text-to-image",
       "diffusion model"
     ],
-    "non_llm_modalities": [
-      "vision-language model",
-      "vision language model",
-      "vlm",
-      "vlms",
-      "multimodal",
-      "multimodal large language model",
-      "multimodal language model",
-      "medical vqa",
-      "visual question answering",
-      "video reasoning",
-      "video understanding",
-      "image classifier",
-      "object detector",
-      "open vocabulary object detector",
-      "computer vision"
-    ],
-    "allow_transferable": true,
-    "transferable_daily_limit": 1,
     "excluded_language_focus": [
       "multilingual",
       "multilinguality",
@@ -115,7 +146,26 @@
       "turkish",
       "urdu",
       "vietnamese"
-    ]
+    ],
+    "non_llm_modalities": [
+      "vision-language model",
+      "vision language model",
+      "vlm",
+      "vlms",
+      "multimodal",
+      "multimodal large language model",
+      "multimodal language model",
+      "medical vqa",
+      "visual question answering",
+      "video reasoning",
+      "video understanding",
+      "image classifier",
+      "object detector",
+      "open vocabulary object detector",
+      "computer vision"
+    ],
+    "allow_transferable": true,
+    "transferable_daily_limit": 1
   },
   "ranking": {
     "relevance_weight": 0.65,
@@ -130,35 +180,66 @@
     {
       "id": "efficient_adversarial_training",
       "name": "Efficient adversarial training",
-      "description": "Efficient adversarial training",
+      "description": "Efficient adversarial training and robust fine-tuning for large language models, including compute, memory and sample efficiency.",
       "weight": 1.0,
-      "status": "emerging",
+      "status": "core",
       "enabled": true,
       "phrases": [
-        "Efficient adversarial training",
+        "efficient adversarial training",
         "adversarial training",
         "robust fine-tuning",
+        "robust finetuning",
+        "adversarial fine-tuning",
+        "adversarial finetuning",
         "jailbreak robustness"
       ],
       "terms": [
-        "adversarial",
-        "efficient",
-        "training",
-        "fine-tuning",
         "jailbreak",
+        "adversarial",
+        "robustness",
         "robust",
-        "robustness"
+        "attack",
+        "perturbation",
+        "inner maximization",
+        "compute-efficient",
+        "memory-efficient",
+        "sample-efficient",
+        "fine-tuning",
+        "training"
+      ],
+      "required_all_groups": [
+        [
+          "adversarial",
+          "jailbreak",
+          "robustness",
+          "robust"
+        ],
+        [
+          "training",
+          "fine-tuning",
+          "finetuning",
+          "optimization"
+        ]
+      ],
+      "required_central_any": [
+        "efficient adversarial training",
+        "adversarial training",
+        "adversarial fine-tuning",
+        "adversarial finetuning",
+        "robust fine-tuning",
+        "robust finetuning",
+        "jailbreak"
       ],
       "exclude": [],
       "effective_weight": 1.0,
       "feedback_stats": {
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.84,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.413,
-        "confidence": 0.0702,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 1.0,
         "effective_weight": 1.0,
         "adjustment": 0.0,
@@ -168,27 +249,45 @@
     {
       "id": "llm_loss_landscape",
       "name": "LLM loss landscape",
-      "description": "LLM loss landscape",
+      "description": "Optimization geometry and loss landscapes of LLM pre-training, alignment and fine-tuning.",
       "weight": 1.0,
-      "status": "emerging",
+      "status": "core",
       "enabled": true,
       "phrases": [
-        "LLM loss landscape",
         "loss landscape",
         "mode connectivity",
+        "parameter space",
+        "capability basin",
+        "alignment brittleness",
         "basin",
         "flatness",
         "sharpness"
       ],
       "terms": [
-        "landscape",
-        "llm",
-        "loss",
         "basin",
-        "connectivity",
         "flatness",
-        "mode",
-        "sharpness"
+        "sharpness",
+        "hessian",
+        "curvature",
+        "geometry",
+        "parameter perturbation",
+        "catastrophic forgetting",
+        "stability",
+        "plasticity",
+        "optimizer",
+        "connectivity",
+        "landscape",
+        "loss",
+        "mode"
+      ],
+      "required_any": [
+        "loss landscape",
+        "basin",
+        "flatness",
+        "sharpness",
+        "hessian",
+        "curvature",
+        "mode connectivity"
       ],
       "exclude": [],
       "effective_weight": 1.0,
@@ -211,7 +310,7 @@
       "name": "Data selection for LLMs",
       "description": "Data selection, valuation, filtering, mixtures and curricula for LLM pre-training, SFT and post-training.",
       "weight": 0.8,
-      "status": "core",
+      "status": "emerging",
       "enabled": true,
       "phrases": [
         "data selection",
@@ -254,13 +353,13 @@
       "exclude": [],
       "effective_weight": 0.8,
       "feedback_stats": {
-        "useful": 0.5,
+        "useful": 0.0,
         "irrelevant": 0.0,
-        "samples": 0.5,
-        "effective_samples": 0.44,
-        "hit_rate": 1.0,
-        "smoothed_hit_rate": 0.5497,
-        "confidence": 0.0368,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.8,
         "effective_weight": 0.8,
         "adjustment": 0.0,
@@ -270,32 +369,52 @@
     {
       "id": "on_policy_distillation",
       "name": "On-policy distillation",
-      "description": "On-policy distillation",
+      "description": "On-policy knowledge and self-distillation for LLM reasoning and post-training, with an emphasis on efficiency and theory.",
       "weight": 0.7,
-      "status": "emerging",
+      "status": "watch",
       "enabled": true,
       "phrases": [
-        "On-policy distillation",
         "on-policy distillation",
+        "on policy distillation",
+        "on-policy self-distillation",
         "self-distillation",
         "OPD"
       ],
       "terms": [
+        "student trajectory",
+        "student-generated",
+        "teacher feedback",
+        "teacher logits",
+        "distribution mismatch",
+        "exposure bias",
+        "token-level",
+        "sequence-level",
+        "knowledge distillation",
+        "policy distillation",
+        "opd",
+        "mopd",
         "distillation",
         "on-policy",
-        "opd",
         "self-distillation"
+      ],
+      "required_any": [
+        "on-policy distillation",
+        "on policy distillation",
+        "on-policy self-distillation",
+        "self-distillation",
+        "opd",
+        "mopd"
       ],
       "exclude": [],
       "effective_weight": 0.7,
       "feedback_stats": {
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.85,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.4127,
-        "confidence": 0.0705,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.7,
         "effective_weight": 0.7,
         "adjustment": 0.0,
@@ -348,7 +467,6 @@
         "jailbreak",
         "robustness"
       ],
-      "exclude": [],
       "required_central_any": [
         "trustworthy llm",
         "llm safety",
@@ -364,19 +482,20 @@
         "jailbreak",
         "robustness"
       ],
-      "effective_weight": 0.6305,
+      "exclude": [],
+      "effective_weight": 0.7,
       "feedback_stats": {
-        "useful": 3.0,
-        "irrelevant": 6.5,
-        "samples": 9.5,
-        "effective_samples": 8.38,
-        "hit_rate": 0.3158,
-        "smoothed_hit_rate": 0.3756,
-        "confidence": 0.6981,
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.7,
-        "effective_weight": 0.6305,
-        "adjustment": -0.0695,
-        "active": true
+        "effective_weight": 0.7,
+        "adjustment": 0.0,
+        "active": false
       }
     },
     {
@@ -423,12 +542,12 @@
       "effective_weight": 0.6,
       "feedback_stats": {
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.88,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.4096,
-        "confidence": 0.0736,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.6,
         "effective_weight": 0.6,
         "adjustment": 0.0,
@@ -436,74 +555,24 @@
       }
     }
   ],
-  "ui_language": "zh",
-  "content_language": "zh",
-  "conference_fallback": {
-    "enabled": true,
-    "minimum_daily": 3,
-    "start_year": "current",
-    "min_year": 2022,
-    "reserve_target": 24,
-    "cache_ttl_days": 7,
-    "venues": [
-      "NeurIPS",
-      "ICLR",
-      "ICML",
-      "ACL",
-      "EMNLP"
-    ],
-    "presentation_types": [
-      "oral",
-      "spotlight"
-    ],
-    "verified_schedule_csv": [
-      {
-        "venue": "ACL",
-        "year": 2026,
-        "url": "https://docs.google.com/spreadsheets/d/16ZuzEVhY1BAeZGK9LJskLcvqacy-7YuoAaK1yXoRcFQ/export?format=csv",
-        "landing_url": "https://2026.aclweb.org/program/"
-      }
-    ]
-  },
-  "feedback_tuning": {
-    "enabled": true,
-    "positive_actions": [
-      "useful",
-      "save"
-    ],
-    "negative_actions": [
-      "irrelevant",
-      "not_llm"
-    ],
-    "half_life_days": 120,
-    "minimum_effective_samples": 4,
-    "full_confidence_samples": 12,
-    "secondary_topic_credit": 0.5,
-    "prior_strength": 4,
-    "target_hit_rate": 0.5,
-    "learning_rate": 0.8,
-    "max_adjustment": 0.15,
-    "minimum_weight": 0.2,
-    "maximum_weight": 1.0
-  },
   "feedback_tuning_state": {
     "enabled": true,
-    "generated_at": "2026-09-01T14:52:59.157232+00:00",
-    "feedback_records": 17,
-    "latest_feedback_papers": 15,
-    "labeled_papers": 12,
-    "adjusted_topics": 1,
+    "generated_at": "2026-09-01T20:10:56.291521+00:00",
+    "feedback_records": 0,
+    "latest_feedback_papers": 0,
+    "labeled_papers": 0,
+    "adjusted_topics": 0,
     "minimum_effective_samples": 4.0,
     "topics": [
       {
         "id": "efficient_adversarial_training",
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.84,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.413,
-        "confidence": 0.0702,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 1.0,
         "effective_weight": 1.0,
         "adjustment": 0.0,
@@ -525,13 +594,13 @@
       },
       {
         "id": "llm_data_selection",
-        "useful": 0.5,
+        "useful": 0.0,
         "irrelevant": 0.0,
-        "samples": 0.5,
-        "effective_samples": 0.44,
-        "hit_rate": 1.0,
-        "smoothed_hit_rate": 0.5497,
-        "confidence": 0.0368,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.8,
         "effective_weight": 0.8,
         "adjustment": 0.0,
@@ -540,12 +609,12 @@
       {
         "id": "on_policy_distillation",
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.85,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.4127,
-        "confidence": 0.0705,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.7,
         "effective_weight": 0.7,
         "adjustment": 0.0,
@@ -553,27 +622,27 @@
       },
       {
         "id": "trustworthy_llm",
-        "useful": 3.0,
-        "irrelevant": 6.5,
-        "samples": 9.5,
-        "effective_samples": 8.38,
-        "hit_rate": 0.3158,
-        "smoothed_hit_rate": 0.3756,
-        "confidence": 0.6981,
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.7,
-        "effective_weight": 0.6305,
-        "adjustment": -0.0695,
-        "active": true
+        "effective_weight": 0.7,
+        "adjustment": 0.0,
+        "active": false
       },
       {
         "id": "llm_statistical_theory",
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.88,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.4096,
-        "confidence": 0.0736,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.6,
         "effective_weight": 0.6,
         "adjustment": 0.0,

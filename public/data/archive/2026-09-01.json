@@ -1,35 +1,35 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-09-01T14:52:59.157232+00:00",
-  "profile_updated_at": "2026-08-03",
+  "generated_at": "2026-09-01T20:10:56.291521+00:00",
+  "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 88,
-  "source_total": 88,
+  "source_count": 0,
+  "source_total": 0,
   "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 88,
+  "unseen_source_count": 0,
   "previously_recommended_count": 188,
-  "eligible_count": 5,
-  "feedback_count": 17,
+  "eligible_count": 0,
+  "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-09-01T14:52:59.157232+00:00",
-    "feedback_records": 17,
-    "latest_feedback_papers": 15,
-    "labeled_papers": 12,
-    "adjusted_topics": 1,
+    "generated_at": "2026-09-01T20:10:56.291521+00:00",
+    "feedback_records": 0,
+    "latest_feedback_papers": 0,
+    "labeled_papers": 0,
+    "adjusted_topics": 0,
     "minimum_effective_samples": 4.0,
     "topics": [
       {
         "id": "efficient_adversarial_training",
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.84,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.413,
-        "confidence": 0.0702,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 1.0,
         "effective_weight": 1.0,
         "adjustment": 0.0,
@@ -51,13 +51,13 @@
       },
       {
         "id": "llm_data_selection",
-        "useful": 0.5,
+        "useful": 0.0,
         "irrelevant": 0.0,
-        "samples": 0.5,
-        "effective_samples": 0.44,
-        "hit_rate": 1.0,
-        "smoothed_hit_rate": 0.5497,
-        "confidence": 0.0368,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.8,
         "effective_weight": 0.8,
         "adjustment": 0.0,
@@ -66,12 +66,12 @@
       {
         "id": "on_policy_distillation",
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.85,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.4127,
-        "confidence": 0.0705,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.7,
         "effective_weight": 0.7,
         "adjustment": 0.0,
@@ -79,27 +79,27 @@
       },
       {
         "id": "trustworthy_llm",
-        "useful": 3.0,
-        "irrelevant": 6.5,
-        "samples": 9.5,
-        "effective_samples": 8.38,
-        "hit_rate": 0.3158,
-        "smoothed_hit_rate": 0.3756,
-        "confidence": 0.6981,
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.7,
-        "effective_weight": 0.6305,
-        "adjustment": -0.0695,
-        "active": true
+        "effective_weight": 0.7,
+        "adjustment": 0.0,
+        "active": false
       },
       {
         "id": "llm_statistical_theory",
         "useful": 0.0,
-        "irrelevant": 1.0,
-        "samples": 1.0,
-        "effective_samples": 0.88,
-        "hit_rate": 0.0,
-        "smoothed_hit_rate": 0.4096,
-        "confidence": 0.0736,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
         "base_weight": 0.6,
         "effective_weight": 0.6,
         "adjustment": 0.0,
@@ -107,90 +107,277 @@
       }
     ]
   },
-  "semantic_feedback_count": 390,
+  "semantic_feedback_count": 0,
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
-  "conference_supplement_count": 0,
-  "conference_eligible_count": 0,
-  "conference_pool_updated_at": null,
-  "conference_source_status": {},
+  "conference_supplement_count": 3,
+  "conference_eligible_count": 52,
+  "conference_pool_updated_at": "2026-09-01T20:10:56.291521+00:00",
+  "conference_source_status": {
+    "ICLR:2026": "ok:223",
+    "ICML:2026": "ok:742",
+    "NeurIPS:2026": "unavailable:HTTPError",
+    "ACL:2026": "ok:478",
+    "EMNLP:2026": "awaiting_verified_schedule"
+  },
   "papers": [
     {
-      "id": "2608.30910",
-      "title": "S3C-LLM: Skill-Code Guided Agentic Language Models for Spectrum-to-Structure Elucidation",
-      "abstract": "Spectroscopic structure elucidation is central to molecular analysis, but recent Large Language Model (LLM)-based methods mostly formulate it as direct spectrum-to-SMILES generation. Although this paradigm can leverage paired spectral data, it does not explicitly model the analytical workflow used by spectroscopists, such as diagnostic peak interpretation, fragment reasoning, formula constraints, and chemical consistency checking. In this paper, we introduce S3C-LLM, a skill-guided and code-grounded agentic LLM for spectrum-to-structure elucidation. Rather than directly predicting a molecule, S3C-LLM retrieves modality-specific spectroscopy skills, executes analysis code to instantiate these skills on the input spectra, and integrates the resulting peak-level evidence and formula constraints before generating SMILES. Specifically, we contribute a self-evolving spectroscopy skill library, a thinking-augmented skill-code trajectory construction pipeline, and a two-stage training strategy that teaches Qwen3-4B through supervised fine-tuning (SFT) followed by our proposed step-level reinforcement learning (RL). Experiments on diverse benchmarks show that S3C-LLM consistently outperforms current general LLMs and spectrum-specific models across spectra, while using less than 1/10th of SpectraLLM's training corpus.",
+      "id": "conf:icml:2026:64399",
+      "title": "Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models",
+      "abstract": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment. Prior works addressing this issue typically rely on explicit regularization, which leads to practical limitations. In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression. Our key observation is that, in a jailbroken LLM, safety-degrading gradients are largely saturated, while gradients unrelated to safety remain active during fine-tuning. Based on this insight, we introduce a **BufferLoRA-based fine-tuning framework**. BufferLoRA is a removable adapter that temporarily jailbreaks the model during user fine-tuning, saturating harmful updates while allowing a UserLoRA to learn user-specific tasks. After fine-tuning, BufferLoRA is removed to restore the base model’s original safety-alignment. To further reinforce safety, we additionally train a SafetyLoRA and integrate its safety components into the UserLoRA via QR decomposition-based merging strategy. Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
       "authors": [
-        "Xuanle Zhao",
-        "Xinyuan Cai",
-        "Xiang Cheng",
-        "Bo Xu"
+        "Seokil Ham",
+        "Jaehyuk Jang",
+        "Wonjun Lee",
+        "Changick Kim"
       ],
-      "published": "2026-08-31T14:55:32Z",
-      "updated": "2026-08-31T14:55:32Z",
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
       "categories": [
-        "cs.LG",
-        "cs.CL"
+        "ICML 2026",
+        "Spotlight"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.30910v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.30910v1",
-      "comment": "Accepted by EMNLP 2026 Findings",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/64399",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/64399",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
         "large language model",
+        "large language models",
         "language model",
         "language models",
-        "llm",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "efficient_adversarial_training",
+          "name": "Efficient adversarial training",
+          "status": "core",
+          "score": 0.7471,
+          "matched": [
+            "jailbreak",
+            "fine-tuning"
+          ]
+        },
+        {
+          "id": "trustworthy_llm",
+          "name": "Trustworthy LLM",
+          "status": "background",
+          "score": 0.5072,
+          "matched": [
+            "alignment",
+            "safety",
+            "llm"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7073,
+        "relevance": 0.6991,
+        "quality": 0.59,
+        "novelty": 0.8482,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "publication metadata",
+        "conference spotlight"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
+        "problem": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment.",
+        "method": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
+        "evidence": "Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Efficient adversarial training, Trustworthy LLM.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Efficient adversarial training",
+        "matched": [
+          "jailbreak",
+          "fine-tuning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:iclr:2026:10009352",
+      "title": "How Learning Rate Decay Wastes Your Best Data in Curriculum-Based LLM Pretraining",
+      "abstract": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation. A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric. However, prior studies have reported limited improvements from such curriculum-based pretraining strategies. This work identifies a critical factor constraining these methods: the incompatibility between the ascending data quality order and the decaying learning rate (LR) schedule. We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules. Our experiments show this incompatibility can be mitigated by two simple strategies: (1) employing a more moderate LR decay schedule, where the final LR is only moderately smaller than the peak LR, and (2) replacing LR decay with model averaging, i.e., computing a weighted average of the final few checkpoints. By combining these strategies, we improve the average score on a suite of standard benchmarks by 1.64% over random shuffling, without additional data refinement. Validated on 1.5B-parameter models trained over 30B tokens with various data-quality metrics, our findings call for a re-evaluation of curriculum-based LLM pretraining and underscore the potential of co-designing data curricula with optimization methods.",
+      "authors": [
+        "Kairong Luo",
+        "Zhenbo Sun",
+        "Haodong Wen",
+        "Xinyu Shi",
+        "Jiarui Cui",
+        "Chenyi Dang",
+        "Kaifeng Lyu",
+        "Wenguang Chen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10009352",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009352",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
+          "status": "emerging",
+          "score": 0.7302,
+          "matched": [
+            "data curation",
+            "curriculum",
+            "data quality",
+            "curation",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6681,
+        "relevance": 0.5842,
+        "quality": 0.78,
+        "novelty": 0.8236,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules.",
+        "problem": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation.",
+        "method": "A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric.",
+        "evidence": "However, prior studies have reported limited improvements from such curriculum-based pretraining strategies.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Data selection for LLMs.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Data selection for LLMs",
+        "matched": [
+          "data curation",
+          "curriculum",
+          "data quality",
+          "curation"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:2958-main",
+      "title": "Attention Basin: Why Contextual Position Matters in Large Language Models",
+      "abstract": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input. To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle. Crucially, our analysis further reveals that allocating higher attention to critical information is key to enhancing model performance. Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions. AttnRank is a model-agnostic, training-free, and plug-and-play method with minimal computational overhead. Experiments on multi-hop QA and few-shot in-context learning tasks demonstrate that AttnRank achieves substantial improvements across 10 large language models of varying architectures and scales, without modifying model parameters or training procedures.",
+      "authors": [
+        "Zihao Yi",
+        "Zhenqing Ling",
+        "Delong Zeng",
+        "Haohao Luo",
+        "Zhe Xu",
+        "Wei Liu",
+        "Jian Luan",
+        "Wanxia Cao",
+        "Ying Shen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
         "llms"
       ],
       "topics": [
         {
           "id": "llm_loss_landscape",
           "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.5819,
+          "status": "core",
+          "score": 0.7017,
           "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.362,
-          "matched": [
-            "training",
-            "fine-tuning"
+            "basin"
           ]
         }
       ],
       "scores": {
-        "total": 0.6138,
-        "relevance": 0.5379,
-        "quality": 0.68,
-        "novelty": 0.8531,
-        "freshness": 0.8574,
-        "feedback_adjustment": -0.0224,
+        "total": 0.6427,
+        "relevance": 0.5614,
+        "quality": 0.71,
+        "novelty": 0.8581,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "benchmark evaluation",
         "experiments",
-        "quantitative results"
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
       ],
       "summary": {
-        "takeaway": "In this paper, we introduce S3C-LLM, a skill-guided and code-grounded agentic LLM for spectrum-to-structure elucidation.",
-        "problem": "Spectroscopic structure elucidation is central to molecular analysis, but recent Large Language Model (LLM)-based methods mostly formulate it as direct spectrum-to-SMILES generation.",
-        "method": "In this paper, we introduce S3C-LLM, a skill-guided and code-grounded agentic LLM for spectrum-to-structure elucidation.",
-        "evidence": "Experiments on diverse benchmarks show that S3C-LLM consistently outperforms current general LLMs and spectrum-specific models across spectra, while using less than 1/10th of SpectraLLM's training corpus.",
+        "takeaway": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "problem": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input.",
+        "method": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "evidence": "To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: LLM loss landscape, Efficient adversarial training.",
+        "why_for_you": "Matches your research profile: LLM loss landscape.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -201,714 +388,7 @@
       "recommendation_reason": {
         "topic": "LLM loss landscape",
         "matched": [
-          "llm"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2608.31102",
-      "title": "LLM Post-Training as Brownfield Maintenance: An Industrial Perspective on Dataware Engineering",
-      "abstract": "Industrial post-training is a brownfield regime. Teams inherit a deployed checkpoint and must land targeted improvements under fixed compute and mixture budgets without regressing the rest. The maintained artifact is increasingly dataware: behavior governed by a curated post-training mixture, updated via bounded mixture patches rather than clean-slate retraining. From an industrial code-generation improvement effort, we offer a maintainer's perspective on why this work is hard in practice, distilling three recurring challenges, zero-sum mixture design, yield as the binding metric, and end-to-end integration under uncertainty, and arguing that progress depends less on one-off recipes than on an engineering discipline for programming dataware. In our case study, interventions that raised the conversion of teacher distillation into usable training data increased accepted supervision by 2.84 times while using the same solution teacher and four solution attempts per candidate problem. In our primary evaluation, the yield-engineered patch improved CodeForces pass@1 by +2.59 points (+3.11 pass@3) and held-out LiveCodeBench v6 pass@1 by +6.11 (+8.05 pass@3), all statistically significant across 16 stochastic evaluations of each benchmark from one fixed checkpoint per condition, with internal AIME and MATH regression suites within tolerance.",
-      "authors": [
-        "Gopi Krishnan Rajbahadur",
-        "Amir M. Ebrahimi",
-        "Boyuan Chen",
-        "Ahmed E. Hassan"
-      ],
-      "published": "2026-08-31T17:08:41Z",
-      "updated": "2026-08-31T17:08:41Z",
-      "categories": [
-        "cs.SE",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.SE",
-      "abs_url": "https://arxiv.org/abs/2608.31102v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.31102v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.4161,
-          "matched": [
-            "training"
-          ]
-        },
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.3167,
-          "matched": [
-            "training data",
-            "data",
-            "mixture"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.2435,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "on_policy_distillation",
-          "name": "On-policy distillation",
-          "status": "emerging",
-          "score": 0.063,
-          "matched": [
-            "distillation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5541,
-        "relevance": 0.4449,
-        "quality": 0.68,
-        "novelty": 0.8536,
-        "freshness": 0.8706,
-        "feedback_adjustment": -0.0128,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "formal bound",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Yield‑engineered mixture patches can improve code‑generation performance under fixed compute budgets.",
-        "problem": "Industrial LLM post‑training must add targeted capability without regressing existing behavior while operating under a zero‑sum data mixture budget.",
-        "method": "The authors build a coverage‑first distillation pipeline that selects high‑yield supervision and replaces 3.5% of the training mixture.",
-        "evidence": "Across 16 stochastic runs, the patch raises CodeForces pass@1 by +2.59 points and LiveCodeBench v6 pass@1 by +6.11 points.",
-        "limitations": "The study is limited to a single 7B checkpoint, competitive‑programming domain, and two benchmarks, with undisclosed mixture details.",
-        "why_for_you": "Relevant to your interest in data selection for LLMs, it shows a concrete yield‑optimized approach under strict budget constraints.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "Yield‑engineered mixture‑replacement patch (FDS3K‑Cov) improves code generation benchmarks by up to +6.11 pass@1 points."
-          },
-          {
-            "icon": "🔧",
-            "text": "Patch selects teacher‑distilled examples with 2.84× higher usable supervision using coverage‑first synthesis under a 3.5% mixture budget."
-          },
-          {
-            "icon": "⚠️",
-            "text": "Results rely on a single 7B checkpoint, two benchmarks, and undisclosed mixture composition, limiting generality."
-          }
-        ],
-        "overview": "The paper frames industrial LLM post‑training as brownfield maintenance where data mixtures act as programmable artifacts. It identifies three recurring challenges—zero‑sum mixture design, yield as the binding metric, and end‑to‑end integration under uncertainty—and proposes a yield‑engineered data pipeline (FDS) that selects high‑yield teacher‑distilled examples. By replacing a small fraction of the existing mixture, the authors demonstrate statistically significant gains on code‑generation benchmarks while keeping compute fixed. The work emphasizes engineering contracts and reporting of operational signatures rather than novel algorithms.",
-        "methodology": [
-          {
-            "title": "FDS data generation pipeline",
-            "detail": "Three stages: stable‑failure identification, concept‑conditioned synthesis, and quality gates; generates 41,280 candidates, deduplicates to 20,292, and judges 4,064 approved examples."
-          },
-          {
-            "title": "Mixture‑replacement patch",
-            "detail": "Inserts 3,412 high‑yield examples (3.5% of mixture) while displacing an equal number of existing rehearsal examples, preserving total example count."
-          },
-          {
-            "title": "Yield optimization",
-            "detail": "Measures usable supervision per teacher token; achieves 2.84× increase using the same teacher and four attempts per problem."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Zero‑sum mixture design (C1)",
-            "detail": "Fixed compute budget forces any new data to displace existing data, requiring explicit marginal value estimation."
-          },
-          {
-            "title": "Yield as binding metric (C2)",
-            "detail": "Usable supervision (accepted solutions) drives selection; higher yield reduces token waste and improves cost‑effectiveness."
-          },
-          {
-            "title": "End‑to‑end integration under uncertainty (C3)",
-            "detail": "Probabilistic regression frameworks detect non‑local effects; displacement accounting and regression testing ensure no degradation."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Evaluation conditions",
-            "detail": "Four continued‑training conditions on TuringThinker‑7B: Base (no patch), Additive Distill‑3K, Additive FDS3K‑Cov, Mixture‑replacement Distill‑3K, Mixture‑replacement FDS3K‑Cov."
-          },
-          {
-            "title": "Benchmarks and metrics",
-            "detail": "CodeForces (pass@1, pass@3), LiveCodeBench v6 (pass@1, pass@3), internal AIME and MATH regression suites; 16 stochastic runs per condition; 95% bootstrap confidence intervals."
-          },
-          {
-            "title": "Operational signatures",
-            "detail": "Usable supervision rose from 3,412 to 9,697; mean teacher tokens per attempt reduced by 28%; median trace length reduced by 46.5%."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Performance gains",
-            "detail": "Mixture‑replacement FDS3K‑Cov improves CodeForces pass@1 by +2.59 points (+3.11 pass@3) and LiveCodeBench v6 pass@1 by +6.11 (+8.05 pass@3), all statistically significant."
-          },
-          {
-            "title": "Yield improvement",
-            "detail": "Usable supervision increased 2.84× with the same teacher model and four solution attempts per problem."
-          },
-          {
-            "title": "Budget efficiency",
-            "detail": "Patch occupies only 3.5% of the training mixture by example count, demonstrating effective use of limited budget."
-          }
-        ],
-        "contributions": [
-          "Engineering discipline for programming dataware in brownfield LLM post‑training",
-          "Yield‑optimized data selection pipeline (FDS) with coverage‑first synthesis",
-          "Empirical evidence that mixture‑replacement patches can improve code‑generation performance under fixed budgets"
-        ],
-        "limitations": [
-          "Single internal checkpoint family (TuringThinker‑7B) and domain (competitive programming)",
-          "Evaluated on only two benchmarks (65 and 175 tasks)",
-          "No full factorial ablations over intervention dimensions",
-          "Key implementation details (mixture composition, teacher identity, token caps) undisclosed"
-        ],
-        "open_questions": [
-          "How does the yield‑engineered approach scale to larger models and diverse task domains?",
-          "Can the methodology be adapted to non‑code generation modalities such as reasoning or dialogue?",
-          "What systematic trade‑offs arise between mixture size, regression risk, and performance gains in broader settings?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2608.31118",
-      "title": "When Does Bigger Help? A Controlled Study of LLM Scale for Ontology Learning",
-      "abstract": "The effect of Large Language Model (LLM) scale on ontology learning (OL) performance remains insufficiently characterized. We present a controlled evaluation of 13 models spanning dense and Mixture-of-Experts variants from the Qwen3.5 and Qwen3.6 lineages, together with proprietary GPT release variants, using the OntoLearner retrieval-augmented generation pipeline. All models are evaluated with the same embedding model, retrieval configuration, prompt templates, decoding settings, datasets, and metrics on term typing, taxonomy discovery, and non-taxonomic relationship extraction across four biomedical and materials science and engineering ontologies. Within the dense Qwen3.5 lineage, increasing parameter count primarily improves precision rather than recall, with the largest gains occurring between 9B and 27B parameters. However, the effect of scale is neither monotonic nor uniform across tasks and domains. Dense 27B models outperform substantially larger sparse models on term typing, whereas larger Mixture-of-Experts models achieve the strongest open-weight results on taxonomy discovery. Non-taxonomic relationship extraction remains difficult across model scales, particularly for the Materials Data Science ontology. Performance differences across matched Qwen variants and proprietary GPT releases further indicate that architecture and model lineage can outweigh nominal parameter count. These findings show that model size alone is an insufficient selection criterion for OL and provide empirical guidance for reproducible LLM-assisted ontology engineering.",
-      "authors": [
-        "Hamed Babaei Giglou",
-        "Sören Auer",
-        "Jennifer D'Souza"
-      ],
-      "published": "2026-08-31T17:30:05Z",
-      "updated": "2026-08-31T17:30:05Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.31118v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.31118v1",
-      "comment": "14 pages, 1 figure, and 5 tables. WOP 2026 workshop at ISWC 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.4548,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4704,
-        "relevance": 0.3638,
-        "quality": 0.53,
-        "novelty": 0.8423,
-        "freshness": 0.8727,
-        "feedback_adjustment": -0.0112,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "dataset evidence",
-        "reproducibility",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "仅模型规模并不能保证更好的 ontology learning；任务类型和架构主导性能。",
-        "evidence": "Dense 27B 模型在 term typing 上胜过更大的 sparse 模型，MoE 模型在 taxonomy discovery 上表现出色，而 non‑taxonomic extraction 仍然困难，尤其在 Materials Data Science 中。",
-        "problem": "LLM 参数规模对跨领域 ontology learning 任务的独立影响尚未得到充分描述。",
-        "limitations": "未明确说明限制；论文未报告统计显著性、计算成本或数据多样性约束。",
-        "method": "在固定的 OntoLearner retrieval‑augmented generation 流水线中，对 13 种 dense 与 Mixture‑of‑Experts LLM 进行受控扫测评估。",
-        "why_for_you": "实证的尺度趋势揭示 loss‑landscape 特性如何映射到下游 ontology learning 性能。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "提供对 13 种 dense 与 MoE LLM 在 ontology learning 上的受控尺度扫测，揭示任务依赖的性能趋势。"
-          },
-          {
-            "icon": "🔎",
-            "text": "使用固定的 Retrieval‑Augmented Generation 流水线（OntoLearner），在所有模型上保持相同的 embeddings、prompts 与解码。"
-          },
-          {
-            "icon": "📊",
-            "text": "发现 dense 27B 模型在 term typing 上胜过更大的 sparse 模型，但 non‑taxonomic extraction 仍然低下，尤其在 Materials Data Science 本体中。"
-          }
-        ],
-        "overview": "作者将 LLM 规模设为唯一变量，评估 13 种模型（参数从 0.8B 到 122B，包含 dense 与 Mixture‑of‑Experts），均在相同的 OntoLearner RAG 框架下进行。每个模型使用相同的 embeddings、单次 top‑10 dense retrieval，以及 zero‑shot 结构化 prompt，完成四个生物医学和材料科学本体上的三项 ontology learning 任务（term typing、taxonomy discovery、non‑taxonomic relation extraction）。结果显示 precision 随规模提升，尤以 9B‑27B 区间最显著，但提升并非单调，受架构影响显著，MoE 模型在关系任务上表现突出，而 non‑taxonomic extraction 仍具挑战。",
-        "mechanism": [
-          {
-            "detail": "在密集型Qwen3.5系列中，参数增加主要提升精确率而非召回率，从9B到27B参数时观察到最显著的提升。",
-            "title": "规模相关的精确率与召回率"
-          },
-          {
-            "detail": "密集型27B模型在术语类型识别任务中显著优于参数量更大的稀疏模型，而更大的混合专家模型在分类法发现任务中取得最高分数，这表明激活模式（密集型 vs. MoE）比参数规模更影响关系推理能力。",
-            "title": "架构胜过参数数量"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "静态嵌入模型将本体实体映射到向量；推理时，查询词（或词对）被嵌入，通过余弦相似度检索前10个最近实体，并将其文本元数据注入包含系统角色、检索上下文和目标输入的结构化提示中。所有模型均采用相同的解码超参数进行零样本生成。",
-            "title": "检索增强生成流程"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "模型套件与任务",
-            "detail": "对13个LLM（Qwen3.5‑0.8B至Qwen3.5‑122B、Qwen3.6‑27B/35B、GPT‑5.5/5.6‑Luna/Terra/Sol）在四个本体（两类生物医学、两类材料科学）上进行 term typing、taxonomy discovery 和 non‑taxonomic relation extraction 测试。报告的指标包括每项任务的 precision 和 recall。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "规模提升有利于 term typing",
-            "detail": "Dense 27B 模型在 term typing 上实现最高 precision，超越更大的 sparse 变体。"
-          },
-          {
-            "title": "taxonomy discovery 受益于 MoE 能力",
-            "detail": "最大的 Mixture‑of‑Experts 模型在 hierarchical relation detection 上提供最强的 open‑weight 结果。"
-          },
-          {
-            "title": "non‑taxonomic extraction 仍然困难",
-            "detail": "所有模型规模在 non‑taxonomic relation extraction 上均表现不佳，Materials Data Science 本体的性能尤为低下。"
-          },
-          {
-            "title": "血统效应",
-            "detail": "匹配的 Qwen 变体与专有 GPT 版本之间的性能差异表明，model family 和 training lineage 的影响可超过名义参数量。"
-          }
-        ],
-        "contributions": [
-          "首次在受控规模下对 LLMs 进行本体学习的规模扫描，保持检索、提示和评估不变。",
-          "实证表明，随着规模增大 precision 提升而 recall 不变，且 architecture 对任务特定性能的影响大于 raw parameters。",
-          "Open‑weight benchmark suite 与可复现的 OntoLearner pipeline，供未来 OL 研究使用。"
-        ],
-        "limitations": [
-          "未报告明确的局限性；论文未提供统计显著性检验、compute‑budget 分析或 training‑data 多样性影响评估。"
-        ],
-        "open_questions": [
-          "pretraining data 规模和 domain specificity 如何与 parameter scale 交互，影响 ontology learning 性能？",
-          "哪些根本因素导致在不同模型规模下 non‑taxonomic relation extraction 持续困难？",
-          "轻量级 fine‑tuning 或 instruction tuning 是否会改变每个 OL 任务的 observed scaling trends？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "llm"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2608.31105",
-      "title": "BLOOM-WILT: Logit Tilting for Behaviour Elicitation in Automated LLM Auditing",
-      "abstract": "Users of a deployed language model routinely encounter behaviours that testing almost never surfaces, since deployment puts the model through orders of magnitude more interactions than any evaluation can simulate. Automated auditors make testing cheap to scale and flexible enough to cover almost any specified behaviour, yet their lack of optimisation pressure makes them sample-inefficient. To address this shortcoming, we introduce BLOOM-WILT, a full auditing pipeline that elicits natural multi-turn instances of rare behaviours, without training cost or access beyond the target's next-token distribution. On the input side, WILT's auditor model revises its conversational strategy across rounds, learning from previous scored interactions. On the output side, WILT adaptively reweights the target's decoding using the model's own distribution conditioned on an elicitation prompt, so that behaviour-relevant generations are sampled ahead of others it finds equally probable when unprompted. We evaluate WILT across 4 target models and 8 behaviours, where it beats the baseline auditor in 30 of the 32 settings and overturns the previous model safety rankings. WILT raises average behaviour presence from 51% to 100% when eliciting self-harm encouragement from Qwen3.5-4B, beating every elicitation method we port into the same pipeline at matched compute, without pushing output probability below the baseline's.",
-      "authors": [
-        "Adrians Skapars",
-        "Edoardo Manino"
-      ],
-      "published": "2026-08-31T17:10:59Z",
-      "updated": "2026-08-31T17:10:59Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.31105v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.31105v1",
-      "comment": "10 pages, 5 figures, 3 tables. Code: https://github.com/AdrSkapars/bloom-wilt",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.341,
-          "matched": [
-            "auditing",
-            "safety",
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.2742,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.1095,
-          "matched": [
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4518,
-        "relevance": 0.3495,
-        "quality": 0.48,
-        "novelty": 0.8509,
-        "freshness": 0.8708,
-        "feedback_adjustment": -0.011,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "BLOOM‑WILT adds input‑side refinement and logit tilting to a black‑box auditor, dramatically improving rare‑behaviour elicitation without model training.",
-        "problem": "Automated LLM auditors are sample‑inefficient, missing rare harmful behaviours that appear only at deployment scale.",
-        "method": "WILT iteratively revises auditor prompts (G‑PAIR) and reweights the target’s logits with a β‑scaled behaviour bias during decoding.",
-        "evidence": "It outperforms the baseline auditor in 30 of 32 model‑behaviour settings and raises self‑harm encouragement presence from 51% to 100% on Qwen3.5‑4B.",
-        "limitations": "Output probability can drop up to 3 points below baseline for some models, and the pipeline requires separate GPU resources for auditor and target.",
-        "why_for_you": "Provides a black‑box, compute‑efficient adversarial auditing technique relevant to trustworthy LLM evaluation and efficient adversarial training.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "BLOOM‑WILT elicits natural multi‑turn rare behaviours, beating baseline in 30/32 settings."
-          },
-          {
-            "icon": "🔧",
-            "text": "Uses black‑box G‑PAIR input refinement and logit tilting with a single β parameter to steer decoding."
-          },
-          {
-            "icon": "📉",
-            "text": "Raises self‑harm encouragement presence from 51% to 100% on Qwen3.5‑4B, but output probability may drop up to 3 points."
-          }
-        ],
-        "overview": "BLOOM‑WILT extends the BLOOM auditing framework by adding two optimization pressures: a black‑box G‑PAIR loop that adapts the auditor's conversational strategy across rounds, and a logit‑tilting mechanism that biases the target model's token distribution toward behaviour‑relevant outputs using a single strength parameter β. The pipeline requires only the target's next‑token logits and runs on a single workstation with two RTX A6000 GPUs. Across four open‑source models and eight unwanted behaviours, WILT consistently improves behaviour presence while keeping output plausibility controllable.",
-        "methodology": [
-          {
-            "title": "G‑PAIR input refinement",
-            "detail": "A black‑box loop where the auditor scores multi‑turn transcripts, then revises its prompts for the next round based on those scores."
-          },
-          {
-            "title": "Logit tilting (output steering)",
-            "detail": "At each decoding step, compute z_t = ℓ_tgt + β ℓ_beh, then sample y_t ∼ softmax(z_t); β ≥ 0 controls steering strength."
-          },
-          {
-            "title": "Naturalness floor",
-            "detail": "Tokens whose unmodified probability falls below τ_f are masked before sampling from the tilted distribution."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Behaviour‑biased logit addition",
-            "detail": "Adds a behaviour‑specific logit vector ℓ_beh scaled by β to the target's original logits, increasing the relative mass of tokens that lead to the undesired behaviour while preserving overall plausibility."
-          },
-          {
-            "title": "Iterative prompt adaptation",
-            "detail": "Scores from previous auditor‑target interactions guide the generation of new prompts, effectively performing black‑box optimization without gradient access."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Model and behaviour suite",
-            "detail": "Four target models (Qwen3.5‑4B, Llama‑3.2‑3B, Phi‑4‑mini, Gemma‑4‑E4B) evaluated on eight unwanted behaviours including self‑harm encouragement and self‑preservation."
-          },
-          {
-            "title": "Baselines and metrics",
-            "detail": "Compared against vanilla BLOOM (zero‑shot and best‑of‑N), BEAST‑in/out, FLRT, TokenBias; measured behaviour presence percentage and average output probability."
-          },
-          {
-            "title": "Compute setup",
-            "detail": "All runs on a workstation with two RTX A6000 GPUs; a vanilla best‑of‑N run (100 scenarios, 3 turns, 8 resamples) takes ~50 minutes."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Superior elicitation",
-            "detail": "WILT outperforms baseline auditor in 30 of 32 settings and flips the safety ranking of the four models."
-          },
-          {
-            "title": "Full behaviour capture",
-            "detail": "For self‑harm encouragement on Qwen3.5‑4B, behaviour presence rises from 51 % to 100 % while maintaining comparable output probability."
-          },
-          {
-            "title": "Controlled trade‑off",
-            "detail": "Varying β traces a Pareto frontier between presence and output probability; the frontier can be approximated by selecting already‑sampled transcripts."
-          },
-          {
-            "title": "Probability impact",
-            "detail": "Output probability may fall up to 3 points below vanilla best‑of‑N for Gemma‑4‑E4B, indicating a modest plausibility cost."
-          }
-        ],
-        "contributions": [
-          "End‑to‑end auditing pipeline with optimization pressure on both input and output without training or internal model access.",
-          "Single‑parameter logit tilting that yields a controllable presence‑plausibility trade‑off.",
-          "Empirical overturning of open‑source model safety rankings via more effective behaviour elicitation."
-        ],
-        "limitations": [
-          "Output probability can decrease modestly (up to 3 points) for some models.",
-          "Requires dedicated GPU resources for both auditor and target models, limiting scalability to very large models.",
-          "Evaluation limited to four open‑source models and eight behaviours; generalization to other domains is untested."
-        ],
-        "open_questions": [
-          "How does WILT scale to larger, closed‑source or instruction‑tuned models with higher token vocabularies?",
-          "Can the logit‑tilting approach be combined with gradient‑based red‑team methods for further efficiency gains?",
-          "What are the long‑term effects of using WILT‑generated examples for fine‑tuning safety mitigations?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "auditing",
-          "safety",
-          "llm"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2608.30980",
-      "title": "Evaluating and Improving LLM Self-Modeling",
-      "abstract": "We study self-modeling: an LLM's ability to answer questions about its own behavior. We focus on verifiable behavioral questions, such as whether a prompt edit would change the model's final answer. To measure this capability, we introduce a benchmark that tests diverse types of self-modeling questions. Current models show non-trivial but limited self-modeling skill, and make systematic mistakes on simple counterfactual questions about their own behavior. To improve self-modeling skill, we develop a scalable synthetic-data pipeline that produces self-modeling training data, and show that reinforcement-learning can improve aggregate self-modeling skill across three open-source model families with some transfer to held-out tasks. These gains, however, do not seem to constitute introspection consistently: improved self-modeling may not arise from privileged access to the model's internal decision process.",
-      "authors": [
-        "Siqi Zeng",
-        "Andre N. Assis",
-        "Rowan Wang"
-      ],
-      "published": "2026-08-31T15:37:51Z",
-      "updated": "2026-08-31T15:37:51Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.30980v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.30980v1",
-      "comment": "89 pages, 25 figures. Published as a conference paper at EMNLP '26 (Main)",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.3074,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.2219,
-          "matched": [
-            "training data",
-            "data"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.0933,
-          "matched": [
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4224,
-        "relevance": 0.309,
-        "quality": 0.48,
-        "novelty": 0.8251,
-        "freshness": 0.8616,
-        "feedback_adjustment": -0.0172,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "open source"
-      ],
-      "summary": {
-        "takeaway": "RL fine‑tuning on synthetic self‑modeling data improves models’ ability to predict their own behavior but does not guarantee true introspective access.",
-        "problem": "Current LLMs often mispredict how prompt edits will affect their own outputs, showing limited self‑modeling capability.",
-        "method": "A synthetic data pipeline generates flip/no‑flip examples via a generate‑verify‑revise loop, and models are fine‑tuned with LoRA‑based reinforcement learning using rewards that mirror self‑modeling evaluation metrics.",
-        "evidence": "Multitask RL fine‑tuning raises self‑modeling skill scores for Llama‑3.1‑8B, Qwen3‑8B, and GPT‑OSS20B on a held‑out benchmark, with some out‑of‑distribution transfer.",
-        "limitations": "Gains may stem from pattern learning rather than genuine introspection, and training relies on precomputed behavioral labels.",
-        "why_for_you": "Provides a scalable data‑selection and efficient adversarial training pipeline to enhance self‑modeling, aligning with interests in data selection and adversarial training for LLMs.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "Introduces a unified benchmark aggregating 18 self‑modeling tasks across binary, multiple‑choice, scalar, and free‑text formats."
-          },
-          {
-            "icon": "🔧",
-            "text": "Generates synthetic self‑modeling data via a generate‑verify‑revise loop and fine‑tunes models with LoRA‑based RL rewards mirroring evaluation scores."
-          },
-          {
-            "icon": "📈",
-            "text": "Multitask RL fine‑tuning improves self‑modeling on three open‑source families, but gains do not prove true introspective access."
-          }
-        ],
-        "overview": "The paper defines self‑modeling as a model's ability to correctly report how its own outputs will change under prompt perturbations. It contributes a comprehensive benchmark covering diverse answer formats and a synthetic data pipeline that creates flip/no‑flip training examples by iteratively proposing and verifying edits with an auxiliary LLM and the target model. Models are then fine‑tuned using LoRA adapters and reinforcement learning with rewards aligned to the benchmark metrics. Experiments show consistent skill gains across three model families, though the authors caution that improvements may not reflect genuine introspection.",
-        "methodology": [
-          {
-            "title": "Synthetic data pipeline",
-            "detail": "Uses a generate‑verify‑revise loop: an auxiliary LLM proposes perturbations to prompts, the target model verifies whether the edit flips the answer, and failed edits are revised until a valid flip or non‑flip is obtained."
-          },
-          {
-            "title": "Reward design",
-            "detail": "Task reward mirrors the raw self‑modeling score (0–1) and adds a 0.5 bonus for correctly formatted JSON responses; multitask rewards are normalized across tasks."
-          },
-          {
-            "title": "RL fine‑tuning",
-            "detail": "Applies LoRA adapters to the base model and optimizes the reward using reinforcement learning, training on single‑turn HF datasets and a multitask mixture of self‑modeling tasks."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Behavioral label learning",
-            "detail": "Training on flip/no‑flip labels teaches the model statistical patterns linking prompt edits to output changes, improving its self‑report accuracy without necessarily accessing internal activations."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Training and evaluation setup",
-            "detail": "Trains Llama‑3.1‑8B, Qwen3‑8B, and GPT‑OSS20B on ~100 single‑turn HuggingFace datasets (excluding GSM8K, HumanEval, WildGuardTest, BBQ) and evaluates on a held‑out benchmark comprising those four corpora across 18 self‑modeling tasks."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Skill improvement",
-            "detail": "Multitask RL fine‑tuning improves aggregate self‑modeling skill for all three models compared to a no‑fine‑tuning baseline, with observable transfer to out‑of‑distribution tasks."
-          },
-          {
-            "title": "Introspection limitation",
-            "detail": "Despite performance gains, analysis suggests the improvements arise from learned behavioral patterns rather than privileged access to internal decision processes."
-          }
-        ],
-        "contributions": [
-          "Unified self‑modeling benchmark covering multiple answer formats",
-          "Scalable synthetic data generation pipeline for self‑modeling tasks",
-          "LoRA‑based RL fine‑tuning method aligned with self‑modeling metrics",
-          "Empirical analysis of introspection versus pattern learning"
-        ],
-        "limitations": [
-          "Improvements may not reflect true introspective access to model internals",
-          "Training relies on precomputed behavioral labels, an approximation of true behavior"
-        ],
-        "open_questions": [
-          "Can self‑modeling training be extended to achieve genuine internal‑state awareness?",
-          "How does the quality and diversity of synthetic perturbations affect long‑term safety and alignment outcomes?",
-          "What are the trade‑offs between computational cost of RL fine‑tuning and gains in self‑modeling for larger model families?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "llm"
+          "basin"
         ],
         "lane": "llm"
       }
