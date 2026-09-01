@@ -1,6 +1,6 @@
-Functional time series @ 1.0 :: functional time series, functional data analysis, dependent functional data
-Long-run covariance estimation @ 1.0 :: long-run covariance, long-run covariance operator, covariance estimation
-Bandwidth selection @ 1.0 :: bandwidth selection, lag window, plug-in bandwidth, adaptive bandwidth
-Time series inference @ 0.8 :: spectral density, HAC estimation, dependent data
-Trustworthy machine learning @ 0.7 :: trustworthy machine learning, reliable machine learning, model auditing, llm-as-a-judge
-Positive-unlabeled learning @ 0.8 :: positive-unlabeled learning, PU learning
+Functional time series @ 0.8 :: functional time series, functional data analysis, dependent functional data
+Long-run covariance estimation @ 0.6 :: long-run covariance, long-run covariance operator, covariance estimation
+Bandwidth selection @ 0.5 :: bandwidth selection, lag window, plug-in bandwidth, adaptive bandwidth
+Time series inference @ 0.6 :: spectral density, HAC estimation, dependent data
+Trustworthy machine learning @ 1.0 :: trustworthy machine learning, reliable machine learning, model auditing, llm-as-a-judge
+Positive-unlabeled learning @ 0.6 :: positive-unlabeled learning, PU learning
