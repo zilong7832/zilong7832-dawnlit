@@ -1,13 +1,6 @@
-# One research direction per line.
-# Add optional keywords after "::" and an optional weight from 0 to 1 after "@".
-# Saving this file on GitHub immediately rebuilds your feed.
-#
-# Example:
-# Mechanistic interpretability @ 0.8 :: sparse autoencoders, circuits, activation probing
-
-Efficient adversarial training @ 1.0 :: adversarial training, robust fine-tuning, jailbreak robustness
-LLM loss landscape @ 1.0 :: loss landscape, mode connectivity, basin, flatness, sharpness
-Data selection for LLMs @ 0.8 :: data selection, data valuation, data curation, data mixture
-On-policy distillation @ 0.7 :: on-policy distillation, self-distillation, OPD
-Trustworthy LLM @ 0.7 :: LLM safety, robustness, privacy, alignment
-Statistical theory for LLMs @ 0.6 :: generalization, scaling laws, optimization theory
+Functional time series @ 1.0 :: functional time series, functional data analysis, dependent functional data
+Long-run covariance estimation @ 1.0 :: long-run covariance, long-run covariance operator, covariance estimation
+Bandwidth selection @ 1.0 :: bandwidth selection, lag window, plug-in bandwidth, adaptive bandwidth
+Time series inference @ 0.8 :: spectral density, HAC estimation, dependent data
+Trustworthy machine learning @ 0.7 :: trustworthy machine learning, reliable machine learning, model auditing, llm-as-a-judge
+Positive-unlabeled learning @ 0.8 :: positive-unlabeled learning, PU learning
