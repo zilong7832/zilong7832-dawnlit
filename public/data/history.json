@@ -1,6 +1,350 @@
 {
-  "generated_at": "2026-09-01T20:11:58.306404+00:00",
+  "generated_at": "2026-09-01T20:23:21.967451+00:00",
   "papers": [
+    {
+      "id": "conf:acl:2026:470-main",
+      "title": "Writing-RL: Advancing Long-form Writing via Adaptive Curriculum Reinforcement Learning",
+      "abstract": "Recent advances in Large Language Models (LLMs) have enabled strong performance in long-form writing, but current training paradigms remain limited: Supervised Fine-Tuning (SFT) remains constrained by data saturation and performance ceilings, while Reinforcement Learning with Verifiable Reward (RLVR), though successful in verifiable domains like math and code, cannot be directly migrated to open-ended long-form writing due to a lack of ground-truths. To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT. The framework consists of three key components: Margin-aware Data Selection strategy that prioritizes samples with high learning potential, Pairwise Comparison Reward mechanism that provides discriminative learning signals in the absence of verifiable rewards, and Dynamic Reference Scheduling approach, which plays a critical role by adaptively adjusting task difficulty based on evolving model performance. Experiments on 7B-scale writer models show that Writing-RL effectively improves long-form writing performance over strong SFT baselines. Furthermore, we observe that models trained with long-output RL generalize surprisingly well to long-input reasoning tasks, potentially offering a promising perspective for rethinking long-context training.",
+      "authors": [
+        "Xuanyu Lei",
+        "Chenliang Li",
+        "Yuning Wu",
+        "Kaiming Liu",
+        "Weizhou Shen",
+        "Peng Li",
+        "Ming Yan",
+        "Fei Huang",
+        "Ya-Qin Zhang",
+        "Yang Liu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5741,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3445,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.2545,
+          "matched": [
+            "selection",
+            "adaptive"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.2077,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1557,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.677,
+        "relevance": 0.5791,
+        "quality": 0.84,
+        "novelty": 0.8255,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT.",
+        "problem": "Recent advances in Large Language Models (LLMs) have enabled strong performance in long-form writing, but current training paradigms remain limited: Supervised Fine-Tuning (SFT) remains constrained by data saturation and performance ceilings, while Reinforcement Learning with Verifiable Reward (RLVR), though successful in verifiable domains like math and code, cannot be directly migrated to open-ended long-form writing due to a lack of ground-truths.",
+        "method": "To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT.",
+        "evidence": "Experiments on 7B-scale writer models show that Writing-RL effectively improves long-form writing performance over strong SFT baselines.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:23:21.967451+00:00"
+    },
+    {
+      "id": "conf:acl:2026:350-main",
+      "title": "Deliberative Searcher: Improving LLM Reliability via Reinforcement Learning with Constraints",
+      "abstract": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty. We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration. Our method employs constrained reinforcement learning with adaptive Lagrangian multipliers to jointly optimize correctness and reliability. Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%. The well-calibrated confidence scores also enable more efficient test-time compute: instead of standard majority voting, we use confidence-weighted aggregation and match the performance of 16-sample majority voting with only 4 samples, a $4\\times$ reduction in inference compute. These results establish calibrated confidence as a foundation for both trustworthy outputs and adaptive test-time compute, demonstrating the value of the proposed constrained RL framework in search-augmented language models.",
+      "authors": [
+        "Zhenyun Yin",
+        "Shujie Wang",
+        "Xuhong Wang",
+        "Xingjun Ma",
+        "Yingchun Wang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5401,
+          "matched": [
+            "learning",
+            "trustworthy"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.2738,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2311,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.2186,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.1366,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6524,
+        "relevance": 0.5331,
+        "quality": 0.85,
+        "novelty": 0.859,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
+        "problem": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty.",
+        "method": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
+        "evidence": "Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "trustworthy"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:23:21.967451+00:00"
+    },
+    {
+      "id": "conf:iclr:2026:10010880",
+      "title": "WebDevJudge: Evaluating (M)LLMs as Critiques for Web Development Quality",
+      "abstract": "The paradigm of LLM-as-a-judge is emerging as a scalable and efficient alternative to human evaluation, demonstrating strong performance on well-defined tasks. However, its reliability in open-ended tasks with dynamic environments and complex interactions remains unexplored. To bridge the gap, we introduce WebDevJudge, a systematic benchmark for assessing LLM-as-a-judge performance in web development, with support for both non-interactive evaluation based on static observations and continuous interactive evaluation with a dynamic web environment. WebDevJudge comprises human preference labels over paired web implementations, annotated with structured and query-grounded rubrics to ensure high-quality ground truth. Using this benchmark, we comprehensively evaluate various evaluators, including LLMs, MLLMs, and agentic workflows. We systematically investigate the impact of different paradigms and guidance mechanisms. Our experiments reveal a significant gap between LLM judges and human experts. In-depth analysis indicates this gap stems from fundamental model limitations, including failures in recognizing functional equivalence, verifying task feasibility, and mitigating bias. Overall, WebDevJudge presents a significant challenge to LLM-as-a-judge, offering insights to guide future research toward developing more reliable and capable automated evaluators for complicated scenarios.",
+      "authors": [
+        "Chunyang Li",
+        "Yilun Zheng",
+        "Xinting Huang",
+        "Tianqing Fang",
+        "Jiahao Xu",
+        "Lihui Chen",
+        "Yangqiu Song",
+        "Winston Hu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10010880",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10010880",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5852,
+          "matched": [
+            "llm-as-a-judge",
+            "reliable"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1934,
+          "matched": [
+            "functional",
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6029,
+        "relevance": 0.5068,
+        "quality": 0.7,
+        "novelty": 0.8343,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To bridge the gap, we introduce WebDevJudge, a systematic benchmark for assessing LLM-as-a-judge performance in web development, with support for both non-interactive evaluation based on static observations and continuous interactive evaluation with a dynamic web environment.",
+        "problem": "The paradigm of LLM-as-a-judge is emerging as a scalable and efficient alternative to human evaluation, demonstrating strong performance on well-defined tasks.",
+        "method": "To bridge the gap, we introduce WebDevJudge, a systematic benchmark for assessing LLM-as-a-judge performance in web development, with support for both non-interactive evaluation based on static observations and continuous interactive evaluation with a dynamic web environment.",
+        "evidence": "Our experiments reveal a significant gap between LLM judges and human experts.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "llm-as-a-judge",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:23:21.967451+00:00"
+    },
     {
       "id": "conf:acl:2026:5320-main",
       "title": "Fine-tuning vs. In-context Learning in Large Language Models: A Formal Language Learning Perspective",
@@ -15370,463 +15714,6 @@
         "topic": "Trustworthy LLM",
         "matched": [
           "uncertainty",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-28T12:13:15.667980+00:00"
-    },
-    {
-      "id": "2607.24586",
-      "title": "D-Score: A Spectral Hidden-State Signal for Hallucination Detection in Large Language Models",
-      "abstract": "Large Language Models can produce fluent text that is false, unsupported by the available evidence, or inconsistent with information that appears to be internally represented by the model. We study hallucination detection from the geometry of hidden activations and introduce the D-Score, a simple spectral statistic computed from a single forward pass. For a fixed model, layer, and tolerance parameter, the D-Score counts how many singular directions of the hidden activation matrix have singular values that remain close to the leading one. We use this quantity as a hallucination score, classifying an input text as hallucinated when its D-Score is larger than a pre-defined quantity. The motivation is that, when a model processes a text that conflicts with information available in its own internal state, the hidden representation may encode both the asserted content and some form of counter-evidence, uncertainty, correction, or lack of support; this can make the hidden trajectory spread across additional singular directions. We formalize this intuition through a lightweight spectral argument and evaluate the resulting detector on FAVA-Annotation and RAGTruth. The experiments indicate that the D-Score is a strong hidden-state signal for hallucination detection, while requiring no external verifier, no retrieval step, and no multiple generations.",
-      "authors": [
-        "Bianca Raimondi",
-        "Davide Evangelista",
-        "Maurizio Gabbrielli",
-        "Elena Loli Piccolomini"
-      ],
-      "published": "2026-07-27T15:52:33Z",
-      "updated": "2026-07-27T15:52:33Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2607.24586v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24586v1",
-      "comment": "Preprint. Under review",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.4654,
-          "matched": [
-            "uncertainty",
-            "hallucination"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.447,
-        "relevance": 0.3723,
-        "quality": 0.53,
-        "novelty": 0.55,
-        "freshness": 0.8789
-      },
-      "quality_signals": [
-        "code available",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "The D-Score effectively detects hallucinations in Large Language Models by analyzing hidden activations without external resources.",
-        "problem": "Hallucination in LLMs leads to the generation of false or unsupported claims, hindering their reliability.",
-        "method": "The D-Score quantifies hallucination by counting singular directions in hidden activation matrices during a single forward pass.",
-        "evidence": "Experiments on FAVA-Annotation and RAGTruth demonstrate that the D-Score outperforms existing methods across multiple models.",
-        "limitations": "The D-Score's performance is sensitive to the choice of tolerance parameter and layer selection.",
-        "why_for_you": "Understanding the D-Score can enhance the reliability of LLMs in applications requiring factual accuracy.",
-        "source": "abstract",
-        "generated_by": "openai/gpt-4o-mini"
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🧠",
-            "text": "The D-Score measures how many singular values of hidden activations remain close to the leading one, indicating the coherence of the hidden trajectory."
-          },
-          {
-            "icon": "🛡️",
-            "text": "The method requires only a single forward pass through the model, eliminating the need for external verifiers or multiple generations."
-          },
-          {
-            "icon": "📉",
-            "text": "Evaluation results show that the D-Score achieves strong performance metrics on datasets like FAVA-Annotation and RAGTruth, outperforming traditional methods."
-          }
-        ],
-        "overview": "This research addresses the challenge of hallucination in Large Language Models (LLMs) by introducing the D-Score, a spectral statistic derived from hidden activations. The D-Score quantifies the coherence of hidden state trajectories during a single forward pass, providing a direct measure of hallucination without relying on external data or multiple model evaluations. The authors validate the effectiveness of the D-Score through experiments on FAVA-Annotation and RAGTruth, demonstrating its superior performance compared to existing methods, thus offering a promising approach to enhance the reliability of LLM outputs.",
-        "methodology": [
-          {
-            "title": "D-Score Calculation",
-            "detail": "The D-Score is computed by analyzing the singular values of the hidden activation matrix from a fixed model and layer. It counts how many singular values exceed a predefined tolerance, indicating the concentration of the hidden trajectory."
-          },
-          {
-            "title": "Model Configuration",
-            "detail": "The method operates on a fixed model and layer, with a tolerance parameter that determines the threshold for classifying hallucinations. This configuration allows for consistent evaluation across different inputs."
-          },
-          {
-            "title": "Single Forward Pass",
-            "detail": "The D-Score is derived from a single forward pass through the model, making it computationally efficient. This approach avoids the complexities of retrieval-based or consistency-based methods."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Geometric Argument",
-            "detail": "The paper posits that unsupported claims lead to a spread in the hidden trajectory across multiple singular directions, which can be detected by the D-Score. This reflects the model's internal uncertainty when processing conflicting information."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Evaluation on FAVA-Annotation",
-            "detail": "The D-Score was tested on the FAVA-Annotation dataset, where it demonstrated superior performance metrics compared to existing hallucination detection methods."
-          },
-          {
-            "title": "Evaluation on RAGTruth",
-            "detail": "In experiments on RAGTruth, the D-Score outperformed traditional approaches, indicating its robustness across different datasets and model architectures."
-          }
-        ],
-        "findings": [
-          {
-            "title": "D-Score Effectiveness",
-            "detail": "The D-Score effectively identifies hallucinations, achieving strong results on multiple benchmarks, indicating its potential as a reliable detection tool."
-          },
-          {
-            "title": "Sensitivity to Parameters",
-            "detail": "The performance of the D-Score is sensitive to the choice of tolerance parameter and layer selection, which can affect its detection capabilities."
-          },
-          {
-            "title": "Internal Geometry Insights",
-            "detail": "The research provides insights into how the internal geometry of LLMs can reveal information about the truthfulness of generated claims."
-          }
-        ],
-        "contributions": [
-          "Introduction of the D-Score as a novel method for hallucination detection in LLMs.",
-          "Operational definition of model-internal hallucination based on unsupported claims.",
-          "Geometric argument explaining the relationship between hallucinations and hidden trajectory spread."
-        ],
-        "limitations": [
-          "The D-Score's effectiveness is contingent on the appropriate selection of the tolerance parameter and layer.",
-          "The method's performance may vary across different model architectures and datasets."
-        ],
-        "open_questions": [
-          "How can the D-Score be adapted for different model architectures beyond those tested?",
-          "What are the implications of varying the tolerance parameter on the D-Score's reliability?",
-          "Can the D-Score be integrated with other detection methods to enhance overall performance?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "openai/gpt-4o-mini",
-        "schema_version": 2
-      },
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "uncertainty",
-          "hallucination"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-28T12:13:15.667980+00:00"
-    },
-    {
-      "id": "2607.24573",
-      "title": "LLM-SoccerArena: Benchmarking LLMs on Real-World Predictions in Sports",
-      "abstract": "Large language models (LLMs) increasingly support decisions about uncertain future events, yet evaluating their ability to forecast real-world outcomes remains difficult. In particular, existing benchmarks are typically static and retrospective, and therefore cannot test how information is synthesized by LLMs to predict future events under uncertainty. We introduce LLM-SoccerArena (https://llm-soccerarena.com), a prospective live benchmark that evaluates how well LLMs forecast real-world sports events before the outcomes are known. LLM-SoccerArena provides (1) a prospective live benchmark protocol, (2) a public open-source platform, and (3) a factorial benchmark design together with tournament-related questions (e.g., which team will win). LLM-SoccerArena automatically records timestamped, schema-validated forecasts of unresolved events, together with prompts, model versions, tool traces, and costs. The factorial design varies along four dimensions: (1) model version (e.g., GPT-5.5, Claude Opus 4.8); (2) information access; (3) prompting strategy, and (4) forecast horizon. We demonstrate LLM-SoccerArena through a large-scale evaluation of the 2026 FIFA World Cup, in which seven LLMs generated forecasts for all 104 matches and 15 tournament-related questions. We provide a detailed analysis of model performance across information access, prompting strategy, and forecast horizon. As a result, LLM-SoccerArena provides new evidence about the forecasting performance of state-of-the-art LLMs. For example, LLMs with web access outperform those without, but only by a small margin (i.e., a 0.023 improvement in Brier score). Overall, LLM-SoccerArena provides a flexible, open-source platform for prospective benchmarking of unresolved events. LLM-SoccerArena will be continuously updated, and can be directly applied to future national and international tournaments and league competitions.",
-      "authors": [
-        "Jonas Schröder",
-        "Jonas Schweisthal",
-        "Oliver Müller",
-        "Markus Weinmann",
-        "Stefan Feuerriegel"
-      ],
-      "published": "2026-07-27T15:38:29Z",
-      "updated": "2026-07-27T15:38:29Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2607.24573v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24573v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.4648,
-          "matched": [
-            "uncertainty",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4526,
-        "relevance": 0.3718,
-        "quality": 0.56,
-        "novelty": 0.55,
-        "freshness": 0.8775
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "open source",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "LLM-SoccerArena introduces a novel prospective benchmark for evaluating LLMs' forecasting abilities in sports.",
-        "problem": "Existing benchmarks for LLM forecasting are static and retrospective, failing to assess real-time predictive capabilities.",
-        "method": "The study employs a factorial design to evaluate LLMs across various dimensions, including model version and information access.",
-        "evidence": "In a large-scale evaluation of the 2026 FIFA World Cup, LLMs with web access showed a 0.023 improvement in Brier score over those without.",
-        "limitations": "The benchmark does not provide curated statistics or domain features beyond basic event information.",
-        "why_for_you": "This research is crucial for understanding how LLMs can be effectively utilized in real-world decision-making under uncertainty.",
-        "source": "abstract",
-        "generated_by": "openai/gpt-4o-mini"
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🧠",
-            "text": "LLM-SoccerArena's factorial design allows for systematic comparisons of LLM forecasts across different model versions, prompting strategies, and information access, enhancing the understanding of LLM capabilities."
-          },
-          {
-            "icon": "🛡️",
-            "text": "The benchmark protocol records timestamped forecasts, ensuring that predictions are made before outcomes are known, thus providing a genuine assessment of forecasting ability."
-          },
-          {
-            "icon": "📉",
-            "text": "The evaluation of seven LLMs during the 2026 FIFA World Cup revealed that models with web access achieved a Brier score improvement of 0.023, indicating a slight advantage in predictive accuracy."
-          }
-        ],
-        "overview": "LLM-SoccerArena addresses the challenge of evaluating LLMs' forecasting abilities by providing a prospective live benchmark that records predictions before outcomes are known. This benchmark is designed to overcome the limitations of static, retrospective evaluations by allowing LLMs to synthesize evolving information into probabilistic judgments. The study demonstrates its effectiveness through a large-scale evaluation of the 2026 FIFA World Cup, where it captures the performance of various LLMs under different conditions, revealing insights into their predictive capabilities and the impact of information access and prompting strategies.",
-        "methodology": [
-          {
-            "title": "Prospective Live Benchmark Protocol",
-            "detail": "LLM-SoccerArena records timestamped forecasts for unresolved events, ensuring that predictions are made before outcomes are known, thus preventing artifacts from memorization."
-          },
-          {
-            "title": "Factorial Design",
-            "detail": "The benchmark varies across four dimensions: model version (e.g., GPT-5.5, Claude Opus 4.8), information access (web search vs. no web search), prompting strategy (scoreline vs. outcome probabilities), and forecast horizon (timing of predictions)."
-          },
-          {
-            "title": "Evaluation Metrics",
-            "detail": "Performance is assessed using accuracy and Brier score, allowing for a quantitative comparison of forecasting abilities across different LLMs and conditions."
-          },
-          {
-            "title": "Data Collection",
-            "detail": "The benchmark automatically collects prompts, model versions, tool traces, and costs associated with each prediction, facilitating a comprehensive analysis of LLM performance."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Information Synthesis",
-            "detail": "LLM-SoccerArena tests the ability of LLMs to synthesize evolving information into probabilistic judgments, reflecting their reasoning capabilities under uncertainty."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "2026 FIFA World Cup Evaluation",
-            "detail": "Seven LLMs generated forecasts for all 104 matches and 15 tournament-related questions, allowing for a detailed analysis of model performance across various conditions."
-          },
-          {
-            "title": "Impact of Information Access",
-            "detail": "The evaluation revealed that LLMs with web access outperformed those without, achieving a Brier score improvement of 0.023, indicating the importance of real-time information."
-          },
-          {
-            "title": "Prompting Strategies Analysis",
-            "detail": "Different prompting strategies were tested, showing that direct score predictions led to varying levels of agreement between predicted scorelines and overall match outcomes."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Performance of LLMs with Web Access",
-            "detail": "LLMs with web access achieved a Brier score improvement of 0.023 over those without, highlighting the advantage of real-time information."
-          },
-          {
-            "title": "Effectiveness of Factorial Design",
-            "detail": "The factorial design allowed for systematic comparisons, revealing that different prompting strategies significantly influenced forecasting accuracy."
-          },
-          {
-            "title": "Prospective Benchmarking Success",
-            "detail": "LLM-SoccerArena successfully recorded predictions before outcomes were known, providing a genuine assessment of LLM forecasting abilities."
-          }
-        ],
-        "contributions": [
-          "Introduces a novel prospective live benchmark for evaluating LLM forecasting abilities in sports.",
-          "Provides a public open-source platform for continuous updates and evaluations.",
-          "Establishes a factorial design for systematic comparisons of LLM performance across various conditions."
-        ],
-        "limitations": [
-          "The benchmark does not include curated statistics or domain features beyond basic event information.",
-          "Limited qualitative insights into reasoning traces or evidence from LLM-generated justifications."
-        ],
-        "open_questions": [
-          "How can LLMs be further improved to enhance their forecasting accuracy in dynamic environments?",
-          "What additional factors could be integrated into the benchmark to better assess LLM reasoning capabilities?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "openai/gpt-4o-mini",
-        "schema_version": 2
-      },
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "uncertainty",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-28T12:13:15.667980+00:00"
-    },
-    {
-      "id": "2607.24649",
-      "title": "Reason-Mediated Behavioral Models for Auditing LLM Social Simulators",
-      "abstract": "Large language models are increasingly used as social simulators, including as synthetic survey respondents. Most evaluations ask whether simulated outcomes resemble human outcomes. We argue that this is necessary but too weak: a simulator can match the final answer while using the wrong rationale-derived reason pattern. We study this problem through a 94-person sunscreen concept test in which each respondent evaluated three product concepts and wrote open-ended rationales. We map those rationales into signed reason states $Z$, where positive signs support adoption and negative signs block it. This gives a practical audit: holding respondent descriptors $D$, category context $K$, and concept treatment $X$ fixed, do human rationale-derived reasons help predict behavior $Y$, and can an LLM simulate the same reason state without seeing the human rationale or outcome? Human rationale-derived reasons substantially improve held-out prediction of purchase intent. LLM-simulated reasons are more brittle: they often sound plausible, but frequently echo the concept board rather than recover the respondent's acceptance or rejection path. The paper contributes an evaluation framework for social simulators. Reason states do not identify natural causal effects by themselves, but they provide an interpretable test of whether a simulator's stated reasons align with human evidence.",
-      "authors": [
-        "Atharva Pandey",
-        "Gautam Jajoo"
-      ],
-      "published": "2026-07-27T16:47:27Z",
-      "updated": "2026-07-27T16:47:27Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2607.24649v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24649v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.4933,
-          "matched": [
-            "auditing",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4377,
-        "relevance": 0.3946,
-        "quality": 0.41,
-        "novelty": 0.55,
-        "freshness": 0.8843
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Human rationale-derived reasons significantly enhance the prediction of purchase intent in LLM social simulators.",
-        "problem": "Existing evaluations of LLMs as social simulators often overlook the importance of the rationale behind decisions.",
-        "method": "The study employs a sunscreen concept test with 94 respondents to map rationales into signed reason states for auditing LLM predictions.",
-        "evidence": "Human rationale-derived reasons improve held-out prediction of purchase intent, while LLM-simulated reasons often fail to capture the underlying acceptance or rejection paths.",
-        "limitations": "The study's small sample size limits the generalizability of its findings.",
-        "why_for_you": "Understanding the alignment of LLM outputs with human reasoning is crucial for developing trustworthy AI systems.",
-        "source": "abstract",
-        "generated_by": "openai/gpt-4o-mini"
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🧠",
-            "text": "Human rationale-derived reasons significantly improve the prediction of purchase intent, achieving a mean absolute error (MAE) of 0.625 compared to 0.918 for zero-Z control."
-          },
-          {
-            "icon": "🛡️",
-            "text": "The study introduces a reason-mediated behavioral model that maps respondent descriptors, category context, and concept treatment into signed reason states, facilitating a practical audit of LLMs."
-          },
-          {
-            "icon": "📉",
-            "text": "LLM-simulated reasons are found to be brittle, often echoing concept boards rather than accurately reflecting the respondent's acceptance or rejection paths, leading to a mean reason intersection over union (IoU) of only 0.201."
-          }
-        ],
-        "overview": "This research addresses the inadequacy of current evaluations of LLMs as social simulators, which typically focus on outcome similarity to human responses. By analyzing a sunscreen concept test with 94 respondents, the authors introduce a reason-mediated behavioral model that maps human rationales into signed reason states. The findings reveal that human-derived reasons significantly enhance the prediction of purchase intent, while LLM-simulated reasons often fail to capture the necessary rationale, indicating a gap in LLM performance that must be addressed for trustworthy AI applications.",
-        "methodology": [
-          {
-            "title": "Concept Test Study",
-            "detail": "The study involved 94 English-speaking Indian women aged 22-40 who evaluated three sunscreen concepts. Respondents provided purchase intent ratings, rationales, and demographic information, allowing for a comprehensive analysis of the factors influencing their decisions."
-          },
-          {
-            "title": "Reason-State Construction",
-            "detail": "A reason codebook was developed to map open-ended rationales into signed reason states, categorizing reasons into families such as value, proof trust, and safety. This structured approach enables the reuse of reason states across different concept tests."
-          },
-          {
-            "title": "Predictive Readout Training",
-            "detail": "A readout function was trained to predict purchase intent based on fixed respondent descriptors, category context, concept treatment, and mapped reason states. This model was evaluated against LLM-simulated reasons to assess predictive accuracy."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Reason-Mediated Behavioral Model",
-            "detail": "The model posits that fixed human-readable reason states can mediate the relationship between stimuli and responses, allowing for an interpretable audit of LLM outputs against human reasoning."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Sunscreen Concept Test",
-            "detail": "The experiment involved 94 respondents rating three sunscreen concepts, with outcomes measured in terms of purchase intent, believability, and differentiation. The main target was to assess the predictive accuracy of human versus LLM-simulated reasons."
-          },
-          {
-            "title": "Voice-Pool Simulation",
-            "detail": "The voice-pool estimator maintained multiple response modes (skeptic, balanced, enthusiast) to generate candidate reason states and purchase-intent distributions, comparing these with oracle selections to evaluate model performance."
-          },
-          {
-            "title": "Robustness Checks",
-            "detail": "Various robustness checks were conducted, including respondent bootstrap intervals and reason-family ablations, to validate the predictive capabilities of the reason-mediated model against different baselines."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Improved Prediction with Human Reasons",
-            "detail": "The study found that incorporating human rationale-derived reason states improved the prediction of purchase intent, achieving a mean absolute error of 0.625."
-          },
-          {
-            "title": "Brittleness of LLM-Simulated Reasons",
-            "detail": "LLM-simulated reasons were shown to be less effective, with a mean IoU of 0.201, indicating a failure to accurately reflect the human reasoning process."
-          },
-          {
-            "title": "Negative Result for LLM Reason Simulation",
-            "detail": "The research highlighted that LLM-simulated reasons, while fluent, often failed to align with the human acceptance or rejection paths, demonstrating a critical limitation in current LLM capabilities."
-          }
-        ],
-        "contributions": [
-          "Definition of a reason-mediated behavioral model for auditing LLM social simulators.",
-          "Demonstration that human rationale-derived reasons enhance predictive accuracy for purchase intent.",
-          "Identification of limitations in LLM-simulated reasoning capabilities."
-        ],
-        "limitations": [
-          "The small sample size of 94 respondents limits the generalizability of the findings.",
-          "The study does not establish causal relationships, focusing instead on predictive accuracy."
-        ],
-        "open_questions": [
-          "How can LLMs be improved to better simulate human reasoning paths?",
-          "What larger-scale studies are needed to validate the findings across diverse populations?",
-          "Can the reason-mediated model be adapted for other types of social simulations beyond consumer behavior?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "openai/gpt-4o-mini",
-        "schema_version": 2
-      },
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "auditing",
           "llm"
         ],
         "lane": "llm"

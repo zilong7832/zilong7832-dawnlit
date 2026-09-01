@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-09-01T20:11:58.306404+00:00",
+  "generated_at": "2026-09-01T20:23:21.967451+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
   "source_count": 0,
@@ -14,7 +14,7 @@
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-09-01T20:11:58.306404+00:00",
+    "generated_at": "2026-09-01T20:23:21.967451+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -30,8 +30,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 1.0,
-        "effective_weight": 1.0,
+        "base_weight": 0.8,
+        "effective_weight": 0.8,
         "adjustment": 0.0,
         "active": false
       },
@@ -44,8 +44,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 1.0,
-        "effective_weight": 1.0,
+        "base_weight": 0.6,
+        "effective_weight": 0.6,
         "adjustment": 0.0,
         "active": false
       },
@@ -58,8 +58,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 1.0,
-        "effective_weight": 1.0,
+        "base_weight": 0.5,
+        "effective_weight": 0.5,
         "adjustment": 0.0,
         "active": false
       },
@@ -72,8 +72,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.8,
-        "effective_weight": 0.8,
+        "base_weight": 0.6,
+        "effective_weight": 0.6,
         "adjustment": 0.0,
         "active": false
       },
@@ -86,8 +86,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.7,
-        "effective_weight": 0.7,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
         "adjustment": 0.0,
         "active": false
       },
@@ -100,8 +100,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.8,
-        "effective_weight": 0.8,
+        "base_weight": 0.6,
+        "effective_weight": 0.6,
         "adjustment": 0.0,
         "active": false
       }
@@ -111,7 +111,7 @@
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
   "conference_supplement_count": 3,
-  "conference_eligible_count": 32,
+  "conference_eligible_count": 23,
   "conference_pool_updated_at": "2026-09-01T20:10:56.291521+00:00",
   "conference_source_status": {
     "ICLR:2026": "ok:223",
@@ -122,18 +122,20 @@
   },
   "papers": [
     {
-      "id": "conf:acl:2026:5320-main",
-      "title": "Fine-tuning vs. In-context Learning in Large Language Models: A Formal Language Learning Perspective",
-      "abstract": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases. Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups. To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings. Empirically, we find that: (a) FT has greater language proficiency than ICL on in-distribution generalization, but both perform equally well on out-of-distribution generalization. (b) Their inductive biases, measured by the correlation in string generation probabilities, are similar when both modes partially learn the language but diverge at higher proficiency levels. (c) Unlike FT, ICL performance differs substantially across models of varying sizes and families and is sensitive to the token vocabulary of the language. Thus, our work demonstrates the promise of formal languages as a controlled testbed for evaluating LLMs, behaviors that are difficult to isolate in natural language datasets. Our source code is available at https://github.com/bishwamittra/formallm.",
+      "id": "conf:acl:2026:470-main",
+      "title": "Writing-RL: Advancing Long-form Writing via Adaptive Curriculum Reinforcement Learning",
+      "abstract": "Recent advances in Large Language Models (LLMs) have enabled strong performance in long-form writing, but current training paradigms remain limited: Supervised Fine-Tuning (SFT) remains constrained by data saturation and performance ceilings, while Reinforcement Learning with Verifiable Reward (RLVR), though successful in verifiable domains like math and code, cannot be directly migrated to open-ended long-form writing due to a lack of ground-truths. To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT. The framework consists of three key components: Margin-aware Data Selection strategy that prioritizes samples with high learning potential, Pairwise Comparison Reward mechanism that provides discriminative learning signals in the absence of verifiable rewards, and Dynamic Reference Scheduling approach, which plays a critical role by adaptively adjusting task difficulty based on evolving model performance. Experiments on 7B-scale writer models show that Writing-RL effectively improves long-form writing performance over strong SFT baselines. Furthermore, we observe that models trained with long-output RL generalize surprisingly well to long-input reasoning tasks, potentially offering a promising perspective for rethinking long-context training.",
       "authors": [
-        "Bishwamittra Ghosh",
-        "Soumi Das",
-        "Till Speicher",
-        "Qinyuan Wu",
-        "Mohammad Aflah Khan",
-        "Deepak Garg",
-        "Krishna P. Gummadi",
-        "Evimaria Terzi"
+        "Xuanyu Lei",
+        "Chenliang Li",
+        "Yuning Wu",
+        "Kaiming Liu",
+        "Weizhou Shen",
+        "Peng Li",
+        "Ming Yan",
+        "Fei Huang",
+        "Ya-Qin Zhang",
+        "Yang Liu"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -156,32 +158,42 @@
         "large language models",
         "language model",
         "language models",
-        "llm"
+        "llms"
       ],
       "topics": [
         {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.5964,
+          "score": 0.5741,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.5218,
+          "score": 0.3445,
           "matched": [
             "learning"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.2545,
+          "matched": [
+            "selection",
+            "adaptive"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.1475,
+          "score": 0.2077,
           "matched": [
             "data"
           ]
@@ -190,35 +202,35 @@
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.118,
+          "score": 0.1557,
           "matched": [
             "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.7278,
-        "relevance": 0.611,
-        "quality": 1.0,
-        "novelty": 0.8065,
+        "total": 0.677,
+        "relevance": 0.5791,
+        "quality": 0.84,
+        "novelty": 0.8255,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "code available",
-        "GitHub link",
+        "baseline comparison",
         "experiments",
-        "formal bound",
-        "dataset evidence"
+        "publication metadata",
+        "conference oral"
       ],
       "summary": {
-        "takeaway": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
-        "problem": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases.",
-        "method": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
-        "evidence": "Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups.",
+        "takeaway": "To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT.",
+        "problem": "Recent advances in Large Language Models (LLMs) have enabled strong performance in long-form writing, but current training paradigms remain limited: Supervised Fine-Tuning (SFT) remains constrained by data saturation and performance ceilings, while Reinforcement Learning with Verifiable Reward (RLVR), though successful in verifiable domains like math and code, cannot be directly migrated to open-ended long-form writing due to a lack of ground-truths.",
+        "method": "To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT.",
+        "evidence": "Experiments on 7B-scale writer models show that Writing-RL effectively improves long-form writing performance over strong SFT baselines.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -227,7 +239,7 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
+        "topic": "Trustworthy machine learning",
         "matched": [
           "learning"
         ],
@@ -235,24 +247,15 @@
       }
     },
     {
-      "id": "conf:acl:2026:905-main",
-      "title": "Tracing the Roots: A Multi-Agent Framework for Uncovering Data Lineage in Post-Training LLMs",
-      "abstract": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution. To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development. Through large-scale lineage analysis, we characterize domain-specific structural patterns, such as vertical refinement in Math-oriented datasets and horizontal aggregation in General-domain corpora. Moreover, we uncover pervasive systemic issues, including \\textit{structural redundancy} induced by implicit dataset intersections and the \\textit{propagation of benchmark contamination} along lineage paths. To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}. By anchoring instruction sampling at upstream leaf sources, this approach mitigates downstream homogenization and hidden redundancy, yielding a more diverse post-training corpus. We further highlight lineage-centric analysis as an efficient and robust topological alternative to sample-level dataset comparison for large-scale data ecosystems. By grounding data construction in explicit lineage structures, our work advances post-training data curation toward a more systematic and controllable paradigm.",
+      "id": "conf:acl:2026:350-main",
+      "title": "Deliberative Searcher: Improving LLM Reliability via Reinforcement Learning with Constraints",
+      "abstract": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty. We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration. Our method employs constrained reinforcement learning with adaptive Lagrangian multipliers to jointly optimize correctness and reliability. Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%. The well-calibrated confidence scores also enable more efficient test-time compute: instead of standard majority voting, we use confidence-weighted aggregation and match the performance of 16-sample majority voting with only 4 samples, a $4\\times$ reduction in inference compute. These results establish calibrated confidence as a foundation for both trustworthy outputs and adaptive test-time compute, demonstrating the value of the proposed constrained RL framework in search-augmented language models.",
       "authors": [
-        "Yu Li",
-        "Xiaoran shang",
-        "Qizhi Pei",
-        "Yun Zhu",
-        "Xin Gao",
-        "Honglin Lin",
-        "Zhanping Zhong",
-        "Zhuoshi Pan",
-        "Zheng Liu",
-        "Xiaoyang Wang",
-        "Conghui He",
-        "Dahua Lin",
-        "Feng Zhao",
-        "Lijun Wu"
+        "Zhenyun Yin",
+        "Shujie Wang",
+        "Xuhong Wang",
+        "Xingjun Ma",
+        "Yingchun Wang"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -279,156 +282,76 @@
       ],
       "topics": [
         {
-          "id": "functional_time_series",
-          "name": "Functional time series",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.7532,
+          "score": 0.5401,
           "matched": [
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.4813,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7261,
-        "relevance": 0.6988,
-        "quality": 0.68,
-        "novelty": 0.8587,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "dataset evidence",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
-        "problem": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution.",
-        "method": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
-        "evidence": "To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Functional time series",
-        "matched": [
-          "analysis",
-          "data"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "conf:icml:2026:71094",
-      "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
-      "abstract": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive. We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples. Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect. Our analysis reveals that repetitive structural data (e.g., LaTeX, XML) acts as a mechanistic catalyst. Furthermore, we observe that interventions targeting induction head formation induce a concurrent change in the model’s in-context learning (ICL) capability. This provides direct causal evidence for the long-standing hypothesis regarding the functional link between induction heads and ICL. Finally, we propose a mechanistic data augmentation pipeline that consistently accelerates circuit convergence across model scales, providing a principled methodology for steering the developmental trajectories of LLMs.",
-      "authors": [
-        "Jianhui Chen",
-        "Yuzhang Luo",
-        "Liangming Pan"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Oral"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/oral/71094",
-      "pdf_url": "https://icml.cc/virtual/2026/oral/71094",
-      "comment": "",
-      "journal_ref": "ICML 2026 Oral",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.7126,
-          "matched": [
-            "functional",
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.4813,
-          "matched": [
-            "data"
+            "learning",
+            "trustworthy"
           ]
         },
         {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.1229,
+          "score": 0.2738,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "time_series_inference",
+          "name": "Time series inference",
           "status": "emerging",
-          "score": 0.1075,
+          "score": 0.2311,
           "matched": [
-            "learning"
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.2186,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.1366,
+          "matched": [
+            "adaptive"
           ]
         }
       ],
       "scores": {
-        "total": 0.7063,
-        "relevance": 0.6909,
-        "quality": 0.63,
-        "novelty": 0.8119,
+        "total": 0.6524,
+        "relevance": 0.5331,
+        "quality": 0.85,
+        "novelty": 0.859,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
         "experiments",
-        "publication metadata",
-        "conference oral"
+        "quantitative results",
+        "publication metadata"
       ],
       "summary": {
-        "takeaway": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
-        "problem": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive.",
-        "method": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
-        "evidence": "Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect.",
+        "takeaway": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
+        "problem": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty.",
+        "method": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
+        "evidence": "Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -437,11 +360,104 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Functional time series",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "functional",
-          "analysis",
-          "data"
+          "learning",
+          "trustworthy"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:iclr:2026:10010880",
+      "title": "WebDevJudge: Evaluating (M)LLMs as Critiques for Web Development Quality",
+      "abstract": "The paradigm of LLM-as-a-judge is emerging as a scalable and efficient alternative to human evaluation, demonstrating strong performance on well-defined tasks. However, its reliability in open-ended tasks with dynamic environments and complex interactions remains unexplored. To bridge the gap, we introduce WebDevJudge, a systematic benchmark for assessing LLM-as-a-judge performance in web development, with support for both non-interactive evaluation based on static observations and continuous interactive evaluation with a dynamic web environment. WebDevJudge comprises human preference labels over paired web implementations, annotated with structured and query-grounded rubrics to ensure high-quality ground truth. Using this benchmark, we comprehensively evaluate various evaluators, including LLMs, MLLMs, and agentic workflows. We systematically investigate the impact of different paradigms and guidance mechanisms. Our experiments reveal a significant gap between LLM judges and human experts. In-depth analysis indicates this gap stems from fundamental model limitations, including failures in recognizing functional equivalence, verifying task feasibility, and mitigating bias. Overall, WebDevJudge presents a significant challenge to LLM-as-a-judge, offering insights to guide future research toward developing more reliable and capable automated evaluators for complicated scenarios.",
+      "authors": [
+        "Chunyang Li",
+        "Yilun Zheng",
+        "Xinting Huang",
+        "Tianqing Fang",
+        "Jiahao Xu",
+        "Lihui Chen",
+        "Yangqiu Song",
+        "Winston Hu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10010880",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10010880",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5852,
+          "matched": [
+            "llm-as-a-judge",
+            "reliable"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1934,
+          "matched": [
+            "functional",
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6029,
+        "relevance": 0.5068,
+        "quality": 0.7,
+        "novelty": 0.8343,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To bridge the gap, we introduce WebDevJudge, a systematic benchmark for assessing LLM-as-a-judge performance in web development, with support for both non-interactive evaluation based on static observations and continuous interactive evaluation with a dynamic web environment.",
+        "problem": "The paradigm of LLM-as-a-judge is emerging as a scalable and efficient alternative to human evaluation, demonstrating strong performance on well-defined tasks.",
+        "method": "To bridge the gap, we introduce WebDevJudge, a systematic benchmark for assessing LLM-as-a-judge performance in web development, with support for both non-interactive evaluation based on static observations and continuous interactive evaluation with a dynamic web environment.",
+        "evidence": "Our experiments reveal a significant gap between LLM judges and human experts.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "llm-as-a-judge",
+          "reliable"
         ],
         "lane": "llm"
       }
