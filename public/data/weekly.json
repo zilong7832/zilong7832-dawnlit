@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T20:10:56.291521+00:00",
+  "generated_at": "2026-09-01T20:11:58.306404+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:1334-main",
@@ -988,6 +988,223 @@
       "recommended_at": "2026-08-28T21:10:49.916182+00:00"
     },
     {
+      "id": "conf:acl:2026:5320-main",
+      "title": "Fine-tuning vs. In-context Learning in Large Language Models: A Formal Language Learning Perspective",
+      "abstract": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases. Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups. To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings. Empirically, we find that: (a) FT has greater language proficiency than ICL on in-distribution generalization, but both perform equally well on out-of-distribution generalization. (b) Their inductive biases, measured by the correlation in string generation probabilities, are similar when both modes partially learn the language but diverge at higher proficiency levels. (c) Unlike FT, ICL performance differs substantially across models of varying sizes and families and is sensitive to the token vocabulary of the language. Thus, our work demonstrates the promise of formal languages as a controlled testbed for evaluating LLMs, behaviors that are difficult to isolate in natural language datasets. Our source code is available at https://github.com/bishwamittra/formallm.",
+      "authors": [
+        "Bishwamittra Ghosh",
+        "Soumi Das",
+        "Till Speicher",
+        "Qinyuan Wu",
+        "Mohammad Aflah Khan",
+        "Deepak Garg",
+        "Krishna P. Gummadi",
+        "Evimaria Terzi"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5964,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5218,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.118,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7278,
+        "relevance": 0.611,
+        "quality": 1.0,
+        "novelty": 0.8065,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "experiments",
+        "formal bound",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
+        "problem": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases.",
+        "method": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
+        "evidence": "Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:11:58.306404+00:00"
+    },
+    {
+      "id": "conf:acl:2026:905-main",
+      "title": "Tracing the Roots: A Multi-Agent Framework for Uncovering Data Lineage in Post-Training LLMs",
+      "abstract": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution. To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development. Through large-scale lineage analysis, we characterize domain-specific structural patterns, such as vertical refinement in Math-oriented datasets and horizontal aggregation in General-domain corpora. Moreover, we uncover pervasive systemic issues, including \\textit{structural redundancy} induced by implicit dataset intersections and the \\textit{propagation of benchmark contamination} along lineage paths. To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}. By anchoring instruction sampling at upstream leaf sources, this approach mitigates downstream homogenization and hidden redundancy, yielding a more diverse post-training corpus. We further highlight lineage-centric analysis as an efficient and robust topological alternative to sample-level dataset comparison for large-scale data ecosystems. By grounding data construction in explicit lineage structures, our work advances post-training data curation toward a more systematic and controllable paradigm.",
+      "authors": [
+        "Yu Li",
+        "Xiaoran shang",
+        "Qizhi Pei",
+        "Yun Zhu",
+        "Xin Gao",
+        "Honglin Lin",
+        "Zhanping Zhong",
+        "Zhuoshi Pan",
+        "Zheng Liu",
+        "Xiaoyang Wang",
+        "Conghui He",
+        "Dahua Lin",
+        "Feng Zhao",
+        "Lijun Wu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.7532,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.4813,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7261,
+        "relevance": 0.6988,
+        "quality": 0.68,
+        "novelty": 0.8587,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "dataset evidence",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
+        "problem": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution.",
+        "method": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
+        "evidence": "To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Functional time series",
+        "matched": [
+          "analysis",
+          "data"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:11:58.306404+00:00"
+    },
+    {
       "id": "conf:icml:2026:64399",
       "title": "Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models",
       "abstract": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment. Prior works addressing this issue typically rely on explicit regularization, which leads to practical limitations. In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression. Our key observation is that, in a jailbroken LLM, safety-degrading gradients are largely saturated, while gradients unrelated to safety remain active during fine-tuning. Based on this insight, we introduce a **BufferLoRA-based fine-tuning framework**. BufferLoRA is a removable adapter that temporarily jailbreaks the model during user fine-tuning, saturating harmful updates while allowing a UserLoRA to learn user-specific tasks. After fine-tuning, BufferLoRA is removed to restore the base model’s original safety-alignment. To further reinforce safety, we additionally train a SafetyLoRA and integrate its safety components into the UserLoRA via QR decomposition-based merging strategy. Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
@@ -1080,6 +1297,117 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-01T20:10:56.291521+00:00"
+    },
+    {
+      "id": "conf:icml:2026:71094",
+      "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
+      "abstract": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive. We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples. Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect. Our analysis reveals that repetitive structural data (e.g., LaTeX, XML) acts as a mechanistic catalyst. Furthermore, we observe that interventions targeting induction head formation induce a concurrent change in the model’s in-context learning (ICL) capability. This provides direct causal evidence for the long-standing hypothesis regarding the functional link between induction heads and ICL. Finally, we propose a mechanistic data augmentation pipeline that consistently accelerates circuit convergence across model scales, providing a principled methodology for steering the developmental trajectories of LLMs.",
+      "authors": [
+        "Jianhui Chen",
+        "Yuzhang Luo",
+        "Liangming Pan"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71094",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71094",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.7126,
+          "matched": [
+            "functional",
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.4813,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1229,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1075,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7063,
+        "relevance": 0.6909,
+        "quality": 0.63,
+        "novelty": 0.8119,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
+        "problem": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive.",
+        "method": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
+        "evidence": "Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Functional time series",
+        "matched": [
+          "functional",
+          "analysis",
+          "data"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:11:58.306404+00:00"
     },
     {
       "id": "2608.24492",
@@ -1350,450 +1678,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-01T20:10:56.291521+00:00"
-    },
-    {
-      "id": "conf:acl:2026:2958-main",
-      "title": "Attention Basin: Why Contextual Position Matters in Large Language Models",
-      "abstract": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input. To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle. Crucially, our analysis further reveals that allocating higher attention to critical information is key to enhancing model performance. Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions. AttnRank is a model-agnostic, training-free, and plug-and-play method with minimal computational overhead. Experiments on multi-hop QA and few-shot in-context learning tasks demonstrate that AttnRank achieves substantial improvements across 10 large language models of varying architectures and scales, without modifying model parameters or training procedures.",
-      "authors": [
-        "Zihao Yi",
-        "Zhenqing Ling",
-        "Delong Zeng",
-        "Haohao Luo",
-        "Zhe Xu",
-        "Wei Liu",
-        "Jian Luan",
-        "Wanxia Cao",
-        "Ying Shen"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "core",
-          "score": 0.7017,
-          "matched": [
-            "basin"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6427,
-        "relevance": 0.5614,
-        "quality": 0.71,
-        "novelty": 0.8581,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
-        "problem": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input.",
-        "method": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
-        "evidence": "To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: LLM loss landscape.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "basin"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
-    },
-    {
-      "id": "2608.25429",
-      "title": "Distance Is Not Enough: Forget-Retain Alignment Gap Predicts LLM Relearning Robustness",
-      "abstract": "Machine unlearning aims to make a model forget specific data, yet unlearned LLMs often fail to stay unlearned: brief fine-tuning can revive removed knowledge. Existing robustness predictors rely on global weight-space displacement, but distance alone can be misleading when random or destructive updates collapse performance. We argue that relearning robustness depends on update structure: robust unlearning should affect forget-critical weights while sparing retain-critical ones. We introduce the Forget-Retain Alignment Gap (FRAG), a training-free predictor that scores an update's forget-retain alignment without running a relearning attack, and separates selective from dense updates more reliably than global distance. Building on the forget-critical, retain-sparing principle, Forget-Retain Pruning (FRP) improves relearning robustness. Our results suggest that weight selectivity better explains robustness than distance alone. Code is available at https://github.com/Yi1-Chen/FRAG.",
-      "authors": [
-        "Yi Chen",
-        "Hanna Hsieh",
-        "Shuhong Liu",
-        "Chuanbo Hua",
-        "Zihan Ma",
-        "Kun Wang",
-        "Joo-Young Kim"
-      ],
-      "published": "2026-08-26T06:39:49Z",
-      "updated": "2026-08-26T06:39:49Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.25429v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.25429v1",
-      "comment": "Accepted to EMNLP 2026 Main Conference",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.5819,
-          "matched": [
-            "training",
-            "fine-tuning",
-            "robust",
-            "robustness"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.4728,
-          "matched": [
-            "robustness",
-            "alignment",
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.273,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6387,
-        "relevance": 0.6147,
-        "quality": 0.63,
-        "novelty": 0.8706,
-        "freshness": 0.5214,
-        "feedback_adjustment": -0.0132,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link"
-      ],
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training",
-          "fine-tuning",
-          "robust",
-          "robustness"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "why_for_you": "高效对抗训练专家会看重 FRAG 的 training-free 对齐指标，用于在无需重新学习攻击的情况下评估忘记鲁棒性。",
-        "limitations": "FRAG 需要校准数据，且主要在 transformer 架构上进行评估。",
-        "problem": "现有的忘记方法因对权重更新缺乏足够的结构性保证，无法防止重新学习攻击。",
-        "method": "FRAG 通过 activation-normalized 权重重要性得分计算忘记-保留对齐差距；FRP 根据这些得分剪枝权重。",
-        "evidence": "在多种忘记方法和模型中，FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠。",
-        "takeaway": "FRAG 与 FRP 通过优先考虑忘记-保留对齐而非全局距离，提升重新学习鲁棒性。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "experiments": [
-          {
-            "detail": "TOFU (LLaMA3.2-1B/3B) 与 WMDP-cyber (Qwen2.5-14BInstruct) 在 forget01/05/10、retain 和 forget+retain 攻击下",
-            "title": "忘记基准"
-          },
-          {
-            "detail": "GA、GradDiff、NPO、RMU、SP；指标 ES/∆ES/utility（TOFU），Acc/∆Acc/MMLU（WMDP）",
-            "title": "基线"
-          },
-          {
-            "detail": "相较于全局 ℓ2 距离，FRAG 在不同模型规模（1B、3B、14B）上与实际鲁棒性的相关性更强",
-            "title": "FRAG 评估"
-          }
-        ],
-        "limitations": [
-          "FRAG 需要用于 activation norm 估计的校准数据",
-          "评估仅限于 transformer 架构（Llama/Qwen）"
-        ],
-        "overview": "本文质疑全局权重距离能够预测重新学习鲁棒性的假设。作者提出 FRAG，一种 training-free 指标，通过衡量忘记关键权重与保留关键权重的对齐程度来评估更新结构。实验表明 FRAG 与实际鲁棒性的相关性优于距离度量，并展示了其在 FRP（剪枝方法）中的应用，FRP 在提升鲁棒性的同时控制效用损失。工作强调在忘记保证中权重的选择性而非仅仅大小。",
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "FRAG：training-free 忘记-保留对齐差距预测器"
-          },
-          {
-            "icon": "🔬",
-            "text": "activation-normalized 权重重要性得分的余弦相似度"
-          },
-          {
-            "icon": "📈",
-            "text": "FRAG 在攻击前 ES 降低方面比全局距离提升 2.6-4.0 倍"
-          }
-        ],
-        "open_questions": [
-          "FRAG 能否在无需校准过程的实时忘记中使用？",
-          "忘记-保留对齐在非 transformer 架构上的泛化如何？"
-        ],
-        "contributions": [
-          "将忘记鲁棒性重新定义为结构化更新问题，而非距离优化",
-          "提出 FRAG 作为 training-free 的忘记对齐指标",
-          "展示 FRP 在可控效用权衡下提升鲁棒性的能力"
-        ],
-        "mechanism": [
-          {
-            "detail": "如果权重的幅度与 forget activation norm 的相关性高于 retain norm，则视为忘记关键权重；反之则为保留关键权重",
-            "title": "忘记-保留重要性对比"
-          }
-        ],
-        "findings": [
-          {
-            "detail": "FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠（在 3B 时，综合 FRAG 分数 -0.74 对比 ℓ2 -0.10）",
-            "title": "FRAG 相关性"
-          },
-          {
-            "detail": "在相同稀疏度下，FRP 的攻击前 ES 比 SP 低 2.6-4.0 倍，且效用相当",
-            "title": "FRP 效果"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "FRAG 通过 |Wij| * (xfj/(xrj+ϵ)) 与 |Wij| * (xrj/(xfj+ϵ)) 计算忘记/保留重要性，使用校准数据的输入通道 activation norm",
-            "title": "activation-normalized 重要性评分"
-          },
-          {
-            "detail": "FRAG 使用更新向量与重要性图的余弦相似度计算全局对齐分数 Af 与 Ar，公式为 A_f = Σ(ΔWℓ² * Fℓ)/||ΔWℓ²||||Fℓ||",
-            "title": "余弦对齐计算"
-          }
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
-    },
-    {
-      "id": "2608.25727",
-      "title": "Are LLM-Enhanced GNNs Privacy-Safe?",
-      "abstract": "Large language models (LLMs) have recently advanced graph neural networks (GNNs) by enriching node representations with semantic information, giving rise to LLM-enhanced GNNs that achieve substantial performance gains. However, their vulnerability to privacy attacks, in which adversaries infer sensitive information from model outputs, remains largely underexplored. To bridge this gap, we present a systematic evaluation of privacy risks in LLM-enhanced GNNs through a unified framework consisting of five stages: (1) dataset preparation, (2) victim model training, (3) privacy attack, (4) risk assessment, and (5) defense analysis. Specifically, we conduct experiments on six real-world text-attributed graph datasets covering diverse domains. We consider six representative privacy attack methods targeting three fundamental threats, namely link, label, and membership inference, and construct 42 victim model configurations by combining multiple LLM-based feature enhancers with representative GNN backbones. Extensive experiments show that, despite their utility improvements, LLM-enhanced GNNs consistently exhibit increased vulnerability to privacy attacks compared to shallow text representation baselines. Further analysis reveals that semantic enrichment amplifies link-, label-, and membership-related signals in the embedding space, making them more exploitable by inference attacks. Finally, we evaluate differential privacy as a defense strategy and show that, while it can partially mitigate privacy risks, it introduces significant utility degradation, highlighting a fundamental privacy-utility trade-off in LLM-enhanced graph learning. Overall, this work provides a comprehensive understanding of privacy risks in LLM-enhanced GNNs and offers practical insights for developing more secure and trustworthy graph learning systems.",
-      "authors": [
-        "Longzhu He",
-        "Zelang Wen",
-        "Chaozhuo Li",
-        "Sen Su"
-      ],
-      "published": "2026-08-26T12:42:21Z",
-      "updated": "2026-08-26T12:42:21Z",
-      "categories": [
-        "cs.LG",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.25727v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.25727v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.5843,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.5723,
-          "matched": [
-            "privacy",
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.1345,
-          "matched": [
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6381,
-        "relevance": 0.634,
-        "quality": 0.58,
-        "novelty": 0.8211,
-        "freshness": 0.5574,
-        "feedback_adjustment": -0.0174,
-        "semantic_feedback": 0.168
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "LLM‑增强的 GNN 在提升节点分类准确率的同时，会显著增加对链接、标签和成员推断攻击的易感性，差分隐私只能在高代价的实用性损失下部分缓解。",
-        "why_for_you": "符合您对可信 LLM 的兴趣，揭示了 LLM‑增强图学习中的隐私漏洞及其权衡。",
-        "method": "作者提出统一的五阶段框架，在六个文本属性图数据集、42 种受害模型配置和六类代表性推断攻击上评估隐私，并考察差分隐私作为防御手段。",
-        "limitations": "在可获取的来源中未说明。",
-        "evidence": "大量实验表明，LLM‑增强的 GNN 相较于浅层基线泄露更多隐私，使用差分隐私可降低泄露但会显著下降分类准确率。",
-        "problem": "尚未系统研究融合 LLM‑生成节点嵌入的图神经网络的隐私风险。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "提出统一的五阶段框架，在六个数据集上评估 42 种 LLM‑增强 GNN 配置的隐私风险。"
-          },
-          {
-            "icon": "🔧",
-            "text": "将基于解释和基于嵌入的 LLM 增强与标准 GNN 主干结合，测试链接、标签和成员推断攻击。"
-          },
-          {
-            "icon": "📈",
-            "text": "实证结果显示，相比浅层基线，隐私泄露持续增加，差分隐私虽能减轻泄露但会导致显著的效用损失。"
-          }
-        ],
-        "overview": "本文提供系统的 LLM‑增强图神经网络隐私评估流水线，涵盖数据集准备、使用解释式和嵌入式 LLM 增强的受害模型训练、针对链接、标签和成员信息的六种推断攻击、定量风险评估以及差分隐私防御研究。六个真实文本属性图的实验表明，语义增强提升分类性能的同时也放大了隐私泄露信号，且差分隐私只能在牺牲准确率的情况下提供部分保护。",
-        "methodology": [
-          {
-            "title": "五阶段评估框架",
-            "detail": "阶段：(1) 数据集准备，(2) 受害模型训练（LLM 增强器 + GNN 主干），(3) 隐私攻击执行，(4) 风险评估（隐私 vs 实用性指标），(5) 使用差分隐私的防御分析。"
-          },
-          {
-            "title": "受害模型配置",
-            "detail": "通过将多种基于 LLM 的特征增强器（基于解释或基于嵌入）与代表性 GNN 主干（如 GAT）配对，创建了 42 种配置，采用两层架构（隐藏维度 256，dropout 0.5，学习率 0.001）。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "语义增强放大泄漏信号",
-            "detail": "LLM 生成的嵌入强化了潜在空间中的结构、标签和成员关系模式，使其更易被推断攻击利用。"
-          }
-        ],
-        "experiments": [
-          {
-            "detail": "六个真实世界文本属性图数据集；六种隐私攻击（链接、标签、成员推理变体）；指标包括节点分类准确率和攻击AUC；每次运行使用不同种子重复五次。",
-            "title": "实证研究"
-          },
-          {
-            "detail": "对目标模型应用DP机制，测量隐私风险降低与效用退化（ noted as substantial）。",
-            "title": "差分隐私防御"
-          }
-        ],
-        "findings": [
-          {
-            "detail": "LLM增强的GNNs在节点分类准确率上始终优于浅层BoW/Word2Vec基线（例如，高达~95.7%）。",
-            "title": "效用提升"
-          },
-          {
-            "detail": "所有攻击中，LLM增强模型表现出比浅层基线更高的泄露，证实了隐私风险的放大。",
-            "title": "隐私脆弱性增加"
-          },
-          {
-            "detail": "差分隐私部分缓解了攻击，但导致分类性能显著下降。",
-            "title": "隐私-效用权衡"
-          }
-        ],
-        "contributions": [
-          "统一的五阶段框架，用于系统评估 LLM‑enhanced GNNs 的隐私风险。",
-          "全面的实证基准，涵盖六个数据集、42 种模型配置和六种攻击方法。",
-          "分析表明，LLM‑driven 语义增强会放大隐私泄漏信号。"
-        ],
-        "limitations": [
-          "在可用来源中未说明。"
-        ],
-        "open_questions": [
-          "如何设计 privacy‑preserving LLM 增强，使其在保持效用的同时不放大泄漏？",
-          "在 differential privacy 之外，哪些替代防御机制对 LLM‑enhanced GNNs 有效？",
-          "观察到的隐私风险是否可推广到更大的 LLM 或其他图任务，如 link prediction？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
     }
   ]
 }

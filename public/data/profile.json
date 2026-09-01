@@ -178,57 +178,25 @@
   },
   "topics": [
     {
-      "id": "efficient_adversarial_training",
-      "name": "Efficient adversarial training",
-      "description": "Efficient adversarial training and robust fine-tuning for large language models, including compute, memory and sample efficiency.",
+      "id": "functional_time_series",
+      "name": "Functional time series",
+      "description": "Functional time series",
       "weight": 1.0,
-      "status": "core",
+      "status": "emerging",
       "enabled": true,
       "phrases": [
-        "efficient adversarial training",
-        "adversarial training",
-        "robust fine-tuning",
-        "robust finetuning",
-        "adversarial fine-tuning",
-        "adversarial finetuning",
-        "jailbreak robustness"
+        "Functional time series",
+        "functional time series",
+        "functional data analysis",
+        "dependent functional data"
       ],
       "terms": [
-        "jailbreak",
-        "adversarial",
-        "robustness",
-        "robust",
-        "attack",
-        "perturbation",
-        "inner maximization",
-        "compute-efficient",
-        "memory-efficient",
-        "sample-efficient",
-        "fine-tuning",
-        "training"
-      ],
-      "required_all_groups": [
-        [
-          "adversarial",
-          "jailbreak",
-          "robustness",
-          "robust"
-        ],
-        [
-          "training",
-          "fine-tuning",
-          "finetuning",
-          "optimization"
-        ]
-      ],
-      "required_central_any": [
-        "efficient adversarial training",
-        "adversarial training",
-        "adversarial fine-tuning",
-        "adversarial finetuning",
-        "robust fine-tuning",
-        "robust finetuning",
-        "jailbreak"
+        "functional",
+        "series",
+        "time",
+        "analysis",
+        "data",
+        "dependent"
       ],
       "exclude": [],
       "effective_weight": 1.0,
@@ -247,47 +215,23 @@
       }
     },
     {
-      "id": "llm_loss_landscape",
-      "name": "LLM loss landscape",
-      "description": "Optimization geometry and loss landscapes of LLM pre-training, alignment and fine-tuning.",
+      "id": "long_run_covariance_estimation",
+      "name": "Long-run covariance estimation",
+      "description": "Long-run covariance estimation",
       "weight": 1.0,
-      "status": "core",
+      "status": "emerging",
       "enabled": true,
       "phrases": [
-        "loss landscape",
-        "mode connectivity",
-        "parameter space",
-        "capability basin",
-        "alignment brittleness",
-        "basin",
-        "flatness",
-        "sharpness"
+        "Long-run covariance estimation",
+        "long-run covariance",
+        "long-run covariance operator",
+        "covariance estimation"
       ],
       "terms": [
-        "basin",
-        "flatness",
-        "sharpness",
-        "hessian",
-        "curvature",
-        "geometry",
-        "parameter perturbation",
-        "catastrophic forgetting",
-        "stability",
-        "plasticity",
-        "optimizer",
-        "connectivity",
-        "landscape",
-        "loss",
-        "mode"
-      ],
-      "required_any": [
-        "loss landscape",
-        "basin",
-        "flatness",
-        "sharpness",
-        "hessian",
-        "curvature",
-        "mode connectivity"
+        "covariance",
+        "estimation",
+        "long-run",
+        "operator"
       ],
       "exclude": [],
       "effective_weight": 1.0,
@@ -306,49 +250,66 @@
       }
     },
     {
-      "id": "llm_data_selection",
-      "name": "Data selection for LLMs",
-      "description": "Data selection, valuation, filtering, mixtures and curricula for LLM pre-training, SFT and post-training.",
+      "id": "bandwidth_selection",
+      "name": "Bandwidth selection",
+      "description": "Bandwidth selection",
+      "weight": 1.0,
+      "status": "emerging",
+      "enabled": true,
+      "phrases": [
+        "Bandwidth selection",
+        "bandwidth selection",
+        "lag window",
+        "plug-in bandwidth",
+        "adaptive bandwidth"
+      ],
+      "terms": [
+        "bandwidth",
+        "selection",
+        "adaptive",
+        "lag",
+        "plug-in",
+        "window"
+      ],
+      "exclude": [],
+      "effective_weight": 1.0,
+      "feedback_stats": {
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      }
+    },
+    {
+      "id": "time_series_inference",
+      "name": "Time series inference",
+      "description": "Time series inference",
       "weight": 0.8,
       "status": "emerging",
       "enabled": true,
       "phrases": [
-        "data selection",
-        "data valuation",
-        "data mixture",
-        "data curation",
-        "dataset selection",
-        "example selection"
+        "Time series inference",
+        "spectral density",
+        "HAC estimation",
+        "dependent data"
       ],
       "terms": [
-        "coreset",
-        "curriculum",
-        "influence",
-        "filtering",
-        "sampling",
-        "reweighting",
-        "data quality",
-        "data attribution",
-        "mixture optimization",
-        "training data",
-        "instruction data",
-        "curation",
+        "inference",
+        "series",
+        "time",
         "data",
-        "mixture",
-        "selection",
-        "valuation"
-      ],
-      "required_any": [
-        "data selection",
-        "data valuation",
-        "data mixture",
-        "data curation",
-        "dataset selection",
-        "example selection",
-        "training data",
-        "instruction data",
-        "data processing",
-        "data filtering"
+        "density",
+        "dependent",
+        "estimation",
+        "hac",
+        "spectral"
       ],
       "exclude": [],
       "effective_weight": 0.8,
@@ -367,43 +328,26 @@
       }
     },
     {
-      "id": "on_policy_distillation",
-      "name": "On-policy distillation",
-      "description": "On-policy knowledge and self-distillation for LLM reasoning and post-training, with an emphasis on efficiency and theory.",
+      "id": "trustworthy_machine_learning",
+      "name": "Trustworthy machine learning",
+      "description": "Trustworthy machine learning",
       "weight": 0.7,
-      "status": "watch",
+      "status": "emerging",
       "enabled": true,
       "phrases": [
-        "on-policy distillation",
-        "on policy distillation",
-        "on-policy self-distillation",
-        "self-distillation",
-        "OPD"
+        "Trustworthy machine learning",
+        "trustworthy machine learning",
+        "reliable machine learning",
+        "model auditing",
+        "llm-as-a-judge"
       ],
       "terms": [
-        "student trajectory",
-        "student-generated",
-        "teacher feedback",
-        "teacher logits",
-        "distribution mismatch",
-        "exposure bias",
-        "token-level",
-        "sequence-level",
-        "knowledge distillation",
-        "policy distillation",
-        "opd",
-        "mopd",
-        "distillation",
-        "on-policy",
-        "self-distillation"
-      ],
-      "required_any": [
-        "on-policy distillation",
-        "on policy distillation",
-        "on-policy self-distillation",
-        "self-distillation",
-        "opd",
-        "mopd"
+        "learning",
+        "machine",
+        "trustworthy",
+        "auditing",
+        "llm-as-a-judge",
+        "reliable"
       ],
       "exclude": [],
       "effective_weight": 0.7,
@@ -422,68 +366,23 @@
       }
     },
     {
-      "id": "trustworthy_llm",
-      "name": "Trustworthy LLM",
-      "description": "Robustness, privacy, safety, agent memory and LLM-as-a-judge auditing for language models.",
-      "weight": 0.7,
-      "status": "background",
+      "id": "positive_unlabeled_learning",
+      "name": "Positive-unlabeled learning",
+      "description": "Positive-unlabeled learning",
+      "weight": 0.8,
+      "status": "emerging",
       "enabled": true,
       "phrases": [
-        "trustworthy llm",
-        "llm safety",
-        "language model safety",
-        "llm-as-a-judge",
-        "agent memory",
-        "alignment safety",
-        "LLM safety",
-        "robustness",
-        "privacy",
-        "alignment"
+        "Positive-unlabeled learning",
+        "positive-unlabeled learning",
+        "PU learning"
       ],
       "terms": [
-        "privacy",
-        "memorization",
-        "auditing",
-        "uncertainty",
-        "calibration",
-        "hallucination",
-        "alignment",
-        "safety",
-        "reliability",
-        "red teaming",
-        "llm",
-        "robustness"
-      ],
-      "required_any": [
-        "privacy",
-        "auditing",
-        "uncertainty",
-        "calibration",
-        "hallucination",
-        "alignment",
-        "safety",
-        "reliability",
-        "red teaming",
-        "jailbreak",
-        "robustness"
-      ],
-      "required_central_any": [
-        "trustworthy llm",
-        "llm safety",
-        "language model safety",
-        "llm-as-a-judge",
-        "privacy",
-        "memorization",
-        "auditing",
-        "calibration",
-        "hallucination",
-        "alignment safety",
-        "red teaming",
-        "jailbreak",
-        "robustness"
+        "learning",
+        "positive-unlabeled"
       ],
       "exclude": [],
-      "effective_weight": 0.7,
+      "effective_weight": 0.8,
       "feedback_stats": {
         "useful": 0.0,
         "irrelevant": 0.0,
@@ -492,64 +391,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.7,
-        "effective_weight": 0.7,
-        "adjustment": 0.0,
-        "active": false
-      }
-    },
-    {
-      "id": "llm_statistical_theory",
-      "name": "Statistical theory for LLMs",
-      "description": "Generalization and statistical learning theory for transformers, in-context learning and adversarial robustness.",
-      "weight": 0.6,
-      "status": "background",
-      "enabled": true,
-      "phrases": [
-        "rademacher complexity",
-        "statistical learning theory",
-        "in-context learning",
-        "generalization bound",
-        "adversarial generalization",
-        "generalization",
-        "scaling laws",
-        "optimization theory"
-      ],
-      "terms": [
-        "generalization",
-        "sample complexity",
-        "convergence",
-        "theorem",
-        "proof",
-        "bound",
-        "transformer theory",
-        "learning theory",
-        "laws",
-        "optimization",
-        "scaling",
-        "theory"
-      ],
-      "required_any": [
-        "generalization",
-        "sample complexity",
-        "rademacher",
-        "theorem",
-        "proof",
-        "bound",
-        "learning theory"
-      ],
-      "exclude": [],
-      "effective_weight": 0.6,
-      "feedback_stats": {
-        "useful": 0.0,
-        "irrelevant": 0.0,
-        "samples": 0.0,
-        "effective_samples": 0.0,
-        "hit_rate": null,
-        "smoothed_hit_rate": 0.5,
-        "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.8,
+        "effective_weight": 0.8,
         "adjustment": 0.0,
         "active": false
       }
@@ -557,7 +400,7 @@
   ],
   "feedback_tuning_state": {
     "enabled": true,
-    "generated_at": "2026-09-01T20:10:56.291521+00:00",
+    "generated_at": "2026-09-01T20:11:58.306404+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -565,7 +408,7 @@
     "minimum_effective_samples": 4.0,
     "topics": [
       {
-        "id": "efficient_adversarial_training",
+        "id": "functional_time_series",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -579,7 +422,7 @@
         "active": false
       },
       {
-        "id": "llm_loss_landscape",
+        "id": "long_run_covariance_estimation",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -593,7 +436,21 @@
         "active": false
       },
       {
-        "id": "llm_data_selection",
+        "id": "bandwidth_selection",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "time_series_inference",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -607,7 +464,7 @@
         "active": false
       },
       {
-        "id": "on_policy_distillation",
+        "id": "trustworthy_machine_learning",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -621,7 +478,7 @@
         "active": false
       },
       {
-        "id": "trustworthy_llm",
+        "id": "positive_unlabeled_learning",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -629,22 +486,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.7,
-        "effective_weight": 0.7,
-        "adjustment": 0.0,
-        "active": false
-      },
-      {
-        "id": "llm_statistical_theory",
-        "useful": 0.0,
-        "irrelevant": 0.0,
-        "samples": 0.0,
-        "effective_samples": 0.0,
-        "hit_rate": null,
-        "smoothed_hit_rate": 0.5,
-        "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.8,
+        "effective_weight": 0.8,
         "adjustment": 0.0,
         "active": false
       }

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-09-01T20:10:56.291521+00:00",
+  "generated_at": "2026-09-01T20:11:58.306404+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
   "source_count": 0,
@@ -14,7 +14,7 @@
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-09-01T20:10:56.291521+00:00",
+    "generated_at": "2026-09-01T20:11:58.306404+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -22,7 +22,7 @@
     "minimum_effective_samples": 4.0,
     "topics": [
       {
-        "id": "efficient_adversarial_training",
+        "id": "functional_time_series",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -36,7 +36,7 @@
         "active": false
       },
       {
-        "id": "llm_loss_landscape",
+        "id": "long_run_covariance_estimation",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -50,7 +50,21 @@
         "active": false
       },
       {
-        "id": "llm_data_selection",
+        "id": "bandwidth_selection",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "time_series_inference",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -64,7 +78,7 @@
         "active": false
       },
       {
-        "id": "on_policy_distillation",
+        "id": "trustworthy_machine_learning",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -78,7 +92,7 @@
         "active": false
       },
       {
-        "id": "trustworthy_llm",
+        "id": "positive_unlabeled_learning",
         "useful": 0.0,
         "irrelevant": 0.0,
         "samples": 0.0,
@@ -86,22 +100,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.7,
-        "effective_weight": 0.7,
-        "adjustment": 0.0,
-        "active": false
-      },
-      {
-        "id": "llm_statistical_theory",
-        "useful": 0.0,
-        "irrelevant": 0.0,
-        "samples": 0.0,
-        "effective_samples": 0.0,
-        "hit_rate": null,
-        "smoothed_hit_rate": 0.5,
-        "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.8,
+        "effective_weight": 0.8,
         "adjustment": 0.0,
         "active": false
       }
@@ -111,7 +111,7 @@
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
   "conference_supplement_count": 3,
-  "conference_eligible_count": 52,
+  "conference_eligible_count": 32,
   "conference_pool_updated_at": "2026-09-01T20:10:56.291521+00:00",
   "conference_source_status": {
     "ICLR:2026": "ok:223",
@@ -122,205 +122,18 @@
   },
   "papers": [
     {
-      "id": "conf:icml:2026:64399",
-      "title": "Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models",
-      "abstract": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment. Prior works addressing this issue typically rely on explicit regularization, which leads to practical limitations. In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression. Our key observation is that, in a jailbroken LLM, safety-degrading gradients are largely saturated, while gradients unrelated to safety remain active during fine-tuning. Based on this insight, we introduce a **BufferLoRA-based fine-tuning framework**. BufferLoRA is a removable adapter that temporarily jailbreaks the model during user fine-tuning, saturating harmful updates while allowing a UserLoRA to learn user-specific tasks. After fine-tuning, BufferLoRA is removed to restore the base model’s original safety-alignment. To further reinforce safety, we additionally train a SafetyLoRA and integrate its safety components into the UserLoRA via QR decomposition-based merging strategy. Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
+      "id": "conf:acl:2026:5320-main",
+      "title": "Fine-tuning vs. In-context Learning in Large Language Models: A Formal Language Learning Perspective",
+      "abstract": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases. Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups. To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings. Empirically, we find that: (a) FT has greater language proficiency than ICL on in-distribution generalization, but both perform equally well on out-of-distribution generalization. (b) Their inductive biases, measured by the correlation in string generation probabilities, are similar when both modes partially learn the language but diverge at higher proficiency levels. (c) Unlike FT, ICL performance differs substantially across models of varying sizes and families and is sensitive to the token vocabulary of the language. Thus, our work demonstrates the promise of formal languages as a controlled testbed for evaluating LLMs, behaviors that are difficult to isolate in natural language datasets. Our source code is available at https://github.com/bishwamittra/formallm.",
       "authors": [
-        "Seokil Ham",
-        "Jaehyuk Jang",
-        "Wonjun Lee",
-        "Changick Kim"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Spotlight"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/poster/64399",
-      "pdf_url": "https://icml.cc/virtual/2026/poster/64399",
-      "comment": "",
-      "journal_ref": "ICML 2026 Spotlight",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Spotlight",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "core",
-          "score": 0.7471,
-          "matched": [
-            "jailbreak",
-            "fine-tuning"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.5072,
-          "matched": [
-            "alignment",
-            "safety",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7073,
-        "relevance": 0.6991,
-        "quality": 0.59,
-        "novelty": 0.8482,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "publication metadata",
-        "conference spotlight"
-      ],
-      "summary": {
-        "takeaway": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
-        "problem": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment.",
-        "method": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
-        "evidence": "Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Efficient adversarial training, Trustworthy LLM.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "jailbreak",
-          "fine-tuning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "conf:iclr:2026:10009352",
-      "title": "How Learning Rate Decay Wastes Your Best Data in Curriculum-Based LLM Pretraining",
-      "abstract": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation. A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric. However, prior studies have reported limited improvements from such curriculum-based pretraining strategies. This work identifies a critical factor constraining these methods: the incompatibility between the ascending data quality order and the decaying learning rate (LR) schedule. We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules. Our experiments show this incompatibility can be mitigated by two simple strategies: (1) employing a more moderate LR decay schedule, where the final LR is only moderately smaller than the peak LR, and (2) replacing LR decay with model averaging, i.e., computing a weighted average of the final few checkpoints. By combining these strategies, we improve the average score on a suite of standard benchmarks by 1.64% over random shuffling, without additional data refinement. Validated on 1.5B-parameter models trained over 30B tokens with various data-quality metrics, our findings call for a re-evaluation of curriculum-based LLM pretraining and underscore the potential of co-designing data curricula with optimization methods.",
-      "authors": [
-        "Kairong Luo",
-        "Zhenbo Sun",
-        "Haodong Wen",
-        "Xinyu Shi",
-        "Jiarui Cui",
-        "Chenyi Dang",
-        "Kaifeng Lyu",
-        "Wenguang Chen"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10009352",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009352",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "emerging",
-          "score": 0.7302,
-          "matched": [
-            "data curation",
-            "curriculum",
-            "data quality",
-            "curation",
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6681,
-        "relevance": 0.5842,
-        "quality": 0.78,
-        "novelty": 0.8236,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules.",
-        "problem": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation.",
-        "method": "A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric.",
-        "evidence": "However, prior studies have reported limited improvements from such curriculum-based pretraining strategies.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Data selection for LLMs.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Data selection for LLMs",
-        "matched": [
-          "data curation",
-          "curriculum",
-          "data quality",
-          "curation"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "conf:acl:2026:2958-main",
-      "title": "Attention Basin: Why Contextual Position Matters in Large Language Models",
-      "abstract": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input. To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle. Crucially, our analysis further reveals that allocating higher attention to critical information is key to enhancing model performance. Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions. AttnRank is a model-agnostic, training-free, and plug-and-play method with minimal computational overhead. Experiments on multi-hop QA and few-shot in-context learning tasks demonstrate that AttnRank achieves substantial improvements across 10 large language models of varying architectures and scales, without modifying model parameters or training procedures.",
-      "authors": [
-        "Zihao Yi",
-        "Zhenqing Ling",
-        "Delong Zeng",
-        "Haohao Luo",
-        "Zhe Xu",
-        "Wei Liu",
-        "Jian Luan",
-        "Wanxia Cao",
-        "Ying Shen"
+        "Bishwamittra Ghosh",
+        "Soumi Das",
+        "Till Speicher",
+        "Qinyuan Wu",
+        "Mohammad Aflah Khan",
+        "Deepak Garg",
+        "Krishna P. Gummadi",
+        "Evimaria Terzi"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -343,41 +156,69 @@
         "large language models",
         "language model",
         "language models",
-        "llms"
+        "llm"
       ],
       "topics": [
         {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "core",
-          "score": 0.7017,
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5964,
           "matched": [
-            "basin"
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5218,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.118,
+          "matched": [
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.6427,
-        "relevance": 0.5614,
-        "quality": 0.71,
-        "novelty": 0.8581,
+        "total": 0.7278,
+        "relevance": 0.611,
+        "quality": 1.0,
+        "novelty": 0.8065,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "code available",
+        "GitHub link",
         "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
+        "formal bound",
+        "dataset evidence"
       ],
       "summary": {
-        "takeaway": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
-        "problem": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input.",
-        "method": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
-        "evidence": "To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle.",
+        "takeaway": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
+        "problem": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases.",
+        "method": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
+        "evidence": "Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: LLM loss landscape.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -386,9 +227,221 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "LLM loss landscape",
+        "topic": "Positive-unlabeled learning",
         "matched": [
-          "basin"
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:905-main",
+      "title": "Tracing the Roots: A Multi-Agent Framework for Uncovering Data Lineage in Post-Training LLMs",
+      "abstract": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution. To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development. Through large-scale lineage analysis, we characterize domain-specific structural patterns, such as vertical refinement in Math-oriented datasets and horizontal aggregation in General-domain corpora. Moreover, we uncover pervasive systemic issues, including \\textit{structural redundancy} induced by implicit dataset intersections and the \\textit{propagation of benchmark contamination} along lineage paths. To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}. By anchoring instruction sampling at upstream leaf sources, this approach mitigates downstream homogenization and hidden redundancy, yielding a more diverse post-training corpus. We further highlight lineage-centric analysis as an efficient and robust topological alternative to sample-level dataset comparison for large-scale data ecosystems. By grounding data construction in explicit lineage structures, our work advances post-training data curation toward a more systematic and controllable paradigm.",
+      "authors": [
+        "Yu Li",
+        "Xiaoran shang",
+        "Qizhi Pei",
+        "Yun Zhu",
+        "Xin Gao",
+        "Honglin Lin",
+        "Zhanping Zhong",
+        "Zhuoshi Pan",
+        "Zheng Liu",
+        "Xiaoyang Wang",
+        "Conghui He",
+        "Dahua Lin",
+        "Feng Zhao",
+        "Lijun Wu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.7532,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.4813,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7261,
+        "relevance": 0.6988,
+        "quality": 0.68,
+        "novelty": 0.8587,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "dataset evidence",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
+        "problem": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution.",
+        "method": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
+        "evidence": "To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Functional time series",
+        "matched": [
+          "analysis",
+          "data"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:icml:2026:71094",
+      "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
+      "abstract": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive. We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples. Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect. Our analysis reveals that repetitive structural data (e.g., LaTeX, XML) acts as a mechanistic catalyst. Furthermore, we observe that interventions targeting induction head formation induce a concurrent change in the model’s in-context learning (ICL) capability. This provides direct causal evidence for the long-standing hypothesis regarding the functional link between induction heads and ICL. Finally, we propose a mechanistic data augmentation pipeline that consistently accelerates circuit convergence across model scales, providing a principled methodology for steering the developmental trajectories of LLMs.",
+      "authors": [
+        "Jianhui Chen",
+        "Yuzhang Luo",
+        "Liangming Pan"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71094",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71094",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.7126,
+          "matched": [
+            "functional",
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.4813,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1229,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1075,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7063,
+        "relevance": 0.6909,
+        "quality": 0.63,
+        "novelty": 0.8119,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
+        "problem": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive.",
+        "method": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
+        "evidence": "Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Functional time series",
+        "matched": [
+          "functional",
+          "analysis",
+          "data"
         ],
         "lane": "llm"
       }
