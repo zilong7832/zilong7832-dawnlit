@@ -181,7 +181,7 @@
       "id": "functional_time_series",
       "name": "Functional time series",
       "description": "Functional time series",
-      "weight": 0.8,
+      "weight": 0.3,
       "status": "emerging",
       "enabled": true,
       "phrases": [
@@ -199,7 +199,7 @@
         "dependent"
       ],
       "exclude": [],
-      "effective_weight": 0.8,
+      "effective_weight": 0.3,
       "feedback_stats": {
         "useful": 0.0,
         "irrelevant": 0.0,
@@ -208,8 +208,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.8,
-        "effective_weight": 0.8,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       }
@@ -218,7 +218,7 @@
       "id": "long_run_covariance_estimation",
       "name": "Long-run covariance estimation",
       "description": "Long-run covariance estimation",
-      "weight": 0.6,
+      "weight": 0.3,
       "status": "emerging",
       "enabled": true,
       "phrases": [
@@ -234,7 +234,7 @@
         "operator"
       ],
       "exclude": [],
-      "effective_weight": 0.6,
+      "effective_weight": 0.3,
       "feedback_stats": {
         "useful": 0.0,
         "irrelevant": 0.0,
@@ -243,8 +243,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       }
@@ -253,7 +253,7 @@
       "id": "bandwidth_selection",
       "name": "Bandwidth selection",
       "description": "Bandwidth selection",
-      "weight": 0.5,
+      "weight": 0.3,
       "status": "emerging",
       "enabled": true,
       "phrases": [
@@ -272,7 +272,7 @@
         "window"
       ],
       "exclude": [],
-      "effective_weight": 0.5,
+      "effective_weight": 0.3,
       "feedback_stats": {
         "useful": 0.0,
         "irrelevant": 0.0,
@@ -281,8 +281,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.5,
-        "effective_weight": 0.5,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       }
@@ -291,7 +291,7 @@
       "id": "time_series_inference",
       "name": "Time series inference",
       "description": "Time series inference",
-      "weight": 0.6,
+      "weight": 0.3,
       "status": "emerging",
       "enabled": true,
       "phrases": [
@@ -312,7 +312,7 @@
         "spectral"
       ],
       "exclude": [],
-      "effective_weight": 0.6,
+      "effective_weight": 0.3,
       "feedback_stats": {
         "useful": 0.0,
         "irrelevant": 0.0,
@@ -321,8 +321,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       }
@@ -369,7 +369,7 @@
       "id": "positive_unlabeled_learning",
       "name": "Positive-unlabeled learning",
       "description": "Positive-unlabeled learning",
-      "weight": 0.6,
+      "weight": 1.0,
       "status": "emerging",
       "enabled": true,
       "phrases": [
@@ -382,7 +382,7 @@
         "positive-unlabeled"
       ],
       "exclude": [],
-      "effective_weight": 0.6,
+      "effective_weight": 1.0,
       "feedback_stats": {
         "useful": 0.0,
         "irrelevant": 0.0,
@@ -391,8 +391,46 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      }
+    },
+    {
+      "id": "conformal_prediction",
+      "name": "Conformal prediction",
+      "description": "Conformal prediction",
+      "weight": 1.0,
+      "status": "emerging",
+      "enabled": true,
+      "phrases": [
+        "Conformal prediction",
+        "uncertainty",
+        "selective evaluation",
+        "interval evaluations"
+      ],
+      "terms": [
+        "conformal",
+        "prediction",
+        "evaluation",
+        "evaluations",
+        "interval",
+        "selective",
+        "uncertainty"
+      ],
+      "exclude": [],
+      "effective_weight": 1.0,
+      "feedback_stats": {
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
         "adjustment": 0.0,
         "active": false
       }
@@ -400,7 +438,7 @@
   ],
   "feedback_tuning_state": {
     "enabled": true,
-    "generated_at": "2026-09-02T14:28:32.388399+00:00",
+    "generated_at": "2026-09-02T14:49:12.338548+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -416,8 +454,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.8,
-        "effective_weight": 0.8,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -430,8 +468,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -444,8 +482,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.5,
-        "effective_weight": 0.5,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -458,8 +496,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -486,8 +524,22 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "conformal_prediction",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
         "adjustment": 0.0,
         "active": false
       }

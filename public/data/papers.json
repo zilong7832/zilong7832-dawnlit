@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-09-02T14:28:32.388399+00:00",
+  "generated_at": "2026-09-02T14:49:12.338548+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 95,
-  "source_total": 95,
+  "source_count": 84,
+  "source_total": 84,
   "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 95,
+  "unseen_source_count": 84,
   "previously_recommended_count": 202,
-  "eligible_count": 3,
+  "eligible_count": 6,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-09-02T14:28:32.388399+00:00",
+    "generated_at": "2026-09-02T14:49:12.338548+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -30,8 +30,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.8,
-        "effective_weight": 0.8,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -44,8 +44,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -58,8 +58,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.5,
-        "effective_weight": 0.5,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -72,8 +72,8 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
         "adjustment": 0.0,
         "active": false
       },
@@ -100,8 +100,22 @@
         "hit_rate": null,
         "smoothed_hit_rate": 0.5,
         "confidence": 0.0,
-        "base_weight": 0.6,
-        "effective_weight": 0.6,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "conformal_prediction",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
         "adjustment": 0.0,
         "active": false
       }
@@ -115,6 +129,89 @@
   "conference_pool_updated_at": null,
   "conference_source_status": {},
   "papers": [
+    {
+      "id": "2609.01535",
+      "title": "Can LLMs Design Video Coding Tools? A Case Study on Planar Mode",
+      "abstract": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications. In particular, we present an empirical case study on the Planar mode, a long-standing intra prediction tool in video coding standards. Our experiments operate within a generation-and-evaluation loop, with the LLM generating new Planar predictors, encoder trials evaluating their coding performance, and the LLM re-generating refined implementations based on the evaluation feedback. We first examine directly replacing the default Planar mode in the Fraunhofer Versatile Video Encoder (VVenC) under its faster preset. Experimental results demonstrate that the LLM-generated mode can outperform the conventional Planar mode on this lightweight toolset, achieving 0.18% bitrate savings with 0.4% complexity overhead on the standard benchmark. We further extend our evaluation to the Enhanced Compression Model (ECM). Leveraging newly introduced directional Planar modes, we investigate two integration strategies: directly replacing them, and introducing the LLM-generated predictor as an additional prediction mode with new syntax elements. The empirical results suggest that both strategies can yield coding gains under a constrained low-resolution setting. Overall, this study offers preliminary evidence and practical insights, highlighting both the potential and open challenges of LLM-based coding tool design.",
+      "authors": [
+        "Yingwen Zhang",
+        "Meng Wang",
+        "Liqiang He",
+        "Shiqi Wang"
+      ],
+      "published": "2026-09-01T17:04:47Z",
+      "updated": "2026-09-01T17:04:47Z",
+      "categories": [
+        "cs.MM",
+        "cs.AI"
+      ],
+      "primary_category": "cs.MM",
+      "abs_url": "https://arxiv.org/abs/2609.01535v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01535v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5525,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.555,
+        "relevance": 0.442,
+        "quality": 0.68,
+        "novelty": 0.8818,
+        "freshness": 0.8706,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In particular, we present an empirical case study on the Planar mode, a long-standing intra prediction tool in video coding standards.",
+        "problem": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications.",
+        "method": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications.",
+        "evidence": "Our experiments operate within a generation-and-evaluation loop, with the LLM generating new Planar predictors, encoder trials evaluating their coding performance, and the LLM re-generating refined implementations based on the evaluation feedback.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      }
+    },
     {
       "id": "2609.01604",
       "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
@@ -153,10 +250,19 @@
           ]
         },
         {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3208,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0838,
+          "score": 0.0314,
           "matched": [
             "data"
           ]
@@ -165,18 +271,18 @@
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.0628,
+          "score": 0.0314,
           "matched": [
             "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.5365,
-        "relevance": 0.3626,
+        "total": 0.4962,
+        "relevance": 0.4037,
         "quality": 0.85,
-        "novelty": 0.8692,
-        "freshness": 0.8781,
+        "novelty": 0.2,
+        "freshness": 0.8761,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
@@ -193,7 +299,7 @@
         "method": "We investigate this procedure mechanistically through an eight-attack perturbation taxonomy across the Readability and Adequacy dimensions of NLG quality, a generation pipeline that produces paired clean and corrupt summaries with controlled error intensity and explicit token-level modification maps, and a four-experiment battery of causal tracing, logit-lens vocabulary projection, and attention-head knockout applied to Themis (Llama-3-8B) and Prometheus (Mistral-7B).",
         "evidence": "We investigate this procedure mechanistically through an eight-attack perturbation taxonomy across the Readability and Adequacy dimensions of NLG quality, a generation pipeline that produces paired clean and corrupt summaries with controlled error intensity and explicit token-level modification maps, and a four-experiment battery of causal tracing, logit-lens vocabulary projection, and attention-head knockout applied to Themis (Llama-3-8B) and Prometheus (Mistral-7B).",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Functional time series.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -210,24 +316,27 @@
       }
     },
     {
-      "id": "2609.01335",
-      "title": "Bandits in Prod: Hyperparameter Optimization at Inference Time",
-      "abstract": "Many production systems can assess a configuration only by using it on live requests and observing noisy feedback. Modern agentic systems are a prominent example, with inference-time choices such as model selection, retrieval depth, prompting strategy, and decoding temperature, yet often with no representative validation data. We formalize this setting as Online Hyperparameter Optimization (OHPO) and cast it as an infinitely many-armed bandit over mixed and conditional search spaces. We introduce IMABO, a general framework that combines any bandit policy for choosing among already sampled configurations with any oracle for proposing new ones. We instantiate it with IMOSS, a restart-free anytime policy whose active set grows as $t^β$, and prove an expected cumulative quantile-regret bound of $O(p_ρ^{-1/β} + T^{(1+β)/2})$, where $β\\in(0,1)$ controls active-set growth and $p_ρ$ lower-bounds the probability that a proposed configuration falls in the top-$ρ$ fraction of the search space. We combine IMOSS with three practical oracles: a Tree-structured Parzen Estimator, an incumbent-mutation oracle driven by a per-coordinate bandit, and a pretrained tabular foundation model, all three improving over the uniform random oracle baseline. IMABO obtains the lowest cumulative regret across diverse OHPO settings, from tuning classical machine-learning models to configuring LLM-based agents.",
+      "id": "2609.01431",
+      "title": "Efficiently Estimating Optimal Hyperparameter Scaling Laws through Power-Law Entropy Search",
+      "abstract": "Optimal hyperparameter scaling laws describe how the best hyperparameters for large language model (LLM) training change with model and data scale, enabling practitioners to predict optimal configurations at production scales without expensive large-scale tuning. However, estimating these scaling laws conventionally requires exhaustive grid searches over thousands of training runs, consuming enormous computational resources. We introduce Power-Law Entropy Search (PLES), a computational cost-aware acquisition function built on multi-fidelity Bayesian optimization that efficiently estimates optimal hyperparameter scaling laws through adaptive experimentation. A key innovation in PLES is that it searches for candidates that reduce the overall uncertainty of a scaling law estimate, instead of optimizing a single objective function. At each iteration, PLES selects the candidate configuration that maximally reduces the uncertainty of the scaling law estimates per unit computational cost, naturally favoring informative small-scale experiments. We evaluate PLES on synthetic benchmarks, surrogate models fitted to real LLM training data, and actual LLM pre-training runs. Across all settings, PLES converges to accurate optimal hyperparameter scaling laws using less than one-tenth of the computational budget required by conventional grid search and other baselines.",
       "authors": [
-        "Louis Abraham",
-        "Tuan-Anh Nguyen",
-        "Nicolas Devatine"
+        "Zhiliang Chen",
+        "Sebastian Ament",
+        "David Eriksson",
+        "Maximilian Balandat",
+        "Eytan Bakshy",
+        "Jihao Andreas Lin"
       ],
-      "published": "2026-09-01T14:48:08Z",
-      "updated": "2026-09-01T14:48:08Z",
+      "published": "2026-09-01T15:41:59Z",
+      "updated": "2026-09-01T15:41:59Z",
       "categories": [
         "cs.LG",
         "cs.AI"
       ],
       "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.01335v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.01335v1",
-      "comment": "32 pages, 14 figures",
+      "abs_url": "https://arxiv.org/abs/2609.01431v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01431v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -235,81 +344,69 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "llm",
-        "foundation model"
+        "large language model",
+        "language model",
+        "llm"
       ],
       "topics": [
         {
-          "id": "time_series_inference",
-          "name": "Time series inference",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.3182,
+          "score": 0.3726,
           "matched": [
-            "inference",
-            "time",
-            "data"
+            "uncertainty"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.3042,
+          "score": 0.0648,
           "matched": [
-            "time",
             "data"
           ]
         },
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "time_series_inference",
+          "name": "Time series inference",
           "status": "emerging",
-          "score": 0.194,
+          "score": 0.0648,
           "matched": [
-            "learning",
-            "machine"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.0628,
-          "matched": [
-            "learning"
+            "data"
           ]
         },
         {
           "id": "bandwidth_selection",
           "name": "Bandwidth selection",
           "status": "emerging",
-          "score": 0.0541,
+          "score": 0.0349,
           "matched": [
-            "selection"
+            "adaptive"
           ]
         }
       ],
       "scores": {
-        "total": 0.4689,
-        "relevance": 0.3542,
-        "quality": 0.54,
-        "novelty": 0.8768,
-        "freshness": 0.8591,
+        "total": 0.4445,
+        "relevance": 0.324,
+        "quality": 0.53,
+        "novelty": 0.8476,
+        "freshness": 0.8624,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "baseline comparison",
-        "formal bound",
-        "quantitative results"
+        "benchmark evaluation",
+        "experiments"
       ],
       "summary": {
-        "takeaway": "We introduce IMABO, a general framework that combines any bandit policy for choosing among already sampled configurations with any oracle for proposing new ones.",
-        "problem": "Many production systems can assess a configuration only by using it on live requests and observing noisy feedback.",
-        "method": "We introduce IMABO, a general framework that combines any bandit policy for choosing among already sampled configurations with any oracle for proposing new ones.",
-        "evidence": "We instantiate it with IMOSS, a restart-free anytime policy whose active set grows as $t^β$, and prove an expected cumulative quantile-regret bound of $O(p_ρ^{-1/β} + T^{(1+β)/2})$, where $β\\in(0,1)$ controls active-set growth and $p_ρ$ lower-bounds the probability that a proposed configuration falls in the top-$ρ$ fraction of the search space.",
+        "takeaway": "We introduce Power-Law Entropy Search (PLES), a computational cost-aware acquisition function built on multi-fidelity Bayesian optimization that efficiently estimates optimal hyperparameter scaling laws through adaptive experimentation.",
+        "problem": "Optimal hyperparameter scaling laws describe how the best hyperparameters for large language model (LLM) training change with model and data scale, enabling practitioners to predict optimal configurations at production scales without expensive large-scale tuning.",
+        "method": "We introduce Power-Law Entropy Search (PLES), a computational cost-aware acquisition function built on multi-fidelity Bayesian optimization that efficiently estimates optimal hyperparameter scaling laws through adaptive experimentation.",
+        "evidence": "We introduce Power-Law Entropy Search (PLES), a computational cost-aware acquisition function built on multi-fidelity Bayesian optimization that efficiently estimates optimal hyperparameter scaling laws through adaptive experimentation.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Time series inference, Functional time series.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -318,33 +415,218 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Time series inference",
+        "topic": "Conformal prediction",
         "matched": [
-          "inference",
-          "time",
-          "data"
+          "uncertainty"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2609.01320",
-      "title": "Automated Event Log Generation from Unstructured Text Using Finetuned LLMs",
-      "abstract": "Process mining (PM) provides a powerful framework for discovering and optimizing operational processes from event data. However, the efficacy of PM techniques is strictly predicated on the availability of structured event logs. Thus far, event logs have often been laboriously created by domain and process mining experts. This costly effort causes large portions of organizational knowledge, including incident tickets, manuals, and textual reports, to remain underutilized. We address this bottleneck by investigating the efficacy of Large Language Models (LLMs) as automated data translators. We propose a scalable framework that leverages LLMs as data translators to bridge the gap between unstructured textual resources and structured event data. We finetune LLMs on a newly created text-to-log dataset, demonstrating that the resulting models can extract high-fidelity event logs from unstructured resources. Our results show that this finetuning approach outperforms few-shot or zero-shot prompting by a large amount, highlighting finetuning as a necessary pre-condition for generating reliable event data. We conclude that our method provides a promising pipeline for making previously unused data available to process mining ecosystems, effectively expanding the possibilities of using PM to further investigate organizational workflows.",
+      "id": "2609.01369",
+      "title": "How Correct Is Your Answer? A Semantic Correctness Framework for Open QA Evaluation",
+      "abstract": "Reliable evaluation of open-ended question answering remains a bottleneck for measuring answer correctness of modern LLMs. Unlike multiple-choice tasks, free-form answers may be correct in many surface forms and may fail in qualitatively different ways, including incompleteness, contradiction, overgeneration, and endorsement of false premises. Existing judgment-based and similarity-based metrics often collapse these distinctions. We address this gap with three reusable contributions. First, we introduce a semantic correctness taxonomy that assigns open-ended answers to eight ordered classes, separating verbose-but-correct answers from those contaminated by hallucinated content. Second, we release CAP-Correctness, an 8.8k-example benchmark spanning widely used QA datasets, and CAP-Statements, an 11k-example dataset for converting question-answer pairs into declarative statements for natural language inference (NLI) training and statement-based evaluation. Third, we introduce CAP (Context-Aware Precision), a reference-based metric that scores question-conditioned statements using bidirectional NLI. Under a monotonicity protocol testing whether metrics respect the taxonomy's intended ordering, CAP outperforms established baselines.",
       "authors": [
-        "Maximilian Seeth",
-        "Gabriel Marques Tavares",
-        "Daniel Schuster"
+        "Elitsa Yotkova",
+        "Violeta Kastreva",
+        "Petar Velkov",
+        "Hristo Boyanov",
+        "Dimitar Dimitrov",
+        "Ivan Koychev",
+        "Preslav Nakov"
       ],
-      "published": "2026-09-01T14:39:37Z",
-      "updated": "2026-09-01T14:39:37Z",
+      "published": "2026-09-01T15:06:39Z",
+      "updated": "2026-09-01T15:06:39Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.01369v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01369v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3357,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.0929,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0289,
+          "matched": [
+            "inference"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4371,
+        "relevance": 0.2929,
+        "quality": 0.59,
+        "novelty": 0.8576,
+        "freshness": 0.8589,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "First, we introduce a semantic correctness taxonomy that assigns open-ended answers to eight ordered classes, separating verbose-but-correct answers from those contaminated by hallucinated content.",
+        "problem": "Reliable evaluation of open-ended question answering remains a bottleneck for measuring answer correctness of modern LLMs.",
+        "method": "First, we introduce a semantic correctness taxonomy that assigns open-ended answers to eight ordered classes, separating verbose-but-correct answers from those contaminated by hallucinated content.",
+        "evidence": "Under a monotonicity protocol testing whether metrics respect the taxonomy's intended ordering, CAP outperforms established baselines.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2609.01337",
+      "title": "LEAP: Likelihood Elicitation and Aggregation for LLM-based Probabilistic Forecasting",
+      "abstract": "LLM-based forecasting systems have improved on real-world tasks such as financial markets and sports outcomes, largely through stronger search and tool use. Many systems still ask an LLM to read all collected evidence together and produce the final forecast. We call this design Monolithic Prediction. It can obscure how individual evidence items affect the result and collapse uncertainty across competing outcomes. We propose LEAP (Likelihood Elicitation and Aggregation for Probabilistic forecasting), which reorganizes how collected evidence is used in the prediction stage. LEAP examines each evidence item separately and elicits likelihood parameters that describe its implications for the target. An explicit prior and a deterministic probabilistic model then combine these likelihoods into a posterior distribution. This procedure supports continuous, single-choice, and multi-choice forecasts while preserving reproducible evidence contributions. We build a benchmark covering forecasting, information-seeking, and browsing tasks, and evaluate LEAP on our own agent loop and several agent CLI frameworks. Given the same evidence, LEAP improves most prediction and calibration metrics across models and remains stronger under controlled comparisons of prior access, inference budget, and aggregation.",
+      "authors": [
+        "Yufei Chen",
+        "Yiran Zhao",
+        "Xiaogang Xu",
+        "Qipeng Xie",
+        "Jiafei Wu",
+        "Zhe Liu"
+      ],
+      "published": "2026-09-01T14:49:19Z",
+      "updated": "2026-09-01T14:49:19Z",
       "categories": [
         "cs.AI"
       ],
       "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.01320v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.01320v1",
-      "comment": "",
+      "abs_url": "https://arxiv.org/abs/2609.01337v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01337v1",
+      "comment": "Accepted to the 2026 Conference on Empirical Methods in Natural Language Processing (EMNLP 2026). 20 pages, 3 figures, and 15 tables. Code: https://github.com/layingfish/LEAP",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3923,
+          "matched": [
+            "uncertainty",
+            "prediction"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0326,
+          "matched": [
+            "inference"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4341,
+        "relevance": 0.3204,
+        "quality": 0.48,
+        "novelty": 0.8699,
+        "freshness": 0.8572,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "reproducibility"
+      ],
+      "summary": {
+        "takeaway": "We propose LEAP (Likelihood Elicitation and Aggregation for Probabilistic forecasting), which reorganizes how collected evidence is used in the prediction stage.",
+        "problem": "LLM-based forecasting systems have improved on real-world tasks such as financial markets and sports outcomes, largely through stronger search and tool use.",
+        "method": "We propose LEAP (Likelihood Elicitation and Aggregation for Probabilistic forecasting), which reorganizes how collected evidence is used in the prediction stage.",
+        "evidence": "Given the same evidence, LEAP improves most prediction and calibration metrics across models and remains stronger under controlled comparisons of prior access, inference budget, and aggregation.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "prediction"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2609.01352",
+      "title": "CHARM: Character Hallucination for Multicultural Role Play Benchmark",
+      "abstract": "Role-playing large language models (LLMs) are expected to adopt a character's style while also respecting that character's knowledge boundaries. Prior evaluations detect character hallucination but rarely distinguish whether errors arise from failure to recognize a boundary or from failure to comply despite recognition. We introduce CHARM, a multicultural benchmark of 40 real and fictional characters drawn from five cultural-linguistic regions, and validated by native reviewers. It probes two boundary types, Temporal (historical vs. modern) and Cross-Universe (entities outside a character's narrative or historical universe), using abstention-enabled multiple-choice questions. We propose a two-stage evaluation that separates Boundary-Awareness (explicit recognition that a query is out of scope) from Boundary-Compliance (abstention when answering concrete questions). Evaluations across six LLMs show that hallucination is driven predominantly by compliance failures. Models frequently acknowledge that a query lies outside the character's knowledge yet still provide factual, out-of-character answers. By re-posing the same questions to the target character, we confirm that a large fraction of these cases are verified parametric overrides; the model stores the relevant fact but fails to suppress it. We also observe systematic cultural variation in these failures, consistent with imbalances in how characters from different regions are represented in model knowledge.",
+      "authors": [
+        "Sunkyung Han",
+        "Nahyeon Park",
+        "Gaeun Seo",
+        "Seunghyun Yoon",
+        "JinYeong Bak"
+      ],
+      "published": "2026-09-01T14:57:14Z",
+      "updated": "2026-09-01T14:57:14Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.01352v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01352v1",
+      "comment": "16 pages, 1 figure. Accepted to Findings of EMNLP 2026",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -360,52 +642,37 @@
       ],
       "topics": [
         {
-          "id": "functional_time_series",
-          "name": "Functional time series",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.3043,
+          "score": 0.3614,
           "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.2282,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "reliable"
+            "evaluation",
+            "evaluations"
           ]
         }
       ],
       "scores": {
-        "total": 0.407,
-        "relevance": 0.3186,
-        "quality": 0.37,
-        "novelty": 0.8298,
-        "freshness": 0.8582,
+        "total": 0.4272,
+        "relevance": 0.2891,
+        "quality": 0.54,
+        "novelty": 0.8837,
+        "freshness": 0.8579,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "dataset evidence"
+        "benchmark evaluation",
+        "formal bound",
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "We propose a scalable framework that leverages LLMs as data translators to bridge the gap between unstructured textual resources and structured event data.",
-        "problem": "Process mining (PM) provides a powerful framework for discovering and optimizing operational processes from event data.",
-        "method": "Process mining (PM) provides a powerful framework for discovering and optimizing operational processes from event data.",
-        "evidence": "Our results show that this finetuning approach outperforms few-shot or zero-shot prompting by a large amount, highlighting finetuning as a necessary pre-condition for generating reliable event data.",
+        "takeaway": "We introduce CHARM, a multicultural benchmark of 40 real and fictional characters drawn from five cultural-linguistic regions, and validated by native reviewers.",
+        "problem": "Role-playing large language models (LLMs) are expected to adopt a character's style while also respecting that character's knowledge boundaries.",
+        "method": "We introduce CHARM, a multicultural benchmark of 40 real and fictional characters drawn from five cultural-linguistic regions, and validated by native reviewers.",
+        "evidence": "We introduce CHARM, a multicultural benchmark of 40 real and fictional characters drawn from five cultural-linguistic regions, and validated by native reviewers.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -414,9 +681,10 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Functional time series",
+        "topic": "Conformal prediction",
         "matched": [
-          "data"
+          "evaluation",
+          "evaluations"
         ],
         "lane": "llm"
       }
