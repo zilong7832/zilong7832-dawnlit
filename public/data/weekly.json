@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T20:23:21.967451+00:00",
+  "generated_at": "2026-09-02T14:28:32.388399+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:1334-main",
@@ -1536,30 +1536,34 @@
       "recommended_at": "2026-09-01T20:23:21.967451+00:00"
     },
     {
-      "id": "2608.24492",
-      "title": "When Do Supervised UQ Ensembles Improve LLM Hallucination Detection? A Robustness Study",
-      "abstract": "Uncertainty quantification (UQ) methods are widely used for hallucination detection in large language models (LLMs) in closed-book settings where ground-truth evidence is unavailable at inference time. Prior work has proposed combining UQ signals via learned ensembles, but empirical investigations into the robustness of these ensembles are limited. We study a supervised ensembling framework that trains a classifier over heterogeneous UQ-based scorer outputs on a small, domain-specific dataset of labeled LLM responses, then applies it to out-of-sample hallucination classification without retrieval, tools, or reference documents. Across four LLMs, nine datasets, and three generation regimes (short-form QA, long-form generation, and code generation), we provide a systematic robustness analysis along three axes: sample efficiency, in-domain dataset transfer, and generation regime dependence. We find that supervised ensembles outperform the best individual scorer in 30 of 32 settings, with gains realized from as few as 100 labeled instances. Ensembles retain most of their advantage in cases of in-domain transfer under distribution shift, outperforming the best non-ensemble scorer in 23 of 28 transfer settings. Sampling-based black-box ensembles are nearly as effective as full ensembles, while single-generation white-box ensembles offer limited benefit.",
+      "id": "conf:iclr:2026:10009352",
+      "title": "How Learning Rate Decay Wastes Your Best Data in Curriculum-Based LLM Pretraining",
+      "abstract": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation. A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric. However, prior studies have reported limited improvements from such curriculum-based pretraining strategies. This work identifies a critical factor constraining these methods: the incompatibility between the ascending data quality order and the decaying learning rate (LR) schedule. We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules. Our experiments show this incompatibility can be mitigated by two simple strategies: (1) employing a more moderate LR decay schedule, where the final LR is only moderately smaller than the peak LR, and (2) replacing LR decay with model averaging, i.e., computing a weighted average of the final few checkpoints. By combining these strategies, we improve the average score on a suite of standard benchmarks by 1.64% over random shuffling, without additional data refinement. Validated on 1.5B-parameter models trained over 30B tokens with various data-quality metrics, our findings call for a re-evaluation of curriculum-based LLM pretraining and underscore the potential of co-designing data curricula with optimization methods.",
       "authors": [
-        "Mohit Singh Chauhan",
-        "Vipin Gyanchandani",
-        "Dylan Bouchard"
+        "Kairong Luo",
+        "Zhenbo Sun",
+        "Haodong Wen",
+        "Xinyu Shi",
+        "Jiarui Cui",
+        "Chenyi Dang",
+        "Kaifeng Lyu",
+        "Wenguang Chen"
       ],
-      "published": "2026-08-25T12:43:07Z",
-      "updated": "2026-08-25T12:43:07Z",
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
       "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
+        "ICLR 2026",
+        "Oral"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.24492v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.24492v1",
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10009352",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009352",
       "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
         "large language model",
@@ -1570,146 +1574,60 @@
       ],
       "topics": [
         {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.585,
-          "matched": [
-            "robustness",
-            "uncertainty",
-            "hallucination",
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
+          "id": "llm_data_selection",
+          "name": "Data selection for LLMs",
           "status": "emerging",
-          "score": 0.5199,
+          "score": 0.7302,
           "matched": [
-            "robustness"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.4426,
-          "matched": [
-            "llm"
+            "data curation",
+            "curriculum",
+            "data quality",
+            "curation",
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.6715,
-        "relevance": 0.6605,
-        "quality": 0.59,
-        "novelty": 0.8075,
-        "freshness": 0.8682,
-        "feedback_adjustment": -0.0129,
+        "total": 0.6681,
+        "relevance": 0.5842,
+        "quality": 0.78,
+        "novelty": 0.8236,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "dataset evidence",
-        "quantitative results"
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
       ],
+      "summary": {
+        "takeaway": "We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules.",
+        "problem": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation.",
+        "method": "A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric.",
+        "evidence": "However, prior studies have reported limited improvements from such curriculum-based pretraining strategies.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Data selection for LLMs.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Trustworthy LLM",
+        "topic": "Data selection for LLMs",
         "matched": [
-          "robustness",
-          "uncertainty",
-          "hallucination",
-          "llm"
+          "data curation",
+          "curriculum",
+          "data quality",
+          "curation"
         ],
         "lane": "llm"
       },
-      "summary": {
-        "takeaway": "Supervised ensembles of heterogeneous UQ scorers consistently improve hallucination detection over the best single scorer, even with as few as 100 labeled examples.",
-        "problem": "Detecting hallucinations in closed‑book LLM outputs without retrieval or reference documents.",
-        "method": "Train a classifier on a vector of black‑box, white‑box, and reflexive UQ scores from a small domain‑specific labeled set and apply it to out‑of‑sample responses.",
-        "evidence": "Ensembles outperform the top individual scorer in 30 of 32 settings by AUROC and retain advantage in 23 of 28 distribution‑shift transfer cases.",
-        "limitations": "Study is limited to four closed‑source LLMs, two factoid long‑form domains, Python code, and does not evaluate cross‑domain or open‑weight model scorers.",
-        "why_for_you": "Matches your interest in trustworthy LLMs by providing a sample‑efficient, robust hallucination detector.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "Supervised UQ ensembles beat the best single scorer in 30/32 settings, with AUROC gains from 100 labeled examples."
-          },
-          {
-            "icon": "⚙️",
-            "text": "Train logistic regression / random forest / gradient boosting on heterogeneous black‑box, white‑box, and reflexive scorer outputs."
-          },
-          {
-            "icon": "📊",
-            "text": "Ensembles retain advantage in 23/28 distribution‑shift transfer cases, but evaluation covers only four closed‑source LLMs and narrow domains."
-          }
-        ],
-        "overview": "The paper investigates a supervised ensembling framework that learns to combine diverse uncertainty quantification (UQ) signals for hallucination detection in closed‑book LLM generation. By training simple classifiers on vectors of black‑box, white‑box, and reflexive scorer outputs, the authors evaluate sample efficiency, in‑domain transfer under distribution shift, and generation‑regime dependence across four LLMs, nine datasets, and three output formats. Results show ensembles dominate individual scorers in most settings, with modest labeled data requirements, while black‑box‑only ensembles approach full‑ensemble performance. Limitations include a narrow model and task scope.",
-        "methodology": [
-          {
-            "title": "Supervised ensemble training",
-            "detail": "A classifier (logistic regression, random forest, or gradient boosting) is trained on K‑dimensional vectors of UQ scores s1(y)…sK(y) ∈ [0,1]K derived from heterogeneous scorers; training subsets range from 0.1N to 0.7N of the labeled data."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Signal combination",
-            "detail": "Supervised learning learns weighted combinations of complementary UQ signals, allowing the model to exploit strengths of black‑box consistency, white‑box token probabilities, and reflexive self‑judgments, thereby improving discrimination between truthful and hallucinated outputs."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Empirical evaluation",
-            "detail": "Four LLMs (Gemini‑2.5‑Flash, Gemini‑2.5‑Pro, GPT‑4o, GPT‑4o‑mini) are tested on nine benchmarks covering short‑form math, factual QA, reading comprehension, Python code generation (LiveCodeBench), and long‑form factoid QA (rivers, mushrooms). Metrics include AUROC and expected calibration error (ECE); baselines are the best individual scorer per setting."
-          }
-        ],
-        "findings": [
-          {
-            "title": "In‑distribution superiority",
-            "detail": "With the full training sample (0.7N), ensembles outperform the best individual scorer in 30 of 32 LLM‑dataset settings by AUROC and in 29 of 32 by ECE."
-          },
-          {
-            "title": "Sample efficiency",
-            "detail": "Performance gains appear with as few as 100 labeled instances, as shown by AUROC curves across training sizes."
-          },
-          {
-            "title": "Transfer robustness",
-            "detail": "Under in‑domain distribution shift, ensembles remain superior in 23 of 28 transfer settings."
-          },
-          {
-            "title": "Black‑box vs full ensembles",
-            "detail": "Sampling‑based black‑box ensembles achieve nearly the same AUROC as full ensembles, whereas white‑box‑only ensembles provide limited benefit."
-          }
-        ],
-        "contributions": [
-          "Systematic robustness analysis of supervised UQ ensembles across sample efficiency, distribution shift, and generation regimes."
-        ],
-        "limitations": [
-          "Only four closed‑source LLMs from two providers are evaluated; results may not generalize to open‑weight models.",
-          "Long‑form evaluation is limited to two factoid domains and code experiments to Python competitive‑programming tasks.",
-          "Cross‑domain, cross‑LLM, and internal‑state scorer combinations are not explored."
-        ],
-        "open_questions": [
-          "How do supervised ensembles perform with open‑weight models and internal‑state UQ signals?",
-          "Can ensembles trained on one domain or LLM transfer effectively to entirely different domains or other model families?",
-          "What is the impact of more diverse long‑form generation tasks (e.g., summarization, multi‑turn dialogue) on ensemble efficacy?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "recommended_at": "2026-08-26T10:51:18.938084+00:00"
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
     }
   ]
 }
