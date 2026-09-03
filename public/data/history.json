@@ -1,6 +1,586 @@
 {
-  "generated_at": "2026-09-02T14:49:12.338548+00:00",
+  "generated_at": "2026-09-03T14:33:42.337661+00:00",
   "papers": [
+    {
+      "id": "2609.02745",
+      "title": "Incremental Pooled LLM Evaluation for Cost-Effective Retrieval Model Selection",
+      "abstract": "Selecting a retrieval model for a production RAG system requires reliable comparative evaluation, but obtaining relevance judgments at scale is expensive and difficult to repeat as new candidate systems arrive. We study pooled LLM evaluation, in which an LLM judges the union of documents retrieved by the current set of candidate systems, and the pool is then expanded incrementally as new systems are introduced by judging only the new documents they contribute. These judgments are reused to evaluate all systems on a common basis. We validate this approach on four retrieval benchmarks with 11 systems spanning dense, sparse, and hybrid configurations, and deploy it to compare 62 retrieval configurations for a financial news QA system. Pooled LLM rankings correlate strongly with gold-standard evaluation across datasets, and 97% of pairwise system orderings are preserved once bootstrap uncertainty in the qrels is taken into account. In production, document overlap yields 65-80% judgment reuse and up to 4.9x lower evaluation cost, allowing teams to benchmark new retrieval candidates without re-judging previously assessed documents. These results suggest pooled LLM evaluation is a practical and cost-effective workflow for incremental retrieval model selection in deployed systems.",
+      "authors": [
+        "Max Nelson",
+        "Hanoz Bhathena",
+        "Aviral Joshi",
+        "Saket Sharma"
+      ],
+      "published": "2026-09-02T15:47:49Z",
+      "updated": "2026-09-02T15:47:49Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL"
+      ],
+      "primary_category": "cs.IR",
+      "abs_url": "https://arxiv.org/abs/2609.02745v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02745v1",
+      "comment": "10 pages, 1 figure",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5045,
+          "matched": [
+            "uncertainty",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1047,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0971,
+          "matched": [
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5176,
+        "relevance": 0.444,
+        "quality": 0.52,
+        "novelty": 0.8179,
+        "freshness": 0.8645,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Selecting a retrieval model for a production RAG system requires reliable comparative evaluation, but obtaining relevance judgments at scale is expensive and difficult to repeat as new candidate systems arrive.",
+        "problem": "Selecting a retrieval model for a production RAG system requires reliable comparative evaluation, but obtaining relevance judgments at scale is expensive and difficult to repeat as new candidate systems arrive.",
+        "method": "We study pooled LLM evaluation, in which an LLM judges the union of documents retrieved by the current set of candidate systems, and the pool is then expanded incrementally as new systems are introduced by judging only the new documents they contribute.",
+        "evidence": "These judgments are reused to evaluate all systems on a common basis.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
+    },
+    {
+      "id": "2609.02685",
+      "title": "DKL: Decoupled Knowledge Learning for Instruction-Tuned Language Models",
+      "abstract": "RAG has become the de facto method for incorporating new, corpus-specific knowledge into an instruction following LLM (Instruct LLM). Although RAG-based prompting improves factual grounding, it fails when retrieval is incorrect or incomplete, leading to hallucinations. Finetuning methods such as RAFT and PA-RAG enhance RAG by injecting new knowledge into the model's parameters, but require generating a massive amount of synthetic QA that covers the entire corpus. Extended Pre-Training (EPT) on the text corpus avoids the need for comprehensive synthetic data generation but compromises an Instruct LLM's instruction-following capabilities, necessitating instruction fine-tuning (IFT) after pre-training. However, IFT is costly and may be infeasible due to the unavailability of an instruction-tuning corpus. In this work, we propose DKL-Decoupled Knowledge Learning for Instruction-Tuned Language Models. Instead of doing EPT on the Instruct LLM, DKL performs EPT on its corresponding base LLM to infuse new knowledge. These knowledge infused weights are then merged with the Instruct LLM, imparting new knowledge without affecting their instruction-following capabilities. DKL is a lightweight method that avoids expensive instruction fine-tuning and relies on model merging to infuse the new knowledge into the Instruct LLM without destroying its instruction following capabilities. Empirical results show that DKL improves RAG accuracy from 54.17 to 79.26 on retrieval failure cases, while outperforming prior approaches with substantially less training data.",
+      "authors": [
+        "Kushagra Bhushan",
+        "Meghanadh Pulivarthi",
+        "Sai Krishna Reddy Sathi",
+        "Gaurav Pandey",
+        "Sonam Gupta",
+        "Vineet Kumar",
+        "Jaydeep Sen",
+        "Yatin Nandwani",
+        "Sachindra Joshi",
+        "Dinesh Raghu"
+      ],
+      "published": "2026-09-02T14:53:50Z",
+      "updated": "2026-09-02T14:53:50Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.02685v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02685v1",
+      "comment": "20 pages, 4 figures, 15 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4328,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4328,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0779,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0779,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5021,
+        "relevance": 0.4484,
+        "quality": 0.41,
+        "novelty": 0.8574,
+        "freshness": 0.8591,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this work, we propose DKL-Decoupled Knowledge Learning for Instruction-Tuned Language Models.",
+        "problem": "RAG has become the de facto method for incorporating new, corpus-specific knowledge into an instruction following LLM (Instruct LLM).",
+        "method": "In this work, we propose DKL-Decoupled Knowledge Learning for Instruction-Tuned Language Models.",
+        "evidence": "Although RAG-based prompting improves factual grounding, it fails when retrieval is incorrect or incomplete, leading to hallucinations.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
+    },
+    {
+      "id": "2609.02677",
+      "title": "Eliciting ESG Preferences for Reinforcement Learning-Based Portfolio Optimization",
+      "abstract": "Modern portfolio management increasingly demands a balance between traditional risk-adjusted returns and strict Environmental, Social, and Governance (ESG) mandates. Current Reinforcement Learning (RL) approaches typically optimize for a single ESG provider, neglecting the significant divergence in rating methodologies across the industry and the unintuitive nature of manually weighting conflicting objectives. This paper addresses these limitations by formulating ESG-aware portfolio optimization as a Multi-Objective Reinforcement Learning (MORL) problem that simultaneously incorporates ratings from three distinct ESG agencies. To bridge the gap between high-dimensional algorithmic trade-offs and human decision-making, we integrate a Preference Elicitation framework using Gaussian Processes. This system enables practitioners to infer their latent utility functions through intuitive pairwise comparisons of candidate portfolios based on their Sharpe ratios and aggregate ESG scores. We systematically evaluate our framework by employing Large Language Model (LLM) personas to simulate Portfolio Managers operating under varied regional contexts. Empirical results using historical market data reveal that regional backgrounds fundamentally shift the derived preference weights. For instance, European-based personas tend to prioritize ESG alignment over financial returns, while Texas-based personas favor risk-adjusted performance. This work offers a highly adaptable framework that successfully aligns multi-objective algorithmic trading with diverse, real-world human sustainability preferences.",
+      "authors": [
+        "Giovanni Dispoto",
+        "Marcello Restelli",
+        "Carmine Ventre"
+      ],
+      "published": "2026-09-02T14:48:03Z",
+      "updated": "2026-09-02T14:48:03Z",
+      "categories": [
+        "q-fin.PM",
+        "cs.CE",
+        "cs.LG"
+      ],
+      "primary_category": "q-fin.PM",
+      "abs_url": "https://arxiv.org/abs/2609.02677v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02677v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.423,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4229,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0349,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0349,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4756,
+        "relevance": 0.43,
+        "quality": 0.33,
+        "novelty": 0.872,
+        "freshness": 0.8586,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [],
+      "summary": {
+        "takeaway": "Modern portfolio management increasingly demands a balance between traditional risk-adjusted returns and strict Environmental, Social, and Governance (ESG) mandates.",
+        "problem": "Modern portfolio management increasingly demands a balance between traditional risk-adjusted returns and strict Environmental, Social, and Governance (ESG) mandates.",
+        "method": "To bridge the gap between high-dimensional algorithmic trade-offs and human decision-making, we integrate a Preference Elicitation framework using Gaussian Processes.",
+        "evidence": "This paper addresses these limitations by formulating ESG-aware portfolio optimization as a Multi-Objective Reinforcement Learning (MORL) problem that simultaneously incorporates ratings from three distinct ESG agencies.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
+    },
+    {
+      "id": "2609.02783",
+      "title": "EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction",
+      "abstract": "Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands of dollars, a price paid repeatedly across iterative development cycles. Prior efforts, centered on benchmark distillation, reduce the number of evaluation tasks but leave the cost of executing each retained task untouched. In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task. Our key insight is that an agent's final outcome is often evident from its intermediate behavior well before execution completes. We instantiate this idea in EarlyEval, a lightweight framework that trains a pair of LightGBM success and failure classifiers over behavioral, textual, and reference-solution features, and halts an agent run the moment either classifier crosses a calibrated confidence threshold, adding negligible per-step overhead. Across three benchmarks, SWE-bench Verified, TerminalBench, and Toolathlon, EarlyEval can eliminate 13%-26% of agent steps and up to 44.1% input tokens and 29.4% output tokens at 89%-97% prediction accuracy, while perturbing per-agent resolve rates by only one to two percentage points on average.",
+      "authors": [
+        "Yuling Shi",
+        "Zhensu Sun",
+        "Junsen Dong",
+        "Chengcheng Wan",
+        "David Lo",
+        "Xiaodong Gu"
+      ],
+      "published": "2026-09-02T16:15:18Z",
+      "updated": "2026-09-02T16:15:18Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.02783v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02783v1",
+      "comment": "Code and data available at https://github.com/inphotoo/earlyeval",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4696,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4684,
+        "relevance": 0.3757,
+        "quality": 0.48,
+        "novelty": 0.8481,
+        "freshness": 0.8672,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task.",
+        "problem": "Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands of dollars, a price paid repeatedly across iterative development cycles.",
+        "method": "In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task.",
+        "evidence": "In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
+    },
+    {
+      "id": "2609.02805",
+      "title": "Large Language Models (LLMs) for Telecom Root Cause Analysis (RCA): A Structured Reasoning Framework for Evidence-Grounded Diagnosis",
+      "abstract": "Root cause analysis (RCA) is a critical task in telecom network operations, but diagnosing performance degradations in modern 5G and emerging 6G networks remains challenging due to complex cross-layer dependencies. While large language models (LLMs) offer promising capabilities for reasoning and knowledge integration, directly applying vanilla LLMs to telecom RCA often leads to hallucination, unstable reasoning, and poor alignment with structured network evidence. This work first reviews the evolution of telecom RCA from rule-based and machine learning (ML) approaches to emerging LLM-enabled techniques, and provides an overview of recent paradigms, including structured reasoning, retrieval-augmented knowledge grounding, agentic orchestration, and verifiable reasoning. Building upon these insights, we propose a structured reasoning framework for LLM-enabled telecom RCA that aligns diagnostic reasoning with telecom-specific evidence and domain knowledge. The proposed approach first organizes heterogeneous network telemetry into canonical contexts, and then enforces decision-path reasoning during diagnosis, and finally generates evidence-grounded explanations for reliable fault identification. Experimental results on two 5G RCA datasets, TeleLogs and TelecomTS, demonstrate that the proposed framework consistently improves diagnostic accuracy and decision consistency compared with baseline techniques. These cross-dataset results highlight the importance of structured reasoning design for practical LLM-based RCA systems in next-generation telecom networks.",
+      "authors": [
+        "Hao Zhou",
+        "Mandar Kulkarni",
+        "Hao Chen",
+        "Yan Xin",
+        "Charlie",
+        "Zhang"
+      ],
+      "published": "2026-09-02T16:43:22Z",
+      "updated": "2026-09-02T16:43:22Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.02805v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02805v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3883,
+          "matched": [
+            "learning",
+            "machine",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1529,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1356,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4661,
+        "relevance": 0.3683,
+        "quality": 0.5,
+        "novelty": 0.832,
+        "freshness": 0.87,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "Building upon these insights, we propose a structured reasoning framework for LLM-enabled telecom RCA that aligns diagnostic reasoning with telecom-specific evidence and domain knowledge.",
+        "problem": "Root cause analysis (RCA) is a critical task in telecom network operations, but diagnosing performance degradations in modern 5G and emerging 6G networks remains challenging due to complex cross-layer dependencies.",
+        "method": "Building upon these insights, we propose a structured reasoning framework for LLM-enabled telecom RCA that aligns diagnostic reasoning with telecom-specific evidence and domain knowledge.",
+        "evidence": "Experimental results on two 5G RCA datasets, TeleLogs and TelecomTS, demonstrate that the proposed framework consistently improves diagnostic accuracy and decision consistency compared with baseline techniques.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
+    },
+    {
+      "id": "2609.02817",
+      "title": "Cliff: Learning Process Rewards from the First Mistake",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guidance on intermediate reasoning processes. Existing approaches such as process reward modeling and on-policy distillation introduce additional constraints, such as reliance on a specialized reward model or assuming identical reasoning patterns between teacher and student. Nevertheless, we observe that once a reasoning process first goes wrong, evaluating the subsequent reasoning provides limited additional information, as it is already conditioned on an invalid prefix. Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout. As a result, the rollout is naturally decomposed into two parts: a correct prefix and an incorrect suffix. Cliff then converts this signal into token-level advantages, assigning positive advantages for the correct prefix and negative feedback afterward. Experiments across 12 different scenarios demonstrate that Cliff consistently improves reasoning performance, outperforming on-policy distillation by 15% and standard GRPO by 7%, even with teachers of modest capability. Furthermore, we analyse the role of ``ground truth'' in Cliff and investigate its training dynamics. These results establish Cliff as a simple, general and effective approach for improving RLVR with richer, fine-grained supervision.",
+      "authors": [
+        "Peixuan Han",
+        "Runhui Wang",
+        "Ketan Ramaneti",
+        "Jie Hao",
+        "Gerald Friedland",
+        "Chris Kong"
+      ],
+      "published": "2026-09-02T17:03:42Z",
+      "updated": "2026-09-02T17:03:42Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.02817v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02817v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3597,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3597,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4576,
+        "relevance": 0.3597,
+        "quality": 0.47,
+        "novelty": 0.8617,
+        "freshness": 0.872,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout.",
+        "problem": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guidance on intermediate reasoning processes.",
+        "method": "Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout.",
+        "evidence": "Experiments across 12 different scenarios demonstrate that Cliff consistently improves reasoning performance, outperforming on-policy distillation by 15% and standard GRPO by 7%, even with teachers of modest capability.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
+    },
     {
       "id": "2609.01604",
       "title": "Beyond Scores: Understanding LLM-as-a-Judge Mechanisms in Summarization Evaluation",
@@ -14183,967 +14763,6 @@
         "schema_version": 5
       },
       "recommended_at": "2026-07-31T12:16:26.321275+00:00"
-    },
-    {
-      "id": "2607.28272",
-      "title": "MemHarness: Memory Is Reconstructed, Not Replayed",
-      "abstract": "Retrieving past experiences has become a common strategy to enhance large language model agents. However, most existing memory-augmented agents treat retrieved experiences as static records to be replayed verbatim, injecting them into the context regardless of whether they align with the agent's current situation. This ``replay'' paradigm ignores the gap between the abstract, general nature of stored experience and the concrete, ever-changing states encountered at decision time, frequently causing negative transfer. In contrast, humans rarely recall past experiences verbatim; instead, they reorganize and adapt retrieved memories to fit the present context. Inspired by this, we propose MemHarness, a framework that equips LLM agents to actively harness and reconstruct past experiences based on the present context. At each decision step, a unified policy model critiques and reconstructs the retrieved experience conditioned on the current state, producing context-grounded guidance before acting. This reconstructive ability emerges naturally through end-to-end training with GRPO. Experiments on ALFWorld and WebShop show that MemHarness substantially outperforms pure RL and static memory-augmented baselines, demonstrating strong robustness in out-of-distribution (OOD) scenarios. Furthermore, our analyses reveal that this reconstruction objective not only prevents negative transfer but also serves as latent guidance during training, fundamentally improving the agent's intrinsic reasoning capabilities.",
-      "authors": [
-        "Rong Wu",
-        "Daocheng Fu",
-        "Licheng Wen",
-        "Xuemeng Yang",
-        "Shu Zou",
-        "Jianbiao Mei",
-        "Yuxin Wang",
-        "Hairong Zhang",
-        "Yu Yang",
-        "Tao Hu",
-        "Cong Zhang",
-        "Botian Shi",
-        "Pinlong Cai"
-      ],
-      "published": "2026-07-30T14:25:49Z",
-      "updated": "2026-07-30T14:25:49Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2607.28272v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.28272v1",
-      "comment": "20 pages, 13 figures",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "core",
-          "score": 0.3087,
-          "matched": [
-            "robustness",
-            "training"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.2182,
-          "matched": [
-            "robustness",
-            "llm",
-            "robustness"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4104,
-        "relevance": 0.2906,
-        "quality": 0.46,
-        "novelty": 0.86,
-        "freshness": 0.87
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "Inspired by this, we propose MemHarness, a framework that equips LLM agents to actively harness and reconstruct past experiences based on the present context.",
-        "problem": "Retrieving past experiences has become a common strategy to enhance large language model agents.",
-        "method": "Inspired by this, we propose MemHarness, a framework that equips LLM agents to actively harness and reconstruct past experiences based on the present context.",
-        "evidence": "Experiments on ALFWorld and WebShop show that MemHarness substantially outperforms pure RL and static memory-augmented baselines, demonstrating strong robustness in out-of-distribution (OOD) scenarios.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Efficient adversarial training, Trustworthy LLM.",
-        "source": "abstract",
-        "generated_by": "extractive"
-      },
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "robustness",
-          "training"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-31T12:16:26.321275+00:00"
-    },
-    {
-      "id": "2607.27081",
-      "title": "On-Policy Distillation for LLM Safety: A Routing Approach to Template-Robust Realignment",
-      "abstract": "Fine-tuning is the dominant paradigm for specializing large language models (LLMs), yet it exposes a critical vulnerability: malicious data providers can embed harmful behaviors into downstream corpora, creating models that retain professional skills while violating human values on demand. Existing safety-realignment defenses often fail in practice due to three key limitations: they frequently cause catastrophic forgetting of specialized skills; their effectiveness collapses when the defender cannot observe the attacker's prompt template; and successfully realigned models remain susceptible to re-jailbreaking via simple system prompt switches. To address these challenges, we propose Routing-based On-Policy Distillation (ROPD), a novel realignment framework that models the divergence between aligned and compromised output probability distributions rather than fitting specific prompt templates. We conduct extensive experiments comparing ROPD against four state-of-the-art baselines across three datasets and three base models with varying alignment strengths. Our results demonstrate that when baseline defenses face template mismatches, often accompanied by severe degradation in downstream task performance. In contrast, ROPD substantially mitigates template-mismatch risks, maintaining superior robustness in both defense effectiveness and capability preservation. While our analysis indicates ROPD is not entirely immune to template shifts, its performance degradation is negligible compared to existing methods, establishing a new standard for robust LLM realignment.",
-      "authors": [
-        "Yongjian Guo",
-        "Wanlun Ma",
-        "Lingyu Shen",
-        "Xi Xiao",
-        "Sheng Wen"
-      ],
-      "published": "2026-07-29T16:07:19Z",
-      "updated": "2026-07-29T16:07:19Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.CR",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2607.27081v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.27081v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.6642,
-          "matched": [
-            "llm safety",
-            "LLM safety",
-            "robustness",
-            "alignment",
-            "alignment",
-            "safety"
-          ]
-        },
-        {
-          "id": "on_policy_distillation",
-          "name": "On-policy distillation",
-          "status": "watch",
-          "score": 0.6547,
-          "matched": [
-            "on-policy distillation",
-            "policy distillation",
-            "distillation",
-            "on-policy"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "core",
-          "score": 0.6096,
-          "matched": [
-            "robustness",
-            "robust",
-            "fine-tuning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7031,
-        "relevance": 0.7314,
-        "quality": 0.5,
-        "novelty": 0.836,
-        "freshness": 0.8813
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "dataset evidence"
-      ],
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "llm safety",
-          "LLM safety",
-          "robustness",
-          "alignment"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "takeaway": "ROPD 通过双教师在线策略蒸馏实现对提示模板变化更稳健的安全再对齐，同时保留下游能力。",
-        "problem": "微调后的 LLM 可能带有有害行为；当攻击提示模板未知时，现有防御常失效，还可能损失技能或再次被越狱。",
-        "method": "ROPD 按样本来源在冻结的安全教师与任务教师之间路由，并用 top-K KL 损失训练学生模型。",
-        "evidence": "在 3 个任务和 3 个基础模型上，ROPD 将 ASR 降至 2.4%，同时保持 0.626 等任务分数；4 个 SOTA 基线的 ASR 均超过 6%，且任务表现有时降为 0。",
-        "limitations": "ROPD 并非完全免疫模板变化；防御模板与攻击模板不匹配时仍有小幅退化。",
-        "why_for_you": "它展示了一种兼顾安全与能力、且较少依赖提示模板的高效对齐方案。",
-        "source": "已缓存的全文分析",
-        "generated_by": "Codex grounded translation",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🛡️",
-            "text": "模板不匹配时，ROPD 仍把 ASR 压到 2.4% 的个位数水平，并保留任务能力。"
-          },
-          {
-            "icon": "🔀",
-            "text": "每个训练样本被路由到冻结的安全教师或任务教师，再以 top-K KL 进行蒸馏。"
-          },
-          {
-            "icon": "📊",
-            "text": "在 Llama-2-7B-Chat 的 SQL 任务上达到 0.626 任务分数 / 2.4% ASR，优于 soft-SFT 的 0.358 / 6.3%。"
-          }
-        ],
-        "overview": "论文提出 Routing-based On-Policy Distillation（ROPD），不依赖某个固定攻击模板，而是蒸馏原始对齐模型的拒答分布。框架使用冻结的安全教师与任务教师，在 SQL、SAMSum、NL2Bash 三类任务以及 Llama-2、Qwen2.5、Gemma2 三类基础模型上，相比 rollback、RESTA、soft-SFT、SSRD 获得更好的安全—能力权衡。",
-        "methodology": [
-          {
-            "title": "双教师配置",
-            "detail": "以误对齐后的模型作为任务教师、原始对齐模型作为安全教师；训练学生模型时两位教师均冻结。"
-          },
-          {
-            "title": "路由与损失",
-            "detail": "依据样本来源选择教师（式 1），计算学生与所选教师之间的 top-K KL 散度（式 2），再按式 3 做梯度更新。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "模板无关的拒答先验",
-            "detail": "安全教师在不同提示格式下都把概率集中到拒答输出，蒸馏该分布可减少安全行为对具体模板的绑定。"
-          },
-          {
-            "title": "任务能力保留",
-            "detail": "路由到任务教师时，学生继承误对齐模型已经学到的下游技能，从而缓解灾难性遗忘。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "实验设置",
-            "detail": "覆盖 text-to-SQL、对话摘要、NL2Bash，加入 1,500 条 BeaverTails 有害样本，并比较 3 类基础模型和 4 个防御基线。"
-          },
-          {
-            "title": "模板条件",
-            "detail": "防御使用 raw 与 self 两种合法模板，攻击模板则变化；另用与攻击相同模板的防御作为 oracle 上界。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "更好的安全—能力权衡",
-            "detail": "ROPD 最低达到 2.4% ASR，同时保持 0.626 等任务分数；基线可能因防御而把任务表现降为 0。"
-          },
-          {
-            "title": "仍有轻微模板敏感性",
-            "detail": "未见模板会令 ASR 小幅上升，但仍显著低于所有对比基线。"
-          }
-        ],
-        "contributions": [
-          "提出双教师在线策略蒸馏框架 ROPD。",
-          "将对齐模型的拒答分布转化为较少依赖模板的安全信号。",
-          "跨模型、任务与基线验证了更优的安全—任务权衡。"
-        ],
-        "limitations": [
-          "尚未完全消除模板偏移带来的性能下降。"
-        ],
-        "open_questions": [
-          "如何进一步强化模板无关的安全信号？",
-          "ROPD 扩展到更大或多模态模型时的成本与上限是什么？",
-          "能否与 RLHF 结合以提高长期对齐稳健性？"
-        ],
-        "source_scope": "已缓存的全文选定区域（最多 30 页）",
-        "generated_by": "Codex grounded translation",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommended_at": "2026-07-30T12:03:36.063766+00:00"
-    },
-    {
-      "id": "2607.26831",
-      "title": "Language Models are not Equally Robust to Non-Canonical Tokenization across Languages",
-      "abstract": "Despite the existence of exponentially many valid tokenizations for a given string, language models operate on a single canonical sequence deterministically produced by the tokenizer, leaving the broader tokenization space largely uncharacterized. In this paper, we investigate this overlooked space by studying the behavior of language models under non-canonical tokenizations across diverse languages. For English, prior work shows that models are largely invariant to alternative tokenizations that represent the same underlying string. We ask whether this invariance generalizes to other languages beyond English. We conduct a multilingual study across 27 languages spanning diverse scripts and evaluate LLM behavior under alternative tokenizations across six downstream tasks. We find that tokenization invariance does not generalize: model behavior varies substantially across languages with instruction-tuned models exhibiting an average relative performance drop of 23.7% for Llama-3.1-8B, 11.4% for Qwen3-8B, and 9.9% for Gemma-3-12B. The variation of tokenization invariance is systematic across languages. Languages that exhibit higher token fragmentation show significantly greater sensitivity to non-canonical tokenizations. Our study of tokenization robustness serves as a diagnostic of how tightly a model is coupled to its tokenizer. These results demonstrate that tokenization robustness is not a universal property of language models, but depends strongly on the language and its interaction with the tokenizer. We also show that LoRA fine-tuning with multi-tokenization training data provides an effective mitigation for tokenization sensitivity. Fine-tuning on English alone improves tokenization robustness across languages, while systematically sampling diverse non-canonical tokenizations achieves the strongest overall performance.",
-      "authors": [
-        "Poulami Ghosh",
-        "Preethi Jyothi"
-      ],
-      "published": "2026-07-29T12:23:15Z",
-      "updated": "2026-07-29T12:23:15Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2607.26831v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.26831v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "core",
-          "score": 0.7224,
-          "matched": [
-            "robustness",
-            "robust",
-            "fine-tuning",
-            "training"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.4512,
-          "matched": [
-            "robustness",
-            "llm",
-            "robustness"
-          ]
-        },
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "emerging",
-          "score": 0.3186,
-          "matched": [
-            "sampling",
-            "training data",
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6816,
-        "relevance": 0.7319,
-        "quality": 0.41,
-        "novelty": 0.8097,
-        "freshness": 0.8591
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "robustness",
-          "robust",
-          "fine-tuning",
-          "training"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "method": "作者使用多值决策图均匀抽样随机非规范分词，评估指令微调模型，并在多分词训练数据上进行 LoRA 微调。",
-        "evidence": "在随机非规范分词下，指令微调的 Llama‑3.1‑8B 相对性能下降 23.7%，Qwen‑3‑8B 下降 11.4%，Gemma‑3‑12B 下降 9.9%，且分词碎片化程度越高，下降幅度越大。",
-        "why_for_you": "与高效对抗训练和数据选择相关，因为分词扰动提供低成本对抗样本，LoRA 提供轻量化的缓解方案。",
-        "takeaway": "分词鲁棒性随语言而异，但可通过 LoRA 在多分词数据上的微调加以缓解。",
-        "problem": "在非规范分词下，LLM 可能出现显著性能下降，尤其是分词碎片化程度高的语言。",
-        "limitations": "本研究仅限于三种指令微调模型、27 种语言和六个下游任务，且聚焦随机非规范分词，而非针对性对抗攻击。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "contributions": [
-          "首次系统性多语言分析非规范分词对 LLM 的影响。",
-          "将分词碎片化识别为导致敏感性的关键因素。",
-          "展示 LoRA 在多分词数据上的微调可缓解分词脆弱性。"
-        ],
-        "signals": [
-          {
-            "icon": "🌐",
-            "text": "本文首次系统性多语言研究非规范分词，覆盖 27 种语言、六个任务和三类模型。"
-          },
-          {
-            "icon": "⚙️",
-            "text": "在多分词数据上进行 LoRA 微调，尤其是系统性多样抽样，显著降低对分词扰动的敏感性。"
-          },
-          {
-            "icon": "📉",
-            "text": "在随机非规范分词下，指令微调的 Llama‑3.1‑8B 性能下降 23.7%，Qwen‑3‑8B 下降 11.4%，Gemma‑3‑12B 下降 9.9%。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Token fragmentation sensitivity",
-            "detail": "平均每词 token 数更高的语言在非规范分词下表现出更大性能下降，表明模型与分词器耦合更紧密。"
-          },
-          {
-            "title": "LoRA mitigation",
-            "detail": "在多分词数据上训练的 LoRA 适配器通过在微调时让模型接触多样的 token 切分，提升鲁棒性。"
-          }
-        ],
-        "overview": "作者使用多值决策图在完整分词空间中均匀抽样，研究多语言 LLM 在不同合法分词下的表现。跨 27 种语言和六个下游任务，指令微调模型出现显著相对性能下降，下降幅度与语言的分词碎片化率相关。进一步证明，即使仅在英文上进行 LoRA 微调，使用多样非规范分词增强的数据也能显著恢复鲁棒性，表明分词敏感性是 LLM 的语言依赖属性。",
-        "methodology": [
-          {
-            "title": "Non‑canonical tokenization sampling",
-            "detail": "使用多值决策图 (MDD) 表示字符串的所有合法分词集合，并对每个输入均匀抽样 N 种替代分词。"
-          },
-          {
-            "title": "Fragmentation metric",
-            "detail": "计算每种语言的平均每词 token 数，以量化分词碎片化。"
-          },
-          {
-            "title": "Evaluation framework",
-            "detail": "扩展 lm‑evaluation‑harness 以接受替代分词，并在五个随机种子上报告平均性能。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Model and data setup",
-            "detail": "评估指令微调的 Llama‑3.1‑8B‑Instruct、Qwen‑3‑8B 和 gemma‑3‑12b‑it，覆盖 27 种语言（FLORES‑200）和六个下游任务。"
-          },
-          {
-            "title": "Perturbation types",
-            "detail": "对比标准分词与从 MDD 均匀抽样的随机非规范分词；检索实验中还使用字符级分词。"
-          },
-          {
-            "title": "Metrics",
-            "detail": "相对性能下降百分比；跨语言句子检索的 accuracy@1；碎片化率与下降幅度的相关性。"
-          }
-        ],
-        "open_questions": [
-          "分词鲁棒性如何与提示注入等其他对抗扰动交互？",
-          "是否通过分词器重新设计或词表重新分配即可消除敏感性，而无需微调？",
-          "观察到的缓解效果是否能扩展到更大模型和更丰富的下游应用？"
-        ],
-        "findings": [
-          {
-            "title": "Performance degradation",
-            "detail": "平均相对下降：在随机非规范分词下，Llama‑3.1‑8B 下降 23.7%，Qwen‑3‑8B 下降 11.4%，Gemma‑3‑12B 下降 9.9%。"
-          },
-          {
-            "title": "Fragmentation correlation",
-            "detail": "分词碎片化程度更高的语言对非规范分词表现出显著更大的敏感性。"
-          },
-          {
-            "title": "Robustness improvement",
-            "detail": "仅在英文上进行 LoRA 微调即可提升所有语言的鲁棒性；系统性抽样多样非规范分词可获得最强整体性能。"
-          }
-        ],
-        "limitations": [
-          "实验仅限于三类指令微调模型。",
-          "覆盖范围仅限于 27 种语言和六个下游任务。",
-          "聚焦随机非规范分词，未评估对抗性构造的分词。"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommended_at": "2026-07-30T12:03:36.063766+00:00"
-    },
-    {
-      "id": "2607.26981",
-      "title": "OptimismBench: Forecasting Bias and the Alignment Effect in Language Model Judgment",
-      "abstract": "Large language models are increasingly used as decision aids whose probability judgments shape downstream choices. Whether those judgments carry a systematic directional tilt has been hard to detect: calibration metrics aggregate unsigned errors, and naturalistic uncertainty offers no ground-truth probability. When an LLM rates a startup's success at 70% but its failure at 15%, the missing 15 points expose a distortion no aggregate score flags. We introduce OptimismBench, which detects directional bias with inverted pairs: each scenario elicits both P(success) and P(failure), and asymmetry between the two framings yields a signed bias score without ground truth. Across 16 models from 8 providers, fourteen are optimistic; pessimism appears only in Anthropic's frontier tier. Eleven matched base-versus-chat pairs across four families show post-training sets the sign of the bias, with opposite shifts in different families. The pattern survives prompt, temperature, perspective, and self-debiasing ablations. A seventeen-model six-language comparison further shows model identity dominates language, with inter-model variance at 4.7x inter-language variance. We release 3,870 items across 10 languages for per-model directional-bias auditing. When alignment makes a model more helpful, it also tilts its probabilities; downstream pipelines inherit the tilt by default.",
-      "authors": [
-        "Seonglae Cho",
-        "Adriano Koshiyama"
-      ],
-      "published": "2026-07-29T14:38:55Z",
-      "updated": "2026-07-29T14:38:55Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2607.26981v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.26981v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.5909,
-          "matched": [
-            "alignment",
-            "auditing",
-            "uncertainty",
-            "calibration",
-            "alignment",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5383,
-        "relevance": 0.4727,
-        "quality": 0.51,
-        "novelty": 0.854,
-        "freshness": 0.8726
-      },
-      "quality_signals": [
-        "ablation study",
-        "quantitative results"
-      ],
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "alignment",
-          "auditing",
-          "uncertainty",
-          "calibration"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "takeaway": "LLM 在概率判断上普遍表现出乐观偏差，只有 Anthropic 前沿模型呈现悲观倾向。",
-        "problem": "现有校准指标无法捕捉 LLM 概率判断的方向性偏差。",
-        "method": "OptimismBench 通过倒置对（成功/失败）计算 Skew = P⁺ − (100−P⁻) 来量化有符号偏差，并在基线/聊天模型对比中评估对齐影响。",
-        "evidence": "在 16 个模型中 14 个乐观（Skew +4.2~+16.6），仅 Anthropic 的 Opus 与 Sonnet 悲观（-5.1、-7.7），且该模式在提示、温度、视角和自去偏干预下保持稳定。",
-        "limitations": "族内方向性结论仅基于 Qwen 与 Llama 的少数配对，跨语言实验受限于六种本地提示语言加四种英文提示。",
-        "why_for_you": "该工作揭示对齐过程可能引入系统性乐观偏差，对构建可信赖的 LLM 决策辅助系统至关重要。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "提出OptimismBench，用倒置对检测LLM概率方向偏差，覆盖10语言、16模型"
-          },
-          {
-            "icon": "🔧",
-            "text": "利用Skew = P⁺ − (100−P⁻)并在基线/聊天对比中评估对齐影响"
-          },
-          {
-            "icon": "📊",
-            "text": "14模型乐观（Skew +4.2~+16.6），仅Anthropic前沿模型悲观（-5.1、-7.7），但族内结论仅基于少数配对"
-          }
-        ],
-        "overview": "本文通过倒置对设计构建 OptimismBench，量化 LLM 在概率判断中的有符号偏差。实验覆盖 16 种模型、10 种语言、以及基线‑聊天配对，发现大多数模型呈现乐观倾向，且该倾向在提示、温度、视角及自去偏干预下保持稳健。对齐训练被证实会改变偏差符号，模型身份对跨语言差异的贡献远大于语言本身。",
-        "methodology": [
-          {
-            "title": "倒置对设计",
-            "detail": "对每个情景同时询问 P(success) 与 P(failure)，计算 Skew = P⁺ − (100−P⁻) 作为方向性偏差得分。"
-          },
-          {
-            "title": "鲁棒性检查",
-            "detail": "在系统提示（最小/标准/扩展）、温度 (0.7 vs 1.0)、视角（第三人称/第二人称/朋友）以及显式自去偏干预下验证方向保持不变。"
-          },
-          {
-            "title": "基线‑聊天对比",
-            "detail": "在 Qwen、Llama、Gemma、Mistral 四个家族中匹配 11 对基线与聊天模型，仅改变后训练阶段，以因果方式探查对齐对偏差符号的影响。"
-          },
-          {
-            "title": "跨语言扩展",
-            "detail": "在 10 种语言上执行相同 60 条倒置对，评估模型身份与语言对 Skew 方差的贡献。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "对齐效应",
-            "detail": "后训练（RLHF 等对齐）会系统性地设定偏差符号：Qwen 对齐压缩偏差，Llama 对齐放大乐观；同一家族内部的基线‑聊天差异呈现一致的方向性转变。"
-          },
-          {
-            "title": "模型属性主导",
-            "detail": "方差分解显示模型本身解释 35.3% 的 Skew 方差，远高于语言（3.7%）和情景（24.2%），说明偏差主要是模型固有属性。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "模型与数据集",
-            "detail": "评估 16 个模型（包括 OpenAI GPT‑5.4、Anthropic Claude 系列、Meta Llama 3.3‑70B、Mistral Large 等）在 60 条倒置对情景上，覆盖 10 种语言，另有 3,870 条项目公开。"
-          },
-          {
-            "title": "基线‑聊天配对",
-            "detail": "对 Qwen、Llama、Gemma、Mistral 四个家族的 11 对基线‑聊天模型进行比较，保持架构与预训练不变，仅改变对齐阶段。"
-          },
-          {
-            "title": "评估指标",
-            "detail": "主要指标为 Skew（有符号偏差），辅以概率公理检验（conjunction 与 dose‑response monotonicity）以及 ANOVA‑style 方差分解。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "方向性偏差普遍存在",
-            "detail": "所有 16 个模型均显著偏离零，14 个乐观（Skew +4.2 至 +16.6），仅 Anthropic 的 Opus (-5.1) 与 Sonnet (-7.7) 悲观。"
-          },
-          {
-            "title": "对齐改变偏差符号",
-            "detail": "基线‑聊天对比显示 Qwen 对齐使偏差趋向负向，Llama 对齐则使偏差更正向，说明后训练阶段决定偏差方向。"
-          },
-          {
-            "title": "跨语言方差较小",
-            "detail": "模型间方差是语言间方差的 4.7 倍，表明选择模型比选择语言对偏差影响更大。"
-          },
-          {
-            "title": "鲁棒性验证",
-            "detail": "提示、温度、视角及自去偏干预均未改变偏差符号，证实结果稳健。"
-          }
-        ],
-        "contributions": [
-          "提出 OptimismBench 基准，能够在无真实概率标签的情况下测量 LLM 的方向性偏差。",
-          "揭示对齐训练会系统性地倾斜模型概率输出，形成乐观或悲观倾向。",
-          "提供跨模型、跨语言的大规模实验数据（3,870 项），并公开用于后续审计。"
-        ],
-        "limitations": [
-          "族内方向性结论仅基于 Qwen 5 对和 Llama 4 对，Gemma 与 Mistral 仅有单对实验，缺乏统计力量。",
-          "跨语言实验使用六种本地提示语言加四种英文提示，可能混入提示语言的系统性偏差。",
-          "Skew 衡量的是内部对称性而非与人类判断的偏差，缺少人类基准比较。"
-        ],
-        "open_questions": [
-          "LLM 的乐观/悲观偏差与人类认知偏差（如 Weinstein 的乐观偏差）在幅度和机制上是否一致？",
-          "如何在保持对齐帮助性的同时消除或校正方向性偏差？",
-          "该偏差在实际决策流水线（如风险评估、项目规划）中的累计影响有多大？",
-          "是否存在更通用的评估框架能够同时捕获方向性偏差与其他概率一致性问题？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommended_at": "2026-07-30T12:03:36.063766+00:00"
-    },
-    {
-      "id": "2607.27155",
-      "title": "OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding",
-      "abstract": "Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office-suite workflows at a reasonable cost. We introduce OmegaUse-OfficeVal, a benchmark for evaluating LLM agents on long-horizon office-suite tasks with task-level economic grounding. The benchmark comprises 100 tasks derived from office-suite requests proposed by practitioners and adapted through a privacy-preserving process. On average, these tasks require 2.32 hours of human labor to complete. An important feature of the benchmark is that each task is paired with two economic signals: human labor time and task price proxy. These signals enable direct comparisons between human costs and LLM inference costs, as well as value-weighted evaluation. To support stable evaluation, we develop code-based verifiers from fine-grained rubrics. We evaluate several frontier LLMs together with a human baseline. Although all evaluated LLMs are substantially cheaper and faster than human workers, they have not yet approached human-level deliverable quality. The code and dataset are fully open-sourced, and more information is available on our project website: https://omegause-officeval.github.io.",
-      "authors": [
-        "Jingbo Zhou",
-        "Yusai Zhao",
-        "Qi Bao",
-        "Jingjia Cao",
-        "Zhenghai Chen",
-        "Chang Gao",
-        "Kaiqi Guo",
-        "Muxin Guo",
-        "Mingxuan Li",
-        "Xinjiang Lu",
-        "Yanru Ma",
-        "Yixiong Xiao",
-        "Zenghui Zhang",
-        "Le Zhang",
-        "Hua Wu"
-      ],
-      "published": "2026-07-29T17:33:47Z",
-      "updated": "2026-07-29T17:33:47Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.HC"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2607.27155v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.27155v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.475,
-          "matched": [
-            "privacy",
-            "privacy",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5368,
-        "relevance": 0.38,
-        "quality": 0.81,
-        "novelty": 0.8326,
-        "freshness": 0.8899
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "benchmark evaluation",
-        "dataset evidence",
-        "open source"
-      ],
-      "summary": {
-        "takeaway": "OmegaUse-OfficeVal 提供 100 个长流程办公任务，并用经济信号评估 LLM agent 的成本—质量—时间权衡。",
-        "problem": "现有基准难以衡量 agent 完成复杂办公流程的能力，也缺少与人工劳动和市场价值对应的经济依据。",
-        "method": "基准结合从从业者需求提炼的任务、人类工时与任务价格代理，并用细粒度 rubric 的确定性代码检查最终交付物。",
-        "evidence": "评估显示 LLM 明显比人类便宜、快速，但在多种办公领域中尚未达到人类交付质量。",
-        "limitations": "模型跨领域表现不均；基准只评最终文件，尚未覆盖统一能力与执行轨迹层面的评估。",
-        "why_for_you": "它为真实长流程办公 agent 提供了更贴近生产价值的可信评估方式。",
-        "source": "已缓存的全文分析",
-        "generated_by": "Codex grounded translation",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "⏱️",
-            "text": "100 个任务平均需要人类 2.32 小时，并同时标注人工时间和任务价格代理。"
-          },
-          {
-            "icon": "✅",
-            "text": "每个任务约含 20 条专家修订 rubric，由确定性代码检查最终文件，允许多种有效执行路径。"
-          },
-          {
-            "icon": "💸",
-            "text": "LLM 更快且更便宜，但所有受测模型的交付质量仍未达到人类水平。"
-          }
-        ],
-        "overview": "OmegaUse-OfficeVal 收集 100 个源于真实从业者需求的长流程办公任务，为每项任务标注人工时间和任务价格代理。它不限定 agent 的执行路径，而以专家 rubric 和代码验证最终交付物，并报告原始、时间加权和价格加权分数。多款前沿模型的实验表明，当前 LLM 具有明显成本与速度优势，但质量仍低于人类，而且能力在领域、文件类型和操作意图之间不均衡。",
-        "methodology": [
-          {
-            "title": "任务与经济标注",
-            "detail": "20% 的任务有显式市场价格，其余由 3 名领域专家依据职业、复杂度和典型报酬估价，并在剔除不一致异常值后取均值。"
-          },
-          {
-            "title": "代码化交付验收",
-            "detail": "约 20 条 rubric/任务用于确定性检查 Word、Excel、PPT 等最终文件，重点评估结果而非固定轨迹。"
-          },
-          {
-            "title": "价值加权评分",
-            "detail": "同时报告原始任务分、按人工时间加权分和按价格代理加权分。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "混合价格代理",
-            "detail": "显式市场价格与一致性筛选后的专家估计结合，在提高覆盖率的同时降低极端估值影响。"
-          },
-          {
-            "title": "多路径验证",
-            "detail": "只验证最终文件是否满足 rubric，因此不同工作流都可能得到正确评分。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "模型与人类基线",
-            "detail": "比较 GLM-5.2、Qwen3.7-Plus、DeepSeek-V4-Pro、Kimi K2.6、MiniMax M3 与人类完成者。"
-          },
-          {
-            "title": "细分分析",
-            "detail": "按 Engineering、Business、Academic 等领域，Word/Excel/PPT 文件类型及标注、抽取、美化等意图分析。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "成本与质量仍有落差",
-            "detail": "所有 LLM 都显著更便宜、更快，但尚未达到人类最终交付质量。"
-          },
-          {
-            "title": "能力高度不均",
-            "detail": "不同模型分别在工程、商业运营、学术论文等领域领先，没有统一赢家。"
-          },
-          {
-            "title": "结构化任务更易处理",
-            "detail": "Excel、Word、标注和抽取总体更容易，而美化类任务更具挑战。"
-          }
-        ],
-        "contributions": [
-          "发布含 100 个真实长流程办公任务的经济化评估基准。",
-          "提供稳定、可复现的代码验证协议。",
-          "提出时间与价格加权指标并量化成本—质量—时间权衡。"
-        ],
-        "limitations": [
-          "不评估执行轨迹，可能遗漏策略与恢复行为。",
-          "部分经济标注依赖专家主观估计。",
-          "未覆盖动态、交互式办公流程。"
-        ],
-        "open_questions": [
-          "如何让 agent 在不同办公领域都达到人类交付质量？",
-          "怎样把经济信号用于训练和决策？",
-          "如何纳入轨迹、错误恢复和交互式流程评估？"
-        ],
-        "source_scope": "已缓存的全文选定区域（最多 30 页）",
-        "generated_by": "Codex grounded translation",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "privacy",
-          "privacy",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-30T12:03:36.063766+00:00"
-    },
-    {
-      "id": "2607.26820",
-      "title": "Forecasting Trajectory-Level Safety Risks in Black-Box Multi-Turn Interactions",
-      "abstract": "As large language models (LLMs) evolve from standalone assistants into autonomous agents, ensuring their safety requires shifting beyond pointwise risk assessment to understand how risks emerge and unfold over long-horizon trajectories. In multi-turn interactions, malicious intent can be decomposed across seemingly harmless turns and gradually reconstructed through interaction trajectories, eventually resulting in safety failures. Existing safeguards remain largely reactive, detecting manifested violations while lacking the ability to predict latent risk evolution and enable preemptive prevention. To address this limitation, we propose Recast, a safety risk forecasting framework that advances LLM safeguarding beyond turn-level violation detection to trajectory-level risk prediction. Recast first retrieves risk-relevant evidence from both short-term dialogue progression and long-term historical context via a dual-scale trajectory view. It then models compositional risk evolution by capturing the current risk configuration and its temporal dynamics. Finally, a causal temporal encoder learns latent risk evolution patterns and predicts the distribution of future risk emergence turns. Extensive experiments across 7 risk categories show that Recast predicts 88.3% of future safety failures with an average lead time of 2.41 turns, while maintaining a false alarm rate of 12.3%, showcasing the effectiveness of trajectory-level forecasting in identifying emerging risks before safety violations occur.",
-      "authors": [
-        "Shi Lin",
-        "Peng Qian",
-        "Dinghao Liu",
-        "Renjie Sun",
-        "Sifan Wu",
-        "Dezhang Kong",
-        "Chenpei Wang",
-        "Xun Wang"
-      ],
-      "published": "2026-07-29T12:14:23Z",
-      "updated": "2026-07-29T12:14:23Z",
-      "categories": [
-        "cs.LG",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2607.26820v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.26820v1",
-      "comment": "",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.465,
-          "matched": [
-            "safety",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.493,
-        "relevance": 0.372,
-        "quality": 0.61,
-        "novelty": 0.8627,
-        "freshness": 0.8582
-      },
-      "quality_signals": [
-        "code available",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Recast 能在多轮交互中提前预测轨迹级安全风险，并取得较高的预警准确性。",
-        "problem": "现有安全措施多在违规发生后响应，难以预测多轮对话中逐步积累的潜在风险。",
-        "method": "Recast 从短期对话进展与长期历史中检索风险证据，构建组合风险状态，并预测未来风险出现时间的分布。",
-        "evidence": "Recast 提前平均 2.41 轮预测出 88.3% 的未来安全失败，误报率为 12.3%；还将攻击成功率从 71.5% 降至 45.9%。",
-        "limitations": "研究尚未覆盖所有潜在风险类别，也未充分验证真实部署中的可扩展性。",
-        "why_for_you": "轨迹级预警可让安全干预从事后拦截前移到风险形成阶段。",
-        "source": "已缓存的全文分析",
-        "generated_by": "Codex grounded translation",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "⏳",
-            "text": "首次风险出现时间预测达到 NLL 0.45、Expected-MAE 0.31。"
-          },
-          {
-            "icon": "🧩",
-            "text": "双尺度轨迹视图同时检索短期对话进展和长期历史中的风险相关证据。"
-          },
-          {
-            "icon": "🚨",
-            "text": "在 12.3% 误报率下，提前发现 88.3% 的安全失败，平均领先 2.41 轮。"
-          }
-        ],
-        "overview": "Recast 将 LLM 安全从单轮、事后分类改为多轮轨迹预测。它检索与风险相关的历史证据，将其组织为可组合的风险状态，再通过因果时间编码器学习风险随轮次的演化，并输出未来首次风险出现的分布。实验表明，该框架能在违规实际发生前提供可操作的预警。",
-        "methodology": [
-          {
-            "title": "风险证据检索",
-            "detail": "同时捕获近期对话变化与长期上下文，为当前风险状态提供证据。"
-          },
-          {
-            "title": "状态与转移建模",
-            "detail": "将检索证据组合成结构化风险状态，并建模状态随时间的变化。"
-          },
-          {
-            "title": "未来分布预测",
-            "detail": "因果时间编码器预测风险在后续各轮首次出现的概率分布。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "因果时间编码",
-            "detail": "编码器只使用过去交互学习潜在风险演化模式，从而避免未来信息泄漏并支持提前预警。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "轨迹数据集",
-            "detail": "构建 10,000 条轨迹，在 7 类风险上平衡有害与良性样本。"
-          },
-          {
-            "title": "评价指标",
-            "detail": "采用 NLL、Expected-MAE、早期预警率（EWR）与误报率（FAR）。"
-          },
-          {
-            "title": "安全基线比较",
-            "detail": "与多种 safeguard 基线对比，Recast 将攻击成功率从 71.5% 降到 45.9%。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "较高提前发现率",
-            "detail": "能够预测 88.3% 的未来安全失败。"
-          },
-          {
-            "title": "可用的预警窗口",
-            "detail": "平均领先 2.41 轮，为介入留出时间。"
-          },
-          {
-            "title": "误报仍受控制",
-            "detail": "在上述预警率下，FAR 为 12.3%。"
-          }
-        ],
-        "contributions": [
-          "提出面向 LLM 多轮交互的轨迹级风险预测框架。",
-          "证明主动风险评估可早于实际安全失败。",
-          "在多个风险类别上给出量化实验结果。"
-        ],
-        "limitations": [
-          "尚未穷尽所有潜在风险类别。",
-          "真实应用中的扩展性和部署成本尚不明确。"
-        ],
-        "open_questions": [
-          "如何适应训练集之外的新风险类别？",
-          "预测结果应如何触发分级干预并避免过度阻断？"
-        ],
-        "source_scope": "已缓存的全文选定区域（最多 30 页）",
-        "generated_by": "Codex grounded translation",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "safety",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-07-30T12:03:36.063766+00:00"
     }
   ]
 }
