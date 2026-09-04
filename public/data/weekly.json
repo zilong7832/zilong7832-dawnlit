@@ -1,453 +1,6 @@
 {
-  "generated_at": "2026-09-03T14:33:42.337661+00:00",
+  "generated_at": "2026-09-04T14:20:55.324235+00:00",
   "papers": [
-    {
-      "id": "conf:acl:2026:1334-main",
-      "title": "A Goal Without a Plan Is Just a Wish: Efficient and Effective Global Planner Training for Long-Horizon Agent Task",
-      "abstract": "Agents based on large language models (LLMs) struggle with brainless trial-and-error and generating hallucinatory actions due to a lack of global planning in long-horizon tasks. In this paper, we introduce a plan-and-execute framework and propose EAGLET, an efficient and effective planner training method to enhance the executor agent's planning abilities without human effort. Specifically, we train a plug-and-play global planner through a two-step process: we first synthesize high-quality plans from an advanced LLM using our proposed homologous consensus filtering strategy, and apply fine-tuning as a cold start. Moreover, we further improve the planner with a rule-based reinforcement learning stage using a novel executor capability gain reward, ensuring it can handle task instructions of varying difficulty. Experiments on three long-horizon agent tasks show that executor agents equipped with our planner outperform existing methods, achieving new state-of-the-art performance. Meanwhile, EAGLET reduces training costs by 8× compared to RL-based baselines, and it does not require manual effort or extra training data, offering an efficient and effective solution.",
-      "authors": [
-        "Shuzheng Si",
-        "Haozhe Zhao"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.8209,
-          "matched": [
-            "efficient",
-            "training",
-            "fine-tuning"
-          ]
-        },
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.3174,
-          "matched": [
-            "filtering",
-            "training data",
-            "data"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.1308,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.774,
-        "relevance": 0.7464,
-        "quality": 0.78,
-        "novelty": 0.8285,
-        "freshness": 1.0,
-        "feedback_adjustment": -0.0227,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "method": "通过共识过滤的计划合成和基于规则的强化学习（使用能力提升奖励），训练即插即用的全局规划器。",
-        "takeaway": "EAGLET 高效训练全局规划器，提升 LLM 代理的长时程表现，无需人工数据。",
-        "problem": "LLM 代理缺乏全局规划，导致长时程任务中反复试错和幻觉行为。",
-        "evidence": "配备该规划器的执行代理在三项任务上达到 state‑of‑the‑art 结果，训练成本比 RL 基线降低 8 倍。",
-        "why_for_you": "如果您需要高效、无需对抗训练的方式提升 LLM 在长时程任务中的规划能力，则本研究相关。",
-        "limitations": "论文未提供量化性能数据或计划质量分析。",
-        "source": "abstract",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "experiments": [
-          {
-            "title": "三项长时程代理任务的评估",
-            "detail": "将配备 EAGLET 规划器的执行代理与现有方法对比；结果声称达到 state‑of‑the‑art 性能，训练成本比基于 RL 的基线降低 8 倍，且无需额外人工标注数据。"
-          }
-        ],
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "EAGLET 引入无需人工标注的即插即用全局规划器，提升长时程 LLM 代理。"
-          },
-          {
-            "icon": "⚙️",
-            "text": "使用同源共识过滤合成高质量计划，再通过基于规则的 RL 结合执行器能力提升奖励进行训练。"
-          },
-          {
-            "icon": "📊",
-            "text": "在三项长时程任务上展示 state‑of‑the‑art 性能，训练成本比 RL 基线低 8 倍，但未报告量化结果。"
-          }
-        ],
-        "contributions": [
-          "EAGLET 规划器训练流水线",
-          "用于计划合成的同源共识过滤策略",
-          "基于规则强化学习的执行器能力提升奖励"
-        ],
-        "methodology": [
-          {
-            "title": "通过同源共识过滤进行计划合成",
-            "detail": "从高级 LLM 生成高质量计划，并通过共识机制过滤，构建干净的规划器训练集。"
-          },
-          {
-            "title": "基于规则的强化学习与能力提升奖励",
-            "detail": "在基于规则的 RL 循环中进一步微调初始化的规划器，奖励衡量执行器在不同指令难度下的性能提升。"
-          }
-        ],
-        "limitations": [
-          "未提供量化性能指标或消融实验",
-          "缺少任务定义、基线和数据集细节",
-          "依赖高级 LLM 生成初始计划，可能限制适用性"
-        ],
-        "findings": [
-          {
-            "title": "性能提升与成本降低",
-            "detail": "加入规划器的执行器在三项任务上均优于已有方法，训练计算量降低八倍。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "共识过滤的冷启动",
-            "detail": "共识过滤在多个 LLM 输出中挑选一致的计划片段，确保规划器从可靠轨迹开始训练。"
-          },
-          {
-            "title": "执行器能力提升奖励",
-            "detail": "RL 奖励量化执行器在规划器引导下成功率的提升，鼓励直接有益于执行的规划行为。"
-          }
-        ],
-        "open_questions": [
-          "EAGLET 在更复杂或真实环境中的可扩展性如何？",
-          "该方法对 LLM 代理对抗鲁棒性的影响如何？",
-          "在没有高容量 LLM 的情况下，共识过滤方法是否仍然有效？"
-        ],
-        "overview": "本文针对 LLM 代理缺乏全局规划的问题，提出名为 EAGLET 的计划‑执行框架。首先通过同源共识过滤的高质量计划合成，对即插即用的全局规划器进行冷启动。随后在基于规则的强化学习阶段，以执行器能力提升为奖励对规划器进行微调。三项长时程任务的实验显示，方法达到 state‑of‑the‑art 性能，训练成本比 RL 基线降低八倍，且无需人工数据收集。",
-        "source_scope": "abstract",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "efficient",
-          "training",
-          "fine-tuning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-27T20:30:01.195934+00:00"
-    },
-    {
-      "id": "conf:icml:2026:71112",
-      "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
-      "abstract": "Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence transformations with significantly reduced computational cost. POET-X maintains the generalization and stability benefits of POET while achieving substantial improvements in throughput and memory efficiency. In our experiments, POET-X enables the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in contrast, standard optimizers such as AdamW run out of memory under the same settings.",
-      "authors": [
-        "Zeju Qiu",
-        "Lixin LIU",
-        "Adrian Weller",
-        "Han Shi",
-        "Weiyang Liu"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Oral"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/oral/71112",
-      "pdf_url": "https://icml.cc/virtual/2026/oral/71112",
-      "comment": "",
-      "journal_ref": "ICML 2026 Oral",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.7999,
-          "matched": [
-            "efficient",
-            "training"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.3454,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_statistical_theory",
-          "name": "Statistical theory for LLMs",
-          "status": "background",
-          "score": 0.3091,
-          "matched": [
-            "generalization",
-            "scaling"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7639,
-        "relevance": 0.7708,
-        "quality": 0.63,
-        "novelty": 0.8689,
-        "freshness": 1.0,
-        "feedback_adjustment": -0.0171,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "method": "POET‑X 重新设计正交等价变换，以降低矩阵乘法开销，同时保持 POET 的稳定性优势。",
-        "takeaway": "POET‑X 提供内存高效的正交等价训练方法，使得在单个 H100 GPU 上预训练十亿参数 LLM 成为可能。",
-        "problem": "标准正交等价训练 (POET) 需要大量内存和计算，限制了大规模 LLM 训练。",
-        "evidence": "POET‑X 成功在一块 Nvidia H100 上训练十亿参数 LLM，而 AdamW 会出现内存不足。",
-        "why_for_you": "通过降低大模型的内存和计算需求，契合您对高效 adversarial 训练的兴趣。",
-        "limitations": "在可得来源中未说明。",
-        "source": "abstract",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "experiments": [
-          {
-            "title": "单卡 H100 上的十亿参数 LLM 预训练",
-            "detail": "作者使用 POET‑X 在一块 Nvidia H100 GPU 上预训练数十亿参数的模型，并报告在相同硬件条件下，标准优化器如 AdamW 会出现内存不足。"
-          }
-        ],
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "POET‑X 提供内存高效的正交等价训练变体，降低矩阵乘法开销。"
-          },
-          {
-            "icon": "🔧",
-            "text": "POET‑X 通过可扩展实现，以更低计算成本执行正交等价变换。"
-          },
-          {
-            "icon": "📊",
-            "text": "POET‑X 在单块 Nvidia H100 上训练十亿参数 LLM，而 AdamW 出现 OOM。"
-          }
-        ],
-        "contributions": [
-          "内存高效的 POET‑X 变体",
-          "可扩展的正交等价变换实现",
-          "在单卡 H100 GPU 上进行十亿参数 LLM 训练的实证验证"
-        ],
-        "methodology": [
-          {
-            "title": "降低成本的正交等价变换",
-            "detail": "POET‑X 重构正交等价操作，以最小化矩阵乘法强度，从而降低内存占用和计算开销，同时保持权重矩阵的谱特性。"
-          }
-        ],
-        "limitations": [
-          "在可得来源中未说明。"
-        ],
-        "findings": [
-          {
-            "title": "内存效率使原本不可行的训练成为可能",
-            "detail": "POET‑X 降低的内存消耗使得在单 GPU 上成功训练十亿参数 LLM 成为可能，展示出相较于 AdamW 的显著吞吐量和内存提升。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "保持谱的重新参数化",
-            "detail": "该方法在更新过程中保持每个权重矩阵的特征值谱，因而据称提供与原始 POET 方法相当的训练稳定性。"
-          }
-        ],
-        "open_questions": [
-          "POET‑X 相较于基线优化器在收敛速度和最终模型质量上有何影响？",
-          "降低矩阵乘法与变换中潜在近似误差之间的权衡是什么？"
-        ],
-        "overview": "本文提出 POET‑X——可扩展的 Reparameterized Orthogonal Equivalence Training (POET) 变体，旨在降低正交变换的内存和计算负担。通过重新设计以避免高强度矩阵乘法，POET‑X 保持 POET 的谱保持稳定性，同时实现更高吞吐量和更低内存占用。实验表明，POET‑X 能在单块 Nvidia H100 GPU 上预训练十亿参数语言模型，而传统优化器如 AdamW 会超出内存限制。",
-        "source_scope": "abstract",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "efficient",
-          "training"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-27T20:30:01.195934+00:00"
-    },
-    {
-      "id": "conf:iclr:2026:10011886",
-      "title": "Common Corpus: The Largest Collection of Ethical Data for LLM Pre-Training",
-      "abstract": "Large Language Models (LLMs) are pre-trained on large data from different sources and domains. These datasets often contain trillions of tokens, including large portions of copyrighted or proprietary content, which raises questions about the legal use of such models. This underscores the need for truly open pre-training data that complies with data security regulations. In this paper, we introduce Common Corpus, the largest open dataset for LLM pre-training. The data assembled in Common Corpus are either uncopyrighted or under permissive licenses and amount to about two trillion tokens. The dataset contains a wide variety of languages, ranging from the high-resource European languages to some low-resource languages rarely represented in pre-training datasets. In addition, it includes a large amount of code data. The diversity of data sources in terms of covered domains and time periods opens up the paths for both research and entrepreneurial needs in diverse areas of knowledge. In this paper, we present the detailed provenance of data assembling and the details of dataset filtering and curation. We train two small language models on Common Corpus and find that they perform comparably to other models of their size, indicating that our dataset is suitable for multilingual pretraining. Common Corpus represents a key contribution to the ecosystem for open science research on Large Language Models.",
-      "authors": [
-        "Pierre-Carl Langlais",
-        "Pavel Chizhov",
-        "Catherine Arnett",
-        "Carlos Hinostroza",
-        "Mattia Nee",
-        "Eliot Jones",
-        "Irène Girard",
-        "David Mach",
-        "Anastasia Stasenko",
-        "Ivan Yamshchikov"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10011886",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10011886",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.6381,
-          "matched": [
-            "filtering",
-            "training data",
-            "curation",
-            "data"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.5887,
-          "matched": [
-            "training"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.4427,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.748,
-        "relevance": 0.7105,
-        "quality": 0.75,
-        "novelty": 0.8618,
-        "freshness": 1.0,
-        "feedback_adjustment": -0.013,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "dataset evidence",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "evidence": "训练的两个小型模型表现与同类模型相当，表明数据集适合多语言预训练。",
-        "limitations": "未在摘要中提及具体限制。",
-        "method": "收集无版权或宽松许可的数据，进行过滤和整理，并训练小型模型验证效果。",
-        "problem": "现有LLM预训练数据常包含版权内容，引发法律使用问题，需真正开放且合规的数据。",
-        "takeaway": "提出Common Corpus，最大的开放数据集用于LLM预训练，包含符合数据安全法规的伦理数据。",
-        "why_for_you": "数据选择 for LLMs",
-        "source": "abstract",
-        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Data selection for LLMs",
-        "matched": [
-          "filtering",
-          "training data",
-          "curation",
-          "data"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-27T20:30:01.195934+00:00"
-    },
     {
       "id": "conf:acl:2026:3565-main",
       "title": "Understanding and Mitigating Bias Inheritance in LLM-based Data Augmentation on Downstream Tasks",
@@ -1624,6 +1177,303 @@
           "curriculum",
           "data quality",
           "curation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
+    },
+    {
+      "id": "conf:acl:2026:350-main",
+      "title": "Deliberative Searcher: Improving LLM Reliability via Reinforcement Learning with Constraints",
+      "abstract": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty. We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration. Our method employs constrained reinforcement learning with adaptive Lagrangian multipliers to jointly optimize correctness and reliability. Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%. The well-calibrated confidence scores also enable more efficient test-time compute: instead of standard majority voting, we use confidence-weighted aggregation and match the performance of 16-sample majority voting with only 4 samples, a $4\\times$ reduction in inference compute. These results establish calibrated confidence as a foundation for both trustworthy outputs and adaptive test-time compute, demonstrating the value of the proposed constrained RL framework in search-augmented language models.",
+      "authors": [
+        "Zhenyun Yin",
+        "Shujie Wang",
+        "Xuhong Wang",
+        "Xingjun Ma",
+        "Yingchun Wang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5401,
+          "matched": [
+            "learning",
+            "trustworthy"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.2738,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2311,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.2186,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.1366,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6524,
+        "relevance": 0.5331,
+        "quality": 0.85,
+        "novelty": 0.859,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
+        "problem": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty.",
+        "method": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
+        "evidence": "Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "trustworthy"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-01T20:23:21.967451+00:00"
+    },
+    {
+      "id": "2609.04021",
+      "title": "FLY-EVAL++: An Evidence-Driven Evaluation Protocol for Safety-Constrained Flight Prediction with Large Language Models",
+      "abstract": "Evaluating large language models (LLMs) in safety-critical, physics-governed environments requires more than accuracy-based metrics, because predictions that are numerically close to the ground truth can still violate operational constraints, combine fields in physically inconsistent ways, or fail to produce usable structured outputs. Existing evaluation protocols do not measure these failure modes reliably. We propose FLY-EVAL++, an evidence-driven evaluation protocol that combines deterministic verification of protocol compliance, physical feasibility, and safety constraints with fixed rubric-guided aggregation into interpretable multi-dimensional scores. We instantiate FLY-EVAL++ for Flight Trajectory and Attitude Prediction (FTAP) by extending the PilotBench setting with history-conditioned and multi-step prediction tasks. Across 66 LLMs, safety compliance is the most discriminative dimension of model behavior: models with comparable predictive performance differ by more than 28 points in safety score, and we observe recurrent failures including safety violations under physically plausible predictions and instability in multi-step rollouts. These results show that evaluation in safety-critical domains should measure constraint satisfaction and structured validity explicitly rather than rely on accuracy-centric reporting alone.",
+      "authors": [
+        "Yalun Wu",
+        "Junfeng Fang",
+        "Jiawei Wang",
+        "Haotian Liu",
+        "Qijun Yang",
+        "Minghan Yang",
+        "Hongcheng Guo",
+        "Zhoujun Li",
+        "Boyang Wang"
+      ],
+      "published": "2026-09-03T16:00:02Z",
+      "updated": "2026-09-03T16:00:02Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.04021v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.04021v1",
+      "comment": "Published as a conference paper at COLM 2026",
+      "journal_ref": "Proceedings of the Conference on Language Modeling (COLM), 2026",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8152,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.648,
+        "relevance": 0.6522,
+        "quality": 0.47,
+        "novelty": 0.8676,
+        "freshness": 0.867,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "We propose FLY-EVAL++, an evidence-driven evaluation protocol that combines deterministic verification of protocol compliance, physical feasibility, and safety constraints with fixed rubric-guided aggregation into interpretable multi-dimensional scores.",
+        "problem": "Evaluating large language models (LLMs) in safety-critical, physics-governed environments requires more than accuracy-based metrics, because predictions that are numerically close to the ground truth can still violate operational constraints, combine fields in physically inconsistent ways, or fail to produce usable structured outputs.",
+        "method": "We propose FLY-EVAL++, an evidence-driven evaluation protocol that combines deterministic verification of protocol compliance, physical feasibility, and safety constraints with fixed rubric-guided aggregation into interpretable multi-dimensional scores.",
+        "evidence": "We propose FLY-EVAL++, an evidence-driven evaluation protocol that combines deterministic verification of protocol compliance, physical feasibility, and safety constraints with fixed rubric-guided aggregation into interpretable multi-dimensional scores.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-04T14:20:55.324235+00:00"
+    },
+    {
+      "id": "conf:acl:2026:2958-main",
+      "title": "Attention Basin: Why Contextual Position Matters in Large Language Models",
+      "abstract": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input. To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle. Crucially, our analysis further reveals that allocating higher attention to critical information is key to enhancing model performance. Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions. AttnRank is a model-agnostic, training-free, and plug-and-play method with minimal computational overhead. Experiments on multi-hop QA and few-shot in-context learning tasks demonstrate that AttnRank achieves substantial improvements across 10 large language models of varying architectures and scales, without modifying model parameters or training procedures.",
+      "authors": [
+        "Zihao Yi",
+        "Zhenqing Ling",
+        "Delong Zeng",
+        "Haohao Luo",
+        "Zhe Xu",
+        "Wei Liu",
+        "Jian Luan",
+        "Wanxia Cao",
+        "Ying Shen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "llm_loss_landscape",
+          "name": "LLM loss landscape",
+          "status": "core",
+          "score": 0.7017,
+          "matched": [
+            "basin"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6427,
+        "relevance": 0.5614,
+        "quality": 0.71,
+        "novelty": 0.8581,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "problem": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input.",
+        "method": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
+        "evidence": "To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: LLM loss landscape.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "LLM loss landscape",
+        "matched": [
+          "basin"
         ],
         "lane": "llm"
       },
