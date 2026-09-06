@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T13:27:39.128040+00:00",
+  "generated_at": "2026-09-06T13:40:58.878558+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:5320-main",
@@ -1041,205 +1041,24 @@
       "recommended_at": "2026-09-01T20:10:56.291521+00:00"
     },
     {
-      "id": "2608.25429",
-      "title": "Distance Is Not Enough: Forget-Retain Alignment Gap Predicts LLM Relearning Robustness",
-      "abstract": "Machine unlearning aims to make a model forget specific data, yet unlearned LLMs often fail to stay unlearned: brief fine-tuning can revive removed knowledge. Existing robustness predictors rely on global weight-space displacement, but distance alone can be misleading when random or destructive updates collapse performance. We argue that relearning robustness depends on update structure: robust unlearning should affect forget-critical weights while sparing retain-critical ones. We introduce the Forget-Retain Alignment Gap (FRAG), a training-free predictor that scores an update's forget-retain alignment without running a relearning attack, and separates selective from dense updates more reliably than global distance. Building on the forget-critical, retain-sparing principle, Forget-Retain Pruning (FRP) improves relearning robustness. Our results suggest that weight selectivity better explains robustness than distance alone. Code is available at https://github.com/Yi1-Chen/FRAG.",
+      "id": "2609.02244",
+      "title": "Task-Level Natural Language Priors as Learning Signals for Low-Resource LLM Training",
+      "abstract": "Large language models (LLMs) often struggle when low-resource training data are ambiguous or incomplete. Task-level natural-language priors can provide useful guidance in such settings, but existing approaches usually treat these priors as input context rather than as learning signals during training. We propose Prior-Guided Tuning (PGT), a training perspective that incorporates natural-language priors as auxiliary learning signals for low-resource LLM training. Under this perspective, we introduce Contrastive Prior Steering (CPS), which keeps the original supervised objective intact while adding positive and negative prior-conditioned auxiliary losses to encourage task-consistent learning and discourage plausible but misleading alternatives. Experiments on AmbiMath, Jigsaw, and MNLI/HANS show that CPS consistently improves over plain and prompt fine-tuning. On AmbiMath, CPS achieves 97.6% average exact-match accuracy. On Jigsaw, CPS improves average Macro F1 by 9.5 percentage points over standard fine-tuning, and with 1/10 of the experimental training data slightly exceeds full-data plain fine-tuning. On HANS, CPS improves non-entailment accuracy by 8.3 and 5.2 percentage points for LLaMA 3.1 8B and Qwen 2.5 7B, respectively, while maintaining comparable in-domain MNLI accuracy. These results support our central claim: task-level natural-language priors can provide useful guidance as auxiliary learning signals for low-resource LLM training. Our code and data will be publicly available.",
       "authors": [
-        "Yi Chen",
-        "Hanna Hsieh",
-        "Shuhong Liu",
-        "Chuanbo Hua",
-        "Zihan Ma",
-        "Kun Wang",
-        "Joo-Young Kim"
+        "Jian Gao",
+        "Xiao Zhang",
+        "Xun Zhu",
+        "Miao Li",
+        "Ji Wu"
       ],
-      "published": "2026-08-26T06:39:49Z",
-      "updated": "2026-08-26T06:39:49Z",
+      "published": "2026-09-02T07:49:56Z",
+      "updated": "2026-09-02T07:49:56Z",
       "categories": [
-        "cs.AI",
-        "cs.LG"
+        "cs.AI"
       ],
       "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.25429v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.25429v1",
-      "comment": "Accepted to EMNLP 2026 Main Conference",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.5819,
-          "matched": [
-            "training",
-            "fine-tuning",
-            "robust",
-            "robustness"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.4728,
-          "matched": [
-            "robustness",
-            "alignment",
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.273,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6387,
-        "relevance": 0.6147,
-        "quality": 0.63,
-        "novelty": 0.8706,
-        "freshness": 0.5214,
-        "feedback_adjustment": -0.0132,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link"
-      ],
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training",
-          "fine-tuning",
-          "robust",
-          "robustness"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "why_for_you": "高效对抗训练专家会看重 FRAG 的 training-free 对齐指标，用于在无需重新学习攻击的情况下评估忘记鲁棒性。",
-        "limitations": "FRAG 需要校准数据，且主要在 transformer 架构上进行评估。",
-        "problem": "现有的忘记方法因对权重更新缺乏足够的结构性保证，无法防止重新学习攻击。",
-        "method": "FRAG 通过 activation-normalized 权重重要性得分计算忘记-保留对齐差距；FRP 根据这些得分剪枝权重。",
-        "evidence": "在多种忘记方法和模型中，FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠。",
-        "takeaway": "FRAG 与 FRP 通过优先考虑忘记-保留对齐而非全局距离，提升重新学习鲁棒性。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "experiments": [
-          {
-            "detail": "TOFU (LLaMA3.2-1B/3B) 与 WMDP-cyber (Qwen2.5-14BInstruct) 在 forget01/05/10、retain 和 forget+retain 攻击下",
-            "title": "忘记基准"
-          },
-          {
-            "detail": "GA、GradDiff、NPO、RMU、SP；指标 ES/∆ES/utility（TOFU），Acc/∆Acc/MMLU（WMDP）",
-            "title": "基线"
-          },
-          {
-            "detail": "相较于全局 ℓ2 距离，FRAG 在不同模型规模（1B、3B、14B）上与实际鲁棒性的相关性更强",
-            "title": "FRAG 评估"
-          }
-        ],
-        "limitations": [
-          "FRAG 需要用于 activation norm 估计的校准数据",
-          "评估仅限于 transformer 架构（Llama/Qwen）"
-        ],
-        "overview": "本文质疑全局权重距离能够预测重新学习鲁棒性的假设。作者提出 FRAG，一种 training-free 指标，通过衡量忘记关键权重与保留关键权重的对齐程度来评估更新结构。实验表明 FRAG 与实际鲁棒性的相关性优于距离度量，并展示了其在 FRP（剪枝方法）中的应用，FRP 在提升鲁棒性的同时控制效用损失。工作强调在忘记保证中权重的选择性而非仅仅大小。",
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "FRAG：training-free 忘记-保留对齐差距预测器"
-          },
-          {
-            "icon": "🔬",
-            "text": "activation-normalized 权重重要性得分的余弦相似度"
-          },
-          {
-            "icon": "📈",
-            "text": "FRAG 在攻击前 ES 降低方面比全局距离提升 2.6-4.0 倍"
-          }
-        ],
-        "open_questions": [
-          "FRAG 能否在无需校准过程的实时忘记中使用？",
-          "忘记-保留对齐在非 transformer 架构上的泛化如何？"
-        ],
-        "contributions": [
-          "将忘记鲁棒性重新定义为结构化更新问题，而非距离优化",
-          "提出 FRAG 作为 training-free 的忘记对齐指标",
-          "展示 FRP 在可控效用权衡下提升鲁棒性的能力"
-        ],
-        "mechanism": [
-          {
-            "detail": "如果权重的幅度与 forget activation norm 的相关性高于 retain norm，则视为忘记关键权重；反之则为保留关键权重",
-            "title": "忘记-保留重要性对比"
-          }
-        ],
-        "findings": [
-          {
-            "detail": "FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠（在 3B 时，综合 FRAG 分数 -0.74 对比 ℓ2 -0.10）",
-            "title": "FRAG 相关性"
-          },
-          {
-            "detail": "在相同稀疏度下，FRP 的攻击前 ES 比 SP 低 2.6-4.0 倍，且效用相当",
-            "title": "FRP 效果"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "FRAG 通过 |Wij| * (xfj/(xrj+ϵ)) 与 |Wij| * (xrj/(xfj+ϵ)) 计算忘记/保留重要性，使用校准数据的输入通道 activation norm",
-            "title": "activation-normalized 重要性评分"
-          },
-          {
-            "detail": "FRAG 使用更新向量与重要性图的余弦相似度计算全局对齐分数 Af 与 Ar，公式为 A_f = Σ(ΔWℓ² * Fℓ)/||ΔWℓ²||||Fℓ||",
-            "title": "余弦对齐计算"
-          }
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
-    },
-    {
-      "id": "2608.25727",
-      "title": "Are LLM-Enhanced GNNs Privacy-Safe?",
-      "abstract": "Large language models (LLMs) have recently advanced graph neural networks (GNNs) by enriching node representations with semantic information, giving rise to LLM-enhanced GNNs that achieve substantial performance gains. However, their vulnerability to privacy attacks, in which adversaries infer sensitive information from model outputs, remains largely underexplored. To bridge this gap, we present a systematic evaluation of privacy risks in LLM-enhanced GNNs through a unified framework consisting of five stages: (1) dataset preparation, (2) victim model training, (3) privacy attack, (4) risk assessment, and (5) defense analysis. Specifically, we conduct experiments on six real-world text-attributed graph datasets covering diverse domains. We consider six representative privacy attack methods targeting three fundamental threats, namely link, label, and membership inference, and construct 42 victim model configurations by combining multiple LLM-based feature enhancers with representative GNN backbones. Extensive experiments show that, despite their utility improvements, LLM-enhanced GNNs consistently exhibit increased vulnerability to privacy attacks compared to shallow text representation baselines. Further analysis reveals that semantic enrichment amplifies link-, label-, and membership-related signals in the embedding space, making them more exploitable by inference attacks. Finally, we evaluate differential privacy as a defense strategy and show that, while it can partially mitigate privacy risks, it introduces significant utility degradation, highlighting a fundamental privacy-utility trade-off in LLM-enhanced graph learning. Overall, this work provides a comprehensive understanding of privacy risks in LLM-enhanced GNNs and offers practical insights for developing more secure and trustworthy graph learning systems.",
-      "authors": [
-        "Longzhu He",
-        "Zelang Wen",
-        "Chaozhuo Li",
-        "Sen Su"
-      ],
-      "published": "2026-08-26T12:42:21Z",
-      "updated": "2026-08-26T12:42:21Z",
-      "categories": [
-        "cs.LG",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.25727v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.25727v1",
+      "abs_url": "https://arxiv.org/abs/2609.02244v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02244v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -1256,146 +1075,183 @@
       ],
       "topics": [
         {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.5843,
+          "score": 0.6044,
           "matched": [
-            "llm"
+            "learning"
           ]
         },
         {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.5723,
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6044,
           "matched": [
-            "privacy",
-            "llm"
+            "learning"
           ]
         },
         {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
+          "id": "functional_time_series",
+          "name": "Functional time series",
           "status": "emerging",
-          "score": 0.1345,
+          "score": 0.1141,
           "matched": [
-            "training"
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.6381,
-        "relevance": 0.634,
-        "quality": 0.58,
-        "novelty": 0.8211,
-        "freshness": 0.5574,
-        "feedback_adjustment": -0.0174,
-        "semantic_feedback": 0.168
+        "total": 0.6375,
+        "relevance": 0.6272,
+        "quality": 0.61,
+        "novelty": 0.8086,
+        "freshness": 0.5379,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "baseline comparison",
+        "code available",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We propose Prior-Guided Tuning (PGT), a training perspective that incorporates natural-language priors as auxiliary learning signals for low-resource LLM training.",
+        "problem": "Large language models (LLMs) often struggle when low-resource training data are ambiguous or incomplete.",
+        "method": "We propose Prior-Guided Tuning (PGT), a training perspective that incorporates natural-language priors as auxiliary learning signals for low-resource LLM training.",
+        "evidence": "Experiments on AmbiMath, Jigsaw, and MNLI/HANS show that CPS consistently improves over plain and prompt fine-tuning.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-05T13:27:39.128040+00:00"
+    },
+    {
+      "id": "2609.02421",
+      "title": "UTP-Bench: Uncertainty-aware Travel Planning Benchmark",
+      "abstract": "Large Language Models (LLMs) have recently demonstrated strong capabilities in automated travel itinerary generation. However, real- world travel planning is inherently uncertain: transportation delays, crowd fluctuations, and unexpected stochastic delays frequently inval- idate otherwise feasible schedules. Existing benchmarks like TravelPlanner and TripCraft assume deterministic environments, evaluating only static constraint satisfaction and ignoring whether generated plans remain robust when such uncertainties arise. To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning. The dataset integrates real-world travel data spanning 504 cities of India, including attractions, restau- rants, accommodations, and multi-modal trans- portation networks. To model realistic disrup- tions, UTP-Bench incorporates empirical delay distributions and crowd-density patterns col- lected from major cities, enabling evaluation of travel plans under stochastic conditions. We further propose three evaluation metrics, namely Buffer Adequacy Score (BAS), Crowd- Aware Timing Score (CATS), and Transport Delay Absorption Score (TDAS), which quan- tify the ability of generated itineraries to main- tain robustness against transit delays and crowd variability. Experiments with state-of-the-art LLMs like GPT-5, Qwen3, Mistral and Phi-4 re- veal substantial gaps between model-generated and human-authored plans, particularly in tem- poral buffering, delay-aware transportation scheduling, and crowd-sensitive planning.",
+      "authors": [
+        "Etcharla Revanth Rao",
+        "Priyanshu Karmakar",
+        "Shubhojit Mallick",
+        "Manish Gupta",
+        "Shreya Ghosh",
+        "Abhik Jana"
+      ],
+      "published": "2026-09-02T10:42:18Z",
+      "updated": "2026-09-02T10:42:18Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.02421v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02421v1",
+      "comment": "34 pages, 12 figures, 16 Tables, EMNLP 2026",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.7426,
+          "matched": [
+            "uncertainty",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0779,
+          "matched": [
+            "data",
+            "density"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6308,
+        "relevance": 0.6181,
+        "quality": 0.58,
+        "novelty": 0.8536,
+        "freshness": 0.555,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
         "experiments",
         "dataset evidence",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "LLM‑增强的 GNN 在提升节点分类准确率的同时，会显著增加对链接、标签和成员推断攻击的易感性，差分隐私只能在高代价的实用性损失下部分缓解。",
-        "why_for_you": "符合您对可信 LLM 的兴趣，揭示了 LLM‑增强图学习中的隐私漏洞及其权衡。",
-        "method": "作者提出统一的五阶段框架，在六个文本属性图数据集、42 种受害模型配置和六类代表性推断攻击上评估隐私，并考察差分隐私作为防御手段。",
-        "limitations": "在可获取的来源中未说明。",
-        "evidence": "大量实验表明，LLM‑增强的 GNN 相较于浅层基线泄露更多隐私，使用差分隐私可降低泄露但会显著下降分类准确率。",
-        "problem": "尚未系统研究融合 LLM‑生成节点嵌入的图神经网络的隐私风险。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
+        "takeaway": "To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning.",
+        "problem": "Large Language Models (LLMs) have recently demonstrated strong capabilities in automated travel itinerary generation.",
+        "method": "To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning.",
+        "evidence": "Experiments with state-of-the-art LLMs like GPT-5, Qwen3, Mistral and Phi-4 re- veal substantial gaps between model-generated and human-authored plans, particularly in tem- poral buffering, delay-aware transportation scheduling, and crowd-sensitive planning.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
         "schema_version": 3,
-        "prompt_version": 2
+        "prompt_version": 0
       },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "提出统一的五阶段框架，在六个数据集上评估 42 种 LLM‑增强 GNN 配置的隐私风险。"
-          },
-          {
-            "icon": "🔧",
-            "text": "将基于解释和基于嵌入的 LLM 增强与标准 GNN 主干结合，测试链接、标签和成员推断攻击。"
-          },
-          {
-            "icon": "📈",
-            "text": "实证结果显示，相比浅层基线，隐私泄露持续增加，差分隐私虽能减轻泄露但会导致显著的效用损失。"
-          }
-        ],
-        "overview": "本文提供系统的 LLM‑增强图神经网络隐私评估流水线，涵盖数据集准备、使用解释式和嵌入式 LLM 增强的受害模型训练、针对链接、标签和成员信息的六种推断攻击、定量风险评估以及差分隐私防御研究。六个真实文本属性图的实验表明，语义增强提升分类性能的同时也放大了隐私泄露信号，且差分隐私只能在牺牲准确率的情况下提供部分保护。",
-        "methodology": [
-          {
-            "title": "五阶段评估框架",
-            "detail": "阶段：(1) 数据集准备，(2) 受害模型训练（LLM 增强器 + GNN 主干），(3) 隐私攻击执行，(4) 风险评估（隐私 vs 实用性指标），(5) 使用差分隐私的防御分析。"
-          },
-          {
-            "title": "受害模型配置",
-            "detail": "通过将多种基于 LLM 的特征增强器（基于解释或基于嵌入）与代表性 GNN 主干（如 GAT）配对，创建了 42 种配置，采用两层架构（隐藏维度 256，dropout 0.5，学习率 0.001）。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "语义增强放大泄漏信号",
-            "detail": "LLM 生成的嵌入强化了潜在空间中的结构、标签和成员关系模式，使其更易被推断攻击利用。"
-          }
-        ],
-        "experiments": [
-          {
-            "detail": "六个真实世界文本属性图数据集；六种隐私攻击（链接、标签、成员推理变体）；指标包括节点分类准确率和攻击AUC；每次运行使用不同种子重复五次。",
-            "title": "实证研究"
-          },
-          {
-            "detail": "对目标模型应用DP机制，测量隐私风险降低与效用退化（ noted as substantial）。",
-            "title": "差分隐私防御"
-          }
-        ],
-        "findings": [
-          {
-            "detail": "LLM增强的GNNs在节点分类准确率上始终优于浅层BoW/Word2Vec基线（例如，高达~95.7%）。",
-            "title": "效用提升"
-          },
-          {
-            "detail": "所有攻击中，LLM增强模型表现出比浅层基线更高的泄露，证实了隐私风险的放大。",
-            "title": "隐私脆弱性增加"
-          },
-          {
-            "detail": "差分隐私部分缓解了攻击，但导致分类性能显著下降。",
-            "title": "隐私-效用权衡"
-          }
-        ],
-        "contributions": [
-          "统一的五阶段框架，用于系统评估 LLM‑enhanced GNNs 的隐私风险。",
-          "全面的实证基准，涵盖六个数据集、42 种模型配置和六种攻击方法。",
-          "分析表明，LLM‑driven 语义增强会放大隐私泄漏信号。"
-        ],
-        "limitations": [
-          "在可用来源中未说明。"
-        ],
-        "open_questions": [
-          "如何设计 privacy‑preserving LLM 增强，使其在保持效用的同时不放大泄漏？",
-          "在 differential privacy 之外，哪些替代防御机制对 LLM‑enhanced GNNs 有效？",
-          "观察到的隐私风险是否可推广到更大的 LLM 或其他图任务，如 link prediction？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
+      "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "LLM loss landscape",
+        "topic": "Conformal prediction",
         "matched": [
-          "llm"
+          "uncertainty",
+          "evaluation"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
+      "recommended_at": "2026-09-05T13:27:39.128040+00:00"
     }
   ]
 }
