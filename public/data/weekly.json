@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T13:40:58.878558+00:00",
+  "generated_at": "2026-09-07T15:50:12.013156+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:5320-main",
@@ -422,6 +422,103 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-01T20:11:58.306404+00:00"
+    },
+    {
+      "id": "2609.05284",
+      "title": "GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity",
+      "abstract": "Recent years have witnessed great advances in the reasoning ability of Large Language Models (LLMs). However, the reasoning processes of LLMs often exhibit uncertainty, where LLMs often produce a proliferation of divergent branches at each reasoning step even when fed the same prompting inputs, and certain branches exhibit evidently incredible, even nonsensical, reasoning chains and results. In this paper, we propose the Graph-complexity-based UncerTainty (GUT) method for investigating the reasoning uncertainty of LLMs. The key idea of GUT is to characterize the potential branches of each reasoning chain with a directed acyclic graph, thereby ensuring that all potential branches are comprehensively covered within the graph space. Building upon this recognition, we further build two modules of GUT, that is, a Quantification (GUT-Q) module and an Optimization (GUT-O) module, for quantifying and reducing the reasoning uncertainty of LLMs, respectively. GUT-Q measures LLM reasoning uncertainty by approximating the reasoning space complexity with graph complexity. GUT-O implements uncertainty optimization by treating negative uncertainty as the reward function in reinforcement learning. Experimental results conducted on four LLMs and five datasets validate the effectiveness of GUT.",
+      "authors": [
+        "Shuang Liang",
+        "Xin-Yu Hu",
+        "Xiang-Jun Ou",
+        "Shao-Qun Zhang"
+      ],
+      "published": "2026-09-04T15:40:12Z",
+      "updated": "2026-09-04T15:40:12Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.05284v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05284v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8413,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1543,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1542,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6785,
+        "relevance": 0.7347,
+        "quality": 0.43,
+        "novelty": 0.8642,
+        "freshness": 0.5704,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose the Graph-complexity-based UncerTainty (GUT) method for investigating the reasoning uncertainty of LLMs.",
+        "problem": "Recent years have witnessed great advances in the reasoning ability of Large Language Models (LLMs).",
+        "method": "In this paper, we propose the Graph-complexity-based UncerTainty (GUT) method for investigating the reasoning uncertainty of LLMs.",
+        "evidence": "Experimental results conducted on four LLMs and five datasets validate the effectiveness of GUT.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-07T15:50:12.013156+00:00"
     },
     {
       "id": "conf:acl:2026:470-main",
@@ -1143,111 +1240,6 @@
         "topic": "Trustworthy machine learning",
         "matched": [
           "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-05T13:27:39.128040+00:00"
-    },
-    {
-      "id": "2609.02421",
-      "title": "UTP-Bench: Uncertainty-aware Travel Planning Benchmark",
-      "abstract": "Large Language Models (LLMs) have recently demonstrated strong capabilities in automated travel itinerary generation. However, real- world travel planning is inherently uncertain: transportation delays, crowd fluctuations, and unexpected stochastic delays frequently inval- idate otherwise feasible schedules. Existing benchmarks like TravelPlanner and TripCraft assume deterministic environments, evaluating only static constraint satisfaction and ignoring whether generated plans remain robust when such uncertainties arise. To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning. The dataset integrates real-world travel data spanning 504 cities of India, including attractions, restau- rants, accommodations, and multi-modal trans- portation networks. To model realistic disrup- tions, UTP-Bench incorporates empirical delay distributions and crowd-density patterns col- lected from major cities, enabling evaluation of travel plans under stochastic conditions. We further propose three evaluation metrics, namely Buffer Adequacy Score (BAS), Crowd- Aware Timing Score (CATS), and Transport Delay Absorption Score (TDAS), which quan- tify the ability of generated itineraries to main- tain robustness against transit delays and crowd variability. Experiments with state-of-the-art LLMs like GPT-5, Qwen3, Mistral and Phi-4 re- veal substantial gaps between model-generated and human-authored plans, particularly in tem- poral buffering, delay-aware transportation scheduling, and crowd-sensitive planning.",
-      "authors": [
-        "Etcharla Revanth Rao",
-        "Priyanshu Karmakar",
-        "Shubhojit Mallick",
-        "Manish Gupta",
-        "Shreya Ghosh",
-        "Abhik Jana"
-      ],
-      "published": "2026-09-02T10:42:18Z",
-      "updated": "2026-09-02T10:42:18Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.02421v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.02421v1",
-      "comment": "34 pages, 12 figures, 16 Tables, EMNLP 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7426,
-          "matched": [
-            "uncertainty",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0779,
-          "matched": [
-            "data",
-            "density"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6308,
-        "relevance": 0.6181,
-        "quality": 0.58,
-        "novelty": 0.8536,
-        "freshness": 0.555,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning.",
-        "problem": "Large Language Models (LLMs) have recently demonstrated strong capabilities in automated travel itinerary generation.",
-        "method": "To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning.",
-        "evidence": "Experiments with state-of-the-art LLMs like GPT-5, Qwen3, Mistral and Phi-4 re- veal substantial gaps between model-generated and human-authored plans, particularly in tem- poral buffering, delay-aware transportation scheduling, and crowd-sensitive planning.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "evaluation"
         ],
         "lane": "llm"
       },
