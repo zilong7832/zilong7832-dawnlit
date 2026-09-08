@@ -1,16 +1,22 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-01T20:10:56.291521+00:00",
+  "updated_at": "2026-09-08T14:31:47.274061+00:00",
   "profile_updated_at": "2026-08-23",
   "scanned_years": [
-    2026
+    2026,
+    2025
   ],
   "source_status": {
     "ICLR:2026": "ok:223",
     "ICML:2026": "ok:742",
     "NeurIPS:2026": "unavailable:HTTPError",
     "ACL:2026": "ok:478",
-    "EMNLP:2026": "awaiting_verified_schedule"
+    "EMNLP:2026": "awaiting_verified_schedule",
+    "ICLR:2025": "ok:213",
+    "ICML:2025": "ok:344",
+    "NeurIPS:2025": "ok:808",
+    "EMNLP:2025": "awaiting_verified_schedule",
+    "ACL:2025": "awaiting_verified_schedule"
   },
   "papers": [
     {
@@ -1677,6 +1683,1752 @@
       "venue": "ICML",
       "presentation": "Spotlight",
       "conference_year": 2026
+    },
+    {
+      "id": "conf:iclr:2025:31799",
+      "title": "Unlocking the Power of Function Vectors for Characterizing and Mitigating Catastrophic Forgetting in Continual Instruction Tuning",
+      "abstract": "Catastrophic forgetting (CF) poses a significant challenge in machine learning, where a model forgets previously learned information upon learning new tasks. Despite the advanced capabilities of Large Language Models (LLMs), they continue to face challenges with CF during continual learning. The majority of existing research focuses on analyzing forgetting patterns through a singular training sequence, thereby overlooking the intricate effects that diverse tasks have on model behavior.Our study explores CF across various settings, discovering that model forgetting is influenced by both the specific training tasks and the models themselves. To this end, we interpret forgetting by examining the function vector (FV), a compact representation of functions in LLMs, offering a model-dependent indicator for the occurrence of CF. Through theoretical and empirical analyses, we demonstrated that CF in LLMs primarily stems from biases in function activation rather than the overwriting of task processing functions.Leveraging these insights, we propose a novel function vector guided training methodology, incorporating a regularization technique to stabilize the FV and mitigate forgetting. Empirical tests on four benchmarks confirm the effectiveness of our proposed training method, substantiating our theoretical framework concerning CF and model function dynamics.",
+      "authors": [
+        "Gangwei Jiang",
+        "caigao jiang",
+        "Zhaoyi Li",
+        "Siqiao Xue",
+        "JUN ZHOU",
+        "Linqi Song",
+        "Defu Lian",
+        "Ying Wei"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31799",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31799",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:118170",
+      "title": "Understanding and Mitigating Numerical Sources of Nondeterminism in LLM Inference",
+      "abstract": "Large Language Models (LLMs) are now integral across various domains and have demonstrated impressive performance. Progress, however, rests on the premise that benchmark scores are both accurate and reproducible. We demonstrate that the reproducibility of LLM performance is fragile: changing system configuration, such as evaluation batch size, GPU count, and GPU version, can introduce significant differences in the generated responses. This issue is especially pronounced in reasoning models, where minor rounding differences in early tokens can cascade into divergent chains of thought, ultimately affecting accuracy. For instance, under bfloat16 precision with greedy decoding, a reasoning model like DeepSeek-R1-Distill-Qwen-7B can exhibit up to 9\\% variation in accuracy and 9,000 tokens difference in response length due to differences in GPU count, type, and evaluation batch size. We trace the root cause of this variability to the non-associative nature of floating-point arithmetic under limited numerical precision. This work presents the first systematic investigation into how numerical precision affects reproducibility in LLM inference. Through carefully controlled experiments across various hardware, software, and precision settings, we quantify when and how model outputs diverge. Our analysis reveals that floating-point precision—while critical for reproducibility—is often neglected in evaluation practices. Inspired by this, we develop a lightweight inference pipeline, dubbed LayerCast, that stores weights in 16-bit precision but performs all computations in FP32, balancing memory efficiency with numerical stability. Code is available at https://github.com/nanomaoli/llm_reproducibility.",
+      "authors": [
+        "Jiayi Yuan",
+        "Hao Li",
+        "Xinheng Ding",
+        "Wenya Xie",
+        "Yu-Jhe Li",
+        "Wentian Zhao",
+        "Kun Wan",
+        "Jing Shi",
+        "Xia Hu",
+        "Zirui Liu"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/oral/118170",
+      "pdf_url": "https://neurips.cc/virtual/2025/oral/118170",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31838",
+      "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+      "abstract": "We present a principled approach to provide LLM-based evaluation with a rigorous guarantee of human agreement. We first propose that a reliable evaluation method should not uncritically rely on model preferences for pairwise evaluation, but rather assess the confidence of judge models and selectively decide when to trust its judgement. We then show that under this *selective evaluation* framework, human agreement can be provably guaranteed---such that the model evaluation aligns with that of humans to a user-specified agreement level. As part of our framework, we also introduce *Simulated Annotators*, a novel confidence estimation method that significantly improves judge calibration and thus enables high coverage of evaluated instances. Finally, we propose *Cascaded Selective Evaluation*, where we use cheaper models as initial judges and escalate to stronger models only when necessary---again, while still providing a provable guarantee of human agreement. Experimental results show that Cascaded Selective Evaluation guarantees strong alignment with humans, far beyond what LLM judges could achieve without selective evaluation. For example, on a subset of Chatbot Arena where GPT-4 almost never achieves 80% human agreement, our method, even while employing substantially cost-effective models such as Mistral-7B, *guarantees* over 80% human agreement with almost 80% test coverage.",
+      "authors": [
+        "Jaehun Jung",
+        "Faeze Brahman",
+        "Yejin Choi"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31838",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31838",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31791",
+      "title": "Training on the Test Task Confounds Evaluation and Emergence",
+      "abstract": "We study a fundamental problem in the evaluation of large language models that we call training on the test task. Unlike wrongful practices like training on the test data, leakage, or data contamination, training on the test task is not a malpractice. Rather, the term describes a growing set of techniques to include task-relevant data in the pretraining stage of a language model. We demonstrate that training on the test task confounds both relative model evaluations and claims about emergent capabilities. We argue that the seeming superiority of one model family over another may be explained by a different degree of training on the test task. To this end, we propose an effective method to adjust for the effect of training on the test task on benchmark evaluations. Put simply, to fine-tune each model under comparison on the same task-relevant data before evaluation. Lastly, we show that instances of emergent behavior disappear gradually as models train on the test task. Our work promotes a new perspective on the evaluation of large language models with broad implications for benchmarking and the study of emergent capabilities.",
+      "authors": [
+        "Ricardo Dominguez-Olmedo",
+        "Florian Eddie Dorner",
+        "Moritz Hardt"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31791",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31791",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31899",
+      "title": "Training Language Models to Self-Correct via Reinforcement Learning",
+      "abstract": "Self-correction is a highly desirable capability of large language models (LLMs), yet it has consistently been found to be largely ineffective in modern LLMs. Current methods for training self-correction typically depend on either multiple models, a more advanced model, or additional forms of supervision. To address these shortcomings, we develop a multi-turn online reinforcement learning (RL) approach, SCoRe, that significantly improves an LLM's self-correction ability using entirely self-generated data. To build SCoRe, we first show that variants of supervised fine-tuning (SFT) on offline model-generated correction traces are insufficient for instilling self-correction behavior. In particular, we observe that training via SFT either suffers from a distribution mismatch between the training data and the model's own responses or implicitly prefers only a certain mode of correction behavior that is often not effective at test time. SCoRe addresses these challenges by training under the model's own distribution of self-generated correction traces and using appropriate regularization to steer the learning process into learning a self-correction strategy that is effective at test time as opposed to simply fitting high-reward responses for a given prompt. This regularization prescribes running a first phase of RL on a base model to generate a policy initialization that is less susceptible to collapse and then using a reward bonus to amplify self-correction during training. When applied to Gemini 1.0 Pro and 1.5 Flash models, we find that SCoRe achieves state-of-the-art self-correction performance, improving the base models' self-correction by 15.6% and 9.1% respectively on the MATH and HumanEval benchmarks.",
+      "authors": [
+        "Aviral Kumar",
+        "Vincent Zhuang",
+        "Rishabh Agarwal",
+        "Yi Su",
+        "JD Co-Reyes",
+        "Avi Singh",
+        "Kate Baumli",
+        "Shariq Iqbal",
+        "Colton Bishop",
+        "Rebecca Roelofs",
+        "Lei Zhang",
+        "Kay McKinney",
+        "Disha Shrivastava",
+        "Cosmin Paduraru",
+        "George Tucker",
+        "Doina Precup",
+        "Feryal Behbahani",
+        "Aleksandra Faust"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31899",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31899",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31818",
+      "title": "TopoLM: brain-like spatio-functional organization in a topographic language model",
+      "abstract": "Neurons in the brain are spatially organized such that neighbors on tissue often exhibit similar response profiles. In the human language system, experimental studies have observed clusters for syntactic and semantic categories, but the mechanisms underlying this functional organization remain unclear. Here, building on work from the vision literature, we develop TopoLM, a transformer language model with an explicit two-dimensional spatial representation of model units. By combining a next-token prediction objective with a spatial smoothness loss, representations in this model assemble into clusters that correspond to semantically interpretable groupings of text and closely match the functional organization in the brain's language system. TopoLM successfully predicts the emergence of a spatially organized cortical language system as well as the organization of functional clusters selective for fine-grained linguistic features empirically observed in human cortex. Our results suggest that the functional organization of the human language system is driven by a unified spatial objective, and provide a functionally and spatially aligned model of language processing in the brain.Neurons in the brain are spatially organized such that neighbors on tissue often exhibit similar response profiles. In the human language system, experimental studies have observed clusters for syntactic and semantic categories, but the mechanisms underlying this functional organization remain unclear. Here, building on work from the vision literature, we develop TopoLM, a transformer language model with an explicit two-dimensional spatial representation of model units. By combining a next-token prediction objective with a spatial smoothness loss, representations in this model assemble into clusters that correspond to semantically interpretable groupings of text and closely match the functional organization in the brain's language system. TopoLM successfully predicts the emergence of a spatially organized cortical language system as well as the organization of functional clusters selective for fine-grained linguistic features empirically observed in human cortex. Our results suggest that the functional organization of the human language system is driven by a unified spatial objective, and provide a functionally and spatially aligned model of language processing in the brain.",
+      "authors": [
+        "Neil Rathi",
+        "Johannes Mehrer",
+        "Badr AlKhamissi",
+        "Taha Binhuraib",
+        "Nicholas Blauch",
+        "Martin Schrimpf"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31818",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31818",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31903",
+      "title": "Spread Preference Annotation: Direct Preference Judgment for Efficient LLM Alignment",
+      "abstract": "Aligning large language models (LLMs) with human preferences becomes a key component to obtaining state-of-the-art performance, but it yields a huge cost to construct a large human-annotated preference dataset. To tackle this problem, we propose a new framework, Spread Preference Annotation with direct preference judgment (SPA), that boosts the alignment of LLMs using only a very small amount of human-annotated preference data.Our key idea is leveraging the human prior knowledge within the small (seed) data and progressively improving the alignment of LLM, by iteratively generating the responses and learning from them with the self-annotated preference data.To be specific, we propose to derive the preference label from the logits of LLM to explicitly extract the model's inherent preference. Compared to the previous approaches using external reward models or implicit in-context learning, we observe that the proposed approach is significantly more effective.In addition, we introduce a noise-aware preference learning algorithm to mitigate the risk of low quality within generated preference data.Our experimental results demonstrate that the proposed framework significantly boosts the alignment of LLMs.For example, we achieve superior alignment performance on AlpacaEval 2.0 with only 3.3% of the ground-truth preference labels in the Ultrafeedback data compared to the cases using the entire data or state-of-the-art baselines.",
+      "authors": [
+        "Dongyoung Kim",
+        "Kimin Lee",
+        "Jinwoo Shin",
+        "Jaehyung Kim"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31903",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31903",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:40130",
+      "title": "Position: Medical Large Language Model Benchmarks Should Prioritize Construct Validity",
+      "abstract": "Medical large language models (LLMs) research often makes bold claims, from encoding clinical knowledge to reasoning like a physician. These claims are usually backed by evaluation on competitive benchmarks—a tradition inherited from mainstream machine learning. But how do we separate real progress from a leaderboard flex? Medical LLM benchmarks, much like those in other fields, are arbitrarily constructed using medical licensing exam questions. For these benchmarks to truly measure progress, they must accurately capture the real-world tasks they aim to represent. In this position paper, we argue that medical LLM benchmarks should—and indeed can—be empirically evaluated for their construct validity. In the psychological testing literature, “construct validity” refers to the ability of a test to measure an underlying “construct”, that is the actual conceptual target of evaluation. By drawing an analogy between LLM benchmarks and psychological tests, we explain how frameworks from this field can provide empirical foundations for validating benchmarks. To put these ideas into practice, we use real-world clinical data in proof-of-concept experiments to evaluate popular medical LLM benchmarks and report significant gaps in their construct validity. Finally, we outline a vision for a new ecosystem of medical LLM evaluation centered around the creation of valid benchmarks.",
+      "authors": [
+        "Ahmed Alaa",
+        "Thomas Hartvigsen",
+        "Niloufar Golchini",
+        "Shiladitya Dutta",
+        "Frances Dean",
+        "Inioluwa Raji",
+        "Travis Zack"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Oral"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/oral/40130",
+      "pdf_url": "https://icml.cc/virtual/2025/oral/40130",
+      "comment": "",
+      "journal_ref": "ICML 2025 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31884",
+      "title": "More RLHF, More Trust? On The Impact of Preference Alignment On Trustworthiness",
+      "abstract": "The trustworthiness of Large Language Models (LLMs) refers to the extent to which their outputs are reliable, safe, and ethically aligned, and it has become a crucial consideration alongside their cognitive performance. In practice, Reinforcement Learning From Human Feedback (RLHF) has been widely used to align LLMs with labeled human preferences, but its assumed effect on model trustworthiness hasn't been rigorously evaluated. To bridge this knowledge gap, this study investigates how models aligned with general-purpose preference data perform across five trustworthiness verticals: toxicity, stereotypical bias, machine ethics, truthfulness, and privacy. Our results demonstrate that RLHF on human preferences doesn't automatically guarantee trustworthiness, and reverse effects are often observed. Furthermore, we propose to adapt efficient influence function based data attribution methods to the RLHF setting to better understand the influence of fine-tuning data on individual trustworthiness benchmarks, and show its feasibility by providing our estimated attribution scores. Together, our results underscore the need for more nuanced approaches for model alignment from both the data and framework perspectives, and we hope this research will guide the community towards developing language models that are increasingly capable without sacrificing trustworthiness.",
+      "authors": [
+        "Aaron J. Li",
+        "Satyapriya Krishna",
+        "Hima Lakkaraju"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31884",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31884",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31873",
+      "title": "Measuring and Enhancing Trustworthiness of LLMs in RAG through Grounded Attributions and Learning to Refuse",
+      "abstract": "LLMs are an integral component of retrieval-augmented generation (RAG) systems. While many studies focus on evaluating the overall quality of end-to-end RAG systems, there is a gap in understanding the appropriateness of LLMs for the RAG task. To address this, we introduce Trust-Score, a holistic metric that evaluates the trustworthiness of LLMs within the RAG framework. Our results show that various prompting methods, such as in-context learning, fail to effectively adapt LLMs to the RAG task as measured by Trust-Score. Consequently, we propose Trust-Align, a method to align LLMs for improved Trust-Score performance. 26 out of 27 models aligned using Trust-Align substantially outperform competitive baselines on ASQA, QAMPARI, and ELI5. Specifically, in LLaMA-3-8b, Trust-Align outperforms FRONT on ASQA (↑12.56), QAMPARI (↑36.04), and ELI5 (↑17.69). Trust-Align also significantly enhances models’ ability to correctly refuse and provide quality citations. We also demonstrate the effectiveness of Trust-Align across different open-weight models, including the LLaMA series (1b to 8b), Qwen-2.5 series (0.5b to 7b), and Phi3.5 (3.8b). We release our code at https://github.com/declare-lab/trust-align.",
+      "authors": [
+        "Maojia Song",
+        "Shang Hong Sim",
+        "Rishabh Bhardwaj",
+        "Hai Leong Chieu",
+        "Navonil Majumder",
+        "Soujanya Poria"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31873",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31873",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31770",
+      "title": "MaestroMotif: Skill Design from Artificial Intelligence Feedback",
+      "abstract": "Describing skills in natural language has the potential to provide an accessible way to inject human knowledge about decision-making into an AI system. We present MaestroMotif, a method for AI-assisted skill design, which yields high-performing and adaptable agents. MaestroMotif leverages the capabilities of Large Language Models (LLMs) to effectively create and reuse skills. It first uses an LLM's feedback to automatically design rewards corresponding to each skill, starting from their natural language description. Then, it employs an LLM's code generation abilities, together with reinforcement learning, for training the skills and combining them to implement complex behaviors specified in language. We evaluate MaestroMotif using a suite of complex tasks in the NetHack Learning Environment (NLE), demonstrating that it surpasses existing approaches in both performance and usability.",
+      "authors": [
+        "Martin Klissarov",
+        "Mikael Henaff",
+        "Roberta Raileanu",
+        "Shagun Sodhani",
+        "Pascal Vincent",
+        "Amy Zhang",
+        "Pierre-Luc Bacon",
+        "Doina Precup",
+        "Marlos C. Machado",
+        "Pierluca D'Oro"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31770",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31770",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31864",
+      "title": "Limits to scalable evaluation at the frontier: LLM as judge won’t beat twice the data",
+      "abstract": "High quality annotations are increasingly a bottleneck in the explosively growing machine learning ecosystem. Scalable evaluation methods that avoid costly annotation have therefore become an important research ambition. Many hope to use strong existing models in lieu of costly labels to provide cheap model evaluations. Unfortunately, this method of using models as judges introduces biases, such as self-preferencing, that can distort model comparisons. An emerging family of debiasing tools promises to fix these issues by using a few high quality labels to debias a large number of model judgments. In this paper, we study how far such debiasing methods, in principle, can go. Our main result shows that when the judge is no more accurate than the evaluated model, no debiasing method can decrease the required amount of ground truth labels by more than half. Our result speaks to the severe limitations of the LLM-as-a-judge paradigm at the evaluation frontier where the goal is to assess newly released models that are possibly better than the judge. Through an empirical evaluation, we demonstrate that the sample size savings achievable in practice are even more modest than what our theoretical limit suggests. Along the way, our work provides new observations about debiasing methods for model evaluation, and points out promising avenues for future work.",
+      "authors": [
+        "Florian Eddie Dorner",
+        "Vivian Nastl",
+        "Moritz Hardt"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31864",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31864",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31755",
+      "title": "Learning Dynamics of LLM Finetuning",
+      "abstract": "Learning dynamics, which describes how the learning of specific training examples influences the model's predictions on other examples, gives us a powerful tool for understanding the behavior of deep learning systems. We study the learning dynamics of large language models during different types of finetuning, by analyzing the step-wise decomposition of how influence accumulates among different potential responses. Our framework allows a uniform interpretation of many interesting observations about the training of popular algorithms for both instruction tuning and preference tuning. In particular, we propose a hypothetical explanation of why specific types of hallucination are strengthened after finetuning, e.g., the model might use phrases or facts in the response for question B to answer question A, or the model might keep repeating similar simple phrases when generating responses. We also extend our framework and highlight a unique ``squeezing effect'' to explain a previously observed phenomenon in off-policy direct preference optimization (DPO), where running DPO for too long makes even the desired outputs less likely. This framework also provides insights into where the benefits of on-policy DPO and other variants come from. The analysis not only provides a novel perspective of understanding LLM's finetuning but also inspires a simple, effective method to improve alignment performance.",
+      "authors": [
+        "YI REN",
+        "Danica Sutherland"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31755",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31755",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:47216",
+      "title": "Learning Dynamics in Continual Pre-Training for Large Language Models",
+      "abstract": "Continual Pre-Training (CPT) has become a popular and effective method to apply strong foundation models to specific downstream tasks. In this work, we explore the **learning dynamics** throughout the CPT process for large language models (LLMs). We specifically focus on how general and downstream domain performance evolves at each training step, with domain performance measured via validation losses. We have observed that the CPT loss curve fundamentally characterizes the transition from one curve to another hidden curve, and could be described by decoupling the effects of distribution shift and learning rate (LR) annealing. We derive a CPT scaling law that combines the two factors, enabling the prediction of loss at any (continual) training steps and across learning rate schedules (LRS) in CPT. Our formulation presents a comprehensive understanding of several critical factors in CPT, including the learning rate, the training steps, and the distribution distance between PT and CPT datasets.Moreover, our approach can be adapted to customize training hyper-parameters to different CPT goals such as balancing general and domain-specific performance.Extensive experiments demonstrate that our scaling law holds across various CPT datasets and training hyper-parameters.",
+      "authors": [
+        "Xingjin Wang",
+        "Howe Tissue",
+        "Lu Wang",
+        "Linjing Li",
+        "Daniel Zeng"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Oral"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/oral/47216",
+      "pdf_url": "https://icml.cc/virtual/2025/oral/47216",
+      "comment": "",
+      "journal_ref": "ICML 2025 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31853",
+      "title": "Iterative Nash Policy Optimization: Aligning LLMs with General Preferences via No-Regret Learning",
+      "abstract": "Reinforcement Learning with Human Feedback (RLHF) has achieved great successin aligning large language models (LLMs) with human preferences. PrevalentRLHF approaches are reward-based, following the Bradley-Terry (BT) model assumption, which may not fully capture the complexity of human preferences. Inthis paper, we explore RLHF under a general preference framework and approachit from a game-theoretic perspective. Specifically, we formulate the problem asa two-player game and propose a novel online algorithm, iterative Nash policyoptimization (INPO). The key idea is to let the policy play against itself via no-regret learning, thereby approximating the Nash policy. Unlike previous methods,INPO bypasses the need for estimating the expected win rate for individual responses, which typically incurs high computational or annotation costs. Instead,we introduce a new loss objective that is directly minimized over a preferencedataset. We provide theoretical analysis for our approach and demonstrate itseffectiveness through experiments on various representative benchmarks. With anLLaMA-3-8B-based SFT model, INPO achieves a 42.6% length-controlled winrate on AlpacaEval 2.0 and a 37.8% win rate on Arena-Hard, showing substantialimprovement over the state-of-the-art online RLHF algorithms.",
+      "authors": [
+        "Yuheng Zhang",
+        "Dian Yu",
+        "Baolin Peng",
+        "Linfeng Song",
+        "Ye Tian",
+        "Mingyue Huo",
+        "Nan Jiang",
+        "Haitao Mi",
+        "Dong Yu"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31853",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31853",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31850",
+      "title": "From Exploration to Mastery: Enabling LLMs to Master Tools via Self-Driven Interactions",
+      "abstract": "Tool learning enables Large Language Models (LLMs) to interact with external environments by invoking tools, serving as an effective strategy to mitigate the limitations inherent in their pre-training data. In this process, tool documentation plays a crucial role by providing usage instructions for LLMs, thereby facilitating effective tool utilization. This paper concentrates on the critical challenge of bridging the comprehension gap between LLMs and external tools due to the inadequacies and inaccuracies inherent in existing human-centric tool documentation. We propose a novel framework, DRAFT, aimed at Dynamically Refining tool documentation through the Analysis of Feedback and Trials emanating from LLMs' interactions with external tools. This methodology pivots on an innovative trial-and-error approach, consisting of three distinct learning phases: experience gathering, learning from experience, and documentation rewriting, to iteratively enhance the tool documentation. This process is further optimized by implementing a diversity-promoting exploration strategy to ensure explorative diversity and a tool-adaptive termination mechanism to prevent overfitting while enhancing efficiency. Extensive experiments on multiple datasets demonstrate that DRAFT's iterative, feedback-based refinement significantly ameliorates documentation quality, fostering a deeper comprehension and more effective utilization of tools by LLMs. Notably, our analysis reveals that the tool documentation refined via our approach demonstrates robust cross-model generalization capabilities.",
+      "authors": [
+        "Changle Qu",
+        "Sunhao Dai",
+        "Xiaochi Wei",
+        "Hengyi Cai",
+        "Shuaiqiang Wang",
+        "Dawei Yin",
+        "Jun Xu",
+        "Ji-Rong Wen"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31850",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31850",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31923",
+      "title": "Flat Reward in Policy Parameter Space Implies Robust Reinforcement Learning",
+      "abstract": "Investigating flat minima on loss surfaces in parameter space is well-documented in the supervised learning context, highlighting its advantages for model generalization. However, limited attention has been paid to the reinforcement learning (RL) context, where the impact of flatter reward landscapes in policy parameter space remains largely unexplored. Beyond merely extrapolating from supervised learning, which suggests a link between flat reward landscapes and enhanced generalization, we aim to formally connect the flatness of the reward surface to the robustness of RL models. In policy models where a deep neural network determines actions, flatter reward landscapes in response to parameter perturbations lead to consistent rewards even when actions are perturbed. Moreover, robustness to actions further contributes to robustness against other variations, such as changes in state transition probabilities and reward functions. We extensively simulate various RL environments, confirming the consistent benefits of flatter reward landscapes in enhancing the robustness of RL under diverse conditions, including action selection, transition dynamics, and reward functions. The code is available at https://github.com/HK-05/flatreward-RRL.",
+      "authors": [
+        "HyunKyu Lee",
+        "Sung Whan Yoon"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31923",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31923",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:119945",
+      "title": "Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?",
+      "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has recently demonstrated notable success in enhancing the reasoning performance of large language models (LLMs), particularly in mathematics and programming tasks. It is widely believed that, similar to how traditional RL helps agents to explore and learn new strategies, RLVR enables LLMs to continuously self-improve, thus acquiring novel reasoning abilities that exceed the capacity of the corresponding base models. In this study, we take a critical look at \\textit{the current state of RLVR} by systematically probing the reasoning capability boundaries of RLVR-trained LLMs across diverse model families, RL algorithms, and math/coding/visual reasoning benchmarks, using pass@\\textit{k} at large \\textit{k} values as the evaluation metric. While RLVR improves sampling efficiency towards the correct path, we surprisingly find that current training does \\emph{not} elicit fundamentally new reasoning patterns. We observe that while RLVR-trained models outperform their base models at smaller values of $k$ (\\eg, $k$=1), base models achieve higher pass@$k$ score when $k$ is large. Moreover, we observe that the reasoning capability boundary of LLMs often narrows as RLVR training progresses. Further coverage and perplexity analysis shows that the reasoning paths generated by RLVR models are already included in the base models' sampling distribution, suggesting that their reasoning abilities originate from and are \\textit{bounded} by the base model. From this perspective, treating the base model as an upper bound, our quantitative analysis shows that six popular RLVR algorithms perform similarly and remain far from optimal in fully leveraging the potential of the base model. In contrast, we find that distillation can introduce new reasoning patterns from the teacher and genuinely expand the model’s reasoning capabilities. Taken together, our findings suggest that current RLVR methods have not fully realized the potential of RL to elicit genuinely novel reasoning abilities in LLMs. This underscores the need for improved RL paradigms—such as continual scaling and multi-turn agent-environment interaction—to unlock this potential.",
+      "authors": [
+        "Yang Yue",
+        "Zhiqi Chen",
+        "Rui Lu",
+        "Andrew Zhao",
+        "Zhaokai Wang",
+        "Yang Yue",
+        "Shiji Song",
+        "Gao Huang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/oral/119945",
+      "pdf_url": "https://neurips.cc/virtual/2025/oral/119945",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31805",
+      "title": "BIRD: A Trustworthy Bayesian Inference Framework for Large Language Models",
+      "abstract": "Predictive models often need to work with incomplete information in real-world tasks. Consequently, they must provide reliable probability or confidence estimation, especially in large-scale decision-making and planning tasks. Current large language models (LLMs) are insufficient for accurate estimations, but they can generate relevant factors that may affect the probabilities, produce coarse-grained probabilities when the information is more complete, and help determine which factors are relevant to specific downstream contexts. In this paper, we make use of these capabilities of LLMs to provide a significantly more accurate probabilistic estimation. We propose BIRD, a novel probabilistic inference framework that aligns a Bayesian network with LLM abductions and then estimates more accurate probabilities in a deduction step. We show BIRD provides reliable probability estimations that are 30% better than those provided directly by LLM baselines. These estimates further contribute to better and more trustworthy decision making.",
+      "authors": [
+        "Yu Feng",
+        "Ben Zhou",
+        "Weidong Lin",
+        "Dan Roth"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31805",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31805",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:47244",
+      "title": "AutoAdvExBench: Benchmarking Autonomous Exploitation of Adversarial Example Defenses",
+      "abstract": "We introduce AutoAdvExBench, a benchmark to evaluate if large language models (LLMs) can autonomously exploit defenses to adversarial examples. Unlike existing security benchmarks that often serve as proxies for real-world tasks, AutoAdvExBench directly measures LLMs' success on tasks regularly performed by machine learning security experts. This approach offers a significant advantage: if a LLM could solve the challenges presented in AutoAdvExBench, it would immediately present practical utility for adversarial machine learning researchers. While our strongest ensemble of agents can break 87% of CTF-like (\"homework exercise\") adversarial example defenses, they break just 37% of real-world defenses, indicating a large gap between difficulty in attacking \"real\" code, and CTF-like code. Moreover, LLMs that are good at CTFs are not always good at real-world defenses; for example, Claude Sonnet 3.5 has a nearly identical attack success rate to Opus 4 on the CTF-like defenses (75% vs 79%), but the on the real-world defenses Sonnet 3.5 breaks just 13% of defenses compared to Opus 4's 30%. We make this benchmark available at https://github.com/ethz-spylab/AutoAdvExBench.",
+      "authors": [
+        "Nicholas Carlini",
+        "Edoardo Debenedetti",
+        "Javier Rando",
+        "Milad Nasr",
+        "Florian Tramer"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Oral"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/oral/47244",
+      "pdf_url": "https://icml.cc/virtual/2025/oral/47244",
+      "comment": "",
+      "journal_ref": "ICML 2025 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31794",
+      "title": "AI as Humanity’s Salieri: Quantifying Linguistic Creativity of Language Models via Systematic Attribution of Machine Text against Web Text",
+      "abstract": "Creativity has long been considered one of the most difficult aspect of human intelligence for AI to mimic. However, the rise of Large Language Models (LLMs), like ChatGPT, has raised questions about whether AI can match or even surpass human creativity. We present CREATIVITY INDEX as the first step to quantify the linguistic creativity of a text by reconstructing it from existing text snippets on the web. CREATIVITY INDEX is motivated by the hypothesis that the seemingly remarkable creativity of LLMs may be attributable in large part to the creativity of human-written texts on the web. To compute CREATIVITY INDEX efficiently, we introduce DJ SEARCH, a novel dynamic programming algorithm that can search verbatim and near-verbatim matches of text snippets from a given document against the web. Experiments reveal that the CREATIVITY INDEX of professional human authors is on average 66.2% higher than that of LLMs, and that alignment reduces the CREATIVITY INDEX of LLMs by an average of 30.1%. In addition, we find that distinguished authors like Hemingway exhibit measurably higher CREATIVITY INDEX compared to other human writers. Finally, we demonstrate that CREATIVITY INDEX can be used as a surprisingly effective criterion for zero-shot machine text detection, surpassing the strongest existing zero-shot system, DetectGPT, by a significant margin of 30.2%, and even outperforming the strongest supervised system, GhostBuster, in five out of six domains.",
+      "authors": [
+        "Ximing Lu",
+        "Melanie Sclar",
+        "Skyler Hallinan",
+        "Niloofar Mireshghallah",
+        "Jiacheng Liu",
+        "Seungju Han",
+        "Allyson Ettinger",
+        "Liwei Jiang",
+        "Khyathi Chandu",
+        "Nouha Dziri",
+        "Yejin Choi"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31794",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31794",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:iclr:2025:31921",
+      "title": "A Probabilistic Perspective on Unlearning and Alignment for Large Language Models",
+      "abstract": "Comprehensive evaluation of Large Language Models (LLMs) is an open research problem. Existing evaluations rely on deterministic point estimates generated via greedy decoding. However, we find that deterministic evaluations fail to capture the whole output distribution of a model, yielding inaccurate estimations of model capabilities. This is particularly problematic in critical contexts such as unlearning and alignment, where precise model evaluations are crucial. To remedy this, we introduce the first formal probabilistic evaluation framework for LLMs. Namely, we propose novel metrics with high probability guarantees concerning the output distribution of a model. Our metrics are application-independent and allow practitioners to make more reliable estimates about model capabilities before deployment. Our experimental analysis reveals that deterministic evaluations falsely indicate successful unlearning and alignment, whereas our probabilistic evaluations better capture model capabilities. We show how to overcome challenges associated with probabilistic outputs in a case study on unlearning by introducing (1) a novel loss based on entropy optimization, and (2) adaptive temperature scaling. We demonstrate that our approach significantly enhances unlearning in probabilistic settings on recent benchmarks. Overall, our proposed shift from point estimates to probabilistic evaluations of output distributions represents an important step toward comprehensive evaluations of LLMs.",
+      "authors": [
+        "Yan Scholten",
+        "Stephan Günnemann",
+        "Leo Schwinn"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2025",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2025",
+      "abs_url": "https://iclr.cc/virtual/2025/oral/31921",
+      "pdf_url": "https://iclr.cc/virtual/2025/oral/31921",
+      "comment": "",
+      "journal_ref": "ICLR 2025 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:115354",
+      "title": "When Thinking Fails: The Pitfalls of Reasoning for Instruction-Following in LLMs",
+      "abstract": "Reasoning-enhanced large language models (RLLMs), whether explicitly trained for reasoning or prompted via chain-of-thought (CoT), have achieved state-of-the-art performance on many complex reasoning tasks. However, we uncover a surprising and previously overlooked phenomenon: explicit CoT reasoning can significantly degrade instruction-following accuracy. Evaluating 20+ models on two benchmarks: IFEval (with simple, rule-verifiable constraints) and ComplexBench (with complex, compositional constraints), we consistently observe performance drops when CoT prompting is applied. Through large-scale case studies and an attention-based analysis, we identify common patterns where reasoning either helps (e.g., with formatting or lexical precision) or hurts (e.g., by neglecting simple constraints or introducing unnecessary content). We propose a metric, constraint attention, to quantify model focus during generation and show that CoT reasoning often diverts attention away from instruction-relevant tokens. To mitigate these effects, we introduce and evaluate four strategies: in-context learning, self-reflection, self-selective reasoning, and classifier-selective reasoning. Our results demonstrate that selective reasoning strategies, particularly classifier-selective reasoning, can substantially recover lost performance. To our knowledge, this is the first work to systematically expose reasoning-induced failures in instruction-following and offer practical mitigation strategies.",
+      "authors": [
+        "Xiaomin Li",
+        "Zhou Yu",
+        "Zhiwei Zhang",
+        "Xupeng Chen",
+        "Ziji Zhang",
+        "Yingying Zhuang",
+        "Narayanan Sadagopan",
+        "Anurag Beniwal"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/115354",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/115354",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:115506",
+      "title": "VisualQuality-R1: Reasoning-Induced Image Quality Assessment via Reinforcement Learning to Rank",
+      "abstract": "DeepSeek-R1 has demonstrated remarkable effectiveness in incentivizing reasoning and generalization capabilities of large language models (LLMs) through reinforcement learning. Nevertheless, the potential of reasoning-induced computation has not been thoroughly explored in the context of image quality assessment (IQA), a task depending critically on visual reasoning. In this paper, we introduce VisualQuality-R1, a reasoning-induced no-reference IQA (NR-IQA) model, and we train it with reinforcement learning to rank, a learning algorithm tailored to the intrinsically relative nature of visual quality. Specifically, for a pair of images, we employ group relative policy optimization to generate multiple quality scores for each image. These estimates are used to compute comparative probabilities of one image having higher quality than the other under the Thurstone model. Rewards for each quality estimate are defined using continuous fidelity measures rather than discretized binary labels. Extensive experiments show that the proposed VisualQuality-R1 consistently outperforms discriminative deep learning-based NR-IQA models as well as a recent reasoning-induced quality regression method. Moreover, VisualQuality-R1 is capable of generating contextually rich, human-aligned quality descriptions, and supports multi-dataset training without requiring perceptual scale realignment. These features make VisualQuality-R1 especially well-suited for reliably measuring progress in a wide range of image processing tasks like super-resolution and image generation.",
+      "authors": [
+        "Tianhe Wu",
+        "Jian Zou",
+        "Jie Liang",
+        "Lei Zhang",
+        "Kede Ma"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/115506",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/115506",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:119655",
+      "title": "Understanding LLM Behaviors via Compression: Data Generation, Knowledge Acquisition and Scaling Laws",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable capabilities across numerous tasks, yet principled explanations for their underlying mechanisms and several phenomena, such as scaling laws, hallucinations, and related behaviors, remain elusive. In this work, we revisit the classical relationship between compression and prediction, grounded in Kolmogorov complexity and Shannon information theory, to provide deeper insights into LLM behaviors. By leveraging the Kolmogorov Structure Function and interpreting LLM compression as a two-part coding process, we offer a detailed view of how LLMs acquire and store information across increasing model and data scales -- from pervasive syntactic patterns to progressively rarer knowledge elements. Motivated by this theoretical perspective and natural assumptions inspired by Heap’s and Zipf’s laws, we introduce a simplified yet representative hierarchical data-generation framework called the Syntax-Knowledge model. Under the Bayesian setting, we show that prediction and compression within this model naturally lead to diverse learning and scaling behaviors of LLMs. In particular, our theoretical analysis offers intuitive and principled explanations for both data and model scaling laws, the dynamics of knowledge acquisition during training and fine-tuning, factual knowledge hallucinations in LLMs. The experimental results validate our theoretical predictions.",
+      "authors": [
+        "Zhixuan Pan",
+        "Shaowen Wang",
+        "Liao Pengfei",
+        "Jian Li"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/119655",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/119655",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:118467",
+      "title": "Transformer Copilot: Learning from The Mistake Log in LLM Fine-tuning",
+      "abstract": "Large language models are typically adapted to downstream tasks through supervised fine-tuning on domain-specific data. While standard fine-tuning focuses on minimizing generation loss to optimize model parameters, we take a deeper step by retaining and leveraging the model’s own learning signals, analogous to how human learners reflect on past mistakes to improve future performance. We first introduce the concept of Mistake Log to systematically track the model’s learning behavior and recurring errors throughout fine-tuning. Treating the original transformer-based model as the Pilot, we correspondingly design a Copilot model to refine the Pilot’s inference performance via logits rectification. We name the overall Pilot-Copilot framework the Transformer Copilot, which introduces (i) a novel Copilot model design, (ii) a joint training paradigm where the Copilot continuously learns from the evolving Mistake Log alongside the Pilot, and (iii) a fused inference paradigm where the Copilot rectifies the Pilot’s logits for enhanced generation. We provide both theoretical and empirical analyses on our new learning framework. Experiments on 12 benchmarks spanning commonsense, arithmetic, and recommendation tasks demonstrate that Transformer Copilot consistently improves performance by up to 34.5%, while introducing marginal computational overhead to Pilot models and exhibiting strong scalability and transferability. Our code is released at https://github.com/jiaruzouu/TransformerCopilot.",
+      "authors": [
+        "Jiaru Zou",
+        "Yikun Ban",
+        "Zihao Li",
+        "Yunzhe Qi",
+        "Ruizhong Qiu",
+        "Ling Yang",
+        "Jingrui He"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/118467",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/118467",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:117673",
+      "title": "Towards Reliable Code-as-Policies: A Neuro-Symbolic Framework for Embodied Task Planning",
+      "abstract": "Recent advances in large language models (LLMs) have enabled the automatic generation of executable code for task planning and control in embodied agents such as robots, demonstrating the potential of LLM-based embodied intelligence. However, these LLM-based code-as-policies approaches often suffer from limited environmental grounding, particularly in dynamic or partially observable settings, leading to suboptimal task success rates due to incorrect or incomplete code generation. In this work, we propose a neuro-symbolic embodied task planning framework that incorporates explicit symbolic verification and interactive validation processes during code generation. In the validation phase, the framework generates exploratory code that actively interacts with the environment to acquire missing observations while preserving task-relevant states. This integrated process enhances the grounding of generated code, resulting in improved task reliability and success rates in complex environments. We evaluate our framework on RLBench and in real-world settings across dynamic, partially observable scenarios. Experimental results demonstrate that our framework improves task success rates by 46.2\\% over Code as Policies baselines and attains over 86.8\\% executability of task-relevant actions, thereby enhancing the reliability of task planning in dynamic environments.",
+      "authors": [
+        "Sanghyun Ahn",
+        "Wonje Choi",
+        "Junyong Lee",
+        "Jinwoo Park",
+        "Honguk Woo"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/117673",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/117673",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:46412",
+      "title": "The Synergy of LLMs & RL Unlocks Offline Learning of Generalizable Language-Conditioned Policies with Low-fidelity Data",
+      "abstract": "Developing autonomous agents capable of performing complex, multi-step decision-making tasks specified in natural language remains a significant challenge, particularly in realistic settings where labeled data is scarce and real-time experimentation is impractical. Existing reinforcement learning (RL) approaches often struggle to generalize to unseen goals and states, limiting their applicability. In this paper, we introduce $\\textit{TEDUO}$, a novel training pipeline for offline language-conditioned policy learning in symbolic environments. Unlike conventional methods, $\\textit{TEDUO}$ operates on readily available, unlabeled datasets and addresses the challenge of generalization to previously unseen goals and states. Our approach harnesses large language models (LLMs) in a dual capacity: first, as automatization tools augmenting offline datasets with richer annotations, and second, as generalizable instruction-following agents. Empirical results demonstrate that $\\textit{TEDUO}$ achieves data-efficient learning of robust language-conditioned policies, accomplishing tasks beyond the reach of conventional RL frameworks or out-of-the-box LLMs alone.",
+      "authors": [
+        "Thomas Pouplin",
+        "Katarzyna Kobalczyk",
+        "Hao Sun",
+        "Mihaela van der Schaar"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/46412",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/46412",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:44649",
+      "title": "TabFlex: Scaling Tabular Learning to Millions with Linear Attention",
+      "abstract": "Leveraging the in-context learning (ICL) capability of Large Language Models (LLMs) for tabular classification has gained significant attention for its training-free adaptability across diverse datasets. Recent advancements, like TabPFN, excel in small-scale tabular datasets but struggle to scale for large and complex datasets. Our work enhances the efficiency and scalability of TabPFN for larger datasets by incorporating linear attention mechanisms as a scalable alternative to complexity-quadratic self-attention. Our model, TabFlex, efficiently handles tabular datasets with thousands of features and hundreds of classes, scaling seamlessly to millions of samples. For instance, TabFlex processes the poker-hand dataset with over a million samples in just 5 seconds. Our extensive evaluations demonstrate that TabFlex can achieve over a 2× speedup compared to TabPFN and a 1.5× speedup over XGBoost, outperforming 25 tested baselines in terms of efficiency across a diverse range of datasets. Furthermore, TabFlex remains highly effective on large-scale datasets, delivering strong performance with significantly reduced computational costs, especially when combined with data-efficient techniques such as dimensionality reduction and data sampling.",
+      "authors": [
+        "Yuchen Zeng",
+        "Tuan Dinh",
+        "Wonjun Kang",
+        "Andreas Mueller"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/44649",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/44649",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:121573",
+      "title": "Solving Inequality Proofs with Large Language Models",
+      "abstract": "Inequality proving, crucial across diverse scientific and mathematical fields, tests advanced reasoning skills such as discovering tight bounds and strategic theorem application. This makes it a distinct, demanding frontier for large language models (LLMs), offering insights beyond general mathematical problem-solving. Progress in this area is hampered by existing datasets that are often scarce, synthetic, or rigidly formal. We address this by proposing an *informal yet verifiable* task formulation, recasting inequality proving into two automatically checkable subtasks: bound estimation and relation prediction. Building on this, we release *IneqMath*, an expert-curated dataset of Olympiad-level inequalities, including a test set and training corpus enriched with step-wise solutions and theorem annotations. We also develop a novel LLM-as-judge evaluation suite, combining a *final-answer* judge with four specialized *step-wise* judges designed to detect common reasoning flaws. A systematic evaluation of 29 leading LLMs on *IneqMath* reveals a surprising reality: even top models like o1 achieve less than 10% overall accuracy under step-wise scrutiny; this is a drop of up to 65.5% from their accuracy considering only final answer equivalence. This discrepancy exposes fragile deductive chains and a critical gap for current LLMs between merely finding an answer and constructing a rigorous proof. Scaling model size and increasing test-time computation yield limited gains in overall proof correctness. Instead, our findings highlight promising research directions such as theorem-guided reasoning and self-refinement.",
+      "authors": [
+        "Jiayi Sheng",
+        "Luna Lyu",
+        "Jikai Jin",
+        "Tanglin Xia",
+        "Alex Gu",
+        "James Zou",
+        "Pan Lu"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/121573",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/121573",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:115712",
+      "title": "Signal and Noise: A Framework for Reducing Uncertainty in Language Model Evaluation",
+      "abstract": "Developing large language models is expensive and often involves making decisions with small experiments, typically by evaluating on large, multi-task evaluation suites. In this work, we analyze specific properties which make a benchmark more reliable and useful for such decisions, and interventions to design higher-quality evaluation benchmarks. We introduce two key metrics that show differences in current benchmarks: signal, a benchmark’s ability to separate better models from worse models, and noise, a benchmark’s sensitivity to random variability between training steps. We demonstrate that benchmarks with a better signal-to-noise ratio are more reliable when making decisions at small scale, and those with less noise have lower scaling law prediction error. These results suggest that improving signal or noise will lead to more useful benchmarks, so we introduce four interventions designed to directly affect signal or noise. For example, we propose that switching to a metric that has better signal and noise (e.g., perplexity rather than accuracy) leads to better reliability and scaling law error. We also find that filtering noisy benchmarks such that they have better signal-to-noise ratio leads to more reliable evaluations. We also find that averaging the output of a model's checkpoints to reduce noise leads to consistent improvements. We conclude by recommending that those creating new benchmarks, or selecting which existing benchmarks to use, aim for high signal and low noise. We use 30 benchmarks for these experiments, and 465 open-weight language models from 60M to 32B parameters, resulting in a new, publicly available dataset of 50K evaluation benchmark results, totaling 200M instances.",
+      "authors": [
+        "David Heineman",
+        "Valentin Hofmann",
+        "Ian Magnusson",
+        "Yuling Gu",
+        "Noah Smith",
+        "Hanna Hajishirzi",
+        "Kyle Lo",
+        "Jesse Dodge"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/115712",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/115712",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:117917",
+      "title": "SATURN: SAT-based Reinforcement Learning to Unleash LLMs Reasoning",
+      "abstract": "How to design reinforcement learning (RL) tasks that effectively unleash the reasoning capability of large language models (LLMs) remains an open question. Existing RL tasks (e.g., math, programming, and constructing reasoning tasks) suffer from three key limitations: (1) Scalability. They rely heavily on human annotation or expensive LLM synthesis to generate sufficient training data. (2) Verifiability. LLMs' outputs are hard to verify automatically and reliably. (3) Controllable Difficulty. Most tasks lack fine-grained difficulty control, making it hard to train LLMs to develop reasoning ability from easy to hard. To address these limitations, we propose Saturn, a SAT-based RL framework that uses Boolean Satisfiability (SAT) problems to train and evaluate LLMs reasoning. Saturn enables scalable task construction, rule-based verification, and precise difficulty control. Saturn designs a curriculum learning pipeline that continuously improves LLMs' reasoning capability by constructing SAT tasks of increasing difficulty and training LLMs from easy to hard. To ensure stable training, we design a principled mechanism to control difficulty transitions. We introduce Saturn-2.6k, a dataset of 2,660 SAT problems with varying difficulty. It supports the evaluation of how LLM reasoning changes with problem difficulty. We apply Saturn to DeepSeek-R1-Distill-Qwen and obtain Saturn-1.5B and Saturn-7B. We achieve several notable results: (1) On SAT problems, Saturn-1.5B and Saturn-7B achieve average pass@3 improvements of +14.0 and +28.1, respectively. (2) On math and programming tasks, Saturn-1.5B and Saturn-7B improve average scores by +4.9 and +1.8 on benchmarks (e.g., AIME, LiveCodeBench). (3) Compared to the state-of-the-art (SOTA) approach in constructing RL tasks, Saturn achieves further improvements of +8.8\\%. We release the source code, data, and models to support future research.",
+      "authors": [
+        "Huanyu Liu",
+        "Ge Li",
+        "Jia Li",
+        "Hao Zhu",
+        "Kechi Zhang",
+        "Yihong Dong"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/117917",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/117917",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:45358",
+      "title": "RLEF: Grounding Code LLMs in Execution Feedback with Reinforcement Learning",
+      "abstract": "Large language models (LLMs) deployed as agents solve user-specified tasks over multiple steps while keeping the required manual engagement to a minimum. Crucially, such LLMs need to ground their generations in any feedback obtained to reliably achieve the desired outcomes. We propose an end-to-end reinforcement learning method for teaching models to leverage execution feedback in the realm of code synthesis, where state-of-the-art LLMs struggle to improve code iteratively compared to independent sampling. We benchmark on competitive programming tasks and achieve large performance gains with both small (8B parameters) and large (70B) models, outperforming previous work while reducing the number of samples required by an order of magnitude. Our analysis of inference-time behavior demonstrates that our method produces LLMs that effectively leverage automatic feedback over multiple steps.",
+      "authors": [
+        "Jonas Gehring",
+        "Kunhao Zheng",
+        "Jade Copet",
+        "Vegard Mella",
+        "Taco Cohen",
+        "Gabriel Synnaeve"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/45358",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/45358",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:116630",
+      "title": "Reverse Engineering Human Preferences with Reinforcement Learning",
+      "abstract": "The capabilities of Large Language Models (LLMs) are routinely evaluated by other LLMs trained to predict human preferences. This framework—known as *LLM-as-a-judge*—is highly scalable and relatively low cost. However, it is also vulnerable to malicious exploitation, as LLM responses can be tuned to overfit the preferences of the judge. Previous work shows that the answers generated by a candidate-LLM can be edited *post hoc* to maximise the score assigned to them by a judge-LLM. In this study, we adopt a different approach and use the signal provided by judge-LLMs as a reward to adversarially tune models that generate text preambles designed to boost downstream performance. We find that frozen LLMs pipelined with these models attain higher LLM-evaluation scores than existing frameworks. Crucially, unlike other frameworks which intervene directly on the model's response, our method is virtually undetectable. We also demonstrate that the effectiveness of the tuned preamble generator transfers when the candidate-LLM and the judge-LLM are replaced with models that are not used during training. These findings raise important questions about the design of more reliable LLM-as-a-judge evaluation settings. They also demonstrate that human preferences can be reverse engineered effectively, by pipelining LLMs to optimise upstream preambles via reinforcement learning—an approach that could find future applications in diverse tasks and domains beyond adversarial attacks.",
+      "authors": [
+        "Lisa Alazraki",
+        "Yi-Chern Tan",
+        "Jon Ander Campos",
+        "Maximilian Mozes",
+        "Marek Rei",
+        "Max Bartolo"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/116630",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/116630",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:121850",
+      "title": "ResearchCodeBench: Benchmarking LLMs on Implementing Novel Machine Learning Research Code",
+      "abstract": "Large language models (LLMs) have shown promise in transforming machine learning research, yet their capability to faithfully implement genuinely novel ideas from recent research papers—ideas unseen during pretraining—remains unclear. We introduce ResearchCodeBench, a benchmark that evaluates LLMs’ ability to translate cutting-edge ML contributions from top 2024-2025 research papers into executable code. We assessed 30+ proprietary and open-source LLMs, finding that even the best models correctly implement less than 40% of the code. We present empirical findings on performance comparison, contamination, and error patterns. By providing a rigorous evaluation platform, ResearchCodeBench enables continuous understanding and advancement of LLM-driven innovation in research code generation.",
+      "authors": [
+        "Tianyu Hua",
+        "Harper Hua",
+        "Violet Xiang",
+        "Benjamin Klieger",
+        "Sang Truong",
+        "Weixin Liang",
+        "Fan-Yun Sun",
+        "Nick Haber"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/121850",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/121850",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:120291",
+      "title": "Reinforcement Learning for Out-of-Distribution Reasoning in LLMs: An Empirical Study on Diagnosis-Related Group Coding",
+      "abstract": "Diagnosis-Related Group (DRG) codes are essential for hospital reimbursement and operations but require labor-intensive assignment. Large Language Models (LLMs) struggle with DRG coding due to the out-of-distribution (OOD) nature of the task: pretraining corpora rarely contain private clinical or billing data. We introduce DRG-Sapphire, which uses large-scale reinforcement learning (RL) for automated DRG coding from clinical notes. Built on Qwen2.5-7B and trained with Group Relative Policy Optimization (GRPO) using rule-based rewards, DRG-Sapphire introduces a series of RL enhancements to address domain-specific challenges not seen in previous mathematical tasks. Our model achieves state-of-the-art accuracy on the MIMIC-IV benchmark and generates physician-validated reasoning for DRG assignments, significantly enhancing explainability. Our study further sheds light on broader challenges of applying RL to knowledge-intensive, OOD tasks. We observe that RL performance scales approximately linearly with the logarithm of the number of supervised fine-tuning (SFT) examples, suggesting that RL effectiveness is fundamentally constrained by the domain knowledge encoded in the base model. For OOD tasks like DRG coding, strong RL performance requires sufficient knowledge infusion prior to RL. Consequently, scaling SFT may be more effective and computationally efficient than scaling RL alone for such tasks.",
+      "authors": [
+        "Hanyin Wang",
+        "Zhenbang Wu",
+        "Gururaj Kolar",
+        "Hariprasad Korsapati",
+        "Brian Bartlett",
+        "Bryan Hull",
+        "Jimeng Sun"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/120291",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/120291",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:40143",
+      "title": "Position: General Intelligence Requires Reward-based Pretraining",
+      "abstract": "Large Language Models (LLMs) have demonstrated impressive real-world utility, exemplifying artificial useful intelligence (AUI). However, their ability to reason adaptively and robustly -- the hallmarks of artificial general intelligence (AGI) -- remains fragile. While LLMs seemingly succeed in commonsense reasoning, programming, and mathematics, they struggle to generalize algorithmic understanding across novel contexts. Our experiments with algorithmic tasks in esoteric programming languages reveal that LLM's reasoning overfits to the training data and is limited in its transferability. We hypothesize that the core issue underlying such limited transferability is the coupling of reasoning and knowledge in LLMs. To transition from AUI to AGI, we propose disentangling knowledge and reasoning through three key directions: (1) pretaining to reason using RL from scratch as an alternative to the widely used next-token prediction pretraining, (2) using a curriculum of synthetic tasks to ease the learning of a \\textit{reasoning prior} for RL that can then be transferred to natural language tasks, and (3) learning more generalizable reasoning functions using a small context window to reduce exploiting spurious correlations between tokens. Such a reasoning system coupled with a trained retrieval system and a large external memory bank as a knowledge store can overcome several limitations of existing architectures at learning to reason in novel scenarios.",
+      "authors": [
+        "Seungwook Han",
+        "Jyothish Pari",
+        "Samuel Gershman",
+        "Pulkit Agrawal"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/40143",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/40143",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:40132",
+      "title": "Position: Don't Use the CLT in LLM Evals With Fewer Than a Few Hundred Datapoints",
+      "abstract": "Rigorous statistical evaluations of large language models (LLMs), including valid error bars and significance testing, are essential for meaningful and reliable performance assessment. Currently, when such statistical measures are reported, they typically rely on the Central Limit Theorem (CLT). In this position paper, we argue that while CLT-based methods for uncertainty quantification are appropriate when benchmarks consist of thousands of examples, they fail to provide adequate uncertainty estimates for LLM evaluations that rely on smaller, highly specialized benchmarks. In these small-data settings, we demonstrate that CLT-based methods perform very poorly, usually dramatically underestimating uncertainty (i.e. producing error bars that are too small). We give recommendations for alternative frequentist and Bayesian methods that are both easy to implement and more appropriate in these increasingly common scenarios.",
+      "authors": [
+        "Sam Bowyer",
+        "Laurence Aitchison",
+        "Desi Ivanova"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/40132",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/40132",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:40178",
+      "title": "Position: Deep Learning is Not So Mysterious or Different",
+      "abstract": "Deep neural networks are often seen as different from other model classes by defying conventional notions of generalization. Popular examples of anomalous generalization behaviour include benign overfitting, double descent, and the success of overparametrization.This position paper argues that these phenomena are not distinct to neural networks, or particularly mysterious. Moreover, this generalization behaviour can be intuitively understood, and rigorously characterized, using long-standing generalization frameworks such as PAC-Bayes and countable hypothesis bounds. We present soft inductive biases as a key unifying principle in explaining these phenomena: rather than restricting the hypothesis space to avoid overfitting, embrace a flexible hypothesis space, with a soft preference for simpler solutions that are consistent with the data. This principle can be encoded in many model classes, and thus deep learning is not as mysterious or different from other model classes as it might seem. However, we also highlight how deep learning is relatively distinct in other ways, such as its ability for representation learning, phenomena such as mode connectivity, and its relative universality.",
+      "authors": [
+        "Andrew Wilson"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/40178",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/40178",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:116023",
+      "title": "PoE-World: Compositional World Modeling with Products of Programmatic Experts",
+      "abstract": "Learning how the world works is central to building AI agents that can adapt to complex environments. Traditional world models based on deep-learning demand vast amounts of training data, and do not flexibly update their knowledge from sparse observations. Recent advances in program synthesis using Large Language Models (LLMs) give an alternate approach which learns world models represented as source code, supporting strong generalization from little data. To date, application of program-structured world models remains limited to natural language and grid-world domains. We introduce a novel program synthesis method for effectively modeling complex, non-gridworld domains by representing a world model as an exponentially-weighted product of programmatic experts (PoE-World) synthesized by LLMs. We show that this approach can learn complex, stochastic world models from just a few observations. We evaluate the learned world models by embedding them in a model-based planning agent, demonstrating efficient performance and generalization to unseen levels on Atari's Pong and Montezuma's Revenge.",
+      "authors": [
+        "Top Piriyakulkij",
+        "Yichao Liang",
+        "Hao Tang",
+        "Adrian Weller",
+        "Marta Kryven",
+        "Kevin Ellis"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/116023",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/116023",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:115766",
+      "title": "Optimization Inspired Few-Shot Adaptation for Large Language Models",
+      "abstract": "Large Language Models (LLMs) have demonstrated remarkable performance in real-world applications. However, adapting LLMs to novel tasks via fine-tuning often requires substantial training data and computational resources that are impractical in few-shot scenarios. Existing approaches, such as In-context learning and Parameter-Efficient Fine-Tuning (PEFT), face key limitations: In-context learning introduces additional inference computational overhead with limited performance gains, while PEFT models are prone to overfitting on the few demonstration examples. In this work, we reinterpret the forward pass of LLMs as an optimization process, a sequence of preconditioned gradient descent steps refining internal representations. Based on this connection, we propose Optimization-Inspired Few-Shot Adaptation (OFA), integrating a parameterization that learns preconditioners without introducing additional trainable parameters, and an objective that improves optimization efficiency by learning preconditioners based on a convergence bound, while simultaneously steering the optimization path toward the flat local minimum. Our method overcomes both issues of ICL-based and PEFT-based methods, and demonstrates superior performance over the existing methods on a variety of few-shot adaptation tasks in experiments.",
+      "authors": [
+        "Boyan Gao",
+        "Xin Wang",
+        "Yibo Yang",
+        "David Clifton"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/115766",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/115766",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:45811",
+      "title": "On the Power of Context-Enhanced Learning in LLMs",
+      "abstract": "We formalize a new concept for LLMs, **context-enhanced learning**. It involves standard gradient-based learning on text except that the context is enhanced with additional data on which no auto-regressive gradients are computed. This setting is a gradient-based analog of usual in-context learning (ICL) and appears in some recent works.Using a multi-step reasoning task, we prove in a simplified setting that context-enhanced learning can be **exponentially more sample-efficient** than standard learning when the model is capable of ICL. At a mechanistic level, we find that the benefit of context-enhancement arises from a more accurate gradient learning signal.We also experimentally demonstrate that it appears hard to detect or recover learning materials that were used in the context during training. This may have implications for data security as well as copyright.",
+      "authors": [
+        "Xingyu Zhu",
+        "Abhishek Panigrahi",
+        "Sanjeev Arora"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/45811",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/45811",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:45349",
+      "title": "Model Steering: Learning with a Reference Model Improves Generalization Bounds and Scaling Laws",
+      "abstract": "This paper formalizes an emerging learning paradigm that uses a trained model as a reference to guide and enhance the training of a target model through strategic data selection or weighting, named **model steering**. While ad-hoc methods have been used in various contexts, including the training of large foundation models, its underlying principles remain insufficiently understood, leading to sub-optimal performance. In this work, we propose a theory-driven framework for model steering called **DRRho risk minimization**, which is rooted in Distributionally Robust Optimization (DRO). Through a generalization analysis, we provide theoretical insights into why this approach improves generalization and data efficiency compared to training without a reference model. To the best of our knowledge, this is the first time such theoretical insights are provided for the new learning paradigm, which significantly enhance our understanding and practice of model steering. Building on these insights and the connection between contrastive learning and DRO, we introduce a novel method for Contrastive Language-Image Pretraining (CLIP) with a reference model, termed DRRho-CLIP. Extensive experiments validate the theoretical insights, reveal a superior scaling law compared to CLIP without a reference model, and demonstrate its strength over existing heuristic approaches. Code is released at [github.com/Optimization-AI/DRRho-CLIP](https://github.com/Optimization-AI/DRRho-CLIP)",
+      "authors": [
+        "Xiyuan Wei",
+        "Ming Lin",
+        "Fanjiang Ye",
+        "Fengguang Song",
+        "Liangliang Cao",
+        "My T. Thai",
+        "Tianbao Yang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/45349",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/45349",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:117868",
+      "title": "MGUP: A Momentum-Gradient Alignment Update Policy for Stochastic Optimization",
+      "abstract": "Efficient optimization is essential for training large language models. Although intra-layer selective updates have been explored, a general mechanism that enables fine-grained control while ensuring convergence guarantees is still lacking. To bridge this gap, we propose \\textbf{MGUP}, a novel mechanism for selective updates. \\textbf{MGUP} augments standard momentum-based optimizers by applying larger step-sizes to a selected fixed proportion of parameters in each iteration, while applying smaller, non-zero step-sizes to the rest. As a nearly {plug-and-play} module, \\textbf{MGUP} seamlessly integrates with optimizers such as AdamW, Lion, and Muon. This yields powerful variants such as \\textbf{MGUP-AdamW}, \\textbf{MGUP-Lion}, and \\textbf{MGUP-Muon}. Under standard assumptions, we provide theoretical convergence guarantees for \\textbf{MGUP-AdamW} (without weight decay) in stochastic optimization. Extensive experiments across diverse tasks, including MAE pretraining, LLM pretraining, and downstream fine-tuning, demonstrate that our \\textbf{MGUP}-enhanced optimizers achieve superior or more stable performance compared to their original base optimizers. We offer a principled, versatile, and theoretically grounded strategy for efficient intra-layer selective updates, accelerating and stabilizing the training of large-scale models. The code is publicly available at https://github.com/MaeChd/MGUP.",
+      "authors": [
+        "Da Chang",
+        "Ganzhao Yuan"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/117868",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/117868",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:117709",
+      "title": "LLM-Explorer: A Plug-in Reinforcement Learning Policy Exploration Enhancement Driven by Large Language Models",
+      "abstract": "Policy exploration is critical in reinforcement learning (RL), where existing approaches include $\\epsilon$-greedy, Gaussian process, etc. However, these approaches utilize preset stochastic processes and are indiscriminately applied in all kinds of RL tasks without considering task-specific features that influence policy exploration. Moreover, during RL training, the evolution of such stochastic processes is rigid, which typically only incorporates a decay in the variance, failing to adjust flexibly according to the agent's real-time learning status. Inspired by the analyzing and reasoning capability of large language models (LLMs), we design **LLM-Explorer** to adaptively generate task-specific exploration strategies with LLMs, enhancing the policy exploration in RL. In our design, we sample the learning trajectory of the agent during the RL training in a given task and prompt the LLM to analyze the agent's current policy learning status and then generate a probability distribution for future policy exploration. Updating the probability distribution periodically, we derive a stochastic process specialized for the particular task and dynamically adjusted to adapt to the learning process. Our design is a plug-in module compatible with various widely applied RL algorithms, including the DQN series, DDPG, TD3, and any possible variants developed based on them. Through extensive experiments on the Atari and MuJoCo benchmarks, we demonstrate LLM-Explorer's capability to enhance RL policy exploration, achieving an average performance improvement up to 37.27%. Our code is open-source at https://github.com/tsinghua-fib-lab/LLM-Explorer for reproducibility.",
+      "authors": [
+        "Qianyue Hao",
+        "Yiwen Song",
+        "Qingmin Liao",
+        "Jian Yuan",
+        "Yong Li"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/117709",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/117709",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:117938",
+      "title": "LLM Meeting Decision Trees on Tabular Data",
+      "abstract": "Tabular data have been playing a vital role in diverse real-world fields, including healthcare, finance, etc. With the recent success of Large Language Models (LLMs), early explorations of extending LLMs to the domain of tabular data have been developed. Most of these LLM-based methods typically first serialize tabular data into natural language descriptions, and then tune LLMs or directly infer on these serialized data. However, these methods suffer from two key inherent issues: (i) data perspective: existing data serialization methods lack universal applicability for structured tabular data, and may pose privacy risks through direct textual exposure, and (ii) model perspective: LLM fine-tuning methods struggle with tabular data, and in-context learning scalability is bottle-necked by input length constraints (suitable for few-shot learning). This work explores a novel direction of integrating LLMs into tabular data through logical decision tree rules as intermediaries, proposing a decision tree enhancer with LLM-derived rule for tabular prediction, DeLTa. The proposed DeLTa avoids tabular data serialization, and can be applied to full data learning setting without LLM fine-tuning. Specifically, we leverage the reasoning ability of LLMs to redesign an improved rule given a set of decision tree rules. Furthermore, we provide a calibration method for original decision trees via new generated rule by LLM, which approximates the error correction vector to steer the original decision tree predictions in the direction of ``errors'' reducing. Finally, extensive experiments on diverse tabular benchmarks show that our method achieves state-of-the-art performance.",
+      "authors": [
+        "Hangting Ye",
+        "Jinmeng Li",
+        "He Zhao",
+        "Dandan Guo",
+        "Yi Chang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/117938",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/117938",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:116066",
+      "title": "Learning the Wrong Lessons: Syntactic-Domain Spurious Correlations in Language Models",
+      "abstract": "For an LLM to correctly respond to an instruction it must understand both the semantics and the domain (i.e., subject area) of a given task-instruction pair. However, syntax can also convey implicit information. Recent work shows that \\textit{syntactic templates}---frequent sequences of Part-of-Speech (PoS) tags---are prevalent in training data and often appear in model outputs. In this work we characterize syntactic templates, domain, and semantics in task-instruction pairs. We identify cases of spurious correlations between syntax and domain, where models learn to associate a domain with syntax during training; this can sometimes override prompt semantics. Using a synthetic training dataset, we find that the syntactic-domain correlation can lower performance (mean 0.51 +/- 0.06) on entity knowledge tasks in OLMo-2 models (1B-13B). We introduce an evaluation framework to detect this phenomenon in trained models, and show that it occurs on a subset of the FlanV2 dataset in open (OLMo-2-7B; Llama-4-Maverick), and closed (GPT-4o) models. Finally, we present a case study on the implications for LLM security, showing that unintended syntactic-domain correlations can be used to bypass refusals in OLMo-2-7B Instruct and GPT-4o. Our findings highlight two needs: (1) to explicitly test for syntactic-domain correlations, and (2) to ensure \\textit{syntactic} diversity in training data, specifically within domains, to prevent such spurious correlations.",
+      "authors": [
+        "Chantal Shaib",
+        "Vinith Suriyakumar",
+        "Byron Wallace",
+        "Marzyeh Ghassemi"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/116066",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/116066",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:45876",
+      "title": "Learning Safety Constraints for Large Language Models",
+      "abstract": "Large language models (LLMs) have emerged as powerful tools but pose significant safety risks through harmful outputs and vulnerability to adversarial attacks. We propose SaP–short for Safety Polytope–a geometric approach to LLM safety, that learns and enforces multiple safety constraints directly in the model's representation space. We develop a framework that identifies safe and unsafe regions via the polytope's facets, enabling both detection and correction of unsafe outputs through geometric steering. Unlike existing approaches that modify model weights, SaP operates post-hoc in the representation space, preserving model capabilities while enforcing safety constraints. Experiments across multiple LLMs demonstrate that our method can effectively detect unethical inputs, reduce adversarial attack success rates while maintaining performance on standard tasks, thus highlighting the importance of having an explicit geometric model for safety. Analysis of the learned polytope facets reveals emergence of specialization in detecting different semantic notions of safety, providing interpretable insights into how safety is captured in LLMs' representation space.",
+      "authors": [
+        "Xin Chen",
+        "Yarden As",
+        "Andreas Krause"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/45876",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/45876",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:44669",
+      "title": "Investigating Non-Transitivity in LLM-as-a-Judge",
+      "abstract": "Automatic evaluation methods based on large language models (LLMs) are emerging as the standard tool for assessing the instruction-following abilities of LLM-based agents. The most common method in this paradigm, pairwise comparisons with a baseline model, critically depends on the assumption of transitive preferences. However, the validity of this assumption remains largely unexplored. In this study, we investigate the presence of non-transitivity within the AlpacaEval framework and analyze its effects on model rankings. We find that LLM judges exhibit non-transitive preferences, leading to rankings that are sensitive to the choice of the baseline model. To mitigate this issue, we show that round-robin tournaments combined with Bradley-Terry models of preference can produce more reliable rankings. Notably, our method increases both the Spearman correlation and the Kendall correlation with Chatbot Arena (95.0\\% $\\rightarrow$ 96.4\\% and 82.1\\% $\\rightarrow$ 86.3\\% respectively). To address the computational cost of round-robin tournaments, we propose Swiss-Wise Iterative Matchmaking (Swim) tournaments, using a dynamic matching strategy to capture the benefits of round-robin tournaments while maintaining computational efficiency.",
+      "authors": [
+        "Yi Xu",
+        "Laura Ruis",
+        "Tim Rocktäschel",
+        "Robert Kirk"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/44669",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/44669",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:116681",
+      "title": "GraphMaster: Automated Graph Synthesis via LLM Agents in Data-Limited Environments",
+      "abstract": "The era of foundation models has revolutionized AI research, yet Graph Foundation Models (GFMs) remain constrained by the scarcity of large-scale graph corpora. Traditional graph data synthesis techniques primarily focus on simplistic structural operations, lacking the capacity to generate semantically rich nodes with meaningful textual attributes—a critical limitation for real-world applications. While large language models (LLMs) demonstrate exceptional text generation capabilities, their direct application to graph synthesis is impeded by context window limitations, hallucination phenomena, and structural consistency challenges. To address these issues, we introduce \\textbf{GraphMaster}—the first multi-agent framework specifically designed for graph data synthesis in data-limited environments. GraphMaster orchestrates four specialized LLM agents (Manager, Perception, Enhancement, and Evaluation) that collaboratively optimize the synthesis process through iterative refinement, ensuring both semantic coherence and structural integrity. To rigorously evaluate our approach, we create new data-limited “Sub” variants of six standard graph benchmarks, specifically designed to test synthesis capabilities under realistic constraints. Additionally, we develop a novel interpretability assessment framework that combines human evaluation with a principled Grassmannian manifold-based analysis, providing both qualitative and quantitative measures of semantic coherence. Experimental results demonstrate that GraphMaster significantly outperforms traditional synthesis methods across multiple datasets, establishing a strong foundation for advancing GFMs in data-scarce environments.",
+      "authors": [
+        "Enjun Du",
+        "Xunkai Li",
+        "Tian Jin",
+        "Zhihan Zhang",
+        "Rong-Hua Li",
+        "Guoren Wang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/116681",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/116681",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:116983",
+      "title": "Functional Scaling Laws in Kernel Regression: Loss Dynamics and Learning Rate Schedules",
+      "abstract": "Scaling laws have emerged as a unifying lens for understanding and guiding the training of large language models (LLMs). However, existing studies predominantly focus on the final-step loss, leaving open whether the entire $\\textit{loss dynamics}$ obey similar laws and, crucially, how the $\\textit{learning rate schedule}$ (LRS) shapes them. We address these gaps in a controlled theoretical setting by analyzing stochastic gradient descent (SGD) on a power-law kernel regression model. The key insight is a novel $\\textbf{intrinsic-time}$ viewpoint, which captures the training progress more faithfully than iteration count. We then establish a $\\textbf{Functional Scaling Law (FSL)}$ that captures the full loss trajectory under arbitrary LRSs, with the schedule’s influence entering through a simple convolutional functional. We further instantiate the theory for three representative LRSs---constant, exponential decay, and warmup–stable–decay (WSD)---and derive explicit scaling relations in both data- and compute-limited regimes. These comparisons explain key empirical phenomena: (i) higher-capacity models are more data- and compute-efficient; (ii) learning-rate decay improves training efficiency; and (iii) WSD-type schedules outperform pure decay. Finally, experiments on LLMs ranging from 0.1B to 1B parameters demonstrate the practical relevance of FSL as a surrogate model for fitting and predicting loss trajectories in large-scale pre-training.",
+      "authors": [
+        "Binghui Li",
+        "Fengling Chen",
+        "Zixun Huang",
+        "Lean Wang",
+        "Lei Wu"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/116983",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/116983",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:115459",
+      "title": "Feedback-Aware MCTS for Goal-Oriented Information Seeking",
+      "abstract": "Effective decision-making and problem-solving in conversational systems require the ability to identify and acquire missing information through targeted questioning. A key challenge lies in efficiently narrowing down a large space of possible outcomes by posing questions that minimize uncertainty. To address this, we introduce a novel framework that leverages Large Language Models (LLMs) to generate information-seeking questions, with Monte Carlo Tree Search (MCTS) to strategically select questions that maximize information gain, as a part of inference-time planning. Our primary contribution includes a hierarchical feedback mechanism that exploits past interaction patterns to guide future strategy. Specifically, each new problem is mapped to a cluster based on semantic similarity, and our UCT (Upper Confidence bound for Trees) formulation employs a cluster-specific bonus reward to prioritize successful question trajectories that have proven effective for similar problems in the past. Extensive empirical evaluation across medical diagnosis and technical troubleshooting domains shows that our method achieves an average of 12\\% improvement in success rates and about 10x reduction in the number of LLM calls made for planning per conversation, compared to the state of the art. An additional 8\\% gain in success rate is observed on average when we start with a constrained set of possibilities. Our results underscore the efficacy of feedback-aware MCTS in enhancing information-seeking in goal-oriented dialogues.",
+      "authors": [
+        "Harshita Chopra",
+        "Chirag Shah"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/115459",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/115459",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:45726",
+      "title": "DPO Meets PPO: Reinforced Token Optimization for RLHF",
+      "abstract": "In the classical Reinforcement Learning from Human Feedback (RLHF) framework, Proximal Policy Optimization (PPO) is employed to learn from sparse, sentence-level rewards---a challenging scenario in traditional deep reinforcement learning. Despite the great successes of PPO in the alignment of state-of-the-art closed-source large language models (LLMs), its open-source implementation is still largely sub-optimal, as widely reported by numerous research studies. To address these issues, we introduce a framework that models RLHF problems as a Markov decision process (MDP), enabling the capture of fine-grained token-wise information. Furthermore, we provide theoretical insights that demonstrate the superiority of our MDP framework over the previous sentence-level bandit formulation. Under this framework, we introduce an algorithm, dubbed as Reinforced Token Optimization (\\texttt{RTO}), which learns the token-wise reward function from preference data and performs policy optimization based on this learned token-wise reward signal. Theoretically, \\texttt{RTO} is proven to have the capability of finding the near-optimal policy sample-efficiently. For its practical implementation, \\texttt{RTO} innovatively integrates Direct Preference Optimization (DPO) and PPO. DPO, originally derived from sparse sentence rewards, surprisingly provides us with a token-wise characterization of response quality, which is seamlessly incorporated into our subsequent PPO training stage. We conduct extensive experiments to evaluate \\texttt{RTO} against PPO and other direct preference learning algorithms. The results highlight the effectiveness of RTO, with the algorithm outperforming PPO by 7.5 points on the AlpacaEval 2 benchmark and by 4.1 points on Arena-Hard. Our code and models are available at \\href{https://github.com/zkshan2002/RTO}{https://github.com/zkshan2002/RTO}.",
+      "authors": [
+        "Han Zhong",
+        "Zikang Shan",
+        "Guhao Feng",
+        "Wei Xiong",
+        "Xinle Cheng",
+        "Li Zhao",
+        "Di He",
+        "Jiang Bian",
+        "Liwei Wang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/45726",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/45726",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:119266",
+      "title": "DeepDiver: Adaptive Web-Search Intensity Scaling via Reinforcement Learning",
+      "abstract": "Information seeking demands iterative evidence gathering and reflective reasoning, yet large language models (LLMs) still struggle with it in open-web question answering. Existing prompting and supervised fine-tuning (SFT) methods remain fixed by prompt rules or training corpora, and are usually benchmarked only on well-structured wiki sources, limiting real-world adaptability. We introduce $\\textbf{WebPuzzle}$, a 24k-sample training and 275-sample test benchmark that evaluates information seeking on the live internet, across both wiki and open-domain queries. Leveraging 7k WebPuzzle instances, we develop $\\textbf{DeepDiver}$, a reinforcement-learning (RL) framework that cultivates $\\textbf{Search Intensity Scaling (SIS)}$—an emergent ability to escalate search frequency and depth instead of settling on overconfident, under-evidenced answers. With SIS, Qwen2.5-7B-Instruct and Pangu-7B-Reasoner attain performance on real-web tasks comparable to the 671B-parameter DeepSeek-R1. We detail DeepDiver’s curriculum from cold-start SFT to a well designed RL procedure, and show that its seeking policy generalized from closed-ended queries to open-ended generation such as long-form writing. Our results advance adaptive information seeking in LLMs and provide a rigorous benchmark for future work.",
+      "authors": [
+        "Wenxuan Shi",
+        "Haochen Tan",
+        "Chuqiao Kuang",
+        "Xiaoguang Li",
+        "Hanting Chen",
+        "Xiaozhe Ren",
+        "Yasheng Wang",
+        "Lu Hou",
+        "Lifeng Shang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/119266",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/119266",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:119692",
+      "title": "d1: Scaling Reasoning in Diffusion Large Language Models via Reinforcement Learning",
+      "abstract": "Recent large language models (LLMs) have demonstrated strong reasoning capabilities that benefits from online reinforcement learning (RL). These capabilities have primarily been demonstrated within the left-to-right autoregressive (AR) generation paradigm. In contrast, non-autoregressive paradigms based on diffusion generate text in a coarse-to-fine manner. Although recent diffusion-based large language models (dLLMs) have achieved competitive language modeling performance compared to their AR counterparts, it remains unclear if dLLMs can also leverage recent advances in LLM reasoning. To this end, we propose, a framework to adapt pre-trained masked dLLMs into reasoning models via a combination of supervised finetuning (SFT) and RL. Specifically, we develop and extend techniques to improve reasoning in pretrained dLLMs: (a) we utilize a masked SFT technique to distill knowledge and instill self-improvement behavior directly from existing datasets, and (b) we introduce a novel critic-free, policy-gradient based RL algorithm called diffu-GRPO, the first integration of policy gradient methods to masked dLLMs. Through empirical studies, we investigate the performance of different post-training recipes on multiple mathematical and planning benchmarks. We find that d1 yields the best performance and significantly improves performance of a state-of-the-art dLLM.",
+      "authors": [
+        "Siyan Zhao",
+        "Devaansh Gupta",
+        "Qinqing Zheng",
+        "Aditya Grover"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/119692",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/119692",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:115329",
+      "title": "Co-Evolving LLM Coder and Unit Tester via Reinforcement Learning",
+      "abstract": "Mathematical reasoning in large language models has been successfully incentivized through reinforcement learning with verifiable rewards, leading to improved one-shot precision. In this work, we turn our focus to the coding domain. Beyond one-shot precision, we highlight unit test generation as another key factor for enhancing coding ability, since accurate unit tests are essential for enabling self-checking and self-correction during inference. Traditional approaches for fine-tuning LLMs on unit test generation rely heavily on ground-truth code solutions in the training data. We propose CURE, a novel reinforcement learning framework with a dedicated reward design that co-evolves coding and unit test generation capabilities based on their interaction outcomes—without any ground-truth code as supervision. This approach enables flexible and scalable training and allows the unit tester to learn directly from the coder’s mistakes. Through extensive evaluations, we demonstrate that our CURE models, derived from base models of varying sizes, excel in both code generation and unit test generation. They naturally extend to downstream tasks such as test-time scaling—achieving a 6.2\\% improvement over the base model—and agentic unit test generation, with a 25.1\\% improvement. Our 4B model consistently outperforms Qwen3-4B while achieving 64.8\\% inference efficiency in unit test generation. Notably, we also find that the CURE model can serve as an effective reward model for reinforcement learning on base models, even in the absence of any labeled supervision.",
+      "authors": [
+        "Yinjie Wang",
+        "Ling Yang",
+        "Ye Tian",
+        "Ke Shen",
+        "Mengdi Wang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/115329",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/115329",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:118029",
+      "title": "Checklists Are Better Than Reward Models For Aligning Language Models",
+      "abstract": "Language models must be adapted to understand and follow user instructions. Reinforcement learning is widely used to facilitate this —typically using fixed criteria such as \"helpfulness\" and \"harmfulness\". In our work, we instead propose using flexible, instruction-specific criteria as a means of broadening the impact that reinforcement learning can have in eliciting instruction following. We propose \"Reinforcement Learning from Checklist Feedback\" (RLCF). From instructions, we extract checklists and evaluate how well responses satisfy each item—using both AI judges and specialized verifier programs—then combine these scores to compute rewards for RL. We compare RLCF with other alignment methods on top of a strong instruction following model (Qwen2.5-7B-Instruct) on five widely-studied benchmarks — RLCF is the only method to help on every benchmark, including a 4-point boost in hard satisfaction rate on FollowBench, a 6-point increase on InFoBench, and a 3-point rise in win rate on Arena-Hard. We show that RLCF can also be used off-policy to improve Llama 3.1 8B Instruct and OLMo 2 7B Instruct. These results establish rubrics as a key tool for improving language models' support of queries that express a multitude of needs. We release our our dataset of rubrics (WildChecklists), models, and code to the public.",
+      "authors": [
+        "Vijay Viswanathan",
+        "Yanchao Sun",
+        "Xiang Kong",
+        "Meng Cao",
+        "Graham Neubig",
+        "Sherry Wu"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/118029",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/118029",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:118660",
+      "title": "Angles Don’t Lie: Unlocking Training‑Efficient RL Through the Model’s Own Signals",
+      "abstract": "Current Reinforcement Fine-tuning (RFT) paradigms for Large Language Models (LLMs) suffer from sample inefficiency due to the redundant exposure of identical queries under uniform data sampling. While previous work has explored curriculum learning via heuristic difficulty metrics, these strategies exhibit limitations by neglecting the intrinsic learning signals generated by the model itself, thus leading to suboptimal training regimes. In this paper, we identify a model-inherent signal termed *angle concentration* that effectively reflects an LLM's capacity to learn from specific data. We theoretically and empirically demonstrate a correlation between the angular distribution of token hidden state vectors and the resulting gradient, revealing a learning preference for data exhibiting higher angle concentration. Inspired by this finding, we propose GAIN-RL, a Gradient-driven Angle-Informed Navigated RL framework. By leveraging the model's intrinsic angle concentration signal, GAIN-RL dynamically selects training data in each epoch, ensuring consistently impactful gradient updates and thus significantly enhancing overall training efficiency. Empirical evaluations show that GAIN-RL (GRPO) achieves over a 2.5$\\times$ acceleration in training efficiency across diverse mathematical and coding tasks and varying model scales. Furthermore, GAIN-RL (GRPO)'s efficient sampling yields data-efficient training, achieving better performance with half the original data compared to vanilla GRPO with full training data.",
+      "authors": [
+        "Qinsi Wang",
+        "Jinghan Ke",
+        "Hancheng Ye",
+        "Yueqian Lin",
+        "Yuzhe Fu",
+        "Jianyi Zhang",
+        "Kurt Keutzer",
+        "Chenfeng Xu",
+        "Yiran Chen"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/118660",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/118660",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:icml:2025:45944",
+      "title": "am-ELO: A Stable Framework for Arena-based LLM Evaluation",
+      "abstract": "Arena-based evaluation is a fundamental yet significant evaluation paradigm for modern AI models, especially large language models (LLMs). Existing framework based on ELO rating system suffers from the inevitable instability problem due to ranking inconsistency and the lack of attention to the varying abilities of annotators. In this paper, we introduce a novel stable arena framework to address these issues by enhancing the ELO Rating System. Specifically, we replace the iterative update method with a Maximum Likelihood Estimation (MLE) approach, m-ELO, and provide theoretical proof of the consistency and stability of the MLE approach for model ranking. Additionally, we proposed the am-ELO, which modify the Elo Rating’s probability function to incorporate annotator abilities, enabling the simultaneous estimation of model scores and annotator reliability. Experiments demonstrate that this method ensures stability, proving that this framework offers a more robust, accurate, and stable evaluation method for LLMs.",
+      "authors": [
+        "Zirui Liu",
+        "Jiatong Li",
+        "Yan Zhuang",
+        "Qi Liu",
+        "Shuanghong Shen",
+        "Jie Ouyang",
+        "Mingyue Cheng",
+        "Shijin Wang"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2025",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2025",
+      "abs_url": "https://icml.cc/virtual/2025/poster/45944",
+      "pdf_url": "https://icml.cc/virtual/2025/poster/45944",
+      "comment": "",
+      "journal_ref": "ICML 2025 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:121761",
+      "title": "AGENTIF: Benchmarking Large Language Models Instruction Following Ability in Agentic Scenarios",
+      "abstract": "Large Language Models (LLMs) have demonstrated advanced capabilities in real-world agentic applications. Growing research efforts aim to develop LLM-based agents to address practical demands, introducing a new challenge: agentic scenarios often involve lengthy instructions with complex constraints, such as extended system prompts and detailed tool specifications. While adherence to such instructions is crucial for agentic applications, whether LLMs can reliably follow them remains underexplored. In this paper, we introduce AgentIF, the first benchmark for systematically evaluating LLM instruction following ability in agentic scenarios. AgentIF features three key characteristics: (1) Realistic, constructed from $50$ real-world agentic applications. (2) Long, averaging $1,723$ words with a maximum of $15,630$ words. (3) Complex, averaging $11.9$ constraints per instruction, covering diverse constraint types, such as tool specifications and condition constraints.To construct AgentIF, we collect $707$ human-annotated instructions across $50$ agentic tasks from industrial application agents and open-source agentic systems. For each instruction, we annotate the associated constraints and corresponding evaluation metrics, including code-based evaluation, LLM-based evaluation, and hybrid code-LLM evaluation.We use AgentIF to systematically evaluate existing advanced LLMs. We observe that current models generally perform poorly, especially in handling complex constraint structures and tool specifications. We further conduct error analysis and analytical experiments on instruction length and meta constraints, providing some findings about the failure modes of existing LLMs. We have released the code and data to facilitate future research.",
+      "authors": [
+        "Yunjia Qi",
+        "Hao Peng",
+        "Xiaozhi Wang",
+        "Amy Xin",
+        "Youfeng Liu",
+        "Bin Xu",
+        "Lei Hou",
+        "Juanzi Li"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/121761",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/121761",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:116118",
+      "title": "Adaptive Prediction-Powered AutoEval with Reliability and Efficiency Guarantees",
+      "abstract": "Selecting artificial intelligence (AI) models, such as large language models (LLMs), from multiple candidates requires accurate performance estimation. This is ideally achieved through empirical evaluations involving abundant real-world data. However, such evaluations are costly and impractical at scale. To address this challenge, autoevaluation methods leverage synthetic data produced by automated evaluators, such as LLMs-as-judges, reducing variance but potentially introducing bias. Recent approaches have employed semi-supervised prediction-powered inference ($\\texttt{PPI}$) to correct for the bias of autoevaluators. However, the use of autoevaluators may lead in practice to a degradation in sample efficiency compared to conventional methods using only real-world data. In this paper, we propose $\\texttt{R-AutoEval+}$, a novel framework that provides finite-sample reliability guarantees on the model evaluation, while also ensuring an enhanced (or at least no worse) sample efficiency compared to conventional methods. The key innovation of $\\texttt{R-AutoEval+}$ is an adaptive construction of the model evaluation variable, which dynamically tunes its reliance on synthetic data, reverting to conventional methods when the autoevaluator is insufficiently accurate. Experiments on the use of LLMs-as-judges for the optimization of quantization settings for the weights of an LLM, for prompt design in LLMs, and for test-time reasoning budget allocation in LLMs confirm the reliability and efficiency of $\\texttt{R-AutoEval+}$.",
+      "authors": [
+        "Sangwoo Park",
+        "Matteo Zecchin",
+        "Osvaldo Simeone"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/116118",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/116118",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:115659",
+      "title": "Adaptive Defense against Harmful Fine-Tuning for Large Language Models via Bayesian Data Scheduler",
+      "abstract": "Harmful fine-tuning poses critical safety risks to fine-tuning-as-a-service for large language models. Existing defense strategies preemptively build robustness via attack simulation but suffer from fundamental limitations: (i) the infeasibility of extending attack simulations beyond bounded threat models due to the inherent difficulty of anticipating unknown attacks, and (ii) limited adaptability to varying attack settings, as simulation fails to capture their variability and complexity. To address these challenges, we propose Bayesian Data Scheduler (BDS), an adaptive tuning-stage defense strategy with no need for attack simulation. BDS formulates harmful fine-tuning defense as a Bayesian inference problem, learning the posterior distribution of each data point's safety attribute, conditioned on the fine-tuning and alignment datasets. The fine-tuning process is then constrained by weighting data with their safety attributes sampled from the posterior, thus mitigating the influence of harmful data. By leveraging the post hoc nature of Bayesian inference, the posterior is conditioned on the fine-tuning dataset, enabling BDS to tailor its defense to the specific dataset, thereby achieving adaptive defense. Furthermore, we introduce a neural scheduler based on amortized Bayesian learning, enabling efficient transfer to new data without retraining. Comprehensive results across diverse attack and defense settings demonstrate the state-of-the-art performance of our approach. Code is available at https://github.com/Egg-Hu/Bayesian-Data-Scheduler.",
+      "authors": [
+        "Zixuan Hu",
+        "Li Shen",
+        "Zhenyi Wang",
+        "Yongxian Wei",
+        "Dacheng Tao"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/115659",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/115659",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
+    },
+    {
+      "id": "conf:neurips:2025:121560",
+      "title": "A Controllable Examination for Long-Context Language Models",
+      "abstract": "Existing frameworks for evaluating long-context language models (LCLM) can be broadly categorized into real-world applications (e.g, document summarization) and synthetic tasks (e.g, needle-in-a-haystack). Despite their utility, both approaches are accompanied by certain intrinsic limitations. Real-world tasks often involve complexity that makes interpretation challenging and suffer from data contamination, whereas synthetic tasks frequently lack meaningful coherence between the target information (\"needle\") and its surrounding context (\"haystack\"), undermining their validity as proxies for realistic applications. In response to these challenges, we posit that an ideal long-context evaluation framework should be characterized by three essential features: 1) seamless context: coherent contextual integration between target information and its surrounding context; 2) controllable setting: an extensible task setup that enables controlled studies—for example, incorporating additional required abilities such as numerical reasoning; and 3) sound evaluation: avoiding LLM-as-Judge and conduct exact-match to ensure deterministic and reproducible evaluation results.This study introduces $\\textbf{LongBioBench}$, a benchmark that utilizes artificially generated biographies as a controlled environment for assessing LCLMs across dimensions of $\\textit{understanding}$, $\\textit{reasoning}$, and $\\textit{trustworthiness}$. Our experimental evaluation, which includes $\\textbf{18}$ LCLMs in total, demonstrates that most models still exhibit deficiencies in semantic understanding and elementary reasoning over retrieved results and are less trustworthy as context length increases.Our further analysis indicates some design choices employed by existing synthetic benchmarks, such as contextual non-coherence, numerical needles, and the absence of distractors, rendering them vulnerable to test the model's long-context capabilities.Moreover, we also reveal that long-context continual pretraining primarily adjusts RoPE embedding to accommodate extended context lengths, which in turn yields only marginal improvements in the model’s true capabilities. To sum up, compared to previous synthetic benchmarks, LongBioBench achieves a better trade-off between mirroring authentic language tasks and maintaining controllability, and is highly interpretable and configurable.",
+      "authors": [
+        "Yijun Yang",
+        "Zeyu Huang",
+        "Wenhao Zhu",
+        "Zihan Qiu",
+        "Fei Yuan",
+        "Jeff Pan",
+        "Ivan Titov"
+      ],
+      "published": "2025-01-01T00:00:00Z",
+      "updated": "2025-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2025",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2025",
+      "abs_url": "https://neurips.cc/virtual/2025/poster/121560",
+      "pdf_url": "https://neurips.cc/virtual/2025/poster/121560",
+      "comment": "",
+      "journal_ref": "NeurIPS 2025 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2025
     }
   ]
 }

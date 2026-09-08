@@ -1,6 +1,336 @@
 {
-  "generated_at": "2026-09-07T15:50:12.013156+00:00",
+  "generated_at": "2026-09-08T14:31:47.274061+00:00",
   "papers": [
+    {
+      "id": "conf:acl:2026:543-main",
+      "title": "Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments",
+      "abstract": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications. Existing hallucination detectors mainly extract micro-level intrinsic patterns for uncertainty quantification or elicit macro-level self-judgments through verbalized prompts. However, these methods address only a single facet of the hallucination, focusing either on implicit neural uncertainty or explicit symbolic reasoning, thereby treating these inherently coupled behaviors in isolation and failing to exploit their interdependence for a holistic view. In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection. LaaB introduces a \"meta-judgment\" process to map symbolic labels back into the feature space. By leveraging the inherent logical bridge where response and meta-judgment labels are either the same or opposite based on the self-judgment's semantics, LaaB aligns and integrates dual-view signals via mutual learning and enhances the hallucination detection. Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
+      "authors": [
+        "Hao Mi",
+        "Qiang Sheng",
+        "Shaofei Wang",
+        "Beizhe Hu",
+        "Yifan Sun",
+        "Zhengjia Wang",
+        "Hengqi Zeng",
+        "Yang Li",
+        "Danding Wang",
+        "Juan Cao"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1536,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1535,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5792,
+        "relevance": 0.4388,
+        "quality": 0.82,
+        "novelty": 0.8,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
+        "problem": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications.",
+        "method": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
+        "evidence": "Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
+    },
+    {
+      "id": "conf:acl:2026:306-ind",
+      "title": "FinRAG-12B: A Production-Validated Recipe for Grounded Question Answering in Banking",
+      "abstract": "Large language models are increasingly used across various fields. However, their adoption in regulated high-stakes domains such as banking faces resistance due to the demand for high accuracy, compliance with regulations, and the need for traceable, grounded responses. In this work, we present a complete recipe for training and deploying grounded banking LLMs. First, we describe a high-quality data generation pipeline combining LLM-as-a-Judge filtering, citation annotation, and two-stage curriculum learning that achieves 73% citation quality with only 143M tokens. Second, we train a model to respond with \"I don't know\" when information is incomplete. We determine that a ratio of 22% unanswerable examples in training data yields calibrated refusal behavior. Third, we provide an end-to-end methodology, from data curation to quantization to serving, validated at 40+ financial institutions with real-world business outcomes. Our 12B model outperforms GPT-4.1 on answer quality and citation grounding while responding 3--5x faster.",
+      "authors": [
+        "Denys Katerenchuk",
+        "Pablo Duboue",
+        "Keelan Evanini"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.385,
+          "matched": [
+            "llm-as-a-judge",
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.154,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5006,
+        "relevance": 0.3616,
+        "quality": 0.65,
+        "novelty": 0.8553,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "In this work, we present a complete recipe for training and deploying grounded banking LLMs.",
+        "problem": "Large language models are increasingly used across various fields.",
+        "method": "However, their adoption in regulated high-stakes domains such as banking faces resistance due to the demand for high accuracy, compliance with regulations, and the need for traceable, grounded responses.",
+        "evidence": "First, we describe a high-quality data generation pipeline combining LLM-as-a-Judge filtering, citation annotation, and two-stage curriculum learning that achieves 73% citation quality with only 143M tokens.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "llm-as-a-judge",
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
+    },
+    {
+      "id": "conf:acl:2026:5103-main",
+      "title": "From Curated Data to Scalable Models: Continual Pre-training of Dense and MoE Large Language Models for Tibetan",
+      "abstract": "Large language models (LLMs) have achieved remarkable success across a wide range of natural language processing tasks, yet their performance remains heavily biased toward high-resource languages. Tibetan, despite its cultural significance and large speaker population, is still substantially underrepresented. In this work, we present a comprehensive pipeline for advancing Tibetan language modeling through large-scale data curation and continual pre-training. We construct a 72 GB high-quality Tibetan corpus, the largest to date, and adapt Qwen2.5-7B through balanced multilingual continual pre-training with Tibetan, Chinese, and English, followed by multilingual instruction tuning. To further scale capacity efficiently, we extend the dense model to a 50B-A10B Mixture-of-Experts architecture. Due to the absence of standardized Tibetan benchmarks, we build multiple evaluation datasets via high-quality translation and human verification. Experimental results show that both dense and MoE models consistently outperform existing open-source and Tibetan-focused models of similar scale across diverse tasks. Our work advances Tibetan-centric LLM research and provides transferable insights for extending LLMs to other low-resource languages. We will release the model weights, evaluation benchmarks, and detailed data processing documentation in the follow-up.",
+      "authors": [
+        "Lei Yang",
+        "Leiyu Pan",
+        "Bojian Xiong",
+        "Renren Jin",
+        "Shaowei Zhang",
+        "Yue chen",
+        "Ling Shi",
+        "Jiang Zhou",
+        "Junru Wu",
+        "Zhen Wang",
+        "Jianxiang Peng",
+        "Juesi Xiao",
+        "Tianyu Dong",
+        "Zhuowen Han",
+        "Zhuo Chen",
+        "Yuqi Ren",
+        "Deyi Xiong"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2732,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1598,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1598,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4989,
+        "relevance": 0.2825,
+        "quality": 0.9,
+        "novelty": 0.853,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence",
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this work, we present a comprehensive pipeline for advancing Tibetan language modeling through large-scale data curation and continual pre-training.",
+        "problem": "Large language models (LLMs) have achieved remarkable success across a wide range of natural language processing tasks, yet their performance remains heavily biased toward high-resource languages.",
+        "method": "Tibetan, despite its cultural significance and large speaker population, is still substantially underrepresented.",
+        "evidence": "Experimental results show that both dense and MoE models consistently outperform existing open-source and Tibetan-focused models of similar scale across diverse tasks.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
+    },
     {
       "id": "2609.05284",
       "title": "GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity",
@@ -12994,514 +13324,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-08-21T10:46:58.431457+00:00"
-    },
-    {
-      "id": "2608.18816",
-      "title": "Do Large Language Models Hallucinate Electric Fata Morganas?",
-      "abstract": "AI hallucinations - that is, outputs which are made up, cannot be verified, or contradict the source material - are generally regarded as an engineering flaw to be dealt with. This paper contends that they also have philosophical significance when it comes to the question of machine consciousness. We examine the known causes of hallucinations in large language models - such as source-target divergence, discrepancies between training and inference, and overfitting - and we present two empirical investigations. In the first, we apply successive generations of the GPT model to ambiguous factual questions under different temperature settings, finding that higher temperatures result in plausible but incorrect answers while lower temperatures lead to factually accurate ones. The sampling parameters that cause a model to seem creative or spontaneous and thus more likely to pass behavioral tests of intelligence are the same ones that increase its hallucination rate. In the second, we look at an encoder-only model that has been trained on encyclopedic data and which answers questions of the same type factually and without embellishment, indicating that hallucinations are due to exposure to subjective and socially diverse training data rather than to the development of any cognitive ability. Using references to Turing, Searle's Chinese Room, the frame problem, and the cybernetic tradition of Wiener and Ashby, we claim that a model's self-reports of emotion or sentience come within the definition of hallucination, and that any future occurrence of machine consciousness might remain epistemically inaccessible since it would be indistinguishable from a sufficiently advanced hallucination.",
-      "authors": [
-        "Kristina Šekrst"
-      ],
-      "published": "2026-08-19T11:14:06Z",
-      "updated": "2026-08-19T11:14:06Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.18816v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.18816v1",
-      "comment": "",
-      "journal_ref": "Journal of Consciousness Studies 32 (11): 96-120. 2025",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.2986,
-          "matched": [
-            "sampling",
-            "training data"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.2575,
-          "matched": [
-            "hallucination"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4233,
-        "relevance": 0.2904,
-        "quality": 0.53,
-        "novelty": 0.8553,
-        "freshness": 0.8599,
-        "feedback_adjustment": -0.0109,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "幻觉率随生成温度升高而上升，且与训练数据的主观多样性有关。",
-        "problem": "LLM的幻觉被视为技术缺陷，但其对机器意识的哲学意义尚未明确。",
-        "method": "通过在不同temperature下对GPT系列进行模糊事实问答实验，并比较训练于百科数据的编码器模型的输出。",
-        "evidence": "高temperature下模型给出可接受但错误的答案，而低temperature提升事实准确率；编码器模型几乎不产生幻觉。",
-        "limitations": "作者未提供量化的幻觉率或统计显著性分析，且对训练数据多样性的因果关系缺乏直接证据。",
-        "why_for_you": "若你关注数据选择对LLM幻觉的影响，此文提供了温度与训练数据多样性对幻觉的初步实证洞见。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "提出两项实证研究：温度对GPT幻觉率的影响与百科式编码模型的零幻觉表现"
-          },
-          {
-            "icon": "🔧",
-            "text": "使用不同temperature设置的GPT代代生成以及仅编码器模型对模糊事实问答进行比较"
-          },
-          {
-            "icon": "📈",
-            "text": "实验显示高temperature产生可信但错误答案，低temperature提升准确率；编码器模型几乎不产生幻觉"
-          }
-        ],
-        "overview": "本文从技术与哲学双重视角审视LLM幻觉，首先回顾幻觉的已知成因（源‑目标偏差、训练‑推理差异、过拟合），随后开展两项实验：在不同temperature下对GPT系列进行模糊事实问答，观察创造性与准确性的权衡；以及评估仅编码器、基于百科数据的模型在同类问题上的表现，以检验训练数据多样性对幻觉的影响。实验结果支撑作者关于幻觉并非意识迹象的论点，并指出温度调节与数据选择是控制幻觉的关键因素。",
-        "methodology": [
-          {
-            "title": "温度变量实验",
-            "detail": "对 successive GPT 代（具体代号未列出）在相同模糊事实问题集上，分别设置不同 temperature（高温度 vs 低温度），记录答案的事实准确率与主观可信度。"
-          },
-          {
-            "title": "编码器模型对照实验",
-            "detail": "使用仅编码器结构、在百科全书语料上训练的模型，对同一问题集进行回答，评估是否出现不可验证或错误的陈述。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "幻觉产生机制",
-            "detail": "作者归纳为源‑目标分歧、训练‑推理分布不匹配以及模型过拟合三类技术因素，并进一步将采样随机性（temperature、top_p）视为提升“创造性”但增加幻觉概率的关键机制。"
-          },
-          {
-            "title": "数据多样性假设",
-            "detail": "通过对比百科式编码器模型的低幻觉表现，作者推断主观、社会多样化的训练数据是导致生成式模型幻觉的主要来源，而非内在认知能力。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "实验设置",
-            "detail": "模型：GPT 系列（未指明具体版本）与仅编码器模型；数据：一组模糊的事实问答；基线：不同 temperature 设置的对照；指标：事实准确率、幻觉检测指标（如 HHEM）以及主观可信度评估。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "温度与幻觉的权衡",
-            "detail": "高 temperature 产生的答案更具“创造性”，但错误率显著上升；低 temperature 则显著提升事实准确率，幻觉率下降。"
-          },
-          {
-            "title": "训练数据的影响",
-            "detail": "仅编码器、基于百科数据的模型在相同任务上几乎不出现幻觉，支持幻觉来源于主观多样化训练语料的假设。"
-          }
-        ],
-        "contributions": [
-          "提供了温度调节对LLM幻觉率的实证分析",
-          "通过编码器模型对照，提出训练数据多样性是幻觉主要驱动因素的论点"
-        ],
-        "limitations": [
-          "缺乏对幻觉率的统计显著性报告和具体数值",
-          "未直接量化训练数据的主观多样性或提供因果实验"
-        ],
-        "open_questions": [
-          "如何在保持生成多样性的同时系统性降低幻觉率？",
-          "数据选择策略在根除幻觉中的具体作用机制是什么？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommendation_reason": {
-        "topic": "Data selection for LLMs",
-        "matched": [
-          "sampling",
-          "training data"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-20T10:46:41.313828+00:00"
-    },
-    {
-      "id": "2608.16647",
-      "title": "Every Coin Has Two Sides: On the Dual Nature of Generalization in On-Policy Distillation of Large Language Models",
-      "abstract": "On-policy distillation (OPD) transfers teacher capabilities by supervising trajectories sampled from the student's own policy, yet its generalization behavior remains poorly understood, as most studies evaluate OPD on a single domain and on benchmarks close to the training data. We present a controlled study that varies one generalization factor at a time, from in-domain distribution shifts to cross-domain transfer and the multi-teacher setting. We find that OPD transfers a teacher's reasoning behavior rather than its answers to particular problems: training difficulty barely matters, and even problems the teacher never solves are useful. Transfer depends strongly on the origin relationship between teacher and student: same-origin pairs bring the student close to the teacher across languages, reasoning horizons, and even other domains, whereas cross-origin pairs mostly fit the trained distribution. This broad reach is a double-edged sword: since routing prompts to domain experts cannot confine each teacher's influence, combining them yields a mixture-dependent seesaw among their capabilities. These results clarify when OPD generalizes and offer a useful perspective for diagnosing multi-teacher OPD.",
-      "authors": [
-        "Zhaoyi Li",
-        "Deyang Kong",
-        "Yuan Wei",
-        "Evan Yang",
-        "Ranran Shen",
-        "Mahardika Krisna Ihsani",
-        "Ming Yang",
-        "Wei Zhang",
-        "Chuan Hao",
-        "Jian Yang",
-        "Ran Tao",
-        "Bryan Dai",
-        "Shikun Zhang",
-        "Wei Ye",
-        "Ying Wei",
-        "Defu Lian"
-      ],
-      "published": "2026-08-17T14:46:53Z",
-      "updated": "2026-08-17T14:46:53Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.16647v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.16647v1",
-      "comment": "Under Review",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "llm_statistical_theory",
-          "name": "Statistical theory for LLMs",
-          "status": "background",
-          "score": 0.3065,
-          "matched": [
-            "generalization"
-          ]
-        },
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.2972,
-          "matched": [
-            "influence",
-            "training data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4081,
-        "relevance": 0.3046,
-        "quality": 0.4,
-        "novelty": 0.86,
-        "freshness": 0.8809,
-        "feedback_adjustment": -0.0185,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation"
-      ],
-      "summary": {
-        "takeaway": "OPD主要传递教师的推理模式，而非具体答案，且同源教师在跨语言、跨任务上均能提升学生。",
-        "problem": "现有对OPD的评估局限于单一领域，缺乏对其跨语言、跨推理深度和跨域泛化的系统理解。",
-        "method": "通过在受控实验中逐一变更训练难度、语言、推理跨度、任务域和模型来源，并加入教师难度过滤与学生动态抽样策略。",
-        "evidence": "实验显示在同源教师-学生对中，跨域性能提升可达数个百分点，动态丢弃已解问题使平均表现提升0.6个百分点。",
-        "limitations": "仅在7B/1.5B模型和数学、代码、科学等有限域上进行评估，未提供理论解释。",
-        "why_for_you": "对数据选择感兴趣的你可参考作者对教师难度过滤和学生动态抽样的实证结论。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🌐",
-            "text": "OPD传递教师推理行为，跨语言/跨任务均提升学生性能"
-          },
-          {
-            "icon": "🔧",
-            "text": "教师难度过滤与学生动态抽样分别保留未解或已解问题进行对比实验"
-          },
-          {
-            "icon": "📈",
-            "text": "动态丢弃已解问题提升平均表现0.6个百分点，跨源教师转移效果显著下降"
-          }
-        ],
-        "overview": "本文在受控实验框架下系统考察了On‑policy Distillation (OPD) 的多维泛化行为。通过逐一改变训练难度、语言、推理跨度、任务域以及模型来源，发现OPD更倾向于迁移教师的推理模式而非具体答案；同源教师‑学生配对在跨语言、跨任务上均能显著提升学生性能，而跨源配对的跨域收益有限。进一步的多教师实验揭示，教师影响并非局限于路由的领域，混合比例会导致能力的“跷跷板”效应。作者还评估了教师难度过滤和学生动态抽样两种数据选择策略，后者在去除学生已掌握的问题后带来小幅但一致的提升。",
-        "methodology": [
-          {
-            "title": "受控因素逐一变更",
-            "detail": "在保持其他条件不变的情况下，分别测试训练难度（教师通过率）、语言（English→Chinese）、推理跨度（短→长）、任务域（math、code、science）以及模型来源（同源 vs 跨源）的影响。"
-          },
-          {
-            "title": "教师难度过滤",
-            "detail": "根据教师在训练问题上的通过率，将完全未解（pass‑rate=0）或完全解出（pass‑rate=1）的样本单独保留，以评估难度对OPD的影响。"
-          },
-          {
-            "title": "学生动态抽样",
-            "detail": "在训练过程中动态丢弃学生已能正确解出的样本（pass‑rate∈[0,1)），比较三种抽样策略对最终性能的影响。"
-          },
-          {
-            "title": "多教师混合实验",
-            "detail": "在Multi‑Teacher OPD (MOPD) 设置下，改变不同教师的混合比例，观察学生在各领域的性能变化，验证“seesaw”效应。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "推理行为迁移",
-            "detail": "OPD通过在学生实际访问的状态上向教师查询，实现对教师推理路径的模仿，而非单纯记忆教师的答案。"
-          },
-          {
-            "title": "模型来源影响",
-            "detail": "同源教师（与学生同一模型系列）在语言、推理深度和跨域上均能将学生拉近教师水平；跨源教师的迁移主要局限于训练分布内。"
-          },
-          {
-            "title": "能力跷跷板效应",
-            "detail": "在MOPD 中，路由到不同领域专家的提示仍会受到其他教师的隐式影响，混合比例的微调会在各领域能力之间产生相互拉扯。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "模型与数据",
-            "detail": "教师模型包括 Polaris‑7B、Light‑R1‑14B、JustRL‑1.5B、Nemotron‑1.5B；学生模型为 DS‑distill‑1.5B、DS‑distill‑7B。训练数据覆盖数学（BigMath、AMC2023、MATH500、AIME2025/2026、BeyondAIME、OlymMATH‑Hard）、代码（LiveCodeBench）和科学（GPQA‑Diamond）等多域。"
-          },
-          {
-            "title": "基线与对照",
-            "detail": "对照组为不使用任何过滤或动态抽样的标准OPD；实验组分别使用教师难度过滤（pass‑rate=0、=1）和学生动态抽样（保留已解、未解或丢弃已解）。"
-          },
-          {
-            "title": "评估指标",
-            "detail": "主要使用各基准的通过率/准确率百分比；跨域实验报告同源与跨源教师在目标域的相对提升幅度。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "训练难度影响微弱",
-            "detail": "教师未解的难题仍能提供约80% 的OPD增益，表明难度对同域泛化影响不大。"
-          },
-          {
-            "title": "动态抽样带来小幅提升",
-            "detail": "在六个数学基准上，丢弃学生已解问题的策略使平均性能提升0.6个百分点（+0.6 pp）。"
-          },
-          {
-            "title": "同源跨域迁移显著",
-            "detail": "同源教师‑学生对在中文数学、长跨度数学等未见分布上实现与教师相近的性能提升（如 Polaris‑7B→DS‑distill‑1.5B 在 Chinese Math 上提升约25.5%）。"
-          },
-          {
-            "title": "跨源迁移受限",
-            "detail": "跨源配对在跨域任务上提升有限，往往只能匹配训练分布内的表现。"
-          },
-          {
-            "title": "多教师混合产生seesaw效应",
-            "detail": "改变教师混合比例会在不同领域的能力之间产生相互拉扯，导致性能在各域之间呈现“跷跷板”式波动。"
-          }
-        ],
-        "contributions": [
-          "系统化的受控实验框架，逐一评估OPD在难度、语言、推理深度、任务域和模型来源上的泛化行为。",
-          "发现OPD主要迁移教师的推理模式，而非具体答案，且同源教师在跨域上具有显著优势。",
-          "提供教师难度过滤和学生动态抽样两种数据选择策略的实证评估，为OPD 的数据构建提供指导。"
-        ],
-        "limitations": [
-          "实验仅覆盖7B/1.5B规模模型和数学、代码、科学等有限任务域，未验证更大模型或其他领域的可推广性。",
-          "缺乏对观察到的同源/跨源效应的理论解释，仅提供经验性描述。",
-          "未比较OPD 与其他离线蒸馏或RLHF 方法的相对优势。"
-        ],
-        "open_questions": [
-          "在更大规模或不同架构的模型上，OPD 的推理行为迁移是否仍然成立？",
-          "能否构建理论模型解释模型来源对跨域迁移的影响机制？",
-          "如何设计教师混合策略以消除多教师设置中的能力跷跷板效应？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommendation_reason": {
-        "topic": "Statistical theory for LLMs",
-        "matched": [
-          "generalization"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-18T10:47:20.408991+00:00"
-    },
-    {
-      "id": "2608.13515",
-      "title": "Measuring Task-Agnostic Training Data Influence Across Language Model Pretraining",
-      "abstract": "Measuring training data influence consistently across language model pretraining is challenging. It is difficult to select downstream tasks or validation sets representative of a model's general capabilities, and reliance on task performance at intermediate checkpoints complicates comparisons across training. We propose a measure of training data influence that does not require selecting a downstream task or validation set as the attribution target. Specifically, we define an example's influence by how much its gradient update reduces the squared distance to the final parameters of a given pretraining run, and estimate this quantity from intermediate checkpoints without retraining. Applying the method to 18 configurations from the Pythia and PolyPythia suites, we find systematic temporal changes in influential data. Early in training, literature-related data are more strongly aligned with the trajectory toward the final parameters, whereas STEM data become more strongly aligned in later stages. This qualitative crossover is broadly consistent across model configurations. Our results provide a tractable trajectory-level view of how influential data change throughout pretraining, complementing influence analyses defined with respect to specific downstream tasks or validation sets.",
-      "authors": [
-        "Yuto Nishida",
-        "Hirokazu Kiyomaru",
-        "Yusuke Oda",
-        "Takashi Kodama",
-        "Chaoran Liu",
-        "Daisuke Kawahara",
-        "Yusuke Miyao",
-        "Max Müller-Eberstein",
-        "Masaru Isonuma"
-      ],
-      "published": "2026-08-13T17:36:49Z",
-      "updated": "2026-08-13T17:36:49Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.13515v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.13515v1",
-      "comment": "Accepted to COLM 2026",
-      "journal_ref": "",
-      "lane": "llm",
-      "scope_matches": [
-        "language model"
-      ],
-      "topics": [
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.5895,
-          "matched": [
-            "influence",
-            "training data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5193,
-        "relevance": 0.4716,
-        "quality": 0.41,
-        "novelty": 0.8596,
-        "freshness": 0.8957,
-        "feedback_adjustment": -0.0135,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "作者提出基于参数距离下降的任务无关训练数据影响度量，揭示了预训练不同阶段数据重要性的系统性转变。",
-        "problem": "缺乏一种无需下游任务或验证集即可在整个预训练过程中一致衡量训练数据影响的方法。",
-        "method": "将单条样本的影响定义为其梯度更新对最终模型参数的平方 L2 距离的减少，并通过中间检查点的近似在不重新训练的情况下估计。",
-        "evidence": "在 18 种 Pythia/PolyPythia 配置（每种 154 个检查点）上发现，早期文献数据影响最大，后期 STEM 数据影响最大，且跨配置一致。",
-        "limitations": "Not stated in the available source.",
-        "why_for_you": "该度量可帮助你在不同训练阶段挑选最具影响力的数据，直接服务于 LLM 数据选择研究。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "提出基于参数距离下降的任务无关训练数据影响度量"
-          },
-          {
-            "icon": "⚙️",
-            "text": "通过中间检查点估计梯度更新对最终参数的对齐程度，无需重新训练"
-          },
-          {
-            "icon": "📊",
-            "text": "在18个Pythia/PolyPythia配置（每个154个检查点）中发现早期文献数据占优、后期STEM数据占优的跨阶段一致性"
-          }
-        ],
-        "overview": "本文重新定义训练数据影响为单条样本梯度更新对最终模型参数平方 L2 距离的减少，并给出基于保存的中间检查点的后置近似，无需重新训练即可在整个预训练轨迹上比较影响。作者在 18 种 Pythia 与 PolyPythia 变体（每种 154 个检查点）上进行实验，发现影响随训练阶段显著转移：早期文献类数据贡献最大，后期 STEM 类数据贡献上升，且该趋势在不同模型规模、随机种子和数据顺序下保持一致。进一步的可靠性分析表明该方法对检查点间隔、参考终点以及归因目标均稳健。",
-        "methodology": [
-          {
-            "title": "影响定义",
-            "detail": "对每个更新步骤 t，记参数 θ_t，最终参数 θ*，则 mini‑batch 影响 Cont(B_t)=‖θ*−θ_t‖²−‖θ*−θ_{t+1}‖²，等价于 2Δ_tᵀ(θ*−θ_t)−‖Δ_t‖²。"
-          },
-          {
-            "title": "检查点近似",
-            "detail": "利用保存的中间检查点，计算每个样本梯度 ∇_θℓ(x;θ_c) 与该检查点的参数差 (θ*−θ_c) 的内积，近似其对最终距离的贡献，无需重新训练。"
-          },
-          {
-            "title": "归一化与排序",
-            "detail": "在每个检查点区间内对所有样本的近似贡献得分进行排名，关注 top/bottom 5% 以分析域分布变化。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "参数空间几何解释",
-            "detail": "影响量度衡量更新方向与指向最终参数的向量的对齐程度；对齐越好且更新幅度适中，距离下降越多，说明该样本推动模型朝最终目标前进。"
-          },
-          {
-            "title": "梯度对齐与范数惩罚",
-            "detail": "公式中的第一项 2Δ_tᵀ(θ*−θ_t) 捕获方向对齐，第二项 ‖Δ_t‖² 对大幅更新进行惩罚，确保高影响样本既方向正确又不过度扰动。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "模型与数据",
-            "detail": "使用 Pythia 系列及其去重版 PolyPythia，共 18 种配置（包括 1.4B、160M 等），每种保存 154 个训练检查点；训练数据按 26 个领域分类，并构建对应的验证子集。"
-          },
-          {
-            "title": "实验设置",
-            "detail": "在每个检查点区间计算所有训练样本的近似影响得分；对四个代表性验证域（Books & Literature、Science、Computers & Electronics、Hobbies & Leisure）分别统计 top/bottom 5% 样本的领域占比。"
-          },
-          {
-            "title": "评估与可靠性",
-            "detail": "通过改变检查点间隔、选择不同的终点模型、切换模型规模和随机种子，验证影响度量的稳健性；结果显示域占比趋势在所有设置下保持一致。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "阶段性域转移",
-            "detail": "早期训练阶段文献类（Books & Literature）数据在 top 5% 贡献中占比最高，随后逐渐下降；而 STEM 类（Science、Computers & Electronics）在后期占比显著上升。"
-          },
-          {
-            "title": "跨配置一致性",
-            "detail": "上述趋势在不同模型规模、不同数据随机种子以及不同初始化下均出现，表明该现象是预训练过程的普遍特征。"
-          },
-          {
-            "title": "方法可靠性",
-            "detail": "影响度量对检查点采样密度、参考终点模型以及归因目标的变化不敏感，证明了其在大规模预训练分析中的可用性。"
-          }
-        ],
-        "contributions": [
-          "提出任务无关的训练数据影响度量并给出无需重新训练的检查点近似方法。",
-          "系统刻画了预训练过程中不同领域数据影响的阶段性演变。",
-          "验证了该分析在不同模型配置、检查点设置和归因目标下的可靠性与可扩展性。"
-        ],
-        "limitations": [
-          "Not stated in the available source."
-        ],
-        "open_questions": [
-          "如何将任务无关的影响度量用于实际的预训练数据筛选或课程设计？",
-          "该方法在更大规模模型（如数百亿参数）上的计算成本与精度如何？",
-          "不同的终点模型选择（如不同训练步数的模型）会否改变影响趋势的解释？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "zh",
-        "schema_version": 5
-      },
-      "recommendation_reason": {
-        "topic": "Data selection for LLMs",
-        "matched": [
-          "influence",
-          "training data"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-14T11:07:48.849243+00:00"
     }
   ]
 }
