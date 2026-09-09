@@ -1,428 +1,6 @@
 {
-  "generated_at": "2026-09-08T14:31:47.274061+00:00",
+  "generated_at": "2026-09-09T14:35:07.865742+00:00",
   "papers": [
-    {
-      "id": "conf:acl:2026:5320-main",
-      "title": "Fine-tuning vs. In-context Learning in Large Language Models: A Formal Language Learning Perspective",
-      "abstract": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases. Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups. To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings. Empirically, we find that: (a) FT has greater language proficiency than ICL on in-distribution generalization, but both perform equally well on out-of-distribution generalization. (b) Their inductive biases, measured by the correlation in string generation probabilities, are similar when both modes partially learn the language but diverge at higher proficiency levels. (c) Unlike FT, ICL performance differs substantially across models of varying sizes and families and is sensitive to the token vocabulary of the language. Thus, our work demonstrates the promise of formal languages as a controlled testbed for evaluating LLMs, behaviors that are difficult to isolate in natural language datasets. Our source code is available at https://github.com/bishwamittra/formallm.",
-      "authors": [
-        "Bishwamittra Ghosh",
-        "Soumi Das",
-        "Till Speicher",
-        "Qinyuan Wu",
-        "Mohammad Aflah Khan",
-        "Deepak Garg",
-        "Krishna P. Gummadi",
-        "Evimaria Terzi"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5964,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5218,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.118,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7278,
-        "relevance": 0.611,
-        "quality": 1.0,
-        "novelty": 0.8065,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "experiments",
-        "formal bound",
-        "dataset evidence"
-      ],
-      "summary": {
-        "takeaway": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
-        "problem": "Large language models (LLMs) operate in two fundamental learning modes – fine-tuning (FT) and in-context learning (ICL) – raising key questions about which mode yields greater language proficiency and whether they differ in their inductive biases.",
-        "method": "To enable a rigorous comparison, we propose a formal language learning task – offering precise language boundaries, controlled string sampling, and no data contamination – and introduce a discriminative test for language proficiency, where an LLM succeeds if it assigns higher generation probability to in-language strings than to out-of-language strings.",
-        "evidence": "Prior studies comparing FT and ICL have yielded mixed and inconclusive results due to inconsistent experimental setups.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:11:58.306404+00:00"
-    },
-    {
-      "id": "conf:acl:2026:905-main",
-      "title": "Tracing the Roots: A Multi-Agent Framework for Uncovering Data Lineage in Post-Training LLMs",
-      "abstract": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution. To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development. Through large-scale lineage analysis, we characterize domain-specific structural patterns, such as vertical refinement in Math-oriented datasets and horizontal aggregation in General-domain corpora. Moreover, we uncover pervasive systemic issues, including \\textit{structural redundancy} induced by implicit dataset intersections and the \\textit{propagation of benchmark contamination} along lineage paths. To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}. By anchoring instruction sampling at upstream leaf sources, this approach mitigates downstream homogenization and hidden redundancy, yielding a more diverse post-training corpus. We further highlight lineage-centric analysis as an efficient and robust topological alternative to sample-level dataset comparison for large-scale data ecosystems. By grounding data construction in explicit lineage structures, our work advances post-training data curation toward a more systematic and controllable paradigm.",
-      "authors": [
-        "Yu Li",
-        "Xiaoran shang",
-        "Qizhi Pei",
-        "Yun Zhu",
-        "Xin Gao",
-        "Honglin Lin",
-        "Zhanping Zhong",
-        "Zhuoshi Pan",
-        "Zheng Liu",
-        "Xiaoyang Wang",
-        "Conghui He",
-        "Dahua Lin",
-        "Feng Zhao",
-        "Lijun Wu"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.7532,
-          "matched": [
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.4813,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7261,
-        "relevance": 0.6988,
-        "quality": 0.68,
-        "novelty": 0.8587,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "dataset evidence",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
-        "problem": "Post-training data plays a pivotal role in shaping the capabilities of Large Language Models (LLMs), yet datasets are often treated as isolated artifacts, overlooking the systemic connections that underlie their evolution.",
-        "method": "To disentangle these complex relationships, we introduce the concept of \\textbf{data lineage} to the LLM ecosystem and propose an automated multi-agent framework to reconstruct the evolutionary graph of dataset development.",
-        "evidence": "To demonstrate the practical value of lineage analysis for data construction, we leverage the reconstructed lineage graph to create a \\textit{lineage-aware diversity-oriented dataset}.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Functional time series",
-        "matched": [
-          "analysis",
-          "data"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:11:58.306404+00:00"
-    },
-    {
-      "id": "conf:icml:2026:64399",
-      "title": "Jailbreak to Protect: Buffering Harmful Fine-Tuning via Temporary Jailbreaking LoRA in Large Language Models",
-      "abstract": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment. Prior works addressing this issue typically rely on explicit regularization, which leads to practical limitations. In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression. Our key observation is that, in a jailbroken LLM, safety-degrading gradients are largely saturated, while gradients unrelated to safety remain active during fine-tuning. Based on this insight, we introduce a **BufferLoRA-based fine-tuning framework**. BufferLoRA is a removable adapter that temporarily jailbreaks the model during user fine-tuning, saturating harmful updates while allowing a UserLoRA to learn user-specific tasks. After fine-tuning, BufferLoRA is removed to restore the base model’s original safety-alignment. To further reinforce safety, we additionally train a SafetyLoRA and integrate its safety components into the UserLoRA via QR decomposition-based merging strategy. Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
-      "authors": [
-        "Seokil Ham",
-        "Jaehyuk Jang",
-        "Wonjun Lee",
-        "Changick Kim"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Spotlight"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/poster/64399",
-      "pdf_url": "https://icml.cc/virtual/2026/poster/64399",
-      "comment": "",
-      "journal_ref": "ICML 2026 Spotlight",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Spotlight",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "core",
-          "score": 0.7471,
-          "matched": [
-            "jailbreak",
-            "fine-tuning"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.5072,
-          "matched": [
-            "alignment",
-            "safety",
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7073,
-        "relevance": 0.6991,
-        "quality": 0.59,
-        "novelty": 0.8482,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "publication metadata",
-        "conference spotlight"
-      ],
-      "summary": {
-        "takeaway": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
-        "problem": "Fine-tuning-as-a-Service (FaaS) enables personalization of large language models (LLMs) but poses significant safety risks, as fine-tuning user-provided data degrades the model's safety-alignment.",
-        "method": "In this paper, we propose a different paradigm that neutralizes harmful updates via harmful gradient saturation rather than explicit suppression.",
-        "evidence": "Extensive experiments show that our framework achieves superior performance in both safety and utility, without requiring additional safety data during fine-tuning and with minimal computational cost.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Efficient adversarial training, Trustworthy LLM.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "jailbreak",
-          "fine-tuning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
-    },
-    {
-      "id": "conf:icml:2026:71094",
-      "title": "Mechanistic Data Attribution: Tracing the Training Origins of Interpretable LLM Units",
-      "abstract": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive. We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples. Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect. Our analysis reveals that repetitive structural data (e.g., LaTeX, XML) acts as a mechanistic catalyst. Furthermore, we observe that interventions targeting induction head formation induce a concurrent change in the model’s in-context learning (ICL) capability. This provides direct causal evidence for the long-standing hypothesis regarding the functional link between induction heads and ICL. Finally, we propose a mechanistic data augmentation pipeline that consistently accelerates circuit convergence across model scales, providing a principled methodology for steering the developmental trajectories of LLMs.",
-      "authors": [
-        "Jianhui Chen",
-        "Yuzhang Luo",
-        "Liangming Pan"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Oral"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/oral/71094",
-      "pdf_url": "https://icml.cc/virtual/2026/oral/71094",
-      "comment": "",
-      "journal_ref": "ICML 2026 Oral",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.7126,
-          "matched": [
-            "functional",
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.4813,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1229,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1075,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7063,
-        "relevance": 0.6909,
-        "quality": 0.63,
-        "novelty": 0.8119,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
-        "problem": "While mechanistic interpretability has identified interpretable circuits in large language models (LLMs), their causal origins in training data remain elusive.",
-        "method": "We introduce *mechanistic data attribution* (MDA), a scalable framework that employs influence functions to trace interpretable units back to specific training samples.",
-        "evidence": "Through extensive experiments on the Pythia family, we causally validate that targeted intervention—removing or augmenting a small fraction of high-influence samples—significantly modulates the emergence of interpretable heads, whereas random interventions show no effect.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Functional time series, Time series inference.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Functional time series",
-        "matched": [
-          "functional",
-          "analysis",
-          "data"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:11:58.306404+00:00"
-    },
     {
       "id": "2609.05284",
       "title": "GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity",
@@ -519,349 +97,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-07T15:50:12.013156+00:00"
-    },
-    {
-      "id": "conf:acl:2026:470-main",
-      "title": "Writing-RL: Advancing Long-form Writing via Adaptive Curriculum Reinforcement Learning",
-      "abstract": "Recent advances in Large Language Models (LLMs) have enabled strong performance in long-form writing, but current training paradigms remain limited: Supervised Fine-Tuning (SFT) remains constrained by data saturation and performance ceilings, while Reinforcement Learning with Verifiable Reward (RLVR), though successful in verifiable domains like math and code, cannot be directly migrated to open-ended long-form writing due to a lack of ground-truths. To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT. The framework consists of three key components: Margin-aware Data Selection strategy that prioritizes samples with high learning potential, Pairwise Comparison Reward mechanism that provides discriminative learning signals in the absence of verifiable rewards, and Dynamic Reference Scheduling approach, which plays a critical role by adaptively adjusting task difficulty based on evolving model performance. Experiments on 7B-scale writer models show that Writing-RL effectively improves long-form writing performance over strong SFT baselines. Furthermore, we observe that models trained with long-output RL generalize surprisingly well to long-input reasoning tasks, potentially offering a promising perspective for rethinking long-context training.",
-      "authors": [
-        "Xuanyu Lei",
-        "Chenliang Li",
-        "Yuning Wu",
-        "Kaiming Liu",
-        "Weizhou Shen",
-        "Peng Li",
-        "Ming Yan",
-        "Fei Huang",
-        "Ya-Qin Zhang",
-        "Yang Liu"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5741,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3445,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.2545,
-          "matched": [
-            "selection",
-            "adaptive"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.2077,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1557,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.677,
-        "relevance": 0.5791,
-        "quality": 0.84,
-        "novelty": 0.8255,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "experiments",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT.",
-        "problem": "Recent advances in Large Language Models (LLMs) have enabled strong performance in long-form writing, but current training paradigms remain limited: Supervised Fine-Tuning (SFT) remains constrained by data saturation and performance ceilings, while Reinforcement Learning with Verifiable Reward (RLVR), though successful in verifiable domains like math and code, cannot be directly migrated to open-ended long-form writing due to a lack of ground-truths.",
-        "method": "To further advance long-form writing, we present Writing-RL: an Adaptive Curriculum Reinforcement Learning framework to advance long-form writing capabilities beyond SFT.",
-        "evidence": "Experiments on 7B-scale writer models show that Writing-RL effectively improves long-form writing performance over strong SFT baselines.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:23:21.967451+00:00"
-    },
-    {
-      "id": "conf:iclr:2026:10009352",
-      "title": "How Learning Rate Decay Wastes Your Best Data in Curriculum-Based LLM Pretraining",
-      "abstract": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation. A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric. However, prior studies have reported limited improvements from such curriculum-based pretraining strategies. This work identifies a critical factor constraining these methods: the incompatibility between the ascending data quality order and the decaying learning rate (LR) schedule. We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules. Our experiments show this incompatibility can be mitigated by two simple strategies: (1) employing a more moderate LR decay schedule, where the final LR is only moderately smaller than the peak LR, and (2) replacing LR decay with model averaging, i.e., computing a weighted average of the final few checkpoints. By combining these strategies, we improve the average score on a suite of standard benchmarks by 1.64% over random shuffling, without additional data refinement. Validated on 1.5B-parameter models trained over 30B tokens with various data-quality metrics, our findings call for a re-evaluation of curriculum-based LLM pretraining and underscore the potential of co-designing data curricula with optimization methods.",
-      "authors": [
-        "Kairong Luo",
-        "Zhenbo Sun",
-        "Haodong Wen",
-        "Xinyu Shi",
-        "Jiarui Cui",
-        "Chenyi Dang",
-        "Kaifeng Lyu",
-        "Wenguang Chen"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10009352",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009352",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "emerging",
-          "score": 0.7302,
-          "matched": [
-            "data curation",
-            "curriculum",
-            "data quality",
-            "curation",
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6681,
-        "relevance": 0.5842,
-        "quality": 0.78,
-        "novelty": 0.8236,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "We find that while curriculum-based training substantially outperforms random shuffling when using a constant LR, its advantage diminishes under standard LR decay schedules.",
-        "problem": "Due to the scarcity of high-quality data, large language models (LLMs) are often trained on mixtures of data with varying quality levels, even after sophisticated data curation.",
-        "method": "A natural approach to better leverage high-quality data is curriculum-based pretraining, where the model is trained on data sorted in ascending order of quality as determined by a quality metric.",
-        "evidence": "However, prior studies have reported limited improvements from such curriculum-based pretraining strategies.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Data selection for LLMs.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Data selection for LLMs",
-        "matched": [
-          "data curation",
-          "curriculum",
-          "data quality",
-          "curation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
-    },
-    {
-      "id": "conf:acl:2026:350-main",
-      "title": "Deliberative Searcher: Improving LLM Reliability via Reinforcement Learning with Constraints",
-      "abstract": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty. We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration. Our method employs constrained reinforcement learning with adaptive Lagrangian multipliers to jointly optimize correctness and reliability. Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%. The well-calibrated confidence scores also enable more efficient test-time compute: instead of standard majority voting, we use confidence-weighted aggregation and match the performance of 16-sample majority voting with only 4 samples, a $4\\times$ reduction in inference compute. These results establish calibrated confidence as a foundation for both trustworthy outputs and adaptive test-time compute, demonstrating the value of the proposed constrained RL framework in search-augmented language models.",
-      "authors": [
-        "Zhenyun Yin",
-        "Shujie Wang",
-        "Xuhong Wang",
-        "Xingjun Ma",
-        "Yingchun Wang"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5401,
-          "matched": [
-            "learning",
-            "trustworthy"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.2738,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.2311,
-          "matched": [
-            "inference",
-            "time"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.2186,
-          "matched": [
-            "time"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.1366,
-          "matched": [
-            "adaptive"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6524,
-        "relevance": 0.5331,
-        "quality": 0.85,
-        "novelty": 0.859,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
-        "problem": "Large language models with search capabilities frequently exhibit miscalibrated confidence, producing incorrect answers with high certainty.",
-        "method": "We present Deliberative Searcher, a reasoning-primary framework that integrates search operations into chain-of-thought generation while maintaining explicit confidence calibration.",
-        "evidence": "Experiments across five benchmarks demonstrate substantial improvements: our 7B model reduces average false-certain rates from 54% in baselines to 2%, while our 72B variant achieves competitive accuracy with closed-source models and reduces false-certain rates to 9%.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "trustworthy"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:23:21.967451+00:00"
     },
     {
       "id": "2609.04021",
@@ -1051,93 +286,6 @@
       "recommended_at": "2026-09-05T13:27:39.128040+00:00"
     },
     {
-      "id": "conf:acl:2026:2958-main",
-      "title": "Attention Basin: Why Contextual Position Matters in Large Language Models",
-      "abstract": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input. To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle. Crucially, our analysis further reveals that allocating higher attention to critical information is key to enhancing model performance. Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions. AttnRank is a model-agnostic, training-free, and plug-and-play method with minimal computational overhead. Experiments on multi-hop QA and few-shot in-context learning tasks demonstrate that AttnRank achieves substantial improvements across 10 large language models of varying architectures and scales, without modifying model parameters or training procedures.",
-      "authors": [
-        "Zihao Yi",
-        "Zhenqing Ling",
-        "Delong Zeng",
-        "Haohao Luo",
-        "Zhe Xu",
-        "Wei Liu",
-        "Jian Luan",
-        "Wanxia Cao",
-        "Ying Shen"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "core",
-          "score": 0.7017,
-          "matched": [
-            "basin"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6427,
-        "relevance": 0.5614,
-        "quality": 0.71,
-        "novelty": 0.8581,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
-        "problem": "The performance of Large Language Models (LLMs) is significantly sensitive to the contextual position of information in the input.",
-        "method": "Based on these insights, we introduce Attention-Driven Reranking (AttnRank), a two-stage framework that (i) estimates a model's intrinsic positional attention preferences using a small calibration set, and (ii) reorders retrieved documents or few-shot examples to align the most salient content with these high-attention positions.",
-        "evidence": "To investigate the mechanism behind this positional bias, our extensive experiments reveal a consistent phenomenon we term the attention basin: when presented with a sequence of structured items (e.g., retrieved documents or few-shot examples), models systematically assign higher attention to the items at the beginning and end of the sequence, while neglecting those in the middle.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: LLM loss landscape.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "basin"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T20:10:56.291521+00:00"
-    },
-    {
       "id": "2609.02244",
       "title": "Task-Level Natural Language Priors as Learning Signals for Low-Resource LLM Training",
       "abstract": "Large language models (LLMs) often struggle when low-resource training data are ambiguous or incomplete. Task-level natural-language priors can provide useful guidance in such settings, but existing approaches usually treat these priors as input context rather than as learning signals during training. We propose Prior-Guided Tuning (PGT), a training perspective that incorporates natural-language priors as auxiliary learning signals for low-resource LLM training. Under this perspective, we introduce Contrastive Prior Steering (CPS), which keeps the original supervised objective intact while adding positive and negative prior-conditioned auxiliary losses to encourage task-consistent learning and discourage plausible but misleading alternatives. Experiments on AmbiMath, Jigsaw, and MNLI/HANS show that CPS consistently improves over plain and prompt fine-tuning. On AmbiMath, CPS achieves 97.6% average exact-match accuracy. On Jigsaw, CPS improves average Macro F1 by 9.5 percentage points over standard fine-tuning, and with 1/10 of the experimental training data slightly exceeds full-data plain fine-tuning. On HANS, CPS improves non-entailment accuracy by 8.3 and 5.2 percentage points for LLaMA 3.1 8B and Qwen 2.5 7B, respectively, while maintaining comparable in-domain MNLI accuracy. These results support our central claim: task-level natural-language priors can provide useful guidance as auxiliary learning signals for low-resource LLM training. Our code and data will be publicly available.",
@@ -1244,6 +392,875 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-05T13:27:39.128040+00:00"
+    },
+    {
+      "id": "2609.02421",
+      "title": "UTP-Bench: Uncertainty-aware Travel Planning Benchmark",
+      "abstract": "Large Language Models (LLMs) have recently demonstrated strong capabilities in automated travel itinerary generation. However, real- world travel planning is inherently uncertain: transportation delays, crowd fluctuations, and unexpected stochastic delays frequently inval- idate otherwise feasible schedules. Existing benchmarks like TravelPlanner and TripCraft assume deterministic environments, evaluating only static constraint satisfaction and ignoring whether generated plans remain robust when such uncertainties arise. To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning. The dataset integrates real-world travel data spanning 504 cities of India, including attractions, restau- rants, accommodations, and multi-modal trans- portation networks. To model realistic disrup- tions, UTP-Bench incorporates empirical delay distributions and crowd-density patterns col- lected from major cities, enabling evaluation of travel plans under stochastic conditions. We further propose three evaluation metrics, namely Buffer Adequacy Score (BAS), Crowd- Aware Timing Score (CATS), and Transport Delay Absorption Score (TDAS), which quan- tify the ability of generated itineraries to main- tain robustness against transit delays and crowd variability. Experiments with state-of-the-art LLMs like GPT-5, Qwen3, Mistral and Phi-4 re- veal substantial gaps between model-generated and human-authored plans, particularly in tem- poral buffering, delay-aware transportation scheduling, and crowd-sensitive planning.",
+      "authors": [
+        "Etcharla Revanth Rao",
+        "Priyanshu Karmakar",
+        "Shubhojit Mallick",
+        "Manish Gupta",
+        "Shreya Ghosh",
+        "Abhik Jana"
+      ],
+      "published": "2026-09-02T10:42:18Z",
+      "updated": "2026-09-02T10:42:18Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.02421v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02421v1",
+      "comment": "34 pages, 12 figures, 16 Tables, EMNLP 2026",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.7426,
+          "matched": [
+            "uncertainty",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0779,
+          "matched": [
+            "data",
+            "density"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6308,
+        "relevance": 0.6181,
+        "quality": 0.58,
+        "novelty": 0.8536,
+        "freshness": 0.555,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning.",
+        "problem": "Large Language Models (LLMs) have recently demonstrated strong capabilities in automated travel itinerary generation.",
+        "method": "To address this limitation, we introduce UTP-Bench1 , a large-scale benchmark for uncertainty-aware travel planning.",
+        "evidence": "Experiments with state-of-the-art LLMs like GPT-5, Qwen3, Mistral and Phi-4 re- veal substantial gaps between model-generated and human-authored plans, particularly in tem- poral buffering, delay-aware transportation scheduling, and crowd-sensitive planning.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-05T13:27:39.128040+00:00"
+    },
+    {
+      "id": "2609.04543",
+      "title": "From Answers to Interpretations: Rethinking Ambiguity-Induced Aleatoric Uncertainty Estimation in LLMs",
+      "abstract": "A key challenge in reliable LLM deployment is recognizing when uncertainty reflects irreducible variability in the task rather than limitations in the model's knowledge. In language tasks, a central source of such aleatoric uncertainty is input ambiguity or underspecification, where multiple interpretations remain plausible. Existing decomposition methods estimate aleatoric uncertainty by generating multiple clarifications of the input, querying the model for an answer under each clarification, and comparing the resulting answers. We argue that answers are not necessary for identifying ambiguity: they are often redundant, add avoidable cost, and can mislead through epistemic leakage. We support this claim theoretically, and propose a clarification-only approach that estimates this ambiguity-induced component directly from the space of plausible interpretations, without answers to the clarified inputs. Using ambiguity detection as an operational evaluation across three benchmarks, this direct approach improves AUROC (63.34 vs. 60.85), reduces computational cost by 4-26x in output tokens and 2.2-3.5x in API calls, and yields estimates with substantially lower correlation with epistemic uncertainty. Overall, our results suggest that ambiguity-induced aleatoric uncertainty is better estimated from the interpretation space than from the response space.",
+      "authors": [
+        "Omer Nahum",
+        "Niv Nayman",
+        "Jonathan Fhima",
+        "Alon Zolfi",
+        "Jeremy Levy",
+        "Shai Mazor",
+        "Paolo Favaro"
+      ],
+      "published": "2026-09-03T23:00:52Z",
+      "updated": "2026-09-03T23:00:52Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.04543v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.04543v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.7523,
+          "matched": [
+            "uncertainty",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1283,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0944,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0932,
+          "matched": [
+            "estimation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6236,
+        "relevance": 0.6464,
+        "quality": 0.48,
+        "novelty": 0.8387,
+        "freshness": 0.4713,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "A key challenge in reliable LLM deployment is recognizing when uncertainty reflects irreducible variability in the task rather than limitations in the model's knowledge.",
+        "problem": "A key challenge in reliable LLM deployment is recognizing when uncertainty reflects irreducible variability in the task rather than limitations in the model's knowledge.",
+        "method": "In language tasks, a central source of such aleatoric uncertainty is input ambiguity or underspecification, where multiple interpretations remain plausible.",
+        "evidence": "Using ambiguity detection as an operational evaluation across three benchmarks, this direct approach improves AUROC (63.34 vs.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-07T15:50:12.013156+00:00"
+    },
+    {
+      "id": "2609.03342",
+      "title": "Gradients Know What Outcomes Don't: Unlocking Reinforcement Learning for LLM Reasoning with Gradient-Aligned Rewards",
+      "abstract": "Reinforcement learning from verifiable rewards (RLVR) drives chain-of-thought reasoning in large language models, yet its binary outcome reward cannot distinguish among correct trajectories. Existing dense reward alternatives, from surface heuristics to process reward models, either ignore the expert solutions already present in training corpora or require expensive offline annotation. We propose Gradient-Aligned Reward (GAR), which operates in the policy's own gradient space: truncated backpropagation through the output projection layer extracts a compact gradient vector for each rollout, and cosine similarity with an expert-anchor gradient yields a dense, reasoning-aware reward with less than 9% wall-clock overhead. We prove that this cosine admits a multiplicative decomposition into prediction-error and activation-pattern factors, providing a concrete characterization of what the alignment signal measures. On Qwen3-4B and Qwen3-8B, GAR consistently improves over GRPO and other baselines on competition-level math benchmarks and transfers to GPQA Diamond and MMLU-Pro without domain-specific data. Code and data are available at https://github.com/LQgdwind/GAR.",
+      "authors": [
+        "Leqi Zheng",
+        "Jinbo Su",
+        "Fang Niu",
+        "Chaokun Wang",
+        "Weiping Wang",
+        "Jiajun Zhang",
+        "Shannan Yan",
+        "Jie Wu",
+        "Zhaolu Kang",
+        "Rong Fu",
+        "Hang Zhang"
+      ],
+      "published": "2026-09-03T04:00:28Z",
+      "updated": "2026-09-03T04:00:28Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.03342v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03342v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4555,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4555,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6231,
+        "relevance": 0.485,
+        "quality": 0.95,
+        "novelty": 0.8498,
+        "freshness": 0.658,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "baseline comparison",
+        "benchmark evaluation",
+        "proof"
+      ],
+      "summary": {
+        "takeaway": "We propose Gradient-Aligned Reward (GAR), which operates in the policy's own gradient space: truncated backpropagation through the output projection layer extracts a compact gradient vector for each rollout, and cosine similarity with an expert-anchor gradient yields a dense, reasoning-aware reward with less than 9% wall-clock overhead.",
+        "problem": "Reinforcement learning from verifiable rewards (RLVR) drives chain-of-thought reasoning in large language models, yet its binary outcome reward cannot distinguish among correct trajectories.",
+        "method": "We propose Gradient-Aligned Reward (GAR), which operates in the policy's own gradient space: truncated backpropagation through the output projection layer extracts a compact gradient vector for each rollout, and cosine similarity with an expert-anchor gradient yields a dense, reasoning-aware reward with less than 9% wall-clock overhead.",
+        "evidence": "We prove that this cosine admits a multiplicative decomposition into prediction-error and activation-pattern factors, providing a concrete characterization of what the alignment signal measures.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-05T13:27:39.128040+00:00"
+    },
+    {
+      "id": "2609.03635",
+      "title": "Analysis of Prompt Engineering for Drug Toxicity Prediction",
+      "abstract": "Clinical trials in the UK can cost up to £1.3 million, with approximately 90% drug failure rate. Toxicity is a major contributing factor in drug failure. Testing is time and cost intensive. In recent years, the use of artificial intelligence has been increasingly explored to aid in the prediction of drug toxicity, with extensive use of large language models (LLMs). However, LLMs can show considerable variation when minor changes are made to prompts, which raises concerns about their sensitivity to prompt engineering. Prompt engineering is used to optimise a prompt given to an LLM to generate the desired output. This paper proposes a method to analyse prompt engineering for drug toxicity prediction. The aim of the paper is to investigate the importance of prompt phrasing for drug toxicity prediction. LLMs were prompted to identify chemical properties of significance when predicting drug toxicity. Prompts were constructed to investigate; job role, prompt structuring, and rule interpretation. LLMs were then used to generate datasets, using the identified features from initial prompting, which were then passed to machine learning algorithms. The experiments show that the natural variance which occurs in LLMs outweighs any fine-tuning of prompts. There were, however, substantial improvements in model performance when using chemoinformatic code to extract features instead of using LLM-generated values. The proposed analysis methodology is applicable to a wide range of prompt types across different areas of bioinformatics.",
+      "authors": [
+        "Mia MacGregor",
+        "Aakash Welgamage Don",
+        "Mark Bartlett"
+      ],
+      "published": "2026-09-03T10:28:55Z",
+      "updated": "2026-09-03T10:28:55Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.03635v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03635v1",
+      "comment": "Accepted at the CIBB 2026 conference (https://cibb2026.teralab.ai/)",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6042,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.2826,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1607,
+          "matched": [
+            "time",
+            "analysis"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.153,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6209,
+        "relevance": 0.572,
+        "quality": 0.65,
+        "novelty": 0.8425,
+        "freshness": 0.6966,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Clinical trials in the UK can cost up to £1.3 million, with approximately 90% drug failure rate.",
+        "problem": "Clinical trials in the UK can cost up to £1.3 million, with approximately 90% drug failure rate.",
+        "method": "LLMs were then used to generate datasets, using the identified features from initial prompting, which were then passed to machine learning algorithms.",
+        "evidence": "The experiments show that the natural variance which occurs in LLMs outweighs any fine-tuning of prompts.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-05T13:27:39.128040+00:00"
+    },
+    {
+      "id": "2609.08950",
+      "title": "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation",
+      "abstract": "Text-to-SQL systems translate natural language queries into executable SQL, democratizing access to structured data. Despite recent advances driven by large language models (LLMs), evaluation remains a major bottleneck: public benchmarks fail to capture the complexity of enterprise schema, while building private evaluation sets is costly and nondeterministic, making evaluation results difficult to reproduce. To address this issue, we present SQLMorph, a framework for Text-to-SQL evaluation via query mutation. SQLMorph introduces two techniques to automatically generate and expand evaluation sets: Join Query Expansion (JQE), which systematically increases structural complexity through valid join additions, and Textual Query Augmentation (TQA), which generates controlled natural language perturbations to assess robustness to linguistic variation. JQE and TQA create targeted choke points to challenge specific system components. When applied to state-of-the-art systems, JQE increases query coverage and reveals accuracy degradation as the number of joins grows. Meanwhile, TQA shows that linguistic brittleness induced by heavy abbreviation can reduce accuracy by up to 17%. Beyond evaluation sets, SQLMorph introduces a family of execution-level metrics that address the limitations of current binary measures, such as Execution Accuracy. We define Execution Precision (EXP) and Execution Recall (EXR) to quantify the fraction of correct and recovered results, respectively, and combine them via F1 for unified scoring. Our experiments show that these relaxed metrics enable fine-grained analysis of over- and under-prediction, revealing differences across systems that binary metrics obscure. Together, SQLMorph's query mutation and fine-grained metrics support debugging and better align Text-to-SQL evaluation practices with real-world deployments.",
+      "authors": [
+        "Mohammadhossein Malekpour",
+        "Mohamed Riahi",
+        "Maxime Lamothe",
+        "Amine Mhedhbi"
+      ],
+      "published": "2026-09-08T16:08:43Z",
+      "updated": "2026-09-08T16:08:43Z",
+      "categories": [
+        "cs.DB",
+        "cs.AI"
+      ],
+      "primary_category": "cs.DB",
+      "abs_url": "https://arxiv.org/abs/2609.08950v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08950v1",
+      "comment": "",
+      "journal_ref": "2026 IEEE 42nd International Conference on Data Engineering (ICDE), pp. 2628-2640",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6274,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0779,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6074,
+        "relevance": 0.5259,
+        "quality": 0.68,
+        "novelty": 0.8627,
+        "freshness": 0.8664,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "reproducibility",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "To address this issue, we present SQLMorph, a framework for Text-to-SQL evaluation via query mutation.",
+        "problem": "Text-to-SQL systems translate natural language queries into executable SQL, democratizing access to structured data.",
+        "method": "To address this issue, we present SQLMorph, a framework for Text-to-SQL evaluation via query mutation.",
+        "evidence": "Our experiments show that these relaxed metrics enable fine-grained analysis of over- and under-prediction, revealing differences across systems that binary metrics obscure.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-09T14:35:07.865742+00:00"
+    },
+    {
+      "id": "conf:acl:2026:543-main",
+      "title": "Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments",
+      "abstract": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications. Existing hallucination detectors mainly extract micro-level intrinsic patterns for uncertainty quantification or elicit macro-level self-judgments through verbalized prompts. However, these methods address only a single facet of the hallucination, focusing either on implicit neural uncertainty or explicit symbolic reasoning, thereby treating these inherently coupled behaviors in isolation and failing to exploit their interdependence for a holistic view. In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection. LaaB introduces a \"meta-judgment\" process to map symbolic labels back into the feature space. By leveraging the inherent logical bridge where response and meta-judgment labels are either the same or opposite based on the self-judgment's semantics, LaaB aligns and integrates dual-view signals via mutual learning and enhances the hallucination detection. Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
+      "authors": [
+        "Hao Mi",
+        "Qiang Sheng",
+        "Shaofei Wang",
+        "Beizhe Hu",
+        "Yifan Sun",
+        "Zhengjia Wang",
+        "Hengqi Zeng",
+        "Yang Li",
+        "Danding Wang",
+        "Juan Cao"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1536,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1535,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5792,
+        "relevance": 0.4388,
+        "quality": 0.82,
+        "novelty": 0.8,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
+        "problem": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications.",
+        "method": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
+        "evidence": "Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
+    },
+    {
+      "id": "2609.02170",
+      "title": "DMRL: Document-Mediated Reinforcement Learning for Skill Optimization in Advertising Recommendation",
+      "abstract": "Advertising recommendation requires continuously tuning complex system parameters while balancing commercial returns and user experience. Recent work has introduced large language models (LLMs) with skill documents to assist this labor-intensive process, but skill optimization remains largely prompt-driven, lacking a principled mechanism to attribute rewards to specific document edits. To address this limitation, we propose Document-Mediated Reinforcement Learning (DMRL), a skill self-evolution framework that models skill document optimization as a sequence of structured editing actions. In DMRL, an upper-level agent performs controlled document edits, while a frozen lower-level task agent evaluates their effects through A/B testing. To address credit assignment and long-term outcomes, we introduce two key components: (1) Dual-Relative Policy Optimization (DRPO), a post-training policy optimization method for robust and risk-aware advantage estimation; and (2) Long-term Reward Predictor (LRP), which estimates long-term outcomes by modeling population heterogeneity with disentangled representation learning and cross-attention transfer. DMRL was deployed on a large-scale short-video ads platform and extensive empirical evaluation shows that DMRL outperforms state-of-the-art baselines across key advertising metrics",
+      "authors": [
+        "Wei Zhang",
+        "Hongji Li",
+        "Song Sun",
+        "Peng Yu",
+        "Xue Yang",
+        "Lei Zhao",
+        "Peng Jiang"
+      ],
+      "published": "2026-09-02T06:32:48Z",
+      "updated": "2026-09-02T06:32:48Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.02170v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02170v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5091,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5091,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1401,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0437,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "estimation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5591,
+        "relevance": 0.5371,
+        "quality": 0.48,
+        "novelty": 0.8742,
+        "freshness": 0.5303,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this limitation, we propose Document-Mediated Reinforcement Learning (DMRL), a skill self-evolution framework that models skill document optimization as a sequence of structured editing actions.",
+        "problem": "Advertising recommendation requires continuously tuning complex system parameters while balancing commercial returns and user experience.",
+        "method": "To address this limitation, we propose Document-Mediated Reinforcement Learning (DMRL), a skill self-evolution framework that models skill document optimization as a sequence of structured editing actions.",
+        "evidence": "DMRL was deployed on a large-scale short-video ads platform and extensive empirical evaluation shows that DMRL outperforms state-of-the-art baselines across key advertising metrics",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-05T13:27:39.128040+00:00"
+    },
+    {
+      "id": "2609.01535",
+      "title": "Can LLMs Design Video Coding Tools? A Case Study on Planar Mode",
+      "abstract": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications. In particular, we present an empirical case study on the Planar mode, a long-standing intra prediction tool in video coding standards. Our experiments operate within a generation-and-evaluation loop, with the LLM generating new Planar predictors, encoder trials evaluating their coding performance, and the LLM re-generating refined implementations based on the evaluation feedback. We first examine directly replacing the default Planar mode in the Fraunhofer Versatile Video Encoder (VVenC) under its faster preset. Experimental results demonstrate that the LLM-generated mode can outperform the conventional Planar mode on this lightweight toolset, achieving 0.18% bitrate savings with 0.4% complexity overhead on the standard benchmark. We further extend our evaluation to the Enhanced Compression Model (ECM). Leveraging newly introduced directional Planar modes, we investigate two integration strategies: directly replacing them, and introducing the LLM-generated predictor as an additional prediction mode with new syntax elements. The empirical results suggest that both strategies can yield coding gains under a constrained low-resolution setting. Overall, this study offers preliminary evidence and practical insights, highlighting both the potential and open challenges of LLM-based coding tool design.",
+      "authors": [
+        "Yingwen Zhang",
+        "Meng Wang",
+        "Liqiang He",
+        "Shiqi Wang"
+      ],
+      "published": "2026-09-01T17:04:47Z",
+      "updated": "2026-09-01T17:04:47Z",
+      "categories": [
+        "cs.MM",
+        "cs.AI"
+      ],
+      "primary_category": "cs.MM",
+      "abs_url": "https://arxiv.org/abs/2609.01535v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01535v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5525,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.555,
+        "relevance": 0.442,
+        "quality": 0.68,
+        "novelty": 0.8818,
+        "freshness": 0.8706,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In particular, we present an empirical case study on the Planar mode, a long-standing intra prediction tool in video coding standards.",
+        "problem": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications.",
+        "method": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications.",
+        "evidence": "Our experiments operate within a generation-and-evaluation loop, with the LLM generating new Planar predictors, encoder trials evaluating their coding performance, and the LLM re-generating refined implementations based on the evaluation feedback.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-02T14:49:12.338548+00:00"
     }
   ]
 }
