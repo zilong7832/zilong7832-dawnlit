@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-09T14:35:07.865742+00:00",
+  "generated_at": "2026-09-10T14:25:39.952671+00:00",
   "papers": [
     {
       "id": "2609.05284",
@@ -1179,24 +1179,23 @@
       "recommended_at": "2026-09-05T13:27:39.128040+00:00"
     },
     {
-      "id": "2609.01535",
-      "title": "Can LLMs Design Video Coding Tools? A Case Study on Planar Mode",
-      "abstract": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications. In particular, we present an empirical case study on the Planar mode, a long-standing intra prediction tool in video coding standards. Our experiments operate within a generation-and-evaluation loop, with the LLM generating new Planar predictors, encoder trials evaluating their coding performance, and the LLM re-generating refined implementations based on the evaluation feedback. We first examine directly replacing the default Planar mode in the Fraunhofer Versatile Video Encoder (VVenC) under its faster preset. Experimental results demonstrate that the LLM-generated mode can outperform the conventional Planar mode on this lightweight toolset, achieving 0.18% bitrate savings with 0.4% complexity overhead on the standard benchmark. We further extend our evaluation to the Enhanced Compression Model (ECM). Leveraging newly introduced directional Planar modes, we investigate two integration strategies: directly replacing them, and introducing the LLM-generated predictor as an additional prediction mode with new syntax elements. The empirical results suggest that both strategies can yield coding gains under a constrained low-resolution setting. Overall, this study offers preliminary evidence and practical insights, highlighting both the potential and open challenges of LLM-based coding tool design.",
+      "id": "2609.03753",
+      "title": "SimSkill: A Lifelong Learning AI Agent for Autonomous Mastery of Traffic Simulation",
+      "abstract": "As large language models (LLMs) become increasingly capable, the long-term value of AI systems depends not only on solving individual requests, but also on transforming experience and accumulated knowledge into durable, reusable competence. We introduce SimSkill, a self-evolving agent built around the Simulation of Urban MObility (SUMO) traffic simulator. SimSkill identifies capability gaps, generates and solves environment-grounded tasks, verifies solutions through an action--critic loop, and consolidates experience into episodic, procedural, and semantic memory without updating the backbone model. Through autonomous exploration, it builds a reusable library spanning the traffic-simulation workflow. We evaluate SimSkill on two held-out benchmarks with three backbone LLMs and independent artifact-based verification. SimSkill improves verified completion by up to 25 percentage points, while ablations show complementary contributions from procedural and semantic memory. Its benefits remain backbone- and budget-dependent: memory does not improve every model or uniformly reduce inference cost. More broadly, SimSkill illustrates a design paradigm in which natural language preserves and composes computational capabilities, while executable tools and code provide precise and reproducible execution. All code and experimental data are publicly available at https://github.com/qiliuchn/SimSkill-V1.",
       "authors": [
-        "Yingwen Zhang",
-        "Meng Wang",
-        "Liqiang He",
-        "Shiqi Wang"
+        "Qi Liu",
+        "Qinzheng Wang",
+        "Yiming Bie"
       ],
-      "published": "2026-09-01T17:04:47Z",
-      "updated": "2026-09-01T17:04:47Z",
+      "published": "2026-09-03T12:23:56Z",
+      "updated": "2026-09-03T12:23:56Z",
       "categories": [
-        "cs.MM",
-        "cs.AI"
+        "cs.AI",
+        "cs.MA"
       ],
-      "primary_category": "cs.MM",
-      "abs_url": "https://arxiv.org/abs/2609.01535v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.01535v1",
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.03753v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03753v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -1209,42 +1208,72 @@
         "large language models",
         "language model",
         "language models",
-        "llm"
+        "llms"
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.5525,
+          "score": 0.3429,
           "matched": [
-            "prediction",
-            "evaluation"
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3429,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1094,
+          "matched": [
+            "inference",
+            "data",
+            "dependent"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0779,
+          "matched": [
+            "data",
+            "dependent"
           ]
         }
       ],
       "scores": {
-        "total": 0.555,
-        "relevance": 0.442,
-        "quality": 0.68,
-        "novelty": 0.8818,
-        "freshness": 0.8706,
+        "total": 0.5473,
+        "relevance": 0.3648,
+        "quality": 1.0,
+        "novelty": 0.8196,
+        "freshness": 0.5638,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "code available",
+        "GitHub link",
+        "ablation study",
         "benchmark evaluation",
-        "experiments",
-        "quantitative results"
+        "experiments"
       ],
       "summary": {
-        "takeaway": "In particular, we present an empirical case study on the Planar mode, a long-standing intra prediction tool in video coding standards.",
-        "problem": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications.",
-        "method": "This paper explores whether large language models (LLMs) can design video coding tools, a highly challenging task due to the intricate algorithmic coupling of tool modifications.",
-        "evidence": "Our experiments operate within a generation-and-evaluation loop, with the LLM generating new Planar predictors, encoder trials evaluating their coding performance, and the LLM re-generating refined implementations based on the evaluation feedback.",
+        "takeaway": "We introduce SimSkill, a self-evolving agent built around the Simulation of Urban MObility (SUMO) traffic simulator.",
+        "problem": "As large language models (LLMs) become increasingly capable, the long-term value of AI systems depends not only on solving individual requests, but also on transforming experience and accumulated knowledge into durable, reusable competence.",
+        "method": "We introduce SimSkill, a self-evolving agent built around the Simulation of Urban MObility (SUMO) traffic simulator.",
+        "evidence": "SimSkill improves verified completion by up to 25 percentage points, while ablations show complementary contributions from procedural and semantic memory.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -1253,14 +1282,13 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "prediction",
-          "evaluation"
+          "learning"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-09-02T14:49:12.338548+00:00"
+      "recommended_at": "2026-09-06T13:40:58.878558+00:00"
     }
   ]
 }
