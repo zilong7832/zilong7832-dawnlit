@@ -1,6 +1,630 @@
 {
-  "generated_at": "2026-09-10T14:25:39.952671+00:00",
+  "generated_at": "2026-09-11T14:25:18.486238+00:00",
   "papers": [
+    {
+      "id": "2609.11878",
+      "title": "Domain-Specific Hallucination Detection in Large Language Models",
+      "abstract": "Large language models generate fluent text that can contain unfaithful claims -- a phenomenon known as hallucination. We present a multi-signal detection pipeline combining fine-tuned DeBERTa-v3 classification, Monte Carlo (MC) Dropout uncertainty quantification, and temperature-scaled calibration for response-level hallucination detection. Evaluated on the HaluEval benchmark, our pipeline achieves F1=0.915 and AUROC=0.977 on general-domain tasks, with per-task F1 scores of 0.97 (QA), 0.96 (Summarization), and 0.82 (Dialogue). MC Dropout inference further improves accuracy to 93.2%. A context ablation study confirms the model performs genuine entailment reasoning rather than exploiting surface patterns, with summarization F1 dropping 24% when knowledge context is removed. Learning curve analysis reveals that 25% of training data captures 77% of full-data performance. Beyond detection, we apply Direct Preference Optimization (DPO) to a Qwen2.5-0.5B generator, reducing its hallucination rate from 85.5% to 37.7% (55.9% relative reduction) as measured by our detector. Cross-domain evaluation on the SciFact biomedical benchmark shows that general-domain training transfers poorly (F1=0.52), motivating domain-specific fine-tuning. PubMedBERT fine-tuned on SciFact achieves F1=0.63 and AUROC=0.81, demonstrating that domain-matched pre-training is the strongest adaptation strategy. Code and models are available at https://github.com/varunteja99/hallucination-detection-nlp",
+      "authors": [
+        "Varun Teja Chundru",
+        "Debasmita Biswas"
+      ],
+      "published": "2026-09-10T17:45:36Z",
+      "updated": "2026-09-10T17:45:36Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.11878v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11878v1",
+      "comment": "6 pages, 3 figures, 5 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3804,
+          "matched": [
+            "uncertainty",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.153,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1529,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1153,
+          "matched": [
+            "inference",
+            "data"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.541,
+        "relevance": 0.3655,
+        "quality": 0.88,
+        "novelty": 0.8359,
+        "freshness": 0.877,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "ablation study",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present a multi-signal detection pipeline combining fine-tuned DeBERTa-v3 classification, Monte Carlo (MC) Dropout uncertainty quantification, and temperature-scaled calibration for response-level hallucination detection.",
+        "problem": "Large language models generate fluent text that can contain unfaithful claims -- a phenomenon known as hallucination.",
+        "method": "We present a multi-signal detection pipeline combining fine-tuned DeBERTa-v3 classification, Monte Carlo (MC) Dropout uncertainty quantification, and temperature-scaled calibration for response-level hallucination detection.",
+        "evidence": "Evaluated on the HaluEval benchmark, our pipeline achieves F1=0.915 and AUROC=0.977 on general-domain tasks, with per-task F1 scores of 0.97 (QA), 0.96 (Summarization), and 0.82 (Dialogue).",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-11T14:25:18.486238+00:00"
+    },
+    {
+      "id": "2609.11699",
+      "title": "Negative Self-Distillation: Learning to Reason by Avoiding Flaws",
+      "abstract": "On-Policy Self-Distillation (OPSD) has emerged as a popular paradigm for large language model (LLM) self-improvement, allowing models to act as their own teachers by leveraging privileged information such as ground-truth solutions. However, recent findings indicate that OPSD can severely degrade the performance of LLMs on complex reasoning tasks: By forcing the student to imitate an artificially confident reasoning trace conditioned on privileged information, OPSD inadvertently suppresses expressions of uncertainty and penalizes the exploratory, self-corrective behaviors required to solve challenging problems. To address this, we introduce Negative Self-Distillation (NSD), a new framework that optimizes LLMs by diverging from flawed reasoning rather than imitating privileged solutions. Instead of relying on ground-truth answers or external supervision, NSD uses the model itself to generate a question-specific negative condition (eg, acting as a ``careless reasoner'') and pushes the student's distribution away from this self-generated negative teacher. Naively applying unlearning objectives to achieve this divergence is problematic, as flawed reasoning tokens are confounded with basic linguistic tokens; indiscriminately penalizing both risks catastrophically degrading the model's foundational language capabilities. We resolve this by designing a dynamic gating mechanism that automatically identifies and isolates reasoning-critical tokens, ensuring gradient updates target only behavioral flaws while preserving the model's linguistic priors. Empirically, NSD consistently outperforms OPSD and other label-free, self-bootstrapping reinforcement learning (RL) baselines.",
+      "authors": [
+        "Rongcan Pei",
+        "Zhepei Wei",
+        "Shuyao Xu",
+        "Xinyu Zhu",
+        "Wei-Lin Chen",
+        "Yu Meng"
+      ],
+      "published": "2026-09-10T15:24:17Z",
+      "updated": "2026-09-10T15:24:17Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.11699v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11699v1",
+      "comment": "23 pages, 7 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3958,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3958,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2377,
+          "matched": [
+            "uncertainty"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4966,
+        "relevance": 0.4433,
+        "quality": 0.4,
+        "novelty": 0.8523,
+        "freshness": 0.863,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison"
+      ],
+      "summary": {
+        "takeaway": "To address this, we introduce Negative Self-Distillation (NSD), a new framework that optimizes LLMs by diverging from flawed reasoning rather than imitating privileged solutions.",
+        "problem": "On-Policy Self-Distillation (OPSD) has emerged as a popular paradigm for large language model (LLM) self-improvement, allowing models to act as their own teachers by leveraging privileged information such as ground-truth solutions.",
+        "method": "To address this, we introduce Negative Self-Distillation (NSD), a new framework that optimizes LLMs by diverging from flawed reasoning rather than imitating privileged solutions.",
+        "evidence": "Naively applying unlearning objectives to achieve this divergence is problematic, as flawed reasoning tokens are confounded with basic linguistic tokens; indiscriminately penalizing both risks catastrophically degrading the model's foundational language capabilities.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-11T14:25:18.486238+00:00"
+    },
+    {
+      "id": "2609.11770",
+      "title": "The widening evaluation gap in medical large language model research 2023 to 2026",
+      "abstract": "Large language models are superseded every few quarters; clinical evidence takes years. We asked whether medical research is keeping pace with the systems it evaluates. PubMed returned 11,628 records for January 2023 to June 2026 across fourteen clinical domains, growing 45-fold; 2.5% used a randomised, controlled or prospective design. Evaluation lag, from a study's newest named model release to its own publication, widened from 1.33 to 6.08 quarters. Because discontinued models age mechanically, we benchmarked this against a counterfactual holding model composition fixed: migration to newer systems offset only 56% of the drift (95% CI 50-65). Randomised trials evaluated models a median 4.6 quarters older than other designs (P = 3 x 10^-19), yet among studies naming a model still under development no design differed from any other; 62% of randomised trials evaluated a discontinued family. Rigour and currency are in tension, and that tension reflects model selection rather than research timelines.",
+      "authors": [
+        "Raad Bin Tareaf",
+        "Murad Al-Rajab",
+        "Samia Loucif"
+      ],
+      "published": "2026-09-10T16:25:01Z",
+      "updated": "2026-09-10T16:25:01Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.11770v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11770v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4519,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0838,
+          "matched": [
+            "selection",
+            "lag"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.473,
+        "relevance": 0.3783,
+        "quality": 0.48,
+        "novelty": 0.8762,
+        "freshness": 0.869,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Large language models are superseded every few quarters; clinical evidence takes years.",
+        "problem": "Large language models are superseded every few quarters; clinical evidence takes years.",
+        "method": "We asked whether medical research is keeping pace with the systems it evaluates.",
+        "evidence": "PubMed returned 11,628 records for January 2023 to June 2026 across fourteen clinical domains, growing 45-fold; 2.5% used a randomised, controlled or prospective design.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-11T14:25:18.486238+00:00"
+    },
+    {
+      "id": "2609.11758",
+      "title": "RAG-Safety-Bench: Reliable Evaluation of Retrieval-Augmented LLM Safety",
+      "abstract": "Allowing large language models (LLMs) to retrieve information from a set of trusted documents can increase reliability and reduce hallucination. However, recent work has demonstrated that retrieval-augmented generation (RAG) can have unintended side effects on the overall safety of the generated responses, when prompted for harmful or dangerous content. A clearer understanding of the mechanisms leading to this result is needed, as increasing numbers of end users turn to RAG to incorporate corporate documents and knowledge bases into LLM-based systems. We introduce RAG-Safety-Bench, a benchmark to measure the safety impact of RAG on LLM models. By removing the confounding effect of retriever quality, and cleanly separating the problem into four conditions -- non-RAG, RAG with an oracle document containing the answer to the harmful request, RAG with documents related to the harmful request but without the specific answer, and RAG with random, safe documents -- the benchmark isolates the impacts of different factors in the observed safety degradation. We report results across five open-source LLMs, showing an inverse relationship between benign and unsafe capability, strong evidence that baseline safety guardrails do not lead to downstream safety guarantees in the RAG case, and model-specific support for previous findings that even benign documents can lead to unsafe generation in retrieval-enabled systems.",
+      "authors": [
+        "Adithiyan Rajan Indira Saravanan",
+        "Kathleen C. Fraser"
+      ],
+      "published": "2026-09-10T16:12:25Z",
+      "updated": "2026-09-10T16:12:25Z",
+      "categories": [
+        "cs.CL",
+        "cs.IR"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.11758v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11758v1",
+      "comment": "Proceedings of EMNLP 2026 (main conference)",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3571,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3571,
+          "matched": [
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4671,
+        "relevance": 0.3571,
+        "quality": 0.55,
+        "novelty": 0.8163,
+        "freshness": 0.8678,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "open source"
+      ],
+      "summary": {
+        "takeaway": "We introduce RAG-Safety-Bench, a benchmark to measure the safety impact of RAG on LLM models.",
+        "problem": "Allowing large language models (LLMs) to retrieve information from a set of trusted documents can increase reliability and reduce hallucination.",
+        "method": "We introduce RAG-Safety-Bench, a benchmark to measure the safety impact of RAG on LLM models.",
+        "evidence": "However, recent work has demonstrated that retrieval-augmented generation (RAG) can have unintended side effects on the overall safety of the generated responses, when prompted for harmful or dangerous content.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-11T14:25:18.486238+00:00"
+    },
+    {
+      "id": "2609.11860",
+      "title": "Explainability Assistant: A Conversational XAI Interface for Interpreting Energy Consumption Models",
+      "abstract": "Energy consumption forecasting relies on increasingly complex machine learning (ML) models, such as Genetic Programming-based symbolic regressors, whose predictions can be difficult for facility managers and building operators to interpret. Explainable Artificial Intelligence (XAI) techniques address this opacity, but traditional XAI dashboards require substantial technical expertise and provide limited flexibility for dynamic, context-aware inquiry. Conversational XAI systems offer a promising alternative; however, previous approaches, such as TalkToModel, were constrained by rigid custom grammars and achieved only 76.8% intent-parsing accuracy. This paper introduces the Explainability Assistant, an open-source conversational XAI system that leverages the function-calling capabilities of modern Large Language Models (LLMs) to overcome these limitations. The system achieves 94% intent-parsing accuracy, supports flexible natural language interaction, and adapts to different ML problem types without task-specific fine-tuning. We present the system's architecture and report results from a comparative evaluation conducted with energy domain specialists, contrasting the Explainability Assistant with a traditional XAI dashboard. The evaluation suggests improved usability and consistent task accuracy, with all experts unanimously preferring the conversational interface for practical use.",
+      "authors": [
+        "Rodion Krjutškov",
+        "Eduard Barbu",
+        "Nikos Sakkas",
+        "Sofia Yfanti"
+      ],
+      "published": "2026-09-10T17:40:11Z",
+      "updated": "2026-09-10T17:40:11Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.11860v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11860v1",
+      "comment": "11 pages, 3 figures. Accepted author version of a paper published at ICECET 2026",
+      "journal_ref": "2026 6th International Conference on Electrical, Computer and Energy Technologies (ICECET), Rome, Italy, 2026",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.2686,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2595,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1454,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.431,
+        "relevance": 0.2959,
+        "quality": 0.55,
+        "novelty": 0.8491,
+        "freshness": 0.8765,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "open source",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "We present the system's architecture and report results from a comparative evaluation conducted with energy domain specialists, contrasting the Explainability Assistant with a traditional XAI dashboard.",
+        "problem": "Energy consumption forecasting relies on increasingly complex machine learning (ML) models, such as Genetic Programming-based symbolic regressors, whose predictions can be difficult for facility managers and building operators to interpret.",
+        "method": "Explainable Artificial Intelligence (XAI) techniques address this opacity, but traditional XAI dashboards require substantial technical expertise and provide limited flexibility for dynamic, context-aware inquiry.",
+        "evidence": "Conversational XAI systems offer a promising alternative; however, previous approaches, such as TalkToModel, were constrained by rigid custom grammars and achieved only 76.8% intent-parsing accuracy.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-11T14:25:18.486238+00:00"
+    },
+    {
+      "id": "2609.11607",
+      "title": "Making Alternative Data Work: Context-Augmented LLMs for Financial Forecasting",
+      "abstract": "When forecasting a firm's future financial performance, alternative data - data collected from non-traditional sources such as consumer transactions, web traffic, and prediction markets - can provide timely signals about firms' operating activities and broader market conditions. These signals may reveal information that is not captured by traditional public sources and can therefore provide complementary information for forecasting firms' future financial performance. However, firm-level alternative data often have limited historical coverage, are relevant only to specific prediction targets or subsets of firms, and are distributed across numerous heterogeneous channels, making them difficult to incorporate flexibly into conventional forecasting approaches. Meanwhile, large language models (LLMs) can interpret instructions, learn from in-context examples, and generate predictions by combining heterogeneous information without task-specific parameter updates. Motivated by this potential flexibility, we investigate whether an LLM can forecast firm performance by integrating alternative data with other financial information through in-context learning. We propose a two-agent framework that first identifies the firms for which each alternative data channel is likely to be informative and then predicts revenue using firm- and channel-specific context. We evaluate the framework across four commercial alternative data channels. In our experiments, adding alternative data in context alongside other financial information improves the LLM's forecasting relative to either source alone, and these forecasts are more accurate than those of standard forecasting baselines. These findings suggest that LLMs provide a flexible and practical approach to integrating alternative data with heterogeneous financial information.",
+      "authors": [
+        "Jihoon Kwon",
+        "Lawrence Liu",
+        "Daekyung Park",
+        "Sumin Kim",
+        "Haverty Jack",
+        "Hoyoung Lee",
+        "Katherine Bjorkman",
+        "Josh McKenney",
+        "Peter Laurelli",
+        "Nicole Kagan",
+        "Zach Golkhou",
+        "Thorsten Neumann",
+        "Edward Tong",
+        "Pete Petersen",
+        "Yoon Kim",
+        "Alejandro Lopez-Lira",
+        "Yongjae Lee",
+        "Chanyeol Choi"
+      ],
+      "published": "2026-09-10T14:27:25Z",
+      "updated": "2026-09-10T14:27:25Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.11607v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11607v1",
+      "comment": "13 pages",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2773,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1805,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1805,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1523,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1522,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4059,
+        "relevance": 0.294,
+        "quality": 0.46,
+        "novelty": 0.7987,
+        "freshness": 0.8574,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments"
+      ],
+      "summary": {
+        "takeaway": "We propose a two-agent framework that first identifies the firms for which each alternative data channel is likely to be informative and then predicts revenue using firm- and channel-specific context.",
+        "problem": "When forecasting a firm's future financial performance, alternative data - data collected from non-traditional sources such as consumer transactions, web traffic, and prediction markets - can provide timely signals about firms' operating activities and broader market conditions.",
+        "method": "We propose a two-agent framework that first identifies the firms for which each alternative data channel is likely to be informative and then predicts revenue using firm- and channel-specific context.",
+        "evidence": "In our experiments, adding alternative data in context alongside other financial information improves the LLM's forecasting relative to either source alone, and these forecasts are more accurate than those of standard forecasting baselines.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-11T14:25:18.486238+00:00"
+    },
     {
       "id": "2609.10439",
       "title": "Forgetting Only What Matters: Layer-Selective Unlearning toward Robust LLMs",
@@ -11814,1108 +12438,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-08-25T10:49:06.180385+00:00"
-    },
-    {
-      "id": "2608.23179",
-      "title": "NetConfArena: An Executable Benchmark for LLM Agents in Closed-Loop Network Configuration",
-      "abstract": "Large language model (LLM) agents are increasingly attractive for automating network configuration, yet their reliability and failure patterns are poorly understood. An essential prerequisite is to assess such agents in a realistic but risk-free environment. Existing benchmarks, however, fall short: they often treat configuration as static command generation or rely on overly simplified settings. Such evaluations understate the core challenges of network configuration, where correctness requires reasoning about protocol complexity and topology dependence. We present NetConfArena, an executable benchmark for evaluating LLM agents in closed-loop network configuration. NetConfArena places agents in emulated multi-device networks, provides a standardized and compact action interface for task execution, and evaluates the resulting network behavior with hidden task-specific executable test cases. The benchmark relies on an LLM-assisted, emulation-grounded pipeline, which converts human-oriented network materials into reusable parameterized task templates. We evaluate representative LLM agents on 480 task instances instantiated from 96 protocol-focused task templates, yielding 3840 execution trajectories, and show that failures are not limited to command errors. The failures also reveal gaps in task-specification adherence and robust planning and execution. These findings suggest two future directions: using validated trajectories as supervision signals to improve foundation models, and designing harness mechanisms that make agent execution more reliable and accountable.",
-      "authors": [
-        "Chang Liu",
-        "Xiaohui Xie",
-        "Xinyi Chen",
-        "Yong Cui"
-      ],
-      "published": "2026-08-24T12:26:37Z",
-      "updated": "2026-08-24T12:26:37Z",
-      "categories": [
-        "cs.NI",
-        "cs.AI"
-      ],
-      "primary_category": "cs.NI",
-      "abs_url": "https://arxiv.org/abs/2608.23179v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23179v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm",
-        "foundation model",
-        "foundation models"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.5754,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.1189,
-          "matched": [
-            "robust"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5402,
-        "relevance": 0.4841,
-        "quality": 0.48,
-        "novelty": 0.8621,
-        "freshness": 0.8668,
-        "feedback_adjustment": -0.0286,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "method": "作者构建了基于仿真的流水线，将面向人的网络材料转化为参数化任务模板，并通过 GNS3 中的紧凑五动作接口执行。",
-        "evidence": "在 480 项任务（3840 条轨迹）上评估八种 LLM model–thinking‑mode 设置，发现任务规范遵循和规划方面的失败，而非仅仅命令语法错误。",
-        "takeaway": "NetConfArena 提供了真实的闭环基准，揭示了 LLM 代理超出简单命令错误的失败情况。",
-        "why_for_you": "该基准提供系统化的失败轨迹，可用于探查 LLM 损失曲面并设计高效的对抗训练。",
-        "limitations": "参数化模板未能生成全新的操作场景，限制了失败模式的多样性。",
-        "problem": "现有网络配置基准静态或过于简化，缺乏协议复杂性和拓扑依赖性。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "NetConfArena 引入了一个闭环仿真基准，包含 480 项任务和 3840 条轨迹，供 LLM 代理使用。"
-          },
-          {
-            "icon": "🔧",
-            "text": "它使用 LLM 辅助的流水线，将参数化任务模板实例化为一致的网络拓扑和动作。"
-          },
-          {
-            "icon": "⚠️",
-            "text": "实验显示出超出命令错误的失败，凸显了规范遵循和规划的缺口，但模板缺乏全新的场景。"
-          }
-        ],
-        "overview": "NetConfArena 通过将人工编写的材料转化为 96 个覆盖 IP 路由、MPLS 和 overlay 协议的参数化模板，构建真实的网络配置任务。LLM 辅助的实例化算法解析逻辑参数和物理接口，生成一致的拓扑、初始与参考配置以及隐藏测试用例。代理通过五个抽象动作（get_running_config、apply_config、execute_validation、wait、submit）与基于 GNS3 的仿真器交互，并在每步获取设备反馈。双视角评估通过测试用例得分衡量结果正确性，通过回合数、动作质量和完成模式衡量过程质量。对八种 model–thinking‑mode 设置在 480 个实例（3840 条轨迹）上的实验揭示了任务规范遵循和规划方面的失败，而非仅是语法错误。",
-        "methodology": [
-          {
-            "title": "参数化任务模板实例化",
-            "detail": "Algorithm 1 将模板模式与值注册表和设备能力进行匹配，确保满足依赖并在渲染产物前保持接口命名一致。"
-          },
-          {
-            "title": "仿真器支持的执行环境",
-            "detail": "在 GNS3 上使用厂商路由器镜像实现，提供真实的 CLI 语法、反馈和协议动态，同时保持评估的可复现性。"
-          },
-          {
-            "title": "Agent‑Network 接口",
-            "detail": "定义了五个抽象动作；每个动作返回观测（配置文本、命令回显、诊断输出），为 agent 的下一步决策提供依据。"
-          },
-          {
-            "title": "双视角评估",
-            "detail": "结果指标：test‑case score（通过的隐藏测试比例）和 Configuration F1。过程指标：回合数、动作比例、错误动作率、重复动作率以及完成模式。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "任务生成一致性",
-            "detail": "已解析的参数保证生成的拓扑、初始配置和参考配置相互兼容，防止对片段的简单记忆。"
-          },
-          {
-            "title": "闭环交互循环",
-            "detail": "Agents 迭代获取状态、应用配置、通过诊断进行验证，并决定何时提交；环境强制执行厂商特定的命令接受并提供即时反馈。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "模型思考模式评估",
-            "detail": "在基准上运行了八种设置，结合 qwen3‑8B、qwen3‑32B、deepseek‑v4‑fla（等）与 ReAct 风格推理。"
-          },
-          {
-            "title": "任务与轨迹规模",
-            "detail": "从 96 个模板生成的 480 个任务实例产生了 3840 条执行轨迹，分别记录了结果和过程分析。"
-          },
-          {
-            "title": "收集的指标",
-            "detail": "每条轨迹报告了 Test‑case score、Configuration F1、回合计数、动作类型分布、error‑action rate、repeat‑action rate 和 completion mode。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "超出语法的失败模式",
-            "detail": "尽管命令语法正确，但由于 Agents 常未遵守任务规范或规划纠正措施，导致 test‑case scores 低下。"
-          },
-          {
-            "title": "过程低效",
-            "detail": "高 error‑action rate 和 repeat‑action rate 表明 agents 经常发出被拒绝或重复的指令，反映出反馈利用受限。"
-          }
-        ],
-        "contributions": [
-          "Executable closed-loop benchmark (NetConfArena) 用于网络配置中的 LLM 代理。",
-          "LLM‑assisted pipeline 将面向人类的材料转换为可重用、参数化的任务模板。",
-          "Dual‑perspective evaluation framework 展示结果正确性和过程质量。"
-        ],
-        "limitations": [
-          "Parameterized templates 并未产生根本新的操作场景，限制了评估失效的多样性。",
-          "Benchmark 依赖 GNS3 仿真和特定厂商镜像，可能无法捕获所有真实设备行为。"
-        ],
-        "open_questions": [
-          "如何利用已验证的成功轨迹作为监督信号，以提升 LLM 的鲁棒性和 loss‑landscape 特性？",
-          "可以设计哪些 harness 机制，使 LLM 代理在闭环网络环境中的执行更可靠且可追溯？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-25T10:49:06.180385+00:00"
-    },
-    {
-      "id": "2608.23311",
-      "title": "Beyond the Stability-Exploration Dilemma: Environmental Regularization for LLM Policy Optimization",
-      "abstract": "Policy optimization (PO) for Large Language Models faces a stability--exploration trade-off, currently mediated by an action-side Policy-KL regularizer. This puts practitioners in a double bind: keeping Policy-KL constrains response behavior and consumes the action-side exploration budget, while dropping it leaves the optimization without an explicit drift control. We argue for an alternative that breaks the dilemma by moving regularization to the input side. As training progresses, the distribution over training queries induced by the current policy drifts unchecked from its pre-RL reference distribution. Concretely, Environment-Regularized Policy Optimization (ERPO) introduces a Query-KL (QKL) term that bounds this query distribution shift, together with a dataset-static reference-derived per-query weight that biases each per-query update toward queries typical under the reference. The QKL gradient flows strictly through the query likelihood; the response score function used by policy-gradient estimators does not appear in the QKL term, so QKL exerts no direct gradient pressure on the response distribution---exploration is preserved. ERPO plugs into GRPO/PPO/REINFORCE-style pipelines without additional forward passes. On six mathematical reasoning benchmarks, ERPO replaces the standard Policy-KL regularizer while achieving effective control over query distribution drift, delivering stronger accuracy and substantially more stable behavior under high-temperature decoding and long-horizon training.Our source code are available at https://github.com/alibaba/ERPO",
-      "authors": [
-        "Xianlei Zhou",
-        "Xiangdi Meng",
-        "Yu He",
-        "Tianyu Qi",
-        "Shuyan Guan",
-        "Xianli Zhang",
-        "Jian Zhang",
-        "Xin Li",
-        "Qika Lin",
-        "Jun Liu"
-      ],
-      "published": "2026-08-24T14:30:59Z",
-      "updated": "2026-08-24T14:30:59Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.23311v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23311v1",
-      "comment": "Accepted to EMNLP 2026 main conference",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.3749,
-          "matched": [
-            "training"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.3518,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5307,
-        "relevance": 0.3703,
-        "quality": 0.8,
-        "novelty": 0.8604,
-        "freshness": 0.8792,
-        "feedback_adjustment": -0.009,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "benchmark evaluation",
-        "formal bound",
-        "dataset evidence"
-      ],
-      "summary": {
-        "takeaway": "ERPO replaces the action‑side Policy‑KL with a query‑side KL regularizer, yielding more stable and accurate LLM policy optimization.",
-        "problem": "LLM policy optimization faces a stability–exploration dilemma because the model‑induced query distribution drifts unchecked during training.",
-        "method": "ERPO adds a Query‑KL penalty between the current policy’s query distribution and a pre‑RL reference, plus a static per‑query weight, without influencing response‑side gradients.",
-        "evidence": "On six mathematical reasoning benchmarks ERPO improves Avg@32 by up to 14.9% (6.2% average) and shows reduced query‑KL growth, indicating greater stability.",
-        "limitations": "The alignment‑preserving assumption is only empirically validated on mathematical reasoning tasks, and broader applicability is not demonstrated.",
-        "why_for_you": "The query‑distribution regularization directly addresses loss‑landscape instability, which is relevant to efficient adversarial training.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "ERPO introduces Query‑KL regularization to bound policy‑induced query distribution drift, replacing Policy‑KL."
-          },
-          {
-            "icon": "🔧",
-            "text": "QKL gradients only through query likelihood while a reference‑derived per‑query weight reweights updates, preserving exploration."
-          },
-          {
-            "icon": "📈",
-            "text": "Experiments on six math reasoning benchmarks show up to 14.9% absolute accuracy gain (6.2% average) and reduced query‑KL growth, but only within this domain."
-          }
-        ],
-        "overview": "The paper identifies uncontrolled drift of the model‑induced query distribution as a key source of instability in LLM policy optimization. ERPO mitigates this by penalizing the KL divergence between the current query distribution and a static pre‑RL reference (Query‑KL) and by reweighting per‑query updates using reference‑derived probabilities. Integrated seamlessly into GRPO/PPO/REINFORCE pipelines, ERPO preserves exploration because the response‑side gradient remains untouched. Empirical evaluation on six mathematical reasoning benchmarks demonstrates notable accuracy improvements and more stable training dynamics, though the study is limited to this task family.",
-        "methodology": [
-          {
-            "title": "Query‑KL regularization",
-            "detail": "Adds a KL penalty KL(ρθ‖ρθ0) where ρθ is the policy‑induced query distribution and ρθ0 is the pre‑RL reference, computed from cached query log‑probabilities."
-          },
-          {
-            "title": "Reference‑derived per‑query weighting",
-            "detail": "Computes a static weight for each query proportional to the inverse normalized negative log‑probability under the reference model, reducing variance and stabilizing high‑temperature decoding."
-          },
-          {
-            "title": "Estimator‑agnostic integration",
-            "detail": "The QKL term and per‑query weights are inserted into existing GRPO/PPO/REINFORCE updates without extra forward passes."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Decoupling regularization from exploration",
-            "detail": "QKL gradients flow only through the query likelihood ℓθ(q), leaving the response‑side score function untouched, so exploration in the action space is not constrained."
-          },
-          {
-            "title": "Environment drift control",
-            "detail": "By bounding EnvShift(θ)=KL(ρθ‖ρθ0), ERPO limits the non‑stationarity of the training environment, which empirically reduces gradient variance and prevents policy collapse."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Benchmark suite and baselines",
-            "detail": "Six mathematical reasoning datasets derived from MATH Level 3–5 (~8.5K examples) compared ERPO against vanilla GRPO; metrics include Avg@32, Pass@1, Pass@32 across temperature 0.1–1.5."
-          },
-          {
-            "title": "Training dynamics analysis",
-            "detail": "Tracked Query‑KL and Policy‑KL during training; ERPO showed limited Query‑KL growth while GRPO’s Query‑KL rose an order of magnitude higher than its Policy‑KL."
-          },
-          {
-            "title": "Performance gains",
-            "detail": "ERPO achieved up to 14.9% absolute improvement on individual benchmarks, with average gains of 6.2% (Avg@32), 3.64% (Pass@32), and 5.69% (Pass@1)."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Improved accuracy and stability",
-            "detail": "Replacing Policy‑KL with Query‑KL yields higher reasoning accuracy and more stable behavior under high‑temperature decoding and long‑horizon training."
-          },
-          {
-            "title": "Reduced query distribution drift",
-            "detail": "Empirical KL measurements confirm that ERPO curtails the drift of ρθ relative to ρθ0, unlike GRPO where query‑level KL grows substantially."
-          }
-        ],
-        "contributions": [
-          "Query‑environment regularization via Query‑KL to bound policy‑induced query drift",
-          "Static reference‑derived per‑query weighting scheme to reduce variance",
-          "Estimator‑agnostic integration into GRPO/PPO/REINFORCE pipelines"
-        ],
-        "limitations": [
-          "The alignment‑preserving assumption (A1) is empirically validated only on mathematical reasoning tasks",
-          "Evaluation is confined to a single domain; generalization to other LLM applications is not shown"
-        ],
-        "open_questions": [
-          "How does Query‑KL regularization affect adversarial robustness and loss‑landscape geometry in broader LLM tasks?",
-          "Can ERPO be combined with other regularizers (e.g., reward shaping) without interfering with exploration?",
-          "What is the computational trade‑off of caching reference query probabilities for very large corpora?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-25T10:49:06.180385+00:00"
-    },
-    {
-      "id": "2608.23493",
-      "title": "SRPO: Self-Reflective Policy Optimization for Long-Horizon Reasoning",
-      "abstract": "Self-reflection is a powerful mechanism for credit assignment in human learning, converting sparse outcome feedback into actionable guidance. However, its potential for post-training Large Language Models (LLMs) remains underexplored. We propose Self-Reflective Policy Optimization (SRPO), a framework that internalizes this capability. SRPO enables LLMs to analyze their own completed trajectories, synthesize errors into concise \"reflection patches,\" and use reflection-conditioned teacher scores on student on-policy rollouts as dense token-level training signals. This process effectively transforms sparse terminal supervision into dense, token-level learning signals without requiring external critics, separate reward models, or larger teacher models. We demonstrate that SRPO achieves state-of-the-art performance across mathematical reasoning and long-horizon agentic benchmarks with exceptional data efficiency. Using a Qwen3-8B base model, SRPO attains 73.3% on AIME'24 using only 8% (0.08x) of the training FLOPs required by scaled supervised fine-tuning, while significantly improving success rates on WebShop (64.7%), ALFWorld (76.8%), and SWE-Bench-Lite (31.2%). Code is available at https://github.com/Galleons2029/SRPO",
-      "authors": [
-        "Jialong Liu",
-        "Yuling Shi",
-        "Ning Yang",
-        "Xiaodong Gu",
-        "Zuchao Li"
-      ],
-      "published": "2026-08-24T16:55:09Z",
-      "updated": "2026-08-24T16:55:09Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.23493v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23493v1",
-      "comment": "Accepted to ICML 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.4205,
-          "matched": [
-            "training",
-            "fine-tuning"
-          ]
-        },
-        {
-          "id": "on_policy_distillation",
-          "name": "On-policy distillation",
-          "status": "emerging",
-          "score": 0.0709,
-          "matched": [
-            "on-policy"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5153,
-        "relevance": 0.3506,
-        "quality": 0.78,
-        "novelty": 0.8678,
-        "freshness": 0.8935,
-        "feedback_adjustment": -0.0313,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "evidence": "SRPO 仅使用标准监督微调 0.08× 的训练 FLOPs 即在 AIME’24 上达到 73.3%，并在 WebShop、ALFWorld 和 SWE-Bench-Lite 上超越基线。",
-        "limitations": "作者指出需要通过外部验证和校准来改进反思质量。",
-        "method": "SRPO 通过从已完成的轨迹中迭代生成简洁的反思补丁，将其添加到提示中，并使用修补后的模型作为教师，通过反KL token 奖励和 PPO 截断对策略内 rollout 进行评分。",
-        "problem": "稀疏的终端奖励会阻碍长时序推理任务的样本高效学习。",
-        "takeaway": "SRPO 通过自生成的反思补丁将稀疏的结果反馈转化为密集的 token 级监督，以高数据效率实现了最先进的结果。",
-        "why_for_you": "SRPO 提供了一种高效的策略内蒸馏方法，符合您对高效对抗训练和策略内蒸馏的兴趣。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8+@cf/openai/gpt-oss-120b chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "overview": "SRPO 通过让 LLM 对其已完成的轨迹进行反思，合成简洁的错误补丁，并利用这些补丁条件化教师模型，为策略内 rollout 提供密集的 token 级奖励，从而解决长时序推理中的信用分配瓶颈。该方法结合自蒸馏与 PPO 风格的截断目标，在数学和代理基准测试中实现卓越准确性，同时显著减少 FLOPs。未来工作旨在通过外部验证提升反思保真度。",
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "SRPO 通过自生成的反思补丁将稀疏的终端反馈转换为密集的 token 级监督，实现 AIME’24 73.3% 的成绩。"
-          },
-          {
-            "icon": "🔧",
-            "text": "两阶段循环：反思增强的教师使用反KL token 奖励和 PPO 风格的截断对策略内 rollout 进行评分。"
-          },
-          {
-            "icon": "📈",
-            "text": "以仅 0.08× 训练 FLOPs（约 5.4×10¹⁸ vs GRPO 的 20.8×10¹⁸）达到最先进性能，但反思质量仍需改进。"
-          }
-        ],
-        "mechanism": [
-          {
-            "detail": "模型的回顾分析创建包含结果信息的教师分布，将每轮 O(1) 位信息转化为 O(T) 令牌级位信息。",
-            "title": "自我反思作为密集奖励生成器"
-          },
-          {
-            "detail": "教师（带有反思补丁的模型）可访问回顾信息，而学生通过在线策略样本学习，促使策略内化修正指导。",
-            "title": "教师-学生动态的非对称性"
-          },
-          {
-            "detail": "使用反向KL作为令牌奖励，促使学生将概率质量集中在教师偏好的令牌上，而非分散到次优选择。",
-            "title": "反向KL模式搜索"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "在采样初始轨迹 y~πθ 后，模型执行轨迹 τ，获得结果 o，并生成简洁的文本补丁 p = Reflectπθ(x, τ, o)。",
-            "title": "反思补丁生成"
-          },
-          {
-            "detail": "通过将提示 x̃ = [p; x] 作为条件，定义基于 πθ 的反射增强教师策略 πT(·|x)，在当前迭代中保持教师参数冻结。",
-            "title": "教师定义"
-          },
-          {
-            "detail": "对于新策略轨迹中的每个令牌 at，计算缓存奖励 rt = log πT(at|st) − log πθold(at|st)，形成基于反向KL的密集信号。",
-            "title": "令牌奖励计算"
-          },
-          {
-            "detail": "通过减去轨迹级平均奖励获得优势 At，并通过 PPO 风格的裁剪目标 L = −E_t[min(ρt At, clip(ρt,1±ϵ) At)] 更新 θ。",
-            "title": "优势估计与更新"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "基准与基线",
-            "detail": "在 AIME’24、MATH‑500、GSM8K、DeepScaleR（数学）以及 WebShop、ALFWorld、SWE‑Bench‑Lite（代理）上进行评估。基线包括 SFT‑400K、PPO、GRPO、on‑policy distillation、Reflexion、Self‑Refine 和 larger‑teacher distillation。"
-          },
-          {
-            "title": "模型与计算",
-            "detail": "主要模型：Qwen3‑8B。SRPO 使用 5.4×10¹⁸ FLOPs，而 GRPO 为 20.8×10¹⁸（约少 3.8 倍）。"
-          },
-          {
-            "title": "指标与结果",
-            "detail": "在 AIME’24 上达到 73.3%（比 on‑policy distillation 高 3.3 分，比 GRPO 高 5.3 分），WebShop 为 64.7%，ALFWorld 为 76.8%，SWE‑Bench‑Lite 成功率为 31.2%，并在持续学习后保持 95.2% 的数学能力。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "数据高效性能",
-            "detail": "在所有基准上实现最先进的准确率，同时仅使用规模化监督微调所需训练 FLOPs 的 8%。"
-          },
-          {
-            "title": "降低熵坍缩",
-            "detail": "使用密集 token 奖励的 on‑policy 采样可缓解标准 RL 微调中观察到的 entropy collapse。"
-          },
-          {
-            "title": "持续学习保持率",
-            "detail": "在从数学任务适配到代码任务时，SRPO 保持了 95.2% 的原始数学推理性能。"
-          }
-        ],
-        "contributions": [
-          "Self‑reflective framework 从稀疏结果生成密集 token‑level 监督。",
-          "Two‑stage training loop 将 reflection‑augmented teacher scoring 与 PPO‑style on‑policy distillation 结合。",
-          "在数学推理和长时程 agentic 任务上实现 state‑of‑the‑art 结果，并显著节省 FLOP。"
-        ],
-        "limitations": [
-          "Reflection quality 可能受限；作者建议通过 external verification 或更好 calibration 进行后续改进。",
-          "评估仅限于选定的 math 与 agentic benchmarks；更广泛任务的泛化尚未测试。"
-        ],
-        "open_questions": [
-          "SRPO 的 self‑reflection mechanism 能否提升对 prompts 或 environments 中 adversarial perturbations 的鲁棒性？",
-          "该方法在更大模型（如 >70B）和更广泛 domains 上的可扩展性如何？",
-          "可以集成哪些 external verification signals 来进一步提升 reflection patch quality？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8+@cf/openai/gpt-oss-120b chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training",
-          "fine-tuning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-25T10:49:06.180385+00:00"
-    },
-    {
-      "id": "2608.23181",
-      "title": "CyberFactory: Scaling Cyber Security Capabilities with Instances from the Wild",
-      "abstract": "As large language models (LLMs) continue to advance in coding capabilities, their potential in cybersecurity has drawn increasing research attention, with closed-source LLMs (e.g., Mythos) delivering advanced cybersecurity capabilities. However, existing open-source efforts remain limited: frontier open-weight models do not provide reproducible cybersecurity training solutions, open-source training solutions focus on isolated tasks and lack scalable agentic data, and scaling agentic rollouts requires strong domain priors. In this work, we introduce \\textbf{CyberFactory}, a unified open-source framework that connects data construction, trajectory synthesis, and model training across proof-of-concept (PoC) generation, vulnerability patching, and cybersecurity question answering (CyberQA). CyberFactory transforms public vulnerability artifacts, including CVEs from the wild, into executable and verifiable task instances. It further uses a reusable vulnerability-analysis skill to guide the teacher through source inspection, problem solving with domain prior, and evidence-based validation. The resulting supervision is agentic: the model interacts with tools and target environments and revises its solutions according to execution feedback. Using these trajectories, we train and release \\modelname\\footnote{\\emph{Aegis} is, in Greek mythology, the protective shield of Zeus and Athena; the name reflects the model's defensive, security-oriented purpose.}, which internalizes the skill-guided procedure without requiring the skill at inference time. On CyberGym, \\modelname reaches 52.4% Pass@1 under a one-hour budget, improving over its Qwen~3.5 base model by +22.8 points and outperforming the evaluated general-purpose backbones under the same scaffold.",
-      "authors": [
-        "Jian Yang",
-        "Haau-Sing Li",
-        "Shawn Guo",
-        "Zixi Zhao",
-        "Yibo Tan",
-        "Jiajun Wu",
-        "Aishan Liu",
-        "Xianglong Liu",
-        "Tianyu Zheng",
-        "Bryan Dai",
-        "Chengran Yang"
-      ],
-      "published": "2026-08-24T12:30:10Z",
-      "updated": "2026-08-24T12:30:10Z",
-      "categories": [
-        "cs.CR",
-        "cs.CL"
-      ],
-      "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2608.23181v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.23181v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.3391,
-          "matched": [
-            "training"
-          ]
-        },
-        {
-          "id": "llm_statistical_theory",
-          "name": "Statistical theory for LLMs",
-          "status": "background",
-          "score": 0.2797,
-          "matched": [
-            "proof",
-            "scaling"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4567,
-        "relevance": 0.3272,
-        "quality": 0.57,
-        "novelty": 0.8668,
-        "freshness": 0.8672,
-        "feedback_adjustment": -0.0252,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "open source",
-        "reproducibility",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "CyberFactory enables open-source, scalable training of cybersecurity LLMs by converting real-world CVEs into agentic supervision, yielding a model that outperforms larger baselines.",
-        "problem": "Open-source cybersecurity LLMs lack reproducible training pipelines and scalable agentic data, relying on strong domain priors.",
-        "method": "The framework transforms CVE artifacts into executable tasks and uses a reusable vulnerability‑analysis skill to generate tool‑interactive trajectories for supervised fine‑tuning.",
-        "evidence": "OpenAegis achieves 52.4% Pass@1 on CyberGym within one hour, a 22.8‑point improvement over its Qwen 3.5 base model.",
-        "limitations": "Not stated in the available source.",
-        "why_for_you": "Matches your interest in efficient adversarial training by providing a data‑efficient, skill‑guided pipeline for LLM security tasks.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "CyberFactory converts wild CVE artifacts into executable, difficulty‑calibrated supervision for multi‑task cybersecurity training."
-          },
-          {
-            "icon": "🔧",
-            "text": "Uses a reusable vulnerability‑analysis skill to guide teacher agents through tool‑interactive trajectory synthesis with domain priors."
-          },
-          {
-            "icon": "⚠️",
-            "text": "OpenAegis reaches 52.4% Pass@1 on CyberGym (one‑hour budget), a +22.8‑point gain over Qwen 3.5, but limitations are not reported."
-          }
-        ],
-        "overview": "CyberFactory is an open-source framework that turns public CVE records into executable, verifiable instances spanning PoC generation, patching, and CyberQA. A reusable vulnerability‑analysis skill guides a teacher model to inspect code, invoke tools, and iteratively refine solutions based on execution feedback, producing agentic trajectories. These trajectories are used to fine‑tune OpenAegis, a multi‑task cybersecurity model that internalizes the skill without needing it at inference. Evaluations on the CyberGym benchmark show substantial performance gains over strong baselines, demonstrating the efficacy of skill‑guided data synthesis.",
-        "methodology": [
-          {
-            "title": "Data construction from CVE artifacts",
-            "detail": "Public vulnerability reports are parsed, code snippets extracted, and transformed into executable tasks with calibrated difficulty."
-          },
-          {
-            "title": "Skill‑guided trajectory synthesis",
-            "detail": "A reusable vulnerability‑analysis skill directs a teacher agent to perform source inspection, tool calls, and evidence‑based validation, generating step‑by‑step execution logs."
-          },
-          {
-            "title": "Supervised fine‑tuning of OpenAegis",
-            "detail": "The collected trajectories serve as supervision to fine‑tune a Qwen 3.5‑based backbone, producing a model that reproduces the skill‑driven workflow at inference."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Agentic supervision via tool interaction",
-            "detail": "During synthesis the teacher model interacts with external tools and target environments, revising its outputs based on real execution feedback, which embeds domain priors into the training signal."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "CyberGym evaluation",
-            "detail": "OpenAegis is evaluated on the CyberGym benchmark using Pass@1 under a one‑hour compute budget; comparisons include the Qwen 3.5 base model and other general‑purpose backbones."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Performance improvement",
-            "detail": "OpenAegis attains 52.4% Pass@1, a +22.8‑point gain over its Qwen 3.5 base, and surpasses evaluated backbones under identical scaffolds."
-          },
-          {
-            "title": "Skill‑guided data efficiency",
-            "detail": "Ablations show that skill‑guided trajectory generation yields higher Pass@1 despite using only a quarter of the compute time compared to non‑skill runs."
-          }
-        ],
-        "contributions": [
-          "CyberFactory framework linking data construction, trajectory synthesis, and model training for cybersecurity tasks.",
-          "Scalable agentic‑data pipeline that converts wild CVEs into executable, verifiable instances using a reusable vulnerability‑analysis skill.",
-          "Release of OpenAegis, a multi‑task cybersecurity model that internalizes the skill‑guided procedure without inference‑time dependencies."
-        ],
-        "limitations": [
-          "Not stated in the available source."
-        ],
-        "open_questions": [
-          "How does agentic data generation affect the robustness of cybersecurity LLMs against adversarial attacks and distribution shifts?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-25T10:49:06.180385+00:00"
-    },
-    {
-      "id": "2608.20820",
-      "title": "Certified Multi-Turn Robustness for LLM Safety via Compositional Bounds and Safety Persistence",
-      "abstract": "Large language models (LLMs) are vulnerable to multi-turn jailbreak attacks that progressively manipulate conversation context. Existing certified robustness methods are limited to single-turn inputs; naive multi-turn composition yields bounds that degrade exponentially in the number of turns. We introduce Multi-Turn Certified Robustness (MTCR), a framework that models conversational safety via State-Adversarial MDPs and defines $k$-turn certified robustness as the worst-case safety probability across $k$ adversarial turns. MTCR comprises: (i) compositional certification via embedding-space mode decomposition, yielding tighter certified lower bounds than naive multiplication; (ii) $(α,β)$-safety persistence, improving the degradation rate from $\\underline{p}^{k}$ to $β^k$ (with $β> \\underline{p}$) and yielding interpretable horizon estimates; (iii) matching information-theoretic upper bounds establishing tightness; and (iv) a unified algorithm combining these results. Experiments on six LLMs under $ε$-bounded and Crescendo-style attacks confirm that empirical safety consistently exceeds the certified bounds.",
-      "authors": [
-        "Yang Liu",
-        "Bin Chong",
-        "Wenkai Yang",
-        "Shuai Zhang",
-        "Yancheng Chen",
-        "Feiyu Han",
-        "GuoZhen",
-        "Cheng Zhang",
-        "Huaibing Xie",
-        "Changze Lv",
-        "Shihan Dou",
-        "Pluto Zhou"
-      ],
-      "published": "2026-08-21T07:43:06Z",
-      "updated": "2026-08-21T07:43:06Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.20820v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.20820v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.7394,
-          "matched": [
-            "adversarial",
-            "jailbreak",
-            "robustness"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.6049,
-          "matched": [
-            "llm safety",
-            "LLM safety",
-            "robustness",
-            "safety",
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.4408,
-          "matched": [
-            "llm",
-            "mode"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6521,
-        "relevance": 0.7915,
-        "quality": 0.45,
-        "novelty": 0.2,
-        "freshness": 0.5526,
-        "feedback_adjustment": -0.016,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "formal bound"
-      ],
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "adversarial",
-          "jailbreak",
-          "robustness"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "takeaway": "MTCR provides certified multi‑turn safety guarantees for LLMs that are tighter than naive multiplicative bounds and empirically validated on six models.",
-        "problem": "Existing certified robustness methods only handle single‑turn inputs and degrade exponentially when naively extended to multi‑turn jailbreak attacks.",
-        "method": "The authors model conversations as State‑Adversarial MDPs and combine embedding‑space mode decomposition with (α,β)-safety persistence to compute certified k‑turn safety probabilities.",
-        "evidence": "Experiments show certified lower bounds (e.g., ρ̂5=0.55 for GPT‑4o) with empirical safety exceeding them by 0.18–0.30 across static ε‑ball and Crescendo attacks.",
-        "limitations": "The formal guarantees apply only to ε‑bounded (character‑level) perturbations, rely on heuristic clustering, and use a binary safety predicate.",
-        "why_for_you": "If you seek efficient adversarial training or trustworthy LLM evaluation, MTCR offers a certification framework that can inform safety‑aware training objectives.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🛡️",
-            "text": "MTCR introduces compositional certification via embedding‑space mode decomposition, tightening multi‑turn safety bounds versus naive multiplication."
-          },
-          {
-            "icon": "🔧",
-            "text": "(α,β)-safety persistence improves degradation from p^k to β^k, yielding interpretable horizon estimates."
-          },
-          {
-            "icon": "📊",
-            "text": "Certified lower bounds (e.g., ρ̂5=0.55 for GPT‑4o) are consistently below empirical safety by +0.18–+0.30, but only cover ε‑bounded attacks."
-          }
-        ],
-        "overview": "The paper tackles the lack of certified robustness for multi‑turn jailbreak attacks by framing dialogue as a State‑Adversarial MDP. It proposes Multi‑Turn Certified Robustness (MTCR), which leverages embedding‑space mode decomposition to separate intra‑mode safety from inter‑mode transitions, and introduces (α,β)-safety persistence to reduce exponential decay of guarantees. A unified algorithm combines these components, and extensive experiments on six open‑ and closed‑source LLMs demonstrate that MTCR yields the tightest certified bounds while empirical safety remains comfortably higher.",
-        "methodology": [
-          {
-            "title": "SA‑MDP formulation",
-            "detail": "Conversation history is embedded into a state vector; an ε‑bounded adversary selects user messages, and safety is defined by a binary predicate over states."
-          },
-          {
-            "title": "Embedding‑space mode decomposition",
-            "detail": "Safe dialogue embeddings from 500 held‑out conversations are clustered (k‑means, M∈{2,4,8}); per‑mode randomized smoothing estimates intra‑mode safety, and inter‑mode transition costs are bounded."
-          },
-          {
-            "title": "Unified certification algorithm",
-            "detail": "Algorithm 1 computes a compositional lower bound and applies the (α,β)-persistence formula, taking the maximum of component bounds for each horizon k."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "(α,β)-safety persistence",
-            "detail": "If a system satisfies the persistence property, the k‑turn safety guarantee improves from p^k to β^k (β>p), with a linear horizon estimate 1−k(1−β) (Theorem 3.5)."
-          },
-          {
-            "title": "Information‑theoretic tightness",
-            "detail": "Upper bounds are proved for non‑overlapping mode decompositions, showing the compositional approach cannot be substantially improved without additional structure."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Model and attack suite",
-            "detail": "Six LLMs (LLaMA‑2‑7B‑Chat, Vicuna‑7B, Llama‑3.2‑3B, Qwen2.5‑7B‑Instruct, GPT‑4o, Claude‑3.5‑Sonnet) are evaluated under ε‑bounded static edit‑distance attacks (ε∈{3,5,7}) and Crescendo‑style adaptive attacks, using 150 harmful prompts (50 per category) and 100 trials per configuration."
-          },
-          {
-            "title": "Baselines and variants",
-            "detail": "Comparisons include naive multiplicative bound, optimistic reference bound, Persistence‑Only, Compositional‑Only, and the full MTCR combination."
-          },
-          {
-            "title": "Metrics",
-            "detail": "Certified lower bound ρ̂_k and empirical safety (fraction of trials remaining safe) are reported for horizons k∈{5,10,15,20}."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Combined MTCR yields tightest certified bounds",
-            "detail": "Across all horizons, MTCR (max of component bounds) outperforms Persistence‑Only and Compositional‑Only, matching the theoretical tightness results."
-          },
-          {
-            "title": "Empirical safety exceeds certified guarantees",
-            "detail": "Gaps between empirical safety and MTCR range from +0.18 to +0.30, confirming that the bounds are not violated in practice."
-          },
-          {
-            "title": "Mode granularity trade‑off",
-            "detail": "Coarser mode counts (M=2) give higher certified bounds (ρ̂5=0.39) than finer granularity (M=8, ρ̂5=0.25) due to increased overlap κ and transition cost."
-          }
-        ],
-        "contributions": [
-          "MTCR certification framework for multi‑turn LLM safety",
-          "Embedding‑space mode decomposition for compositional certification",
-          "(α,β)-safety persistence theory and horizon analysis",
-          "Information‑theoretic upper bounds establishing tightness",
-          "Empirical evaluation on six production LLMs under static and adaptive attacks"
-        ],
-        "limitations": [
-          "Formal guarantees limited to ε‑bounded (character‑level) perturbations; no provable protection against semantic attacks",
-          "Mode decomposition relies on heuristic k‑means clustering; bound tightness depends on chosen M and overlap κ",
-          "Safety predicate is binary and detector‑dependent; graded harmfulness scores are unsupported",
-          "Certification requires ~2.5 h per open‑source model on a single A100 GPU, limiting real‑time applicability"
-        ],
-        "open_questions": [
-          "How can MTCR be extended to certify against semantic or unrestricted adversarial perturbations?",
-          "Can automated, provably sound mode discovery replace heuristic clustering?",
-          "What modifications are needed to support continuous or graded safety metrics?",
-          "Is it possible to integrate MTCR‑derived certificates into adversarial training pipelines to improve robustness efficiently?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "recommended_at": "2026-08-24T10:53:02.352651+00:00"
-    },
-    {
-      "id": "2608.21172",
-      "title": "Thermo-FL: Thermal-Aware Robust Federated Fine-Tuning of Large Language Models for Edge AI",
-      "abstract": "Federated fine-tuning enables large language models to adapt on edge devices without centralizing private data, but practical deployments must address hardware instability and adversarial update corruption together. Thermally constrained clients may throttle, slow local training, or delay synchronous aggregation, while Byzantine clients and communication-layer adversaries can corrupt the updates used to form the global model. To address these challenges, we present Thermo-FL, a thermal-aware federated LoRA fine-tuning framework that uses device temperature as an active control signal for local adapter training and sparse update transmission. On the client side, Thermo-FL adjusts the active LoRA-layer fraction and transmitted update density as devices heat or cool, reducing workload under thermal stress. On the server side, Thermo-FL introduces TERRA, a robust aggregation pipeline for dynamically sparse LoRA updates that combines norm filtering, mask-aware directional validation, adaptive active-coordinate clipping, and mask-aware aggregation. We evaluate Thermo-FL using both a large-scale emulator and a Jetson-based physical testbed. In the emulator, Thermo-FL improves robustness under adversarial sparse aggregation and achieves the strongest BoolQ accuracy across clean and attack settings while remaining competitive on GSM8K. In the physical prototype, Thermo-FL stabilizes device temperature, reduces compressed upload size through bitmap sparse encoding, and preserves GSM8K utility under sign-flip/scale and MITM perturbations. These results show that secure edge LLM adaptation should jointly consider hardware behavior, workload regulation, sparse communication, and aggregation robustness.",
-      "authors": [
-        "Shiva Shrestha",
-        "Kazi Shaharair Sharif",
-        "Zongxing Xie",
-        "Jiajing Huang",
-        "Anhao Xiang",
-        "Honghui Xu"
-      ],
-      "published": "2026-08-21T14:41:54Z",
-      "updated": "2026-08-21T14:41:54Z",
-      "categories": [
-        "cs.LG",
-        "cs.DC"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.21172v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.21172v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.8837,
-          "matched": [
-            "adversarial",
-            "training",
-            "fine-tuning",
-            "robust",
-            "robustness"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.133,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5925,
-        "relevance": 0.7336,
-        "quality": 0.33,
-        "novelty": 0.2,
-        "freshness": 0.5941,
-        "feedback_adjustment": -0.0191,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [],
-      "summary": {
-        "takeaway": "Thermal-aware client adaptation combined with robust sparse aggregation enables resilient edge LLM fine‑tuning under thermal stress and adversarial updates.",
-        "problem": "Edge federated fine‑tuning must simultaneously handle device thermal constraints and malicious update corruption.",
-        "method": "Thermo‑FL uses device temperature to modulate LoRA layer participation and update sparsity, and introduces TERRA aggregation with norm filtering, mask‑aware directional validation, adaptive clipping, and mask‑aware aggregation.",
-        "evidence": "In an 80‑client emulator, Thermo‑FL achieved the highest BoolQ exact‑match accuracy (72.32% clean) and improved GSM8K robustness versus sparse FedAvg.",
-        "limitations": "Evaluation uses only two Jetson clients physically and limited attack scenarios; temperature policy is fixed and device‑specific.",
-        "why_for_you": "Matches your interest in efficient adversarial training by jointly reducing compute/communication load and defending against update attacks.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🛡️",
-            "text": "Thermo-FL integrates temperature-driven LoRA sparsity control with TERRA robust aggregation, achieving top BoolQ accuracy (72.32% clean)."
-          },
-          {
-            "icon": "🔧",
-            "text": "Thermo-FL adjusts LoRA-layer fraction and update density by temperature, while TERRA applies norm filtering and mask-aware directional validation."
-          },
-          {
-            "icon": "📊",
-            "text": "Emulator shows Thermo-FL raises FedAvg accuracy from 26.69% to 31.09% under sign‑flip attacks, yet physical tests use only two clients."
-          }
-        ],
-        "overview": "Thermo-FL addresses the dual challenge of thermal instability and adversarial updates in edge federated LLM fine‑tuning. Clients monitor device temperature and dynamically reduce the fraction of LoRA layers trained and the sparsity of transmitted updates, easing compute and bandwidth under heat stress. The server employs TERRA, a multi‑stage robust aggregator that filters by norm, validates direction with mask awareness, clips active coordinates adaptively, and aggregates sparsely. Experiments on an 80‑client emulator and a two‑Jetson testbed show superior BoolQ accuracy and improved GSM8K robustness, while also stabilizing temperature and shrinking upload size.",
-        "methodology": [
-          {
-            "title": "Temperature‑Driven LoRA Control",
-            "detail": "Device temperature triggers a policy that lowers the active LoRA‑layer fraction and the top‑k sparsification rate when T ≥ T_crit, reducing local compute and communication."
-          },
-          {
-            "title": "TERRA Robust Aggregation",
-            "detail": "Server‑side pipeline combines norm filtering, mask‑aware directional validation, adaptive active‑coordinate clipping, and mask‑aware aggregation for dynamically sparse updates."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Thermal Threshold Policy",
-            "detail": "A fixed temperature threshold T_crit and hardware‑specific parameters κ, ρ determine when to switch from full‑frequency (f_max) to throttled frequency (f_th) and adjust LoRA activity."
-          },
-          {
-            "title": "Mask‑Aware Directional Validation",
-            "detail": "Updates are accepted only if the cosine similarity of their support‑restricted vectors exceeds a directional threshold τ_dir, rejecting sign‑flipped or misaligned updates."
-          },
-          {
-            "title": "Adaptive Coordinate Clipping",
-            "detail": "For surviving updates, each coordinate is clipped to a bound m_{k,j}·q_t, ensuring that at most ρ_max·d coordinates dominate the aggregation."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Large‑Scale Emulator",
-            "detail": "80 logical clients (10 per round, 12.5% participation) fine‑tune Qwen2.5‑0.5B on BoolQ and GSM8K using LoRA rank 16; attacks include sign‑flip and mixed poisoning; metrics: exact‑match accuracy."
-          },
-          {
-            "title": "Physical Jetson Testbed",
-            "detail": "Two Jetson Orin Nano clients and a laptop server evaluate temperature stabilization, bitmap sparse encoding compression, and robustness against sign‑flip/scale and MITM noise attacks."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Superior BoolQ Performance",
-            "detail": "Thermo-FL achieved 72.32% clean, 71.16% sign‑flip, and 72.11% mixed attack accuracy, outperforming all baselines."
-          },
-          {
-            "title": "GSM8K Robustness",
-            "detail": "Thermo-FL remained competitive (33.74% clean) and improved over sparse FedAvg under attacks (31.09% sign‑flip, 31.67% mixed)."
-          },
-          {
-            "title": "System Benefits",
-            "detail": "Physical prototype showed stabilized device temperature, reduced upload size via bitmap sparse encoding, and preserved utility under adversarial perturbations."
-          }
-        ],
-        "contributions": [
-          "Thermal‑aware client control that modulates LoRA training and sparsity based on temperature.",
-          "TERRA aggregation pipeline integrating norm filtering, mask‑aware directional validation, adaptive clipping, and mask‑aware aggregation.",
-          "Empirical demonstration of joint hardware‑aware and robust federated fine‑tuning on LLMs."
-        ],
-        "limitations": [
-          "Physical testbed limited to two Jetson clients, not reflecting large‑scale deployments.",
-          "Attack evaluation on hardware covered only one sign‑flip/scale and one MITM noise injection scenario.",
-          "Temperature control uses fixed thresholds and device‑specific parameters, requiring recalibration for other hardware.",
-          "TERRA does not replace cryptographic transport protection or secure boot mechanisms."
-        ],
-        "open_questions": [
-          "How can temperature thresholds and adaptation parameters be learned automatically for heterogeneous devices?",
-          "Can Thermo-FL scale to dozens or hundreds of diverse edge clients while maintaining robustness?",
-          "What is the impact of Thermo-FL on other LLM tasks beyond BoolQ and GSM8K?",
-          "How does Thermo-FL interact with secure aggregation or differential privacy mechanisms?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "adversarial",
-          "training",
-          "fine-tuning",
-          "robust"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-24T10:53:02.352651+00:00"
     }
   ]
 }
