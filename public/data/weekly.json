@@ -1,103 +1,6 @@
 {
-  "generated_at": "2026-09-12T13:36:18.689174+00:00",
+  "generated_at": "2026-09-16T14:58:04.793591+00:00",
   "papers": [
-    {
-      "id": "2609.05284",
-      "title": "GUT: Quantifying and Optimizing the Reasoning Uncertainty of LLMs via Graph Complexity",
-      "abstract": "Recent years have witnessed great advances in the reasoning ability of Large Language Models (LLMs). However, the reasoning processes of LLMs often exhibit uncertainty, where LLMs often produce a proliferation of divergent branches at each reasoning step even when fed the same prompting inputs, and certain branches exhibit evidently incredible, even nonsensical, reasoning chains and results. In this paper, we propose the Graph-complexity-based UncerTainty (GUT) method for investigating the reasoning uncertainty of LLMs. The key idea of GUT is to characterize the potential branches of each reasoning chain with a directed acyclic graph, thereby ensuring that all potential branches are comprehensively covered within the graph space. Building upon this recognition, we further build two modules of GUT, that is, a Quantification (GUT-Q) module and an Optimization (GUT-O) module, for quantifying and reducing the reasoning uncertainty of LLMs, respectively. GUT-Q measures LLM reasoning uncertainty by approximating the reasoning space complexity with graph complexity. GUT-O implements uncertainty optimization by treating negative uncertainty as the reward function in reinforcement learning. Experimental results conducted on four LLMs and five datasets validate the effectiveness of GUT.",
-      "authors": [
-        "Shuang Liang",
-        "Xin-Yu Hu",
-        "Xiang-Jun Ou",
-        "Shao-Qun Zhang"
-      ],
-      "published": "2026-09-04T15:40:12Z",
-      "updated": "2026-09-04T15:40:12Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.05284v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.05284v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.8413,
-          "matched": [
-            "uncertainty"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1543,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1542,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6785,
-        "relevance": 0.7347,
-        "quality": 0.43,
-        "novelty": 0.8642,
-        "freshness": 0.5704,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "dataset evidence"
-      ],
-      "summary": {
-        "takeaway": "In this paper, we propose the Graph-complexity-based UncerTainty (GUT) method for investigating the reasoning uncertainty of LLMs.",
-        "problem": "Recent years have witnessed great advances in the reasoning ability of Large Language Models (LLMs).",
-        "method": "In this paper, we propose the Graph-complexity-based UncerTainty (GUT) method for investigating the reasoning uncertainty of LLMs.",
-        "evidence": "Experimental results conducted on four LLMs and five datasets validate the effectiveness of GUT.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-07T15:50:12.013156+00:00"
-    },
     {
       "id": "2609.11115",
       "title": "Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation",
@@ -194,325 +97,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-12T13:36:18.689174+00:00"
-    },
-    {
-      "id": "2609.04543",
-      "title": "From Answers to Interpretations: Rethinking Ambiguity-Induced Aleatoric Uncertainty Estimation in LLMs",
-      "abstract": "A key challenge in reliable LLM deployment is recognizing when uncertainty reflects irreducible variability in the task rather than limitations in the model's knowledge. In language tasks, a central source of such aleatoric uncertainty is input ambiguity or underspecification, where multiple interpretations remain plausible. Existing decomposition methods estimate aleatoric uncertainty by generating multiple clarifications of the input, querying the model for an answer under each clarification, and comparing the resulting answers. We argue that answers are not necessary for identifying ambiguity: they are often redundant, add avoidable cost, and can mislead through epistemic leakage. We support this claim theoretically, and propose a clarification-only approach that estimates this ambiguity-induced component directly from the space of plausible interpretations, without answers to the clarified inputs. Using ambiguity detection as an operational evaluation across three benchmarks, this direct approach improves AUROC (63.34 vs. 60.85), reduces computational cost by 4-26x in output tokens and 2.2-3.5x in API calls, and yields estimates with substantially lower correlation with epistemic uncertainty. Overall, our results suggest that ambiguity-induced aleatoric uncertainty is better estimated from the interpretation space than from the response space.",
-      "authors": [
-        "Omer Nahum",
-        "Niv Nayman",
-        "Jonathan Fhima",
-        "Alon Zolfi",
-        "Jeremy Levy",
-        "Shai Mazor",
-        "Paolo Favaro"
-      ],
-      "published": "2026-09-03T23:00:52Z",
-      "updated": "2026-09-03T23:00:52Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.04543v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.04543v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7523,
-          "matched": [
-            "uncertainty",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1283,
-          "matched": [
-            "reliable"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0944,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0932,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6236,
-        "relevance": 0.6464,
-        "quality": 0.48,
-        "novelty": 0.8387,
-        "freshness": 0.4713,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "A key challenge in reliable LLM deployment is recognizing when uncertainty reflects irreducible variability in the task rather than limitations in the model's knowledge.",
-        "problem": "A key challenge in reliable LLM deployment is recognizing when uncertainty reflects irreducible variability in the task rather than limitations in the model's knowledge.",
-        "method": "In language tasks, a central source of such aleatoric uncertainty is input ambiguity or underspecification, where multiple interpretations remain plausible.",
-        "evidence": "Using ambiguity detection as an operational evaluation across three benchmarks, this direct approach improves AUROC (63.34 vs.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-07T15:50:12.013156+00:00"
-    },
-    {
-      "id": "2609.08950",
-      "title": "SQLMorph: Query Mutation and Fine-Grained Metrics for Text-to-SQL Evaluation",
-      "abstract": "Text-to-SQL systems translate natural language queries into executable SQL, democratizing access to structured data. Despite recent advances driven by large language models (LLMs), evaluation remains a major bottleneck: public benchmarks fail to capture the complexity of enterprise schema, while building private evaluation sets is costly and nondeterministic, making evaluation results difficult to reproduce. To address this issue, we present SQLMorph, a framework for Text-to-SQL evaluation via query mutation. SQLMorph introduces two techniques to automatically generate and expand evaluation sets: Join Query Expansion (JQE), which systematically increases structural complexity through valid join additions, and Textual Query Augmentation (TQA), which generates controlled natural language perturbations to assess robustness to linguistic variation. JQE and TQA create targeted choke points to challenge specific system components. When applied to state-of-the-art systems, JQE increases query coverage and reveals accuracy degradation as the number of joins grows. Meanwhile, TQA shows that linguistic brittleness induced by heavy abbreviation can reduce accuracy by up to 17%. Beyond evaluation sets, SQLMorph introduces a family of execution-level metrics that address the limitations of current binary measures, such as Execution Accuracy. We define Execution Precision (EXP) and Execution Recall (EXR) to quantify the fraction of correct and recovered results, respectively, and combine them via F1 for unified scoring. Our experiments show that these relaxed metrics enable fine-grained analysis of over- and under-prediction, revealing differences across systems that binary metrics obscure. Together, SQLMorph's query mutation and fine-grained metrics support debugging and better align Text-to-SQL evaluation practices with real-world deployments.",
-      "authors": [
-        "Mohammadhossein Malekpour",
-        "Mohamed Riahi",
-        "Maxime Lamothe",
-        "Amine Mhedhbi"
-      ],
-      "published": "2026-09-08T16:08:43Z",
-      "updated": "2026-09-08T16:08:43Z",
-      "categories": [
-        "cs.DB",
-        "cs.AI"
-      ],
-      "primary_category": "cs.DB",
-      "abs_url": "https://arxiv.org/abs/2609.08950v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.08950v1",
-      "comment": "",
-      "journal_ref": "2026 IEEE 42nd International Conference on Data Engineering (ICDE), pp. 2628-2640",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6274,
-          "matched": [
-            "prediction",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0779,
-          "matched": [
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6074,
-        "relevance": 0.5259,
-        "quality": 0.68,
-        "novelty": 0.8627,
-        "freshness": 0.8664,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "reproducibility",
-        "quantitative results",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "To address this issue, we present SQLMorph, a framework for Text-to-SQL evaluation via query mutation.",
-        "problem": "Text-to-SQL systems translate natural language queries into executable SQL, democratizing access to structured data.",
-        "method": "To address this issue, we present SQLMorph, a framework for Text-to-SQL evaluation via query mutation.",
-        "evidence": "Our experiments show that these relaxed metrics enable fine-grained analysis of over- and under-prediction, revealing differences across systems that binary metrics obscure.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-09T14:35:07.865742+00:00"
-    },
-    {
-      "id": "conf:acl:2026:543-main",
-      "title": "Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments",
-      "abstract": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications. Existing hallucination detectors mainly extract micro-level intrinsic patterns for uncertainty quantification or elicit macro-level self-judgments through verbalized prompts. However, these methods address only a single facet of the hallucination, focusing either on implicit neural uncertainty or explicit symbolic reasoning, thereby treating these inherently coupled behaviors in isolation and failing to exploit their interdependence for a holistic view. In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection. LaaB introduces a \"meta-judgment\" process to map symbolic labels back into the feature space. By leveraging the inherent logical bridge where response and meta-judgment labels are either the same or opposite based on the self-judgment's semantics, LaaB aligns and integrates dual-view signals via mutual learning and enhances the hallucination detection. Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
-      "authors": [
-        "Hao Mi",
-        "Qiang Sheng",
-        "Shaofei Wang",
-        "Beizhe Hu",
-        "Yifan Sun",
-        "Zhengjia Wang",
-        "Hengqi Zeng",
-        "Yang Li",
-        "Danding Wang",
-        "Juan Cao"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4717,
-          "matched": [
-            "uncertainty"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1536,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1535,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5792,
-        "relevance": 0.4388,
-        "quality": 0.82,
-        "novelty": 0.8,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "dataset evidence",
-        "quantitative results",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
-        "problem": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications.",
-        "method": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
-        "evidence": "Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
     },
     {
       "id": "2609.09764",
@@ -820,118 +404,6 @@
       "recommended_at": "2026-09-12T13:36:18.689174+00:00"
     },
     {
-      "id": "2609.03753",
-      "title": "SimSkill: A Lifelong Learning AI Agent for Autonomous Mastery of Traffic Simulation",
-      "abstract": "As large language models (LLMs) become increasingly capable, the long-term value of AI systems depends not only on solving individual requests, but also on transforming experience and accumulated knowledge into durable, reusable competence. We introduce SimSkill, a self-evolving agent built around the Simulation of Urban MObility (SUMO) traffic simulator. SimSkill identifies capability gaps, generates and solves environment-grounded tasks, verifies solutions through an action--critic loop, and consolidates experience into episodic, procedural, and semantic memory without updating the backbone model. Through autonomous exploration, it builds a reusable library spanning the traffic-simulation workflow. We evaluate SimSkill on two held-out benchmarks with three backbone LLMs and independent artifact-based verification. SimSkill improves verified completion by up to 25 percentage points, while ablations show complementary contributions from procedural and semantic memory. Its benefits remain backbone- and budget-dependent: memory does not improve every model or uniformly reduce inference cost. More broadly, SimSkill illustrates a design paradigm in which natural language preserves and composes computational capabilities, while executable tools and code provide precise and reproducible execution. All code and experimental data are publicly available at https://github.com/qiliuchn/SimSkill-V1.",
-      "authors": [
-        "Qi Liu",
-        "Qinzheng Wang",
-        "Yiming Bie"
-      ],
-      "published": "2026-09-03T12:23:56Z",
-      "updated": "2026-09-03T12:23:56Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.03753v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.03753v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3429,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3429,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1094,
-          "matched": [
-            "inference",
-            "data",
-            "dependent"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0779,
-          "matched": [
-            "data",
-            "dependent"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5473,
-        "relevance": 0.3648,
-        "quality": 1.0,
-        "novelty": 0.8196,
-        "freshness": 0.5638,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "ablation study",
-        "benchmark evaluation",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "We introduce SimSkill, a self-evolving agent built around the Simulation of Urban MObility (SUMO) traffic simulator.",
-        "problem": "As large language models (LLMs) become increasingly capable, the long-term value of AI systems depends not only on solving individual requests, but also on transforming experience and accumulated knowledge into durable, reusable competence.",
-        "method": "We introduce SimSkill, a self-evolving agent built around the Simulation of Urban MObility (SUMO) traffic simulator.",
-        "evidence": "SimSkill improves verified completion by up to 25 percentage points, while ablations show complementary contributions from procedural and semantic memory.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-06T13:40:58.878558+00:00"
-    },
-    {
       "id": "2609.11878",
       "title": "Domain-Specific Hallucination Detection in Large Language Models",
       "abstract": "Large language models generate fluent text that can contain unfaithful claims -- a phenomenon known as hallucination. We present a multi-signal detection pipeline combining fine-tuned DeBERTa-v3 classification, Monte Carlo (MC) Dropout uncertainty quantification, and temperature-scaled calibration for response-level hallucination detection. Evaluated on the HaluEval benchmark, our pipeline achieves F1=0.915 and AUROC=0.977 on general-domain tasks, with per-task F1 scores of 0.97 (QA), 0.96 (Summarization), and 0.82 (Dialogue). MC Dropout inference further improves accuracy to 93.2%. A context ablation study confirms the model performs genuine entailment reasoning rather than exploiting surface patterns, with summarization F1 dropping 24% when knowledge context is removed. Learning curve analysis reveals that 25% of training data captures 77% of full-data performance. Beyond detection, we apply Direct Preference Optimization (DPO) to a Qwen2.5-0.5B generator, reducing its hallucination rate from 85.5% to 37.7% (55.9% relative reduction) as measured by our detector. Cross-domain evaluation on the SciFact biomedical benchmark shows that general-domain training transfers poorly (F1=0.52), motivating domain-specific fine-tuning. PubMedBERT fine-tuned on SciFact achieves F1=0.63 and AUROC=0.81, demonstrating that domain-matched pre-training is the strongest adaptation strategy. Code and models are available at https://github.com/varunteja99/hallucination-detection-nlp",
@@ -1215,6 +687,504 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-10T14:25:39.952671+00:00"
+    },
+    {
+      "id": "2609.17474",
+      "title": "Coupled Calibration and Learning: Mitigating Teacher Bias in LLM Distillation without Target-Domain Reward Feedback",
+      "abstract": "Large language model (LLM) distillation aims to transfer the capabilities of a powerful teacher to a smaller student. Direct imitation, however, can also transfer the teacher's systematic bias and errors. This challenge is particularly pronounced under covariate shift, when the teacher's reliability on target questions is uncertain and target-domain reward feedback is unavailable. We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions. Each iteration calibrates the teacher using source feedback and then uses the calibrated teacher to train the student on target questions. The updated student, in turn, informs subsequent calibration. In an autoregressive policy framework, we prove that the output student's expected average Kullback-Leibler divergence to the oracle student converges to zero at a polynomial rate in the number of iterations. The oracle maximizes the true reference-regularized target reward within the student class, which need not represent the unrestricted optimal policy. Our analysis quantifies the progress of projected student gradient updates while controlling the error in teacher calibration. We further establish a separation from regularized direct matching: its error relative to the oracle student can remain bounded away from zero even when the teacher achieves higher regularized target reward than every student policy. These results demonstrate that LLM distillation can overcome persistent teacher bias and recover the optimal student through coupled calibration and learning, without target-domain reward feedback.",
+      "authors": [
+        "Haichen Hu",
+        "Yuheng Zhang",
+        "David Simchi-Levi"
+      ],
+      "published": "2026-09-15T17:15:40Z",
+      "updated": "2026-09-15T17:15:40Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.ST",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.17474v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17474v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4661,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4661,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5355,
+        "relevance": 0.4738,
+        "quality": 0.49,
+        "novelty": 0.8596,
+        "freshness": 0.8708,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "proof",
+        "formal bound"
+      ],
+      "summary": {
+        "takeaway": "We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions.",
+        "problem": "Large language model (LLM) distillation aims to transfer the capabilities of a powerful teacher to a smaller student.",
+        "method": "We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions.",
+        "evidence": "In an autoregressive policy framework, we prove that the output student's expected average Kullback-Leibler divergence to the oracle student converges to zero at a polynomial rate in the number of iterations.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
+    },
+    {
+      "id": "2609.11314",
+      "title": "A Dynamic Fusion Large Language Model for Traffic Flow Prediction",
+      "abstract": "Traffic flow prediction is a core supporting technology for intelligent transportation systems. It uses historical data to infer future traffic dynamics in specific areas, thereby helping to alleviate congestion and improve resource allocation efficiency. Traditional neural networks struggle to break through accuracy limits due to their reliance on singular feature modeling, while large language models (LLMs) suffer from insufficient capture of spatial topological information and mining spatiotemporal correlation. This study proposes a Dynamic Fusion Large Language Model (DF-LLM) for traffic flow prediction. The model incorporates three core components: spatiotemporal embedding module, spatiotemporal fusion module, and LLM backbone. The spatiotemporal embedding module enables synergistic representation of multi-scale spatiotemporal features. The spatiotemporal fusion module integrates spatial topology and dynamic dependencies via graph convolution. The LLM backbone adopts a differentiated parameter adaptation strategy to balance training efficiency and traffic data adaptability. Additionally, it introduces a context aggregation attention module to strengthens global dependencies. More importantly, the LLM backbone takes the residual connections to mitigate the gradient vanishing in deep networks. Experiments show that DF-LLM has achieved better performance by comparing the metrics on all the four datasets.",
+      "authors": [
+        "Xue Qiu",
+        "Jianli Xiao"
+      ],
+      "published": "2026-09-10T09:40:21Z",
+      "updated": "2026-09-10T09:40:21Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.11314v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11314v1",
+      "comment": "Accepted by WISA 2026",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5359,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5043,
+        "relevance": 0.4615,
+        "quality": 0.43,
+        "novelty": 0.838,
+        "freshness": 0.6909,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "Traffic flow prediction is a core supporting technology for intelligent transportation systems.",
+        "problem": "Traffic flow prediction is a core supporting technology for intelligent transportation systems.",
+        "method": "It uses historical data to infer future traffic dynamics in specific areas, thereby helping to alleviate congestion and improve resource allocation efficiency.",
+        "evidence": "It uses historical data to infer future traffic dynamics in specific areas, thereby helping to alleviate congestion and improve resource allocation efficiency.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-12T13:36:18.689174+00:00"
+    },
+    {
+      "id": "2609.11699",
+      "title": "Negative Self-Distillation: Learning to Reason by Avoiding Flaws",
+      "abstract": "On-Policy Self-Distillation (OPSD) has emerged as a popular paradigm for large language model (LLM) self-improvement, allowing models to act as their own teachers by leveraging privileged information such as ground-truth solutions. However, recent findings indicate that OPSD can severely degrade the performance of LLMs on complex reasoning tasks: By forcing the student to imitate an artificially confident reasoning trace conditioned on privileged information, OPSD inadvertently suppresses expressions of uncertainty and penalizes the exploratory, self-corrective behaviors required to solve challenging problems. To address this, we introduce Negative Self-Distillation (NSD), a new framework that optimizes LLMs by diverging from flawed reasoning rather than imitating privileged solutions. Instead of relying on ground-truth answers or external supervision, NSD uses the model itself to generate a question-specific negative condition (eg, acting as a ``careless reasoner'') and pushes the student's distribution away from this self-generated negative teacher. Naively applying unlearning objectives to achieve this divergence is problematic, as flawed reasoning tokens are confounded with basic linguistic tokens; indiscriminately penalizing both risks catastrophically degrading the model's foundational language capabilities. We resolve this by designing a dynamic gating mechanism that automatically identifies and isolates reasoning-critical tokens, ensuring gradient updates target only behavioral flaws while preserving the model's linguistic priors. Empirically, NSD consistently outperforms OPSD and other label-free, self-bootstrapping reinforcement learning (RL) baselines.",
+      "authors": [
+        "Rongcan Pei",
+        "Zhepei Wei",
+        "Shuyao Xu",
+        "Xinyu Zhu",
+        "Wei-Lin Chen",
+        "Yu Meng"
+      ],
+      "published": "2026-09-10T15:24:17Z",
+      "updated": "2026-09-10T15:24:17Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.11699v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11699v1",
+      "comment": "23 pages, 7 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3958,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3958,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2377,
+          "matched": [
+            "uncertainty"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4966,
+        "relevance": 0.4433,
+        "quality": 0.4,
+        "novelty": 0.8523,
+        "freshness": 0.863,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison"
+      ],
+      "summary": {
+        "takeaway": "To address this, we introduce Negative Self-Distillation (NSD), a new framework that optimizes LLMs by diverging from flawed reasoning rather than imitating privileged solutions.",
+        "problem": "On-Policy Self-Distillation (OPSD) has emerged as a popular paradigm for large language model (LLM) self-improvement, allowing models to act as their own teachers by leveraging privileged information such as ground-truth solutions.",
+        "method": "To address this, we introduce Negative Self-Distillation (NSD), a new framework that optimizes LLMs by diverging from flawed reasoning rather than imitating privileged solutions.",
+        "evidence": "Naively applying unlearning objectives to achieve this divergence is problematic, as flawed reasoning tokens are confounded with basic linguistic tokens; indiscriminately penalizing both risks catastrophically degrading the model's foundational language capabilities.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-11T14:25:18.486238+00:00"
+    },
+    {
+      "id": "conf:icml:2026:71092",
+      "title": "Activation Oracles: Training and Evaluating LLMs as General-Purpose Activation Explainers",
+      "abstract": "Large language model (LLM) activations are notoriously difficult to understand, with most existing techniques using complex, specialized methods for interpreting them. Recent work has proposed a simpler approach known as LatentQA: training LLMs to directly accept LLM activations as inputs and answer arbitrary questions about them in natural language. However, prior work has focused on narrow task settings for both training and evaluation. In this paper, we instead take a generalist perspective. We evaluate LatentQA-trained models, which we call Activation Oracles (AOs), in far out-of-distribution settings and examine how performance scales with training data diversity. We find that AOs can recover information fine-tuned into a model (e.g., biographical knowledge or malign propensities) that does not appear in the input text, despite never being trained with activations from a fine-tuned model. Our main evaluations are four downstream tasks where we can compare to prior white- and black-box techniques. We find that even narrowly-trained LatentQA models can generalize well, and that adding additional training datasets (such as classification tasks and a self-supervised context prediction task) yields consistent further improvements. Our best AOs match or exceed white-box baselines on all four tasks and the best overall baseline on 3 of 4. These results suggest that diversified training to answer natural-language queries imparts a general capability to verbalize information about LLM activations.",
+      "authors": [
+        "Adam Karvonen",
+        "James Chua",
+        "Clément Dumas",
+        "Kit Fraser-Taliente",
+        "Subhash Kantamneni",
+        "Julian Minder",
+        "Euan Ong",
+        "Arnab Sen Sharma",
+        "Daniel Wen",
+        "Owain Evans",
+        "Samuel Marks"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71092",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71092",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3841,
+          "matched": [
+            "prediction",
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4958,
+        "relevance": 0.325,
+        "quality": 0.76,
+        "novelty": 0.8261,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We find that AOs can recover information fine-tuned into a model (e.g., biographical knowledge or malign propensities) that does not appear in the input text, despite never being trained with activations from a fine-tuned model.",
+        "problem": "Large language model (LLM) activations are notoriously difficult to understand, with most existing techniques using complex, specialized methods for interpreting them.",
+        "method": "Recent work has proposed a simpler approach known as LatentQA: training LLMs to directly accept LLM activations as inputs and answer arbitrary questions about them in natural language.",
+        "evidence": "We find that even narrowly-trained LatentQA models can generalize well, and that adding additional training datasets (such as classification tasks and a self-supervised context prediction task) yields consistent further improvements.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-10T14:25:39.952671+00:00"
+    },
+    {
+      "id": "2609.17516",
+      "title": "When Should LLMs Abstain? Chain-of-Self-Questioning for Selective Risk Control",
+      "abstract": "Large language models can produce fluent answers when their factual support is weak. This paper introduces Chain-of-Self-Questioning (CoSQ), a prompt-only framework that makes answer commitment conditional on an explicit assessment of the information required to answer a question. We evaluate three CoSQ variants under seventeen conditions on the 817-item TruthfulQA multiple-choice validation set using eleven open-weight and hosted model families. In the final balanced-option protocol, Grounded-CoSQ at τ=0.90 reduces the mean unconditional wrong-commitment rate from 13.1% under chain-of-thought prompting to 8.9%, a 32.1% relative reduction, while increasing answered accuracy from 86.9% to 89.7% and answering 87.6% of questions. Both improvements hold for all eleven models and at every evaluated threshold. Critical-CoSQ and Adaptive-CoSQ provide neighboring operating points with 88.6% and 86.5% coverage, respectively, while remaining more reliable than the baseline. A secondary Natural Questions Short-Answer evaluation provides convergent open-form evidence. These findings show that self-assessment can support explicit, tunable answer-or-abstain decisions when an unsupported commitment is more costly than referral or review.",
+      "authors": [
+        "Ali Şenol"
+      ],
+      "published": "2026-09-15T17:52:24Z",
+      "updated": "2026-09-15T17:52:24Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.17516v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17516v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4519,
+          "matched": [
+            "evaluation",
+            "selective"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4872,
+        "relevance": 0.3999,
+        "quality": 0.48,
+        "novelty": 0.8757,
+        "freshness": 0.8744,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Large language models can produce fluent answers when their factual support is weak.",
+        "problem": "Large language models can produce fluent answers when their factual support is weak.",
+        "method": "This paper introduces Chain-of-Self-Questioning (CoSQ), a prompt-only framework that makes answer commitment conditional on an explicit assessment of the information required to answer a question.",
+        "evidence": "Both improvements hold for all eleven models and at every evaluated threshold.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "selective"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
     }
   ]
 }

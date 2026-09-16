@@ -1,6 +1,319 @@
 {
-  "generated_at": "2026-09-12T13:36:18.689174+00:00",
+  "generated_at": "2026-09-16T14:58:04.793591+00:00",
   "papers": [
+    {
+      "id": "2609.17474",
+      "title": "Coupled Calibration and Learning: Mitigating Teacher Bias in LLM Distillation without Target-Domain Reward Feedback",
+      "abstract": "Large language model (LLM) distillation aims to transfer the capabilities of a powerful teacher to a smaller student. Direct imitation, however, can also transfer the teacher's systematic bias and errors. This challenge is particularly pronounced under covariate shift, when the teacher's reliability on target questions is uncertain and target-domain reward feedback is unavailable. We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions. Each iteration calibrates the teacher using source feedback and then uses the calibrated teacher to train the student on target questions. The updated student, in turn, informs subsequent calibration. In an autoregressive policy framework, we prove that the output student's expected average Kullback-Leibler divergence to the oracle student converges to zero at a polynomial rate in the number of iterations. The oracle maximizes the true reference-regularized target reward within the student class, which need not represent the unrestricted optimal policy. Our analysis quantifies the progress of projected student gradient updates while controlling the error in teacher calibration. We further establish a separation from regularized direct matching: its error relative to the oracle student can remain bounded away from zero even when the teacher achieves higher regularized target reward than every student policy. These results demonstrate that LLM distillation can overcome persistent teacher bias and recover the optimal student through coupled calibration and learning, without target-domain reward feedback.",
+      "authors": [
+        "Haichen Hu",
+        "Yuheng Zhang",
+        "David Simchi-Levi"
+      ],
+      "published": "2026-09-15T17:15:40Z",
+      "updated": "2026-09-15T17:15:40Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.ST",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.17474v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17474v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4661,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4661,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5355,
+        "relevance": 0.4738,
+        "quality": 0.49,
+        "novelty": 0.8596,
+        "freshness": 0.8708,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "proof",
+        "formal bound"
+      ],
+      "summary": {
+        "takeaway": "We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions.",
+        "problem": "Large language model (LLM) distillation aims to transfer the capabilities of a powerful teacher to a smaller student.",
+        "method": "We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions.",
+        "evidence": "In an autoregressive policy framework, we prove that the output student's expected average Kullback-Leibler divergence to the oracle student converges to zero at a polynomial rate in the number of iterations.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
+    },
+    {
+      "id": "2609.17516",
+      "title": "When Should LLMs Abstain? Chain-of-Self-Questioning for Selective Risk Control",
+      "abstract": "Large language models can produce fluent answers when their factual support is weak. This paper introduces Chain-of-Self-Questioning (CoSQ), a prompt-only framework that makes answer commitment conditional on an explicit assessment of the information required to answer a question. We evaluate three CoSQ variants under seventeen conditions on the 817-item TruthfulQA multiple-choice validation set using eleven open-weight and hosted model families. In the final balanced-option protocol, Grounded-CoSQ at τ=0.90 reduces the mean unconditional wrong-commitment rate from 13.1% under chain-of-thought prompting to 8.9%, a 32.1% relative reduction, while increasing answered accuracy from 86.9% to 89.7% and answering 87.6% of questions. Both improvements hold for all eleven models and at every evaluated threshold. Critical-CoSQ and Adaptive-CoSQ provide neighboring operating points with 88.6% and 86.5% coverage, respectively, while remaining more reliable than the baseline. A secondary Natural Questions Short-Answer evaluation provides convergent open-form evidence. These findings show that self-assessment can support explicit, tunable answer-or-abstain decisions when an unsupported commitment is more costly than referral or review.",
+      "authors": [
+        "Ali Şenol"
+      ],
+      "published": "2026-09-15T17:52:24Z",
+      "updated": "2026-09-15T17:52:24Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.17516v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17516v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4519,
+          "matched": [
+            "evaluation",
+            "selective"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4872,
+        "relevance": 0.3999,
+        "quality": 0.48,
+        "novelty": 0.8757,
+        "freshness": 0.8744,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Large language models can produce fluent answers when their factual support is weak.",
+        "problem": "Large language models can produce fluent answers when their factual support is weak.",
+        "method": "This paper introduces Chain-of-Self-Questioning (CoSQ), a prompt-only framework that makes answer commitment conditional on an explicit assessment of the information required to answer a question.",
+        "evidence": "Both improvements hold for all eleven models and at every evaluated threshold.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "selective"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
+    },
+    {
+      "id": "2609.17376",
+      "title": "Large Language Models Develop Belief State Geometry In-Context",
+      "abstract": "Large language models (LLMs) trained on next-token prediction exhibit remarkable in-context learning (ICL) abilities, yet the representations that support ICL remain poorly understood. We consider such representations in a controlled setting: prompting LLMs with data emitted from hidden Markov models (HMMs) and probing for the corresponding belief state -- the posterior distribution over the HMM's hidden states given the observed token history. Across six open-source LLMs prompted with data from 40 HMMs selected for non-trivial belief structure, we find that belief states are linearly decodable from residual stream activations, with peak probe $R^2$-values from 0.83-0.99 across HMM and LLM combinations, ranging from early to late layers. To establish functional relevance, we intervene directly on the probe-identified subspace via patching and steering, resulting in downstream prediction quality on the order of the untampered model, while controls degrade performance substantially. Together, these results provide representation-level evidence that ICL in open-source LLMs approximates optimal Bayesian prediction over a context-inferred generative model. More broadly, our findings extend prior results linking input-distribution structure to activation geometry: from toy networks trained explicitly on HMM data to production-scale LLMs.",
+      "authors": [
+        "Daniel Balcells",
+        "Andrew Jun Lee",
+        "Chirag Rastogi",
+        "Paul M. Riechers",
+        "Adam Shai",
+        "Xavier Poncini"
+      ],
+      "published": "2026-09-15T16:17:59Z",
+      "updated": "2026-09-15T16:17:59Z",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.17376v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17376v1",
+      "comment": "87 pages",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3845,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1531,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1531,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1426,
+          "matched": [
+            "functional",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.466,
+        "relevance": 0.3688,
+        "quality": 0.49,
+        "novelty": 0.8502,
+        "freshness": 0.8651,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Across six open-source LLMs prompted with data from 40 HMMs selected for non-trivial belief structure, we find that belief states are linearly decodable from residual stream activations, with peak probe $R^2$-values from 0.83-0.99 across HMM and LLM combinations, ranging from early to late layers.",
+        "problem": "Large language models (LLMs) trained on next-token prediction exhibit remarkable in-context learning (ICL) abilities, yet the representations that support ICL remain poorly understood.",
+        "method": "We consider such representations in a controlled setting: prompting LLMs with data emitted from hidden Markov models (HMMs) and probing for the corresponding belief state -- the posterior distribution over the HMM's hidden states given the observed token history.",
+        "evidence": "Across six open-source LLMs prompted with data from 40 HMMs selected for non-trivial belief structure, we find that belief states are linearly decodable from residual stream activations, with peak probe $R^2$-values from 0.83-0.99 across HMM and LLM combinations, ranging from early to late layers.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
+    },
     {
       "id": "2609.11115",
       "title": "Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation",
@@ -11569,487 +11882,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-08-27T20:30:01.195934+00:00"
-    },
-    {
-      "id": "conf:iclr:2026:10011886",
-      "title": "Common Corpus: The Largest Collection of Ethical Data for LLM Pre-Training",
-      "abstract": "Large Language Models (LLMs) are pre-trained on large data from different sources and domains. These datasets often contain trillions of tokens, including large portions of copyrighted or proprietary content, which raises questions about the legal use of such models. This underscores the need for truly open pre-training data that complies with data security regulations. In this paper, we introduce Common Corpus, the largest open dataset for LLM pre-training. The data assembled in Common Corpus are either uncopyrighted or under permissive licenses and amount to about two trillion tokens. The dataset contains a wide variety of languages, ranging from the high-resource European languages to some low-resource languages rarely represented in pre-training datasets. In addition, it includes a large amount of code data. The diversity of data sources in terms of covered domains and time periods opens up the paths for both research and entrepreneurial needs in diverse areas of knowledge. In this paper, we present the detailed provenance of data assembling and the details of dataset filtering and curation. We train two small language models on Common Corpus and find that they perform comparably to other models of their size, indicating that our dataset is suitable for multilingual pretraining. Common Corpus represents a key contribution to the ecosystem for open science research on Large Language Models.",
-      "authors": [
-        "Pierre-Carl Langlais",
-        "Pavel Chizhov",
-        "Catherine Arnett",
-        "Carlos Hinostroza",
-        "Mattia Nee",
-        "Eliot Jones",
-        "Irène Girard",
-        "David Mach",
-        "Anastasia Stasenko",
-        "Ivan Yamshchikov"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10011886",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10011886",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.6381,
-          "matched": [
-            "filtering",
-            "training data",
-            "curation",
-            "data"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.5887,
-          "matched": [
-            "training"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.4427,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.748,
-        "relevance": 0.7105,
-        "quality": 0.75,
-        "novelty": 0.8618,
-        "freshness": 1.0,
-        "feedback_adjustment": -0.013,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "dataset evidence",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "evidence": "训练的两个小型模型表现与同类模型相当，表明数据集适合多语言预训练。",
-        "limitations": "未在摘要中提及具体限制。",
-        "method": "收集无版权或宽松许可的数据，进行过滤和整理，并训练小型模型验证效果。",
-        "problem": "现有LLM预训练数据常包含版权内容，引发法律使用问题，需真正开放且合规的数据。",
-        "takeaway": "提出Common Corpus，最大的开放数据集用于LLM预训练，包含符合数据安全法规的伦理数据。",
-        "why_for_you": "数据选择 for LLMs",
-        "source": "abstract",
-        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Data selection for LLMs",
-        "matched": [
-          "filtering",
-          "training data",
-          "curation",
-          "data"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-27T20:30:01.195934+00:00"
-    },
-    {
-      "id": "2608.24492",
-      "title": "When Do Supervised UQ Ensembles Improve LLM Hallucination Detection? A Robustness Study",
-      "abstract": "Uncertainty quantification (UQ) methods are widely used for hallucination detection in large language models (LLMs) in closed-book settings where ground-truth evidence is unavailable at inference time. Prior work has proposed combining UQ signals via learned ensembles, but empirical investigations into the robustness of these ensembles are limited. We study a supervised ensembling framework that trains a classifier over heterogeneous UQ-based scorer outputs on a small, domain-specific dataset of labeled LLM responses, then applies it to out-of-sample hallucination classification without retrieval, tools, or reference documents. Across four LLMs, nine datasets, and three generation regimes (short-form QA, long-form generation, and code generation), we provide a systematic robustness analysis along three axes: sample efficiency, in-domain dataset transfer, and generation regime dependence. We find that supervised ensembles outperform the best individual scorer in 30 of 32 settings, with gains realized from as few as 100 labeled instances. Ensembles retain most of their advantage in cases of in-domain transfer under distribution shift, outperforming the best non-ensemble scorer in 23 of 28 transfer settings. Sampling-based black-box ensembles are nearly as effective as full ensembles, while single-generation white-box ensembles offer limited benefit.",
-      "authors": [
-        "Mohit Singh Chauhan",
-        "Vipin Gyanchandani",
-        "Dylan Bouchard"
-      ],
-      "published": "2026-08-25T12:43:07Z",
-      "updated": "2026-08-25T12:43:07Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.24492v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.24492v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.585,
-          "matched": [
-            "robustness",
-            "uncertainty",
-            "hallucination",
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.5199,
-          "matched": [
-            "robustness"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.4426,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6715,
-        "relevance": 0.6605,
-        "quality": 0.59,
-        "novelty": 0.8075,
-        "freshness": 0.8682,
-        "feedback_adjustment": -0.0129,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "robustness",
-          "uncertainty",
-          "hallucination",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "takeaway": "Supervised ensembles of heterogeneous UQ scorers consistently improve hallucination detection over the best single scorer, even with as few as 100 labeled examples.",
-        "problem": "Detecting hallucinations in closed‑book LLM outputs without retrieval or reference documents.",
-        "method": "Train a classifier on a vector of black‑box, white‑box, and reflexive UQ scores from a small domain‑specific labeled set and apply it to out‑of‑sample responses.",
-        "evidence": "Ensembles outperform the top individual scorer in 30 of 32 settings by AUROC and retain advantage in 23 of 28 distribution‑shift transfer cases.",
-        "limitations": "Study is limited to four closed‑source LLMs, two factoid long‑form domains, Python code, and does not evaluate cross‑domain or open‑weight model scorers.",
-        "why_for_you": "Matches your interest in trustworthy LLMs by providing a sample‑efficient, robust hallucination detector.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "Supervised UQ ensembles beat the best single scorer in 30/32 settings, with AUROC gains from 100 labeled examples."
-          },
-          {
-            "icon": "⚙️",
-            "text": "Train logistic regression / random forest / gradient boosting on heterogeneous black‑box, white‑box, and reflexive scorer outputs."
-          },
-          {
-            "icon": "📊",
-            "text": "Ensembles retain advantage in 23/28 distribution‑shift transfer cases, but evaluation covers only four closed‑source LLMs and narrow domains."
-          }
-        ],
-        "overview": "The paper investigates a supervised ensembling framework that learns to combine diverse uncertainty quantification (UQ) signals for hallucination detection in closed‑book LLM generation. By training simple classifiers on vectors of black‑box, white‑box, and reflexive scorer outputs, the authors evaluate sample efficiency, in‑domain transfer under distribution shift, and generation‑regime dependence across four LLMs, nine datasets, and three output formats. Results show ensembles dominate individual scorers in most settings, with modest labeled data requirements, while black‑box‑only ensembles approach full‑ensemble performance. Limitations include a narrow model and task scope.",
-        "methodology": [
-          {
-            "title": "Supervised ensemble training",
-            "detail": "A classifier (logistic regression, random forest, or gradient boosting) is trained on K‑dimensional vectors of UQ scores s1(y)…sK(y) ∈ [0,1]K derived from heterogeneous scorers; training subsets range from 0.1N to 0.7N of the labeled data."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Signal combination",
-            "detail": "Supervised learning learns weighted combinations of complementary UQ signals, allowing the model to exploit strengths of black‑box consistency, white‑box token probabilities, and reflexive self‑judgments, thereby improving discrimination between truthful and hallucinated outputs."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Empirical evaluation",
-            "detail": "Four LLMs (Gemini‑2.5‑Flash, Gemini‑2.5‑Pro, GPT‑4o, GPT‑4o‑mini) are tested on nine benchmarks covering short‑form math, factual QA, reading comprehension, Python code generation (LiveCodeBench), and long‑form factoid QA (rivers, mushrooms). Metrics include AUROC and expected calibration error (ECE); baselines are the best individual scorer per setting."
-          }
-        ],
-        "findings": [
-          {
-            "title": "In‑distribution superiority",
-            "detail": "With the full training sample (0.7N), ensembles outperform the best individual scorer in 30 of 32 LLM‑dataset settings by AUROC and in 29 of 32 by ECE."
-          },
-          {
-            "title": "Sample efficiency",
-            "detail": "Performance gains appear with as few as 100 labeled instances, as shown by AUROC curves across training sizes."
-          },
-          {
-            "title": "Transfer robustness",
-            "detail": "Under in‑domain distribution shift, ensembles remain superior in 23 of 28 transfer settings."
-          },
-          {
-            "title": "Black‑box vs full ensembles",
-            "detail": "Sampling‑based black‑box ensembles achieve nearly the same AUROC as full ensembles, whereas white‑box‑only ensembles provide limited benefit."
-          }
-        ],
-        "contributions": [
-          "Systematic robustness analysis of supervised UQ ensembles across sample efficiency, distribution shift, and generation regimes."
-        ],
-        "limitations": [
-          "Only four closed‑source LLMs from two providers are evaluated; results may not generalize to open‑weight models.",
-          "Long‑form evaluation is limited to two factoid domains and code experiments to Python competitive‑programming tasks.",
-          "Cross‑domain, cross‑LLM, and internal‑state scorer combinations are not explored."
-        ],
-        "open_questions": [
-          "How do supervised ensembles perform with open‑weight models and internal‑state UQ signals?",
-          "Can ensembles trained on one domain or LLM transfer effectively to entirely different domains or other model families?",
-          "What is the impact of more diverse long‑form generation tasks (e.g., summarization, multi‑turn dialogue) on ensemble efficacy?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "recommended_at": "2026-08-26T10:51:18.938084+00:00"
-    },
-    {
-      "id": "2608.24568",
-      "title": "Across the Loss Landscape with Progressive Growth",
-      "abstract": "Deep neural networks generalize well despite their highly nonconvex, overparameterized loss landscapes, a phenomenon often associated with the geometry of the minima found by stochastic optimization. We study how incremental grow-and-optimize strategies bias training toward flatter regions by viewing growth as progressive constraint relaxation. Starting from a low-dimensional submodel, we iteratively expand the trainable parameters by unlocking nested random subspaces while freezing the orthogonal complement at the network initialization, re-optimizing after each expansion until the full architecture is reached. Under standard local regularity conditions around non-degenerate minima, we prove that local sublevel sets are well approximated by ellipsoids and that basin accessibility under frozen constraints can be characterized by an explicit effective curvature in the frozen directions. This leads to an explanation of the bias: progressive growth increases the relative weight of wide basins and suppresses sharp ones through a volume effect induced by the frozen constraints. We empirically validate these predictions in controlled toy landscapes and in a realistic ResNet/CIFAR-100 setting and confirm that although progressive subspace growth reliably produces flatter solutions, curvature reductions do not universally translate into improved test performance, highlighting subtleties in the flatness-generalization connection. The code is available at https://github.com/p0lcAi/Across-the-Loss-Landscape.",
-      "authors": [
-        "Paul Caillon",
-        "Christophe Cerisara",
-        "Alexandre Allauzen"
-      ],
-      "published": "2026-08-25T13:50:48Z",
-      "updated": "2026-08-25T13:50:48Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.24568v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.24568v1",
-      "comment": "Accepted at ECML PKDD 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "transferable",
-      "scope_matches": [
-        "loss landscape",
-        "flatness"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.5345,
-          "matched": [
-            "loss landscape",
-            "basin",
-            "flatness",
-            "landscape",
-            "loss"
-          ]
-        },
-        {
-          "id": "llm_statistical_theory",
-          "name": "Statistical theory for LLMs",
-          "status": "background",
-          "score": 0.1244,
-          "matched": [
-            "generalization",
-            "optimization"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.0791,
-          "matched": [
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5938,
-        "relevance": 0.4683,
-        "quality": 0.81,
-        "novelty": 0.8361,
-        "freshness": 0.8749,
-        "feedback_adjustment": -0.0091,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "proof",
-        "quantitative results"
-      ],
-      "summary": {
-        "limitations": "曲率降低并未始终提升测试准确率，凸显平坦性与泛化之间的细微关系。",
-        "evidence": "在 ResNet/CIFAR-100 上的实证验证表明得到更平坦的解，但未带来普遍的测试性能提升。",
-        "method": "通过嵌套随机子空间和冻结正交补的迭代参数扩展。",
-        "problem": "理解增量参数扩展如何影响损失景观几何及泛化。",
-        "why_for_you": "与 LLM 损失景观分析及通过几何偏置提升对抗训练效率密切相关。",
-        "takeaway": "渐进式增长通过冻结约束使训练倾向更平坦区域，解释平坦性与泛化的权衡。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "experiments": [
-          {
-            "detail": "使用 ResNet-18 进行渐进式增长阶段 (S=3,5,10)，并与未冻结的全模型基线进行比较。",
-            "title": "ResNet/CIFAR-100 设置"
-          },
-          {
-            "detail": "测量测试准确率、插值障碍、保持率以及基于 Hessian 的量 (λmax, trace, log-determinant)。",
-            "title": "指标"
-          },
-          {
-            "detail": "以全模型无增长训练作为对照，保持相同的网络结构和训练预算。",
-            "title": "基线"
-          }
-        ],
-        "overview": "本文分析增量参数扩展如何使优化偏向更平坦的损失景观。理论表明冻结约束导致有效曲率降低，实验证实在 ResNet/CIFAR-100 上得到更平坦的解。但曲率下降并未普遍提升泛化，揭示平坦性与泛化关系的复杂性。方法采用嵌套子空间解锁并在每阶段重新优化。",
-        "methodology": [
-          {
-            "detail": "从低维子模型开始，迭代解锁嵌套随机子空间，同时在初始化时冻结正交补，并在每次扩展后重新优化。",
-            "title": "增量参数扩展"
-          },
-          {
-            "detail": "利用局部 Hessian 特征值和 Schur 补来刻画冻结约束下的有效曲率。",
-            "title": "基于 Hessian 的曲率分析"
-          },
-          {
-            "detail": "证明在正则条件下，非退化极小点附近的局部子水平集可被椭圆良好近似。",
-            "title": "椭圆近似"
-          }
-        ],
-        "limitations": [
-          "曲率降低并未始终提升测试性能",
-          "实证结果仅限于 ResNet/CIFAR-100 设置",
-          "理论分析假设非退化极小点和局部正则性"
-        ],
-        "findings": [
-          {
-            "detail": "渐进子空间增长相较于固定结构模型始终产生更平坦的极小点 (λnewmax/λmax < 1)。",
-            "title": "通过增长获得更平坦的解"
-          },
-          {
-            "detail": "冻结约束通过椭圆近似和相容体积分析显示提升宽阱的相对权重。",
-            "title": "体积效应示例"
-          },
-          {
-            "detail": "曲率降低并未普遍提升测试准确率（例如 S=10 增长将准确率降至 73.37%，低于基线 76.25%）。",
-            "title": "平坦性与泛化的权衡"
-          }
-        ],
-        "contributions": [
-          "将渐进增长视为约束松弛的理论分析",
-          "损失子水平集的局部椭圆近似",
-          "冻结约束下的有效曲率刻画"
-        ],
-        "open_questions": [
-          "何种机制决定曲率降低何时转化为泛化提升",
-          "将基于体积的分析扩展至非椭圆形景观几何",
-          "渐进增长在更大规模 LLM 架构上的可扩展性"
-        ],
-        "mechanism": [
-          {
-            "detail": "冻结方向通过 Schur 补 Σi,t = Hi,bb − Hi,ba(Hi,aa)⁻¹Hi,ab 表现出降低的有效曲率，从而控制阱的可达性。",
-            "title": "冻结约束下的有效曲率"
-          },
-          {
-            "detail": "冻结约束产生体积效应，通过提升宽阱在参数空间中的相对权重而偏向更宽的阱。",
-            "title": "基于体积的偏置机制"
-          }
-        ],
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "渐进子空间增长通过冻结约束产生更平坦的解"
-          },
-          {
-            "icon": "🔧",
-            "text": "在冻结方向下通过 Hessian Schur 补计算有效曲率"
-          },
-          {
-            "icon": "📈",
-            "text": "ResNet/CIFAR-100 实验显示更平坦的极小点，但未带来一致的准确率提升"
-          }
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "loss landscape",
-          "basin",
-          "flatness",
-          "landscape"
-        ],
-        "lane": "transferable"
-      },
-      "recommended_at": "2026-08-26T10:51:18.938084+00:00"
     }
   ]
 }
