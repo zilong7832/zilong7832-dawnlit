@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T16:30:31.914438+00:00",
+  "generated_at": "2026-09-30T16:24:21.830974+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:151-main",
@@ -135,6 +135,96 @@
       "recommended_at": "2026-09-29T16:30:31.914438+00:00"
     },
     {
+      "id": "2609.38070",
+      "title": "Probability is Not Enough: Exploring and Counting Divergent Tokens for Reasoning Uncertainty Quantification in LLMs",
+      "abstract": "As the chain-of-thought reasoning capabilities of large language models improve, evaluating and calibrating their reasoning confidence is becoming increasingly important for quantifying the uncertainty of their answers. Current methods for estimating the confidence of large language models are generally based on probabilities of selected key tokens, but the underlying mechanism remains unclear. Our pilot study finds that replacing selected token probabilities with coarse substitutes can also improve calibration, motivating us to further explore effective signals of model confidence. We introduce Divergent Token Confidence (DTC), a framework that estimates confidence by counting tokens at which two models strongly disagree during decoding. DTC identifies these divergent tokens using the Jensen-Shannon divergence between next-token distributions evaluated along the same reasoning trajectory. We find that their count is almost negatively associated with answer accuracy, thereby serving as a simple yet effective signal for uncertainty quantification. DTC supports both white-box and black-box evaluation using auxiliary models, without explicit training and affecting the generation process. Experiments across multiple model families and six mathematical benchmarks demonstrate improved calibration over probability-based and verbalized baselines. Under white-box evaluation, the count-only estimator achieves an average expected calibration error of 13.0%, compared with 32.7%-42.4% for standard full-sequence confidence methods. In black-box settings, it also improves calibration over the original verbalized scores. For example, mean expected calibration error falls from 32.1%-40.2% to 13.7%-16.3% on DeepSeek-V3.2. These findings provide new insights for improving reasoning uncertainty quantification in large language models. The code is released at https://github.com/szu-tera/DTC.git.",
+      "authors": [
+        "Feiyang Li",
+        "Shengjing Liu",
+        "Qi Zhan",
+        "Sijie Cheng",
+        "Weiqing Wang",
+        "Hongwen Chen",
+        "Yuxuan Yang",
+        "Wen Wang",
+        "Yile Wang",
+        "Hui Huang"
+      ],
+      "published": "2026-09-29T17:33:36Z",
+      "updated": "2026-09-29T17:33:36Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.38070v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38070v1",
+      "comment": "25 pages, 16 figures, 8 tables. Under peer review",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8847,
+          "matched": [
+            "uncertainty",
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7652,
+        "relevance": 0.7078,
+        "quality": 0.91,
+        "novelty": 0.8,
+        "freshness": 0.864,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments"
+      ],
+      "summary": {
+        "takeaway": "We introduce Divergent Token Confidence (DTC), a framework that estimates confidence by counting tokens at which two models strongly disagree during decoding.",
+        "problem": "As the chain-of-thought reasoning capabilities of large language models improve, evaluating and calibrating their reasoning confidence is becoming increasingly important for quantifying the uncertainty of their answers.",
+        "method": "We introduce Divergent Token Confidence (DTC), a framework that estimates confidence by counting tokens at which two models strongly disagree during decoding.",
+        "evidence": "Our pilot study finds that replacing selected token probabilities with coarse substitutes can also improve calibration, motivating us to further explore effective signals of model confidence.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
+    },
+    {
       "id": "2609.35699",
       "title": "Distillation Defenses Easily Break After Reinforcement Learning",
       "abstract": "Distillation attacks copy the reasoning capabilities of closed-source large language models, allowing bad actors to replicate state-of-the-art performance at low cost. Attackers systematically collect a large volume of frontier model reasoning traces and then train (i.e., \"distill\") their own models on these traces. Existing defenses against distillation attacks are typically evaluated immediately after distillation, implicitly assuming attackers do not train their models any further. In this paper, we argue that a more realistic threat model includes further training with reinforcement learning after distillation. A misspecified threat model can give a false sense of security -- some defenses that seem effective after distillation can be broken after subsequent reinforcement learning. Practically, reinforcement learning lowers the bar for a distillation attack to be effective. We show that simple attacks can steal reasoning capabilities from existing closed-source language models using data easily obtainable from current APIs, yielding reasoning improvements equivalent to more sophisticated attacks that extract the full hidden traces. Results indicate that any distillation defense that leaks sufficient information to reconstruct approximate reasoning traces is likely ineffective. We conclude by discussing broader implications and batch-level distillation defenses which could be more effective.",
@@ -238,6 +328,318 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-29T16:30:31.914438+00:00"
+    },
+    {
+      "id": "2609.38142",
+      "title": "AdviSD: Learning to Advise Frontier LLMs via Targeted Multi-Turn Self-Distillation",
+      "abstract": "A small trainable advisor can steer a frozen language-model executor using natural-language advice. In addition to learning from task rewards, the advisor can use feedback from completed interactions to improve its advice. However, a plausible correction need not change execution, yet learning from such corrections can still affect the advisor's future decisions in other contexts. In a shared-parameter model, we prove that such corrections can limit learning if their targets favor useful advice less strongly than those of other corrections. Keeping them less often than the rest improves the model's eventual performance compared to learning from every correction. Motivated by this, our method, Advisor Self-Distillation (AdviSD), pairs outcome-based reinforcement learning with self-distillation from a feedback-conditioned copy of the advisor selectively. Reflection proposes corrections, and the advisor scores the same recorded executor response with and without its issued advice, using the magnitude of the difference to select decisions for supervision. This approach does not require executor likelihoods or additional executor rollouts. Experiments with Qwen3-8B advisors for Gemini and Claude show that AdviSD outperforms advisor-GRPO by 4.2-6.4 percentage points on BFCL-v3 and by 3.9-5.1 score points on EnvScaler. The trained advisors generalize to out-of-domain tasks and transfer across different executor versions and model families. AdviSD also beats matched-count random selection, supporting the value of its selection rule.",
+      "authors": [
+        "Rishabh Agrawal",
+        "Hejie Cui",
+        "Shasha Li",
+        "Shanchan Wu",
+        "Sercan Ö. Arık"
+      ],
+      "published": "2026-09-29T17:55:40Z",
+      "updated": "2026-09-29T17:55:40Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.38142v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38142v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4288,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4288,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0591,
+          "matched": [
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5297,
+        "relevance": 0.4406,
+        "quality": 0.57,
+        "novelty": 0.8604,
+        "freshness": 0.8662,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "proof",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "A small trainable advisor can steer a frozen language-model executor using natural-language advice.",
+        "problem": "A small trainable advisor can steer a frozen language-model executor using natural-language advice.",
+        "method": "Motivated by this, our method, Advisor Self-Distillation (AdviSD), pairs outcome-based reinforcement learning with self-distillation from a feedback-conditioned copy of the advisor selectively.",
+        "evidence": "In addition to learning from task rewards, the advisor can use feedback from completed interactions to improve its advice.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
+    },
+    {
+      "id": "2609.38025",
+      "title": "Dr. OPD: Learning What to Follow for Optimal On-Policy Distillation of Large Language Models",
+      "abstract": "On-policy distillation (OPD) trains a student on its own generated responses using dense, token-level supervision from a stronger teacher. Vanilla OPD treats all teacher signals equally, assuming that the teacher's supervision is equally important for every token. However, teacher signals at different tokens may have very different effects on the student's performance: some correct important reasoning errors, while others have little effect on the final answer. Motivated by this observation, we introduce Dr. OPD (OPD Done Right), which defines the optimal weighted OPD to maximize the student's performance. We formulate Dr. OPD as a bilevel optimization problem in which the student learns from weighted teacher supervision, while the weights are selected to maximize the expected reward of the resulting student. To solve Dr. OPD, we develop an efficient iterative solver that updates the token weights and student policy alternatively. At each round, it updates weights in closed form and then takes one gradient step on the resulting weighted OPD objective. Under regularity conditions, we show that this weighted update achieves a higher expected reward than a vanilla OPD update. Empirically, across strong-to-weak and same-size distillation on math and code, Dr. OPD consistently outperforms all evaluated baselines. In particular, in the strong-to-weak distillation setting, Dr. OPD improves average math performance by $9.7$ points over vanilla OPD, and enables the smaller student to surpass its larger teacher.",
+      "authors": [
+        "Zhenyu Wang",
+        "Tianze Wang",
+        "Linjun Zhang",
+        "Yifan Hu"
+      ],
+      "published": "2026-09-29T17:07:00Z",
+      "updated": "2026-09-29T17:07:00Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "math.OC"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.38025v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38025v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3613,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3612,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4869,
+        "relevance": 0.3613,
+        "quality": 0.62,
+        "novelty": 0.85,
+        "freshness": 0.8614,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Motivated by this observation, we introduce Dr.",
+        "problem": "On-policy distillation (OPD) trains a student on its own generated responses using dense, token-level supervision from a stronger teacher.",
+        "method": "Motivated by this observation, we introduce Dr.",
+        "evidence": "Under regularity conditions, we show that this weighted update achieves a higher expected reward than a vanilla OPD update.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
+    },
+    {
+      "id": "2609.37988",
+      "title": "KV-Kaizen: Learning Context-Adaptive Cache Compression Choices",
+      "abstract": "As the context size of text processed with an LLM grows, the size of KV caches can outstrip the memory allocated for the original model weights. This impacts LLM throughput negatively, since decoding is memory-bound and decode cost grows with cache size. Recent work alleviates this bottleneck by discarding the least relevant tokens. Eviction introduces a tension, since a one-off decision to discard content may prove detrimental later. Instead, we focus on alternative choices that can lead to cache compression without evicting tokens. We achieve this by learning a selector that is able to produce, based on context, a per-layer cache configuration towards an overall compression budget. The selector operates along three axes: sharing one cache across layers (depth), caching at fewer bits (precision), or truncating the low-rank latent cache representations (rank). We call the resulting method KV-Kaizen, for the many small per-layer choices it compounds. We observe that these interventions taken independently and uniformly over all layers limit achievable compression because they degrade accuracy. Crucially, composing them locally and adaptively to the context can instead preserve accuracy while achieving large memory savings. At inference, the selector runs once, before pre-fill. In evaluations on instruction following and reasoning tasks, our selectors reach the Pareto frontier of accuracy against cache size, against learning-free and post-hoc baselines. On long-context tasks, KV-Kaizen improves on eviction and can be composed with it, reaching a 32x smaller decode-time cache on a 14B model while preserving accuracy. A 4x cache size reduction incurs no accuracy degradation from 7B parameters up, and a compressed model is more accurate than a smaller uncompressed one with the same cache size. Together, these findings support pre-training large models and compressing them only afterwards.",
+      "authors": [
+        "Joao Monteiro",
+        "Louis Béthune",
+        "Anastasiia Filippova",
+        "Sonia Laguna",
+        "David Grangier",
+        "Marco Cuturi"
+      ],
+      "published": "2026-09-29T16:49:46Z",
+      "updated": "2026-09-29T16:49:46Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2609.37988v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.37988v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3371,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3371,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.0929,
+          "matched": [
+            "evaluations"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0675,
+          "matched": [
+            "adaptive"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0523,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0278,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4827,
+        "relevance": 0.3557,
+        "quality": 0.6,
+        "novelty": 0.8848,
+        "freshness": 0.8597,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "formal bound"
+      ],
+      "summary": {
+        "takeaway": "As the context size of text processed with an LLM grows, the size of KV caches can outstrip the memory allocated for the original model weights.",
+        "problem": "As the context size of text processed with an LLM grows, the size of KV caches can outstrip the memory allocated for the original model weights.",
+        "method": "This impacts LLM throughput negatively, since decoding is memory-bound and decode cost grows with cache size.",
+        "evidence": "Eviction introduces a tension, since a one-off decision to discard content may prove detrimental later.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
     },
     {
       "id": "2609.35568",
@@ -366,6 +768,216 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-29T16:30:31.914438+00:00"
+    },
+    {
+      "id": "2609.37959",
+      "title": "TabFM: A Zero-Shot Foundation Model for Tabular Data",
+      "abstract": "Tabular machine learning typically relies on per-dataset workflows, fitting tree ensembles or running AutoML searches from scratch for every task. We present TabFM, a 400M-parameter tabular foundation model that formulates supervised tabular prediction as in-context learning. TabFM produces calibrated zero-shot predictions in a single forward pass without task-specific tuning. Trained entirely on synthetic tables generated from structural causal models, TabFM learns general tabular representations that transfer zero-shot to real-world tasks. Across all 51 benchmark datasets in TabArena (38 classification and 13 regression), zero-shot TabFM ranks first among default tabular foundation models and outperforms tuned AutoML pipelines. Two extensions over the same frozen weights improve performance further on both tracks: multi-view feature expansion with ensembling and post-hoc calibration (TabFM+), and LLM-guided, dataset-specific data processing and feature engineering (TabFM-Auto).",
+      "authors": [
+        "Weihao Kong",
+        "Erez Louidor Ilan",
+        "Shuxin Nie",
+        "Taman Narayan",
+        "Rajat Sen",
+        "Yichen Zhou",
+        "Deqing Fu",
+        "Samet Oymak",
+        "Abhimanyu Das"
+      ],
+      "published": "2026-09-29T16:30:44Z",
+      "updated": "2026-09-29T16:30:44Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.37959v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.37959v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "foundation model",
+        "foundation models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3398,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.2429,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1345,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.118,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.118,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4584,
+        "relevance": 0.3473,
+        "quality": 0.52,
+        "novelty": 0.8574,
+        "freshness": 0.8578,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present TabFM, a 400M-parameter tabular foundation model that formulates supervised tabular prediction as in-context learning.",
+        "problem": "Tabular machine learning typically relies on per-dataset workflows, fitting tree ensembles or running AutoML searches from scratch for every task.",
+        "method": "We present TabFM, a 400M-parameter tabular foundation model that formulates supervised tabular prediction as in-context learning.",
+        "evidence": "Across all 51 benchmark datasets in TabArena (38 classification and 13 regression), zero-shot TabFM ranks first among default tabular foundation models and outperforms tuned AutoML pipelines.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
+    },
+    {
+      "id": "2609.38137",
+      "title": "LongHarness Bench: Stress-Testing Language Model Harnesses for Long-Context Reasoning",
+      "abstract": "Language-model (LM) harnesses enable LMs to operate effectively over long contexts using additional compute. However, existing long-context evaluations are insufficient for distinguishing modern harnesses, reflected by saturated accuracy across harnesses and largely similar evaluation costs. In this paper, we introduce a benchmark for evaluating both the effectiveness and efficiency of long-context harnesses. Our tasks require diverse retrieval strategies, including lexical search and semantic matching, together with strategic and adaptive reasoning over global and local context. Much of the context is semantically relevant but only a small subset is useful at each step, creating both a challenging search problem and different accuracy--cost tradeoffs across processing strategies. For example, one task requires identifying every person satisfying several conditions using evidence scattered across documents; strategically checking the most selective condition first can narrow the search before verifying the remaining conditions. We evaluate multiple families of frontier language models with four state-of-the-art harnesses. Our benchmarks remain challenging even for strong model--harness combinations: the best reaches 68\\% macro-average accuracy across four evaluation suites. More importantly, we find that the same underlying model can exhibit markedly different efficiency under different harnesses. Our results establish efficiency as an important axis for long-context evaluation and provide a testbed for developing harnesses that process context strategically rather than exhaustively.",
+      "authors": [
+        "Quang Hieu Pham",
+        "Thuy Duong Nguyen",
+        "Jocelyn Qiaochu Chen",
+        "Xi Ye"
+      ],
+      "published": "2026-09-29T17:55:07Z",
+      "updated": "2026-09-29T17:55:07Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.38137v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38137v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4342,
+          "matched": [
+            "evaluation",
+            "evaluations",
+            "selective"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0349,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4554,
+        "relevance": 0.3543,
+        "quality": 0.48,
+        "novelty": 0.858,
+        "freshness": 0.8661,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we introduce a benchmark for evaluating both the effectiveness and efficiency of long-context harnesses.",
+        "problem": "Language-model (LM) harnesses enable LMs to operate effectively over long contexts using additional compute.",
+        "method": "In this paper, we introduce a benchmark for evaluating both the effectiveness and efficiency of long-context harnesses.",
+        "evidence": "In this paper, we introduce a benchmark for evaluating both the effectiveness and efficiency of long-context harnesses.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations",
+          "selective"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
     }
   ]
 }
