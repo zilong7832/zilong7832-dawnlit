@@ -1,6 +1,338 @@
 {
-  "generated_at": "2026-09-30T16:24:21.830974+00:00",
+  "generated_at": "2026-10-01T17:01:28.757049+00:00",
   "papers": [
+    {
+      "id": "2609.40265",
+      "title": "OpenTSLM TeeMoE: A Unified Time-Series Language Model for Forecasting, Contextual Prediction, and Reasoning",
+      "abstract": "Real-world time-series applications increasingly require models that can handle time series forecasting, context-conditioned prediction, and language-based temporal reasoning. Yet current time-series foundation models remain fragmented across these capabilities: numerical specialists often provide the strongest forecasts, while language-based models offer broader contextual understanding and analysis. A central challenge is to unify these heterogeneous capabilities without reducing their individual performance. We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists. We independently train three low-rank experts for forecast aggregation, native forecasting, and temporal analysis over a shared backbone. A learned LoRA mixture-of-experts controller then weights their frozen parameter updates for each request. Our proposed model achieves strong performance on widely used benchmarks for time series forecasting, context-conditioned prediction, and language-based temporal reasoning, ranking among the top three on GIFT-Eval by mean MASE rank, Context is Key by RCRPS, and TimeSeriesExam by accuracy.",
+      "authors": [
+        "Tony Chen",
+        "Timo Stoffregen",
+        "Maxwell Xu",
+        "Thomas Kaar",
+        "Martin Maritsch",
+        "Geremia Pompei",
+        "Nicolas Zumarraga",
+        "Robert Jakob",
+        "Paul Schmiedmayer",
+        "Patrick Langer",
+        "Juncheng Liu"
+      ],
+      "published": "2026-09-30T17:43:22Z",
+      "updated": "2026-09-30T17:43:22Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.40265v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40265v1",
+      "comment": "39 pages, 2 figures. Code: https://github.com/OpenTSLM/OpenTSLM-TeeMoE ; model: https://huggingface.co/OpenTSLM/TeeMoE",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "foundation model",
+        "foundation models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4664,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.2313,
+          "matched": [
+            "series",
+            "time",
+            "analysis"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2202,
+          "matched": [
+            "series",
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5068,
+        "relevance": 0.4634,
+        "quality": 0.4,
+        "novelty": 0.8256,
+        "freshness": 0.8613,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation"
+      ],
+      "summary": {
+        "takeaway": "We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists.",
+        "problem": "Real-world time-series applications increasingly require models that can handle time series forecasting, context-conditioned prediction, and language-based temporal reasoning.",
+        "method": "We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists.",
+        "evidence": "Our proposed model achieves strong performance on widely used benchmarks for time series forecasting, context-conditioned prediction, and language-based temporal reasoning, ranking among the top three on GIFT-Eval by mean MASE rank, Context is Key by RCRPS, and TimeSeriesExam by accuracy.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-01T17:01:28.757049+00:00"
+    },
+    {
+      "id": "conf:acl:2026:1925-main",
+      "title": "AdvancedIF: Rubric-Based Benchmarking and Reinforcement Learning for Advancing LLM Instruction Following",
+      "abstract": "Recent progress in large language models (LLMs) has led to impressive performance on a range of tasks, yet advanced instruction following (IF)—especially for complex, multi-turn, and system-prompted instructions—remains a significant challenge. Rigorous evaluation and effective training for such capabilities are hindered by the lack of high-quality, human-annotated benchmarks and reliable, interpretable reward signals. In this work, we introduce AdvancedIF, a comprehensive benchmark featuring over 1,600 prompts and expert-curated rubrics that assess LLMs’ ability to follow complex, multi-turn, and system-level instructions. We also open-source the evaluation script of AdvancedIF. We further propose RIFL (Rubric-based Instruction-Following Learning), a novel post-training pipeline that leverages rubric generation, a finetuned rubric verifier, and reward shaping to enable effective reinforcement learning for instruction following. Extensive experiments demonstrate that RIFL substantially improves the instruction-following abilities of LLMs, achieving a 6.7% absolute gain on AdvancedIF and strong results on public benchmarks. Our ablation studies confirm the effectiveness of each component in RIFL. This work establishes rubrics as a powerful tool for both training and evaluating advanced IF in LLMs, paving the way for more capable and reliable AI systems.",
+      "authors": [
+        "Yun He",
+        "Wenzhe Li",
+        "Hejia Zhang",
+        "Songlin Li",
+        "Karishma Mandyam",
+        "Sopan Khosla",
+        "Yuanhao Xiong",
+        "Nanshu Wang",
+        "Xiaoliang Peng",
+        "Beibin Li",
+        "Shengjie Bi",
+        "Shishir G Patil",
+        "Qi Qi",
+        "Shengyu Feng",
+        "Julian Katz-Samuels",
+        "Richard Yuanzhe Pang",
+        "Sujan Kumar Gonugondla",
+        "Hunter Lang",
+        "Yue Yu",
+        "Yundi Qian",
+        "Maryam Fazel-Zarandi",
+        "Licheng Yu",
+        "Amine Benhalloum",
+        "Hany Hassan Awadalla",
+        "Manaal Faruqui"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6628,
+          "matched": [
+            "learning",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.536,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2732,
+          "matched": [
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7732,
+        "relevance": 0.6921,
+        "quality": 0.96,
+        "novelty": 0.8138,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "benchmark evaluation",
+        "experiments",
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this work, we introduce AdvancedIF, a comprehensive benchmark featuring over 1,600 prompts and expert-curated rubrics that assess LLMs’ ability to follow complex, multi-turn, and system-level instructions.",
+        "problem": "Recent progress in large language models (LLMs) has led to impressive performance on a range of tasks, yet advanced instruction following (IF)—especially for complex, multi-turn, and system-prompted instructions—remains a significant challenge.",
+        "method": "In this work, we introduce AdvancedIF, a comprehensive benchmark featuring over 1,600 prompts and expert-curated rubrics that assess LLMs’ ability to follow complex, multi-turn, and system-level instructions.",
+        "evidence": "Extensive experiments demonstrate that RIFL substantially improves the instruction-following abilities of LLMs, achieving a 6.7% absolute gain on AdvancedIF and strong results on public benchmarks.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-01T17:01:28.757049+00:00"
+    },
+    {
+      "id": "conf:acl:2026:1448-main",
+      "title": "From Answers to Arguments: Toward Trustworthy Clinical Diagnostic Reasoning with Toulmin-Guided Curriculum Goal-Conditioned Learning",
+      "abstract": "The integration of Large Language Models (LLMs) into clinical decision support is critically obstructed by their opaque and often unreliable reasoning. In the high-stakes domain of healthcare, correct answers alone are insufficient; clinical practice demands full transparency to ensure patient safety and enable professional accountability. A pervasive and dangerous weakness of current LLMs is their tendency to produce \"correct answers through flawed reasoning.\" This issue is far more than a minor academic flaw; such process errors signal a fundamental lack of robust understanding, making the model prone to broader hallucinations and unpredictable failures when faced with real-world clinical complexity. In this paper, we establish a framework for trustworthy clinical argumentation by adapting the Toulmin model to the diagnostic process. We propose a novel training pipeline: Curriculum Goal-Conditioned Learning (CGCL), designed to progressively train LLM to generate diagnostic arguments that explicitly follow this Toulmin structure. CGCL's progressive three-stage curriculum systematically builds a solid clinical argument: (1) extracting facts and generating differential diagnoses; (2) justifying a core hypothesis while rebutting alternatives; and (3) synthesizing the analysis into a final, qualified conclusion. We validate CGCL using T-Eval, a quantitative framework measuring the integrity of the diagnosis reasoning. Experiments show that our method achieves diagnostic accuracy and reasoning quality comparable to resource-intensive Reinforcement Learning (RL) methods, while offering a more stable and efficient training pipeline.",
+      "authors": [
+        "Chen Zhan",
+        "Xiaoyu Tan",
+        "Gengchen Ma",
+        "Yu-Jie Xiong",
+        "Xiaoyan Jiang",
+        "Xihe Qiu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.7467,
+          "matched": [
+            "learning",
+            "trustworthy"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5353,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7415,
+        "relevance": 0.7133,
+        "quality": 0.71,
+        "novelty": 0.8586,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose a novel training pipeline: Curriculum Goal-Conditioned Learning (CGCL), designed to progressively train LLM to generate diagnostic arguments that explicitly follow this Toulmin structure.",
+        "problem": "The integration of Large Language Models (LLMs) into clinical decision support is critically obstructed by their opaque and often unreliable reasoning.",
+        "method": "In this paper, we establish a framework for trustworthy clinical argumentation by adapting the Toulmin model to the diagnostic process.",
+        "evidence": "Experiments show that our method achieves diagnostic accuracy and reasoning quality comparable to resource-intensive Reinforcement Learning (RL) methods, while offering a more stable and efficient training pipeline.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "trustworthy"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-01T17:01:28.757049+00:00"
+    },
     {
       "id": "2609.38070",
       "title": "Probability is Not Enough: Exploring and Counting Divergent Tokens for Reasoning Uncertainty Quantification in LLMs",
@@ -10885,477 +11217,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-08-30T14:52:18.671788+00:00"
-    },
-    {
-      "id": "2608.26043",
-      "title": "Robust CurveMoE: Multi-Norm Adversarial Defense for Mixture-of-Experts Models via Mode Connectivity",
-      "abstract": "Multi-norm adversarial defense aims to protect neural networks against perturbations defined by different norm constraints, but existing methods typically optimize competing robustness objectives within a single parameter configuration, leading to substantial training cost and unfavorable robustness trade-offs. We propose Robust CurveMoE, an efficient mixture-of-experts framework that connects models specialized for different perturbation norms through a low-loss path and exploits the complementary robustness profiles of models along this path. Robust CurveMoE derives clean and norm-specialized experts from robustness-constrained curve locations and selectively expertizes only influential layers, while sharing the remaining parameters across routing paths. To further reduce curve-construction cost, we introduce contribution-guided partial updating, which selects influential curve parameters using initialization-based gradient scores. We also theoretically bound the objective gap between partial and full curve optimization. Experiments on CIFAR-100 and ImageNet-100 with WideResNet and Vision Transformer architectures show that Robust CurveMoE consistently improves clean, norm-specific, and Union accuracy over MSD and ERMC. In particular, it improves Union accuracy by 2.37 and 2.13 percentage points over the strongest baseline on CIFAR-100 and ImageNet-100, respectively. Extensive ablations further validate the effectiveness of partial updating, selective expertization, and robustness-constrained expert selection.",
-      "authors": [
-        "Xu Zhang",
-        "Ren Wang"
-      ],
-      "published": "2026-08-26T17:21:33Z",
-      "updated": "2026-08-26T17:21:33Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.26043v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.26043v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "transferable",
-      "scope_matches": [
-        "mode connectivity"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.4141,
-          "matched": [
-            "adversarial",
-            "efficient",
-            "training",
-            "robust",
-            "robustness"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.3635,
-          "matched": [
-            "mode connectivity",
-            "loss",
-            "connectivity",
-            "mode"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.1686,
-          "matched": [
-            "robustness"
-          ]
-        },
-        {
-          "id": "llm_statistical_theory",
-          "name": "Statistical theory for LLMs",
-          "status": "background",
-          "score": 0.064,
-          "matched": [
-            "bound",
-            "optimization"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5311,
-        "relevance": 0.4377,
-        "quality": 0.7,
-        "novelty": 0.8446,
-        "freshness": 0.4434,
-        "feedback_adjustment": -0.0196,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "ablation study",
-        "baseline comparison",
-        "experiments",
-        "formal bound",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We propose Robust CurveMoE, an efficient mixture-of-experts framework that connects models specialized for different perturbation norms through a low-loss path and exploits the complementary robustness profiles of models along this path.",
-        "problem": "Multi-norm adversarial defense aims to protect neural networks against perturbations defined by different norm constraints, but existing methods typically optimize competing robustness objectives within a single parameter configuration, leading to substantial training cost and unfavorable robustness trade-offs.",
-        "method": "We propose Robust CurveMoE, an efficient mixture-of-experts framework that connects models specialized for different perturbation norms through a low-loss path and exploits the complementary robustness profiles of models along this path.",
-        "evidence": "Experiments on CIFAR-100 and ImageNet-100 with WideResNet and Vision Transformer architectures show that Robust CurveMoE consistently improves clean, norm-specific, and Union accuracy over MSD and ERMC.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Efficient adversarial training, LLM loss landscape.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "adversarial",
-          "efficient",
-          "training",
-          "robust"
-        ],
-        "lane": "transferable"
-      },
-      "recommended_at": "2026-08-30T14:52:18.671788+00:00"
-    },
-    {
-      "id": "2608.25429",
-      "title": "Distance Is Not Enough: Forget-Retain Alignment Gap Predicts LLM Relearning Robustness",
-      "abstract": "Machine unlearning aims to make a model forget specific data, yet unlearned LLMs often fail to stay unlearned: brief fine-tuning can revive removed knowledge. Existing robustness predictors rely on global weight-space displacement, but distance alone can be misleading when random or destructive updates collapse performance. We argue that relearning robustness depends on update structure: robust unlearning should affect forget-critical weights while sparing retain-critical ones. We introduce the Forget-Retain Alignment Gap (FRAG), a training-free predictor that scores an update's forget-retain alignment without running a relearning attack, and separates selective from dense updates more reliably than global distance. Building on the forget-critical, retain-sparing principle, Forget-Retain Pruning (FRP) improves relearning robustness. Our results suggest that weight selectivity better explains robustness than distance alone. Code is available at https://github.com/Yi1-Chen/FRAG.",
-      "authors": [
-        "Yi Chen",
-        "Hanna Hsieh",
-        "Shuhong Liu",
-        "Chuanbo Hua",
-        "Zihan Ma",
-        "Kun Wang",
-        "Joo-Young Kim"
-      ],
-      "published": "2026-08-26T06:39:49Z",
-      "updated": "2026-08-26T06:39:49Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.25429v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.25429v1",
-      "comment": "Accepted to EMNLP 2026 Main Conference",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.5819,
-          "matched": [
-            "training",
-            "fine-tuning",
-            "robust",
-            "robustness"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.4728,
-          "matched": [
-            "robustness",
-            "alignment",
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.273,
-          "matched": [
-            "llm"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6387,
-        "relevance": 0.6147,
-        "quality": 0.63,
-        "novelty": 0.8706,
-        "freshness": 0.5214,
-        "feedback_adjustment": -0.0132,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link"
-      ],
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "training",
-          "fine-tuning",
-          "robust",
-          "robustness"
-        ],
-        "lane": "llm"
-      },
-      "summary": {
-        "why_for_you": "高效对抗训练专家会看重 FRAG 的 training-free 对齐指标，用于在无需重新学习攻击的情况下评估忘记鲁棒性。",
-        "limitations": "FRAG 需要校准数据，且主要在 transformer 架构上进行评估。",
-        "problem": "现有的忘记方法因对权重更新缺乏足够的结构性保证，无法防止重新学习攻击。",
-        "method": "FRAG 通过 activation-normalized 权重重要性得分计算忘记-保留对齐差距；FRP 根据这些得分剪枝权重。",
-        "evidence": "在多种忘记方法和模型中，FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠。",
-        "takeaway": "FRAG 与 FRP 通过优先考虑忘记-保留对齐而非全局距离，提升重新学习鲁棒性。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "experiments": [
-          {
-            "detail": "TOFU (LLaMA3.2-1B/3B) 与 WMDP-cyber (Qwen2.5-14BInstruct) 在 forget01/05/10、retain 和 forget+retain 攻击下",
-            "title": "忘记基准"
-          },
-          {
-            "detail": "GA、GradDiff、NPO、RMU、SP；指标 ES/∆ES/utility（TOFU），Acc/∆Acc/MMLU（WMDP）",
-            "title": "基线"
-          },
-          {
-            "detail": "相较于全局 ℓ2 距离，FRAG 在不同模型规模（1B、3B、14B）上与实际鲁棒性的相关性更强",
-            "title": "FRAG 评估"
-          }
-        ],
-        "limitations": [
-          "FRAG 需要用于 activation norm 估计的校准数据",
-          "评估仅限于 transformer 架构（Llama/Qwen）"
-        ],
-        "overview": "本文质疑全局权重距离能够预测重新学习鲁棒性的假设。作者提出 FRAG，一种 training-free 指标，通过衡量忘记关键权重与保留关键权重的对齐程度来评估更新结构。实验表明 FRAG 与实际鲁棒性的相关性优于距离度量，并展示了其在 FRP（剪枝方法）中的应用，FRP 在提升鲁棒性的同时控制效用损失。工作强调在忘记保证中权重的选择性而非仅仅大小。",
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "FRAG：training-free 忘记-保留对齐差距预测器"
-          },
-          {
-            "icon": "🔬",
-            "text": "activation-normalized 权重重要性得分的余弦相似度"
-          },
-          {
-            "icon": "📈",
-            "text": "FRAG 在攻击前 ES 降低方面比全局距离提升 2.6-4.0 倍"
-          }
-        ],
-        "open_questions": [
-          "FRAG 能否在无需校准过程的实时忘记中使用？",
-          "忘记-保留对齐在非 transformer 架构上的泛化如何？"
-        ],
-        "contributions": [
-          "将忘记鲁棒性重新定义为结构化更新问题，而非距离优化",
-          "提出 FRAG 作为 training-free 的忘记对齐指标",
-          "展示 FRP 在可控效用权衡下提升鲁棒性的能力"
-        ],
-        "mechanism": [
-          {
-            "detail": "如果权重的幅度与 forget activation norm 的相关性高于 retain norm，则视为忘记关键权重；反之则为保留关键权重",
-            "title": "忘记-保留重要性对比"
-          }
-        ],
-        "findings": [
-          {
-            "detail": "FRAG 与实际重新学习鲁棒性的相关性比全局距离更可靠（在 3B 时，综合 FRAG 分数 -0.74 对比 ℓ2 -0.10）",
-            "title": "FRAG 相关性"
-          },
-          {
-            "detail": "在相同稀疏度下，FRP 的攻击前 ES 比 SP 低 2.6-4.0 倍，且效用相当",
-            "title": "FRP 效果"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "FRAG 通过 |Wij| * (xfj/(xrj+ϵ)) 与 |Wij| * (xrj/(xfj+ϵ)) 计算忘记/保留重要性，使用校准数据的输入通道 activation norm",
-            "title": "activation-normalized 重要性评分"
-          },
-          {
-            "detail": "FRAG 使用更新向量与重要性图的余弦相似度计算全局对齐分数 Af 与 Ar，公式为 A_f = Σ(ΔWℓ² * Fℓ)/||ΔWℓ²||||Fℓ||",
-            "title": "余弦对齐计算"
-          }
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
-    },
-    {
-      "id": "2608.25727",
-      "title": "Are LLM-Enhanced GNNs Privacy-Safe?",
-      "abstract": "Large language models (LLMs) have recently advanced graph neural networks (GNNs) by enriching node representations with semantic information, giving rise to LLM-enhanced GNNs that achieve substantial performance gains. However, their vulnerability to privacy attacks, in which adversaries infer sensitive information from model outputs, remains largely underexplored. To bridge this gap, we present a systematic evaluation of privacy risks in LLM-enhanced GNNs through a unified framework consisting of five stages: (1) dataset preparation, (2) victim model training, (3) privacy attack, (4) risk assessment, and (5) defense analysis. Specifically, we conduct experiments on six real-world text-attributed graph datasets covering diverse domains. We consider six representative privacy attack methods targeting three fundamental threats, namely link, label, and membership inference, and construct 42 victim model configurations by combining multiple LLM-based feature enhancers with representative GNN backbones. Extensive experiments show that, despite their utility improvements, LLM-enhanced GNNs consistently exhibit increased vulnerability to privacy attacks compared to shallow text representation baselines. Further analysis reveals that semantic enrichment amplifies link-, label-, and membership-related signals in the embedding space, making them more exploitable by inference attacks. Finally, we evaluate differential privacy as a defense strategy and show that, while it can partially mitigate privacy risks, it introduces significant utility degradation, highlighting a fundamental privacy-utility trade-off in LLM-enhanced graph learning. Overall, this work provides a comprehensive understanding of privacy risks in LLM-enhanced GNNs and offers practical insights for developing more secure and trustworthy graph learning systems.",
-      "authors": [
-        "Longzhu He",
-        "Zelang Wen",
-        "Chaozhuo Li",
-        "Sen Su"
-      ],
-      "published": "2026-08-26T12:42:21Z",
-      "updated": "2026-08-26T12:42:21Z",
-      "categories": [
-        "cs.LG",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2608.25727v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.25727v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.5843,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.5723,
-          "matched": [
-            "privacy",
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.1345,
-          "matched": [
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6381,
-        "relevance": 0.634,
-        "quality": 0.58,
-        "novelty": 0.8211,
-        "freshness": 0.5574,
-        "feedback_adjustment": -0.0174,
-        "semantic_feedback": 0.168
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "LLM‑增强的 GNN 在提升节点分类准确率的同时，会显著增加对链接、标签和成员推断攻击的易感性，差分隐私只能在高代价的实用性损失下部分缓解。",
-        "why_for_you": "符合您对可信 LLM 的兴趣，揭示了 LLM‑增强图学习中的隐私漏洞及其权衡。",
-        "method": "作者提出统一的五阶段框架，在六个文本属性图数据集、42 种受害模型配置和六类代表性推断攻击上评估隐私，并考察差分隐私作为防御手段。",
-        "limitations": "在可获取的来源中未说明。",
-        "evidence": "大量实验表明，LLM‑增强的 GNN 相较于浅层基线泄露更多隐私，使用差分隐私可降低泄露但会显著下降分类准确率。",
-        "problem": "尚未系统研究融合 LLM‑生成节点嵌入的图神经网络的隐私风险。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "提出统一的五阶段框架，在六个数据集上评估 42 种 LLM‑增强 GNN 配置的隐私风险。"
-          },
-          {
-            "icon": "🔧",
-            "text": "将基于解释和基于嵌入的 LLM 增强与标准 GNN 主干结合，测试链接、标签和成员推断攻击。"
-          },
-          {
-            "icon": "📈",
-            "text": "实证结果显示，相比浅层基线，隐私泄露持续增加，差分隐私虽能减轻泄露但会导致显著的效用损失。"
-          }
-        ],
-        "overview": "本文提供系统的 LLM‑增强图神经网络隐私评估流水线，涵盖数据集准备、使用解释式和嵌入式 LLM 增强的受害模型训练、针对链接、标签和成员信息的六种推断攻击、定量风险评估以及差分隐私防御研究。六个真实文本属性图的实验表明，语义增强提升分类性能的同时也放大了隐私泄露信号，且差分隐私只能在牺牲准确率的情况下提供部分保护。",
-        "methodology": [
-          {
-            "title": "五阶段评估框架",
-            "detail": "阶段：(1) 数据集准备，(2) 受害模型训练（LLM 增强器 + GNN 主干），(3) 隐私攻击执行，(4) 风险评估（隐私 vs 实用性指标），(5) 使用差分隐私的防御分析。"
-          },
-          {
-            "title": "受害模型配置",
-            "detail": "通过将多种基于 LLM 的特征增强器（基于解释或基于嵌入）与代表性 GNN 主干（如 GAT）配对，创建了 42 种配置，采用两层架构（隐藏维度 256，dropout 0.5，学习率 0.001）。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "语义增强放大泄漏信号",
-            "detail": "LLM 生成的嵌入强化了潜在空间中的结构、标签和成员关系模式，使其更易被推断攻击利用。"
-          }
-        ],
-        "experiments": [
-          {
-            "detail": "六个真实世界文本属性图数据集；六种隐私攻击（链接、标签、成员推理变体）；指标包括节点分类准确率和攻击AUC；每次运行使用不同种子重复五次。",
-            "title": "实证研究"
-          },
-          {
-            "detail": "对目标模型应用DP机制，测量隐私风险降低与效用退化（ noted as substantial）。",
-            "title": "差分隐私防御"
-          }
-        ],
-        "findings": [
-          {
-            "detail": "LLM增强的GNNs在节点分类准确率上始终优于浅层BoW/Word2Vec基线（例如，高达~95.7%）。",
-            "title": "效用提升"
-          },
-          {
-            "detail": "所有攻击中，LLM增强模型表现出比浅层基线更高的泄露，证实了隐私风险的放大。",
-            "title": "隐私脆弱性增加"
-          },
-          {
-            "detail": "差分隐私部分缓解了攻击，但导致分类性能显著下降。",
-            "title": "隐私-效用权衡"
-          }
-        ],
-        "contributions": [
-          "统一的五阶段框架，用于系统评估 LLM‑enhanced GNNs 的隐私风险。",
-          "全面的实证基准，涵盖六个数据集、42 种模型配置和六种攻击方法。",
-          "分析表明，LLM‑driven 语义增强会放大隐私泄漏信号。"
-        ],
-        "limitations": [
-          "在可用来源中未说明。"
-        ],
-        "open_questions": [
-          "如何设计 privacy‑preserving LLM 增强，使其在保持效用的同时不放大泄漏？",
-          "在 differential privacy 之外，哪些替代防御机制对 LLM‑enhanced GNNs 有效？",
-          "观察到的隐私风险是否可推广到更大的 LLM 或其他图任务，如 link prediction？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-29T15:03:50.069527+00:00"
     }
   ]
 }
