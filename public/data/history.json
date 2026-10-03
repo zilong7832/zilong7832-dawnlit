@@ -1,6 +1,653 @@
 {
-  "generated_at": "2026-10-02T16:15:57.777021+00:00",
+  "generated_at": "2026-10-03T14:43:40.061428+00:00",
   "papers": [
+    {
+      "id": "2610.00399",
+      "title": "Metacognitive Reasoning in Energy Based Models using Instance Based Learning Theory",
+      "abstract": "Metacognition involves reasoning about cognitive processes themselves. An example is in resource allocation where we choose how much time and effort to put into a reasoning task before we begin based on our confidence. Current Artificial Intelligence (AI) systems that rely on Large Language Models (LLMs) cannot estimate their uncertainty about an output without first responding, and cannot dynamically allocate resources to producing an output, making this type of metacognitive process difficult. A recently proposed alternative to classic transformer architectures that addresses these two concerns is the Energy Based Model (EBM) which allows for interpretable uncertainty modeling and dynamic allocation of compute resources. While EBMs can allow for control of these two processes, the actual metacognitive task of determining compute allocation based on uncertainty is not directly addressed. Instance-Based Learning Theory (IBLT) provides an approach to modeling human-like decisions from experience that has previously been applied to predicting human metacognitive reasoning. In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED). Grounded in IBLT, this framework allows for control of the computational effort allocated in an EBM to allow for metacognitive control over reasoning effort based on uncertainty while remaining computationally efficient. This work has two main contributions, the training and open weight sharing of a 191M parameter reasoning EBM, and an implementation of the MERITED framework for dynamic compute allocation using an IBL model.",
+      "authors": [
+        "Tailia Malloy",
+        "Prateek Kumar Rajput",
+        "Serge Lionel Nikiema",
+        "Cleotilde Gonzalez",
+        "Tegawendé F. Bissyandé"
+      ],
+      "published": "2026-09-30T12:08:51Z",
+      "updated": "2026-09-30T12:08:51Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.00399v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.00399v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6161,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5359,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5358,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6278,
+        "relevance": 0.6929,
+        "quality": 0.33,
+        "novelty": 0.8364,
+        "freshness": 0.5561,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [],
+      "summary": {
+        "takeaway": "In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED).",
+        "problem": "Metacognition involves reasoning about cognitive processes themselves.",
+        "method": "In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED).",
+        "evidence": "Current Artificial Intelligence (AI) systems that rely on Large Language Models (LLMs) cannot estimate their uncertainty about an output without first responding, and cannot dynamically allocate resources to producing an output, making this type of metacognitive process difficult.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
+      "id": "2610.01938",
+      "title": "A rubric landscape for evaluating clinical reasoning in large language models: what exists, what is missing, and what needs to be combined",
+      "abstract": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records. We define clinical reasoning as integrating and updating evidence across time and sources to form, revise and justify a patient's problem representation and a defensible plan. This structured narrative review maps three literatures: medical education assessment instruments, clinical LLM benchmarks published from 2023 onwards, and general-domain methods for evaluating long-form generation. We examine six dimensions: problem representation, temporal synthesis, differential and management reasoning, counterfactual reasoning, calibrated uncertainty, and reasoning faithfulness. Preprints are included and flagged. No single instrument covers all six dimensions. Problem representation and differential or management reasoning are reasonably covered, although reliability varies by instrument and setting. TIMER-Eval targets temporal synthesis, and ER-Reason assesses sequential diagnostic belief updating. Dedicated uncertainty and counterfactual evaluations are emerging, but their applicability to longitudinal free-text reasoning remains limited. Factual completeness is well theorised in general-domain evaluation, with early clinical evidence of important omissions. Faithfulness remains the weakest dimension, with one identified clinical causal-ablation study on multiple-choice questions. Existing tools should be combined through binary rubric items, separate completeness and correctness scores, case-specific importance weighting with non-compensable safety caps, temporal order-consistency checks, and chance-corrected reliability reporting. Further design work is needed for calibrated uncertainty, counterfactual reasoning and faithfulness over longitudinal free-text records. This review provides a design rationale, not a validated instrument.",
+      "authors": [
+        "Zhangshu Joshua Jiang",
+        "Zina Ibrahim",
+        "James T. Teo"
+      ],
+      "published": "2026-10-01T16:07:12Z",
+      "updated": "2026-10-01T16:07:12Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.01938v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01938v1",
+      "comment": "13 pages, 1 table. Structured narrative review",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.7209,
+          "matched": [
+            "uncertainty",
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6228,
+        "relevance": 0.595,
+        "quality": 0.58,
+        "novelty": 0.8393,
+        "freshness": 0.7226,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records.",
+        "problem": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records.",
+        "method": "We define clinical reasoning as integrating and updating evidence across time and sources to form, revise and justify a patient's problem representation and a defensible plan.",
+        "evidence": "This structured narrative review maps three literatures: medical education assessment instruments, clinical LLM benchmarks published from 2023 onwards, and general-domain methods for evaluating long-form generation.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
+      "id": "2609.40103",
+      "title": "JuryFlow: Disagreement-Guided Human-in-the-Loop Multi-Agent Evaluation",
+      "abstract": "Large language models (LLMs) are increasingly deployed as automated judges for AI-generated content, yet a single judge is unreliable and even a panel of judges leaves a hard residue: when judges disagree, majority voting discards the conflict instead of resolving it. We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain. JuryFlow decomposes each candidate response into atomic claims, has a panel of heterogeneous judges assign per-claim verdicts, and builds a disagreement graph whose nodes are scored by verdict entropy and whose edges encode structural similarity between claims. A human acts as a structural guide, selecting which disagreement to resolve through a single, minimal intervention rather than re-labeling the response, after which the focal claim is re-evaluated, the correction propagates along graph edges and to historically similar cases, and is crystallized into reusable rubric entries that all judges inherit, making the evaluator progressively self-refining. To enable large-scale, reproducible benchmarking without human studies, we evaluate JuryFlow in an automatic configuration in which focal selection is made by entropy ranking. On MT-Bench and LLMBar, JuryFlow improves agreement with gold labels over single-judge and majority-vote panel baselines, and ablations isolate the contributions of disagreement-targeted re-evaluation, propagation, and rubric induction. We contribute (1) a human-in-the-loop paradigm that recasts the human from labeler to structural guide, (2) the JuryFlow framework operationalizing it through a disagreement graph, focal re-evaluation, and closed-loop rubric induction, and (3) an evaluation protocol with ablations that isolate where the gains originate.",
+      "authors": [
+        "Mufeng Yang",
+        "Junwei Yu",
+        "Yepeng Ding"
+      ],
+      "published": "2026-09-30T16:36:04Z",
+      "updated": "2026-09-30T16:36:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.40103v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40103v1",
+      "comment": "9 pages, 5 figures, 5 tables. To appear in Proceedings of the 14th International Conference on Human-Agent Interaction (HAI '26), November 16-19, 2026, Osaka, Japan",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5716,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0433,
+          "matched": [
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5906,
+        "relevance": 0.4659,
+        "quality": 0.87,
+        "novelty": 0.8457,
+        "freshness": 0.5826,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "ablation study",
+        "baseline comparison",
+        "benchmark evaluation",
+        "reproducibility"
+      ],
+      "summary": {
+        "takeaway": "We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain.",
+        "problem": "Large language models (LLMs) are increasingly deployed as automated judges for AI-generated content, yet a single judge is unreliable and even a panel of judges leaves a hard residue: when judges disagree, majority voting discards the conflict instead of resolving it.",
+        "method": "We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain.",
+        "evidence": "On MT-Bench and LLMBar, JuryFlow improves agreement with gold labels over single-judge and majority-vote panel baselines, and ablations isolate the contributions of disagreement-targeted re-evaluation, propagation, and rubric induction.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
+      "id": "2609.38860",
+      "title": "Optimal Design for Active Preference Learning with Biased LLM Judges",
+      "abstract": "Learning from human preferences is central to large language model (LLM) alignment, but human preference annotation is costly. Active preference learning reduces this cost by selecting informative comparisons, and LLM judges can provide additional scalable feedback. However, the preferences of the judges may deviate from those of the target human population. Even after calibration on trusted reference data, active acquisition can shift the comparison distribution and expose residual judge bias. We therefore incorporate judge deviations into the acquisition design rather than relying on a separate calibration stage. Under joint estimation, comparisons that appear highly informative about the reward may also reflect judge bias and therefore provide less information about human preferences. To address this issue, we propose Nuisance-Adjusted Optimal Design (NAOD), a comparison-selection strategy that prioritizes policy-relevant target information after nuisance adjustment and uses the Frank-Wolfe algorithm for optimization. Theoretically, we establish a sharp conditional local asymptotic minimax lower bound on policy risk and construct an estimator that attains it. We further characterize the finite-sample cost of learning the nuisance representation and show that representation error can reverse an oracle design advantage. Finally, we validate these predictions experimentally and evaluate NAOD on Chatbot Arena data across 17 judges, 15 budget configurations, and 15 random cluster-level splits. NAOD reduces the mean regret of proxy policy by 29.1% relative to a matched target-information design, outperforms existing methods, and improves human-preference prediction on held-out data.",
+      "authors": [
+        "Zhongman Du",
+        "Huiming Zhang",
+        "Haodong Zhu",
+        "Baochang Zhang"
+      ],
+      "published": "2026-09-30T03:17:21Z",
+      "updated": "2026-09-30T03:17:21Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.38860v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38860v1",
+      "comment": "35 pages, 5 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5254,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5254,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1325,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1231,
+          "matched": [
+            "data",
+            "estimation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0993,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0398,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5722,
+        "relevance": 0.5519,
+        "quality": 0.53,
+        "novelty": 0.8234,
+        "freshness": 0.5033,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "formal bound",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this issue, we propose Nuisance-Adjusted Optimal Design (NAOD), a comparison-selection strategy that prioritizes policy-relevant target information after nuisance adjustment and uses the Frank-Wolfe algorithm for optimization.",
+        "problem": "Learning from human preferences is central to large language model (LLM) alignment, but human preference annotation is costly.",
+        "method": "To address this issue, we propose Nuisance-Adjusted Optimal Design (NAOD), a comparison-selection strategy that prioritizes policy-relevant target information after nuisance adjustment and uses the Frank-Wolfe algorithm for optimization.",
+        "evidence": "Finally, we validate these predictions experimentally and evaluate NAOD on Chatbot Arena data across 17 judges, 15 budget configurations, and 15 random cluster-level splits.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
+      "id": "2609.38516",
+      "title": "From Solo to Social Learning: Characterizing Recursive Social Improvement in LLMs",
+      "abstract": "Large language models (LLMs) can now improve themselves by revising the instructions they follow, and LLM agents are increasingly orchestrated to work together on complex problems. However, self-improvement methods typically optimize one system at a time, and multi-agent frameworks often have every model work toward a shared goal. We ask a different question. When each agent pursues its own reward, can self-improving LLMs learn from one another well enough to improve the whole population? We call this capability recursive social improvement. We study populations that revise skill files and choose whether, when, and whom to copy from. Independent search, learning from peers, and acting all share one token budget. In controlled environments, established social-learning algorithms benefit from peers, but three LLMs do not. They earn less reward per token than solo learners, and explore too narrowly or run out of tokens before acting. We then let the models write and revise their own skills. Observing peers changes how they improve, helping one model find useful skills sooner and another spend less on private search. Neither, however, outperforms independent learners at the same cost. Skills are copied, revised, and passed on, so one discovery can seed further search. Yet these exchanges concentrate the population around fewer independent discoveries. Together, these results show that LLMs can make learning more efficient by copying from peers, but not yet more effective.",
+      "authors": [
+        "Kunal Jha",
+        "Max Kleiman-Weiner",
+        "Natasha Jaques"
+      ],
+      "published": "2026-09-29T20:37:10Z",
+      "updated": "2026-09-29T20:37:10Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.MA",
+      "abs_url": "https://arxiv.org/abs/2609.38516v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38516v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6039,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6038,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5687,
+        "relevance": 0.613,
+        "quality": 0.33,
+        "novelty": 0.8109,
+        "freshness": 0.4636,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [],
+      "summary": {
+        "takeaway": "Large language models (LLMs) can now improve themselves by revising the instructions they follow, and LLM agents are increasingly orchestrated to work together on complex problems.",
+        "problem": "Large language models (LLMs) can now improve themselves by revising the instructions they follow, and LLM agents are increasingly orchestrated to work together on complex problems.",
+        "method": "However, self-improvement methods typically optimize one system at a time, and multi-agent frameworks often have every model work toward a shared goal.",
+        "evidence": "However, self-improvement methods typically optimize one system at a time, and multi-agent frameworks often have every model work toward a shared goal.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
+      "id": "2610.01304",
+      "title": "Federated Learning for LLMs over Mobile Networks: Issues and Solutions in the RAN Transport",
+      "abstract": "Federated LLM fine-tuning enables large models to be adapted using private and geographically distributed data at the network edge, creating recurring and deadline-sensitive communication workloads across access and transport networks. This challenge is particularly relevant in mobile RANs, where wireless variability, mobility, and device heterogeneity cause model updates to arrive asynchronously. Although these updates belong to the same learning round and share a common destination and deadline, conventional transport networks treat them as independent device-originated flows, hiding their underlying structure and limiting the ability to efficiently provision transport resources. This mismatch is particularly problematic for optical circuit switching and all-photonics transport, which benefit from predictable and schedulable traffic demands. We argue that future RANs should act as learning-aware traffic shapers by exposing the communication structure of distributed model adaptation to the transport layer. Through in-network aggregation at the gNB, asynchronous UE updates can be transformed into fewer aggregate transfers with bounded size and delivery requirements. Once shaped in this way, federated LLM traffic becomes a suitable candidate for selectively provisioned optical connectivity, where high-capacity paths can be established during aggregate-transfer windows and released between learning rounds. The resulting architecture combines the flexibility of packet-based mobile access with dynamically provisioned optical capacity, illustrating a broader approach for coordinating distributed AI workloads across programmable access and transport networks.",
+      "authors": [
+        "Emilio Paolini",
+        "Andrea Pinto",
+        "Flavio Esposito",
+        "Luca Valcarenghi"
+      ],
+      "published": "2026-10-01T08:37:58Z",
+      "updated": "2026-10-01T08:37:58Z",
+      "categories": [
+        "cs.NI",
+        "cs.AI"
+      ],
+      "primary_category": "cs.NI",
+      "abs_url": "https://arxiv.org/abs/2610.01304v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01304v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5254,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5254,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.545,
+        "relevance": 0.5331,
+        "quality": 0.39,
+        "novelty": 0.866,
+        "freshness": 0.678,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "formal bound"
+      ],
+      "summary": {
+        "takeaway": "Federated LLM fine-tuning enables large models to be adapted using private and geographically distributed data at the network edge, creating recurring and deadline-sensitive communication workloads across access and transport networks.",
+        "problem": "Federated LLM fine-tuning enables large models to be adapted using private and geographically distributed data at the network edge, creating recurring and deadline-sensitive communication workloads across access and transport networks.",
+        "method": "This challenge is particularly relevant in mobile RANs, where wireless variability, mobility, and device heterogeneity cause model updates to arrive asynchronously.",
+        "evidence": "Although these updates belong to the same learning round and share a common destination and deadline, conventional transport networks treat them as independent device-originated flows, hiding their underlying structure and limiting the ability to efficiently provision transport resources.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
     {
       "id": "2610.02039",
       "title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
@@ -9903,981 +10550,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-01T14:52:59.157232+00:00"
-    },
-    {
-      "id": "2608.30980",
-      "title": "Evaluating and Improving LLM Self-Modeling",
-      "abstract": "We study self-modeling: an LLM's ability to answer questions about its own behavior. We focus on verifiable behavioral questions, such as whether a prompt edit would change the model's final answer. To measure this capability, we introduce a benchmark that tests diverse types of self-modeling questions. Current models show non-trivial but limited self-modeling skill, and make systematic mistakes on simple counterfactual questions about their own behavior. To improve self-modeling skill, we develop a scalable synthetic-data pipeline that produces self-modeling training data, and show that reinforcement-learning can improve aggregate self-modeling skill across three open-source model families with some transfer to held-out tasks. These gains, however, do not seem to constitute introspection consistently: improved self-modeling may not arise from privileged access to the model's internal decision process.",
-      "authors": [
-        "Siqi Zeng",
-        "Andre N. Assis",
-        "Rowan Wang"
-      ],
-      "published": "2026-08-31T15:37:51Z",
-      "updated": "2026-08-31T15:37:51Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.30980v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.30980v1",
-      "comment": "89 pages, 25 figures. Published as a conference paper at EMNLP '26 (Main)",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.3074,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_data_selection",
-          "name": "Data selection for LLMs",
-          "status": "core",
-          "score": 0.2219,
-          "matched": [
-            "training data",
-            "data"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.0933,
-          "matched": [
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4224,
-        "relevance": 0.309,
-        "quality": 0.48,
-        "novelty": 0.8251,
-        "freshness": 0.8616,
-        "feedback_adjustment": -0.0172,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "open source"
-      ],
-      "summary": {
-        "takeaway": "RL fine‑tuning on synthetic self‑modeling data improves models’ ability to predict their own behavior but does not guarantee true introspective access.",
-        "problem": "Current LLMs often mispredict how prompt edits will affect their own outputs, showing limited self‑modeling capability.",
-        "method": "A synthetic data pipeline generates flip/no‑flip examples via a generate‑verify‑revise loop, and models are fine‑tuned with LoRA‑based reinforcement learning using rewards that mirror self‑modeling evaluation metrics.",
-        "evidence": "Multitask RL fine‑tuning raises self‑modeling skill scores for Llama‑3.1‑8B, Qwen3‑8B, and GPT‑OSS20B on a held‑out benchmark, with some out‑of‑distribution transfer.",
-        "limitations": "Gains may stem from pattern learning rather than genuine introspection, and training relies on precomputed behavioral labels.",
-        "why_for_you": "Provides a scalable data‑selection and efficient adversarial training pipeline to enhance self‑modeling, aligning with interests in data selection and adversarial training for LLMs.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "Introduces a unified benchmark aggregating 18 self‑modeling tasks across binary, multiple‑choice, scalar, and free‑text formats."
-          },
-          {
-            "icon": "🔧",
-            "text": "Generates synthetic self‑modeling data via a generate‑verify‑revise loop and fine‑tunes models with LoRA‑based RL rewards mirroring evaluation scores."
-          },
-          {
-            "icon": "📈",
-            "text": "Multitask RL fine‑tuning improves self‑modeling on three open‑source families, but gains do not prove true introspective access."
-          }
-        ],
-        "overview": "The paper defines self‑modeling as a model's ability to correctly report how its own outputs will change under prompt perturbations. It contributes a comprehensive benchmark covering diverse answer formats and a synthetic data pipeline that creates flip/no‑flip training examples by iteratively proposing and verifying edits with an auxiliary LLM and the target model. Models are then fine‑tuned using LoRA adapters and reinforcement learning with rewards aligned to the benchmark metrics. Experiments show consistent skill gains across three model families, though the authors caution that improvements may not reflect genuine introspection.",
-        "methodology": [
-          {
-            "title": "Synthetic data pipeline",
-            "detail": "Uses a generate‑verify‑revise loop: an auxiliary LLM proposes perturbations to prompts, the target model verifies whether the edit flips the answer, and failed edits are revised until a valid flip or non‑flip is obtained."
-          },
-          {
-            "title": "Reward design",
-            "detail": "Task reward mirrors the raw self‑modeling score (0–1) and adds a 0.5 bonus for correctly formatted JSON responses; multitask rewards are normalized across tasks."
-          },
-          {
-            "title": "RL fine‑tuning",
-            "detail": "Applies LoRA adapters to the base model and optimizes the reward using reinforcement learning, training on single‑turn HF datasets and a multitask mixture of self‑modeling tasks."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Behavioral label learning",
-            "detail": "Training on flip/no‑flip labels teaches the model statistical patterns linking prompt edits to output changes, improving its self‑report accuracy without necessarily accessing internal activations."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Training and evaluation setup",
-            "detail": "Trains Llama‑3.1‑8B, Qwen3‑8B, and GPT‑OSS20B on ~100 single‑turn HuggingFace datasets (excluding GSM8K, HumanEval, WildGuardTest, BBQ) and evaluates on a held‑out benchmark comprising those four corpora across 18 self‑modeling tasks."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Skill improvement",
-            "detail": "Multitask RL fine‑tuning improves aggregate self‑modeling skill for all three models compared to a no‑fine‑tuning baseline, with observable transfer to out‑of‑distribution tasks."
-          },
-          {
-            "title": "Introspection limitation",
-            "detail": "Despite performance gains, analysis suggests the improvements arise from learned behavioral patterns rather than privileged access to internal decision processes."
-          }
-        ],
-        "contributions": [
-          "Unified self‑modeling benchmark covering multiple answer formats",
-          "Scalable synthetic data generation pipeline for self‑modeling tasks",
-          "LoRA‑based RL fine‑tuning method aligned with self‑modeling metrics",
-          "Empirical analysis of introspection versus pattern learning"
-        ],
-        "limitations": [
-          "Improvements may not reflect true introspective access to model internals",
-          "Training relies on precomputed behavioral labels, an approximation of true behavior"
-        ],
-        "open_questions": [
-          "Can self‑modeling training be extended to achieve genuine internal‑state awareness?",
-          "How does the quality and diversity of synthetic perturbations affect long‑term safety and alignment outcomes?",
-          "What are the trade‑offs between computational cost of RL fine‑tuning and gains in self‑modeling for larger model families?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "LLM loss landscape",
-        "matched": [
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-01T14:52:59.157232+00:00"
-    },
-    {
-      "id": "2608.28009",
-      "title": "Beyond Global Scalars: Synergizing Token-Level Statistics and Deep Semantics for Adversarial AIGC Text Detection",
-      "abstract": "The rapid evolution of large language models necessitates robust machine-generated text detection. Existing paradigms typically follow two isolated tracks. Training-free methods rely on global statistical scalars such as perplexity, while training-based methods utilize semantic hidden states. Both approaches exhibit fundamental vulnerabilities in adversarial scenarios. Global scalars act as lossy compressions that obscure local probabilistic burstiness in interleaved texts, whereas pure semantic models overfit to specific fingerprints and remain susceptible to spoofing. To expose these flaws, we introduce MOSAIC, a comprehensive adversarial benchmark comprising 16000 samples across a full-granularity attack spectrum. To address these challenges, we propose NeuroStat, an end-to-end framework bridging the statistical and semantic gap. NeuroStat captures uncompressed token-level probabilistic logits alongside deep semantic hidden states from a single causal language model backbone. We fuse these heterogeneous signals through Macro-State Residual Modulation, which adaptively calibrates local convolutional features using global uncertainty indicators. Orthogonal and contrastive losses further ensure the learning of complementary representations. Extensive experiments demonstrate that NeuroStat maintains exceptional robustness on MOSAIC compared to the severe degradation of state-of-the-art methods, establishing a new standard for adversarial text detection. Code and the MOSAIC benchmark are available at https://github.com/TencentBAC/NeuroStat.",
-      "authors": [
-        "Peiming Li",
-        "Yifan Wang",
-        "Zhiyuan Hu",
-        "Shiyu Li",
-        "Zheng Wei",
-        "Yang Tang"
-      ],
-      "published": "2026-08-28T07:23:58Z",
-      "updated": "2026-08-28T07:23:58Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2608.28009v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.28009v1",
-      "comment": "Accepted by EMNLP 2026 Findings",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.6686,
-          "matched": [
-            "adversarial",
-            "training",
-            "robust",
-            "robustness"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6237,
-        "relevance": 0.5349,
-        "quality": 0.84,
-        "novelty": 0.8246,
-        "freshness": 0.5106,
-        "feedback_adjustment": -0.0193,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "evidence": "在MOSAIC基准上的实验显示NeuroStat优于SOTA方法，表现出更强的鲁棒性。",
-        "limitations": "未在摘要中提及具体限制。",
-        "method": "NeuroStat通过Macro-State Residual Modulation融合单个因果语言模型的token级概率logits与语义隐藏状态，并使用正交和对比损失学习互补表示。",
-        "problem": "现有方法在对抗场景中存在根本性漏洞：全局标量丢失局部概率突变信息，纯语义模型易过拟合且易被欺骗。",
-        "takeaway": "NeuroStat框架通过融合token级概率logits和深度语义隐藏状态，解决了对抗场景下的AIGC文本检测问题。",
-        "why_for_you": "对抗性文本检测中统计特征与语义特征的协同机制",
-        "source": "abstract",
-        "generated_by": "@cf/qwen/qwen3-30b-a3b-fp8",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "adversarial",
-          "training",
-          "robust",
-          "robustness"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-31T17:37:30.318867+00:00"
-    },
-    {
-      "id": "2608.27960",
-      "title": "When Teacher Guidance Misleads: Reward-Aligned On-Policy Distillation",
-      "abstract": "On-policy distillation (OPD) has recently emerged as a popular post-training paradigm for large language models (LLMs), providing an efficient way to transfer the knowledge and capabilities of teacher models into student models. However, teacher guidance on student-generated prefixes is not always reliable. Training should optimize the model to generate responses that are more likely to be correct, or equivalently, to get higher outcome rewards. But during OPD, the teacher model may provide guidance that discourages the student from moving toward correct trajectories or moves the student toward incorrect ones, which is misaligned with outcome reward. Such misaligned guidance is unreliable, as it would mislead the optimization process and ultimately degrade model performance. To mitigate misaligned teacher guidance, we propose Reward-Aligned On-Policy Distillation (RA-OPD). The key insight is to keep only trajectories whose induced updates move the student toward correct trajectories or discourage the student from moving toward incorrect ones. Specifically, for each sampled trajectory, RA-OPD checks whether its trajectory-level distillation return is consistent with its outcome reward and then filters out the misaligned trajectories. RA-OPD selects more reliable trajectories to improve student model performance without requiring additional computational cost. We evaluate RA-OPD on math and code benchmarks using models from the Qwen3 family and the DeepSeek-R1 family. Across seven math benchmarks and three code benchmarks, RA-OPD significantly outperforms standard OPD and other tested OPD variants.",
-      "authors": [
-        "Siyuan Gan",
-        "Yuhan Li",
-        "Xiran Wang",
-        "Linjian Meng",
-        "Boyan Wang",
-        "Zhen Zhao",
-        "Jing Huo",
-        "Yang Gao"
-      ],
-      "published": "2026-08-28T06:05:50Z",
-      "updated": "2026-08-28T06:05:50Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.27960v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.27960v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "on_policy_distillation",
-          "name": "On-policy distillation",
-          "status": "emerging",
-          "score": 0.6412,
-          "matched": [
-            "On-policy distillation",
-            "on-policy distillation",
-            "OPD",
-            "distillation",
-            "on-policy",
-            "opd"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.3518,
-          "matched": [
-            "efficient",
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5955,
-        "relevance": 0.5833,
-        "quality": 0.54,
-        "novelty": 0.8318,
-        "freshness": 0.5028,
-        "feedback_adjustment": -0.0169,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation"
-      ],
-      "summary": {
-        "why_for_you": "如果你从事 on‑policy distillation，RA-OPD 直接解决教师指导不对齐的问题，这是你研究中的关键障碍。",
-        "limitations": "该方法依赖外部 verifier 提供二元奖励，当所有轨迹被过滤时可能导致更新为零。",
-        "problem": "标准 OPD 可能被与 outcome rewards 冲突的教师指导误导，导致 student 性能下降。",
-        "method": "RA-OPD 计算轨迹层面的 distillation return，并丢弃其符号与二元 outcome reward 不一致的轨迹。",
-        "evidence": "在七个数学和三个代码基准上，RA-OPD 将 avg@k 提升最高 5.20 分，优于标准 OPD。",
-        "takeaway": "RA-OPD 在 on‑policy distillation 过程中筛除 reward‑misaligned 轨迹，实现持续的性能提升。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🗂️",
-            "text": "RA-OPD 筛除 reward‑misaligned 轨迹，使 OPD avg@k 在数学基准上提升最高 5.20 分。"
-          },
-          {
-            "icon": "🔧",
-            "text": "RA-OPD 使用二元掩码 mi = 1[(2Ri‑1)Gi ≥0] 仅保留对齐轨迹，无需额外 rollout。"
-          },
-          {
-            "icon": "📈",
-            "text": "在 Qwen3‑4B‑Base 上，RA-OPD 达到 avg@k 45.88，较标准 OPD 高出 5.20 分；但其依赖 verifier 提供二元奖励。"
-          }
-        ],
-        "overview": "本文指出 on‑policy distillation (OPD) 中的教师指导可能在轨迹层面与真实 outcome reward 不对齐，导致性能下降。提出 Reward‑Aligned OPD (RA‑OPD)，筛除其 distillation return 与 verifier 提供的二元正确性信号不一致的轨迹。该方法复用已有 OPD rollout，无需额外模型评估，并进行绝对一致性检查。对 Qwen3 与 DeepSeek‑R1 模型在多个数学和代码基准的实验表明，相较标准 OPD 和已有变体，性能持续提升。",
-        "methodology": [
-          {
-            "title": "轨迹采样与回报计算",
-            "detail": "对于每个提示 qi，从 πθ 采样学生轨迹 τi，计算逐标记 reverse‑KL 项 ri,t，并聚合为轨迹层面的蒸馏回报 Gi = average_t ri,t。"
-          },
-          {
-            "title": "结果验证与掩码创建",
-            "detail": "获取二元奖励 Ri = Verify(qi, τi) ∈ {0,1}。定义掩码 mi = 1[(2Ri‑1)Gi ≥ 0]；若 mi=1 则保留轨迹，否则丢弃。"
-          },
-          {
-            "title": "策略更新",
-            "detail": "如果有轨迹被保留 (Z = Σ_i mi/|τi| > 0)，则最小化 RA‑OPD 损失 (Eq. 3)；否则将梯度设为零。"
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "绝对奖励对齐准则",
-            "detail": "RA‑OPD 不采用多次 rollout 的相对一致性，而是逐条检查每条轨迹：正的蒸馏回报必须与正确的结果 (Ri=1) 对齐，负的回报必须与错误的结果 (Ri=0) 对齐。"
-          },
-          {
-            "title": "零成本过滤",
-            "detail": "该方法复用已为 OPD 计算的教师概率，因此对齐检查不增加额外的前向传播或 rollout。"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "基准、模型和基线",
-            "detail": "数学：AIME24/25/26、AMC、MATH、Minerva Math、OlympiadBench，使用 Qwen3‑8B‑Base‑GRPO‑Math 教师和 Qwen3‑4B/8B‑Base 学生；代码：HumanEval+、MBPP+、LiveCodeBench v6，使用 Qwen3‑8B‑Base‑GRPO‑Code 教师和 DeepSeek‑R1‑Distill‑Qwen‑7B 学生。基线：standard OPD、ExOPD、G‑OPD、Uni‑OPD。"
-          },
-          {
-            "title": "指标",
-            "detail": "报告数学的 avg@k（k=32 或 8）和代码的 pass@k（k=4）。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "数学性能提升",
-            "detail": "在 Qwen3‑4B‑Base 上，RA‑OPD 达到 avg@k 45.88，比 standard OPD 提升 5.20 分，比 ExOPD 提升 3.52 分；在 Qwen3‑8B‑Base 上，平均提升 5.09 分（相较于 OPD）。"
-          },
-          {
-            "title": "在各基准上持续优势",
-            "detail": "RA‑OPD 在七个数学基准中的六个以及全部三个代码基准上均领先所有竞争方法，显著提升包括 AIME24 上 +6.04、OlympiadBench 上 +2.08。"
-          },
-          {
-            "title": "无额外计算成本",
-            "detail": "过滤步骤复用已有的 OPD rollout，因此训练时间与 standard OPD 相同。"
-          }
-        ],
-        "contributions": [
-          "引入 RA‑OPD，一种用于 on‑policy 蒸馏的轨迹级奖励对齐过滤器。",
-          "证明蒸馏回报与结果奖励的绝对一致性可提升学生模型性能。",
-          "在多样的数学和代码任务上提供大量实证验证，且无需额外计算。"
-        ],
-        "limitations": [
-          "需要可靠的验证器为每条轨迹生成二元结果奖励。",
-          "若所有采样轨迹均被过滤 (Z=0)，方法将产生零梯度更新。",
-          "仅在可验证正确性的任务（数学、代码）上评估；对开放式生成的适用性尚未测试。"
-        ],
-        "open_questions": [
-          "当验证器噪声较大或仅提供概率奖励时，RA‑OPD 的表现如何？",
-          "对不可验证或主观任务，能否扩展对齐过滤器？",
-          "轨迹过滤对收敛性和样本效率的理论影响是什么？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "On-policy distillation",
-        "matched": [
-          "On-policy distillation",
-          "on-policy distillation",
-          "OPD",
-          "distillation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-31T17:37:30.318867+00:00"
-    },
-    {
-      "id": "2608.28511",
-      "title": "Training Communication-Efficient Mixture-of-Experts Language Models with Layer Re-Configuration",
-      "abstract": "When training Mixture-of-Experts (MoE) language models with expert parallelism, all-to-all token dispatch and combine collectives can consume a substantial fraction of end-to-end training time. In this work, we study communication-efficient MoE models (CE-MoE), in which we adopt a heterogeneous layer pattern that decouples token-mixing and channel-mixing depth. Compared to conventional models which interleave MoE layers after each token-mixing layer (e.g., attention, Mamba-2), CE-MoE models concentrate expert capacity in a select few routed MoE layers, while maintaining depth by adding additional token-mixing and dense-FFN layers. Across a scaling ladder from 2B to 31.5B total parameters, under matched total and activated parameters, CE-MoE models consistently reduce training cost while matching validation loss and downstream benchmarks with full-MoE baselines. At the 31.5B scale, CE-MoE uses 33.3\\% fewer GPU-hours while improving average downstream score and inference throughput.",
-      "authors": [
-        "Simeng Sun",
-        "Roger Waleffe"
-      ],
-      "published": "2026-08-28T16:44:50Z",
-      "updated": "2026-08-28T16:44:50Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.28511v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.28511v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.6746,
-          "matched": [
-            "efficient",
-            "training"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.1279,
-          "matched": [
-            "loss"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5903,
-        "relevance": 0.5653,
-        "quality": 0.55,
-        "novelty": 0.8456,
-        "freshness": 0.5662,
-        "feedback_adjustment": -0.0073,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "why_for_you": "与高效 LLM 训练优化相关，尤其是通信高效的 MoE 架构。",
-        "limitations": "聚焦特定 MoE 架构；未对对抗鲁棒性或损失曲面动态进行显式分析。",
-        "problem": "MoE 训练中因 all-to-all token 分发与合并导致通信成本高。",
-        "method": "使用 phased-greedy 算法的异构层模式，重新配置 token-mixing 与 MoE 层分布。",
-        "evidence": "31.5B 规模的 CE-MoE 节省 33.3% GPU-hours，同时提升下游得分和推理吞吐。",
-        "takeaway": "CE-MoE 通过解耦 token-mixing 与 channel-mixing 深度降低训练成本，保持性能。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "experiments": [
-          {
-            "detail": "在 2B‑31.5B 模型上测试，总参数/激活参数匹配，对比 full-MoE 基线。",
-            "title": "参数规模评估"
-          }
-        ],
-        "limitations": [
-          "未分析 adversarial robustness 或 loss landscape 曲率",
-          "聚焦特定 MoE 架构（如 Mamba-2 token-mixers）"
-        ],
-        "overview": "本研究通过异构层布局将 token-mixing 与 channel-mixing 深度解耦，缓解 MoE 训练的通信瓶颈。方法通过增加 token-mixing 与 dense-FFN 层，在保持模型容量的同时减少 MoE 层数。实验在 2B‑31.5B 参数规模上均显示训练成本下降，31.5B 时实现 33.3% GPU-hours 节省并提升下游性能。",
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "CE-MoE 的异构层模式将 MoE 深度降低 65.2%"
-          },
-          {
-            "icon": "⚙️",
-            "text": "Phased-greedy 算法生成 token-mixing 为主的层模式"
-          },
-          {
-            "icon": "📈",
-            "text": "31.5B 规模的 CE-MoE 实现 33.3% GPU-hours 减少并提升吞吐"
-          }
-        ],
-        "open_questions": [
-          "CE-MoE 架构如何影响 adversarial vulnerability？",
-          "异构层模式能否推广至非 MoE 架构？"
-        ],
-        "contributions": [
-          "用于通信高效 MoE 训练的异构层模式",
-          "用于层模式生成的 phased-greedy 算法",
-          "在 31.5B 规模上实证验证 33.3% GPU-hours 减少"
-        ],
-        "mechanism": [
-          {
-            "detail": "将 token-mixing (Mamba-2) 与 channel-mixing (MoE) 层分离，以降低与 LE·S·GBS·K 成正比的 all-to-all 通信量",
-            "title": "解耦混合深度"
-          }
-        ],
-        "findings": [
-          {
-            "detail": "31.5B 规模的 CE-MoE 相比 full-MoE 基线节省 33.3% GPU-hours",
-            "title": "训练成本降低"
-          },
-          {
-            "detail": "Mamba-2 token-mixers 的通信量比 Switch-style MoE 低 47.8%",
-            "title": "稳定性提升"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "将 token-mixing 与 MoE 比例调至 α=4，以降低 LE 并保持总层数 L=52，配置为 (a=30, b=8, c=6, d=8)",
-            "title": "层组合优化"
-          },
-          {
-            "detail": "通过四个阶段生成层模式：attention block 放置、regular block 分布、residual block 处理、attention block 均匀划分",
-            "title": "Phased-greedy 算法"
-          }
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Efficient adversarial training",
-        "matched": [
-          "efficient",
-          "training"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-31T17:37:30.318867+00:00"
-    },
-    {
-      "id": "2608.27954",
-      "title": "Not to Break, but to Attest: Adversarial Probes for Privacy-Preserving LLM Verification",
-      "abstract": "Post-deployment changes to large language models can alter behavior while leaving routine outputs largely unchanged, creating a challenge for AI governance when model weights are proprietary. We present a privacy-preserving zk-SNARK-based audit framework that searches for probes designed in the spirit of adversarial examples to amplify logit drift between an approved model and a modified deployment. Our framework explores complementary probe families under different access models. Token-based probes operate in a black-box setting and require only the input interface, tokenizer, and vocabulary. Embedding-based probes require gray-box access to the embedding interface. Stress probes rely on additional interface capabilities but do not require full white-box access to model weights or architecture. This range allows probe selection to balance sensitivity, access requirements, and deployment cost. We evaluate probe constructions across LLM architectures, model-tampering scenarios representative of post-deployment attacks, and GPU platforms. Importantly, our experimental results demonstrate that token-based probes consistently deliver the strongest mean sensitivity across models and GPU platforms, although operating in a black-box setting. Our Groth16 zk-SNARK workflow remains practical as the probe set scales from 1 to 50, where proving time increases from 1.02 to 1.78 seconds, verification remains near 0.84 seconds, and proof size remains constant.",
-      "authors": [
-        "Cameron Wilding",
-        "Mina Shaker",
-        "Fatemeh Ganji"
-      ],
-      "published": "2026-08-28T05:51:22Z",
-      "updated": "2026-08-28T05:51:22Z",
-      "categories": [
-        "cs.CR",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2608.27954v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.27954v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_llm",
-          "name": "Trustworthy LLM",
-          "status": "background",
-          "score": 0.5123,
-          "matched": [
-            "privacy",
-            "llm"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.4401,
-          "matched": [
-            "adversarial"
-          ]
-        },
-        {
-          "id": "llm_loss_landscape",
-          "name": "LLM loss landscape",
-          "status": "emerging",
-          "score": 0.4401,
-          "matched": [
-            "llm"
-          ]
-        },
-        {
-          "id": "llm_statistical_theory",
-          "name": "Statistical theory for LLMs",
-          "status": "background",
-          "score": 0.0823,
-          "matched": [
-            "proof"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5823,
-        "relevance": 0.5859,
-        "quality": 0.47,
-        "novelty": 0.8244,
-        "freshness": 0.5014,
-        "feedback_adjustment": -0.0153,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "why_for_you": "提供具体、高效的审计机制，符合可信LLM目标，实现完整性检查且不泄露logits。",
-        "limitations": "实验仅在 RTX A4000 上的 Llama3.2‑1B 以及 LoRA + Gaussian 篡改场景进行，未覆盖更广泛的模型或攻击。",
-        "problem": "在权重为专有且常规输出保持不变的情况下，检测隐藏的模型修改。",
-        "method": "生成 token、embedding 和 stress 探针族，挑选 logit drift 最大的 top‑K，并通过 zk‑SNARK 证明对基线承诺的一致性。",
-        "evidence": "基于 token 的探针在各模型和 GPU 上的平均灵敏度最高；证明时间在 1–50 个探针时从 1.02 s 增至 1.78 s，验证保持约 0.84 s，且证明大小保持不变。",
-        "takeaway": "对抗式探针结合 Groth16 zk‑SNARK，实现部署后 LLM 完整性的隐私保护验证。",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "🛡️",
-            "text": "引入对抗式探针族和 zk‑SNARK 证明，用于检测隐藏的 LLM 漂移。"
-          },
-          {
-            "icon": "🧮",
-            "text": "选择最大化 logit Δ(x) 的 top‑K 探针，并通过 Groth16 证明基线承诺，仅需黑盒 token 访问。"
-          },
-          {
-            "icon": "📊",
-            "text": "Token 探针在各架构上实现最高平均灵敏度，但评估仅使用 Llama3.2‑1B 和 LoRA + Gaussian 扰动。"
-          }
-        ],
-        "overview": "本文提出面向治理的审计框架，将合成输入视为对抗式探针，以放大已批准 LLM 基线与可能被篡改部署之间的 logit drift。探针族（token、稀疏 embedding、MLP‑targeted、attention‑targeted）根据不稳定性 Δ(x) 打分，保留 top‑K。Groth16 zk‑SNARK 电路将当前探针 logits 与基线 logits 的公开承诺绑定，生成简洁的零知识一致性证明，同时保护 logits 隐私。对 Llama3.2‑1B 的实验显示 token 探针具有更高灵敏度且证明生成时间实用。",
-        "mechanism": [
-          {
-            "detail": "Δ(x)量化行为分离；最大化Δ选择对隐藏模型变化最敏感的探测器。",
-            "title": "逻辑漂移作为不稳定度量"
-          },
-          {
-            "detail": "算术电路从私有探测器输出重新计算承诺，并强制与公开基准哈希相等，保证正确性和隐私。",
-            "title": "零知识绑定"
-          }
-        ],
-        "methodology": [
-          {
-            "detail": "两阶段过程：(1) 为每个家族生成大型候选集；(2) 在基准模型和篡改模型上计算Δ(x)=‖fθ(x)−fθ′(x)‖₂，选择均值Δ最高的家族并保留其top-K探测器。",
-            "title": "探测器生成"
-          },
-          {
-            "detail": "使用Groth16和Poseidon梅克尔树电路；基准逻辑值被哈希为公开承诺C，当前探测器逻辑值为私有见证；证明π证明C′=C而不泄露逻辑值。",
-            "title": "zk-SNARK认证"
-          }
-        ],
-        "experiments": [
-          {
-            "title": "设置",
-            "detail": "Meta‑llama/Llama3.2‑1B (float16) 在 NVIDIA RTX A4000 上；基线模型 vs. LoRA‑微调 + Gaussian‑扰动 变体；在该对模型上评估探针族。"
-          },
-          {
-            "title": "指标",
-            "detail": "每个族的平均 Δ(x)、证明时间、验证时间、证明大小；K∈{1,5,10,20,50}。"
-          }
-        ],
-        "findings": [
-          {
-            "title": "探针敏感性",
-            "detail": "基于 Token 的探针在所有模型和 GPU 平台上始终产生最高的平均 Δ。"
-          },
-          {
-            "title": "证明性能",
-            "detail": "证明时间从 1.02 s (K=1) 增至 1.78 s (K=50)；验证时间保持约 0.84 s；证明大小保持不变。"
-          }
-        ],
-        "contributions": [
-          "Adversarial‑style probe design for LLM integrity detection",
-          "Privacy‑preserving zk‑SNARK attestation workflow for post‑deployment verification",
-          "Empirical evidence that black‑box token probes outperform richer access probes in sensitivity"
-        ],
-        "limitations": [
-          "评估仅限于单个 1B‑parameter model 和一种 GPU 类型",
-          "篡改场景仅限于 LoRA + Gaussian perturbations 和特定的 pathway noises",
-          "尽管需要更高的访问权限，Stress probes 未显示优于 token probes",
-          "未探索 50 probes 以上的可扩展性"
-        ],
-        "open_questions": [
-          "probe 敏感性在更大模型和更广攻击谱上如何泛化？",
-          "额外的 gray‑box 或 white‑box 信息能否在不牺牲 privacy guarantees 的前提下改进 probe 设计？",
-          "替代 zk‑SNARK 系统（如 PLONK）在 proof size 与 latency 上的权衡是什么？"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b+@cf/qwen/qwen3-30b-a3b-fp8 chunked translation",
-        "language": "zh",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "complete",
-      "recommendation_reason": {
-        "topic": "Trustworthy LLM",
-        "matched": [
-          "privacy",
-          "llm"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-31T17:37:30.318867+00:00"
-    },
-    {
-      "id": "2608.27857",
-      "title": "SpikeOPD: Stable On-Policy Distillation for Autoregressive Spiking Language Models",
-      "abstract": "Spiking neural networks (SNNs) offer a path to energy-efficient language modeling through sparse encoding and event-driven computation, but training capable spiking language models from scratch remains difficult. A practical alternative is ANN-to-SNN migration through knowledge distillation (KD), where a pretrained artificial neural network (ANN) teacher supervises an SNN student. Existing migration approaches distill on fixed corpus prefixes, whereas autoregressive inference conditions on self-generated prefixes, creating prefix-source mismatch. It manifests as output-policy mismatch with the ANN teacher and internal spiking-dynamics drift between self-generated and matched corpus prefixes. On-policy distillation (OPD) offers a natural way to mitigate both manifestations by continuing teacher supervision on self-generated prefixes. We evaluate a teacher-only full-KL variant, Vanilla OPD, via a controlled stress test and observe it may suffer from delayed rollout-feedback collapse. This result shows that on-policy coverage alone does not ensure stable adaptation. Motivated by these findings, we propose SpikeOPD, a stable on-policy distillation framework for autoregressive SNNs that learns from self-generated prefixes while maintaining rollout stability. It applies full-KL teacher correction to reduce output-policy mismatch, while matched-prefix policy anchoring constrains policy departure from the frozen reference SNN on the same prefixes. Layerwise spike regularization further limits firing-rate deviations during on-policy adaptation. Across three model scales, SpikeOPD improves average accuracy over the corresponding KD SNNs by 0.8, 1.7, and 2.9 points at 0.125B, 0.35B, and 1.3B, respectively, while preserving their sparse-compute profiles.",
-      "authors": [
-        "Enqiao Lu",
-        "Xingrui Yu",
-        "Yiwei Fu",
-        "Zhenglin Wan",
-        "Pengfei Zhou",
-        "Wangbo Zhao",
-        "Muqing Jian",
-        "Xueyi Zhang",
-        "Yang You",
-        "Ivor Tsang"
-      ],
-      "published": "2026-08-28T03:05:21Z",
-      "updated": "2026-08-28T03:05:21Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2608.27857v1",
-      "pdf_url": "https://arxiv.org/pdf/2608.27857v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "on_policy_distillation",
-          "name": "On-policy distillation",
-          "status": "emerging",
-          "score": 0.5825,
-          "matched": [
-            "On-policy distillation",
-            "on-policy distillation",
-            "OPD",
-            "distillation",
-            "on-policy",
-            "opd"
-          ]
-        },
-        {
-          "id": "efficient_adversarial_training",
-          "name": "Efficient adversarial training",
-          "status": "emerging",
-          "score": 0.2221,
-          "matched": [
-            "efficient",
-            "training"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5199,
-        "relevance": 0.5104,
-        "quality": 0.41,
-        "novelty": 0.8192,
-        "freshness": 0.4849,
-        "feedback_adjustment": -0.0191,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "SpikeOPD stabilizes on‑policy distillation for autoregressive spiking language models, yielding consistent accuracy gains.",
-        "problem": "Prefix‑source mismatch causes output‑policy mismatch and spiking‑dynamics drift when migrating ANN teachers to SNN students.",
-        "method": "SpikeOPD integrates full‑KL teacher correction, matched‑prefix policy anchoring, and layerwise spike regularization during on‑policy adaptation.",
-        "evidence": "Across 0.125B, 0.35B, and 1.3B SNNs, SpikeOPD improves average zero‑shot accuracy by 0.8, 1.7, and 2.9 points while preserving sparse compute.",
-        "limitations": "Energy and operation estimates are analytical rather than measured on neuromorphic hardware.",
-        "why_for_you": "If you study on‑policy distillation, this paper offers a concrete, stable OPD framework for spiking models.",
-        "source": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 2
-      },
-      "deep_dive": {
-        "signals": [
-          {
-            "icon": "💡",
-            "text": "SpikeOPD improves average accuracy over KD SNNs by up to 2.9 points across three model scales."
-          },
-          {
-            "icon": "🔧",
-            "text": "SpikeOPD combines full‑KL teacher correction, matched‑prefix policy anchoring, and layerwise spike regularization."
-          },
-          {
-            "icon": "📈",
-            "text": "Across 0.125B–1.3B models, gains of 0.8–2.9 accuracy points are achieved while preserving sparse compute, but energy estimates are analytical."
-          }
-        ],
-        "overview": "The paper identifies prefix‑source mismatch as a source of output‑policy and internal spiking‑dynamics drift in ANN‑to‑SNN distillation for autoregressive language generation. It proposes SpikeOPD, a stable on‑policy distillation framework that corrects the output distribution with a full‑KL teacher loss, anchors the student policy to a frozen reference SNN on the same self‑generated prefixes, and regularizes layerwise firing rates. Experiments on three SNN scales demonstrate consistent accuracy improvements and rollout stability, with ablations confirming each component's contribution.",
-        "methodology": [
-          {
-            "title": "Full‑KL Teacher Correction",
-            "detail": "Computes KL(p_T(·|s_t)‖q_θ(·|s_t)) over the full vocabulary for each self‑generated prefix, providing dense supervision and reducing output‑policy mismatch."
-          },
-          {
-            "title": "Matched‑Prefix Policy Anchoring",
-            "detail": "Adds a KL term between the student and a frozen reference SNN on the same prefixes, constraining policy drift while allowing teacher correction."
-          },
-          {
-            "title": "Layerwise Spike Regularization",
-            "detail": "Applies L_spk penalties to selected layers' firing rates (λ_spk=0.3, layers {3,6,9,12}) to limit deviations in spiking activity during adaptation."
-          }
-        ],
-        "mechanism": [
-          {
-            "title": "Mitigating Output‑Policy Mismatch",
-            "detail": "Full‑KL correction transfers the ANN teacher's full distribution, preserving uncertainty and aligning logits on prefixes unseen during offline KD."
-          },
-          {
-            "title": "Controlling Policy Drift",
-            "detail": "Policy anchoring penalizes KL divergence from the reference SNN, preventing the delayed rollout‑feedback collapse observed in Vanilla OPD."
-          },
-          {
-            "title": "Stabilizing Internal Dynamics",
-            "detail": "Spike regularization keeps layerwise firing rates close to the offline checkpoint, avoiding internal spiking‑dynamics drift despite changes in output logits."
-          }
-        ],
-        "experiments": [
-          {
-            "title": "Zero‑Shot Benchmark Evaluation",
-            "detail": "Eight tasks (ARC‑e/c, WinoGrande, BoolQ, PIQA, HellaSwag, OpenBookQA, HeadQA) measured with unweighted mean accuracy; rollout stability assessed via Adj., Dist‑4, and Run metrics."
-          },
-          {
-            "title": "Model Scales and Baselines",
-            "detail": "SNNs of 0.125B, 0.35B, and 1.3B parameters; baselines include KD, continued SpAD, hard‑label SFT, Vanilla OPD, and on‑policy variants EOPD, Lightning OPD, OPRD."
-          },
-          {
-            "title": "Training Protocol",
-            "detail": "Start from 4,000‑update SpAD checkpoint, generate K=32 tokens at temperature 1.0, train 500 updates with (β_ref, λ_spk)=(0.75,0.3)."
-          },
-          {
-            "title": "Stability Tests",
-            "detail": "10 matched‑seed runs at 0.125B show no rollout collapse; paired‑prefix diagnostics use N=256 fixed pairs."
-          }
-        ],
-        "findings": [
-          {
-            "title": "Accuracy Gains",
-            "detail": "SpikeOPD improves average zero‑shot accuracy by 0.8 % (0.125B), 1.7 % (0.35B), and 2.9 % (1.3B) over corresponding KD SNNs."
-          },
-          {
-            "title": "Ablation Results",
-            "detail": "Removing policy anchoring drops accuracy from 35.5 % to 31.7 %; removing teacher correction or spike regularization also degrades performance, confirming complementary roles."
-          },
-          {
-            "title": "Initialization Robustness",
-            "detail": "Adapting checkpoints after 1k, 2k, or 4k SpAD updates yields consistent 0.6–0.8 % improvements, indicating robustness to checkpoint maturity."
-          }
-        ],
-        "contributions": [
-          "SpikeOPD framework for stable on‑policy distillation of autoregressive spiking language models.",
-          "Diagnostic analysis separating output‑policy mismatch from internal spiking‑dynamics drift."
-        ],
-        "limitations": [
-          "Energy and operation counts are analytical estimates rather than measured on neuromorphic hardware."
-        ],
-        "open_questions": [
-          "How does SpikeOPD perform when evaluated on actual neuromorphic hardware with measured latency and power?",
-          "Can the framework scale to much larger language models (tens of billions of parameters) while maintaining stability?",
-          "What is the impact of SpikeOPD on downstream fine‑tuning or task‑specific adaptation beyond zero‑shot evaluation?"
-        ],
-        "source_scope": "selected full-text regions (up to 30 pages)",
-        "generated_by": "@cf/openai/gpt-oss-120b",
-        "language": "en",
-        "schema_version": 6,
-        "prompt_version": 2
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "On-policy distillation",
-        "matched": [
-          "On-policy distillation",
-          "on-policy distillation",
-          "OPD",
-          "distillation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-08-31T17:37:30.318867+00:00"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T16:15:57.777021+00:00",
+  "generated_at": "2026-10-03T14:43:40.061428+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:151-main",
@@ -453,6 +453,221 @@
       "recommended_at": "2026-10-01T17:01:28.757049+00:00"
     },
     {
+      "id": "2610.00399",
+      "title": "Metacognitive Reasoning in Energy Based Models using Instance Based Learning Theory",
+      "abstract": "Metacognition involves reasoning about cognitive processes themselves. An example is in resource allocation where we choose how much time and effort to put into a reasoning task before we begin based on our confidence. Current Artificial Intelligence (AI) systems that rely on Large Language Models (LLMs) cannot estimate their uncertainty about an output without first responding, and cannot dynamically allocate resources to producing an output, making this type of metacognitive process difficult. A recently proposed alternative to classic transformer architectures that addresses these two concerns is the Energy Based Model (EBM) which allows for interpretable uncertainty modeling and dynamic allocation of compute resources. While EBMs can allow for control of these two processes, the actual metacognitive task of determining compute allocation based on uncertainty is not directly addressed. Instance-Based Learning Theory (IBLT) provides an approach to modeling human-like decisions from experience that has previously been applied to predicting human metacognitive reasoning. In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED). Grounded in IBLT, this framework allows for control of the computational effort allocated in an EBM to allow for metacognitive control over reasoning effort based on uncertainty while remaining computationally efficient. This work has two main contributions, the training and open weight sharing of a 191M parameter reasoning EBM, and an implementation of the MERITED framework for dynamic compute allocation using an IBL model.",
+      "authors": [
+        "Tailia Malloy",
+        "Prateek Kumar Rajput",
+        "Serge Lionel Nikiema",
+        "Cleotilde Gonzalez",
+        "Tegawendé F. Bissyandé"
+      ],
+      "published": "2026-09-30T12:08:51Z",
+      "updated": "2026-09-30T12:08:51Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.00399v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.00399v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6161,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5359,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5358,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6278,
+        "relevance": 0.6929,
+        "quality": 0.33,
+        "novelty": 0.8364,
+        "freshness": 0.5561,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [],
+      "summary": {
+        "takeaway": "In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED).",
+        "problem": "Metacognition involves reasoning about cognitive processes themselves.",
+        "method": "In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED).",
+        "evidence": "Current Artificial Intelligence (AI) systems that rely on Large Language Models (LLMs) cannot estimate their uncertainty about an output without first responding, and cannot dynamically allocate resources to producing an output, making this type of metacognitive process difficult.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
+      "id": "2610.01938",
+      "title": "A rubric landscape for evaluating clinical reasoning in large language models: what exists, what is missing, and what needs to be combined",
+      "abstract": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records. We define clinical reasoning as integrating and updating evidence across time and sources to form, revise and justify a patient's problem representation and a defensible plan. This structured narrative review maps three literatures: medical education assessment instruments, clinical LLM benchmarks published from 2023 onwards, and general-domain methods for evaluating long-form generation. We examine six dimensions: problem representation, temporal synthesis, differential and management reasoning, counterfactual reasoning, calibrated uncertainty, and reasoning faithfulness. Preprints are included and flagged. No single instrument covers all six dimensions. Problem representation and differential or management reasoning are reasonably covered, although reliability varies by instrument and setting. TIMER-Eval targets temporal synthesis, and ER-Reason assesses sequential diagnostic belief updating. Dedicated uncertainty and counterfactual evaluations are emerging, but their applicability to longitudinal free-text reasoning remains limited. Factual completeness is well theorised in general-domain evaluation, with early clinical evidence of important omissions. Faithfulness remains the weakest dimension, with one identified clinical causal-ablation study on multiple-choice questions. Existing tools should be combined through binary rubric items, separate completeness and correctness scores, case-specific importance weighting with non-compensable safety caps, temporal order-consistency checks, and chance-corrected reliability reporting. Further design work is needed for calibrated uncertainty, counterfactual reasoning and faithfulness over longitudinal free-text records. This review provides a design rationale, not a validated instrument.",
+      "authors": [
+        "Zhangshu Joshua Jiang",
+        "Zina Ibrahim",
+        "James T. Teo"
+      ],
+      "published": "2026-10-01T16:07:12Z",
+      "updated": "2026-10-01T16:07:12Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.01938v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.01938v1",
+      "comment": "13 pages, 1 table. Structured narrative review",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.7209,
+          "matched": [
+            "uncertainty",
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6228,
+        "relevance": 0.595,
+        "quality": 0.58,
+        "novelty": 0.8393,
+        "freshness": 0.7226,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records.",
+        "problem": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records.",
+        "method": "We define clinical reasoning as integrating and updating evidence across time and sources to form, revise and justify a patient's problem representation and a defensible plan.",
+        "evidence": "This structured narrative review maps three literatures: medical education assessment instruments, clinical LLM benchmarks published from 2023 onwards, and general-domain methods for evaluating long-form generation.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
       "id": "2610.02039",
       "title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
       "abstract": "Recent years have witnessed the rapid adoption of reinforcement learning (RL) in large language model (LLM) post-training, with substantial gains in mathematical reasoning and code generation. In practical systems, however, policy updates and differences between rollout and training engines can make sampled responses off-policy. Sequence-level masking addresses this mismatch by deciding whether an entire response should contribute to optimization. A common masking rule uses the length-normalized geometric mean of sampled token probability ratios. Its signed log-ratios can cancel across positions, concealing substantial bidirectional policy drift. We propose \\emph{Cancellation-Aware Response Masking} (CARM), a sequence-level mask that takes the absolute value of each token log-ratio before averaging, preventing opposing probability changes from canceling. We prove that accepted responses satisfy a joint bound on the fraction of sampled-token ratios outside a prescribed band and their mean log-distance beyond its boundaries. Experiments on mathematical reasoning and code generation show that CARM improves mean@16 averaged over AIME 2024/2025/2026 and BeyondAIME by up to $3.13$ percentage points over geometric-mean masking, and increases average pass@1 across four code benchmarks by $2.88$ points over the strongest evaluated baseline. These findings support CARM as a theoretically grounded and effective method for response-level off-policy control in LLM reinforcement learning.",
@@ -543,6 +758,97 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-02T16:15:57.777021+00:00"
+    },
+    {
+      "id": "2609.40103",
+      "title": "JuryFlow: Disagreement-Guided Human-in-the-Loop Multi-Agent Evaluation",
+      "abstract": "Large language models (LLMs) are increasingly deployed as automated judges for AI-generated content, yet a single judge is unreliable and even a panel of judges leaves a hard residue: when judges disagree, majority voting discards the conflict instead of resolving it. We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain. JuryFlow decomposes each candidate response into atomic claims, has a panel of heterogeneous judges assign per-claim verdicts, and builds a disagreement graph whose nodes are scored by verdict entropy and whose edges encode structural similarity between claims. A human acts as a structural guide, selecting which disagreement to resolve through a single, minimal intervention rather than re-labeling the response, after which the focal claim is re-evaluated, the correction propagates along graph edges and to historically similar cases, and is crystallized into reusable rubric entries that all judges inherit, making the evaluator progressively self-refining. To enable large-scale, reproducible benchmarking without human studies, we evaluate JuryFlow in an automatic configuration in which focal selection is made by entropy ranking. On MT-Bench and LLMBar, JuryFlow improves agreement with gold labels over single-judge and majority-vote panel baselines, and ablations isolate the contributions of disagreement-targeted re-evaluation, propagation, and rubric induction. We contribute (1) a human-in-the-loop paradigm that recasts the human from labeler to structural guide, (2) the JuryFlow framework operationalizing it through a disagreement graph, focal re-evaluation, and closed-loop rubric induction, and (3) an evaluation protocol with ablations that isolate where the gains originate.",
+      "authors": [
+        "Mufeng Yang",
+        "Junwei Yu",
+        "Yepeng Ding"
+      ],
+      "published": "2026-09-30T16:36:04Z",
+      "updated": "2026-09-30T16:36:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.HC"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2609.40103v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.40103v1",
+      "comment": "9 pages, 5 figures, 5 tables. To appear in Proceedings of the 14th International Conference on Human-Agent Interaction (HAI '26), November 16-19, 2026, Osaka, Japan",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5716,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0433,
+          "matched": [
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5906,
+        "relevance": 0.4659,
+        "quality": 0.87,
+        "novelty": 0.8457,
+        "freshness": 0.5826,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "ablation study",
+        "baseline comparison",
+        "benchmark evaluation",
+        "reproducibility"
+      ],
+      "summary": {
+        "takeaway": "We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain.",
+        "problem": "Large language models (LLMs) are increasingly deployed as automated judges for AI-generated content, yet a single judge is unreliable and even a panel of judges leaves a hard residue: when judges disagree, majority voting discards the conflict instead of resolving it.",
+        "method": "We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain.",
+        "evidence": "On MT-Bench and LLMBar, JuryFlow improves agreement with gold labels over single-judge and majority-vote panel baselines, and ablations isolate the contributions of disagreement-targeted re-evaluation, propagation, and rubric induction.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
     },
     {
       "id": "2610.02190",
@@ -646,6 +952,244 @@
       "recommended_at": "2026-10-02T16:15:57.777021+00:00"
     },
     {
+      "id": "2609.38860",
+      "title": "Optimal Design for Active Preference Learning with Biased LLM Judges",
+      "abstract": "Learning from human preferences is central to large language model (LLM) alignment, but human preference annotation is costly. Active preference learning reduces this cost by selecting informative comparisons, and LLM judges can provide additional scalable feedback. However, the preferences of the judges may deviate from those of the target human population. Even after calibration on trusted reference data, active acquisition can shift the comparison distribution and expose residual judge bias. We therefore incorporate judge deviations into the acquisition design rather than relying on a separate calibration stage. Under joint estimation, comparisons that appear highly informative about the reward may also reflect judge bias and therefore provide less information about human preferences. To address this issue, we propose Nuisance-Adjusted Optimal Design (NAOD), a comparison-selection strategy that prioritizes policy-relevant target information after nuisance adjustment and uses the Frank-Wolfe algorithm for optimization. Theoretically, we establish a sharp conditional local asymptotic minimax lower bound on policy risk and construct an estimator that attains it. We further characterize the finite-sample cost of learning the nuisance representation and show that representation error can reverse an oracle design advantage. Finally, we validate these predictions experimentally and evaluate NAOD on Chatbot Arena data across 17 judges, 15 budget configurations, and 15 random cluster-level splits. NAOD reduces the mean regret of proxy policy by 29.1% relative to a matched target-information design, outperforms existing methods, and improves human-preference prediction on held-out data.",
+      "authors": [
+        "Zhongman Du",
+        "Huiming Zhang",
+        "Haodong Zhu",
+        "Baochang Zhang"
+      ],
+      "published": "2026-09-30T03:17:21Z",
+      "updated": "2026-09-30T03:17:21Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2609.38860v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38860v1",
+      "comment": "35 pages, 5 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5254,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5254,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1325,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1231,
+          "matched": [
+            "data",
+            "estimation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0993,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0398,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5722,
+        "relevance": 0.5519,
+        "quality": 0.53,
+        "novelty": 0.8234,
+        "freshness": 0.5033,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "formal bound",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this issue, we propose Nuisance-Adjusted Optimal Design (NAOD), a comparison-selection strategy that prioritizes policy-relevant target information after nuisance adjustment and uses the Frank-Wolfe algorithm for optimization.",
+        "problem": "Learning from human preferences is central to large language model (LLM) alignment, but human preference annotation is costly.",
+        "method": "To address this issue, we propose Nuisance-Adjusted Optimal Design (NAOD), a comparison-selection strategy that prioritizes policy-relevant target information after nuisance adjustment and uses the Frank-Wolfe algorithm for optimization.",
+        "evidence": "Finally, we validate these predictions experimentally and evaluate NAOD on Chatbot Arena data across 17 judges, 15 budget configurations, and 15 random cluster-level splits.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
+      "id": "2609.38516",
+      "title": "From Solo to Social Learning: Characterizing Recursive Social Improvement in LLMs",
+      "abstract": "Large language models (LLMs) can now improve themselves by revising the instructions they follow, and LLM agents are increasingly orchestrated to work together on complex problems. However, self-improvement methods typically optimize one system at a time, and multi-agent frameworks often have every model work toward a shared goal. We ask a different question. When each agent pursues its own reward, can self-improving LLMs learn from one another well enough to improve the whole population? We call this capability recursive social improvement. We study populations that revise skill files and choose whether, when, and whom to copy from. Independent search, learning from peers, and acting all share one token budget. In controlled environments, established social-learning algorithms benefit from peers, but three LLMs do not. They earn less reward per token than solo learners, and explore too narrowly or run out of tokens before acting. We then let the models write and revise their own skills. Observing peers changes how they improve, helping one model find useful skills sooner and another spend less on private search. Neither, however, outperforms independent learners at the same cost. Skills are copied, revised, and passed on, so one discovery can seed further search. Yet these exchanges concentrate the population around fewer independent discoveries. Together, these results show that LLMs can make learning more efficient by copying from peers, but not yet more effective.",
+      "authors": [
+        "Kunal Jha",
+        "Max Kleiman-Weiner",
+        "Natasha Jaques"
+      ],
+      "published": "2026-09-29T20:37:10Z",
+      "updated": "2026-09-29T20:37:10Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.MA",
+      "abs_url": "https://arxiv.org/abs/2609.38516v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.38516v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6039,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6038,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5687,
+        "relevance": 0.613,
+        "quality": 0.33,
+        "novelty": 0.8109,
+        "freshness": 0.4636,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [],
+      "summary": {
+        "takeaway": "Large language models (LLMs) can now improve themselves by revising the instructions they follow, and LLM agents are increasingly orchestrated to work together on complex problems.",
+        "problem": "Large language models (LLMs) can now improve themselves by revising the instructions they follow, and LLM agents are increasingly orchestrated to work together on complex problems.",
+        "method": "However, self-improvement methods typically optimize one system at a time, and multi-agent frameworks often have every model work toward a shared goal.",
+        "evidence": "However, self-improvement methods typically optimize one system at a time, and multi-agent frameworks often have every model work toward a shared goal.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+    },
+    {
       "id": "2610.02150",
       "title": "From Knowledge Access to Source Learning: Developing Source-Specific Competence",
       "abstract": "Large language model (LLM) agents increasingly rely on persistent external sources to solve sequences of knowledge-intensive tasks. Existing methods improve how source content is accessed and organized, while agent-memory systems preserve reusable knowledge from prior interactions, but repeated use of the same source is still largely treated as repeated access rather than an opportunity to progressively improve understanding of that source. We study source learning: developing reusable source-specific competence over a persistent authoritative source. We represent this competence with a persistent source model that captures reusable understanding of the source, including how its knowledge is structured, interpreted, and applied. To construct and progressively refine such models, we propose SourceLearn, which combines two complementary learning mechanisms. Self-Directed Source Learning identifies what remains incompletely understood and adaptively revisits the source, while Task-Guided Source Learning uses downstream experience to reveal local representational gaps and recurring needs in how source knowledge should be organized. In both cases, learning signals determine what should be reconsidered, while persistent updates are reconstructed from the authoritative source. Across five benchmarks and three LLM backends, SourceLearn achieves the best performance in 13 of 15 settings, with gains of up to 22.6 points over Hybrid RAG and substantial overall improvements over static source representations and experience-based memory baselines.",
@@ -742,484 +1286,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-02T16:15:57.777021+00:00"
-    },
-    {
-      "id": "2609.35699",
-      "title": "Distillation Defenses Easily Break After Reinforcement Learning",
-      "abstract": "Distillation attacks copy the reasoning capabilities of closed-source large language models, allowing bad actors to replicate state-of-the-art performance at low cost. Attackers systematically collect a large volume of frontier model reasoning traces and then train (i.e., \"distill\") their own models on these traces. Existing defenses against distillation attacks are typically evaluated immediately after distillation, implicitly assuming attackers do not train their models any further. In this paper, we argue that a more realistic threat model includes further training with reinforcement learning after distillation. A misspecified threat model can give a false sense of security -- some defenses that seem effective after distillation can be broken after subsequent reinforcement learning. Practically, reinforcement learning lowers the bar for a distillation attack to be effective. We show that simple attacks can steal reasoning capabilities from existing closed-source language models using data easily obtainable from current APIs, yielding reasoning improvements equivalent to more sophisticated attacks that extract the full hidden traces. Results indicate that any distillation defense that leaks sufficient information to reconstruct approximate reasoning traces is likely ineffective. We conclude by discussing broader implications and batch-level distillation defenses which could be more effective.",
-      "authors": [
-        "Shidan Javaheri",
-        "Alexander Panfilov",
-        "Oliver Britton",
-        "Yarin Gal",
-        "Yonatan Gideoni"
-      ],
-      "published": "2026-09-28T17:40:32Z",
-      "updated": "2026-09-28T17:40:32Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.35699v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.35699v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5262,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5262,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5428,
-        "relevance": 0.5339,
-        "quality": 0.33,
-        "novelty": 0.8656,
-        "freshness": 0.8641,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [],
-      "summary": {
-        "takeaway": "We show that simple attacks can steal reasoning capabilities from existing closed-source language models using data easily obtainable from current APIs, yielding reasoning improvements equivalent to more sophisticated attacks that extract the full hidden traces.",
-        "problem": "Distillation attacks copy the reasoning capabilities of closed-source large language models, allowing bad actors to replicate state-of-the-art performance at low cost.",
-        "method": "Attackers systematically collect a large volume of frontier model reasoning traces and then train (i.e., \"distill\") their own models on these traces.",
-        "evidence": "We show that simple attacks can steal reasoning capabilities from existing closed-source language models using data easily obtainable from current APIs, yielding reasoning improvements equivalent to more sophisticated attacks that extract the full hidden traces.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-29T16:30:31.914438+00:00"
-    },
-    {
-      "id": "2610.02022",
-      "title": "Old Ideas, Novel Problems: The Instability of LLM-Based Novelty Evaluation",
-      "abstract": "Automated ideation systems are often evaluated on the novelty of the ideas they produce, and that judgment is increasingly delegated to large language models. Such judges are typically built ad hoc and validated, if at all, on human-authored papers rather than on the generated ideas they are meant to score. So, how do novelty judges perform? Not well. We present a systematic controlled study of novelty evaluation design choices. We first build an evaluation set automatically, mining OpenReview for passages where reviewers explicitly affirm or dispute a paper's originality and keeping only submissions with unanimous agreement at the extremes of their research area; we pair these with ideas from a vanilla LLM generator. Across six judges, we find that small prompt design choices have large consequences; e.g., simply telling the judge that reviewers found one idea novel and the other not can change its verdict on more than half of the identical idea pairs it is shown, shifting pairwise accuracy by over 50 points and occasionally pushing it below chance. The same change helps one judge and hurts another. Retrieval and larger reasoning budgets help little, and two purpose-built novelty evaluators are outperformed by our cheapest prompted baseline. These results raise questions about reported novelty gains of automated ideation systems, and call for robust novelty evaluation methods.",
-      "authors": [
-        "Noy Sternlicht",
-        "Simra Shahid",
-        "Peter Jansen",
-        "Daniel S. Weld",
-        "Pao Siangliulue",
-        "Tom Hope"
-      ],
-      "published": "2026-10-01T16:43:18Z",
-      "updated": "2026-10-01T16:43:18Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.02022v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02022v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6017,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5379,
-        "relevance": 0.4814,
-        "quality": 0.48,
-        "novelty": 0.86,
-        "freshness": 0.8599,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We present a systematic controlled study of novelty evaluation design choices.",
-        "problem": "Automated ideation systems are often evaluated on the novelty of the ideas they produce, and that judgment is increasingly delegated to large language models.",
-        "method": "Such judges are typically built ad hoc and validated, if at all, on human-authored papers rather than on the generated ideas they are meant to score.",
-        "evidence": "Retrieval and larger reasoning budgets help little, and two purpose-built novelty evaluators are outperformed by our cheapest prompted baseline.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-02T16:15:57.777021+00:00"
-    },
-    {
-      "id": "2609.38142",
-      "title": "AdviSD: Learning to Advise Frontier LLMs via Targeted Multi-Turn Self-Distillation",
-      "abstract": "A small trainable advisor can steer a frozen language-model executor using natural-language advice. In addition to learning from task rewards, the advisor can use feedback from completed interactions to improve its advice. However, a plausible correction need not change execution, yet learning from such corrections can still affect the advisor's future decisions in other contexts. In a shared-parameter model, we prove that such corrections can limit learning if their targets favor useful advice less strongly than those of other corrections. Keeping them less often than the rest improves the model's eventual performance compared to learning from every correction. Motivated by this, our method, Advisor Self-Distillation (AdviSD), pairs outcome-based reinforcement learning with self-distillation from a feedback-conditioned copy of the advisor selectively. Reflection proposes corrections, and the advisor scores the same recorded executor response with and without its issued advice, using the magnitude of the difference to select decisions for supervision. This approach does not require executor likelihoods or additional executor rollouts. Experiments with Qwen3-8B advisors for Gemini and Claude show that AdviSD outperforms advisor-GRPO by 4.2-6.4 percentage points on BFCL-v3 and by 3.9-5.1 score points on EnvScaler. The trained advisors generalize to out-of-domain tasks and transfer across different executor versions and model families. AdviSD also beats matched-count random selection, supporting the value of its selection rule.",
-      "authors": [
-        "Rishabh Agrawal",
-        "Hejie Cui",
-        "Shasha Li",
-        "Shanchan Wu",
-        "Sercan Ö. Arık"
-      ],
-      "published": "2026-09-29T17:55:40Z",
-      "updated": "2026-09-29T17:55:40Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.38142v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38142v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4288,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4288,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0591,
-          "matched": [
-            "selection"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5297,
-        "relevance": 0.4406,
-        "quality": 0.57,
-        "novelty": 0.8604,
-        "freshness": 0.8662,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "proof",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "A small trainable advisor can steer a frozen language-model executor using natural-language advice.",
-        "problem": "A small trainable advisor can steer a frozen language-model executor using natural-language advice.",
-        "method": "Motivated by this, our method, Advisor Self-Distillation (AdviSD), pairs outcome-based reinforcement learning with self-distillation from a feedback-conditioned copy of the advisor selectively.",
-        "evidence": "In addition to learning from task rewards, the advisor can use feedback from completed interactions to improve its advice.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
-    },
-    {
-      "id": "2609.40265",
-      "title": "OpenTSLM TeeMoE: A Unified Time-Series Language Model for Forecasting, Contextual Prediction, and Reasoning",
-      "abstract": "Real-world time-series applications increasingly require models that can handle time series forecasting, context-conditioned prediction, and language-based temporal reasoning. Yet current time-series foundation models remain fragmented across these capabilities: numerical specialists often provide the strongest forecasts, while language-based models offer broader contextual understanding and analysis. A central challenge is to unify these heterogeneous capabilities without reducing their individual performance. We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists. We independently train three low-rank experts for forecast aggregation, native forecasting, and temporal analysis over a shared backbone. A learned LoRA mixture-of-experts controller then weights their frozen parameter updates for each request. Our proposed model achieves strong performance on widely used benchmarks for time series forecasting, context-conditioned prediction, and language-based temporal reasoning, ranking among the top three on GIFT-Eval by mean MASE rank, Context is Key by RCRPS, and TimeSeriesExam by accuracy.",
-      "authors": [
-        "Tony Chen",
-        "Timo Stoffregen",
-        "Maxwell Xu",
-        "Thomas Kaar",
-        "Martin Maritsch",
-        "Geremia Pompei",
-        "Nicolas Zumarraga",
-        "Robert Jakob",
-        "Paul Schmiedmayer",
-        "Patrick Langer",
-        "Juncheng Liu"
-      ],
-      "published": "2026-09-30T17:43:22Z",
-      "updated": "2026-09-30T17:43:22Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.40265v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.40265v1",
-      "comment": "39 pages, 2 figures. Code: https://github.com/OpenTSLM/OpenTSLM-TeeMoE ; model: https://huggingface.co/OpenTSLM/TeeMoE",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "foundation model",
-        "foundation models"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4664,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.2313,
-          "matched": [
-            "series",
-            "time",
-            "analysis"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.2202,
-          "matched": [
-            "series",
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5068,
-        "relevance": 0.4634,
-        "quality": 0.4,
-        "novelty": 0.8256,
-        "freshness": 0.8613,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation"
-      ],
-      "summary": {
-        "takeaway": "We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists.",
-        "problem": "Real-world time-series applications increasingly require models that can handle time series forecasting, context-conditioned prediction, and language-based temporal reasoning.",
-        "method": "We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists.",
-        "evidence": "Our proposed model achieves strong performance on widely used benchmarks for time series forecasting, context-conditioned prediction, and language-based temporal reasoning, ranking among the top three on GIFT-Eval by mean MASE rank, Context is Key by RCRPS, and TimeSeriesExam by accuracy.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-01T17:01:28.757049+00:00"
-    },
-    {
-      "id": "2609.38025",
-      "title": "Dr. OPD: Learning What to Follow for Optimal On-Policy Distillation of Large Language Models",
-      "abstract": "On-policy distillation (OPD) trains a student on its own generated responses using dense, token-level supervision from a stronger teacher. Vanilla OPD treats all teacher signals equally, assuming that the teacher's supervision is equally important for every token. However, teacher signals at different tokens may have very different effects on the student's performance: some correct important reasoning errors, while others have little effect on the final answer. Motivated by this observation, we introduce Dr. OPD (OPD Done Right), which defines the optimal weighted OPD to maximize the student's performance. We formulate Dr. OPD as a bilevel optimization problem in which the student learns from weighted teacher supervision, while the weights are selected to maximize the expected reward of the resulting student. To solve Dr. OPD, we develop an efficient iterative solver that updates the token weights and student policy alternatively. At each round, it updates weights in closed form and then takes one gradient step on the resulting weighted OPD objective. Under regularity conditions, we show that this weighted update achieves a higher expected reward than a vanilla OPD update. Empirically, across strong-to-weak and same-size distillation on math and code, Dr. OPD consistently outperforms all evaluated baselines. In particular, in the strong-to-weak distillation setting, Dr. OPD improves average math performance by $9.7$ points over vanilla OPD, and enables the smaller student to surpass its larger teacher.",
-      "authors": [
-        "Zhenyu Wang",
-        "Tianze Wang",
-        "Linjun Zhang",
-        "Yifan Hu"
-      ],
-      "published": "2026-09-29T17:07:00Z",
-      "updated": "2026-09-29T17:07:00Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL",
-        "math.OC"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.38025v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38025v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3613,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3612,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4869,
-        "relevance": 0.3613,
-        "quality": 0.62,
-        "novelty": 0.85,
-        "freshness": 0.8614,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Motivated by this observation, we introduce Dr.",
-        "problem": "On-policy distillation (OPD) trains a student on its own generated responses using dense, token-level supervision from a stronger teacher.",
-        "method": "Motivated by this observation, we introduce Dr.",
-        "evidence": "Under regularity conditions, we show that this weighted update achieves a higher expected reward than a vanilla OPD update.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
     }
   ]
 }
