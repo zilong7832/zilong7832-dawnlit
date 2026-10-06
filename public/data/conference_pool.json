@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-29T16:30:31.914438+00:00",
+  "updated_at": "2026-10-06T16:47:55.194651+00:00",
   "profile_updated_at": "2026-08-23",
   "scanned_years": [
     2026,
@@ -9,7 +9,7 @@
   "source_status": {
     "ICLR:2026": "ok:223",
     "ICML:2026": "ok:742",
-    "NeurIPS:2026": "unavailable:HTTPError",
+    "NeurIPS:2026": "ok:0",
     "ACL:2026": "ok:478",
     "EMNLP:2026": "awaiting_verified_schedule",
     "ICLR:2025": "ok:213",
