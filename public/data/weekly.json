@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T16:47:55.194651+00:00",
+  "generated_at": "2026-10-07T17:25:18.500474+00:00",
   "papers": [
     {
       "id": "conf:acl:2026:1925-main",
@@ -124,96 +124,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-01T17:01:28.757049+00:00"
-    },
-    {
-      "id": "2609.38070",
-      "title": "Probability is Not Enough: Exploring and Counting Divergent Tokens for Reasoning Uncertainty Quantification in LLMs",
-      "abstract": "As the chain-of-thought reasoning capabilities of large language models improve, evaluating and calibrating their reasoning confidence is becoming increasingly important for quantifying the uncertainty of their answers. Current methods for estimating the confidence of large language models are generally based on probabilities of selected key tokens, but the underlying mechanism remains unclear. Our pilot study finds that replacing selected token probabilities with coarse substitutes can also improve calibration, motivating us to further explore effective signals of model confidence. We introduce Divergent Token Confidence (DTC), a framework that estimates confidence by counting tokens at which two models strongly disagree during decoding. DTC identifies these divergent tokens using the Jensen-Shannon divergence between next-token distributions evaluated along the same reasoning trajectory. We find that their count is almost negatively associated with answer accuracy, thereby serving as a simple yet effective signal for uncertainty quantification. DTC supports both white-box and black-box evaluation using auxiliary models, without explicit training and affecting the generation process. Experiments across multiple model families and six mathematical benchmarks demonstrate improved calibration over probability-based and verbalized baselines. Under white-box evaluation, the count-only estimator achieves an average expected calibration error of 13.0%, compared with 32.7%-42.4% for standard full-sequence confidence methods. In black-box settings, it also improves calibration over the original verbalized scores. For example, mean expected calibration error falls from 32.1%-40.2% to 13.7%-16.3% on DeepSeek-V3.2. These findings provide new insights for improving reasoning uncertainty quantification in large language models. The code is released at https://github.com/szu-tera/DTC.git.",
-      "authors": [
-        "Feiyang Li",
-        "Shengjing Liu",
-        "Qi Zhan",
-        "Sijie Cheng",
-        "Weiqing Wang",
-        "Hongwen Chen",
-        "Yuxuan Yang",
-        "Wen Wang",
-        "Yile Wang",
-        "Hui Huang"
-      ],
-      "published": "2026-09-29T17:33:36Z",
-      "updated": "2026-09-29T17:33:36Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.38070v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.38070v1",
-      "comment": "25 pages, 16 figures, 8 tables. Under peer review",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.8847,
-          "matched": [
-            "uncertainty",
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7652,
-        "relevance": 0.7078,
-        "quality": 0.91,
-        "novelty": 0.8,
-        "freshness": 0.864,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "We introduce Divergent Token Confidence (DTC), a framework that estimates confidence by counting tokens at which two models strongly disagree during decoding.",
-        "problem": "As the chain-of-thought reasoning capabilities of large language models improve, evaluating and calibrating their reasoning confidence is becoming increasingly important for quantifying the uncertainty of their answers.",
-        "method": "We introduce Divergent Token Confidence (DTC), a framework that estimates confidence by counting tokens at which two models strongly disagree during decoding.",
-        "evidence": "Our pilot study finds that replacing selected token probabilities with coarse substitutes can also improve calibration, motivating us to further explore effective signals of model confidence.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-30T16:24:21.830974+00:00"
     },
     {
       "id": "2610.02695",
@@ -564,6 +474,116 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-01T17:01:28.757049+00:00"
+    },
+    {
+      "id": "conf:acl:2026:449-main",
+      "title": "SLoRA: Balancing Plasticity and Forgetting in Large Language Models for Continual Learning",
+      "abstract": "Large language models (LLMs) have achieved remarkable success across diverse tasks through large-scale pretraining. However, they remain prone to catastrophic forgetting in continual learning. To the best of our knowledge, this is the first work to identify noise accumulation in LoRA updates as a key cause of forgetting in continual learning. A preliminary two-task experiment demonstrates that removing less important components of the second task’s LoRA parameters improves performance on the first task, suggesting that later updates introduce noisy interference. Building on this insight, we propose **S**ubspace-Denoised **Lo**w-**R**ank **A**daptation (**SLoRA**), a simple and effective framework that filters noisy components from LoRA updates via subspace similarity with the base model. SLoRA is a regularization-free method without accessing data or gradients from previous tasks or modifying the training process. It offers two variants, SLoRA-Pre and SLoRA-Post, for online and offline continual learning, respectively. Extensive experiments across tasks and models validate the effectiveness of SLoRA. It improves final accuracy by up to 12%, reduces forgetting by 29%, and filters out over 30% of LoRA parameters identified as noisy. Our code is available at https://github.com/alina1031/SLoRA.",
+      "authors": [
+        "Lina Yang",
+        "Yusheng Liao",
+        "Yanfeng Wang",
+        "Yu Wang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6045,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6045,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7284,
+        "relevance": 0.6133,
+        "quality": 1.0,
+        "novelty": 0.7975,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "experiments",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "Building on this insight, we propose **S**ubspace-Denoised **Lo**w-**R**ank **A**daptation (**SLoRA**), a simple and effective framework that filters noisy components from LoRA updates via subspace similarity with the base model.",
+        "problem": "Large language models (LLMs) have achieved remarkable success across diverse tasks through large-scale pretraining.",
+        "method": "Building on this insight, we propose **S**ubspace-Denoised **Lo**w-**R**ank **A**daptation (**SLoRA**), a simple and effective framework that filters noisy components from LoRA updates via subspace similarity with the base model.",
+        "evidence": "A preliminary two-task experiment demonstrates that removing less important components of the second task’s LoRA parameters improves performance on the first task, suggesting that later updates introduce noisy interference.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-07T17:25:18.500474+00:00"
     },
     {
       "id": "conf:acl:2026:5175-main",
