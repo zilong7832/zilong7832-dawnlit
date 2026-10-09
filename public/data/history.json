@@ -1,6 +1,325 @@
 {
-  "generated_at": "2026-10-08T17:23:43.535753+00:00",
+  "generated_at": "2026-10-09T16:59:26.150979+00:00",
   "papers": [
+    {
+      "id": "2610.12360",
+      "title": "Accurate but Not Humble: Evaluating Epistemic Humility in LLM Agents under Knowledge Conflict",
+      "abstract": "When retrieved evidence contradicts an agent's prior beliefs, does it revise its answer, acknowledge uncertainty, or persist with an incorrect conclusion? Existing evaluations of agentic systems focus primarily on task success, offering limited insight into how agents handle such conflicts. We propose to evaluate agents on epistemic humility (EH): the agent's willingness to recognize, act on, and communicate uncertainty during task execution. We operationalize EH through three trajectory-level behavioral dimensions: Identify, Solve, and Escalate (ISE). Through knowledge conflict, situations where the backbone language model's parametric knowledge contradicts the evidence it encounters, or where two contextual sources disagree, we evaluate two conflict settings: (1) controlled conflict and (2) naturally occurring conflict during multi-step agentic execution, each paired with matched no-conflict controls. Evaluating four agents, we find that higher task accuracy does not necessarily correspond to greater epistemic humility: some high-accuracy configurations recognize conflicts during execution but do not communicate unresolved uncertainty in their incorrect final answers. Trajectory-level analysis further reveals that agents frequently detect conflicts in early steps of execution but fail to maintain or resolve them in later steps. Finally, we show that model-level interventions can improve EH, but often at the cost of task accuracy, suggesting that epistemic humility emerges from the interaction among the backbone model, agent harness, and evaluation environment.",
+      "authors": [
+        "Kaiser Sun",
+        "Bernal Jimenez Gutierrez",
+        "Hongjun Liu",
+        "Jingyu Zhang",
+        "Jie Gao",
+        "Mark Dredze",
+        "Daniel Khashabi"
+      ],
+      "published": "2026-10-08T17:25:06Z",
+      "updated": "2026-10-08T17:25:06Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.12360v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.12360v1",
+      "comment": "EMNLP 2026 Camera Ready",
+      "journal_ref": "EMNLP2026",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5695,
+          "matched": [
+            "uncertainty",
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0349,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5203,
+        "relevance": 0.4626,
+        "quality": 0.47,
+        "novelty": 0.826,
+        "freshness": 0.8597,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "We propose to evaluate agents on epistemic humility (EH): the agent's willingness to recognize, act on, and communicate uncertainty during task execution.",
+        "problem": "When retrieved evidence contradicts an agent's prior beliefs, does it revise its answer, acknowledge uncertainty, or persist with an incorrect conclusion?",
+        "method": "We propose to evaluate agents on epistemic humility (EH): the agent's willingness to recognize, act on, and communicate uncertainty during task execution.",
+        "evidence": "Finally, we show that model-level interventions can improve EH, but often at the cost of task accuracy, suggesting that epistemic humility emerges from the interaction among the backbone model, agent harness, and evaluation environment.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-09T16:59:26.150979+00:00"
+    },
+    {
+      "id": "conf:icml:2026:61517",
+      "title": "Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates",
+      "abstract": "While Large Language Model (LLM) agents excel at general tasks, they inherently struggle with continual adaptation due to the frozen weights after deployment. Conventional reinforcement learning (RL) offers a solution but incurs prohibitive computational costs and the risk of catastrophic forgetting. We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates. JitRL maintains a dynamic, non-parametric memory of experiences and retrieves relevant trajectories to estimate action advantages on-the-fly. These estimates are then used to directly modulate the LLM's output logits. We theoretically prove that this additive update rule is the exact closed-form solution to the KL-constrained policy optimization objective. Extensive experiments on WebArena and Jericho demonstrate that JitRL establishes a new state-of-the-art among training-free methods. Crucially, JitRL outperforms the performance of computationally expensive fine-tuning methods (e.g., WebRL) while reducing monetary costs by over 30 times, offering a scalable path for continual learning agents. The code is available at https://anonymous.4open.science/r/JitRL-D485.",
+      "authors": [
+        "yibo li",
+        "Zijie Lin",
+        "Ailin Deng",
+        "Xuan (Billy) Zhang",
+        "Yufei He",
+        "Shuo Ji",
+        "Tri Cao",
+        "Bryan Hooi"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/61517",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/61517",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6488,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6488,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.139,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.139,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7369,
+        "relevance": 0.6766,
+        "quality": 0.81,
+        "novelty": 0.851,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference spotlight"
+      ],
+      "summary": {
+        "takeaway": "We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates.",
+        "problem": "While Large Language Model (LLM) agents excel at general tasks, they inherently struggle with continual adaptation due to the frozen weights after deployment.",
+        "method": "We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates.",
+        "evidence": "We theoretically prove that this additive update rule is the exact closed-form solution to the KL-constrained policy optimization objective.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-09T16:59:26.150979+00:00"
+    },
+    {
+      "id": "conf:acl:2026:1293-main",
+      "title": "UR$^2$ : Unify RAG and Reasoning through Reinforcement Learning",
+      "abstract": "Large Language Models (LLMs) have shown strong capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG) for knowledge grounding and Reinforcement Learning from Verifiable Rewards (RLVR) for complex reasoning. However, existing attempts to unify these paradigms remain narrow in scope, typically limited to open-domain QA with fixed retrieval settings, which constrains generalization to broader domains. To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning. UR$^2$ introduces two key designs: a difficulty-aware curriculum that selectively invokes retrieval only for challenging instances, and a hybrid knowledge access strategy that combines domain-specific offline corpora with on-the-fly LLM-generated summaries. Together, these components mitigate the imbalance between retrieval and reasoning and improve robustness to noisy information. Experiments on open-domain QA, MMLU-Pro, medical, and mathematical reasoning tasks show that UR$^2$, built on Qwen-2.5-3/7B and LLaMA-3.1-8B, consistently outperforms existing RAG and RL baselines, and achieves performance comparable to GPT-4o-mini and GPT-4.1-mini on several benchmarks. We will release all code, models, and data.",
+      "authors": [
+        "Weitao Li",
+        "Boran Xiang",
+        "Xiaolong Wang",
+        "Jingyi Ren",
+        "Ante Wang",
+        "Zhinan Gou",
+        "Weizhi Ma",
+        "Yang Liu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5361,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.536,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6887,
+        "relevance": 0.5449,
+        "quality": 0.99,
+        "novelty": 0.8652,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning.",
+        "problem": "Large Language Models (LLMs) have shown strong capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG) for knowledge grounding and Reinforcement Learning from Verifiable Rewards (RLVR) for complex reasoning.",
+        "method": "To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning.",
+        "evidence": "Together, these components mitigate the imbalance between retrieval and reasoning and improve robustness to noisy information.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-09T16:59:26.150979+00:00"
+    },
     {
       "id": "2610.10506",
       "title": "Validity Without Ground Truth: What Stated-Preference Economics Offers the Evaluation of Language Models",
@@ -10067,277 +10386,6 @@
       "analysis_status": "pending",
       "recommendation_reason": {
         "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
-    },
-    {
-      "id": "2609.02783",
-      "title": "EarlyEval: Cheaper Agent Evaluation via Early Outcome Prediction",
-      "abstract": "Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands of dollars, a price paid repeatedly across iterative development cycles. Prior efforts, centered on benchmark distillation, reduce the number of evaluation tasks but leave the cost of executing each retained task untouched. In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task. Our key insight is that an agent's final outcome is often evident from its intermediate behavior well before execution completes. We instantiate this idea in EarlyEval, a lightweight framework that trains a pair of LightGBM success and failure classifiers over behavioral, textual, and reference-solution features, and halts an agent run the moment either classifier crosses a calibrated confidence threshold, adding negligible per-step overhead. Across three benchmarks, SWE-bench Verified, TerminalBench, and Toolathlon, EarlyEval can eliminate 13%-26% of agent steps and up to 44.1% input tokens and 29.4% output tokens at 89%-97% prediction accuracy, while perturbing per-agent resolve rates by only one to two percentage points on average.",
-      "authors": [
-        "Yuling Shi",
-        "Zhensu Sun",
-        "Junsen Dong",
-        "Chengcheng Wan",
-        "David Lo",
-        "Xiaodong Gu"
-      ],
-      "published": "2026-09-02T16:15:18Z",
-      "updated": "2026-09-02T16:15:18Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2609.02783v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.02783v1",
-      "comment": "Code and data available at https://github.com/inphotoo/earlyeval",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4696,
-          "matched": [
-            "prediction",
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4684,
-        "relevance": 0.3757,
-        "quality": 0.48,
-        "novelty": 0.8481,
-        "freshness": 0.8672,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task.",
-        "problem": "Evaluating LLM agents is essential for guiding their development, yet it has grown prohibitively expensive: a single pass of a frontier model over an agentic benchmark can cost hundreds to thousands of dollars, a price paid repeatedly across iterative development cycles.",
-        "method": "In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task.",
-        "evidence": "In this work, we introduce early outcome prediction, a complementary axis of efficiency that instead cuts cost within each task.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
-    },
-    {
-      "id": "2609.02805",
-      "title": "Large Language Models (LLMs) for Telecom Root Cause Analysis (RCA): A Structured Reasoning Framework for Evidence-Grounded Diagnosis",
-      "abstract": "Root cause analysis (RCA) is a critical task in telecom network operations, but diagnosing performance degradations in modern 5G and emerging 6G networks remains challenging due to complex cross-layer dependencies. While large language models (LLMs) offer promising capabilities for reasoning and knowledge integration, directly applying vanilla LLMs to telecom RCA often leads to hallucination, unstable reasoning, and poor alignment with structured network evidence. This work first reviews the evolution of telecom RCA from rule-based and machine learning (ML) approaches to emerging LLM-enabled techniques, and provides an overview of recent paradigms, including structured reasoning, retrieval-augmented knowledge grounding, agentic orchestration, and verifiable reasoning. Building upon these insights, we propose a structured reasoning framework for LLM-enabled telecom RCA that aligns diagnostic reasoning with telecom-specific evidence and domain knowledge. The proposed approach first organizes heterogeneous network telemetry into canonical contexts, and then enforces decision-path reasoning during diagnosis, and finally generates evidence-grounded explanations for reliable fault identification. Experimental results on two 5G RCA datasets, TeleLogs and TelecomTS, demonstrate that the proposed framework consistently improves diagnostic accuracy and decision consistency compared with baseline techniques. These cross-dataset results highlight the importance of structured reasoning design for practical LLM-based RCA systems in next-generation telecom networks.",
-      "authors": [
-        "Hao Zhou",
-        "Mandar Kulkarni",
-        "Hao Chen",
-        "Yan Xin",
-        "Charlie",
-        "Zhang"
-      ],
-      "published": "2026-09-02T16:43:22Z",
-      "updated": "2026-09-02T16:43:22Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.02805v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.02805v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3883,
-          "matched": [
-            "learning",
-            "machine",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1529,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1356,
-          "matched": [
-            "analysis"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4661,
-        "relevance": 0.3683,
-        "quality": 0.5,
-        "novelty": 0.832,
-        "freshness": 0.87,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "dataset evidence"
-      ],
-      "summary": {
-        "takeaway": "Building upon these insights, we propose a structured reasoning framework for LLM-enabled telecom RCA that aligns diagnostic reasoning with telecom-specific evidence and domain knowledge.",
-        "problem": "Root cause analysis (RCA) is a critical task in telecom network operations, but diagnosing performance degradations in modern 5G and emerging 6G networks remains challenging due to complex cross-layer dependencies.",
-        "method": "Building upon these insights, we propose a structured reasoning framework for LLM-enabled telecom RCA that aligns diagnostic reasoning with telecom-specific evidence and domain knowledge.",
-        "evidence": "Experimental results on two 5G RCA datasets, TeleLogs and TelecomTS, demonstrate that the proposed framework consistently improves diagnostic accuracy and decision consistency compared with baseline techniques.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "machine",
-          "reliable"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-03T14:33:42.337661+00:00"
-    },
-    {
-      "id": "2609.02817",
-      "title": "Cliff: Learning Process Rewards from the First Mistake",
-      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guidance on intermediate reasoning processes. Existing approaches such as process reward modeling and on-policy distillation introduce additional constraints, such as reliance on a specialized reward model or assuming identical reasoning patterns between teacher and student. Nevertheless, we observe that once a reasoning process first goes wrong, evaluating the subsequent reasoning provides limited additional information, as it is already conditioned on an invalid prefix. Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout. As a result, the rollout is naturally decomposed into two parts: a correct prefix and an incorrect suffix. Cliff then converts this signal into token-level advantages, assigning positive advantages for the correct prefix and negative feedback afterward. Experiments across 12 different scenarios demonstrate that Cliff consistently improves reasoning performance, outperforming on-policy distillation by 15% and standard GRPO by 7%, even with teachers of modest capability. Furthermore, we analyse the role of ``ground truth'' in Cliff and investigate its training dynamics. These results establish Cliff as a simple, general and effective approach for improving RLVR with richer, fine-grained supervision.",
-      "authors": [
-        "Peixuan Han",
-        "Runhui Wang",
-        "Ketan Ramaneti",
-        "Jie Hao",
-        "Gerald Friedland",
-        "Chris Kong"
-      ],
-      "published": "2026-09-02T17:03:42Z",
-      "updated": "2026-09-02T17:03:42Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.02817v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.02817v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3597,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3597,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4576,
-        "relevance": 0.3597,
-        "quality": 0.47,
-        "novelty": 0.8617,
-        "freshness": 0.872,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout.",
-        "problem": "Reinforcement learning with verifiable rewards (RLVR) has emerged as a powerful paradigm for large language model (LLM) post-training, but its reliance on coarse outcome rewards leads to limited guidance on intermediate reasoning processes.",
-        "method": "Therefore, we propose Cliff, a reward shaping strategy that utilizes an off-the-shelf LLM as a teacher to identify the first mistake in each rollout.",
-        "evidence": "Experiments across 12 different scenarios demonstrate that Cliff consistently improves reasoning performance, outperforming on-policy distillation by 15% and standard GRPO by 7%, even with teachers of modest capability.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
         "matched": [
           "learning"
         ],

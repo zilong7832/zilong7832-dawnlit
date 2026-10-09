@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T17:23:43.535753+00:00",
+  "generated_at": "2026-10-09T16:59:26.150979+00:00",
   "papers": [
     {
       "id": "2610.02695",
@@ -246,6 +246,118 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-06T16:47:55.194651+00:00"
+    },
+    {
+      "id": "conf:icml:2026:61517",
+      "title": "Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates",
+      "abstract": "While Large Language Model (LLM) agents excel at general tasks, they inherently struggle with continual adaptation due to the frozen weights after deployment. Conventional reinforcement learning (RL) offers a solution but incurs prohibitive computational costs and the risk of catastrophic forgetting. We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates. JitRL maintains a dynamic, non-parametric memory of experiences and retrieves relevant trajectories to estimate action advantages on-the-fly. These estimates are then used to directly modulate the LLM's output logits. We theoretically prove that this additive update rule is the exact closed-form solution to the KL-constrained policy optimization objective. Extensive experiments on WebArena and Jericho demonstrate that JitRL establishes a new state-of-the-art among training-free methods. Crucially, JitRL outperforms the performance of computationally expensive fine-tuning methods (e.g., WebRL) while reducing monetary costs by over 30 times, offering a scalable path for continual learning agents. The code is available at https://anonymous.4open.science/r/JitRL-D485.",
+      "authors": [
+        "yibo li",
+        "Zijie Lin",
+        "Ailin Deng",
+        "Xuan (Billy) Zhang",
+        "Yufei He",
+        "Shuo Ji",
+        "Tri Cao",
+        "Bryan Hooi"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/61517",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/61517",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6488,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6488,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.139,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.139,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7369,
+        "relevance": 0.6766,
+        "quality": 0.81,
+        "novelty": 0.851,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference spotlight"
+      ],
+      "summary": {
+        "takeaway": "We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates.",
+        "problem": "While Large Language Model (LLM) agents excel at general tasks, they inherently struggle with continual adaptation due to the frozen weights after deployment.",
+        "method": "We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates.",
+        "evidence": "We theoretically prove that this additive update rule is the exact closed-form solution to the KL-constrained policy optimization objective.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-09T16:59:26.150979+00:00"
     },
     {
       "id": "conf:acl:2026:449-main",
@@ -554,6 +666,120 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-08T17:23:43.535753+00:00"
+    },
+    {
+      "id": "conf:acl:2026:1293-main",
+      "title": "UR$^2$ : Unify RAG and Reasoning through Reinforcement Learning",
+      "abstract": "Large Language Models (LLMs) have shown strong capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG) for knowledge grounding and Reinforcement Learning from Verifiable Rewards (RLVR) for complex reasoning. However, existing attempts to unify these paradigms remain narrow in scope, typically limited to open-domain QA with fixed retrieval settings, which constrains generalization to broader domains. To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning. UR$^2$ introduces two key designs: a difficulty-aware curriculum that selectively invokes retrieval only for challenging instances, and a hybrid knowledge access strategy that combines domain-specific offline corpora with on-the-fly LLM-generated summaries. Together, these components mitigate the imbalance between retrieval and reasoning and improve robustness to noisy information. Experiments on open-domain QA, MMLU-Pro, medical, and mathematical reasoning tasks show that UR$^2$, built on Qwen-2.5-3/7B and LLaMA-3.1-8B, consistently outperforms existing RAG and RL baselines, and achieves performance comparable to GPT-4o-mini and GPT-4.1-mini on several benchmarks. We will release all code, models, and data.",
+      "authors": [
+        "Weitao Li",
+        "Boran Xiang",
+        "Xiaolong Wang",
+        "Jingyi Ren",
+        "Ante Wang",
+        "Zhinan Gou",
+        "Weizhi Ma",
+        "Yang Liu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5361,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.536,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6887,
+        "relevance": 0.5449,
+        "quality": 0.99,
+        "novelty": 0.8652,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning.",
+        "problem": "Large Language Models (LLMs) have shown strong capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG) for knowledge grounding and Reinforcement Learning from Verifiable Rewards (RLVR) for complex reasoning.",
+        "method": "To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning.",
+        "evidence": "Together, these components mitigate the imbalance between retrieval and reasoning and improve robustness to noisy information.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-09T16:59:26.150979+00:00"
     },
     {
       "id": "2610.00399",
@@ -880,98 +1106,6 @@
       "recommended_at": "2026-10-05T19:17:22.699404+00:00"
     },
     {
-      "id": "2610.02039",
-      "title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
-      "abstract": "Recent years have witnessed the rapid adoption of reinforcement learning (RL) in large language model (LLM) post-training, with substantial gains in mathematical reasoning and code generation. In practical systems, however, policy updates and differences between rollout and training engines can make sampled responses off-policy. Sequence-level masking addresses this mismatch by deciding whether an entire response should contribute to optimization. A common masking rule uses the length-normalized geometric mean of sampled token probability ratios. Its signed log-ratios can cancel across positions, concealing substantial bidirectional policy drift. We propose \\emph{Cancellation-Aware Response Masking} (CARM), a sequence-level mask that takes the absolute value of each token log-ratio before averaging, preventing opposing probability changes from canceling. We prove that accepted responses satisfy a joint bound on the fraction of sampled-token ratios outside a prescribed band and their mean log-distance beyond its boundaries. Experiments on mathematical reasoning and code generation show that CARM improves mean@16 averaged over AIME 2024/2025/2026 and BeyondAIME by up to $3.13$ percentage points over geometric-mean masking, and increases average pass@1 across four code benchmarks by $2.88$ points over the strongest evaluated baseline. These findings support CARM as a theoretically grounded and effective method for response-level off-policy control in LLM reinforcement learning.",
-      "authors": [
-        "Yafei Zhang",
-        "Songshuo Lu",
-        "Sicong Liao",
-        "Zhi Chen",
-        "Yaohua Tang"
-      ],
-      "published": "2026-10-01T16:51:56Z",
-      "updated": "2026-10-01T16:51:56Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.02039v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02039v1",
-      "comment": "28 pages, 11 figures, 5 tables",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4661,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4661,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.61,
-        "relevance": 0.4661,
-        "quality": 0.91,
-        "novelty": 0.8205,
-        "freshness": 0.8607,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments",
-        "proof"
-      ],
-      "summary": {
-        "takeaway": "We propose \\emph{Cancellation-Aware Response Masking} (CARM), a sequence-level mask that takes the absolute value of each token log-ratio before averaging, preventing opposing probability changes from canceling.",
-        "problem": "Recent years have witnessed the rapid adoption of reinforcement learning (RL) in large language model (LLM) post-training, with substantial gains in mathematical reasoning and code generation.",
-        "method": "We propose \\emph{Cancellation-Aware Response Masking} (CARM), a sequence-level mask that takes the absolute value of each token log-ratio before averaging, preventing opposing probability changes from canceling.",
-        "evidence": "We prove that accepted responses satisfy a joint bound on the fraction of sampled-token ratios outside a prescribed band and their mean log-distance beyond its boundaries.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-02T16:15:57.777021+00:00"
-    },
-    {
       "id": "2609.40103",
       "title": "JuryFlow: Disagreement-Guided Human-in-the-Loop Multi-Agent Evaluation",
       "abstract": "Large language models (LLMs) are increasingly deployed as automated judges for AI-generated content, yet a single judge is unreliable and even a panel of judges leaves a hard residue: when judges disagree, majority voting discards the conflict instead of resolving it. We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain. JuryFlow decomposes each candidate response into atomic claims, has a panel of heterogeneous judges assign per-claim verdicts, and builds a disagreement graph whose nodes are scored by verdict entropy and whose edges encode structural similarity between claims. A human acts as a structural guide, selecting which disagreement to resolve through a single, minimal intervention rather than re-labeling the response, after which the focal claim is re-evaluated, the correction propagates along graph edges and to historically similar cases, and is crystallized into reusable rubric entries that all judges inherit, making the evaluator progressively self-refining. To enable large-scale, reproducible benchmarking without human studies, we evaluate JuryFlow in an automatic configuration in which focal selection is made by entropy ranking. On MT-Bench and LLMBar, JuryFlow improves agreement with gold labels over single-judge and majority-vote panel baselines, and ablations isolate the contributions of disagreement-targeted re-evaluation, propagation, and rubric induction. We contribute (1) a human-in-the-loop paradigm that recasts the human from labeler to structural guide, (2) the JuryFlow framework operationalizing it through a disagreement graph, focal re-evaluation, and closed-loop rubric induction, and (3) an evaluation protocol with ablations that isolate where the gains originate.",
@@ -1061,107 +1195,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-03T14:43:40.061428+00:00"
-    },
-    {
-      "id": "2610.02190",
-      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
-      "abstract": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it. We combine \\textbf{Z}ero-and-\\textbf{F}irst-\\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples direction selection from step-size. ZFO uses a trusted first-order optimizer to determine the direction and performs zeroth-order evaluations only along this one-dimensional subspace to choose how far to move. Using the current {gradient information} and two additional objective function evaluations, ZFO instances construct a local model of the objective function along the proposed direction and select a curvature-aware step within a bounded search interval. This yields an adaptive step-selection mechanism that costs less than a full line search. We provide theoretical guarantees to show that shared-sample evaluations produce reliable finite-difference curvature estimates, that the induced local model selects a near-optimal step along the search interval, and that ZFO converges to a neighborhood of a stationary point. Across the evaluated settings, language models and datasets, ZFO frequently improves optimization and final performance relative to fixed-step first-order baselines, with the magnitude and preferred local model depending on the objective. Our code is publicly available at: https://github.com/nizswan/Zeroth-First-Order-Framework.",
-      "authors": [
-        "Cristian McGee",
-        "El Houcine Bergou",
-        "Aritra Dutta"
-      ],
-      "published": "2026-10-01T17:59:28Z",
-      "updated": "2026-10-01T17:59:28Z",
-      "categories": [
-        "cs.LG",
-        "math.OC"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.02190v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02190v1",
-      "comment": "Accepted to 40th Conference on Neural Information Processing Systems (NeurIPS 2026). Code: https://github.com/nizswan/Zeroth-First-Order-Framework",
-      "journal_ref": "40th Conference on Neural Information Processing Systems (NeurIPS 2026)",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4782,
-          "matched": [
-            "evaluations",
-            "interval"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1283,
-          "matched": [
-            "reliable"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.124,
-          "matched": [
-            "selection",
-            "adaptive"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5831,
-        "relevance": 0.433,
-        "quality": 0.86,
-        "novelty": 0.8631,
-        "freshness": 0.8674,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "baseline comparison",
-        "formal bound",
-        "dataset evidence"
-      ],
-      "summary": {
-        "takeaway": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it.",
-        "problem": "Step-size selection remains a central challenge in large-scale neural network optimization; conservative steps slow convergence, while aggressive steps can destabilize it.",
-        "method": "We combine \\textbf{Z}ero-and-\\textbf{F}irst-\\textbf{O}rder optimization~(ZFO) and propose a lightweight framework that decouples direction selection from step-size.",
-        "evidence": "Across the evaluated settings, language models and datasets, ZFO frequently improves optimization and final performance relative to fixed-step first-order baselines, with the magnitude and preferred local model depending on the objective.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluations",
-          "interval"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-02T16:15:57.777021+00:00"
     },
     {
       "id": "2610.02972",
