@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T16:59:26.150979+00:00",
+  "generated_at": "2026-10-10T15:52:02.558027+00:00",
   "papers": [
     {
       "id": "2610.02695",
@@ -668,6 +668,93 @@
       "recommended_at": "2026-10-08T17:23:43.535753+00:00"
     },
     {
+      "id": "2610.09087",
+      "title": "U-Space: Uncovering When and Why Uncertainty Arises in Language Models",
+      "abstract": "Large language models are informing decisions with ever-higher stakes. As the consequences of their errors grow, a central question becomes harder to ignore: how much can we trust an individual answer? Yet recognizing when to defer remains difficult because language models can present incorrect conclusions with fluent explanations and an authoritative tone. Uncertainty quantification seeks to address this disconnect by estimating the reliability of individual predictions. However, many existing methods require repeated generations or separately trained components, and their scalar estimates do not reveal where uncertainty arises or how it evolves during reasoning. Recent work has also shown that generation length can be strongly associated with uncertainty estimates and correctness, raising the question of how much of an estimator's predictive power comes from uncertainty-specific information rather than output length alone. Mechanistic interpretability offers a way to address these limitations by connecting human-interpretable concepts to intermediate model states. Building on this capability, we introduce the U-Space, a low-dimensional subspace that makes a model's evolving uncertainty measurable and interpretable. We identify semantic anchors for doubt and certainty, map their unembedding directions back into the residual space, and combine their contrasts into an orthogonal basis. The U-Lens projects each token state onto these basis vectors, yielding an interpretable token-level uncertainty map that can be inspected directly or aggregated into a scalar uncertainty score. Our approach requires no correctness labels, repeated generations, or training. Across reasoning benchmarks, its confidence score outperforms established baselines under both standard and length-controlled evaluation and transfers more reliably than supervised estimators. Code: https://github.com/s2labres/U-Space.",
+      "authors": [
+        "Tobias Braun",
+        "Nils Loose",
+        "Alexander Herzog",
+        "Virginia Ceccatelli",
+        "Marcus Rohrbach",
+        "Thomas Eisenbarth",
+        "Lorenzo Cavallaro"
+      ],
+      "published": "2026-10-06T20:40:29Z",
+      "updated": "2026-10-06T20:40:29Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.09087v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.09087v1",
+      "comment": "Code: https://github.com/s2labres/U-Space",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8647,
+          "matched": [
+            "uncertainty",
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7126,
+        "relevance": 0.6918,
+        "quality": 0.77,
+        "novelty": 0.8614,
+        "freshness": 0.4572,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "baseline comparison",
+        "benchmark evaluation"
+      ],
+      "summary": {
+        "takeaway": "Building on this capability, we introduce the U-Space, a low-dimensional subspace that makes a model's evolving uncertainty measurable and interpretable.",
+        "problem": "Large language models are informing decisions with ever-higher stakes.",
+        "method": "Building on this capability, we introduce the U-Space, a low-dimensional subspace that makes a model's evolving uncertainty measurable and interpretable.",
+        "evidence": "Across reasoning benchmarks, its confidence score outperforms established baselines under both standard and length-controlled evaluation and transfers more reliably than supervised estimators.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-10T15:52:02.558027+00:00"
+    },
+    {
       "id": "conf:acl:2026:1293-main",
       "title": "UR$^2$ : Unify RAG and Reasoning through Reinforcement Learning",
       "abstract": "Large Language Models (LLMs) have shown strong capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG) for knowledge grounding and Reinforcement Learning from Verifiable Rewards (RLVR) for complex reasoning. However, existing attempts to unify these paradigms remain narrow in scope, typically limited to open-domain QA with fixed retrieval settings, which constrains generalization to broader domains. To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning. UR$^2$ introduces two key designs: a difficulty-aware curriculum that selectively invokes retrieval only for challenging instances, and a hybrid knowledge access strategy that combines domain-specific offline corpora with on-the-fly LLM-generated summaries. Together, these components mitigate the imbalance between retrieval and reasoning and improve robustness to noisy information. Experiments on open-domain QA, MMLU-Pro, medical, and mathematical reasoning tasks show that UR$^2$, built on Qwen-2.5-3/7B and LLaMA-3.1-8B, consistently outperforms existing RAG and RL baselines, and achieves performance comparable to GPT-4o-mini and GPT-4.1-mini on several benchmarks. We will release all code, models, and data.",
@@ -782,137 +869,27 @@
       "recommended_at": "2026-10-09T16:59:26.150979+00:00"
     },
     {
-      "id": "2610.00399",
-      "title": "Metacognitive Reasoning in Energy Based Models using Instance Based Learning Theory",
-      "abstract": "Metacognition involves reasoning about cognitive processes themselves. An example is in resource allocation where we choose how much time and effort to put into a reasoning task before we begin based on our confidence. Current Artificial Intelligence (AI) systems that rely on Large Language Models (LLMs) cannot estimate their uncertainty about an output without first responding, and cannot dynamically allocate resources to producing an output, making this type of metacognitive process difficult. A recently proposed alternative to classic transformer architectures that addresses these two concerns is the Energy Based Model (EBM) which allows for interpretable uncertainty modeling and dynamic allocation of compute resources. While EBMs can allow for control of these two processes, the actual metacognitive task of determining compute allocation based on uncertainty is not directly addressed. Instance-Based Learning Theory (IBLT) provides an approach to modeling human-like decisions from experience that has previously been applied to predicting human metacognitive reasoning. In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED). Grounded in IBLT, this framework allows for control of the computational effort allocated in an EBM to allow for metacognitive control over reasoning effort based on uncertainty while remaining computationally efficient. This work has two main contributions, the training and open weight sharing of a 191M parameter reasoning EBM, and an implementation of the MERITED framework for dynamic compute allocation using an IBL model.",
+      "id": "2610.10641",
+      "title": "Coverage-Aware Reasoning with Medical Tokens for Diagnosis Prediction",
+      "abstract": "Large language models (LLMs) offer promising potential for next-visit diagnosis prediction, owing to their ability to integrate longitudinal clinical evidence and reason over it in natural language. However, reinforcement learning for LLM reasoning commonly rewards each trajectory according to the correctness of its final answer. In next-visit diagnosis prediction, multiple diagnoses can be simultaneously valid, but independently rewarding one diagnosis per trajectory does not distinguish repeated hits from coverage of different diagnoses. The policy can therefore concentrate on a few correct diagnoses, leaving others uncovered. Meanwhile, LLM tokenizers can split ICD codes into several generic tokens with limited clinical meaning, requiring multiple decoding steps to predict each diagnosis and hindering reasoning over a large disease vocabulary. To address both challenges, we propose CARing, a framework that represents diagnoses with compositional Semantic IDs (SIDs) and optimizes reasoning trajectories for multi-label coverage. Concretely, we first encode ontology-enriched disease semantics into compact SIDs through residual quantization, and ground the resulting SID tokens in natural language and longitudinal EHR contexts through multi-task alignment and reasoning-enriched training to unlock transferable LLM reasoning. CARing further improves unordered multi-label prediction through a coverage reward for reinforcement learning and multi-positive supervision. At inference time, the model supports both efficient direct constrained decoding and multi-chain reasoning with rank fusion. On MIMIC-III and MIMIC-IV, CARing exceeds all EHR-trained baselines in weighted F1 and attains the highest top-k recall at every reported cutoff, including R@30 of 46.04% and 46.52% in reasoning mode. Our codes and logs are available at https://github.com/zmlxzyh/CARing-Codes-Logs.",
       "authors": [
-        "Tailia Malloy",
-        "Prateek Kumar Rajput",
-        "Serge Lionel Nikiema",
-        "Cleotilde Gonzalez",
-        "Tegawendé F. Bissyandé"
+        "Kaisong Zhang",
+        "Haotian Fang",
+        "Junmeng Zhou",
+        "Hang Lv",
+        "Yulan Pan",
+        "Yanchao Tan"
       ],
-      "published": "2026-09-30T12:08:51Z",
-      "updated": "2026-09-30T12:08:51Z",
+      "published": "2026-10-07T14:39:18Z",
+      "updated": "2026-10-07T14:39:18Z",
       "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.00399v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.00399v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6161,
-          "matched": [
-            "uncertainty"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5359,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5358,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0459,
-          "matched": [
-            "time"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0459,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6278,
-        "relevance": 0.6929,
-        "quality": 0.33,
-        "novelty": 0.8364,
-        "freshness": 0.5561,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [],
-      "summary": {
-        "takeaway": "In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED).",
-        "problem": "Metacognition involves reasoning about cognitive processes themselves.",
-        "method": "In this paper we introduce a framework for MEtacognitive Reasoning with Instance-based Learning Theory and Energy Dynamics (MERITED).",
-        "evidence": "Current Artificial Intelligence (AI) systems that rely on Large Language Models (LLMs) cannot estimate their uncertainty about an output without first responding, and cannot dynamically allocate resources to producing an output, making this type of metacognitive process difficult.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
-    },
-    {
-      "id": "2610.01938",
-      "title": "A rubric landscape for evaluating clinical reasoning in large language models: what exists, what is missing, and what needs to be combined",
-      "abstract": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records. We define clinical reasoning as integrating and updating evidence across time and sources to form, revise and justify a patient's problem representation and a defensible plan. This structured narrative review maps three literatures: medical education assessment instruments, clinical LLM benchmarks published from 2023 onwards, and general-domain methods for evaluating long-form generation. We examine six dimensions: problem representation, temporal synthesis, differential and management reasoning, counterfactual reasoning, calibrated uncertainty, and reasoning faithfulness. Preprints are included and flagged. No single instrument covers all six dimensions. Problem representation and differential or management reasoning are reasonably covered, although reliability varies by instrument and setting. TIMER-Eval targets temporal synthesis, and ER-Reason assesses sequential diagnostic belief updating. Dedicated uncertainty and counterfactual evaluations are emerging, but their applicability to longitudinal free-text reasoning remains limited. Factual completeness is well theorised in general-domain evaluation, with early clinical evidence of important omissions. Faithfulness remains the weakest dimension, with one identified clinical causal-ablation study on multiple-choice questions. Existing tools should be combined through binary rubric items, separate completeness and correctness scores, case-specific importance weighting with non-compensable safety caps, temporal order-consistency checks, and chance-corrected reliability reporting. Further design work is needed for calibrated uncertainty, counterfactual reasoning and faithfulness over longitudinal free-text records. This review provides a design rationale, not a validated instrument.",
-      "authors": [
-        "Zhangshu Joshua Jiang",
-        "Zina Ibrahim",
-        "James T. Teo"
-      ],
-      "published": "2026-10-01T16:07:12Z",
-      "updated": "2026-10-01T16:07:12Z",
-      "categories": [
-        "cs.CL",
+        "cs.LG",
         "cs.AI"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.01938v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.01938v1",
-      "comment": "13 pages, 1 table. Structured narrative review",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.10641v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.10641v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -931,53 +908,188 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.7209,
+          "score": 0.6036,
           "matched": [
-            "uncertainty",
-            "evaluation",
-            "evaluations"
+            "prediction"
           ]
         },
         {
-          "id": "functional_time_series",
-          "name": "Functional time series",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.0456,
+          "score": 0.2767,
           "matched": [
-            "time"
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.2767,
+          "matched": [
+            "learning"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.0456,
+          "score": 0.0841,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0455,
           "matched": [
             "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.6228,
-        "relevance": 0.595,
-        "quality": 0.58,
-        "novelty": 0.8393,
-        "freshness": 0.7226,
+        "total": 0.6552,
+        "relevance": 0.5936,
+        "quality": 0.78,
+        "novelty": 0.8515,
+        "freshness": 0.5642,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "ablation study",
-        "benchmark evaluation",
+        "code available",
+        "GitHub link",
+        "baseline comparison",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records.",
-        "problem": "Exam-style accuracy does not establish whether large language models (LLMs) reason well over clinical records.",
-        "method": "We define clinical reasoning as integrating and updating evidence across time and sources to form, revise and justify a patient's problem representation and a defensible plan.",
-        "evidence": "This structured narrative review maps three literatures: medical education assessment instruments, clinical LLM benchmarks published from 2023 onwards, and general-domain methods for evaluating long-form generation.",
+        "takeaway": "To address both challenges, we propose CARing, a framework that represents diagnoses with compositional Semantic IDs (SIDs) and optimizes reasoning trajectories for multi-label coverage.",
+        "problem": "Large language models (LLMs) offer promising potential for next-visit diagnosis prediction, owing to their ability to integrate longitudinal clinical evidence and reason over it in natural language.",
+        "method": "To address both challenges, we propose CARing, a framework that represents diagnoses with compositional Semantic IDs (SIDs) and optimizes reasoning trajectories for multi-label coverage.",
+        "evidence": "CARing further improves unordered multi-label prediction through a coverage reward for reinforcement learning and multi-positive supervision.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-10T15:52:02.558027+00:00"
+    },
+    {
+      "id": "2610.11300",
+      "title": "Characterizing Overconfident Failure in LLM-Based Code Generation",
+      "abstract": "Large language models (LLMs) are increasingly used for automated code generation, but generated programs can appear syntactically plausible while still failing execution-based correctness checks. Existing validation methods, such as testing and program analysis, remain essential but are often incomplete, costly, or applied only after generation. Model-derived uncertainty is therefore a natural early reliability signal. This paper studies the dilemma of overconfidence in code LLMs where incorrect programs are often generated with token-level confidence comparable to correct programs. We study this dilemma across four open-source code models and three execution-based benchmarks. Our analysis begins by investigating whether existing uncertainty metrics provide reliable proxies for execution correctness in code generation. We then characterize overconfidence at both global and local token levels, asking whether incorrect programs remain indistinguishable from correct ones under confidence and entropy summaries, including selective generation and the limits of instruction tuning. Finally, we evaluate whether common mitigation strategies reduce this failure mode. Our study yields four findings. First, existing uncertainty signals provide only partial and model-dependent evidence of execution failure. Second, overconfidence persists at both program and token levels, and uncertainty-based selection does not consistently improve accepted-set accuracy. Third, instruction tuning can increase certainty on failing generations without consistently improving correctness discrimination. Fourth, common mitigation techniques improve specific aspects of reliability but do not reliably resolve overconfident failure. Our exploratory latent analysis suggests that hidden representations may encode correctness-related signals that output confidence does not expose.",
+      "authors": [
+        "Ravishka Rathnasuriya",
+        "Wei Yang"
+      ],
+      "published": "2026-10-08T06:07:44Z",
+      "updated": "2026-10-08T06:07:44Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "primary_category": "cs.SE",
+      "abs_url": "https://arxiv.org/abs/2610.11300v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.11300v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6727,
+          "matched": [
+            "uncertainty",
+            "selective"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1415,
+          "matched": [
+            "analysis",
+            "dependent"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0456,
+          "matched": [
+            "selection"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "dependent"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6252,
+        "relevance": 0.596,
+        "quality": 0.62,
+        "novelty": 0.8097,
+        "freshness": 0.6563,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "open source"
+      ],
+      "summary": {
+        "takeaway": "Large language models (LLMs) are increasingly used for automated code generation, but generated programs can appear syntactically plausible while still failing execution-based correctness checks.",
+        "problem": "Large language models (LLMs) are increasingly used for automated code generation, but generated programs can appear syntactically plausible while still failing execution-based correctness checks.",
+        "method": "Existing validation methods, such as testing and program analysis, remain essential but are often incomplete, costly, or applied only after generation.",
+        "evidence": "Second, overconfidence persists at both program and token levels, and uncertainty-based selection does not consistently improve accepted-set accuracy.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -989,12 +1101,113 @@
         "topic": "Conformal prediction",
         "matched": [
           "uncertainty",
+          "selective"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-10T15:52:02.558027+00:00"
+    },
+    {
+      "id": "2610.11556",
+      "title": "SoK: Are LLMs Reliable at Source Code Recovery? A Taxonomy and Empirical Evaluation",
+      "abstract": "Effective source recovery is critical to security applications such as malware analysis, vulnerability assessment, and legacy maintenance. Large Language Models (LLMs) are reshaping this field, shifting the paradigm away from rule-based heuristics to probabilistic and high fidelity semantic recovery of source code from assembly or classical decompiler-derived pseudo-C. However, despite rapid progress, the field suffers from fragmentation across numerous approaches as well as their non-unified evaluations, limiting objective comparisons. Further, existing works have limited coverage of embedded, IoT architectures and source languages beyond C/C++. In this work, we present the first Systematization of Knowledge (SoK) focused specifically on LLM-assisted binary-to-source recovery. We provide a granular design-centric taxonomy of LLM-assisted source recovery methods and systematic evaluations using seven key metrics along six evaluation dimensions. We evaluate state-of-the-art methods on 45,000 test samples derived from four standard and five embedded architectures, five optimization levels, and symbol stripping. We ablate the impact of design choices on recovery performance, including input representation, contextual enrichment, model scale, iteration and review roles using controlled in-house recovery pipelines and three off-the-shelf models. Finally, we test same-language and cross-language recovery capability covering four mature and two legacy languages. Our systematization and comprehensive evaluations provide key insights that guide future directions in this field.",
+      "authors": [
+        "Varun Kohli",
+        "Lee Bing Cheng",
+        "Nur Hazim Ghazali",
+        "Gao Yuze",
+        "Daryl Poon",
+        "Dinil Mon Divakaran"
+      ],
+      "published": "2026-10-08T09:20:22Z",
+      "updated": "2026-10-08T09:20:22Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2610.11556v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.11556v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6604,
+          "matched": [
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3571,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6237,
+        "relevance": 0.6086,
+        "quality": 0.55,
+        "novelty": 0.8439,
+        "freshness": 0.6754,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this work, we present the first Systematization of Knowledge (SoK) focused specifically on LLM-assisted binary-to-source recovery.",
+        "problem": "Effective source recovery is critical to security applications such as malware analysis, vulnerability assessment, and legacy maintenance.",
+        "method": "Large Language Models (LLMs) are reshaping this field, shifting the paradigm away from rule-based heuristics to probabilistic and high fidelity semantic recovery of source code from assembly or classical decompiler-derived pseudo-C.",
+        "evidence": "However, despite rapid progress, the field suffers from fragmentation across numerous approaches as well as their non-unified evaluations, limiting objective comparisons.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
           "evaluation",
           "evaluations"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
+      "recommended_at": "2026-10-10T15:52:02.558027+00:00"
     },
     {
       "id": "2610.02877",
@@ -1100,203 +1313,6 @@
         "topic": "Trustworthy machine learning",
         "matched": [
           "llm-as-a-judge"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-05T19:17:22.699404+00:00"
-    },
-    {
-      "id": "2609.40103",
-      "title": "JuryFlow: Disagreement-Guided Human-in-the-Loop Multi-Agent Evaluation",
-      "abstract": "Large language models (LLMs) are increasingly deployed as automated judges for AI-generated content, yet a single judge is unreliable and even a panel of judges leaves a hard residue: when judges disagree, majority voting discards the conflict instead of resolving it. We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain. JuryFlow decomposes each candidate response into atomic claims, has a panel of heterogeneous judges assign per-claim verdicts, and builds a disagreement graph whose nodes are scored by verdict entropy and whose edges encode structural similarity between claims. A human acts as a structural guide, selecting which disagreement to resolve through a single, minimal intervention rather than re-labeling the response, after which the focal claim is re-evaluated, the correction propagates along graph edges and to historically similar cases, and is crystallized into reusable rubric entries that all judges inherit, making the evaluator progressively self-refining. To enable large-scale, reproducible benchmarking without human studies, we evaluate JuryFlow in an automatic configuration in which focal selection is made by entropy ranking. On MT-Bench and LLMBar, JuryFlow improves agreement with gold labels over single-judge and majority-vote panel baselines, and ablations isolate the contributions of disagreement-targeted re-evaluation, propagation, and rubric induction. We contribute (1) a human-in-the-loop paradigm that recasts the human from labeler to structural guide, (2) the JuryFlow framework operationalizing it through a disagreement graph, focal re-evaluation, and closed-loop rubric induction, and (3) an evaluation protocol with ablations that isolate where the gains originate.",
-      "authors": [
-        "Mufeng Yang",
-        "Junwei Yu",
-        "Yepeng Ding"
-      ],
-      "published": "2026-09-30T16:36:04Z",
-      "updated": "2026-09-30T16:36:04Z",
-      "categories": [
-        "cs.CL",
-        "cs.HC"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2609.40103v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.40103v1",
-      "comment": "9 pages, 5 figures, 5 tables. To appear in Proceedings of the 14th International Conference on Human-Agent Interaction (HAI '26), November 16-19, 2026, Osaka, Japan",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5716,
-          "matched": [
-            "evaluation"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0433,
-          "matched": [
-            "selection"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5906,
-        "relevance": 0.4659,
-        "quality": 0.87,
-        "novelty": 0.8457,
-        "freshness": 0.5826,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "ablation study",
-        "baseline comparison",
-        "benchmark evaluation",
-        "reproducibility"
-      ],
-      "summary": {
-        "takeaway": "We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain.",
-        "problem": "Large language models (LLMs) are increasingly deployed as automated judges for AI-generated content, yet a single judge is unreliable and even a panel of judges leaves a hard residue: when judges disagree, majority voting discards the conflict instead of resolving it.",
-        "method": "We present JuryFlow, a disagreement-guided, human-in-the-loop multi-agent evaluation framework that treats inter-judge disagreement not as noise to be averaged away, but as a precise, claim-level signal indicating where an evaluation is uncertain.",
-        "evidence": "On MT-Bench and LLMBar, JuryFlow improves agreement with gold labels over single-judge and majority-vote panel baselines, and ablations isolate the contributions of disagreement-targeted re-evaluation, propagation, and rubric induction.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-03T14:43:40.061428+00:00"
-    },
-    {
-      "id": "2610.02972",
-      "title": "CreateScore: Domain-Theory-Informed Bayesian Routing for LLM-Based CV Screening",
-      "abstract": "Large language models (LLMs) can support rubric-based screening of CVs, but applying a high-capability model to every candidate and criterion is costly. We present CreateScore, a domain-theory-informed Bayesian network for criterion-level LLM routing. A hand-specified directed acyclic graph with Dirichlet-multinomial conditional probability tables converts CV evidence into posterior uncertainty; low-uncertainty decisions are resolved by a local 8B model and uncertain ones are escalated to a 120B reference model. The graph is causally motivated, but the system performs standard Bayesian conditioning, not causal inference. The escalation threshold is calibrated on a training fold (target: 70% resolved locally) and then frozen. On 200 synthetic Data Science CVs (139 training and 61 test candidates, five criteria), 77.7% of criterion decisions were resolved locally (237 of 305). Relative to a reference condition in which the 120B model adjudicated every criterion, routed escalation reduced token use by 65.2% and raised exact score agreement from 32.8% (8B alone) to 42.6% (95% CI 31.0-55.1%); at n = 61 the gain was not statistically distinguishable. The uncertainty signal did not, however, identify the decisions on which the 8B model erred: disagreement with the reference was 16.2% among escalated and 19.4% among locally resolved decisions (AUROC 0.47, 95% CI 0.39-0.56), no better than random selection. We also document how an earlier evaluation was invalidated when truncated reasoning-model outputs were silently replaced by local labels, and we recommend safeguards for cascade evaluation. CreateScore is supported as an auditable cost-reduction mechanism, not yet as a targeted error detector, and is not an autonomous hiring system.",
-      "authors": [
-        "Rupsa Roy"
-      ],
-      "published": "2026-10-02T08:06:24Z",
-      "updated": "2026-10-02T08:06:24Z",
-      "categories": [
-        "cs.AI",
-        "stat.AP"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.02972v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02972v1",
-      "comment": "11 pages, 5 figures, 7 tables (Excluding Appendix). CreateScore Planner App GitHub repo link: https://github.com/rupsa-arc1-2441139/createscore",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7209,
-          "matched": [
-            "uncertainty",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0832,
-          "matched": [
-            "inference",
-            "data"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0457,
-          "matched": [
-            "selection"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5819,
-        "relevance": 0.6025,
-        "quality": 0.41,
-        "novelty": 0.8298,
-        "freshness": 0.5049,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We present CreateScore, a domain-theory-informed Bayesian network for criterion-level LLM routing.",
-        "problem": "Large language models (LLMs) can support rubric-based screening of CVs, but applying a high-capability model to every candidate and criterion is costly.",
-        "method": "We present CreateScore, a domain-theory-informed Bayesian network for criterion-level LLM routing.",
-        "evidence": "A hand-specified directed acyclic graph with Dirichlet-multinomial conditional probability tables converts CV evidence into posterior uncertainty; low-uncertainty decisions are resolved by a local 8B model and uncertain ones are escalated to a 120B reference model.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "evaluation"
         ],
         "lane": "llm"
       },
