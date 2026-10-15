@@ -1,6 +1,301 @@
 {
-  "generated_at": "2026-10-14T15:07:09.738974+00:00",
+  "generated_at": "2026-10-15T14:59:50.911792+00:00",
   "papers": [
+    {
+      "id": "2610.20413",
+      "title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+      "abstract": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $β$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $β$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $η$ decreases, the expected gain with fixed $β$ vanishes faster than these fluctuations, whereas increasing $β$ to keep $η/(1-β)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $β_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle's effectiveness at a larger model scale.",
+      "authors": [
+        "Kaifei Wang",
+        "Zikang Shan",
+        "Liwei Wang",
+        "Yinyu Ye",
+        "Han Zhong"
+      ],
+      "published": "2026-10-14T16:11:14Z",
+      "updated": "2026-10-14T16:11:14Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.20413v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.20413v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4232,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4231,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5176,
+        "relevance": 0.4232,
+        "quality": 0.57,
+        "novelty": 0.8528,
+        "freshness": 0.8642,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "proof",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We show that as the learning rate $η$ decreases, the expected gain with fixed $β$ vanishes faster than these fluctuations, whereas increasing $β$ to keep $η/(1-β)$ within the safe regime preserves a nonvanishing gain that eventually dominates them.",
+        "problem": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training.",
+        "method": "Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR).",
+        "evidence": "When policy gradients are evaluated exactly, we prove that increasing $β$ within a range that prevents overshoot strictly accelerates optimization.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-15T14:59:50.911792+00:00"
+    },
+    {
+      "id": "2610.20514",
+      "title": "Bayesian Learning to Select Fair Classifiers",
+      "abstract": "Evaluations of classifiers (AI or human or agents) often assume a batch setting in which every agent produces labels on every example in a test set, which can be expensive or impractical in many contexts. This motivates online policies that adaptively select agents to query as examples arrive and update policies as outcomes are observed. We study the problem of selecting, in an online stream, the agent that best balances (i) predictive performance and (ii) subgroup fairness of a sensitive attribute, and that allows for delayed observations of true class labels. We formulate this as a Bayesian multi-armed bandit problem using Thompson Sampling, explicitly balancing accuracy and fairness. We conduct empirical evaluations on real-world datasets spanning problems involving tabular classifiers, large language models, and human labelers, demonstrating substantial reductions in regret relative to baselines. Our theoretical contributions include guarantees on the performance of the selected agent that incorporate both the accuracy and fairness aspects of the problem.",
+      "authors": [
+        "Saatvik Kher",
+        "Hyungrok Do",
+        "Judy Zhong",
+        "Padhraic Smyth"
+      ],
+      "published": "2026-10-14T17:16:28Z",
+      "updated": "2026-10-14T17:16:28Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.20514v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.20514v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3153,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3153,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2377,
+          "matched": [
+            "evaluations"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4541,
+        "relevance": 0.3628,
+        "quality": 0.44,
+        "novelty": 0.8668,
+        "freshness": 0.8707,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "Evaluations of classifiers (AI or human or agents) often assume a batch setting in which every agent produces labels on every example in a test set, which can be expensive or impractical in many contexts.",
+        "problem": "Evaluations of classifiers (AI or human or agents) often assume a batch setting in which every agent produces labels on every example in a test set, which can be expensive or impractical in many contexts.",
+        "method": "This motivates online policies that adaptively select agents to query as examples arrive and update policies as outcomes are observed.",
+        "evidence": "We study the problem of selecting, in an online stream, the agent that best balances (i) predictive performance and (ii) subgroup fairness of a sensitive attribute, and that allows for delayed observations of true class labels.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-15T14:59:50.911792+00:00"
+    },
+    {
+      "id": "2610.20401",
+      "title": "Training Language Models to Fail Gracefully",
+      "abstract": "Reinforcement learning makes language models better at solving tasks, but the same mechanism also rewards guessing. When success is the only way to earn reward, opting for a safe fallback is always worse than a long-shot attempt. When a wrong action can corrupt a database or ship broken code, that incentive can be costly. Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable. However, naively using policy gradients with intermediate reward for fallback behavior is brittle due to unfavorable optimization dynamics. We address this challenge with GracefulRL, which reshapes the optimization landscape to promote graceful failure. Importantly, this behavior emerges directly from outcome-level reward signals, without annotations specifying when to fall back or additional inference-time machinery such as a verifier. Across a range of tasks and scales, we train models that largely preserve their task-solving capability while selectively falling back when acting would be unreliable. More broadly, our results show that reinforcement learning can not only incentivize models to succeed, but also to reason about the limits of their capabilities and change course when they determine that success is out of reach.",
+      "authors": [
+        "Daman Arora",
+        "Xuecheng Liu",
+        "Himanshu Gaurav Singh",
+        "Fahim Tajwar",
+        "Abitha Thankaraj",
+        "Ruslan Salakhutdinov",
+        "Haiwen Feng",
+        "Yuda Song",
+        "Andrea Zanette"
+      ],
+      "published": "2026-10-14T16:03:12Z",
+      "updated": "2026-10-14T16:03:12Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.20401v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.20401v1",
+      "comment": "preprint",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3344,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3344,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0713,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4476,
+        "relevance": 0.3487,
+        "quality": 0.47,
+        "novelty": 0.8375,
+        "freshness": 0.8634,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available"
+      ],
+      "summary": {
+        "takeaway": "Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable.",
+        "problem": "Reinforcement learning makes language models better at solving tasks, but the same mechanism also rewards guessing.",
+        "method": "Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable.",
+        "evidence": "When a wrong action can corrupt a database or ship broken code, that incentive can be costly.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-15T14:59:50.911792+00:00"
+    },
     {
       "id": "2610.18807",
       "title": "SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection",
@@ -10056,336 +10351,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-09T14:35:07.865742+00:00"
-    },
-    {
-      "id": "conf:acl:2026:543-main",
-      "title": "Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments",
-      "abstract": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications. Existing hallucination detectors mainly extract micro-level intrinsic patterns for uncertainty quantification or elicit macro-level self-judgments through verbalized prompts. However, these methods address only a single facet of the hallucination, focusing either on implicit neural uncertainty or explicit symbolic reasoning, thereby treating these inherently coupled behaviors in isolation and failing to exploit their interdependence for a holistic view. In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection. LaaB introduces a \"meta-judgment\" process to map symbolic labels back into the feature space. By leveraging the inherent logical bridge where response and meta-judgment labels are either the same or opposite based on the self-judgment's semantics, LaaB aligns and integrates dual-view signals via mutual learning and enhances the hallucination detection. Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
-      "authors": [
-        "Hao Mi",
-        "Qiang Sheng",
-        "Shaofei Wang",
-        "Beizhe Hu",
-        "Yifan Sun",
-        "Zhengjia Wang",
-        "Hengqi Zeng",
-        "Yang Li",
-        "Danding Wang",
-        "Juan Cao"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4717,
-          "matched": [
-            "uncertainty"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1536,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1535,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5792,
-        "relevance": 0.4388,
-        "quality": 0.82,
-        "novelty": 0.8,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "dataset evidence",
-        "quantitative results",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
-        "problem": "Large Language Models (LLMs) are prone to factual hallucinations, risking their reliability in real-world applications.",
-        "method": "In this paper, we propose LaaB (Logical Consistency-as-a-Bridge), a framework that bridges neural features and symbolic judgments for hallucination detection.",
-        "evidence": "Extensive experiments on 4 public datasets, across 4 LLMs, against 8 baselines demonstrate the superiority of LaaB.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
-    },
-    {
-      "id": "conf:acl:2026:306-ind",
-      "title": "FinRAG-12B: A Production-Validated Recipe for Grounded Question Answering in Banking",
-      "abstract": "Large language models are increasingly used across various fields. However, their adoption in regulated high-stakes domains such as banking faces resistance due to the demand for high accuracy, compliance with regulations, and the need for traceable, grounded responses. In this work, we present a complete recipe for training and deploying grounded banking LLMs. First, we describe a high-quality data generation pipeline combining LLM-as-a-Judge filtering, citation annotation, and two-stage curriculum learning that achieves 73% citation quality with only 143M tokens. Second, we train a model to respond with \"I don't know\" when information is incomplete. We determine that a ratio of 22% unanswerable examples in training data yields calibrated refusal behavior. Third, we provide an end-to-end methodology, from data curation to quantization to serving, validated at 40+ financial institutions with real-world business outcomes. Our 12B model outperforms GPT-4.1 on answer quality and citation grounding while responding 3--5x faster.",
-      "authors": [
-        "Denys Katerenchuk",
-        "Pablo Duboue",
-        "Keelan Evanini"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.385,
-          "matched": [
-            "llm-as-a-judge",
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.154,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1141,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1141,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5006,
-        "relevance": 0.3616,
-        "quality": 0.65,
-        "novelty": 0.8553,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "In this work, we present a complete recipe for training and deploying grounded banking LLMs.",
-        "problem": "Large language models are increasingly used across various fields.",
-        "method": "However, their adoption in regulated high-stakes domains such as banking faces resistance due to the demand for high accuracy, compliance with regulations, and the need for traceable, grounded responses.",
-        "evidence": "First, we describe a high-quality data generation pipeline combining LLM-as-a-Judge filtering, citation annotation, and two-stage curriculum learning that achieves 73% citation quality with only 143M tokens.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "llm-as-a-judge",
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
-    },
-    {
-      "id": "conf:acl:2026:5103-main",
-      "title": "From Curated Data to Scalable Models: Continual Pre-training of Dense and MoE Large Language Models for Tibetan",
-      "abstract": "Large language models (LLMs) have achieved remarkable success across a wide range of natural language processing tasks, yet their performance remains heavily biased toward high-resource languages. Tibetan, despite its cultural significance and large speaker population, is still substantially underrepresented. In this work, we present a comprehensive pipeline for advancing Tibetan language modeling through large-scale data curation and continual pre-training. We construct a 72 GB high-quality Tibetan corpus, the largest to date, and adapt Qwen2.5-7B through balanced multilingual continual pre-training with Tibetan, Chinese, and English, followed by multilingual instruction tuning. To further scale capacity efficiently, we extend the dense model to a 50B-A10B Mixture-of-Experts architecture. Due to the absence of standardized Tibetan benchmarks, we build multiple evaluation datasets via high-quality translation and human verification. Experimental results show that both dense and MoE models consistently outperform existing open-source and Tibetan-focused models of similar scale across diverse tasks. Our work advances Tibetan-centric LLM research and provides transferable insights for extending LLMs to other low-resource languages. We will release the model weights, evaluation benchmarks, and detailed data processing documentation in the follow-up.",
-      "authors": [
-        "Lei Yang",
-        "Leiyu Pan",
-        "Bojian Xiong",
-        "Renren Jin",
-        "Shaowei Zhang",
-        "Yue chen",
-        "Ling Shi",
-        "Jiang Zhou",
-        "Junru Wu",
-        "Zhen Wang",
-        "Jianxiang Peng",
-        "Juesi Xiao",
-        "Tianyu Dong",
-        "Zhuowen Han",
-        "Zhuo Chen",
-        "Yuqi Ren",
-        "Deyi Xiong"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2732,
-          "matched": [
-            "evaluation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1598,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1598,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4989,
-        "relevance": 0.2825,
-        "quality": 0.9,
-        "novelty": 0.853,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "dataset evidence",
-        "open source",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "In this work, we present a comprehensive pipeline for advancing Tibetan language modeling through large-scale data curation and continual pre-training.",
-        "problem": "Large language models (LLMs) have achieved remarkable success across a wide range of natural language processing tasks, yet their performance remains heavily biased toward high-resource languages.",
-        "method": "Tibetan, despite its cultural significance and large speaker population, is still substantially underrepresented.",
-        "evidence": "Experimental results show that both dense and MoE models consistently outperform existing open-source and Tibetan-focused models of similar scale across diverse tasks.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-08T14:31:47.274061+00:00"
     }
   ]
 }

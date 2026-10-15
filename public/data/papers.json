@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-10-14T15:07:09.738974+00:00",
+  "generated_at": "2026-10-15T14:59:50.911792+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 134,
-  "source_total": 134,
+  "source_count": 93,
+  "source_total": 93,
   "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 134,
-  "previously_recommended_count": 334,
-  "eligible_count": 5,
+  "unseen_source_count": 93,
+  "previously_recommended_count": 339,
+  "eligible_count": 3,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-10-14T15:07:09.738974+00:00",
+    "generated_at": "2026-10-15T14:59:50.911792+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,29 +130,27 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2610.18807",
-      "title": "SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection",
-      "abstract": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes. Textual skills can improve exploration by distilling prior interactions into reusable guidance. However, existing skill-based RL approaches often either assume skill injection is beneficial or rely on indirect feedback or rollout-intensive evaluation to assess its utility. Our pilot studies show that rollout-based utility estimation for skill credit assignment is costly and unstable under limited sampling, while skill benefits vary across candidates and depend on the current policy's competence on each query. To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection. By reusing outcome-verified training trajectories, SkillScaffold generates candidate skills and estimates their utility through outcome-aware likelihood comparisons, without candidate-specific environment rollouts. The resulting utility guides whether and which skill to inject, retaining skill-free execution when no candidate is estimated to help. Joint training enables the Generator to produce skills tailored to the evolving Executor. Scaffolded RL encourages skill internalization for skill-free inference. Experiments on ALFWorld, WebShop, ScienceWorld, and $τ^2$-Bench demonstrate gains over strong agentic-RL and skill-based RL baselines across both short- and long-horizon tasks. Ablations and further analyses support the importance of utility-based selection and abstention. Our code is available at https://github.com/Vaidurya00/SkillScaffold.",
+      "id": "2610.20413",
+      "title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+      "abstract": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $β$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $β$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $η$ decreases, the expected gain with fixed $β$ vanishes faster than these fluctuations, whereas increasing $β$ to keep $η/(1-β)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $β_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle's effectiveness at a larger model scale.",
       "authors": [
-        "Wenlin Zhong",
-        "Hao Wang",
-        "Kun Yuan",
-        "Fan Yang",
-        "Jinluan Yang",
-        "Dian Jin",
-        "Xu Tan",
-        "Yiquan Wu",
-        "Kun Kuang"
+        "Kaifei Wang",
+        "Zikang Shan",
+        "Liwei Wang",
+        "Yinyu Ye",
+        "Han Zhong"
       ],
-      "published": "2026-10-13T17:46:25Z",
-      "updated": "2026-10-13T17:46:25Z",
+      "published": "2026-10-14T16:11:14Z",
+      "updated": "2026-10-14T16:11:14Z",
       "categories": [
         "cs.LG",
-        "cs.CL"
+        "cs.AI",
+        "math.OC",
+        "stat.ML"
       ],
       "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.18807v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18807v1",
+      "abs_url": "https://arxiv.org/abs/2610.20413v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.20413v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -162,232 +160,6 @@
       "lane": "llm",
       "scope_matches": [
         "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5062,
-          "matched": [
-            "evaluation",
-            "selective"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4321,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4321,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.1526,
-          "matched": [
-            "selection",
-            "adaptive"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1093,
-          "matched": [
-            "inference",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0789,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6906,
-        "relevance": 0.5778,
-        "quality": 0.94,
-        "novelty": 0.8336,
-        "freshness": 0.8729,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "ablation study",
-        "baseline comparison",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection.",
-        "problem": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes.",
-        "method": "To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection.",
-        "evidence": "Textual skills can improve exploration by distilling prior interactions into reusable guidance.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "selective"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.18724",
-      "title": "AIRRI: Towards a Human-Readable, Machine-Resistant Reading Interface",
-      "abstract": "The rapid advancement of image-to-text extraction systems and large language models (LLMs) poses new challenges for educational assessment by making assignment materials easy to transcribe and solve with minimal human effort. To address this problem, we present AIRRI (Artificial Intelligence Resilient Reading Interface), a framework for generating machine-resistant educational content, a dataset of higher-education assignments for evaluation, and an initial evaluation of the human readability of AIRRI machine-resistant text designs. AIRRI employs two categories of machine-resistance techniques. First, AIRRI applies image transformations including character spacing, word spacing, line spacing, character opacity variation, stripe overlays, and image noise. Second, AIRRI applies decision-based adversarial attacks: RayS, SurFree, and ADBA. We evaluate AIRRI against three image-to-text systems: Tesseract, EasyOCR, and the transformer-based GOT-OCR2 model. Our results show that AIRRI substantially degrades automated text extraction performance. AIRRI increased character error rates for EasyOCR (6.9% to 55.9%), Tesseract (2.3% to 100.0%), and GOT-OCR2 (30.7% to 48.1%). Word error rates increased for EasyOCR (24.9% to 96.7%) and Tesseract (10.7% to 100.0%). Among the evaluated decision-based attacks, ADBA consistently produced the largest degradation in image-to-text performance, while RayS and SurFree produced more moderate reductions. EasyOCR and Tesseract were generally more susceptible to both image-based and adversarial perturbations than the transformer-based GOT-OCR2 model. Our findings suggest that AIRRI can significantly reduce the reliability of image-to-text-to-LLM workflows, increasing the effort required for AI-assisted assignment completion.",
-      "authors": [
-        "Emory Salaun",
-        "Syed Ayon",
-        "Kaleel Mahmood",
-        "Shaun Wallace"
-      ],
-      "published": "2026-10-13T17:04:33Z",
-      "updated": "2026-10-13T17:04:33Z",
-      "categories": [
-        "cs.CV",
-        "cs.HC",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CV",
-      "abs_url": "https://arxiv.org/abs/2610.18724v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18724v1",
-      "comment": "12 pages, 2 figures, 6 tables",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6017,
-          "matched": [
-            "machine"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2732,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5673,
-        "relevance": 0.536,
-        "quality": 0.45,
-        "novelty": 0.855,
-        "freshness": 0.8688,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address this problem, we present AIRRI (Artificial Intelligence Resilient Reading Interface), a framework for generating machine-resistant educational content, a dataset of higher-education assignments for evaluation, and an initial evaluation of the human readability of AIRRI machine-resistant text designs.",
-        "problem": "The rapid advancement of image-to-text extraction systems and large language models (LLMs) poses new challenges for educational assessment by making assignment materials easy to transcribe and solve with minimal human effort.",
-        "method": "To address this problem, we present AIRRI (Artificial Intelligence Resilient Reading Interface), a framework for generating machine-resistant educational content, a dataset of higher-education assignments for evaluation, and an initial evaluation of the human readability of AIRRI machine-resistant text designs.",
-        "evidence": "AIRRI employs two categories of machine-resistance techniques.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "machine"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.18683",
-      "title": "ProAS: A Progress-Aware Advantage Shaping Framework for Multi-Turn Agentic Reinforcement Learning",
-      "abstract": "Reinforcement learning (RL) has emerged as the primary paradigm for optimizing Large Language Model (LLM) agents, yet efficient critic-free algorithms (e.g., GRPO) suffer from a fundamental uniform credit assignment dilemma that broadcasts trajectory-level advantages equally to all actions. Our analysis reveals that this uniformity inherently reinforces structurally invalid actions in preferred trajectories and ignores the downstream cascading influence of early pivotal deviations in unpreferred ones. To resolve this without introducing critic overhead, we propose Progress-Aware Advantage Shaping (ProAS), a plug-and-play framework that leverages a dynamically evolving Agentic Reference Graph (ARG) to achieve fine-grained credit assignment via Masking Unreasonable Incentives (MUI) and Asymmetric Penalty Redistribution (APR). Extensive experiments across Qwen2.5-1.5B-Instruct and Qwen2.5-7B-Instruct demonstrate that ProAS universally elevates mainstream group-based baselines to new state-of-the-art performance, achieving peak success rates of 91.9\\% and 94.3\\% on ALFWorld, alongside 66.7\\% and 70.8\\% on WebShop, respectively. Furthermore, it accelerates training convergence by up to $2.44\\times$ while maintaining strong robustness against imperfect or distilled ARGs. Codes: https://github.com/LINs-lab/ProAS.",
-      "authors": [
-        "Bowen Ding",
-        "Mingda Wan",
-        "Yuhan Chen",
-        "Jiyao Yuan",
-        "Qi Zhu",
-        "Futing Wang",
-        "Heyuan Deng",
-        "Fei Mi",
-        "Lifeng Shang",
-        "Tao Lin"
-      ],
-      "published": "2026-10-13T16:39:38Z",
-      "updated": "2026-10-13T16:39:38Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.18683v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18683v1",
-      "comment": "23 pages, 2 figures",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
         "language model",
         "llm"
       ],
@@ -396,7 +168,7 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.3597,
+          "score": 0.4232,
           "matched": [
             "learning"
           ]
@@ -405,42 +177,31 @@
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.3596,
+          "score": 0.4231,
           "matched": [
             "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0349,
-          "matched": [
-            "analysis"
           ]
         }
       ],
       "scores": {
-        "total": 0.5337,
-        "relevance": 0.3667,
-        "quality": 0.84,
-        "novelty": 0.8407,
-        "freshness": 0.8663,
+        "total": 0.5176,
+        "relevance": 0.4232,
+        "quality": 0.57,
+        "novelty": 0.8528,
+        "freshness": 0.8642,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "GitHub link",
-        "baseline comparison",
         "experiments",
+        "proof",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "To resolve this without introducing critic overhead, we propose Progress-Aware Advantage Shaping (ProAS), a plug-and-play framework that leverages a dynamically evolving Agentic Reference Graph (ARG) to achieve fine-grained credit assignment via Masking Unreasonable Incentives (MUI) and Asymmetric Penalty Redistribution (APR).",
-        "problem": "Reinforcement learning (RL) has emerged as the primary paradigm for optimizing Large Language Model (LLM) agents, yet efficient critic-free algorithms (e.g., GRPO) suffer from a fundamental uniform credit assignment dilemma that broadcasts trajectory-level advantages equally to all actions.",
-        "method": "Reinforcement learning (RL) has emerged as the primary paradigm for optimizing Large Language Model (LLM) agents, yet efficient critic-free algorithms (e.g., GRPO) suffer from a fundamental uniform credit assignment dilemma that broadcasts trajectory-level advantages equally to all actions.",
-        "evidence": "To resolve this without introducing critic overhead, we propose Progress-Aware Advantage Shaping (ProAS), a plug-and-play framework that leverages a dynamically evolving Agentic Reference Graph (ARG) to achieve fine-grained credit assignment via Masking Unreasonable Incentives (MUI) and Asymmetric Penalty Redistribution (APR).",
+        "takeaway": "We show that as the learning rate $η$ decreases, the expected gain with fixed $β$ vanishes faster than these fluctuations, whereas increasing $β$ to keep $η/(1-β)$ within the safe regime preserves a nonvanishing gain that eventually dominates them.",
+        "problem": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training.",
+        "method": "Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR).",
+        "evidence": "When policy gradients are evaluated exactly, we prove that increasing $β$ within a range that prevents overshoot strictly accelerates optimization.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
         "source": "abstract",
@@ -459,29 +220,24 @@
       }
     },
     {
-      "id": "2610.18695",
-      "title": "A Refresh Interval Does Not Fully Specify a Refresh Schedule: Learning-Rate-Dependent Placement in Kronecker-Preconditioned Language Model Training",
-      "abstract": "Kronecker-preconditioned optimizers recompute a cached curvature eigendecomposition only periodically, and implementations and adaptive methods control this through the refresh frequency. We show that frequency leaves part of a schedule free: at a fixed number of refreshes, when they occur changes held-out loss at the same compute. Training GPT-style models with the Mousse optimizer across model sizes, we move the middle refreshes of a four-refresh schedule while fixing the first and last. On FineWeb the two placements exchanged rank as the learning rate rose (later placement was better at low rates, earlier placement at high ones), so a single-learning-rate comparison can report either ranking. The reversal held under controls including the published optimizer internals, and placement still mattered at the published refresh density. The learning rate at which the preference flips fell with model size, consistent with a held-out smaller model, and shifted with training length. A spectral-width staleness score predicted the same ranking at every learning rate and missed the reversal. Refresh schedules should be reported in full and compared across the learning rates at which they will be used.",
+      "id": "2610.20514",
+      "title": "Bayesian Learning to Select Fair Classifiers",
+      "abstract": "Evaluations of classifiers (AI or human or agents) often assume a batch setting in which every agent produces labels on every example in a test set, which can be expensive or impractical in many contexts. This motivates online policies that adaptively select agents to query as examples arrive and update policies as outcomes are observed. We study the problem of selecting, in an online stream, the agent that best balances (i) predictive performance and (ii) subgroup fairness of a sensitive attribute, and that allows for delayed observations of true class labels. We formulate this as a Bayesian multi-armed bandit problem using Thompson Sampling, explicitly balancing accuracy and fairness. We conduct empirical evaluations on real-world datasets spanning problems involving tabular classifiers, large language models, and human labelers, demonstrating substantial reductions in regret relative to baselines. Our theoretical contributions include guarantees on the performance of the selected agent that incorporate both the accuracy and fairness aspects of the problem.",
       "authors": [
-        "Xinyu Wang",
-        "Zhiwei Zhai",
-        "Yu Gu",
-        "Zijun Yu",
-        "Sicheng Lyu",
-        "Jingrui Tian",
-        "Lei Ding",
-        "Ziyang Song",
-        "Xiao-Wen Chang"
+        "Saatvik Kher",
+        "Hyungrok Do",
+        "Judy Zhong",
+        "Padhraic Smyth"
       ],
-      "published": "2026-10-13T16:46:34Z",
-      "updated": "2026-10-13T16:46:34Z",
+      "published": "2026-10-14T17:16:28Z",
+      "updated": "2026-10-14T17:16:28Z",
       "categories": [
         "cs.LG"
       ],
       "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.18695v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18695v1",
-      "comment": "18 pages, including references and appendices",
+      "abs_url": "https://arxiv.org/abs/2610.20514v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.20514v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -489,14 +245,17 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "language model"
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.4291,
+          "score": 0.3153,
           "matched": [
             "learning"
           ]
@@ -505,7 +264,7 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4291,
+          "score": 0.3153,
           "matched": [
             "learning"
           ]
@@ -514,56 +273,30 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.2535,
+          "score": 0.2377,
           "matched": [
-            "interval"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1135,
-          "matched": [
-            "density",
-            "dependent",
-            "spectral"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.076,
-          "matched": [
-            "dependent"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0314,
-          "matched": [
-            "adaptive"
+            "evaluations"
           ]
         }
       ],
       "scores": {
-        "total": 0.5082,
-        "relevance": 0.4798,
-        "quality": 0.33,
-        "novelty": 0.8698,
-        "freshness": 0.867,
+        "total": 0.4541,
+        "relevance": 0.3628,
+        "quality": 0.44,
+        "novelty": 0.8668,
+        "freshness": 0.8707,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
-      "quality_signals": [],
+      "quality_signals": [
+        "baseline comparison",
+        "dataset evidence"
+      ],
       "summary": {
-        "takeaway": "We show that frequency leaves part of a schedule free: at a fixed number of refreshes, when they occur changes held-out loss at the same compute.",
-        "problem": "Kronecker-preconditioned optimizers recompute a cached curvature eigendecomposition only periodically, and implementations and adaptive methods control this through the refresh frequency.",
-        "method": "We show that frequency leaves part of a schedule free: at a fixed number of refreshes, when they occur changes held-out loss at the same compute.",
-        "evidence": "Training GPT-style models with the Mousse optimizer across model sizes, we move the middle refreshes of a four-refresh schedule while fixing the first and last.",
+        "takeaway": "Evaluations of classifiers (AI or human or agents) often assume a batch setting in which every agent produces labels on every example in a test set, which can be expensive or impractical in many contexts.",
+        "problem": "Evaluations of classifiers (AI or human or agents) often assume a batch setting in which every agent produces labels on every example in a test set, which can be expensive or impractical in many contexts.",
+        "method": "This motivates online policies that adaptively select agents to query as examples arrive and update policies as outcomes are observed.",
+        "evidence": "We study the problem of selecting, in an online stream, the agent that best balances (i) predictive performance and (ii) subgroup fairness of a sensitive attribute, and that allows for delayed observations of true class labels.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -582,24 +315,29 @@
       }
     },
     {
-      "id": "2610.18780",
-      "title": "BLADE: Auditing Information Use for Failure Attribution in LLM Multi-Agent Systems",
-      "abstract": "Large language model multi-agent systems extend individual agents' capabilities through collaboration across specialized roles, tools, and workflows. Yet collaboration makes failures harder to diagnose: one agent may misinterpret a correct result while others carry the mistake forward. Failure attribution therefore seeks to identify the responsible agent and decisive error step. Recent methods trace dependencies, but knowing where information came from is not the same as knowing where it went wrong. We introduce BLADE (Blame Localization via Audited Dependency Evidence), a training-free framework that moves beyond tracing information to auditing its use. Using Jev for structured probabilistic judgments, BLADE uses dependency probabilities to select relevant source-decision handoffs for auditing. At these handoffs, it examines whether receiving decisions use their sources faithfully and within task requirements, distinguishing error introduction, propagation, and repair. These findings inform a global diagnosis that considers all execution steps. Without reference answers, BLADE achieves the best or tied-best step accuracy among eight strategies under a shared Jev decision interface on 1,228 failed runs across five Who&When and Who&When Pro subsets, outperforming All-at-once by 2.2-11.1 percentage points. Making responsibility evidence explicit offers a path toward more interpretable and reliable agentic systems.",
+      "id": "2610.20401",
+      "title": "Training Language Models to Fail Gracefully",
+      "abstract": "Reinforcement learning makes language models better at solving tasks, but the same mechanism also rewards guessing. When success is the only way to earn reward, opting for a safe fallback is always worse than a long-shot attempt. When a wrong action can corrupt a database or ship broken code, that incentive can be costly. Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable. However, naively using policy gradients with intermediate reward for fallback behavior is brittle due to unfavorable optimization dynamics. We address this challenge with GracefulRL, which reshapes the optimization landscape to promote graceful failure. Importantly, this behavior emerges directly from outcome-level reward signals, without annotations specifying when to fall back or additional inference-time machinery such as a verifier. Across a range of tasks and scales, we train models that largely preserve their task-solving capability while selectively falling back when acting would be unreliable. More broadly, our results show that reinforcement learning can not only incentivize models to succeed, but also to reason about the limits of their capabilities and change course when they determine that success is out of reach.",
       "authors": [
-        "Xiaoguang Guo",
-        "Yaohao Long",
-        "Chuxu Zhang"
+        "Daman Arora",
+        "Xuecheng Liu",
+        "Himanshu Gaurav Singh",
+        "Fahim Tajwar",
+        "Abitha Thankaraj",
+        "Ruslan Salakhutdinov",
+        "Haiwen Feng",
+        "Yuda Song",
+        "Andrea Zanette"
       ],
-      "published": "2026-10-13T17:34:34Z",
-      "updated": "2026-10-13T17:34:34Z",
+      "published": "2026-10-14T16:03:12Z",
+      "updated": "2026-10-14T16:03:12Z",
       "categories": [
-        "cs.AI",
-        "cs.CL"
+        "cs.LG"
       ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.18780v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18780v1",
-      "comment": "16 pages, 6 figures, 3 tables",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.20401v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.20401v1",
+      "comment": "preprint",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -607,41 +345,67 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "large language model",
         "language model",
-        "llm"
+        "language models"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.5235,
+          "score": 0.3344,
           "matched": [
-            "auditing",
-            "reliable"
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3344,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0713,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.4829,
-        "relevance": 0.4188,
-        "quality": 0.41,
-        "novelty": 0.8511,
-        "freshness": 0.8718,
+        "total": 0.4476,
+        "relevance": 0.3487,
+        "quality": 0.47,
+        "novelty": 0.8375,
+        "freshness": 0.8634,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "quantitative results"
+        "code available"
       ],
       "summary": {
-        "takeaway": "We introduce BLADE (Blame Localization via Audited Dependency Evidence), a training-free framework that moves beyond tracing information to auditing its use.",
-        "problem": "Large language model multi-agent systems extend individual agents' capabilities through collaboration across specialized roles, tools, and workflows.",
-        "method": "We introduce BLADE (Blame Localization via Audited Dependency Evidence), a training-free framework that moves beyond tracing information to auditing its use.",
-        "evidence": "Without reference answers, BLADE achieves the best or tied-best step accuracy among eight strategies under a shared Jev decision interface on 1,228 failed runs across five Who&When and Who&When Pro subsets, outperforming All-at-once by 2.2-11.1 percentage points.",
+        "takeaway": "Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable.",
+        "problem": "Reinforcement learning makes language models better at solving tasks, but the same mechanism also rewards guessing.",
+        "method": "Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable.",
+        "evidence": "When a wrong action can corrupt a database or ship broken code, that incentive can be costly.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -652,8 +416,7 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "auditing",
-          "reliable"
+          "learning"
         ],
         "lane": "llm"
       }
