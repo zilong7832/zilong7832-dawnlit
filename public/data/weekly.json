@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T14:50:26.106785+00:00",
+  "generated_at": "2026-10-17T13:42:32.157333+00:00",
   "papers": [
     {
       "id": "2610.12933",
@@ -119,118 +119,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-12T19:47:58.613993+00:00"
-    },
-    {
-      "id": "conf:icml:2026:61517",
-      "title": "Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates",
-      "abstract": "While Large Language Model (LLM) agents excel at general tasks, they inherently struggle with continual adaptation due to the frozen weights after deployment. Conventional reinforcement learning (RL) offers a solution but incurs prohibitive computational costs and the risk of catastrophic forgetting. We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates. JitRL maintains a dynamic, non-parametric memory of experiences and retrieves relevant trajectories to estimate action advantages on-the-fly. These estimates are then used to directly modulate the LLM's output logits. We theoretically prove that this additive update rule is the exact closed-form solution to the KL-constrained policy optimization objective. Extensive experiments on WebArena and Jericho demonstrate that JitRL establishes a new state-of-the-art among training-free methods. Crucially, JitRL outperforms the performance of computationally expensive fine-tuning methods (e.g., WebRL) while reducing monetary costs by over 30 times, offering a scalable path for continual learning agents. The code is available at https://anonymous.4open.science/r/JitRL-D485.",
-      "authors": [
-        "yibo li",
-        "Zijie Lin",
-        "Ailin Deng",
-        "Xuan (Billy) Zhang",
-        "Yufei He",
-        "Shuo Ji",
-        "Tri Cao",
-        "Bryan Hooi"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Spotlight"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/poster/61517",
-      "pdf_url": "https://icml.cc/virtual/2026/poster/61517",
-      "comment": "",
-      "journal_ref": "ICML 2026 Spotlight",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Spotlight",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6488,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.6488,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.139,
-          "matched": [
-            "time"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.139,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7369,
-        "relevance": 0.6766,
-        "quality": 0.81,
-        "novelty": 0.851,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference spotlight"
-      ],
-      "summary": {
-        "takeaway": "We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates.",
-        "problem": "While Large Language Model (LLM) agents excel at general tasks, they inherently struggle with continual adaptation due to the frozen weights after deployment.",
-        "method": "We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates.",
-        "evidence": "We theoretically prove that this additive update rule is the exact closed-form solution to the KL-constrained policy optimization objective.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-09T16:59:26.150979+00:00"
     },
     {
       "id": "conf:icml:2026:66181",
@@ -561,120 +449,6 @@
       "recommended_at": "2026-10-14T15:07:09.738974+00:00"
     },
     {
-      "id": "conf:acl:2026:1293-main",
-      "title": "UR$^2$ : Unify RAG and Reasoning through Reinforcement Learning",
-      "abstract": "Large Language Models (LLMs) have shown strong capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG) for knowledge grounding and Reinforcement Learning from Verifiable Rewards (RLVR) for complex reasoning. However, existing attempts to unify these paradigms remain narrow in scope, typically limited to open-domain QA with fixed retrieval settings, which constrains generalization to broader domains. To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning. UR$^2$ introduces two key designs: a difficulty-aware curriculum that selectively invokes retrieval only for challenging instances, and a hybrid knowledge access strategy that combines domain-specific offline corpora with on-the-fly LLM-generated summaries. Together, these components mitigate the imbalance between retrieval and reasoning and improve robustness to noisy information. Experiments on open-domain QA, MMLU-Pro, medical, and mathematical reasoning tasks show that UR$^2$, built on Qwen-2.5-3/7B and LLaMA-3.1-8B, consistently outperforms existing RAG and RL baselines, and achieves performance comparable to GPT-4o-mini and GPT-4.1-mini on several benchmarks. We will release all code, models, and data.",
-      "authors": [
-        "Weitao Li",
-        "Boran Xiang",
-        "Xiaolong Wang",
-        "Jingyi Ren",
-        "Ante Wang",
-        "Zhinan Gou",
-        "Weizhi Ma",
-        "Yang Liu"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5361,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.536,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6887,
-        "relevance": 0.5449,
-        "quality": 0.99,
-        "novelty": 0.8652,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning.",
-        "problem": "Large Language Models (LLMs) have shown strong capabilities through two complementary paradigms: Retrieval-Augmented Generation (RAG) for knowledge grounding and Reinforcement Learning from Verifiable Rewards (RLVR) for complex reasoning.",
-        "method": "To address this limitation, we propose **UR$^2$** (**U**nified **R**AG and **R**easoning), a general reinforcement learning framework that dynamically coordinates retrieval and reasoning.",
-        "evidence": "Together, these components mitigate the imbalance between retrieval and reasoning and improve robustness to noisy information.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-09T16:59:26.150979+00:00"
-    },
-    {
       "id": "conf:icml:2026:71027",
       "title": "Do We Need Adam? Surprisingly Strong and Sparse Reinforcement Learning with SGD in LLMs",
       "abstract": "Reinforcement learning (RL), particularly RL from verifiable reward (RLVR), has become a crucial phase of training large language models (LLMs) and a key focus of current scaling efforts. However, optimization practices in RL largely follow those of next-token-prediction stages (e.g., pretraining and supervised fine-tuning), despite the fundamental differences between RL and these stages emphasized by recent work. One such practice is the use of the AdamW optimizer, which is widely adopted for training large-scale transformers despite its high memory overhead. Our analysis shows that both momentum and adaptive learning rate of AdamW are less influential in RL than in SFT, leading us to hypothesize that RL benefits less from Adam’s per-parameter adaptive learning rates and momentum. Confirming our hypothesis, our experiments demonstrate that the substantially more memory-efficient SGD, which is known to perform poorly in supervised learning of large-scale transformers, matches or even outperforms AdamW in RL for LLMs. Remarkably, full fine-tuning with SGD updates fewer than 0.02% of model without any sparsity-promoting regularization, more than 1,000 times fewer than AdamW. Our analysis offers potential reasons for this update sparsity. Our findings provide fresh insights into the optimization dynamics of RL in LLMs and demonstrate that RL can be substantially more parameter-efficient than previously recognized.",
@@ -879,6 +653,238 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-13T17:35:28.684909+00:00"
+    },
+    {
+      "id": "2610.21214",
+      "title": "Rubric Judgments Lack Uncertainty: Conformal Weighting for LLM Evaluation",
+      "abstract": "Rubric-based evaluation is widely used to assess large language model (LLM) outputs by decomposing quality into multiple criteria and assigning each a binary judgment from an LLM verifier. However, judgment certainty varies substantially across criteria. Existing methods uniformly aggregate these judgments into a final score, implicitly treating every criterion as equally certain and overlooking this heterogeneity. As a result, uncertain judgments remain incorporated into reward estimation without distinction, potentially yielding misleading training signals for downstream reinforcement learning (RL). To address this limitation, we propose Uncertainty-aware Rubric Weighting (URW), a training-free framework that quantifies criterion-level judgment uncertainty via conformal calibration. Specifically, URW elicits a soft uncertainty signal from a fixed pool of paraphrased judgment templates and converts it into a per-criterion weight using split-conformal $p$-values with provable coverage guarantees. Extensive experiments demonstrate that URW consistently improves pairwise preference accuracy and delivers stronger downstream RL alignment.",
+      "authors": [
+        "Licheng Pan",
+        "Haocheng Yang",
+        "Haoxuan Li",
+        "Yuzhou Chen",
+        "Yichen Sun",
+        "Yuan Lu",
+        "Xiaoxi Li",
+        "Hao Wang",
+        "Zhixuan Chu",
+        "Kui Ren"
+      ],
+      "published": "2026-10-15T04:06:12Z",
+      "updated": "2026-10-15T04:06:12Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.21214v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21214v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8349,
+          "matched": [
+            "uncertainty",
+            "conformal",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1338,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1337,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0401,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "estimation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6633,
+        "relevance": 0.7214,
+        "quality": 0.39,
+        "novelty": 0.8349,
+        "freshness": 0.6571,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments"
+      ],
+      "summary": {
+        "takeaway": "To address this limitation, we propose Uncertainty-aware Rubric Weighting (URW), a training-free framework that quantifies criterion-level judgment uncertainty via conformal calibration.",
+        "problem": "Rubric-based evaluation is widely used to assess large language model (LLM) outputs by decomposing quality into multiple criteria and assigning each a binary judgment from an LLM verifier.",
+        "method": "To address this limitation, we propose Uncertainty-aware Rubric Weighting (URW), a training-free framework that quantifies criterion-level judgment uncertainty via conformal calibration.",
+        "evidence": "Extensive experiments demonstrate that URW consistently improves pairwise preference accuracy and delivers stronger downstream RL alignment.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "conformal",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-17T13:42:32.157333+00:00"
+    },
+    {
+      "id": "2610.21449",
+      "title": "Incentivizing Tool-Use Reinforcement Learning for Post-Arrival Emergency Care Prediction",
+      "abstract": "Large language models (LLMs) can reason over both structured measurements and free-text records, which makes them attractive for emergency department (ED) prediction. However, most existing LLMs still fall short of conventional ML methods like trees on EHR-based prediction tasks. Our controlled analysis traces this gap to two weaknesses: LLMs do not select informative features, and they misjudge what numerical values imply for risk even when given the right features. We propose TIR-EC, a tool-integrated reinforcement learning framework that addresses both. TIR-EC exposes EHR feature groups as tools the LLM can call. It trains the LLM with rewards from a gradient-boosted tree teacher, which provides a reference set of informative tools and a graded risk target. TIR-EC also distills task-specific clinical skills into the model weights through a reverse curriculum that gradually removes the skills from the prompt during RL process. Evaluation on three clinical prediction tasks shows that our 4B agent achieves the highest macro F1 of all compared models, outperforms conventional ML baselines, and is competitive with much larger frontier LLMs. Further analysis shows that TIR-EC selects more useful evidence with fewer tool calls and combines measurements more effectively.",
+      "authors": [
+        "Pengfei Hu",
+        "Chenwei Wu",
+        "Qiao Jin",
+        "Jun Deng",
+        "Zhiyong Lu",
+        "Liyue Shen",
+        "Yue Ning"
+      ],
+      "published": "2026-10-15T07:53:54Z",
+      "updated": "2026-10-15T07:53:54Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.21449v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21449v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6625,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4554,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4553,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6572,
+        "relevance": 0.7121,
+        "quality": 0.4,
+        "novelty": 0.8036,
+        "freshness": 0.6797,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison"
+      ],
+      "summary": {
+        "takeaway": "We propose TIR-EC, a tool-integrated reinforcement learning framework that addresses both.",
+        "problem": "Large language models (LLMs) can reason over both structured measurements and free-text records, which makes them attractive for emergency department (ED) prediction.",
+        "method": "We propose TIR-EC, a tool-integrated reinforcement learning framework that addresses both.",
+        "evidence": "Evaluation on three clinical prediction tasks shows that our 4B agent achieves the highest macro F1 of all compared models, outperforms conventional ML baselines, and is competitive with much larger frontier LLMs.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-17T13:42:32.157333+00:00"
     },
     {
       "id": "2610.10641",
@@ -1190,22 +1196,30 @@
       "recommended_at": "2026-10-16T14:50:26.106785+00:00"
     },
     {
-      "id": "2610.11300",
-      "title": "Characterizing Overconfident Failure in LLM-Based Code Generation",
-      "abstract": "Large language models (LLMs) are increasingly used for automated code generation, but generated programs can appear syntactically plausible while still failing execution-based correctness checks. Existing validation methods, such as testing and program analysis, remain essential but are often incomplete, costly, or applied only after generation. Model-derived uncertainty is therefore a natural early reliability signal. This paper studies the dilemma of overconfidence in code LLMs where incorrect programs are often generated with token-level confidence comparable to correct programs. We study this dilemma across four open-source code models and three execution-based benchmarks. Our analysis begins by investigating whether existing uncertainty metrics provide reliable proxies for execution correctness in code generation. We then characterize overconfidence at both global and local token levels, asking whether incorrect programs remain indistinguishable from correct ones under confidence and entropy summaries, including selective generation and the limits of instruction tuning. Finally, we evaluate whether common mitigation strategies reduce this failure mode. Our study yields four findings. First, existing uncertainty signals provide only partial and model-dependent evidence of execution failure. Second, overconfidence persists at both program and token levels, and uncertainty-based selection does not consistently improve accepted-set accuracy. Third, instruction tuning can increase certainty on failing generations without consistently improving correctness discrimination. Fourth, common mitigation techniques improve specific aspects of reliability but do not reliably resolve overconfident failure. Our exploratory latent analysis suggests that hidden representations may encode correctness-related signals that output confidence does not expose.",
+      "id": "2610.21537",
+      "title": "Functional Subnetwork Localization for Efficient Continual Learning in Large Language Models",
+      "abstract": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity. In contrast, continual learning in large language models (LLMs) remains vulnerable to catastrophic forgetting. A promising direction is to identify functionally specialized subnetworks within LLMs that enable targeted and resource-efficient adaptation. Using gradient-attribution profiling, we localize cognition-associated functional subnetworks exhibiting extremely low mutual overlap. Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions. Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting. Subspace-overlap and principal-angle analyses further indicate that localized updates help preserve pre-trained representations, highlighting functional subnetwork localization as a practical approach to efficient and stable continual learning in LLMs.",
       "authors": [
-        "Ravishka Rathnasuriya",
-        "Wei Yang"
+        "Shuoran Jiang",
+        "Wentao Zhu",
+        "Yang Xiang",
+        "Dongfeng Li",
+        "Yunan Zhang",
+        "Mengchen Zhao",
+        "Yuhui Guo",
+        "Kai Chen",
+        "Youcheng Pan",
+        "Xiangping Wu",
+        "Qingcai Chen"
       ],
-      "published": "2026-10-08T06:07:44Z",
-      "updated": "2026-10-08T06:07:44Z",
+      "published": "2026-10-15T09:03:08Z",
+      "updated": "2026-10-15T09:03:08Z",
       "categories": [
-        "cs.SE",
         "cs.AI"
       ],
-      "primary_category": "cs.SE",
-      "abs_url": "https://arxiv.org/abs/2610.11300v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.11300v1",
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.21537v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21537v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -1218,78 +1232,57 @@
         "large language models",
         "language model",
         "language models",
-        "llm"
+        "llms"
       ],
       "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6727,
-          "matched": [
-            "uncertainty",
-            "selective"
-          ]
-        },
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.1475,
+          "score": 0.6045,
           "matched": [
-            "reliable"
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6045,
+          "matched": [
+            "learning"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.1415,
+          "score": 0.1813,
           "matched": [
-            "analysis",
-            "dependent"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0456,
-          "matched": [
-            "selection"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "dependent"
+            "functional"
           ]
         }
       ],
       "scores": {
-        "total": 0.6252,
-        "relevance": 0.596,
-        "quality": 0.62,
-        "novelty": 0.8097,
-        "freshness": 0.6563,
+        "total": 0.6268,
+        "relevance": 0.6408,
+        "quality": 0.48,
+        "novelty": 0.8,
+        "freshness": 0.6866,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
         "benchmark evaluation",
-        "open source"
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "Large language models (LLMs) are increasingly used for automated code generation, but generated programs can appear syntactically plausible while still failing execution-based correctness checks.",
-        "problem": "Large language models (LLMs) are increasingly used for automated code generation, but generated programs can appear syntactically plausible while still failing execution-based correctness checks.",
-        "method": "Existing validation methods, such as testing and program analysis, remain essential but are often incomplete, costly, or applied only after generation.",
-        "evidence": "Second, overconfidence persists at both program and token levels, and uncertainty-based selection does not consistently improve accepted-set accuracy.",
+        "takeaway": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "problem": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity.",
+        "method": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "evidence": "Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -1298,14 +1291,13 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "uncertainty",
-          "selective"
+          "learning"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-10T15:52:02.558027+00:00"
+      "recommended_at": "2026-10-17T13:42:32.157333+00:00"
     }
   ]
 }

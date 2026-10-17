@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-10-16T14:50:26.106785+00:00",
+  "generated_at": "2026-10-17T13:42:32.157333+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 131,
-  "source_total": 131,
-  "source_lookback_days": 1,
+  "source_count": 1324,
+  "source_total": 1324,
+  "source_lookback_days": 4,
   "source_truncated": false,
-  "unseen_source_count": 131,
-  "previously_recommended_count": 342,
-  "eligible_count": 11,
+  "unseen_source_count": 1310,
+  "previously_recommended_count": 348,
+  "eligible_count": 55,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-10-16T14:50:26.106785+00:00",
+    "generated_at": "2026-10-17T13:42:32.157333+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,23 +130,29 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2610.22031",
-      "title": "GraphACM: Graph-based Action Consistency Measurement for Uncertainty Quantification in LLM Agents",
-      "abstract": "Behavioral consistency across repeated executions provides an informative signal for assessing the reliability of large language model (LLM) agents. However, existing approaches typically summarize consistency with a single task-level score, without identifying where behavioral differences occur or whether actions are compared under equivalent decision contexts. We propose a graph-based framework for fine-grained behavioral consistency measurement and uncertainty quantification. Given multiple rollouts of the same task, we merge equivalent states into a directed, action-labeled graph, enabling action comparisons at shared decision states. We introduce node-level and global measures of action consistency, using the global consistency score as a proxy for uncertainty to predict task success or failure. Experiments across three LLMs on ALFWorld, AppWorld, and WebShop demonstrate that our measure is positively associated with task success and achieves an average AUROC of 0.811 for task-success prediction, outperforming the strongest behavioral-consistency baseline (0.729) and verbalized confidence (0.769). These results highlight the effectiveness of state-conditioned behavioral consistency and pinpoint where agent actions agree.",
+      "id": "2610.21214",
+      "title": "Rubric Judgments Lack Uncertainty: Conformal Weighting for LLM Evaluation",
+      "abstract": "Rubric-based evaluation is widely used to assess large language model (LLM) outputs by decomposing quality into multiple criteria and assigning each a binary judgment from an LLM verifier. However, judgment certainty varies substantially across criteria. Existing methods uniformly aggregate these judgments into a final score, implicitly treating every criterion as equally certain and overlooking this heterogeneity. As a result, uncertain judgments remain incorporated into reward estimation without distinction, potentially yielding misleading training signals for downstream reinforcement learning (RL). To address this limitation, we propose Uncertainty-aware Rubric Weighting (URW), a training-free framework that quantifies criterion-level judgment uncertainty via conformal calibration. Specifically, URW elicits a soft uncertainty signal from a fixed pool of paraphrased judgment templates and converts it into a per-criterion weight using split-conformal $p$-values with provable coverage guarantees. Extensive experiments demonstrate that URW consistently improves pairwise preference accuracy and delivers stronger downstream RL alignment.",
       "authors": [
-        "Yaxin Ma",
-        "Wenbo Zhang",
-        "Satya Krishna Pothapragada",
-        "Alina Zare"
+        "Licheng Pan",
+        "Haocheng Yang",
+        "Haoxuan Li",
+        "Yuzhou Chen",
+        "Yichen Sun",
+        "Yuan Lu",
+        "Xiaoxi Li",
+        "Hao Wang",
+        "Zhixuan Chu",
+        "Kui Ren"
       ],
-      "published": "2026-10-15T15:07:15Z",
-      "updated": "2026-10-15T15:07:15Z",
+      "published": "2026-10-15T04:06:12Z",
+      "updated": "2026-10-15T04:06:12Z",
       "categories": [
         "cs.AI"
       ],
       "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.22031v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22031v1",
+      "abs_url": "https://arxiv.org/abs/2610.21214v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21214v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -157,42 +163,76 @@
       "scope_matches": [
         "large language model",
         "language model",
-        "llm",
-        "llms"
+        "llm"
       ],
       "topics": [
         {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.7745,
+          "score": 0.8349,
           "matched": [
             "uncertainty",
-            "prediction"
+            "conformal",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1338,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1337,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0401,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "estimation"
           ]
         }
       ],
       "scores": {
-        "total": 0.6402,
-        "relevance": 0.6196,
-        "quality": 0.54,
-        "novelty": 0.8656,
-        "freshness": 0.8588,
+        "total": 0.6633,
+        "relevance": 0.7214,
+        "quality": 0.39,
+        "novelty": 0.8349,
+        "freshness": 0.6571,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "quantitative results"
+        "experiments"
       ],
       "summary": {
-        "takeaway": "We propose a graph-based framework for fine-grained behavioral consistency measurement and uncertainty quantification.",
-        "problem": "Behavioral consistency across repeated executions provides an informative signal for assessing the reliability of large language model (LLM) agents.",
-        "method": "We propose a graph-based framework for fine-grained behavioral consistency measurement and uncertainty quantification.",
-        "evidence": "Experiments across three LLMs on ALFWorld, AppWorld, and WebShop demonstrate that our measure is positively associated with task success and achieves an average AUROC of 0.811 for task-success prediction, outperforming the strongest behavioral-consistency baseline (0.729) and verbalized confidence (0.769).",
+        "takeaway": "To address this limitation, we propose Uncertainty-aware Rubric Weighting (URW), a training-free framework that quantifies criterion-level judgment uncertainty via conformal calibration.",
+        "problem": "Rubric-based evaluation is widely used to assess large language model (LLM) outputs by decomposing quality into multiple criteria and assigning each a binary judgment from an LLM verifier.",
+        "method": "To address this limitation, we propose Uncertainty-aware Rubric Weighting (URW), a training-free framework that quantifies criterion-level judgment uncertainty via conformal calibration.",
+        "evidence": "Extensive experiments demonstrate that URW consistently improves pairwise preference accuracy and delivers stronger downstream RL alignment.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -204,38 +244,34 @@
         "topic": "Conformal prediction",
         "matched": [
           "uncertainty",
-          "prediction"
+          "conformal",
+          "evaluation"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.22344",
-      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
-      "abstract": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a practical path toward this pursuit through complex orchestration that manages long-horizon experimentation, while recent MLE systems adopt model-directed interaction, allowing models to autonomously organize experiments and adapt optimization strategies based on execution feedback. However, feedback from each experiment reflects several preceding decisions, and a long MLE run contains many such costly experiments. Training must therefore select useful supervision from long interaction trajectories and learn from intermediate outcomes. We propose a post-training method for autonomous long-horizon MLE optimization and apply it to train MLExpert, a 35B Mixture-of-Experts agentic model. We design the Kaggle-MLE Factory to construct executable tasks and an interaction harness for model-directed experimentation. Hierarchical agentic SFT transfers general tool-use and coding capabilities to MLE through outcome-guided supervision. Windowed Interaction RL (WIRL) treats the multi-turn decisions between successive experiment results as an execution window and assigns it a shared outcome-based reward. Asynchronous collection and policy correction support policy updates before the trajectory ends. On MLE-Bench Lite, MLExpert improves the average medal rate of the base model from 37.9% to 72.7%, achieving performance comparable to larger frontier models such as Kimi-K3 and GLM-5.3. Further experiments show that MLExpert improves performance on NatureBench Lite, agent scaffold optimization, and algorithm optimization, suggesting that the learned optimization capability generalizes to other tasks.",
+      "id": "2610.21449",
+      "title": "Incentivizing Tool-Use Reinforcement Learning for Post-Arrival Emergency Care Prediction",
+      "abstract": "Large language models (LLMs) can reason over both structured measurements and free-text records, which makes them attractive for emergency department (ED) prediction. However, most existing LLMs still fall short of conventional ML methods like trees on EHR-based prediction tasks. Our controlled analysis traces this gap to two weaknesses: LLMs do not select informative features, and they misjudge what numerical values imply for risk even when given the right features. We propose TIR-EC, a tool-integrated reinforcement learning framework that addresses both. TIR-EC exposes EHR feature groups as tools the LLM can call. It trains the LLM with rewards from a gradient-boosted tree teacher, which provides a reference set of informative tools and a graded risk target. TIR-EC also distills task-specific clinical skills into the model weights through a reverse curriculum that gradually removes the skills from the prompt during RL process. Evaluation on three clinical prediction tasks shows that our 4B agent achieves the highest macro F1 of all compared models, outperforms conventional ML baselines, and is competitive with much larger frontier LLMs. Further analysis shows that TIR-EC selects more useful evidence with fewer tool calls and combines measurements more effectively.",
       "authors": [
-        "Shangheng Du",
-        "Jinxin Shi",
-        "Shuaiyu Zhang",
-        "Yiming Wu",
-        "Junpeng Zhao",
-        "Shiyang Feng",
-        "Xin Li",
-        "Liang He",
-        "Xiangchao Yan",
-        "Bo Zhang"
+        "Pengfei Hu",
+        "Chenwei Wu",
+        "Qiao Jin",
+        "Jun Deng",
+        "Zhiyong Lu",
+        "Liyue Shen",
+        "Yue Ning"
       ],
-      "published": "2026-10-15T17:56:32Z",
-      "updated": "2026-10-15T17:56:32Z",
+      "published": "2026-10-15T07:53:54Z",
+      "updated": "2026-10-15T07:53:54Z",
       "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
+        "cs.AI"
       ],
       "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.22344v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22344v1",
-      "comment": "Code: https://github.com/InternScience/MLExpert Model: https://huggingface.co/InternScience/MLExpert",
+      "abs_url": "https://arxiv.org/abs/2610.21449v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21449v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -247,58 +283,66 @@
         "large language models",
         "language model",
         "language models",
-        "llms"
+        "llm"
       ],
       "topics": [
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.6676,
+          "score": 0.6625,
           "matched": [
-            "learning",
-            "machine"
+            "prediction",
+            "evaluation"
           ]
         },
         {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4321,
+          "score": 0.4554,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.4553,
           "matched": [
-            "window"
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "analysis"
           ]
         }
       ],
       "scores": {
-        "total": 0.6304,
-        "relevance": 0.6289,
-        "quality": 0.47,
-        "novelty": 0.8385,
-        "freshness": 0.8756,
+        "total": 0.6572,
+        "relevance": 0.7121,
+        "quality": 0.4,
+        "novelty": 0.8036,
+        "freshness": 0.6797,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "experiments",
-        "quantitative results"
+        "baseline comparison"
       ],
       "summary": {
-        "takeaway": "We propose a post-training method for autonomous long-horizon MLE optimization and apply it to train MLExpert, a 35B Mixture-of-Experts agentic model.",
-        "problem": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI).",
-        "method": "We propose a post-training method for autonomous long-horizon MLE optimization and apply it to train MLExpert, a 35B Mixture-of-Experts agentic model.",
-        "evidence": "Workflow-driven machine learning engineering (MLE) systems provide a practical path toward this pursuit through complex orchestration that manages long-horizon experimentation, while recent MLE systems adopt model-directed interaction, allowing models to autonomously organize experiments and adapt optimization strategies based on execution feedback.",
+        "takeaway": "We propose TIR-EC, a tool-integrated reinforcement learning framework that addresses both.",
+        "problem": "Large language models (LLMs) can reason over both structured measurements and free-text records, which makes them attractive for emergency department (ED) prediction.",
+        "method": "We propose TIR-EC, a tool-integrated reinforcement learning framework that addresses both.",
+        "evidence": "Evaluation on three clinical prediction tasks shows that our 4B agent achieves the highest macro F1 of all compared models, outperforms conventional ML baselines, and is competitive with much larger frontier LLMs.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -307,38 +351,39 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
+        "topic": "Conformal prediction",
         "matched": [
-          "learning",
-          "machine"
+          "prediction",
+          "evaluation"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.22293",
-      "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
-      "abstract": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs. Recent works connect forgetting to how far, and along which directions, fine-tuning moves the weights. On-policy methods such as reinforcement learning and on-policy distillation avoid updating the principal singular directions of weight matrices and thus forget less. In contrast, SFT concentrates updates along these directions and is susceptible to catastrophic forgetting. In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions. SST is optimizer-agnostic and composes well with fine-tuning recipes including SFT and self-distillation. SST combines tight subspace protection, dense gradient estimation, and a simple refresh mechanism, enabling stronger learning than prior orthogonal fine-tuning methods. With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance. This behavior strengthens with model and data size and nearly eliminates forgetting in the large-model regime. SST also keeps the model close to its base distribution, inducing $2$--$4\\times$ less KL drift than the baseline recipes. Overall, SST advances the learning--forgetting Pareto frontier, making it a practical default for fine-tuning pre-trained language models.",
+      "id": "2610.21537",
+      "title": "Functional Subnetwork Localization for Efficient Continual Learning in Large Language Models",
+      "abstract": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity. In contrast, continual learning in large language models (LLMs) remains vulnerable to catastrophic forgetting. A promising direction is to identify functionally specialized subnetworks within LLMs that enable targeted and resource-efficient adaptation. Using gradient-attribution profiling, we localize cognition-associated functional subnetworks exhibiting extremely low mutual overlap. Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions. Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting. Subspace-overlap and principal-angle analyses further indicate that localized updates help preserve pre-trained representations, highlighting functional subnetwork localization as a practical approach to efficient and stable continual learning in LLMs.",
       "authors": [
-        "Arnav Chavan",
-        "Kusha Sareen",
-        "Rishabh Tiwari",
-        "Abhranil Chandra",
-        "Johan Obando-Ceron",
-        "Kurt Keutzer",
-        "Scott Niekum",
-        "Inderjit S Dhillon",
-        "Devvrit Khatri"
+        "Shuoran Jiang",
+        "Wentao Zhu",
+        "Yang Xiang",
+        "Dongfeng Li",
+        "Yunan Zhang",
+        "Mengchen Zhao",
+        "Yuhui Guo",
+        "Kai Chen",
+        "Youcheng Pan",
+        "Xiangping Wu",
+        "Qingcai Chen"
       ],
-      "published": "2026-10-15T17:44:43Z",
-      "updated": "2026-10-15T17:44:43Z",
+      "published": "2026-10-15T09:03:08Z",
+      "updated": "2026-10-15T09:03:08Z",
       "categories": [
-        "cs.LG",
         "cs.AI"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.22293v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22293v1",
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.21537v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21537v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -358,7 +403,7 @@
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.5738,
+          "score": 0.6045,
           "matched": [
             "learning"
           ]
@@ -367,58 +412,39 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.5738,
+          "score": 0.6045,
           "matched": [
             "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0779,
-          "matched": [
-            "data",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0435,
-          "matched": [
-            "estimation"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.1813,
           "matched": [
-            "data"
+            "functional"
           ]
         }
       ],
       "scores": {
-        "total": 0.6084,
-        "relevance": 0.5894,
+        "total": 0.6268,
+        "relevance": 0.6408,
         "quality": 0.48,
-        "novelty": 0.8558,
-        "freshness": 0.8744,
+        "novelty": 0.8,
+        "freshness": 0.6866,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "baseline comparison",
+        "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions.",
-        "problem": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs.",
-        "method": "In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions.",
-        "evidence": "With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance.",
+        "takeaway": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "problem": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity.",
+        "method": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "evidence": "Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -437,28 +463,144 @@
       }
     },
     {
-      "id": "2610.22056",
-      "title": "Progress Reward Model for Reinforcement Learning via Large Language Models",
-      "abstract": "Traditional reinforcement learning (RL) algorithms face significant limitations in handling long-term tasks with sparse rewards. Recent advancements have leveraged large language models (LLMs) to enhance RL by utilizing their world knowledge for task planning and reward generation. However, planning-based approaches often depend on pre-defined skill libraries and fail to optimize low-level control policies, while reward-based methods require extensive human feedback or exhaustive searching due to the complexity of tasks. In this paper, we propose the Progress Reward Model for RL (PRM4RL), a novel framework that integrates task planning and dense reward to enhance RL. For high-level planning, a complex task is decomposed into a series of simple manageable subtasks, with a subtask-oriented, fine-grained progress function designed to monitor task execution progress. For low-level reward generation, inspired by potential-based reward shaping, we use the progress function to construct a Progress Reward Model (PRM), providing theoretically grounded optimality and convergence guarantees, thereby enabling effective policy optimization. Experimental results on robotics control tasks demonstrate that our approach outperforms both LLM-based planning and reward methods, achieving state-of-the-art performance. Code is available at https://github.com/deng-ai-lab/PRM4RL.",
+      "id": "2610.19968",
+      "title": "Safe-FCL: Continual Risk Awareness and Fine-Grained Safety Aggregation for Federated Continual Learning of LLMs",
+      "abstract": "Federated fine-tuning enables large language models (LLMs) to learn collaboratively from distributed client data, but malicious client updates can compromise global model safety. As federated tasks evolve, changing malicious update patterns challenge the ability of existing defenses to maintain reliable risk detection over time. To address this challenge, we propose Safe-FCL, a framework integrating continual risk awareness with fine-grained safety aggregation for federated continual learning of LLMs. Specifically, the Continual Risk Awareness (CRA) mechanism learns emerging risk patterns across sequential tasks and constrains detector updates using a protective subspace derived from historical features, mitigating forgetting of previously learned malicious patterns while adapting to new risks. To translate risk awareness into aggregation-level safety control, the Fine-Grained Safety Aggregation (FGSA) mechanism combines client-level risk assessments from CRA with module-level deviations from historical update behavior to adaptively regulate aggregation contributions, suppressing potentially malicious updates while minimizing unnecessary restrictions on benign updates. Extensive experiments demonstrate that Safe-FCL outperforms current SOTA methods, improving global-model Rule and MD-Judge scores in federated continual learning by 0.41% and 0.64%, respectively, while increasing average risk recognition accuracy by 2.01%.",
       "authors": [
-        "Xiuhui Zhang",
-        "Ning Gao",
-        "Xingyu Jiang",
-        "Yihui Chen",
-        "Yuheng Pan",
-        "Mohan Zhang",
-        "Yue Deng"
+        "Shuaijie Ma",
+        "Yongkang Hu",
+        "Yu Cheng",
+        "Jiuan Zhou",
+        "Yi Xie",
+        "Yushuo Zhang",
+        "Zhaoxia Yin"
       ],
-      "published": "2026-10-15T15:21:25Z",
-      "updated": "2026-10-15T15:21:25Z",
+      "published": "2026-10-14T10:50:59Z",
+      "updated": "2026-10-14T10:50:59Z",
       "categories": [
+        "cs.LG",
         "cs.AI"
       ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.22056v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22056v1",
-      "comment": "20 pages, 10 figures. Published at NeurIPS 2025",
-      "journal_ref": "Advances in Neural Information Processing Systems 38, 100745-100772 (2025)",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.19968v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.19968v1",
+      "comment": "16 pages, 4 figures, 11 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6044,
+          "matched": [
+            "learning",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.536,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0835,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0835,
+          "matched": [
+            "time",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5974,
+        "relevance": 0.6074,
+        "quality": 0.47,
+        "novelty": 0.809,
+        "freshness": 0.5544,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this challenge, we propose Safe-FCL, a framework integrating continual risk awareness with fine-grained safety aggregation for federated continual learning of LLMs.",
+        "problem": "Federated fine-tuning enables large language models (LLMs) to learn collaboratively from distributed client data, but malicious client updates can compromise global model safety.",
+        "method": "To address this challenge, we propose Safe-FCL, a framework integrating continual risk awareness with fine-grained safety aggregation for federated continual learning of LLMs.",
+        "evidence": "Extensive experiments demonstrate that Safe-FCL outperforms current SOTA methods, improving global-model Rule and MD-Judge scores in federated continual learning by 0.41% and 0.64%, respectively, while increasing average risk recognition accuracy by 2.01%.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "reliable"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.19404",
+      "title": "ActMOF: Mapping Reticular Synthesis through Active Learning",
+      "abstract": "Reticular chemistry allows metal-organic frameworks (MOFs) to be designed from their building units, yet their synthesis remains constrained by sparse experimental data, noisy crystallization outcomes, and the absence of benchmarks for comparing active-learning strategies. While data-driven approaches such as Bayesian optimization (BO) can improve synthesis success rates, selecting appropriate optimizers beforehand for mapping MOF crystallization landscapes remains largely empirical. Here we present ActMOF, an experiment-grounded benchmark for comparing search strategies in aluminum-carboxylate MOF synthesis. ActMOF is emulated from experimentally measured microwave syntheses with each encoded condition assigned a crystallinity index calculated based on diffraction peak intensity and full width at half-maximum. By benchmarking policies guided by Gaussian processes (GP), tree ensembles and large language models (LLM), ActMOF placed the GP family among the leading policies for active learning in sparse synthesis landscapes. It then demonstrated transferability by guiding the microwave synthesis of six reticularly related aluminum MOFs. All six campaigns gave crystalline products within a fixed budget of 12 experiments each, and established a reusable testbed for AI-driven MOF synthesis.",
+      "authors": [
+        "Hongrui Sheng",
+        "Shutian Liang",
+        "Reid A. Coyle",
+        "Shyam Chand Pal",
+        "Peter Walther",
+        "Bin Feng",
+        "Xinyu Ding",
+        "Zhiling Zheng"
+      ],
+      "published": "2026-10-14T01:52:55Z",
+      "updated": "2026-10-14T01:52:55Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.LG",
+        "physics.chem-ph"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "abs_url": "https://arxiv.org/abs/2610.19404v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.19404v1",
+      "comment": "Main text and Supporting Information in one file. Data and code: https://github.com/deep-synthesis/ActMOF",
+      "journal_ref": "",
       "source": "arxiv",
       "venue": "",
       "presentation": "",
@@ -473,19 +615,19 @@
       ],
       "topics": [
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4557,
+          "score": 0.5092,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.4557,
+          "score": 0.5091,
           "matched": [
             "learning"
           ]
@@ -494,41 +636,153 @@
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.046,
+          "score": 0.0779,
           "matched": [
-            "series"
+            "data"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.046,
+          "score": 0.0779,
           "matched": [
-            "series"
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.5785,
-        "relevance": 0.4649,
-        "quality": 0.75,
-        "novelty": 0.8335,
-        "freshness": 0.8602,
+        "total": 0.5896,
+        "relevance": 0.5248,
+        "quality": 0.68,
+        "novelty": 0.875,
+        "freshness": 0.501,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "code available",
-        "GitHub link",
+        "benchmark evaluation",
         "experiments",
-        "publication metadata"
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "In this paper, we propose the Progress Reward Model for RL (PRM4RL), a novel framework that integrates task planning and dense reward to enhance RL.",
-        "problem": "Traditional reinforcement learning (RL) algorithms face significant limitations in handling long-term tasks with sparse rewards.",
-        "method": "Traditional reinforcement learning (RL) algorithms face significant limitations in handling long-term tasks with sparse rewards.",
-        "evidence": "Experimental results on robotics control tasks demonstrate that our approach outperforms both LLM-based planning and reward methods, achieving state-of-the-art performance.",
+        "takeaway": "Here we present ActMOF, an experiment-grounded benchmark for comparing search strategies in aluminum-carboxylate MOF synthesis.",
+        "problem": "Reticular chemistry allows metal-organic frameworks (MOFs) to be designed from their building units, yet their synthesis remains constrained by sparse experimental data, noisy crystallization outcomes, and the absence of benchmarks for comparing active-learning strategies.",
+        "method": "Reticular chemistry allows metal-organic frameworks (MOFs) to be designed from their building units, yet their synthesis remains constrained by sparse experimental data, noisy crystallization outcomes, and the absence of benchmarks for comparing active-learning strategies.",
+        "evidence": "While data-driven approaches such as Bayesian optimization (BO) can improve synthesis success rates, selecting appropriate optimizers beforehand for mapping MOF crystallization landscapes remains largely empirical.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.20687",
+      "title": "On-Policy Residual Learning for Diffusion Language Models",
+      "abstract": "Residual context is key to unlocking the speed-quality Pareto frontier of diffusion language models (DLMs) by carrying forward predictive distributions across denoising steps. Yet turning this seemingly simple mechanism into an effective learning paradigm is far from simple: there is no clear recipe for how residual context should be learned. We introduce ORL, a framework for on-policy residual learning in DLMs. Algorithmically, we identify that residual learning is inherently on-policy. ORL learns from model-induced residual trajectories on the fly and introduces an entropy-contraction objective that sharpens predictions as the model revisits its own predictions. System-wise, exact residual supervision requires capturing, retaining, and reprocessing many trajectory-dependent states. ORL co-designs the algorithm with asynchronous residual capture and transport, specialized block-diffusion attention, and packed compute-balanced training, making it practical at scale. On a 4B DLM converted from Qwen3-4B, ORL improves tokens per forward (TPF) by up to 6.2x and, with our dlmrt engine, end-to-end throughput by approximately 6.9x at comparable or better quality. In single-request serving on one H100, this mode achieves a stronger speed-quality Pareto frontier than autoregressive models with EAGLE3 and DFlash speculative decoding under both strict and relaxed verification, running 1.74x faster than DFlash at matched accuracy. ORL also transfers to existing DLMs: on LLaDA-2.1-mini, 36 H100-hours and 4.2M self-generated tokens, about 10x less data than prior LLaDA recipes, yield up to 1.5x higher TPF and up to 3x higher throughput at comparable quality, and on DiffusionGemma, ORL raises TPF by 1.1-1.2x. With dlmrt and NVFP4 quantization, ORL models decode a single request at up to 5,046 tokens/s on one B200, 7,708 on eight B200s, and 2,788 on a consumer RTX 5090, with comparable quality.",
+      "authors": [
+        "Yifan Yu",
+        "Yuqing Jian",
+        "Jisen Li",
+        "Yuezhou Hu",
+        "Tianyi Zhang",
+        "Xiaoxia Wu",
+        "Rui-Jie Zhu",
+        "Junxiong Wang",
+        "Zhongzhu Zhou",
+        "Fan Lai",
+        "James Zou",
+        "Chenfeng Xu"
+      ],
+      "published": "2026-10-14T17:13:17Z",
+      "updated": "2026-10-14T17:13:17Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.20687v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.20687v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5252,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5252,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0713,
+          "matched": [
+            "data",
+            "dependent"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0713,
+          "matched": [
+            "data",
+            "dependent"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5727,
+        "relevance": 0.5395,
+        "quality": 0.55,
+        "novelty": 0.8247,
+        "freshness": 0.5923,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We introduce ORL, a framework for on-policy residual learning in DLMs.",
+        "problem": "Residual context is key to unlocking the speed-quality Pareto frontier of diffusion language models (DLMs) by carrying forward predictive distributions across denoising steps.",
+        "method": "We introduce ORL, a framework for on-policy residual learning in DLMs.",
+        "evidence": "On a 4B DLM converted from Qwen3-4B, ORL improves tokens per forward (TPF) by up to 6.2x and, with our dlmrt engine, end-to-end throughput by approximately 6.9x at comparable or better quality.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -542,216 +796,6 @@
         "topic": "Trustworthy machine learning",
         "matched": [
           "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.22124",
-      "title": "PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents",
-      "abstract": "Modern agentic systems extend language models with external tools, enabling them to complete complex tasks through multi-turn interactions. As these agents are deployed in consequential settings, they are often constrained by policies governing pricing, privacy, confirmation, safety, and other requirements. However, existing evaluation methods leave a critical gap: capability benchmarks measure what agents can accomplish, while content-safety red-teaming measures harmful generations, but neither tests whether agents comply with predefined policies during otherwise valid tool use. Such policy violations are difficult to audit because their effects may emerge only after several turns, span multiple tool calls, or surface in downstream systems. We propose PROBE (Policy Rule Observation via Behavioral Exploration), an algorithm for training LLM-based auditors that interact with deployed agents as realistic users and probe them for policy violations through multi-turn, tool-mediated dialogue. We formalize agent auditing as a two-player Markov game and propose a composite reward that balances violation discovery, behavioral plausibility, conversation progress, and policy diversity. To study training objectives and reward design, we compare GRPO, DPO, and GFlowNet-based optimization in a controlled setting. Across extensive experiments, auditors trained with PROBE uncover substantially broader and higher-yield policy violations than same-architecture zero-shot adversaries, even when the auditor is significantly smaller than the target agent. Our results show that multi-turn behavioral auditing is a distinct and necessary axis of agent evaluation, complementing capability and safety benchmarks. PROBE offers a scalable path toward automated policy auditing for real-world agentic systems and suggests a co-evolutionary loop in which auditors expose failures and agents improve from auditor feedback.",
-      "authors": [
-        "Kshitij Mishra",
-        "Abhijith Sharma",
-        "Nils Lukas",
-        "Salem Lahlou"
-      ],
-      "published": "2026-10-15T16:01:38Z",
-      "updated": "2026-10-15T16:01:38Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.22124v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22124v1",
-      "comment": "27 pages, NeurIPS 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.525,
-          "matched": [
-            "learning",
-            "auditing"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3132,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2377,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5623,
-        "relevance": 0.5302,
-        "quality": 0.46,
-        "novelty": 0.8248,
-        "freshness": 0.8642,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "We propose PROBE (Policy Rule Observation via Behavioral Exploration), an algorithm for training LLM-based auditors that interact with deployed agents as realistic users and probe them for policy violations through multi-turn, tool-mediated dialogue.",
-        "problem": "Modern agentic systems extend language models with external tools, enabling them to complete complex tasks through multi-turn interactions.",
-        "method": "We propose PROBE (Policy Rule Observation via Behavioral Exploration), an algorithm for training LLM-based auditors that interact with deployed agents as realistic users and probe them for policy violations through multi-turn, tool-mediated dialogue.",
-        "evidence": "Across extensive experiments, auditors trained with PROBE uncover substantially broader and higher-yield policy violations than same-architecture zero-shot adversaries, even when the auditor is significantly smaller than the target agent.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "auditing"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.22139",
-      "title": "Are You Sure Your LLM Is Sure? Repairing and Auditing Confidence",
-      "abstract": "Confidence scores determine whether an LLM answer is accepted, reviewed, or regenerated, yet scalar recalibration can only correct errors visible through the score itself. We introduce RADAR (Repair, Adopt, and Diagnose After Recalibration), a reliability framework that separates confidence repair from deciding whether to deploy the repair and auditing the errors that remain. Under squared loss, we decompose prediction risk into outcome noise, information hidden by the score, and mapping error; restricting repair to order-preserving maps additionally introduces a pooling gap. For repair, we propose Probe-Anchored Isotonic Calibration (PAIC), which learns a monotone map from correctness-probe predictions on unlabeled target prompts. PAIC's excess risk depends on the probe's score-conditional bias and fitting error rather than its overall accuracy. For adoption, we derive a paired procedure with finite-sample control of false improvements. For auditing, we develop a prompt-clustered kernel test that detects feature-aligned residual errors while accounting for dependent answers from the same prompt. Across multiple LLM checkpoints, benchmarks, and distribution shifts, richer predictors can improve confidence estimation, but projecting their information back to a scalar score can lose these gains, and lower prediction risk need not yield better review decisions. Across 47,400 replayed raw-score allocations, paired betting adopts candidates with lower held-out test risk in 42.95% of allocations, versus 15.09% for one-sided empirical Bernstein. RADAR thus provides a principled workflow to repair what a scalar score can express, adopt a repair only when supported by evidence, and diagnose systematic errors that recalibration leaves behind. Code and data will be released upon acceptance.",
-      "authors": [
-        "Arijit Dey",
-        "Bhartendu Kumar",
-        "Ramya Hebbalaguppe",
-        "Khuushi Maheshwari"
-      ],
-      "published": "2026-10-15T16:12:29Z",
-      "updated": "2026-10-15T16:12:29Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.22139v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22139v1",
-      "comment": "main paper 10 pages; supplementary 44 pages; 5 figures",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3783,
-          "matched": [
-            "auditing"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1964,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.081,
-          "matched": [
-            "data",
-            "dependent",
-            "estimation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0582,
-          "matched": [
-            "data",
-            "dependent"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0322,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4852,
-        "relevance": 0.3581,
-        "quality": 0.62,
-        "novelty": 0.8516,
-        "freshness": 0.8653,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We introduce RADAR (Repair, Adopt, and Diagnose After Recalibration), a reliability framework that separates confidence repair from deciding whether to deploy the repair and auditing the errors that remain.",
-        "problem": "Confidence scores determine whether an LLM answer is accepted, reviewed, or regenerated, yet scalar recalibration can only correct errors visible through the score itself.",
-        "method": "We introduce RADAR (Repair, Adopt, and Diagnose After Recalibration), a reliability framework that separates confidence repair from deciding whether to deploy the repair and auditing the errors that remain.",
-        "evidence": "For adoption, we derive a paired procedure with finite-sample control of false improvements.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "auditing"
         ],
         "lane": "llm"
       }
