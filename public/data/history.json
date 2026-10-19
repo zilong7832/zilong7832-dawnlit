@@ -1,6 +1,567 @@
 {
-  "generated_at": "2026-10-18T14:00:05.460395+00:00",
+  "generated_at": "2026-10-19T16:58:35.105974+00:00",
   "papers": [
+    {
+      "id": "2610.22599",
+      "title": "Can LLMs predict the outcomes of machine learning experiments?",
+      "abstract": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible. Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments. However, the space of possible design choices in ML is vast. An LLM that proposes an experiment needs a reliable intuition of whether it is worth running given the timing constraints of long training runs. In this work, we measure such intuition in current frontier LLMs by evaluating how accurately they predict the impact of self-generated ML experiment ideas before these are put into training runs. To this end, we construct a dataset of 288 LLM-proposed ideas on eight MLE-bench tasks. We then prompt five frontier LLMs (GPT-6 Astra, Claude Opus 5.5, Claude Fable 5.1, Kimi K3, and GLM-5.3) to predict the impact of each idea and compare their predictions with the actual outcomes after training. We report four main findings. First, LLM predictions are substantially better than random chance but far from accurate: even the best model, Claude Opus 5.5, explains only half of the variance in outcomes (R^2 = 0.49). Second, we notice that all tested models systematically underestimate the magnitude of the changes. Third, prediction quality varies widely across tasks. Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference. Higher reasoning settings and additional context lead to modest gains. Overall, our results show that current LLMs have useful but limited intuition about which ML ideas will work. We release our dataset to support further study.",
+      "authors": [
+        "Ayush Bansal",
+        "Aldo Pareja",
+        "Sean Klein",
+        "Serge Didenko",
+        "Artem Lukoianov"
+      ],
+      "published": "2026-10-15T19:51:50Z",
+      "updated": "2026-10-15T19:51:50Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.22599v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22599v1",
+      "comment": "15 pages, 9 figures, 1 table. Dataset: https://github.com/autolab-ai/EV-estimation",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.7465,
+          "matched": [
+            "learning",
+            "machine",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4547,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1518,
+          "matched": [
+            "prediction"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.674,
+        "relevance": 0.7185,
+        "quality": 0.51,
+        "novelty": 0.8268,
+        "freshness": 0.4458,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference.",
+        "problem": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible.",
+        "method": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
+        "evidence": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+    },
+    {
+      "id": "2610.22636",
+      "title": "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness",
+      "abstract": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential. We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response. We propose the causal robustness margin, defined as the minimum internal intervention required to deviate the model's output, and operationalize it using Jacobian Lens (Jlens) concept steering vectors. Across three open-source models and five question-answering datasets, we show incorrect and uncertain responses exhibit smaller margins, indicating greater sensitivity to internal interventions, and the causal robustness margin complements conventional output-based uncertainty methods. Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
+      "authors": [
+        "Aneesh Komanduri",
+        "Majid Afshar",
+        "Timothy A. Miller",
+        "Yanjun Gao"
+      ],
+      "published": "2026-10-15T20:46:06Z",
+      "updated": "2026-10-15T20:46:06Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.22636v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22636v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8413,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "reliable"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6673,
+        "relevance": 0.7025,
+        "quality": 0.51,
+        "novelty": 0.8611,
+        "freshness": 0.4511,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence",
+        "open source"
+      ],
+      "summary": {
+        "takeaway": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
+        "problem": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential.",
+        "method": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
+        "evidence": "Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+    },
+    {
+      "id": "2610.22858",
+      "title": "Uncertainty-Aware Budget Allocation for Efficient LLM Tree Search",
+      "abstract": "Tree search enhances multi-step reasoning in large language models (LLMs), yet prevailing methods expand every step with a fixed budget, irrespective of the marginal utility of expansion. We first show, across existing search algorithms, that continuations sampled from a shared intermediate state are largely duplicates and collapse to a few distinct answers. Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion. An information-theoretic analysis motivates this: treating the per-step budget as the Monte Carlo sample size for estimating a step's residual answer entropy, we derive a sufficient budget that shrinks with sibling dispersion. We accordingly propose $\\textbf{Uncertainty-Aware Allocation}$ (UAA), a training-free framework that decouples value from uncertainty: values determine which candidates are promising, while uncertainty, estimated from sibling dispersion at no additional model cost, determines how many merit expansion, via uncertainty-aware pruning and uncertainty-aware budgeting. Across mathematical reasoning, logical reasoning, and planning benchmarks, UAA reduces token usage by up to $90\\%$ and latency by up to $9\\times$ at comparable accuracy, generalizing across four tree search algorithms and both open- and closed-source LLMs.",
+      "authors": [
+        "Jianguo Huang",
+        "Zhiyi Lyu",
+        "Fuxiang Zhang",
+        "Yanchen Deng",
+        "Deheng Ye",
+        "Bo An"
+      ],
+      "published": "2026-10-16T03:03:28Z",
+      "updated": "2026-10-16T03:03:28Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.22858v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22858v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8413,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6458,
+        "relevance": 0.6819,
+        "quality": 0.48,
+        "novelty": 0.8214,
+        "freshness": 0.4886,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion.",
+        "problem": "Tree search enhances multi-step reasoning in large language models (LLMs), yet prevailing methods expand every step with a fixed budget, irrespective of the marginal utility of expansion.",
+        "method": "We first show, across existing search algorithms, that continuations sampled from a shared intermediate state are largely duplicates and collapse to a few distinct answers.",
+        "evidence": "Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+    },
+    {
+      "id": "2610.22468",
+      "title": "From Parallels to Divergence: Language Models' Learning of Action Nominal Constructions",
+      "abstract": "Action nominal constructions (ANCs) express events in nominal form, with their argument marking following patterns found in clauses or ordinary noun phrases. In this paper, we investigate how different grammatical configurations affect language models' learning of ANCs and related constructions, and how these learning preferences compare with typological distributions in natural languages. We use a grammar-engineered method for synthetic corpus construction that combines shared semantic input from natural corpora with computational grammars. We construct 96 target languages varying in clause word order, noun-phrase word order, alignment, complement system, and ANC strategy. For each language, we train GPT-2-small models from scratch and evaluate them using targeted minimal pairs covering 34 grammatical phenomena. The results show typological parallels in basic clause configurations but divergences in complement systems and ANC strategies, with models also learning combinations rare or unattested in natural languages. This partial alignment suggests that natural language distributions may reflect both general learning pressures and functional demands not fully captured by model learning experiments.",
+      "authors": [
+        "Iskar Deng",
+        "Shane Steinert-Threlkeld"
+      ],
+      "published": "2026-10-15T17:43:47Z",
+      "updated": "2026-10-15T17:43:47Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.22468v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22468v1",
+      "comment": "41 pages, including appendices",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5262,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5262,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0402,
+          "matched": [
+            "functional"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5496,
+        "relevance": 0.5342,
+        "quality": 0.47,
+        "novelty": 0.8666,
+        "freshness": 0.4331,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Action nominal constructions (ANCs) express events in nominal form, with their argument marking following patterns found in clauses or ordinary noun phrases.",
+        "problem": "Action nominal constructions (ANCs) express events in nominal form, with their argument marking following patterns found in clauses or ordinary noun phrases.",
+        "method": "In this paper, we investigate how different grammatical configurations affect language models' learning of ANCs and related constructions, and how these learning preferences compare with typological distributions in natural languages.",
+        "evidence": "This partial alignment suggests that natural language distributions may reflect both general learning pressures and functional demands not fully captured by model learning experiments.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+    },
+    {
+      "id": "2610.22722",
+      "title": "The LLM-Attacker: A Unified Red-Team Framework for Privacy Evaluation of Split and Distributed LLM Systems",
+      "abstract": "Split language models keep input text on a client but send intermediate representations to a server. Attacks can reconstruct text from these messages. Comparing privacy evaluations is difficult when attackers see different messages, know different model weights or use different datasets and recovery measures. We present LLM-Attacker, a framework that records these choices and lets researchers check, compare and extend an evaluation. Compatible attacks reuse recorded messages, and their predictions are saved for independent scoring. The scoring rule requires a linked undefended reference before a defence can pass. Reports also identify attacks that remain untested. In a controlled GPT-2 experiment, adding gradients returned during training increased token recovery from 94.20% to 97.38% and exact-document recovery from 13.71% to 37.77%. The 95% interval for the token gain lay above the two-percentage-point threshold fixed before testing. This experiment is shared with a companion study; here, it tests how the evaluation responds to a change in attacker access. Further studies measure how corpus choice and compression defences affect recovery, compare an adapted published attack with its reference implementation, and test the measurement code. The framework reports implementation checks separately from measured attack effectiveness. Each privacy claim should state the attacker, dataset and scoring rule, report its controls and identify untested attacks.",
+      "authors": [
+        "Georgios Politis",
+        "Evangelos Pappas"
+      ],
+      "published": "2026-10-15T22:53:45Z",
+      "updated": "2026-10-15T22:53:45Z",
+      "categories": [
+        "cs.CR",
+        "cs.DC",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2610.22722v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22722v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5745,
+          "matched": [
+            "evaluation",
+            "evaluations",
+            "interval"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5399,
+        "relevance": 0.4596,
+        "quality": 0.65,
+        "novelty": 0.8793,
+        "freshness": 0.4638,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present LLM-Attacker, a framework that records these choices and lets researchers check, compare and extend an evaluation.",
+        "problem": "Split language models keep input text on a client but send intermediate representations to a server.",
+        "method": "We present LLM-Attacker, a framework that records these choices and lets researchers check, compare and extend an evaluation.",
+        "evidence": "In a controlled GPT-2 experiment, adding gradients returned during training increased token recovery from 94.20% to 97.38% and exact-document recovery from 13.71% to 37.77%.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations",
+          "interval"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+    },
+    {
+      "id": "2610.22684",
+      "title": "AlphaBet: Reinforcement Learning for LLM Event Forecasting Agents",
+      "abstract": "Forecasting an unresolved event requires finding relevant evidence and deciding how strongly it supports each outcome. Yet outcome-based training of Large Language Model (LLM) forecasters often begins with preassembled evidence at a single prediction date, leaving evidence acquisition outside the learning loop. We introduce AlphaBet, an agentic reinforcement learning (RL) framework that trains a single LLM policy to search, reason, and report probabilities across multiple pre-resolution dates. Each dated forecast is scored by a proper scoring rule against the eventual outcome, allowing one resolved event to supervise decisions under different information states. We decompose forecasting regret into an evidence-acquisition gap and a probability-reporting gap, and show that Group Relative Policy Optimization (GRPO)'s standard-deviation normalization can distort the reporting target under multi-class proper scores. On GLM-4.5-Air, AlphaBet reduces the Brier score from 0.731 to 0.626 on Forecast-Dojo and from 0.612 to 0.528 on FutureX. Controlled ablations attribute these gains to multi-date training and show that they come from improvements in both information acquisition and probability reporting. Our empirical results validate that GRPO's std normalization degrades proper-scoring-rule performance while leaving top-outcome accuracy largely unchanged.",
+      "authors": [
+        "Liqin Ye",
+        "Rongzhi Zhang",
+        "Xin Liu",
+        "Zheng Li",
+        "Yuan He",
+        "Qingyu Yin",
+        "Priyanka Nigam",
+        "Chao Zhang"
+      ],
+      "published": "2026-10-15T21:54:31Z",
+      "updated": "2026-10-15T21:54:31Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.22684v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22684v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4661,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4661,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1332,
+          "matched": [
+            "prediction"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5289,
+        "relevance": 0.4927,
+        "quality": 0.51,
+        "novelty": 0.8369,
+        "freshness": 0.4579,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We introduce AlphaBet, an agentic reinforcement learning (RL) framework that trains a single LLM policy to search, reason, and report probabilities across multiple pre-resolution dates.",
+        "problem": "Forecasting an unresolved event requires finding relevant evidence and deciding how strongly it supports each outcome.",
+        "method": "We introduce AlphaBet, an agentic reinforcement learning (RL) framework that trains a single LLM policy to search, reason, and report probabilities across multiple pre-resolution dates.",
+        "evidence": "Controlled ablations attribute these gains to multi-date training and show that they come from improvements in both information acquisition and probability reporting.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+    },
     {
       "id": "2610.21091",
       "title": "MemComposer: Learning to Assemble Memories for LLM Agents via Reinforcement Learning",
@@ -9863,643 +10424,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-09-29T16:30:31.914438+00:00"
-    },
-    {
-      "id": "conf:acl:2026:151-main",
-      "title": "Quantifying Aleatoric Uncertainty of In-Context Learning for Robust Measure of LLM Prediction Confidence",
-      "abstract": "In-Context Learning (ICL) allows large language models to adapt to new tasks from a few demonstrations, but its reliability remains a concern: predictions are highly sensitive to both prompt design and the model's ability to understand the context, obscuring whether failures arise from data properties or model limitations. Uncertainty decomposition—separating aleatoric from epistemic sources—is particularly crucial in this setting, yet existing methods, designed for standard generation tasks, fail to capture the unique dynamics of ICL. To address this, we introduce a concept of self-function vectors, built upon Bayesian views and the mechanistic interpretability of ICL. These vectors leverage internal model representations to model the latent concept learned during in-context prompting, thereby enabling a direct estimation of aleatoric uncertainty within a Bayesian framework and circumventing the reliance on brittle input or decoding manipulations. Given the lack of established benchmarks and suitable evaluation protocols, we also propose the first and rigorous evaluation framework, initially grounded in synthetic tasks for conceptual development and subsequently extended to real-world datasets, in which aleatoric and epistemic uncertainty can be quantified separately under controlled settings. Moreover, we show it can be used as a practical tool for trustworthy-related applications, such as hallucination detection. Our findings pave a new direction for connecting the quantitative view of uncertainty with the mechanistic understanding of model behavior.",
-      "authors": [
-        "Jinseok Chung",
-        "Minkyoung Song",
-        "Hyunji Jung",
-        "Namhoon Lee"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.9263,
-          "matched": [
-            "uncertainty",
-            "prediction",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5353,
-          "matched": [
-            "learning",
-            "trustworthy"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4549,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "data",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0456,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.8791,
-        "relevance": 0.9391,
-        "quality": 0.68,
-        "novelty": 0.8273,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "dataset evidence",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To address this, we introduce a concept of self-function vectors, built upon Bayesian views and the mechanistic interpretability of ICL.",
-        "problem": "In-Context Learning (ICL) allows large language models to adapt to new tasks from a few demonstrations, but its reliability remains a concern: predictions are highly sensitive to both prompt design and the model's ability to understand the context, obscuring whether failures arise from data properties or model limitations.",
-        "method": "To address this, we introduce a concept of self-function vectors, built upon Bayesian views and the mechanistic interpretability of ICL.",
-        "evidence": "To address this, we introduce a concept of self-function vectors, built upon Bayesian views and the mechanistic interpretability of ICL.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "prediction",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-29T16:30:31.914438+00:00"
-    },
-    {
-      "id": "2609.17474",
-      "title": "Coupled Calibration and Learning: Mitigating Teacher Bias in LLM Distillation without Target-Domain Reward Feedback",
-      "abstract": "Large language model (LLM) distillation aims to transfer the capabilities of a powerful teacher to a smaller student. Direct imitation, however, can also transfer the teacher's systematic bias and errors. This challenge is particularly pronounced under covariate shift, when the teacher's reliability on target questions is uncertain and target-domain reward feedback is unavailable. We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions. Each iteration calibrates the teacher using source feedback and then uses the calibrated teacher to train the student on target questions. The updated student, in turn, informs subsequent calibration. In an autoregressive policy framework, we prove that the output student's expected average Kullback-Leibler divergence to the oracle student converges to zero at a polynomial rate in the number of iterations. The oracle maximizes the true reference-regularized target reward within the student class, which need not represent the unrestricted optimal policy. Our analysis quantifies the progress of projected student gradient updates while controlling the error in teacher calibration. We further establish a separation from regularized direct matching: its error relative to the oracle student can remain bounded away from zero even when the teacher achieves higher regularized target reward than every student policy. These results demonstrate that LLM distillation can overcome persistent teacher bias and recover the optimal student through coupled calibration and learning, without target-domain reward feedback.",
-      "authors": [
-        "Haichen Hu",
-        "Yuheng Zhang",
-        "David Simchi-Levi"
-      ],
-      "published": "2026-09-15T17:15:40Z",
-      "updated": "2026-09-15T17:15:40Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "math.ST",
-        "stat.ML"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.17474v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.17474v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4661,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4661,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "analysis"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5355,
-        "relevance": 0.4738,
-        "quality": 0.49,
-        "novelty": 0.8596,
-        "freshness": 0.8708,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "proof",
-        "formal bound"
-      ],
-      "summary": {
-        "takeaway": "We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions.",
-        "problem": "Large language model (LLM) distillation aims to transfer the capabilities of a powerful teacher to a smaller student.",
-        "method": "We propose Coupled Calibration and Learning (CCL), an LLM distillation algorithm that couples teacher calibration with student updates through token-level branching, using reward feedback only on source questions.",
-        "evidence": "In an autoregressive policy framework, we prove that the output student's expected average Kullback-Leibler divergence to the oracle student converges to zero at a polynomial rate in the number of iterations.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
-    },
-    {
-      "id": "2609.17516",
-      "title": "When Should LLMs Abstain? Chain-of-Self-Questioning for Selective Risk Control",
-      "abstract": "Large language models can produce fluent answers when their factual support is weak. This paper introduces Chain-of-Self-Questioning (CoSQ), a prompt-only framework that makes answer commitment conditional on an explicit assessment of the information required to answer a question. We evaluate three CoSQ variants under seventeen conditions on the 817-item TruthfulQA multiple-choice validation set using eleven open-weight and hosted model families. In the final balanced-option protocol, Grounded-CoSQ at τ=0.90 reduces the mean unconditional wrong-commitment rate from 13.1% under chain-of-thought prompting to 8.9%, a 32.1% relative reduction, while increasing answered accuracy from 86.9% to 89.7% and answering 87.6% of questions. Both improvements hold for all eleven models and at every evaluated threshold. Critical-CoSQ and Adaptive-CoSQ provide neighboring operating points with 88.6% and 86.5% coverage, respectively, while remaining more reliable than the baseline. A secondary Natural Questions Short-Answer evaluation provides convergent open-form evidence. These findings show that self-assessment can support explicit, tunable answer-or-abstain decisions when an unsupported commitment is more costly than referral or review.",
-      "authors": [
-        "Ali Şenol"
-      ],
-      "published": "2026-09-15T17:52:24Z",
-      "updated": "2026-09-15T17:52:24Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2609.17516v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.17516v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4519,
-          "matched": [
-            "evaluation",
-            "selective"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "reliable"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "adaptive"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4872,
-        "relevance": 0.3999,
-        "quality": 0.48,
-        "novelty": 0.8757,
-        "freshness": 0.8744,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Large language models can produce fluent answers when their factual support is weak.",
-        "problem": "Large language models can produce fluent answers when their factual support is weak.",
-        "method": "This paper introduces Chain-of-Self-Questioning (CoSQ), a prompt-only framework that makes answer commitment conditional on an explicit assessment of the information required to answer a question.",
-        "evidence": "Both improvements hold for all eleven models and at every evaluated threshold.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "selective"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
-    },
-    {
-      "id": "2609.17376",
-      "title": "Large Language Models Develop Belief State Geometry In-Context",
-      "abstract": "Large language models (LLMs) trained on next-token prediction exhibit remarkable in-context learning (ICL) abilities, yet the representations that support ICL remain poorly understood. We consider such representations in a controlled setting: prompting LLMs with data emitted from hidden Markov models (HMMs) and probing for the corresponding belief state -- the posterior distribution over the HMM's hidden states given the observed token history. Across six open-source LLMs prompted with data from 40 HMMs selected for non-trivial belief structure, we find that belief states are linearly decodable from residual stream activations, with peak probe $R^2$-values from 0.83-0.99 across HMM and LLM combinations, ranging from early to late layers. To establish functional relevance, we intervene directly on the probe-identified subspace via patching and steering, resulting in downstream prediction quality on the order of the untampered model, while controls degrade performance substantially. Together, these results provide representation-level evidence that ICL in open-source LLMs approximates optimal Bayesian prediction over a context-inferred generative model. More broadly, our findings extend prior results linking input-distribution structure to activation geometry: from toy networks trained explicitly on HMM data to production-scale LLMs.",
-      "authors": [
-        "Daniel Balcells",
-        "Andrew Jun Lee",
-        "Chirag Rastogi",
-        "Paul M. Riechers",
-        "Adam Shai",
-        "Xavier Poncini"
-      ],
-      "published": "2026-09-15T16:17:59Z",
-      "updated": "2026-09-15T16:17:59Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.17376v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.17376v1",
-      "comment": "87 pages",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.3845,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1531,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1531,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1426,
-          "matched": [
-            "functional",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1141,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.466,
-        "relevance": 0.3688,
-        "quality": 0.49,
-        "novelty": 0.8502,
-        "freshness": 0.8651,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "open source",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Across six open-source LLMs prompted with data from 40 HMMs selected for non-trivial belief structure, we find that belief states are linearly decodable from residual stream activations, with peak probe $R^2$-values from 0.83-0.99 across HMM and LLM combinations, ranging from early to late layers.",
-        "problem": "Large language models (LLMs) trained on next-token prediction exhibit remarkable in-context learning (ICL) abilities, yet the representations that support ICL remain poorly understood.",
-        "method": "We consider such representations in a controlled setting: prompting LLMs with data emitted from hidden Markov models (HMMs) and probing for the corresponding belief state -- the posterior distribution over the HMM's hidden states given the observed token history.",
-        "evidence": "Across six open-source LLMs prompted with data from 40 HMMs selected for non-trivial belief structure, we find that belief states are linearly decodable from residual stream activations, with peak probe $R^2$-values from 0.83-0.99 across HMM and LLM combinations, ranging from early to late layers.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-16T14:58:04.793591+00:00"
-    },
-    {
-      "id": "2609.11115",
-      "title": "Benchmark Radar: A Living Database and Search Engine for AI Benchmarks and Evaluation",
-      "abstract": "Benchmark researchers and developers of large language models (LLMs) and other AI systems need to find relevant evaluations, locate their benchmark datasets and code, and understand the settings behind reported scores. We present Benchmark Radar, a living database and search engine for retrieval and discovery of AI benchmarks, covering LLM evaluation, agentic and tool-use benchmarks, coding, reasoning, safety, and domain-specific evaluations. The system combines daily discovery of benchmark papers, repositories, datasets, and releases with a searchable benchmark catalog, mentions in model cards and technical reports, and score histories. It retains source identities and citations so readers can inspect candidate benchmarks and their evaluation evidence. Daily discovery draws on 37 sources: 13 direct connectors and 24 first-party research and engineering feeds. The catalog contains 1,283 source records drawn from 4 benchmark catalogs and 12,916 numeric observations on 790 records. We describe collection and retrieval, audit the full catalog, and examine benchmark saturation, adoption trends, and the limits of score comparisons. A worked example walks through a complete prior-art search, showing how to query the catalog and inspect benchmark evidence when designing a new evaluation. We release the web dashboard with a benchmark leaderboard, a Pareto frontier view of score against measured use, saturation and trend views, daily feeds, downloadable evidence, a command-line interface (CLI) for offline queries, and reproducible analysis.",
-      "authors": [
-        "Koutian Wu",
-        "Junjie Zhou",
-        "Ergan Shang",
-        "Jiayu Wang",
-        "Pengqian Han",
-        "Junkai Wang",
-        "Wanghan Xu"
-      ],
-      "published": "2026-09-10T05:47:22Z",
-      "updated": "2026-09-10T05:47:22Z",
-      "categories": [
-        "cs.AI",
-        "cs.IR"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2609.11115v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.11115v1",
-      "comment": "Project site: https://benchmark-radar.org/ Code: https://github.com/ktwu01/benchmark-radar",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7105,
-          "matched": [
-            "evaluation",
-            "evaluations"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "analysis"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.642,
-        "relevance": 0.5772,
-        "quality": 0.74,
-        "novelty": 0.8545,
-        "freshness": 0.6678,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "dataset evidence",
-        "reproducibility",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We present Benchmark Radar, a living database and search engine for retrieval and discovery of AI benchmarks, covering LLM evaluation, agentic and tool-use benchmarks, coding, reasoning, safety, and domain-specific evaluations.",
-        "problem": "Benchmark researchers and developers of large language models (LLMs) and other AI systems need to find relevant evaluations, locate their benchmark datasets and code, and understand the settings behind reported scores.",
-        "method": "We present Benchmark Radar, a living database and search engine for retrieval and discovery of AI benchmarks, covering LLM evaluation, agentic and tool-use benchmarks, coding, reasoning, safety, and domain-specific evaluations.",
-        "evidence": "The system combines daily discovery of benchmark papers, repositories, datasets, and releases with a searchable benchmark catalog, mentions in model cards and technical reports, and score histories.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "evaluations"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-12T13:36:18.689174+00:00"
-    },
-    {
-      "id": "2609.09764",
-      "title": "SocialRL: Refining LLMs' Social Intelligence through Multi-turn Reinforcement Learning and Reward Design",
-      "abstract": "Social intelligence enables agents to read social context, infer intent, and adapt over sustained dialogue. As language models become autonomous collaborators, it is central to building effective and trustworthy human-AI interaction. Existing reinforcement learning methods optimize single-turn utterances and sparse outcome rewards, producing short-sighted policies that struggle to manage goal-relationship tensions across multi-turn interactions. We propose SocialRL, a multi-turn reinforcement learning framework addressing both challenges. First, we apply multi-turn reinforcement learning using PPO that propagates delayed outcome rewards back to each turn, enabling long-horizon planning. Second, we design six process reward dimensions capturing the goal-relationship trade-off, including goal advancement, relational attunement, contextual coherence, etc. A reward model dynamically generates fine-grained scoring criteria for each dimension, while a stage-aware weight schedule prioritizes relationship-building in early turns, goal advancement mid-way, and balanced closure late. Across multiple social-dialogue benchmarks, SocialRL improves Goal Achievement by an average of 9.2 percentage points over the corresponding Base models. These results demonstrate the effectiveness of SocialRL across synthetic and real social scenes, as well as standard and challenging social scenarios.",
-      "authors": [
-        "Jianing Wang",
-        "Xintao Wang",
-        "Aili Chen",
-        "Jie Shi",
-        "Hongcheng Guo",
-        "Jun Gao",
-        "Wenxuan Zhao",
-        "Chengkun Lang",
-        "Yuanli Guo",
-        "Yanghua Xiao"
-      ],
-      "published": "2026-09-09T06:06:34Z",
-      "updated": "2026-09-09T06:06:34Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2609.09764v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.09764v1",
-      "comment": "30pages 2figures",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5782,
-          "matched": [
-            "learning",
-            "trustworthy"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5257,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5787,
-        "relevance": 0.5677,
-        "quality": 0.48,
-        "novelty": 0.8737,
-        "freshness": 0.5268,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We propose SocialRL, a multi-turn reinforcement learning framework addressing both challenges.",
-        "problem": "Social intelligence enables agents to read social context, infer intent, and adapt over sustained dialogue.",
-        "method": "We propose SocialRL, a multi-turn reinforcement learning framework addressing both challenges.",
-        "evidence": "Across multiple social-dialogue benchmarks, SocialRL improves Goal Achievement by an average of 9.2 percentage points over the corresponding Base models.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "trustworthy"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-09-12T13:36:18.689174+00:00"
     }
   ]
 }
