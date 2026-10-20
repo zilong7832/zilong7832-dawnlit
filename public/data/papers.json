@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-10-19T16:58:35.105974+00:00",
+  "generated_at": "2026-10-20T15:03:27.175811+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 491,
-  "source_total": 491,
-  "source_lookback_days": 4,
+  "source_count": 96,
+  "source_total": 96,
+  "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 489,
-  "previously_recommended_count": 360,
-  "eligible_count": 25,
+  "unseen_source_count": 96,
+  "previously_recommended_count": 366,
+  "eligible_count": 2,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-10-19T16:58:35.105974+00:00",
+    "generated_at": "2026-10-20T15:03:27.175811+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -124,134 +124,45 @@
   "semantic_feedback_count": 0,
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
-  "conference_supplement_count": 0,
-  "conference_eligible_count": 0,
-  "conference_pool_updated_at": null,
-  "conference_source_status": {},
+  "conference_supplement_count": 1,
+  "conference_eligible_count": 153,
+  "conference_pool_updated_at": "2026-10-13T17:35:28.684909+00:00",
+  "conference_source_status": {
+    "ICLR:2026": "ok:223",
+    "ICML:2026": "ok:742",
+    "NeurIPS:2026": "ok:0",
+    "ACL:2026": "ok:478",
+    "EMNLP:2026": "awaiting_verified_schedule",
+    "ICLR:2025": "ok:213",
+    "ICML:2025": "ok:344",
+    "NeurIPS:2025": "ok:808",
+    "EMNLP:2025": "awaiting_verified_schedule",
+    "ACL:2025": "awaiting_verified_schedule"
+  },
   "papers": [
     {
-      "id": "2610.22599",
-      "title": "Can LLMs predict the outcomes of machine learning experiments?",
-      "abstract": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible. Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments. However, the space of possible design choices in ML is vast. An LLM that proposes an experiment needs a reliable intuition of whether it is worth running given the timing constraints of long training runs. In this work, we measure such intuition in current frontier LLMs by evaluating how accurately they predict the impact of self-generated ML experiment ideas before these are put into training runs. To this end, we construct a dataset of 288 LLM-proposed ideas on eight MLE-bench tasks. We then prompt five frontier LLMs (GPT-6 Astra, Claude Opus 5.5, Claude Fable 5.1, Kimi K3, and GLM-5.3) to predict the impact of each idea and compare their predictions with the actual outcomes after training. We report four main findings. First, LLM predictions are substantially better than random chance but far from accurate: even the best model, Claude Opus 5.5, explains only half of the variance in outcomes (R^2 = 0.49). Second, we notice that all tested models systematically underestimate the magnitude of the changes. Third, prediction quality varies widely across tasks. Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference. Higher reasoning settings and additional context lead to modest gains. Overall, our results show that current LLMs have useful but limited intuition about which ML ideas will work. We release our dataset to support further study.",
+      "id": "2610.26787",
+      "title": "LG-Bench: A Graph-Structured Evaluation Benchmark for Life Sciences",
+      "abstract": "Traditional evaluation benchmarks reduce inherently interconnected scientific knowledge in life sciences into flat lists of questions, disregarding the underlying topological structure of the knowledge. We introduce, the first graph-structured benchmark for life sciences, featuring over 10,000 high-quality multiple-choice questions across medicine, biology, and chemistry. Our approach constructs a weighted evaluation graph using bidirectional matching and semantic similarity algorithms, where nodes represent questions and edge weights capture their semantic relationships. Leveraging this graph topology, we design two novel evaluation metrics. The Global Coherence Score (GCS) measures a model's consistency within semantically related neighborhoods, while Knowledge Balance Score (KBS) analyzes how model errors are distributed across the graph to reveal conceptual blind spots. LG-Bench facilitates fine-grained comparison of LLMs by surfacing differences in conceptual coherence and patterns of knowledge organization across models. Our framework shifts the evaluation paradigm from flat accuracy metrics to structure-aware analysis, offering a new lens for diagnosing and improving LLM performance in the life sciences domain.",
       "authors": [
-        "Ayush Bansal",
-        "Aldo Pareja",
-        "Sean Klein",
-        "Serge Didenko",
-        "Artem Lukoianov"
+        "Lu Sun",
+        "Xiangyi Zhang",
+        "Xiangyang Zhu",
+        "Kaiyuan Ji",
+        "Zijian Chen",
+        "Qiang Hu",
+        "Zicheng Zhang",
+        "Yuan Tian",
+        "Guangtao Zhai"
       ],
-      "published": "2026-10-15T19:51:50Z",
-      "updated": "2026-10-15T19:51:50Z",
+      "published": "2026-10-19T17:38:05Z",
+      "updated": "2026-10-19T17:38:05Z",
       "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.22599v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22599v1",
-      "comment": "15 pages, 9 figures, 1 table. Dataset: https://github.com/autolab-ai/EV-estimation",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.7465,
-          "matched": [
-            "learning",
-            "machine",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4547,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1518,
-          "matched": [
-            "prediction"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.674,
-        "relevance": 0.7185,
-        "quality": 0.51,
-        "novelty": 0.8268,
-        "freshness": 0.4458,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference.",
-        "problem": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible.",
-        "method": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
-        "evidence": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "machine",
-          "reliable"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.22636",
-      "title": "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness",
-      "abstract": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential. We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response. We propose the causal robustness margin, defined as the minimum internal intervention required to deviate the model's output, and operationalize it using Jacobian Lens (Jlens) concept steering vectors. Across three open-source models and five question-answering datasets, we show incorrect and uncertain responses exhibit smaller margins, indicating greater sensitivity to internal interventions, and the causal robustness margin complements conventional output-based uncertainty methods. Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
-      "authors": [
-        "Aneesh Komanduri",
-        "Majid Afshar",
-        "Timothy A. Miller",
-        "Yanjun Gao"
-      ],
-      "published": "2026-10-15T20:46:06Z",
-      "updated": "2026-10-15T20:46:06Z",
-      "categories": [
-        "cs.CL",
         "cs.AI"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.22636v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22636v1",
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.26787v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26787v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -260,10 +171,7 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
+        "llm",
         "llms"
       ],
       "topics": [
@@ -271,118 +179,27 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.8413,
+          "score": 0.4272,
           "matched": [
-            "uncertainty"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "reliable"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6673,
-        "relevance": 0.7025,
-        "quality": 0.51,
-        "novelty": 0.8611,
-        "freshness": 0.4511,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "dataset evidence",
-        "open source"
-      ],
-      "summary": {
-        "takeaway": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
-        "problem": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential.",
-        "method": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
-        "evidence": "Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.22858",
-      "title": "Uncertainty-Aware Budget Allocation for Efficient LLM Tree Search",
-      "abstract": "Tree search enhances multi-step reasoning in large language models (LLMs), yet prevailing methods expand every step with a fixed budget, irrespective of the marginal utility of expansion. We first show, across existing search algorithms, that continuations sampled from a shared intermediate state are largely duplicates and collapse to a few distinct answers. Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion. An information-theoretic analysis motivates this: treating the per-step budget as the Monte Carlo sample size for estimating a step's residual answer entropy, we derive a sufficient budget that shrinks with sibling dispersion. We accordingly propose $\\textbf{Uncertainty-Aware Allocation}$ (UAA), a training-free framework that decouples value from uncertainty: values determine which candidates are promising, while uncertainty, estimated from sibling dispersion at no additional model cost, determines how many merit expansion, via uncertainty-aware pruning and uncertainty-aware budgeting. Across mathematical reasoning, logical reasoning, and planning benchmarks, UAA reduces token usage by up to $90\\%$ and latency by up to $9\\times$ at comparable accuracy, generalizing across four tree search algorithms and both open- and closed-source LLMs.",
-      "authors": [
-        "Jianguo Huang",
-        "Zhiyi Lyu",
-        "Fuxiang Zhang",
-        "Yanchen Deng",
-        "Deheng Ye",
-        "Bo An"
-      ],
-      "published": "2026-10-16T03:03:28Z",
-      "updated": "2026-10-16T03:03:28Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.22858v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22858v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.8413,
-          "matched": [
-            "uncertainty"
+            "evaluation"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0442,
+          "score": 0.0314,
           "matched": [
             "analysis"
           ]
         }
       ],
       "scores": {
-        "total": 0.6458,
-        "relevance": 0.6819,
+        "total": 0.4496,
+        "relevance": 0.348,
         "quality": 0.48,
-        "novelty": 0.8214,
-        "freshness": 0.4886,
+        "novelty": 0.8375,
+        "freshness": 0.8725,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
@@ -391,10 +208,10 @@
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion.",
-        "problem": "Tree search enhances multi-step reasoning in large language models (LLMs), yet prevailing methods expand every step with a fixed budget, irrespective of the marginal utility of expansion.",
-        "method": "We first show, across existing search algorithms, that continuations sampled from a shared intermediate state are largely duplicates and collapse to a few distinct answers.",
-        "evidence": "Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion.",
+        "takeaway": "We introduce, the first graph-structured benchmark for life sciences, featuring over 10,000 high-quality multiple-choice questions across medicine, biology, and chemistry.",
+        "problem": "Traditional evaluation benchmarks reduce inherently interconnected scientific knowledge in life sciences into flat lists of questions, disregarding the underlying topological structure of the knowledge.",
+        "method": "We introduce, the first graph-structured benchmark for life sciences, featuring over 10,000 high-quality multiple-choice questions across medicine, biology, and chemistry.",
+        "evidence": "Our approach constructs a weighted evaluation graph using bidirectional matching and semantic similarity algorithms, where nodes represent questions and edge weights capture their semantic relationships.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
@@ -407,28 +224,38 @@
       "recommendation_reason": {
         "topic": "Conformal prediction",
         "matched": [
-          "uncertainty"
+          "evaluation"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.22468",
-      "title": "From Parallels to Divergence: Language Models' Learning of Action Nominal Constructions",
-      "abstract": "Action nominal constructions (ANCs) express events in nominal form, with their argument marking following patterns found in clauses or ordinary noun phrases. In this paper, we investigate how different grammatical configurations affect language models' learning of ANCs and related constructions, and how these learning preferences compare with typological distributions in natural languages. We use a grammar-engineered method for synthetic corpus construction that combines shared semantic input from natural corpora with computational grammars. We construct 96 target languages varying in clause word order, noun-phrase word order, alignment, complement system, and ANC strategy. For each language, we train GPT-2-small models from scratch and evaluate them using targeted minimal pairs covering 34 grammatical phenomena. The results show typological parallels in basic clause configurations but divergences in complement systems and ANC strategies, with models also learning combinations rare or unattested in natural languages. This partial alignment suggests that natural language distributions may reflect both general learning pressures and functional demands not fully captured by model learning experiments.",
+      "id": "2610.26676",
+      "title": "Which Model for Which Role? Cost-Efficient Pareto Recommendation for LLM Agentic Workflows",
+      "abstract": "LLM agentic workflows increasingly employ different models for specialized roles. Users may prefer different trade-offs between task quality and deployment cost, sometimes also considering latency. Finding good assignments incurs a separate search cost from evaluating multiple candidates. We introduce Cost-Coupled Gittins (CC-Gittins), a multi-objective extension of single-objective cost-aware Gittins search for Pareto recommendation. It exploits the coupling between evaluation and deployment costs: assignments that cost more to deploy also cost more to evaluate. The search alternates between seeking higher quality and lower deployment cost, reusing each evaluation to inform both searches. After each batch, CC-Gittins recommends assignments that are nondominated under uncertainty-adjusted estimates of quality and deployment cost. We evaluate CC-Gittins on eight quality--cost matrices from workflows with two to five roles and up to 1,681 candidate assignments. We also evaluate the method with latency as a third objective. Across the eight benchmarks, CC-Gittins recovers a substantial fraction of the true Pareto frontier at roughly 10% of the exhaustive-evaluation cost, and recovers most of the frontier with few false positives by 30%.",
       "authors": [
-        "Iskar Deng",
-        "Shane Steinert-Threlkeld"
+        "Qian Xie",
+        "Wenyue Hua",
+        "Yueli He",
+        "Sripad Karne",
+        "Armaan Agrawal",
+        "Nikos Pagonas",
+        "Eugene Wu",
+        "Kostis Kaffes",
+        "Tianyi Peng",
+        "Nairen Cao"
       ],
-      "published": "2026-10-15T17:43:47Z",
-      "updated": "2026-10-15T17:43:47Z",
+      "published": "2026-10-19T16:25:07Z",
+      "updated": "2026-10-19T16:25:07Z",
       "categories": [
-        "cs.CL"
+        "cs.LG",
+        "cs.CL",
+        "stat.ML"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.22468v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22468v1",
-      "comment": "41 pages, including appendices",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.26676v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.26676v1",
+      "comment": "Preliminary version accepted at NeurIPS 2026 Workshop on Resource-Aware Agentic AI (RAAAI)",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -436,101 +263,6 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5262,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5262,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0402,
-          "matched": [
-            "functional"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5496,
-        "relevance": 0.5342,
-        "quality": 0.47,
-        "novelty": 0.8666,
-        "freshness": 0.4331,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Action nominal constructions (ANCs) express events in nominal form, with their argument marking following patterns found in clauses or ordinary noun phrases.",
-        "problem": "Action nominal constructions (ANCs) express events in nominal form, with their argument marking following patterns found in clauses or ordinary noun phrases.",
-        "method": "In this paper, we investigate how different grammatical configurations affect language models' learning of ANCs and related constructions, and how these learning preferences compare with typological distributions in natural languages.",
-        "evidence": "This partial alignment suggests that natural language distributions may reflect both general learning pressures and functional demands not fully captured by model learning experiments.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.22722",
-      "title": "The LLM-Attacker: A Unified Red-Team Framework for Privacy Evaluation of Split and Distributed LLM Systems",
-      "abstract": "Split language models keep input text on a client but send intermediate representations to a server. Attacks can reconstruct text from these messages. Comparing privacy evaluations is difficult when attackers see different messages, know different model weights or use different datasets and recovery measures. We present LLM-Attacker, a framework that records these choices and lets researchers check, compare and extend an evaluation. Compatible attacks reuse recorded messages, and their predictions are saved for independent scoring. The scoring rule requires a linked undefended reference before a defence can pass. Reports also identify attacks that remain untested. In a controlled GPT-2 experiment, adding gradients returned during training increased token recovery from 94.20% to 97.38% and exact-document recovery from 13.71% to 37.77%. The 95% interval for the token gain lay above the two-percentage-point threshold fixed before testing. This experiment is shared with a companion study; here, it tests how the evaluation responds to a change in attacker access. Further studies measure how corpus choice and compression defences affect recovery, compare an adapted published attack with its reference implementation, and test the measurement code. The framework reports implementation checks separately from measured attack effectiveness. Each privacy claim should state the attacker, dataset and scoring rule, report its controls and identify untested attacks.",
-      "authors": [
-        "Georgios Politis",
-        "Evangelos Pappas"
-      ],
-      "published": "2026-10-15T22:53:45Z",
-      "updated": "2026-10-15T22:53:45Z",
-      "categories": [
-        "cs.CR",
-        "cs.DC",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2610.22722v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22722v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models",
         "llm"
       ],
       "topics": [
@@ -538,34 +270,31 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.5745,
+          "score": 0.3902,
           "matched": [
-            "evaluation",
-            "evaluations",
-            "interval"
+            "uncertainty",
+            "evaluation"
           ]
         }
       ],
       "scores": {
-        "total": 0.5399,
-        "relevance": 0.4596,
-        "quality": 0.65,
-        "novelty": 0.8793,
-        "freshness": 0.4638,
+        "total": 0.4275,
+        "relevance": 0.3122,
+        "quality": 0.48,
+        "novelty": 0.8536,
+        "freshness": 0.8652,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "experiments",
-        "dataset evidence",
+        "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "We present LLM-Attacker, a framework that records these choices and lets researchers check, compare and extend an evaluation.",
-        "problem": "Split language models keep input text on a client but send intermediate representations to a server.",
-        "method": "We present LLM-Attacker, a framework that records these choices and lets researchers check, compare and extend an evaluation.",
-        "evidence": "In a controlled GPT-2 experiment, adding gradients returned during training increased token recovery from 94.20% to 97.38% and exact-document recovery from 13.71% to 37.77%.",
+        "takeaway": "We introduce Cost-Coupled Gittins (CC-Gittins), a multi-objective extension of single-objective cost-aware Gittins search for Pareto recommendation.",
+        "problem": "LLM agentic workflows increasingly employ different models for specialized roles.",
+        "method": "We introduce Cost-Coupled Gittins (CC-Gittins), a multi-objective extension of single-objective cost-aware Gittins search for Pareto recommendation.",
+        "evidence": "Finding good assignments incurs a separate search cost from evaluating multiple candidates.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Conformal prediction.",
         "source": "abstract",
@@ -578,97 +307,120 @@
       "recommendation_reason": {
         "topic": "Conformal prediction",
         "matched": [
-          "evaluation",
-          "evaluations",
-          "interval"
+          "uncertainty",
+          "evaluation"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.22684",
-      "title": "AlphaBet: Reinforcement Learning for LLM Event Forecasting Agents",
-      "abstract": "Forecasting an unresolved event requires finding relevant evidence and deciding how strongly it supports each outcome. Yet outcome-based training of Large Language Model (LLM) forecasters often begins with preassembled evidence at a single prediction date, leaving evidence acquisition outside the learning loop. We introduce AlphaBet, an agentic reinforcement learning (RL) framework that trains a single LLM policy to search, reason, and report probabilities across multiple pre-resolution dates. Each dated forecast is scored by a proper scoring rule against the eventual outcome, allowing one resolved event to supervise decisions under different information states. We decompose forecasting regret into an evidence-acquisition gap and a probability-reporting gap, and show that Group Relative Policy Optimization (GRPO)'s standard-deviation normalization can distort the reporting target under multi-class proper scores. On GLM-4.5-Air, AlphaBet reduces the Brier score from 0.731 to 0.626 on Forecast-Dojo and from 0.612 to 0.528 on FutureX. Controlled ablations attribute these gains to multi-date training and show that they come from improvements in both information acquisition and probability reporting. Our empirical results validate that GRPO's std normalization degrades proper-scoring-rule performance while leaving top-outcome accuracy largely unchanged.",
+      "id": "conf:iclr:2026:10009494",
+      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
+      "abstract": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks. We argue that the interpretable nature of language often provides a much richer learning medium for LLMs, compared to policy gradients derived from sparse, scalar rewards. To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error. Given any AI system containing one or more LLM prompts, GEPA samples trajectories (e.g., reasoning, tool calls, and tool outputs) and reflects on them in natural language to diagnose problems, propose and test prompt updates, and combine complementary lessons from the Pareto frontier of its own attempts. As a result of GEPA's design, it can often turn even just a few rollouts into a large quality gain. Across six tasks, GEPA outperforms GRPO by 6 percentage points on average and by up to 19pp, while using up to 35x fewer rollouts. GEPA also outperforms the leading prompt optimizer, MIPROv2, by over 10 percentage points (e.g., +12pp on AIME-2025), and demonstrates promising results as an inference-time search strategy for code optimization. We release our code at https://github.com/gepa-ai/gepa.",
       "authors": [
-        "Liqin Ye",
-        "Rongzhi Zhang",
-        "Xin Liu",
-        "Zheng Li",
-        "Yuan He",
-        "Qingyu Yin",
-        "Priyanka Nigam",
-        "Chao Zhang"
+        "Lakshya A Agrawal",
+        "Shangyin Tan",
+        "Dilara Soylu",
+        "Noah Ziems",
+        "Rishi Khare",
+        "Krista Opsahl-Ong",
+        "Arnav Singhvi",
+        "Herumb Shandilya",
+        "Michael J Ryan",
+        "Meng Jiang",
+        "Christopher Potts",
+        "Koushik Sen",
+        "Alex Dimakis",
+        "Ion Stoica",
+        "Dan Klein",
+        "Matei Zaharia",
+        "Omar Khattab"
       ],
-      "published": "2026-10-15T21:54:31Z",
-      "updated": "2026-10-15T21:54:31Z",
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
       "categories": [
-        "cs.LG",
-        "cs.AI"
+        "ICLR 2026",
+        "Oral"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.22684v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22684v1",
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10009494",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009494",
       "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
         "large language model",
+        "large language models",
         "language model",
+        "language models",
         "llm"
       ],
       "topics": [
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4661,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4661,
+          "score": 0.5357,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.1332,
+          "score": 0.5356,
           "matched": [
-            "prediction"
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.5289,
-        "relevance": 0.4927,
-        "quality": 0.51,
-        "novelty": 0.8369,
-        "freshness": 0.4579,
+        "total": 0.6814,
+        "relevance": 0.5521,
+        "quality": 0.95,
+        "novelty": 0.8255,
+        "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "ablation study",
-        "quantitative results"
+        "code available",
+        "GitHub link",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
       ],
       "summary": {
-        "takeaway": "We introduce AlphaBet, an agentic reinforcement learning (RL) framework that trains a single LLM policy to search, reason, and report probabilities across multiple pre-resolution dates.",
-        "problem": "Forecasting an unresolved event requires finding relevant evidence and deciding how strongly it supports each outcome.",
-        "method": "We introduce AlphaBet, an agentic reinforcement learning (RL) framework that trains a single LLM policy to search, reason, and report probabilities across multiple pre-resolution dates.",
-        "evidence": "Controlled ablations attribute these gains to multi-date training and show that they come from improvements in both information acquisition and probability reporting.",
+        "takeaway": "To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error.",
+        "problem": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks.",
+        "method": "To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error.",
+        "evidence": "Across six tasks, GEPA outperforms GRPO by 6 percentage points on average and by up to 19pp, while using up to 35x fewer rollouts.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -677,7 +429,7 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
+        "topic": "Positive-unlabeled learning",
         "matched": [
           "learning"
         ],
