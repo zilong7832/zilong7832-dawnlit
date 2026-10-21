@@ -1,14 +1,18 @@
 {
-  "generated_at": "2026-10-20T15:03:27.175811+00:00",
+  "generated_at": "2026-10-21T15:13:28.101189+00:00",
   "papers": [
     {
-      "id": "conf:icml:2026:66181",
-      "title": "DRPBench: Evaluating LLMs in Concurrent Code Comprehension via Fine-grained Data Race Prediction",
-      "abstract": "Large Language Models (LLMs) have demonstrated sophisticated comprehension of sequential code, yet their capacity for reasoning about concurrent programs remains largely unquantified. We introduce DRPBench, a benchmark designed to evaluate the concurrent code comprehension of LLMs by measuring their data race prediction performance. To address the challenge of runtime non-determinism for evaluation on concurrent programs, we frame the evaluation as a fine-grained static prediction task using 1,003 programs from the SV-COMP suite, featuring 549 manually annotated data races with precise variable- and line-level granularity. Our evaluation of 15 state-of-the-art LLMs—spanning standard, reasoning, and agentic variants—reveals that DRPBench effectively differentiates concurrent code comprehension capabilities of LLMs. While the top-performing model (Gemini 3 with test-time reasoning) achieves an F1 score of 74.89%, most models struggle significantly (scoring less than 60%), with Llama 3 70B achieving only 8.80%. Beyond benchmarking, we characterize two primary failure modes: (1) shared-variable distraction, where multiple variable appearances degrade comprehension accuracy, and (2) synchronization-logic myopia, the inability to interpret non-standard synchronization implementations. Our findings provide a diagnostic roadmap for enhancing concurrent code comprehension of LLMs in future development.",
+      "id": "conf:icml:2026:62432",
+      "title": "A Regret Minimization Framework on Preference Learning in Large Language Models",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) has enabled progress on reasoning-intensive tasks by relying on task-specific verifiers that provide automated correctness signals. However, many realistic language tasks are difficult to equip with reliable verifiers, motivating a growing reliance on reinforcement learning from human feedback (RLHF). In this setting, we argue that a closer examination of how human feedback should be interpreted is essential. We introduce Regret-based Preference Optimization (RePO), which reframes RLHF through *regret minimization* rather than reward maximization. Human preferences are often shaped by *prospective* anticipation of outcomes and *counterfactual* comparisons to alternative behaviors, rather than by immediate, outcome-independent utility. RePO captures this structure by modeling preferences as behavior-conditioned assessments of relative suboptimality. Within a KL-regularized reinforcement learning framework, RePO admits a closed-form policy update compatible with direct preference optimization. Experiments on mathematical reasoning benchmarks and human-annotated preference datasets demonstrate consistent performance gains, indicating that regret-based preference learning is an effective and human-aligned approach for training large language models.",
       "authors": [
-        "Yuqi Guo",
-        "Siwei Wei",
-        "Yan Cai"
+        "Suhwan Kim",
+        "Taehyun Cho",
+        "Youngsoo Jang",
+        "Geon-Hyeong Kim",
+        "Yu Jin Kim",
+        "Moontae Lee",
+        "Jungwoo Lee"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -17,8 +21,8 @@
         "Spotlight"
       ],
       "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/poster/66181",
-      "pdf_url": "https://icml.cc/virtual/2026/poster/66181",
+      "abs_url": "https://icml.cc/virtual/2026/poster/62432",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/62432",
       "comment": "",
       "journal_ref": "ICML 2026 Spotlight",
       "source": "conference",
@@ -30,319 +34,50 @@
         "large language model",
         "large language models",
         "language model",
-        "language models",
-        "llms"
+        "language models"
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.7125,
+          "score": 0.6629,
           "matched": [
-            "prediction",
-            "evaluation"
+            "learning",
+            "reliable"
           ]
         },
         {
-          "id": "functional_time_series",
-          "name": "Functional time series",
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.1805,
+          "score": 0.6046,
           "matched": [
-            "time",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1805,
-          "matched": [
-            "time",
-            "data"
+            "learning"
           ]
         }
       ],
       "scores": {
-        "total": 0.7145,
-        "relevance": 0.6422,
-        "quality": 0.82,
-        "novelty": 0.8311,
+        "total": 0.698,
+        "relevance": 0.6512,
+        "quality": 0.7,
+        "novelty": 0.8472,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
         "benchmark evaluation",
-        "quantitative results",
+        "experiments",
+        "dataset evidence",
         "publication metadata",
         "conference spotlight"
       ],
       "summary": {
-        "takeaway": "We introduce DRPBench, a benchmark designed to evaluate the concurrent code comprehension of LLMs by measuring their data race prediction performance.",
-        "problem": "Large Language Models (LLMs) have demonstrated sophisticated comprehension of sequential code, yet their capacity for reasoning about concurrent programs remains largely unquantified.",
-        "method": "We introduce DRPBench, a benchmark designed to evaluate the concurrent code comprehension of LLMs by measuring their data race prediction performance.",
-        "evidence": "While the top-performing model (Gemini 3 with test-time reasoning) achieves an F1 score of 74.89%, most models struggle significantly (scoring less than 60%), with Llama 3 70B achieving only 8.80%.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-13T17:35:28.684909+00:00"
-    },
-    {
-      "id": "2610.18807",
-      "title": "SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection",
-      "abstract": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes. Textual skills can improve exploration by distilling prior interactions into reusable guidance. However, existing skill-based RL approaches often either assume skill injection is beneficial or rely on indirect feedback or rollout-intensive evaluation to assess its utility. Our pilot studies show that rollout-based utility estimation for skill credit assignment is costly and unstable under limited sampling, while skill benefits vary across candidates and depend on the current policy's competence on each query. To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection. By reusing outcome-verified training trajectories, SkillScaffold generates candidate skills and estimates their utility through outcome-aware likelihood comparisons, without candidate-specific environment rollouts. The resulting utility guides whether and which skill to inject, retaining skill-free execution when no candidate is estimated to help. Joint training enables the Generator to produce skills tailored to the evolving Executor. Scaffolded RL encourages skill internalization for skill-free inference. Experiments on ALFWorld, WebShop, ScienceWorld, and $τ^2$-Bench demonstrate gains over strong agentic-RL and skill-based RL baselines across both short- and long-horizon tasks. Ablations and further analyses support the importance of utility-based selection and abstention. Our code is available at https://github.com/Vaidurya00/SkillScaffold.",
-      "authors": [
-        "Wenlin Zhong",
-        "Hao Wang",
-        "Kun Yuan",
-        "Fan Yang",
-        "Jinluan Yang",
-        "Dian Jin",
-        "Xu Tan",
-        "Yiquan Wu",
-        "Kun Kuang"
-      ],
-      "published": "2026-10-13T17:46:25Z",
-      "updated": "2026-10-13T17:46:25Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.18807v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18807v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5062,
-          "matched": [
-            "evaluation",
-            "selective"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4321,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4321,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.1526,
-          "matched": [
-            "selection",
-            "adaptive"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1093,
-          "matched": [
-            "inference",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0789,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6906,
-        "relevance": 0.5778,
-        "quality": 0.94,
-        "novelty": 0.8336,
-        "freshness": 0.8729,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "ablation study",
-        "baseline comparison",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection.",
-        "problem": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes.",
-        "method": "To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection.",
-        "evidence": "Textual skills can improve exploration by distilling prior interactions into reusable guidance.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "selective"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-14T15:07:09.738974+00:00"
-    },
-    {
-      "id": "conf:icml:2026:71027",
-      "title": "Do We Need Adam? Surprisingly Strong and Sparse Reinforcement Learning with SGD in LLMs",
-      "abstract": "Reinforcement learning (RL), particularly RL from verifiable reward (RLVR), has become a crucial phase of training large language models (LLMs) and a key focus of current scaling efforts. However, optimization practices in RL largely follow those of next-token-prediction stages (e.g., pretraining and supervised fine-tuning), despite the fundamental differences between RL and these stages emphasized by recent work. One such practice is the use of the AdamW optimizer, which is widely adopted for training large-scale transformers despite its high memory overhead. Our analysis shows that both momentum and adaptive learning rate of AdamW are less influential in RL than in SFT, leading us to hypothesize that RL benefits less from Adam’s per-parameter adaptive learning rates and momentum. Confirming our hypothesis, our experiments demonstrate that the substantially more memory-efficient SGD, which is known to perform poorly in supervised learning of large-scale transformers, matches or even outperforms AdamW in RL for LLMs. Remarkably, full fine-tuning with SGD updates fewer than 0.02% of model without any sparsity-promoting regularization, more than 1,000 times fewer than AdamW. Our analysis offers potential reasons for this update sparsity. Our findings provide fresh insights into the optimization dynamics of RL in LLMs and demonstrate that RL can be substantially more parameter-efficient than previously recognized.",
-      "authors": [
-        "Sagnik Mukherjee",
-        "Lifan Yuan",
-        "Pavan Jayasinha",
-        "Dilek Hakkani-Tür",
-        "Hao Peng"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Oral"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/oral/71027",
-      "pdf_url": "https://icml.cc/virtual/2026/oral/71027",
-      "comment": "",
-      "journal_ref": "ICML 2026 Oral",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6043,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.6043,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "analysis"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "adaptive"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6849,
-        "relevance": 0.6338,
-        "quality": 0.71,
-        "novelty": 0.8097,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "Reinforcement learning (RL), particularly RL from verifiable reward (RLVR), has become a crucial phase of training large language models (LLMs) and a key focus of current scaling efforts.",
-        "problem": "Reinforcement learning (RL), particularly RL from verifiable reward (RLVR), has become a crucial phase of training large language models (LLMs) and a key focus of current scaling efforts.",
-        "method": "However, optimization practices in RL largely follow those of next-token-prediction stages (e.g., pretraining and supervised fine-tuning), despite the fundamental differences between RL and these stages emphasized by recent work.",
-        "evidence": "Confirming our hypothesis, our experiments demonstrate that the substantially more memory-efficient SGD, which is known to perform poorly in supervised learning of large-scale transformers, matches or even outperforms AdamW in RL for LLMs.",
+        "takeaway": "We introduce Regret-based Preference Optimization (RePO), which reframes RLHF through *regret minimization* rather than reward maximization.",
+        "problem": "Reinforcement learning with verifiable rewards (RLVR) has enabled progress on reasoning-intensive tasks by relying on task-specific verifiers that provide automated correctness signals.",
+        "method": "We introduce Regret-based Preference Optimization (RePO), which reframes RLHF through *regret minimization* rather than reward maximization.",
+        "evidence": "Experiments on mathematical reasoning benchmarks and human-annotated preference datasets demonstrate consistent performance gains, indicating that regret-based preference learning is an effective and human-aligned approach for training large language models.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -355,11 +90,12 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning"
+          "learning",
+          "reliable"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-13T17:35:28.684909+00:00"
+      "recommended_at": "2026-10-21T15:13:28.101189+00:00"
     },
     {
       "id": "conf:iclr:2026:10009494",
@@ -486,93 +222,6 @@
       "recommended_at": "2026-10-20T15:03:27.175811+00:00"
     },
     {
-      "id": "conf:iclr:2026:10009360",
-      "title": "Huxley-G\\\"odel Machine: Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine",
-      "abstract": "Recent studies operationalize self-improvement through coding agents that edit their own codebases. They grow a tree of self-modifications through expansion strategies that favor higher software engineering benchmark performance, assuming that this implies more promising subsequent self-modifications. However, we identify a mismatch between the agent’s self-improvement potential (metaproductivity) and its coding benchmark performance, namely the Metaproductivity-Performance~Mismatch. Inspired by Huxley’s concept of clade, we propose a metric ($\\mathrm{CMP}$) that aggregates the benchmark performances of the descendants of an agent as an indicator of its potential for self-improvement. We show that, in our self-improving coding agent development setting, access to the true CMP is sufficient to simulate how the Gödel Machine would behave under certain assumptions. We introduce the Huxley-G\\\"odel Machine (HGM), which, by estimating $\\mathrm{CMP}$ and using it as guidance, searches the tree of self-modifications. On SWE-bench Verified and Polyglot, HGM outperforms prior self-improving coding agent development methods while using fewer allocated CPU hours. Last but not least, HGM demonstrates strong transfer to other coding datasets and LLMs. %large language models. The agent optimized by HGM on SWE-bench Verified with GPT-5 mini and evaluated on SWE-bench Lite with GPT-5 achieves human-level performance, matching the best officially checked results of human-engineered coding agents. Our code is publicly available at https://github.com/metauto-ai/HGM.",
-      "authors": [
-        "Wenyi Wang",
-        "Piotr Piękos",
-        "Li Nanbo",
-        "Firas Laakom",
-        "Yimeng Chen",
-        "Mateusz Ostaszewski",
-        "Mingchen Zhuge",
-        "Jürgen Schmidhuber"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10009360",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009360",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6664,
-          "matched": [
-            "machine"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6793,
-        "relevance": 0.5331,
-        "quality": 1.0,
-        "novelty": 0.8279,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "benchmark evaluation",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Inspired by Huxley’s concept of clade, we propose a metric ($\\mathrm{CMP}$) that aggregates the benchmark performances of the descendants of an agent as an indicator of its potential for self-improvement.",
-        "problem": "Recent studies operationalize self-improvement through coding agents that edit their own codebases.",
-        "method": "Inspired by Huxley’s concept of clade, we propose a metric ($\\mathrm{CMP}$) that aggregates the benchmark performances of the descendants of an agent as an indicator of its potential for self-improvement.",
-        "evidence": "However, we identify a mismatch between the agent’s self-improvement potential (metaproductivity) and its coding benchmark performance, namely the Metaproductivity-Performance~Mismatch.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "machine"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-13T17:35:28.684909+00:00"
-    },
-    {
       "id": "2610.22599",
       "title": "Can LLMs predict the outcomes of machine learning experiments?",
       "abstract": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible. Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments. However, the space of possible design choices in ML is vast. An LLM that proposes an experiment needs a reliable intuition of whether it is worth running given the timing constraints of long training runs. In this work, we measure such intuition in current frontier LLMs by evaluating how accurately they predict the impact of self-generated ML experiment ideas before these are put into training runs. To this end, we construct a dataset of 288 LLM-proposed ideas on eight MLE-bench tasks. We then prompt five frontier LLMs (GPT-6 Astra, Claude Opus 5.5, Claude Fable 5.1, Kimi K3, and GLM-5.3) to predict the impact of each idea and compare their predictions with the actual outcomes after training. We report four main findings. First, LLM predictions are substantially better than random chance but far from accurate: even the best model, Claude Opus 5.5, explains only half of the variance in outcomes (R^2 = 0.49). Second, we notice that all tested models systematically underestimate the magnitude of the changes. Third, prediction quality varies widely across tasks. Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference. Higher reasoning settings and additional context lead to modest gains. Overall, our results show that current LLMs have useful but limited intuition about which ML ideas will work. We release our dataset to support further study.",
@@ -676,6 +325,117 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+    },
+    {
+      "id": "conf:icml:2026:71100",
+      "title": "Position: The AI Imperative: Scaling High-Quality Peer Review in Machine Learning",
+      "abstract": "Peer review, the bedrock of scientific advancement in machine learning (ML), is strained by a crisis of scale. Exponential growth in manuscript submissions to premier ML venues such as NeurIPS, ICML, and ICLR is outpacing the finite capacity of qualified reviewers, leading to concerns about review quality, consistency, and reviewer fatigue. This position paper argues that AI-assisted peer review must become an urgent research and infrastructure priority. We advocate for a comprehensive AI-augmented ecosystem, leveraging Large Language Models (LLMs) not as replacements for human judgment, but as sophisticated collaborators for authors, reviewers, and Area Chairs (ACs). We propose specific roles for AI in enhancing factual verification, guiding reviewer performance, assisting authors in quality improvement, and supporting ACs in decision-making. Crucially, we contend that the development of such systems hinges on access to more granular, structured, and ethically-sourced peer review process data. We outline a research agenda, including illustrative experiments, to develop and validate these AI assistants, and discuss significant technical and ethical challenges. We call upon the ML community to proactively build this AI-assisted future, ensuring the continued integrity and scalability of scientific validation, while maintaining high standards of peer review.",
+      "authors": [
+        "Qiyao Wei",
+        "Samuel Holt",
+        "Jing Yang",
+        "Markus Wulfmeier",
+        "Mihaela van der Schaar"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71100",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71100",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6682,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4326,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6735,
+        "relevance": 0.6295,
+        "quality": 0.63,
+        "novelty": 0.8835,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose specific roles for AI in enhancing factual verification, guiding reviewer performance, assisting authors in quality improvement, and supporting ACs in decision-making.",
+        "problem": "Peer review, the bedrock of scientific advancement in machine learning (ML), is strained by a crisis of scale.",
+        "method": "We propose specific roles for AI in enhancing factual verification, guiding reviewer performance, assisting authors in quality improvement, and supporting ACs in decision-making.",
+        "evidence": "We propose specific roles for AI in enhancing factual verification, guiding reviewer performance, assisting authors in quality improvement, and supporting ACs in decision-making.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-21T15:13:28.101189+00:00"
     },
     {
       "id": "2610.22636",
@@ -1273,6 +1033,232 @@
         "matched": [
           "learning",
           "machine"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-16T14:50:26.106785+00:00"
+    },
+    {
+      "id": "2610.21537",
+      "title": "Functional Subnetwork Localization for Efficient Continual Learning in Large Language Models",
+      "abstract": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity. In contrast, continual learning in large language models (LLMs) remains vulnerable to catastrophic forgetting. A promising direction is to identify functionally specialized subnetworks within LLMs that enable targeted and resource-efficient adaptation. Using gradient-attribution profiling, we localize cognition-associated functional subnetworks exhibiting extremely low mutual overlap. Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions. Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting. Subspace-overlap and principal-angle analyses further indicate that localized updates help preserve pre-trained representations, highlighting functional subnetwork localization as a practical approach to efficient and stable continual learning in LLMs.",
+      "authors": [
+        "Shuoran Jiang",
+        "Wentao Zhu",
+        "Yang Xiang",
+        "Dongfeng Li",
+        "Yunan Zhang",
+        "Mengchen Zhao",
+        "Yuhui Guo",
+        "Kai Chen",
+        "Youcheng Pan",
+        "Xiangping Wu",
+        "Qingcai Chen"
+      ],
+      "published": "2026-10-15T09:03:08Z",
+      "updated": "2026-10-15T09:03:08Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.21537v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21537v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6045,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6045,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1813,
+          "matched": [
+            "functional"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6268,
+        "relevance": 0.6408,
+        "quality": 0.48,
+        "novelty": 0.8,
+        "freshness": 0.6866,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "problem": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity.",
+        "method": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "evidence": "Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-17T13:42:32.157333+00:00"
+    },
+    {
+      "id": "2610.22293",
+      "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
+      "abstract": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs. Recent works connect forgetting to how far, and along which directions, fine-tuning moves the weights. On-policy methods such as reinforcement learning and on-policy distillation avoid updating the principal singular directions of weight matrices and thus forget less. In contrast, SFT concentrates updates along these directions and is susceptible to catastrophic forgetting. In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions. SST is optimizer-agnostic and composes well with fine-tuning recipes including SFT and self-distillation. SST combines tight subspace protection, dense gradient estimation, and a simple refresh mechanism, enabling stronger learning than prior orthogonal fine-tuning methods. With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance. This behavior strengthens with model and data size and nearly eliminates forgetting in the large-model regime. SST also keeps the model close to its base distribution, inducing $2$--$4\\times$ less KL drift than the baseline recipes. Overall, SST advances the learning--forgetting Pareto frontier, making it a practical default for fine-tuning pre-trained language models.",
+      "authors": [
+        "Arnav Chavan",
+        "Kusha Sareen",
+        "Rishabh Tiwari",
+        "Abhranil Chandra",
+        "Johan Obando-Ceron",
+        "Kurt Keutzer",
+        "Scott Niekum",
+        "Inderjit S Dhillon",
+        "Devvrit Khatri"
+      ],
+      "published": "2026-10-15T17:44:43Z",
+      "updated": "2026-10-15T17:44:43Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.22293v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.22293v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5738,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5738,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0779,
+          "matched": [
+            "data",
+            "estimation"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0435,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6084,
+        "relevance": 0.5894,
+        "quality": 0.48,
+        "novelty": 0.8558,
+        "freshness": 0.8744,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions.",
+        "problem": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs.",
+        "method": "In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions.",
+        "evidence": "With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
         ],
         "lane": "llm"
       },
