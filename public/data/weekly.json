@@ -1,6 +1,126 @@
 {
-  "generated_at": "2026-10-21T15:13:28.101189+00:00",
+  "generated_at": "2026-10-22T15:15:21.077508+00:00",
   "papers": [
+    {
+      "id": "2610.29895",
+      "title": "Automated Materials Data and Knowledge Extraction using Machine Learning and Large Language Models",
+      "abstract": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature. This review traces the evolution of these methods from heuristic, rule-based pipelines through natural language processing (NLP) models and transformer-based encoders to, lastly, large language models (LLMs) and agentic systems capable of extracting materials information across multiple modalities, including text, tables, and figures. Beside construction of large, queryable materials databases and knowledge graphs that support downstream materials discovery, we discuss how these advances have enabled new capabilities, such as, generic question answering across materials science, AI co-scientists and chatbots for research assistance, and closed-loop optimization and discovery when integrated with autonomous laboratories. We critically assess the datasets generated using these approaches, their extraction accuracy and computational costs, and the respective strengths and limitations of different methodologies, and even provide practical guidelines for developing more reliable and scalable materials data extraction pipelines. Finally, we identify key open challenges, including the extraction of full materials structure-property-processing-performance tetrahedron at the sample level, the scarcity of reliable benchmark datasets for systematic evaluation, and the resolution of non-standard materials terminology across different document modalities.",
+      "authors": [
+        "Aravindan Kamatchi Sundaram",
+        "B. Pabitramohan Prusty",
+        "Rohit Batra"
+      ],
+      "published": "2026-10-21T15:38:05Z",
+      "updated": "2026-10-21T15:38:05Z",
+      "categories": [
+        "cond-mat.mtrl-sci",
+        "cs.AI"
+      ],
+      "primary_category": "cond-mat.mtrl-sci",
+      "abs_url": "https://arxiv.org/abs/2610.29895v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.29895v1",
+      "comment": "25 pages, 5 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.7844,
+          "matched": [
+            "learning",
+            "machine",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4554,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1598,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1598,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7323,
+        "relevance": 0.7506,
+        "quality": 0.58,
+        "novelty": 0.8549,
+        "freshness": 0.8594,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature.",
+        "problem": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature.",
+        "method": "This review traces the evolution of these methods from heuristic, rule-based pipelines through natural language processing (NLP) models and transformer-based encoders to, lastly, large language models (LLMs) and agentic systems capable of extracting materials information across multiple modalities, including text, tables, and figures.",
+        "evidence": "Beside construction of large, queryable materials databases and knowledge graphs that support downstream materials discovery, we discuss how these advances have enabled new capabilities, such as, generic question answering across materials science, AI co-scientists and chatbots for research assistance, and closed-loop optimization and discovery when integrated with autonomous laboratories.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-22T15:15:21.077508+00:00"
+    },
     {
       "id": "conf:icml:2026:62432",
       "title": "A Regret Minimization Framework on Preference Learning in Large Language Models",
@@ -528,6 +648,128 @@
       "recommended_at": "2026-10-19T16:58:35.105974+00:00"
     },
     {
+      "id": "conf:acl:2026:3090-main",
+      "title": "DR-Arena: an Automated Evaluation Framework for Deep Research Agents",
+      "abstract": "As Large Language Models (LLMs) increasingly operate as Deep Research (DR) Agents capable of autonomous investigation and information synthesis, reliable evaluation of their task performance has become a critical bottleneck. Current benchmarks predominantly rely on static datasets, which suffer from several limitations: limited task generality, temporal misalignment, and data contamination. To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation. DR-Arena constructs real-time Information Trees from fresh web trends to ensure the evaluation rubric is synchronized with the live world state, and employs an automated Examiner to generate structured tasks testing two orthogonal capabilities: Deep reasoning and Wide coverage. DR-Arena further adopts Adaptive Evolvement Loop, a state-machine controller that dynamically escalates task complexity based on real-time performance, demanding deeper deduction or wider aggregation until a decisive capability boundary emerges. Experiments with six advanced DR agents demonstrate that DR-Arena achieves a Spearman correlation of 0.94 with the LMSYS Search Arena leaderboard. This represents state-of-the-art alignment with human preferences without any manual efforts, validating DR-Arena as a reliable alternative for costly human adjudication.",
+      "authors": [
+        "Yiwen Gao",
+        "Ruochen Zhao",
+        "Yang Deng",
+        "Wenxuan Zhang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5716,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3614,
+          "matched": [
+            "machine",
+            "reliable"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1084,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1084,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6667,
+        "relevance": 0.5512,
+        "quality": 0.88,
+        "novelty": 0.8241,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "formal bound",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation.",
+        "problem": "As Large Language Models (LLMs) increasingly operate as Deep Research (DR) Agents capable of autonomous investigation and information synthesis, reliable evaluation of their task performance has become a critical bottleneck.",
+        "method": "To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation.",
+        "evidence": "Experiments with six advanced DR agents demonstrate that DR-Arena achieves a Spearman correlation of 0.94 with the LMSYS Search Arena leaderboard.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-22T15:15:21.077508+00:00"
+    },
+    {
       "id": "2610.21214",
       "title": "Rubric Judgments Lack Uncertainty: Conformal Weighting for LLM Evaluation",
       "abstract": "Rubric-based evaluation is widely used to assess large language model (LLM) outputs by decomposing quality into multiple criteria and assigning each a binary judgment from an LLM verifier. However, judgment certainty varies substantially across criteria. Existing methods uniformly aggregate these judgments into a final score, implicitly treating every criterion as equally certain and overlooking this heterogeneity. As a result, uncertain judgments remain incorporated into reward estimation without distinction, potentially yielding misleading training signals for downstream reinforcement learning (RL). To address this limitation, we propose Uncertainty-aware Rubric Weighting (URW), a training-free framework that quantifies criterion-level judgment uncertainty via conformal calibration. Specifically, URW elicits a soft uncertainty signal from a fixed pool of paraphrased judgment templates and converts it into a per-criterion weight using split-conformal $p$-values with provable coverage guarantees. Extensive experiments demonstrate that URW consistently improves pairwise preference accuracy and delivers stronger downstream RL alignment.",
@@ -1033,232 +1275,6 @@
         "matched": [
           "learning",
           "machine"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-16T14:50:26.106785+00:00"
-    },
-    {
-      "id": "2610.21537",
-      "title": "Functional Subnetwork Localization for Efficient Continual Learning in Large Language Models",
-      "abstract": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity. In contrast, continual learning in large language models (LLMs) remains vulnerable to catastrophic forgetting. A promising direction is to identify functionally specialized subnetworks within LLMs that enable targeted and resource-efficient adaptation. Using gradient-attribution profiling, we localize cognition-associated functional subnetworks exhibiting extremely low mutual overlap. Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions. Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting. Subspace-overlap and principal-angle analyses further indicate that localized updates help preserve pre-trained representations, highlighting functional subnetwork localization as a practical approach to efficient and stable continual learning in LLMs.",
-      "authors": [
-        "Shuoran Jiang",
-        "Wentao Zhu",
-        "Yang Xiang",
-        "Dongfeng Li",
-        "Yunan Zhang",
-        "Mengchen Zhao",
-        "Yuhui Guo",
-        "Kai Chen",
-        "Youcheng Pan",
-        "Xiangping Wu",
-        "Qingcai Chen"
-      ],
-      "published": "2026-10-15T09:03:08Z",
-      "updated": "2026-10-15T09:03:08Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.21537v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.21537v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6045,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.6045,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1813,
-          "matched": [
-            "functional"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6268,
-        "relevance": 0.6408,
-        "quality": 0.48,
-        "novelty": 0.8,
-        "freshness": 0.6866,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
-        "problem": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity.",
-        "method": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
-        "evidence": "Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-17T13:42:32.157333+00:00"
-    },
-    {
-      "id": "2610.22293",
-      "title": "Towards Continual Learning: Mitigating Forgetting With Subspace Tuning",
-      "abstract": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs. Recent works connect forgetting to how far, and along which directions, fine-tuning moves the weights. On-policy methods such as reinforcement learning and on-policy distillation avoid updating the principal singular directions of weight matrices and thus forget less. In contrast, SFT concentrates updates along these directions and is susceptible to catastrophic forgetting. In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions. SST is optimizer-agnostic and composes well with fine-tuning recipes including SFT and self-distillation. SST combines tight subspace protection, dense gradient estimation, and a simple refresh mechanism, enabling stronger learning than prior orthogonal fine-tuning methods. With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance. This behavior strengthens with model and data size and nearly eliminates forgetting in the large-model regime. SST also keeps the model close to its base distribution, inducing $2$--$4\\times$ less KL drift than the baseline recipes. Overall, SST advances the learning--forgetting Pareto frontier, making it a practical default for fine-tuning pre-trained language models.",
-      "authors": [
-        "Arnav Chavan",
-        "Kusha Sareen",
-        "Rishabh Tiwari",
-        "Abhranil Chandra",
-        "Johan Obando-Ceron",
-        "Kurt Keutzer",
-        "Scott Niekum",
-        "Inderjit S Dhillon",
-        "Devvrit Khatri"
-      ],
-      "published": "2026-10-15T17:44:43Z",
-      "updated": "2026-10-15T17:44:43Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.22293v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22293v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5738,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5738,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0779,
-          "matched": [
-            "data",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0435,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6084,
-        "relevance": 0.5894,
-        "quality": 0.48,
-        "novelty": 0.8558,
-        "freshness": 0.8744,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions.",
-        "problem": "Large language models (LLMs) acquire new skills through fine-tuning, but it can destroy capabilities they already have: catastrophic forgetting remains a central obstacle to continual learning in LLMs.",
-        "method": "In this work, we introduce Subspace Tuning (SST), which restricts each weight update to the bottom singular subspace, eliminating changes along the principal directions.",
-        "evidence": "With these mechanisms, protecting as much as 99\\% of the weight subspace substantially improves retention while preserving strong target-task performance.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
         ],
         "lane": "llm"
       },
