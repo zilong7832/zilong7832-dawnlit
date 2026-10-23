@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-10-22T15:15:21.077508+00:00",
+  "generated_at": "2026-10-23T15:04:37.613853+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 74,
-  "source_total": 74,
+  "source_count": 76,
+  "source_total": 76,
   "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 74,
-  "previously_recommended_count": 372,
-  "eligible_count": 2,
+  "unseen_source_count": 76,
+  "previously_recommended_count": 375,
+  "eligible_count": 4,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-10-22T15:15:21.077508+00:00",
+    "generated_at": "2026-10-23T15:04:37.613853+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -124,41 +124,32 @@
   "semantic_feedback_count": 0,
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
-  "conference_supplement_count": 1,
-  "conference_eligible_count": 149,
-  "conference_pool_updated_at": "2026-10-21T15:13:28.101189+00:00",
-  "conference_source_status": {
-    "ICLR:2026": "ok:223",
-    "ICML:2026": "ok:742",
-    "NeurIPS:2026": "ok:0",
-    "ACL:2026": "ok:478",
-    "EMNLP:2026": "awaiting_verified_schedule",
-    "ICLR:2025": "ok:213",
-    "ICML:2025": "ok:344",
-    "NeurIPS:2025": "ok:808",
-    "EMNLP:2025": "awaiting_verified_schedule",
-    "ACL:2025": "awaiting_verified_schedule"
-  },
+  "conference_supplement_count": 0,
+  "conference_eligible_count": 0,
+  "conference_pool_updated_at": null,
+  "conference_source_status": {},
   "papers": [
     {
-      "id": "2610.29895",
-      "title": "Automated Materials Data and Knowledge Extraction using Machine Learning and Large Language Models",
-      "abstract": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature. This review traces the evolution of these methods from heuristic, rule-based pipelines through natural language processing (NLP) models and transformer-based encoders to, lastly, large language models (LLMs) and agentic systems capable of extracting materials information across multiple modalities, including text, tables, and figures. Beside construction of large, queryable materials databases and knowledge graphs that support downstream materials discovery, we discuss how these advances have enabled new capabilities, such as, generic question answering across materials science, AI co-scientists and chatbots for research assistance, and closed-loop optimization and discovery when integrated with autonomous laboratories. We critically assess the datasets generated using these approaches, their extraction accuracy and computational costs, and the respective strengths and limitations of different methodologies, and even provide practical guidelines for developing more reliable and scalable materials data extraction pipelines. Finally, we identify key open challenges, including the extraction of full materials structure-property-processing-performance tetrahedron at the sample level, the scarcity of reliable benchmark datasets for systematic evaluation, and the resolution of non-standard materials terminology across different document modalities.",
+      "id": "2610.31421",
+      "title": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
+      "abstract": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities. Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability. Our analysis spans pretrained language models up to 3B parameters and controlled tasks. The experiments provide evidence for a shared inductive bias toward learning from context: grown and looped models rely more on information in context and, compared with a full-depth dense reference, acquire ICL earlier in controlled tasks and retain it more strongly when learning fixed associations in the weights is also possible. Tracing attention heads through training reveals that depth growth propagates early induction heads across layers. Ablations show that grown and looped models rely more strongly on induction-ranked heads for both few-shot performance and later-token prediction. Together, these findings provide evidence for a shared inductive bias toward learning from context and suggest that (soft) parameter reuse shapes how this ability develops and which attention mechanisms support it.",
       "authors": [
-        "Aravindan Kamatchi Sundaram",
-        "B. Pabitramohan Prusty",
-        "Rohit Batra"
+        "Ferdinand Kapl",
+        "Kaitlin Maile",
+        "Stefan Bauer",
+        "Johannes von Oswald"
       ],
-      "published": "2026-10-21T15:38:05Z",
-      "updated": "2026-10-21T15:38:05Z",
+      "published": "2026-10-22T15:21:22Z",
+      "updated": "2026-10-22T15:21:22Z",
       "categories": [
-        "cond-mat.mtrl-sci",
-        "cs.AI"
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
       ],
-      "primary_category": "cond-mat.mtrl-sci",
-      "abs_url": "https://arxiv.org/abs/2610.29895v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.29895v1",
-      "comment": "25 pages, 5 figures",
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31421v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31421v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -166,80 +157,65 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "large language model",
-        "large language models",
         "language model",
-        "language models",
-        "llms"
+        "language models"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.7844,
+          "score": 0.5263,
           "matched": [
-            "learning",
-            "machine",
-            "reliable"
+            "learning"
           ]
         },
         {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4554,
+          "score": 0.5263,
           "matched": [
             "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1598,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1598,
-          "matched": [
-            "data"
           ]
         },
         {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.1475,
+          "score": 0.1343,
           "matched": [
-            "evaluation"
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
           ]
         }
       ],
       "scores": {
-        "total": 0.7323,
-        "relevance": 0.7506,
-        "quality": 0.58,
-        "novelty": 0.8549,
-        "freshness": 0.8594,
+        "total": 0.5854,
+        "relevance": 0.5532,
+        "quality": 0.49,
+        "novelty": 0.8495,
+        "freshness": 0.8588,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "dataset evidence"
+        "ablation study",
+        "experiments"
       ],
       "summary": {
-        "takeaway": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature.",
-        "problem": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature.",
-        "method": "This review traces the evolution of these methods from heuristic, rule-based pipelines through natural language processing (NLP) models and transformer-based encoders to, lastly, large language models (LLMs) and agentic systems capable of extracting materials information across multiple modalities, including text, tables, and figures.",
-        "evidence": "Beside construction of large, queryable materials databases and knowledge graphs that support downstream materials discovery, we discuss how these advances have enabled new capabilities, such as, generic question answering across materials science, AI co-scientists and chatbots for research assistance, and closed-loop optimization and discovery when integrated with autonomous laboratories.",
+        "takeaway": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
+        "problem": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
+        "method": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
+        "evidence": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -252,44 +228,29 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning",
-          "machine",
-          "reliable"
+          "learning"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.29985",
-      "title": "TIDE: Tree-Induced Fine-Grained Diagnostic Evaluation from Model Behaviors",
-      "abstract": "Benchmark performance is the dominant standard for comparing large language models (LLMs), typically summarized by a single aggregate score, such as accuracy, pass rate, or rubric score. This aggregate score provides limited information about a model's underlying capabilities, yet understanding these capabilities is crucial for model development and evaluation. To this end, we propose Tree-Induced Diagnostic Evaluation (TIDE), which recasts diagnostic evaluation as behavior-driven decision-tree induction to perform fine-grained capability diagnosis. TIDE recursively builds a hierarchical capability tree from benchmark samples and model scores: at each node, an LLM judge proposes candidate splits and performs sample-to-group classification, and behavior-based information gain selects among them. We apply TIDE to five models across four benchmarks to demonstrate its effectiveness, and find fine-grained capability contrasts invisible at the aggregate level: Claude Opus 4.6 achieves 100% on microeconomic market reasoning where GPT-5.4 scores 83.3%, but trails GPT-5.4 on contract law reasoning with 77.8% versus 88.9%. We hope TIDE can be extended to past and future benchmarks so that the rich behavioral signal in evaluation results is fully leveraged for understanding model capabilities.",
+      "id": "2610.31467",
+      "title": "From Structured Records to Patient Narratives: Preserving Clinical Alignment in LLM-Generated Health Summaries",
+      "abstract": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge. Large Language Models (LLMs) offer a promising mechanism for translating structured clinical information into readable narratives, but this process may introduce semantic drift, where clinically precise meaning is distorted during simplification. We investigate evidence-grounded health summarization for menstrual health monitoring using a constrained generation framework that combines structured evidence conditioning with Retrieval-Augmented Generation (RAG) using a prompt-based constrained generation framework. We evaluate semantic alignment using Natural Language Inference (NLI), atomic factuality metrics, and readability measures. Across three LLMs and 4,500 generated summaries, explicit grounding constraints consistently improve clinical alignment, particularly by improving uncertainty preservation and, once faithfulness is evaluated against retrieved evidence, generally preserving or improving faithfulness, while effects on omission remain model-dependent. We also find that improved clinical alignment comes at the cost of increased reading difficulty and medical terminology. These findings highlight the need to jointly evaluate faithfulness, uncertainty preservation, and readability when developing patient-facing medical LLM systems.",
       "authors": [
-        "Jiayi Chen",
-        "Hui Li",
-        "Yujiong Shen",
-        "Qiyuan Peng",
-        "Yanxin Li",
-        "Chenhao Huang",
-        "Shaofan Liu",
-        "Guoqiang Zhang",
-        "Junjie Ye",
-        "Shihan Dou",
-        "Ming Zhang",
-        "Maxm Pan",
-        "Tao Gui",
-        "Qi Zhang",
-        "Xuanjing Huang"
+        "Bayram Ayadi",
+        "Florian Geissler",
+        "Johanna Schmidhuber"
       ],
-      "published": "2026-10-21T16:27:48Z",
-      "updated": "2026-10-21T16:27:48Z",
+      "published": "2026-10-22T15:58:57Z",
+      "updated": "2026-10-22T15:58:57Z",
       "categories": [
-        "cs.AI",
-        "cs.LG"
+        "cs.CL"
       ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.29985v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.29985v1",
-      "comment": "",
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31467v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31467v1",
+      "comment": "18 pages, 3 figures",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -308,32 +269,50 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.6017,
+          "score": 0.4717,
           "matched": [
-            "evaluation"
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0834,
+          "matched": [
+            "inference",
+            "dependent"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "dependent"
           ]
         }
       ],
       "scores": {
-        "total": 0.5392,
-        "relevance": 0.4814,
-        "quality": 0.48,
-        "novelty": 0.8713,
-        "freshness": 0.8643,
+        "total": 0.4736,
+        "relevance": 0.4029,
+        "quality": 0.41,
+        "novelty": 0.866,
+        "freshness": 0.8625,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "To this end, we propose Tree-Induced Diagnostic Evaluation (TIDE), which recasts diagnostic evaluation as behavior-driven decision-tree induction to perform fine-grained capability diagnosis.",
-        "problem": "Benchmark performance is the dominant standard for comparing large language models (LLMs), typically summarized by a single aggregate score, such as accuracy, pass rate, or rubric score.",
-        "method": "To this end, we propose Tree-Induced Diagnostic Evaluation (TIDE), which recasts diagnostic evaluation as behavior-driven decision-tree induction to perform fine-grained capability diagnosis.",
-        "evidence": "We apply TIDE to five models across four benchmarks to demonstrate its effectiveness, and find fine-grained capability contrasts invisible at the aggregate level: Claude Opus 4.6 achieves 100% on microeconomic market reasoning where GPT-5.4 scores 83.3%, but trails GPT-5.4 on contract law reasoning with 77.8% versus 88.9%.",
+        "takeaway": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge.",
+        "problem": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge.",
+        "method": "We investigate evidence-grounded health summarization for menstrual health monitoring using a constrained generation framework that combines structured evidence conditioning with Retrieval-Augmented Generation (RAG) using a prompt-based constrained generation framework.",
+        "evidence": "Across three LLMs and 4,500 generated summaries, explicit grounding constraints consistently improve clinical alignment, particularly by improving uncertainty preservation and, once faithfulness is evaluated against retrieved evidence, generally preserving or improving faithfulness, while effects on omission remain model-dependent.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -344,117 +323,160 @@
       "recommendation_reason": {
         "topic": "Conformal prediction",
         "matched": [
-          "evaluation"
+          "uncertainty"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "conf:acl:2026:3090-main",
-      "title": "DR-Arena: an Automated Evaluation Framework for Deep Research Agents",
-      "abstract": "As Large Language Models (LLMs) increasingly operate as Deep Research (DR) Agents capable of autonomous investigation and information synthesis, reliable evaluation of their task performance has become a critical bottleneck. Current benchmarks predominantly rely on static datasets, which suffer from several limitations: limited task generality, temporal misalignment, and data contamination. To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation. DR-Arena constructs real-time Information Trees from fresh web trends to ensure the evaluation rubric is synchronized with the live world state, and employs an automated Examiner to generate structured tasks testing two orthogonal capabilities: Deep reasoning and Wide coverage. DR-Arena further adopts Adaptive Evolvement Loop, a state-machine controller that dynamically escalates task complexity based on real-time performance, demanding deeper deduction or wider aggregation until a decisive capability boundary emerges. Experiments with six advanced DR agents demonstrate that DR-Arena achieves a Spearman correlation of 0.94 with the LMSYS Search Arena leaderboard. This represents state-of-the-art alignment with human preferences without any manual efforts, validating DR-Arena as a reliable alternative for costly human adjudication.",
+      "id": "2610.31415",
+      "title": "SyRA-CS: Synthetic-to-Real Adaptation for Code-Switched ASR with Meta-Learning",
+      "abstract": "Code-switched (CS) automatic speech recognition (ASR) remains difficult because real CS speech is scarce and synthetic speech does not fully match it. We investigate whether synthetic CS speech is more useful for learning an adaptation-friendly initialization than for ordinary continual fine-tuning. We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning. For each language pair and pretrained model, we meta-train on the corresponding synthetic CS-FLEURS subset and then adapt using one hour of labeled real target speech. We evaluate four architectural settings: Encoder-CTC, FastConformer-RNN-T, Attention Encoder-Decoder (AED) and Speech-LLM. Experiments cover on Arabic-, French-, German-, and Hindi-English, against synthetic-only transfer, real-only fine-tuning, and continual fine-tuning. SyRA-CS improves over continual fine-tuning on WER in all 16 model-pair comparisons and on CER in 15 of 16, with relative macro WER reductions of 17.7% for XLS-R and 5.3-5.8% for the other three models. The gains hold across the tested models but vary in size across architectures, language pairs and metrics.",
       "authors": [
-        "Yiwen Gao",
-        "Ruochen Zhao",
-        "Yang Deng",
-        "Wenxuan Zhang"
+        "Fadel Thior",
+        "Ahmer Tabassum",
+        "Haania Siddiqui",
+        "Hanan Aldarmaki",
+        "Thamar Solorio"
       ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
+      "published": "2026-10-22T15:17:10Z",
+      "updated": "2026-10-22T15:17:10Z",
       "categories": [
-        "ACL 2026",
-        "Oral"
+        "cs.CL"
       ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31415v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31415v1",
       "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3379,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3379,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4728,
+        "relevance": 0.3379,
+        "quality": 0.61,
+        "novelty": 0.8829,
+        "freshness": 0.8584,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning.",
+        "problem": "Code-switched (CS) automatic speech recognition (ASR) remains difficult because real CS speech is scarce and synthetic speech does not fully match it.",
+        "method": "We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning.",
+        "evidence": "Experiments cover on Arabic-, French-, German-, and Hindi-English, against synthetic-only transfer, real-only fine-tuning, and continual fine-tuning.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.31529",
+      "title": "An Empirical Study of Recent Large Language Models for Knowledge Graph to Text Generation on Standard Benchmarks",
+      "abstract": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language. While fine-tuned encoder-decoder models have long been the standard approach, recent LLMs are becoming increasingly competitive. We benchmark recent LLMs against fine-tuned encoder-decoder models, using reference-based metrics and graph-grounded reference-free LLM-based evaluation validated against human annotations. We observed that recent LLMs substantially narrow, and in several settings close, the gap with fine-tuned models on reference-based metrics, while performing better on graph-grounded metrics. LLM-based evaluation scores show limited correlation with reference-based metrics, suggesting that the two approaches capture different aspects of generation quality. Graph-grounded evaluation reveals that prompted models produce fewer contradictions and triple omissions than fine-tuned models, and these errors increase more rapidly with graph size for fine-tuned models, highlighting differences between the two approaches that reference-based metrics may not fully capture.",
+      "authors": [
+        "Priyanka",
+        "Renaud Delbru",
+        "Souhail Bakkali",
+        "Mickaël Coustaty",
+        "Antoine Doucet"
+      ],
+      "published": "2026-10-22T16:36:35Z",
+      "updated": "2026-10-22T16:36:35Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31529v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31529v1",
+      "comment": "18 pages, 6 figures, 17 tables, Preprint, Under review",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
       "lane": "llm",
       "scope_matches": [
         "large language model",
         "large language models",
         "language model",
         "language models",
-        "llms"
+        "llm"
       ],
       "topics": [
         {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.5716,
+          "score": 0.3804,
           "matched": [
             "evaluation"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3614,
-          "matched": [
-            "machine",
-            "reliable"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1084,
-          "matched": [
-            "time",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1084,
-          "matched": [
-            "time",
-            "data"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "adaptive"
           ]
         }
       ],
       "scores": {
-        "total": 0.6667,
-        "relevance": 0.5512,
-        "quality": 0.88,
-        "novelty": 0.8241,
-        "freshness": 1.0,
+        "total": 0.4341,
+        "relevance": 0.3043,
+        "quality": 0.54,
+        "novelty": 0.8503,
+        "freshness": 0.8663,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "formal bound",
-        "dataset evidence",
-        "quantitative results"
+        "code available",
+        "benchmark evaluation"
       ],
       "summary": {
-        "takeaway": "To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation.",
-        "problem": "As Large Language Models (LLMs) increasingly operate as Deep Research (DR) Agents capable of autonomous investigation and information synthesis, reliable evaluation of their task performance has become a critical bottleneck.",
-        "method": "To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation.",
-        "evidence": "Experiments with six advanced DR agents demonstrate that DR-Arena achieves a Spearman correlation of 0.94 with the LMSYS Search Arena leaderboard.",
+        "takeaway": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language.",
+        "problem": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language.",
+        "method": "While fine-tuned encoder-decoder models have long been the standard approach, recent LLMs are becoming increasingly competitive.",
+        "evidence": "We benchmark recent LLMs against fine-tuned encoder-decoder models, using reference-based metrics and graph-grounded reference-free LLM-based evaluation validated against human annotations.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",

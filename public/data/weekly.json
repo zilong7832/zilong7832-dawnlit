@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T15:15:21.077508+00:00",
+  "generated_at": "2026-10-23T15:04:37.613853+00:00",
   "papers": [
     {
       "id": "2610.29895",
@@ -1093,113 +1093,31 @@
       "recommended_at": "2026-10-19T16:58:35.105974+00:00"
     },
     {
-      "id": "2610.22031",
-      "title": "GraphACM: Graph-based Action Consistency Measurement for Uncertainty Quantification in LLM Agents",
-      "abstract": "Behavioral consistency across repeated executions provides an informative signal for assessing the reliability of large language model (LLM) agents. However, existing approaches typically summarize consistency with a single task-level score, without identifying where behavioral differences occur or whether actions are compared under equivalent decision contexts. We propose a graph-based framework for fine-grained behavioral consistency measurement and uncertainty quantification. Given multiple rollouts of the same task, we merge equivalent states into a directed, action-labeled graph, enabling action comparisons at shared decision states. We introduce node-level and global measures of action consistency, using the global consistency score as a proxy for uncertainty to predict task success or failure. Experiments across three LLMs on ALFWorld, AppWorld, and WebShop demonstrate that our measure is positively associated with task success and achieves an average AUROC of 0.811 for task-success prediction, outperforming the strongest behavioral-consistency baseline (0.729) and verbalized confidence (0.769). These results highlight the effectiveness of state-conditioned behavioral consistency and pinpoint where agent actions agree.",
+      "id": "2610.21537",
+      "title": "Functional Subnetwork Localization for Efficient Continual Learning in Large Language Models",
+      "abstract": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity. In contrast, continual learning in large language models (LLMs) remains vulnerable to catastrophic forgetting. A promising direction is to identify functionally specialized subnetworks within LLMs that enable targeted and resource-efficient adaptation. Using gradient-attribution profiling, we localize cognition-associated functional subnetworks exhibiting extremely low mutual overlap. Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions. Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting. Subspace-overlap and principal-angle analyses further indicate that localized updates help preserve pre-trained representations, highlighting functional subnetwork localization as a practical approach to efficient and stable continual learning in LLMs.",
       "authors": [
-        "Yaxin Ma",
-        "Wenbo Zhang",
-        "Satya Krishna Pothapragada",
-        "Alina Zare"
+        "Shuoran Jiang",
+        "Wentao Zhu",
+        "Yang Xiang",
+        "Dongfeng Li",
+        "Yunan Zhang",
+        "Mengchen Zhao",
+        "Yuhui Guo",
+        "Kai Chen",
+        "Youcheng Pan",
+        "Xiangping Wu",
+        "Qingcai Chen"
       ],
-      "published": "2026-10-15T15:07:15Z",
-      "updated": "2026-10-15T15:07:15Z",
+      "published": "2026-10-15T09:03:08Z",
+      "updated": "2026-10-15T09:03:08Z",
       "categories": [
         "cs.AI"
       ],
       "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.22031v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22031v1",
+      "abs_url": "https://arxiv.org/abs/2610.21537v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.21537v1",
       "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7745,
-          "matched": [
-            "uncertainty",
-            "prediction"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6402,
-        "relevance": 0.6196,
-        "quality": 0.54,
-        "novelty": 0.8656,
-        "freshness": 0.8588,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We propose a graph-based framework for fine-grained behavioral consistency measurement and uncertainty quantification.",
-        "problem": "Behavioral consistency across repeated executions provides an informative signal for assessing the reliability of large language model (LLM) agents.",
-        "method": "We propose a graph-based framework for fine-grained behavioral consistency measurement and uncertainty quantification.",
-        "evidence": "Experiments across three LLMs on ALFWorld, AppWorld, and WebShop demonstrate that our measure is positively associated with task success and achieves an average AUROC of 0.811 for task-success prediction, outperforming the strongest behavioral-consistency baseline (0.729) and verbalized confidence (0.769).",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "prediction"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-16T14:50:26.106785+00:00"
-    },
-    {
-      "id": "2610.22344",
-      "title": "MLExpert: Towards a Generalist Agentic Model for Autonomous Machine Learning Engineering",
-      "abstract": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI). Workflow-driven machine learning engineering (MLE) systems provide a practical path toward this pursuit through complex orchestration that manages long-horizon experimentation, while recent MLE systems adopt model-directed interaction, allowing models to autonomously organize experiments and adapt optimization strategies based on execution feedback. However, feedback from each experiment reflects several preceding decisions, and a long MLE run contains many such costly experiments. Training must therefore select useful supervision from long interaction trajectories and learn from intermediate outcomes. We propose a post-training method for autonomous long-horizon MLE optimization and apply it to train MLExpert, a 35B Mixture-of-Experts agentic model. We design the Kaggle-MLE Factory to construct executable tasks and an interaction harness for model-directed experimentation. Hierarchical agentic SFT transfers general tool-use and coding capabilities to MLE through outcome-guided supervision. Windowed Interaction RL (WIRL) treats the multi-turn decisions between successive experiment results as an execution window and assigns it a shared outcome-based reward. Asynchronous collection and policy correction support policy updates before the trajectory ends. On MLE-Bench Lite, MLExpert improves the average medal rate of the base model from 37.9% to 72.7%, achieving performance comparable to larger frontier models such as Kimi-K3 and GLM-5.3. Further experiments show that MLExpert improves performance on NatureBench Lite, agent scaffold optimization, and algorithm optimization, suggesting that the learned optimization capability generalizes to other tasks.",
-      "authors": [
-        "Shangheng Du",
-        "Jinxin Shi",
-        "Shuaiyu Zhang",
-        "Yiming Wu",
-        "Junpeng Zhao",
-        "Shiyang Feng",
-        "Xin Li",
-        "Liang He",
-        "Xiangchao Yan",
-        "Bo Zhang"
-      ],
-      "published": "2026-10-15T17:56:32Z",
-      "updated": "2026-10-15T17:56:32Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.22344v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22344v1",
-      "comment": "Code: https://github.com/InternScience/MLExpert Model: https://huggingface.co/InternScience/MLExpert",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -1218,37 +1136,149 @@
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.6676,
+          "score": 0.6045,
           "matched": [
-            "learning",
-            "machine"
+            "learning"
           ]
         },
         {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4321,
+          "score": 0.6045,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
+          "id": "functional_time_series",
+          "name": "Functional time series",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.1813,
           "matched": [
-            "window"
+            "functional"
           ]
         }
       ],
       "scores": {
-        "total": 0.6304,
-        "relevance": 0.6289,
+        "total": 0.6268,
+        "relevance": 0.6408,
+        "quality": 0.48,
+        "novelty": 0.8,
+        "freshness": 0.6866,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "problem": "Biological intelligence continually adapts to new information while retaining prior skills through localized plasticity.",
+        "method": "Building on this finding, we propose Function-isolated Memory-Efficient Optimization (CiMEO), a continual learning framework that routes each training example to its corresponding functional subnetwork, restricting parameter updates and optimizer states to selected regions.",
+        "evidence": "Across 1.4 million sequential instructions, CiMEO achieves the highest average performance among the compared methods on five generative benchmarks spanning programming, examination-style tasks, and mathematical reasoning, while mitigating catastrophic forgetting.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-17T13:42:32.157333+00:00"
+    },
+    {
+      "id": "2610.19968",
+      "title": "Safe-FCL: Continual Risk Awareness and Fine-Grained Safety Aggregation for Federated Continual Learning of LLMs",
+      "abstract": "Federated fine-tuning enables large language models (LLMs) to learn collaboratively from distributed client data, but malicious client updates can compromise global model safety. As federated tasks evolve, changing malicious update patterns challenge the ability of existing defenses to maintain reliable risk detection over time. To address this challenge, we propose Safe-FCL, a framework integrating continual risk awareness with fine-grained safety aggregation for federated continual learning of LLMs. Specifically, the Continual Risk Awareness (CRA) mechanism learns emerging risk patterns across sequential tasks and constrains detector updates using a protective subspace derived from historical features, mitigating forgetting of previously learned malicious patterns while adapting to new risks. To translate risk awareness into aggregation-level safety control, the Fine-Grained Safety Aggregation (FGSA) mechanism combines client-level risk assessments from CRA with module-level deviations from historical update behavior to adaptively regulate aggregation contributions, suppressing potentially malicious updates while minimizing unnecessary restrictions on benign updates. Extensive experiments demonstrate that Safe-FCL outperforms current SOTA methods, improving global-model Rule and MD-Judge scores in federated continual learning by 0.41% and 0.64%, respectively, while increasing average risk recognition accuracy by 2.01%.",
+      "authors": [
+        "Shuaijie Ma",
+        "Yongkang Hu",
+        "Yu Cheng",
+        "Jiuan Zhou",
+        "Yi Xie",
+        "Yushuo Zhang",
+        "Zhaoxia Yin"
+      ],
+      "published": "2026-10-14T10:50:59Z",
+      "updated": "2026-10-14T10:50:59Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.19968v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.19968v1",
+      "comment": "16 pages, 4 figures, 11 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6044,
+          "matched": [
+            "learning",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.536,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0835,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0835,
+          "matched": [
+            "time",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5974,
+        "relevance": 0.6074,
         "quality": 0.47,
-        "novelty": 0.8385,
-        "freshness": 0.8756,
+        "novelty": 0.809,
+        "freshness": 0.5544,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
@@ -1257,10 +1287,10 @@
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "We propose a post-training method for autonomous long-horizon MLE optimization and apply it to train MLExpert, a 35B Mixture-of-Experts agentic model.",
-        "problem": "Large language models (LLMs) are expanding from assisting scientific research and engineering to autonomously developing and improving AI systems, advancing AI for AI (AI4AI) as a pathway toward recursive self-improvement (RSI).",
-        "method": "We propose a post-training method for autonomous long-horizon MLE optimization and apply it to train MLExpert, a 35B Mixture-of-Experts agentic model.",
-        "evidence": "Workflow-driven machine learning engineering (MLE) systems provide a practical path toward this pursuit through complex orchestration that manages long-horizon experimentation, while recent MLE systems adopt model-directed interaction, allowing models to autonomously organize experiments and adapt optimization strategies based on execution feedback.",
+        "takeaway": "To address this challenge, we propose Safe-FCL, a framework integrating continual risk awareness with fine-grained safety aggregation for federated continual learning of LLMs.",
+        "problem": "Federated fine-tuning enables large language models (LLMs) to learn collaboratively from distributed client data, but malicious client updates can compromise global model safety.",
+        "method": "To address this challenge, we propose Safe-FCL, a framework integrating continual risk awareness with fine-grained safety aggregation for federated continual learning of LLMs.",
+        "evidence": "Extensive experiments demonstrate that Safe-FCL outperforms current SOTA methods, improving global-model Rule and MD-Judge scores in federated continual learning by 0.41% and 0.64%, respectively, while increasing average risk recognition accuracy by 2.01%.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -1274,11 +1304,11 @@
         "topic": "Trustworthy machine learning",
         "matched": [
           "learning",
-          "machine"
+          "reliable"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-16T14:50:26.106785+00:00"
+      "recommended_at": "2026-10-17T13:42:32.157333+00:00"
     }
   ]
 }

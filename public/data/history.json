@@ -1,6 +1,373 @@
 {
-  "generated_at": "2026-10-22T15:15:21.077508+00:00",
+  "generated_at": "2026-10-23T15:04:37.613853+00:00",
   "papers": [
+    {
+      "id": "2610.31421",
+      "title": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
+      "abstract": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities. Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability. Our analysis spans pretrained language models up to 3B parameters and controlled tasks. The experiments provide evidence for a shared inductive bias toward learning from context: grown and looped models rely more on information in context and, compared with a full-depth dense reference, acquire ICL earlier in controlled tasks and retain it more strongly when learning fixed associations in the weights is also possible. Tracing attention heads through training reveals that depth growth propagates early induction heads across layers. Ablations show that grown and looped models rely more strongly on induction-ranked heads for both few-shot performance and later-token prediction. Together, these findings provide evidence for a shared inductive bias toward learning from context and suggest that (soft) parameter reuse shapes how this ability develops and which attention mechanisms support it.",
+      "authors": [
+        "Ferdinand Kapl",
+        "Kaitlin Maile",
+        "Stefan Bauer",
+        "Johannes von Oswald"
+      ],
+      "published": "2026-10-22T15:21:22Z",
+      "updated": "2026-10-22T15:21:22Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31421v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31421v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5263,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5263,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1343,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5854,
+        "relevance": 0.5532,
+        "quality": 0.49,
+        "novelty": 0.8495,
+        "freshness": 0.8588,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "experiments"
+      ],
+      "summary": {
+        "takeaway": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
+        "problem": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
+        "method": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
+        "evidence": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-23T15:04:37.613853+00:00"
+    },
+    {
+      "id": "2610.31467",
+      "title": "From Structured Records to Patient Narratives: Preserving Clinical Alignment in LLM-Generated Health Summaries",
+      "abstract": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge. Large Language Models (LLMs) offer a promising mechanism for translating structured clinical information into readable narratives, but this process may introduce semantic drift, where clinically precise meaning is distorted during simplification. We investigate evidence-grounded health summarization for menstrual health monitoring using a constrained generation framework that combines structured evidence conditioning with Retrieval-Augmented Generation (RAG) using a prompt-based constrained generation framework. We evaluate semantic alignment using Natural Language Inference (NLI), atomic factuality metrics, and readability measures. Across three LLMs and 4,500 generated summaries, explicit grounding constraints consistently improve clinical alignment, particularly by improving uncertainty preservation and, once faithfulness is evaluated against retrieved evidence, generally preserving or improving faithfulness, while effects on omission remain model-dependent. We also find that improved clinical alignment comes at the cost of increased reading difficulty and medical terminology. These findings highlight the need to jointly evaluate faithfulness, uncertainty preservation, and readability when developing patient-facing medical LLM systems.",
+      "authors": [
+        "Bayram Ayadi",
+        "Florian Geissler",
+        "Johanna Schmidhuber"
+      ],
+      "published": "2026-10-22T15:58:57Z",
+      "updated": "2026-10-22T15:58:57Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31467v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31467v1",
+      "comment": "18 pages, 3 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0834,
+          "matched": [
+            "inference",
+            "dependent"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "dependent"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4736,
+        "relevance": 0.4029,
+        "quality": 0.41,
+        "novelty": 0.866,
+        "freshness": 0.8625,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge.",
+        "problem": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge.",
+        "method": "We investigate evidence-grounded health summarization for menstrual health monitoring using a constrained generation framework that combines structured evidence conditioning with Retrieval-Augmented Generation (RAG) using a prompt-based constrained generation framework.",
+        "evidence": "Across three LLMs and 4,500 generated summaries, explicit grounding constraints consistently improve clinical alignment, particularly by improving uncertainty preservation and, once faithfulness is evaluated against retrieved evidence, generally preserving or improving faithfulness, while effects on omission remain model-dependent.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-23T15:04:37.613853+00:00"
+    },
+    {
+      "id": "2610.31415",
+      "title": "SyRA-CS: Synthetic-to-Real Adaptation for Code-Switched ASR with Meta-Learning",
+      "abstract": "Code-switched (CS) automatic speech recognition (ASR) remains difficult because real CS speech is scarce and synthetic speech does not fully match it. We investigate whether synthetic CS speech is more useful for learning an adaptation-friendly initialization than for ordinary continual fine-tuning. We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning. For each language pair and pretrained model, we meta-train on the corresponding synthetic CS-FLEURS subset and then adapt using one hour of labeled real target speech. We evaluate four architectural settings: Encoder-CTC, FastConformer-RNN-T, Attention Encoder-Decoder (AED) and Speech-LLM. Experiments cover on Arabic-, French-, German-, and Hindi-English, against synthetic-only transfer, real-only fine-tuning, and continual fine-tuning. SyRA-CS improves over continual fine-tuning on WER in all 16 model-pair comparisons and on CER in 15 of 16, with relative macro WER reductions of 17.7% for XLS-R and 5.3-5.8% for the other three models. The gains hold across the tested models but vary in size across architectures, language pairs and metrics.",
+      "authors": [
+        "Fadel Thior",
+        "Ahmer Tabassum",
+        "Haania Siddiqui",
+        "Hanan Aldarmaki",
+        "Thamar Solorio"
+      ],
+      "published": "2026-10-22T15:17:10Z",
+      "updated": "2026-10-22T15:17:10Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31415v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31415v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3379,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3379,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4728,
+        "relevance": 0.3379,
+        "quality": 0.61,
+        "novelty": 0.8829,
+        "freshness": 0.8584,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning.",
+        "problem": "Code-switched (CS) automatic speech recognition (ASR) remains difficult because real CS speech is scarce and synthetic speech does not fully match it.",
+        "method": "We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning.",
+        "evidence": "Experiments cover on Arabic-, French-, German-, and Hindi-English, against synthetic-only transfer, real-only fine-tuning, and continual fine-tuning.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-23T15:04:37.613853+00:00"
+    },
+    {
+      "id": "2610.31529",
+      "title": "An Empirical Study of Recent Large Language Models for Knowledge Graph to Text Generation on Standard Benchmarks",
+      "abstract": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language. While fine-tuned encoder-decoder models have long been the standard approach, recent LLMs are becoming increasingly competitive. We benchmark recent LLMs against fine-tuned encoder-decoder models, using reference-based metrics and graph-grounded reference-free LLM-based evaluation validated against human annotations. We observed that recent LLMs substantially narrow, and in several settings close, the gap with fine-tuned models on reference-based metrics, while performing better on graph-grounded metrics. LLM-based evaluation scores show limited correlation with reference-based metrics, suggesting that the two approaches capture different aspects of generation quality. Graph-grounded evaluation reveals that prompted models produce fewer contradictions and triple omissions than fine-tuned models, and these errors increase more rapidly with graph size for fine-tuned models, highlighting differences between the two approaches that reference-based metrics may not fully capture.",
+      "authors": [
+        "Priyanka",
+        "Renaud Delbru",
+        "Souhail Bakkali",
+        "Mickaël Coustaty",
+        "Antoine Doucet"
+      ],
+      "published": "2026-10-22T16:36:35Z",
+      "updated": "2026-10-22T16:36:35Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31529v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31529v1",
+      "comment": "18 pages, 6 figures, 17 tables, Preprint, Under review",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3804,
+          "matched": [
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4341,
+        "relevance": 0.3043,
+        "quality": 0.54,
+        "novelty": 0.8503,
+        "freshness": 0.8663,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation"
+      ],
+      "summary": {
+        "takeaway": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language.",
+        "problem": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language.",
+        "method": "While fine-tuned encoder-decoder models have long been the standard approach, recent LLMs are becoming increasingly competitive.",
+        "evidence": "We benchmark recent LLMs against fine-tuned encoder-decoder models, using reference-based metrics and graph-grounded reference-free LLM-based evaluation validated against human annotations.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-23T15:04:37.613853+00:00"
+    },
     {
       "id": "2610.29895",
       "title": "Automated Materials Data and Knowledge Extraction using Machine Learning and Large Language Models",
@@ -9978,427 +10345,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-02T16:15:57.777021+00:00"
-    },
-    {
-      "id": "2610.01963",
-      "title": "Counterfactual Auditing of Bias in Open-Source Large Language Models for Clinical Triage",
-      "abstract": "Emergency department (ED) triage is a high-stakes prioritization task in which demographic, socioeconomic, and system-context information may improperly influence acuity assignment. Although open-source large language models (LLMs) are increasingly considered for local and privacy-preserving clinical decision support, it remains unclear how counterfactual bias varies across model families, sizes, medical-domain models, and domain-adapted models. We present a comparative counterfactual audit of ten open-source LLMs for pediatric Emergency Severity Index (ESI) prediction. Starting from real and handbook-style clinical vignettes, we construct paired counterfactual variants that change only one injected demographic, socioeconomic, healthcare-access, behavioral, social, or system-context variable while holding the clinical presentation fixed. Models include Qwen2.5-7B, Qwen2.5-14B-Instruct, a QLoRA fine-tuned Qwen2.5-7B, MedGemma variants, MedLLaMA2-7B, GPT-OSS-20B, and GPT-OSS-120B. We measure any counterfactual shift, undertriage, overtriage, shifts greater than one ESI level, mean shift, and mean absolute shift. Counterfactual sensitivity varied substantially and did not consistently decrease with larger model size or medical-domain pretraining. The fine-tuned Qwen2.5-7B showed the lowest overall sensitivity, with a 5.27% any-shift rate and mean absolute shift of 0.0534, versus 16.02% and 0.1706 for the base model. Several larger or medical-domain models showed more significant shifts. Stratified and correlation analyses further revealed clinically important directionality and shared failure patterns hidden by aggregate rates. These findings support counterfactual auditing as a lightweight, clinically interpretable framework for comparing fairness risks in open-source LLMs before clinical deployment.",
-      "authors": [
-        "Manar Aljohani",
-        "Brandon Ho",
-        "Kenneth McKinley",
-        "Dennis Ren",
-        "Xuan Wang"
-      ],
-      "published": "2026-10-01T16:17:43Z",
-      "updated": "2026-10-01T16:17:43Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.01963v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.01963v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4519,
-          "matched": [
-            "auditing"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1521,
-          "matched": [
-            "prediction"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4833,
-        "relevance": 0.3919,
-        "quality": 0.49,
-        "novelty": 0.877,
-        "freshness": 0.8573,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "open source",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We present a comparative counterfactual audit of ten open-source LLMs for pediatric Emergency Severity Index (ESI) prediction.",
-        "problem": "Emergency department (ED) triage is a high-stakes prioritization task in which demographic, socioeconomic, and system-context information may improperly influence acuity assignment.",
-        "method": "These findings support counterfactual auditing as a lightweight, clinically interpretable framework for comparing fairness risks in open-source LLMs before clinical deployment.",
-        "evidence": "We present a comparative counterfactual audit of ten open-source LLMs for pediatric Emergency Severity Index (ESI) prediction.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "auditing"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-02T16:15:57.777021+00:00"
-    },
-    {
-      "id": "2610.02126",
-      "title": "Local Support Learning",
-      "abstract": "We explore catastrophic forgetting in the context of large pre-trained models. By considering forgetting as a geometric problem in the input space of each weight matrix, we uncover a natural retention objective under which updates produced by gradient-based optimizers are suboptimal. Following this observation, we propose Local Support Learning (LSL), a general-purpose framework that augments gradient-based training for retention of prior capabilities without access to prior data. During a new learning phase, LSL pairs two components with distinct roles: a standard weight adapter, trained as usual to minimize the loss, and a gating function that enables the adapter only on input activations from its own training distribution, making the update local to that distribution. The key challenge is that this gate must route data from all learning phases while training only on data from the current one. We address this with a gate based on a Gaussian Mixture Model (GMM), whose likelihood decays rapidly away from its training data, giving it a natural tendency to stay closed on data from prior phases. We show that this post-training approach can resolve forgetting in LLMs of up to 7 billion parameters, retaining both pretrained and finetuned capabilities across multiple training phases, while being efficient in memory and compute, robust to hyperparameter choice, and showing scaling potential.",
-      "authors": [
-        "Assaf Ben-Kish",
-        "Akarsh Kumar",
-        "James Glass",
-        "Raja Giryes"
-      ],
-      "published": "2026-10-01T17:39:03Z",
-      "updated": "2026-10-01T17:39:03Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.02126v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02126v1",
-      "comment": "Website and code: https://assafbk.github.io/lsl",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3806,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3806,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0719,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0719,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4674,
-        "relevance": 0.395,
-        "quality": 0.41,
-        "novelty": 0.8536,
-        "freshness": 0.8654,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Following this observation, we propose Local Support Learning (LSL), a general-purpose framework that augments gradient-based training for retention of prior capabilities without access to prior data.",
-        "problem": "We explore catastrophic forgetting in the context of large pre-trained models.",
-        "method": "Following this observation, we propose Local Support Learning (LSL), a general-purpose framework that augments gradient-based training for retention of prior capabilities without access to prior data.",
-        "evidence": "Following this observation, we propose Local Support Learning (LSL), a general-purpose framework that augments gradient-based training for retention of prior capabilities without access to prior data.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-02T16:15:57.777021+00:00"
-    },
-    {
-      "id": "2609.40265",
-      "title": "OpenTSLM TeeMoE: A Unified Time-Series Language Model for Forecasting, Contextual Prediction, and Reasoning",
-      "abstract": "Real-world time-series applications increasingly require models that can handle time series forecasting, context-conditioned prediction, and language-based temporal reasoning. Yet current time-series foundation models remain fragmented across these capabilities: numerical specialists often provide the strongest forecasts, while language-based models offer broader contextual understanding and analysis. A central challenge is to unify these heterogeneous capabilities without reducing their individual performance. We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists. We independently train three low-rank experts for forecast aggregation, native forecasting, and temporal analysis over a shared backbone. A learned LoRA mixture-of-experts controller then weights their frozen parameter updates for each request. Our proposed model achieves strong performance on widely used benchmarks for time series forecasting, context-conditioned prediction, and language-based temporal reasoning, ranking among the top three on GIFT-Eval by mean MASE rank, Context is Key by RCRPS, and TimeSeriesExam by accuracy.",
-      "authors": [
-        "Tony Chen",
-        "Timo Stoffregen",
-        "Maxwell Xu",
-        "Thomas Kaar",
-        "Martin Maritsch",
-        "Geremia Pompei",
-        "Nicolas Zumarraga",
-        "Robert Jakob",
-        "Paul Schmiedmayer",
-        "Patrick Langer",
-        "Juncheng Liu"
-      ],
-      "published": "2026-09-30T17:43:22Z",
-      "updated": "2026-09-30T17:43:22Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2609.40265v1",
-      "pdf_url": "https://arxiv.org/pdf/2609.40265v1",
-      "comment": "39 pages, 2 figures. Code: https://github.com/OpenTSLM/OpenTSLM-TeeMoE ; model: https://huggingface.co/OpenTSLM/TeeMoE",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "foundation model",
-        "foundation models"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4664,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.2313,
-          "matched": [
-            "series",
-            "time",
-            "analysis"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.2202,
-          "matched": [
-            "series",
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5068,
-        "relevance": 0.4634,
-        "quality": 0.4,
-        "novelty": 0.8256,
-        "freshness": 0.8613,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation"
-      ],
-      "summary": {
-        "takeaway": "We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists.",
-        "problem": "Real-world time-series applications increasingly require models that can handle time series forecasting, context-conditioned prediction, and language-based temporal reasoning.",
-        "method": "We introduce OpenTSLM TeeMoE, a generalist time-series language model that can forecast directly from observed time series, reason over textual context and temporal patterns, and synthesize and refine predictions from external numerical forecasting specialists.",
-        "evidence": "Our proposed model achieves strong performance on widely used benchmarks for time series forecasting, context-conditioned prediction, and language-based temporal reasoning, ranking among the top three on GIFT-Eval by mean MASE rank, Context is Key by RCRPS, and TimeSeriesExam by accuracy.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-01T17:01:28.757049+00:00"
-    },
-    {
-      "id": "conf:acl:2026:1925-main",
-      "title": "AdvancedIF: Rubric-Based Benchmarking and Reinforcement Learning for Advancing LLM Instruction Following",
-      "abstract": "Recent progress in large language models (LLMs) has led to impressive performance on a range of tasks, yet advanced instruction following (IF)—especially for complex, multi-turn, and system-prompted instructions—remains a significant challenge. Rigorous evaluation and effective training for such capabilities are hindered by the lack of high-quality, human-annotated benchmarks and reliable, interpretable reward signals. In this work, we introduce AdvancedIF, a comprehensive benchmark featuring over 1,600 prompts and expert-curated rubrics that assess LLMs’ ability to follow complex, multi-turn, and system-level instructions. We also open-source the evaluation script of AdvancedIF. We further propose RIFL (Rubric-based Instruction-Following Learning), a novel post-training pipeline that leverages rubric generation, a finetuned rubric verifier, and reward shaping to enable effective reinforcement learning for instruction following. Extensive experiments demonstrate that RIFL substantially improves the instruction-following abilities of LLMs, achieving a 6.7% absolute gain on AdvancedIF and strong results on public benchmarks. Our ablation studies confirm the effectiveness of each component in RIFL. This work establishes rubrics as a powerful tool for both training and evaluating advanced IF in LLMs, paving the way for more capable and reliable AI systems.",
-      "authors": [
-        "Yun He",
-        "Wenzhe Li",
-        "Hejia Zhang",
-        "Songlin Li",
-        "Karishma Mandyam",
-        "Sopan Khosla",
-        "Yuanhao Xiong",
-        "Nanshu Wang",
-        "Xiaoliang Peng",
-        "Beibin Li",
-        "Shengjie Bi",
-        "Shishir G Patil",
-        "Qi Qi",
-        "Shengyu Feng",
-        "Julian Katz-Samuels",
-        "Richard Yuanzhe Pang",
-        "Sujan Kumar Gonugondla",
-        "Hunter Lang",
-        "Yue Yu",
-        "Yundi Qian",
-        "Maryam Fazel-Zarandi",
-        "Licheng Yu",
-        "Amine Benhalloum",
-        "Hany Hassan Awadalla",
-        "Manaal Faruqui"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6628,
-          "matched": [
-            "learning",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.536,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2732,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7732,
-        "relevance": 0.6921,
-        "quality": 0.96,
-        "novelty": 0.8138,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "ablation study",
-        "benchmark evaluation",
-        "experiments",
-        "open source",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "In this work, we introduce AdvancedIF, a comprehensive benchmark featuring over 1,600 prompts and expert-curated rubrics that assess LLMs’ ability to follow complex, multi-turn, and system-level instructions.",
-        "problem": "Recent progress in large language models (LLMs) has led to impressive performance on a range of tasks, yet advanced instruction following (IF)—especially for complex, multi-turn, and system-prompted instructions—remains a significant challenge.",
-        "method": "In this work, we introduce AdvancedIF, a comprehensive benchmark featuring over 1,600 prompts and expert-curated rubrics that assess LLMs’ ability to follow complex, multi-turn, and system-level instructions.",
-        "evidence": "Extensive experiments demonstrate that RIFL substantially improves the instruction-following abilities of LLMs, achieving a 6.7% absolute gain on AdvancedIF and strong results on public benchmarks.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "reliable"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-01T17:01:28.757049+00:00"
     }
   ]
 }
