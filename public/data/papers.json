@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-10-23T15:04:37.613853+00:00",
+  "generated_at": "2026-10-24T14:00:34.921589+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 76,
-  "source_total": 76,
-  "source_lookback_days": 1,
+  "source_count": 993,
+  "source_total": 993,
+  "source_lookback_days": 4,
   "source_truncated": false,
-  "unseen_source_count": 76,
-  "previously_recommended_count": 375,
-  "eligible_count": 4,
+  "unseen_source_count": 986,
+  "previously_recommended_count": 379,
+  "eligible_count": 28,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-10-23T15:04:37.613853+00:00",
+    "generated_at": "2026-10-24T14:00:34.921589+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,26 +130,23 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2610.31421",
-      "title": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
-      "abstract": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities. Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability. Our analysis spans pretrained language models up to 3B parameters and controlled tasks. The experiments provide evidence for a shared inductive bias toward learning from context: grown and looped models rely more on information in context and, compared with a full-depth dense reference, acquire ICL earlier in controlled tasks and retain it more strongly when learning fixed associations in the weights is also possible. Tracing attention heads through training reveals that depth growth propagates early induction heads across layers. Ablations show that grown and looped models rely more strongly on induction-ranked heads for both few-shot performance and later-token prediction. Together, these findings provide evidence for a shared inductive bias toward learning from context and suggest that (soft) parameter reuse shapes how this ability develops and which attention mechanisms support it.",
+      "id": "2610.28937",
+      "title": "Auditing Conformal Prediction for Language Models Under Inference-Time Model Shift",
+      "abstract": "Conformal prediction (CP) for language models is typically evaluated under a matched protocol, in which calibration and deployment use the same post-training inference configuration, such as quantization mode and inference temperature. In deployment, these choices often differ from those used at calibration to meet memory or throughput constraints or serving policies. We argue that this exposes a limitation in current CP evaluation protocols for language models. We formalize the underlying phenomenon as inference-time model shift: a change in the conformal score distribution induced by inference configuration rather than by the input--label distribution, and theoretically characterize how it breaks split-conformal exchangeability even when the task distribution and trained model are unchanged. We then evaluate its consequences across 8 language models, 4 finite-label benchmarks, and 12 inference configurations. We find that matched evaluation can substantially overstate deployment-time coverage, and that the effect is heterogeneous across models and datasets. We argue that inference configuration should be reported as a first-class experimental axis in CP evaluations for language-model systems.",
       "authors": [
-        "Ferdinand Kapl",
-        "Kaitlin Maile",
-        "Stefan Bauer",
-        "Johannes von Oswald"
+        "Achref Doula",
+        "Max Mühlhäuser"
       ],
-      "published": "2026-10-22T15:21:22Z",
-      "updated": "2026-10-22T15:21:22Z",
+      "published": "2026-10-20T21:30:43Z",
+      "updated": "2026-10-20T21:30:43Z",
       "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
+        "cs.LG",
+        "stat.ML"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.31421v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31421v1",
-      "comment": "",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.28937v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.28937v1",
+      "comment": "Accepted at the 40th Conference on Neural Information Processing Systems (NeurIPS 2026). Track on Evaluations and Datasets",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -162,10 +159,130 @@
       ],
       "topics": [
         {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8157,
+          "matched": [
+            "Conformal prediction",
+            "conformal",
+            "prediction",
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.5263,
+          "score": 0.3107,
+          "matched": [
+            "auditing"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2128,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.139,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7189,
+        "relevance": 0.7573,
+        "quality": 0.58,
+        "novelty": 0.8702,
+        "freshness": 0.4732,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We find that matched evaluation can substantially overstate deployment-time coverage, and that the effect is heterogeneous across models and datasets.",
+        "problem": "Conformal prediction (CP) for language models is typically evaluated under a matched protocol, in which calibration and deployment use the same post-training inference configuration, such as quantization mode and inference temperature.",
+        "method": "In deployment, these choices often differ from those used at calibration to meet memory or throughput constraints or serving policies.",
+        "evidence": "We argue that inference configuration should be reported as a first-class experimental axis in CP evaluations for language-model systems.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "Conformal prediction",
+          "conformal",
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.30435",
+      "title": "Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models",
+      "abstract": "Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information. However, existing search agents often lack search-state awareness, i.e., the ability to recognize what information has been obtained and what remains missing, leading to hallucinated reasoning and prematurely terminated search. To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time. SARL achieves this through a dual reward design that captures the corrective effect of each assessment while penalizing excessive reliance on it, jointly encouraging effective and efficient search trajectories. Under this setup, SARL achieves a 24.3% relative improvement over the strongest baseline, with average gains of 35.9% on multi-hop reasoning and 27.9% on deep research benchmarks against the strongest per-benchmark baselines. SARL further surpasses methods built on auxiliary supervision or multi-agent coordination, despite operating as a standalone RL framework with no inference-time scaffolding. Beyond final performance, SARL maintains training stability under extended search horizons, a regime where existing methods consistently degrade, enabling sustained gains as task complexity grows.",
+      "authors": [
+        "Taewhoo Lee",
+        "Minju Song",
+        "Jungwoo Park",
+        "Chanwoong Yoon",
+        "Junha Jung",
+        "Hyeon Hwang",
+        "Sanghoon Lee",
+        "Minbyul Jeong",
+        "Jaewoo Kang"
+      ],
+      "published": "2026-10-21T20:46:24Z",
+      "updated": "2026-10-21T20:46:24Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.30435v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.30435v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5356,
           "matched": [
             "learning"
           ]
@@ -174,48 +291,50 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.5263,
+          "score": 0.5356,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "time_series_inference",
+          "name": "Time series inference",
           "status": "emerging",
-          "score": 0.1343,
+          "score": 0.1152,
           "matched": [
-            "prediction"
+            "inference",
+            "time"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0385,
+          "score": 0.0833,
           "matched": [
-            "analysis"
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.5854,
-        "relevance": 0.5532,
-        "quality": 0.49,
-        "novelty": 0.8495,
-        "freshness": 0.8588,
+        "total": 0.5905,
+        "relevance": 0.5586,
+        "quality": 0.55,
+        "novelty": 0.8676,
+        "freshness": 0.6117,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "ablation study",
-        "experiments"
+        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
-        "problem": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
-        "method": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
-        "evidence": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
+        "takeaway": "To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time.",
+        "problem": "Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information.",
+        "method": "To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time.",
+        "evidence": "To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -234,23 +353,27 @@
       }
     },
     {
-      "id": "2610.31467",
-      "title": "From Structured Records to Patient Narratives: Preserving Clinical Alignment in LLM-Generated Health Summaries",
-      "abstract": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge. Large Language Models (LLMs) offer a promising mechanism for translating structured clinical information into readable narratives, but this process may introduce semantic drift, where clinically precise meaning is distorted during simplification. We investigate evidence-grounded health summarization for menstrual health monitoring using a constrained generation framework that combines structured evidence conditioning with Retrieval-Augmented Generation (RAG) using a prompt-based constrained generation framework. We evaluate semantic alignment using Natural Language Inference (NLI), atomic factuality metrics, and readability measures. Across three LLMs and 4,500 generated summaries, explicit grounding constraints consistently improve clinical alignment, particularly by improving uncertainty preservation and, once faithfulness is evaluated against retrieved evidence, generally preserving or improving faithfulness, while effects on omission remain model-dependent. We also find that improved clinical alignment comes at the cost of increased reading difficulty and medical terminology. These findings highlight the need to jointly evaluate faithfulness, uncertainty preservation, and readability when developing patient-facing medical LLM systems.",
+      "id": "2610.30690",
+      "title": "From Clinical Judgment to Checkable Rules: Clinician-Led Guardrails for Mental-Health Chatbots",
+      "abstract": "Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain. Common approaches to improving safety rely on prompt engineering, LLM-as-a-Judge, and Constitutional AI. In this work, we describe a clinician-led alternative in which two clinicians define, finalize, and adjudicate the four safety checks of a rule base, which is formally verified for internal consistency and applied as a guardrail over LLM outputs. Here and in the title, clinician-led refers to this rule base, not to the fact extractor or the uncertainty default, which are ours. Every verdict of the resulting verification layer is recomputable from a named rule and sixteen facts. Against an LLM judge matched in model, revision, quantization, rule text, and decoding but without the layer's computed 988/911 fact, the largest disagreement class, the satisfied-rule class, is structured: the Llama-3.3-70B judge, on its primary prompt, demands a crisis resource from 55 of the 65 replies (84.6%) that already contain one, while the same model, asked as a fact extractor, reports a recognized resource present on 54 of the 55. The verification layer never raises that demand, by construction. We report with equal prominence where this judge is stronger: fewer false crisis alarms on the one reference-scored check. We also report the measured cost (a specification revision raised block-class outcomes on held-out boundary prompts of an over-refusal benchmark from 6.0% to 16.0%, chiefly by changing fact extraction), the clinicians' decision to keep our uncertainty default, and the analysis of the result. The contribution is not a safer verdict. It is a guardrail whose disagreements with the judge localize to named rules and facts and whose measured costs trace to named facts and the uncertainty default.",
       "authors": [
-        "Bayram Ayadi",
-        "Florian Geissler",
-        "Johanna Schmidhuber"
+        "Chenhan Lyu",
+        "Kit Wislocki",
+        "Sarah Elizabeth Stoeckl",
+        "Maitreyi Sinha",
+        "Amir Rahmani"
       ],
-      "published": "2026-10-22T15:58:57Z",
-      "updated": "2026-10-22T15:58:57Z",
+      "published": "2026-10-22T04:02:51Z",
+      "updated": "2026-10-22T04:02:51Z",
       "categories": [
-        "cs.CL"
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
       ],
       "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.31467v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31467v1",
-      "comment": "18 pages, 3 figures",
+      "abs_url": "https://arxiv.org/abs/2610.30690v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.30690v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -269,19 +392,18 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.4717,
+          "score": 0.6161,
           "matched": [
             "uncertainty"
           ]
         },
         {
-          "id": "time_series_inference",
-          "name": "Time series inference",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.0834,
+          "score": 0.2732,
           "matched": [
-            "inference",
-            "dependent"
+            "llm-as-a-judge"
           ]
         },
         {
@@ -290,29 +412,31 @@
           "status": "emerging",
           "score": 0.0442,
           "matched": [
-            "dependent"
+            "analysis"
           ]
         }
       ],
       "scores": {
-        "total": 0.4736,
-        "relevance": 0.4029,
-        "quality": 0.41,
-        "novelty": 0.866,
-        "freshness": 0.8625,
+        "total": 0.5894,
+        "relevance": 0.5564,
+        "quality": 0.54,
+        "novelty": 0.8699,
+        "freshness": 0.655,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "benchmark evaluation",
+        "formal bound",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge.",
-        "problem": "As wearable and digital health systems increasingly generate longitudinal physiological records, communicating these observations in patient-accessible language remains a significant challenge.",
-        "method": "We investigate evidence-grounded health summarization for menstrual health monitoring using a constrained generation framework that combines structured evidence conditioning with Retrieval-Augmented Generation (RAG) using a prompt-based constrained generation framework.",
-        "evidence": "Across three LLMs and 4,500 generated summaries, explicit grounding constraints consistently improve clinical alignment, particularly by improving uncertainty preservation and, once faithfulness is evaluated against retrieved evidence, generally preserving or improving faithfulness, while effects on omission remain model-dependent.",
+        "takeaway": "Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain.",
+        "problem": "Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain.",
+        "method": "Common approaches to improving safety rely on prompt engineering, LLM-as-a-Judge, and Constitutional AI.",
+        "evidence": "In this work, we describe a clinician-led alternative in which two clinicians define, finalize, and adjudicate the four safety checks of a rule base, which is formally verified for internal consistency and applied as a guardrail over LLM outputs.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -329,25 +453,28 @@
       }
     },
     {
-      "id": "2610.31415",
-      "title": "SyRA-CS: Synthetic-to-Real Adaptation for Code-Switched ASR with Meta-Learning",
-      "abstract": "Code-switched (CS) automatic speech recognition (ASR) remains difficult because real CS speech is scarce and synthetic speech does not fully match it. We investigate whether synthetic CS speech is more useful for learning an adaptation-friendly initialization than for ordinary continual fine-tuning. We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning. For each language pair and pretrained model, we meta-train on the corresponding synthetic CS-FLEURS subset and then adapt using one hour of labeled real target speech. We evaluate four architectural settings: Encoder-CTC, FastConformer-RNN-T, Attention Encoder-Decoder (AED) and Speech-LLM. Experiments cover on Arabic-, French-, German-, and Hindi-English, against synthetic-only transfer, real-only fine-tuning, and continual fine-tuning. SyRA-CS improves over continual fine-tuning on WER in all 16 model-pair comparisons and on CER in 15 of 16, with relative macro WER reductions of 17.7% for XLS-R and 5.3-5.8% for the other three models. The gains hold across the tested models but vary in size across architectures, language pairs and metrics.",
+      "id": "2610.29395",
+      "title": "CertMoE: Robustness Certification for Mixture-of-Experts LLMs via Routing-Aware Smoothing",
+      "abstract": "Provable robustness is a cornerstone of trustworthy machine learning, aiming to guarantee model predictions under adversarial perturbations. Existing certification frameworks, inspired by abstract interpretation or symbolic execution, typically assume a fixed computation graph, where input perturbations or variations affect only model outputs but not the underlying execution path. This assumption, however, is violated in Mixture-of-Experts (MoE) Large Language Models (LLMs), whose input-dependent routing induces discrete and dynamic execution paths. Crucially, this dynamic computation changes the certified object from a single fixed function to a composition of input-dependent sub-functions, leading to unreliable certification guarantees. This paper presents \\textsc{CertMoE}, the first routing-aware robustness certification framework for MoE LLMs, which explicitly accounts for input-induced routing dynamics in certification. Specifically, we introduce a relaxed routing-containment criterion, which certifies that perturbed Top-$K$ routing is contained within a larger certified expert pool. Based on this guarantee, \\textsc{CertMoE} then constructs the corresponding induced sub-network and certifies its prediction consistency. This hierarchical certification procedure yields a joint probabilistic guarantee over routing containment and sub-network robustness, providing sufficient conditions under which the original prediction remains invariant. Extensive experiments across recent MoE LLMs demonstrate that dynamic routing makes certificates issued by existing methods frequently violated, while \\textsc{CertMoE} reduces the empirical violation rate with routing-aware guarantees, e.g., from more than $30\\%$ to $0$, yielding certificates that more faithfully reflect the robustness of MoE models.",
       "authors": [
-        "Fadel Thior",
-        "Ahmer Tabassum",
-        "Haania Siddiqui",
-        "Hanan Aldarmaki",
-        "Thamar Solorio"
+        "Qingyue Wang",
+        "Yudong Gao",
+        "Lixia Wang",
+        "Ruixuan Huang",
+        "Yuanyuan Yuan",
+        "Yangqiu Song",
+        "Shuai Wang"
       ],
-      "published": "2026-10-22T15:17:10Z",
-      "updated": "2026-10-22T15:17:10Z",
+      "published": "2026-10-21T08:25:15Z",
+      "updated": "2026-10-21T08:25:15Z",
       "categories": [
-        "cs.CL"
+        "cs.CR",
+        "cs.SE"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.31415v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31415v1",
-      "comment": "",
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2610.29395v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.29395v1",
+      "comment": "12 pages",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -355,47 +482,192 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "llm"
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.3379,
+          "score": 0.6248,
           "matched": [
-            "learning"
+            "Trustworthy machine learning",
+            "trustworthy machine learning",
+            "learning",
+            "machine",
+            "trustworthy"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2773,
+          "matched": [
+            "prediction"
           ]
         },
         {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.3379,
+          "score": 0.1523,
           "matched": [
             "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "dependent"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "dependent"
           ]
         }
       ],
       "scores": {
-        "total": 0.4728,
-        "relevance": 0.3379,
-        "quality": 0.61,
-        "novelty": 0.8829,
-        "freshness": 0.8584,
+        "total": 0.5874,
+        "relevance": 0.5858,
+        "quality": 0.47,
+        "novelty": 0.8578,
+        "freshness": 0.5382,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
         "experiments",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning.",
-        "problem": "Code-switched (CS) automatic speech recognition (ASR) remains difficult because real CS speech is scarce and synthetic speech does not fully match it.",
-        "method": "We propose SyRA-CS, a pair-specific synthetic-to-real adaptation framework based on Reptile meta-learning.",
-        "evidence": "Experiments cover on Arabic-, French-, German-, and Hindi-English, against synthetic-only transfer, real-only fine-tuning, and continual fine-tuning.",
+        "takeaway": "Specifically, we introduce a relaxed routing-containment criterion, which certifies that perturbed Top-$K$ routing is contained within a larger certified expert pool.",
+        "problem": "Provable robustness is a cornerstone of trustworthy machine learning, aiming to guarantee model predictions under adversarial perturbations.",
+        "method": "Existing certification frameworks, inspired by abstract interpretation or symbolic execution, typically assume a fixed computation graph, where input perturbations or variations affect only model outputs but not the underlying execution path.",
+        "evidence": "Extensive experiments across recent MoE LLMs demonstrate that dynamic routing makes certificates issued by existing methods frequently violated, while \\textsc{CertMoE} reduces the empirical violation rate with routing-aware guarantees, e.g., from more than $30\\%$ to $0$, yielding certificates that more faithfully reflect the robustness of MoE models.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "Trustworthy machine learning",
+          "trustworthy machine learning",
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.29289",
+      "title": "Approximate Solomonoff Induction: On the Robustness of Learned Universal Predictors",
+      "abstract": "Why large language models trained via log-loss minimization over massive and diverse datasets exhibit broad capabilities and generalizable skills is not yet fully understood. Grau-Moya et al. (ICML 2024) offer a conceptual explanation through the lens of meta-learning: if sequence-generating environments $ν$ are drawn from a prior $w_ν$, minimizing population log-loss recovers the corresponding Bayesian mixture predictor $ξ=\\sum_νw_νν$. In the idealized limit in which $w$ is a universal prior, the optimal predictor corresponds to Solomonoff universal induction. Practical machine learning algorithms, however, generally produce only \\emph{approximately} optimal predictors. This raises a natural question: \\emph{Does the prediction performance remain robust under approximation}? In this paper, we first provide a tight bound on the worst-case effect of approximation on prediction error. We show any predictor $ρ$ satisfying $D_{KL}(ξ\\|ρ)\\leq η$ retains bounded cumulative-expected-squared prediction error. However, while the Bayesian mixture predictor $ξ$ has error $O(\\log(1/w_μ))$ in an environment $μ$, we establish a tight $Θ(η/w_μ)$ bound on the excess error of $ρ$ relative to $ξ$. Thus, approximation can substantially degrade performance in environments assigned small prior probability. In sharp contrast, when environments are averaged according to prior $w$, we prove that the excess prediction error is only $O(η)$. Furthermore, we establish a distribution-shift theorem for dominated shifts from a training prior $w$ to a test prior $w'$, interpolating our average-case and worst-case guarantees. Finally, we extend our robustness analysis to a finite-sampling setting relevant to learning universal predictors with neural networks and Transformers, where $D_{KL}(ξ\\|ρ)$ could be unbounded. [For the full abstract, see the paper.]",
+      "authors": [
+        "Qian Li",
+        "Shang-Hua Teng"
+      ],
+      "published": "2026-10-21T06:44:09Z",
+      "updated": "2026-10-21T06:44:09Z",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.29289v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.29289v1",
+      "comment": "24 pages",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "transformers"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4536,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3646,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3646,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5842,
+        "relevance": 0.5087,
+        "quality": 0.71,
+        "novelty": 0.8512,
+        "freshness": 0.5281,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "theoretical result",
+        "proof",
+        "formal bound",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We show any predictor $ρ$ satisfying $D_{KL}(ξ\\|ρ)\\leq η$ retains bounded cumulative-expected-squared prediction error.",
+        "problem": "Why large language models trained via log-loss minimization over massive and diverse datasets exhibit broad capabilities and generalizable skills is not yet fully understood.",
+        "method": "Practical machine learning algorithms, however, generally produce only \\emph{approximately} optimal predictors.",
+        "evidence": "In sharp contrast, when environments are averaged according to prior $w$, we prove that the excess prediction error is only $O(η)$.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -408,31 +680,45 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning"
+          "learning",
+          "machine"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.31529",
-      "title": "An Empirical Study of Recent Large Language Models for Knowledge Graph to Text Generation on Standard Benchmarks",
-      "abstract": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language. While fine-tuned encoder-decoder models have long been the standard approach, recent LLMs are becoming increasingly competitive. We benchmark recent LLMs against fine-tuned encoder-decoder models, using reference-based metrics and graph-grounded reference-free LLM-based evaluation validated against human annotations. We observed that recent LLMs substantially narrow, and in several settings close, the gap with fine-tuned models on reference-based metrics, while performing better on graph-grounded metrics. LLM-based evaluation scores show limited correlation with reference-based metrics, suggesting that the two approaches capture different aspects of generation quality. Graph-grounded evaluation reveals that prompted models produce fewer contradictions and triple omissions than fine-tuned models, and these errors increase more rapidly with graph size for fine-tuned models, highlighting differences between the two approaches that reference-based metrics may not fully capture.",
+      "id": "2610.29225",
+      "title": "Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics",
+      "abstract": "Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges. To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics. Grounded in globally applicable AI safety policies, each rubric provides explicit criteria along two dimensions: safety, which targets concrete harms with specific exemptions to suppress false positives, and usefulness, which independently evaluates instruction fulfillment. To ensure a robust and realistic evaluation, we construct a bilingual (English-Chinese) benchmark grounded in a comprehensive 84-label safety taxonomy, consisting of two subsets: DiagBase, which covers single- and multi-turn prompts with direct harmful queries and template-based jailbreaks, and DiagAttack, which embeds harmful intents into complex instruction-following tasks to form challenging instruction attacks. Extensive experiments demonstrate that DiagSafe significantly enhances the reliability of LLM-as-a-judge evaluation, achieving 95.34% agreement with human annotations -- substantially higher than the 69%-87% achieved by the baselines -- and high inter-judge consistency (Cohen's $κ$ = 0.864). Furthermore, applying our framework reveals that leading LLMs differ markedly in their unsafe rates, and each model also exhibits unique vulnerabilities along different dimensions. In addition, we observe that models are particularly susceptible in Chinese and multi-turn contexts. Ultimately, DiagSafe provides a reliable and explainable tool for auditing and optimizing LLM alignment.",
       "authors": [
-        "Priyanka",
-        "Renaud Delbru",
-        "Souhail Bakkali",
-        "Mickaël Coustaty",
-        "Antoine Doucet"
+        "Hongyu Li",
+        "Xinlong Huang",
+        "Zhan Yu",
+        "Jing Zhao",
+        "Zhe Zhao",
+        "Juntao Zhong",
+        "Xiong Kuang",
+        "Rui Yuan",
+        "ZhenXiang Yan",
+        "Huilin Xu",
+        "Haitao Yu",
+        "Lilin Wang",
+        "Rui Chen",
+        "Blaze Chen",
+        "Fengzong Lian",
+        "Renfen Hu"
       ],
-      "published": "2026-10-22T16:36:35Z",
-      "updated": "2026-10-22T16:36:35Z",
+      "published": "2026-10-21T05:33:50Z",
+      "updated": "2026-10-21T05:33:50Z",
       "categories": [
-        "cs.CL"
+        "cs.CL",
+        "cs.AI",
+        "cs.CR"
       ],
       "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.31529v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31529v1",
-      "comment": "18 pages, 6 figures, 17 tables, Preprint, Under review",
+      "abs_url": "https://arxiv.org/abs/2610.29225v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.29225v1",
+      "comment": "42 pages, 9 figures, 24 tables. Dataset will be publicly released at https://github.com/Tencent-Hunyuan/DiagSafe",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -440,43 +726,53 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
+        "llm",
+        "llms"
       ],
       "topics": [
         {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.3804,
+          "score": 0.4753,
           "matched": [
             "evaluation"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3726,
+          "matched": [
+            "llm-as-a-judge",
+            "auditing",
+            "reliable"
           ]
         }
       ],
       "scores": {
-        "total": 0.4341,
-        "relevance": 0.3043,
-        "quality": 0.54,
-        "novelty": 0.8503,
-        "freshness": 0.8663,
+        "total": 0.5283,
+        "relevance": 0.4548,
+        "quality": 0.61,
+        "novelty": 0.8467,
+        "freshness": 0.5212,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "benchmark evaluation"
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language.",
-        "problem": "Knowledge graph-to-text (KG-to-text) generation verbalizes a set of knowledge graph triples into fluent natural language.",
-        "method": "While fine-tuned encoder-decoder models have long been the standard approach, recent LLMs are becoming increasingly competitive.",
-        "evidence": "We benchmark recent LLMs against fine-tuned encoder-decoder models, using reference-based metrics and graph-grounded reference-free LLM-based evaluation validated against human annotations.",
+        "takeaway": "To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics.",
+        "problem": "Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges.",
+        "method": "To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics.",
+        "evidence": "Extensive experiments demonstrate that DiagSafe significantly enhances the reliability of LLM-as-a-judge evaluation, achieving 95.34% agreement with human annotations -- substantially higher than the 69%-87% achieved by the baselines -- and high inter-judge consistency (Cohen's $κ$ = 0.864).",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
