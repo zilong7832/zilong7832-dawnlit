@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T16:47:04.462055+00:00",
+  "generated_at": "2026-10-27T15:52:30.919516+00:00",
   "papers": [
     {
       "id": "2610.29895",
@@ -330,235 +330,6 @@
       "recommended_at": "2026-10-21T15:13:28.101189+00:00"
     },
     {
-      "id": "conf:iclr:2026:10009494",
-      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
-      "abstract": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks. We argue that the interpretable nature of language often provides a much richer learning medium for LLMs, compared to policy gradients derived from sparse, scalar rewards. To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error. Given any AI system containing one or more LLM prompts, GEPA samples trajectories (e.g., reasoning, tool calls, and tool outputs) and reflects on them in natural language to diagnose problems, propose and test prompt updates, and combine complementary lessons from the Pareto frontier of its own attempts. As a result of GEPA's design, it can often turn even just a few rollouts into a large quality gain. Across six tasks, GEPA outperforms GRPO by 6 percentage points on average and by up to 19pp, while using up to 35x fewer rollouts. GEPA also outperforms the leading prompt optimizer, MIPROv2, by over 10 percentage points (e.g., +12pp on AIME-2025), and demonstrates promising results as an inference-time search strategy for code optimization. We release our code at https://github.com/gepa-ai/gepa.",
-      "authors": [
-        "Lakshya A Agrawal",
-        "Shangyin Tan",
-        "Dilara Soylu",
-        "Noah Ziems",
-        "Rishi Khare",
-        "Krista Opsahl-Ong",
-        "Arnav Singhvi",
-        "Herumb Shandilya",
-        "Michael J Ryan",
-        "Meng Jiang",
-        "Christopher Potts",
-        "Koushik Sen",
-        "Alex Dimakis",
-        "Ion Stoica",
-        "Dan Klein",
-        "Matei Zaharia",
-        "Omar Khattab"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10009494",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009494",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5357,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5356,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "inference",
-            "time"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6814,
-        "relevance": 0.5521,
-        "quality": 0.95,
-        "novelty": 0.8255,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error.",
-        "problem": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks.",
-        "method": "To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error.",
-        "evidence": "Across six tasks, GEPA outperforms GRPO by 6 percentage points on average and by up to 19pp, while using up to 35x fewer rollouts.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-20T15:03:27.175811+00:00"
-    },
-    {
-      "id": "2610.22599",
-      "title": "Can LLMs predict the outcomes of machine learning experiments?",
-      "abstract": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible. Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments. However, the space of possible design choices in ML is vast. An LLM that proposes an experiment needs a reliable intuition of whether it is worth running given the timing constraints of long training runs. In this work, we measure such intuition in current frontier LLMs by evaluating how accurately they predict the impact of self-generated ML experiment ideas before these are put into training runs. To this end, we construct a dataset of 288 LLM-proposed ideas on eight MLE-bench tasks. We then prompt five frontier LLMs (GPT-6 Astra, Claude Opus 5.5, Claude Fable 5.1, Kimi K3, and GLM-5.3) to predict the impact of each idea and compare their predictions with the actual outcomes after training. We report four main findings. First, LLM predictions are substantially better than random chance but far from accurate: even the best model, Claude Opus 5.5, explains only half of the variance in outcomes (R^2 = 0.49). Second, we notice that all tested models systematically underestimate the magnitude of the changes. Third, prediction quality varies widely across tasks. Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference. Higher reasoning settings and additional context lead to modest gains. Overall, our results show that current LLMs have useful but limited intuition about which ML ideas will work. We release our dataset to support further study.",
-      "authors": [
-        "Ayush Bansal",
-        "Aldo Pareja",
-        "Sean Klein",
-        "Serge Didenko",
-        "Artem Lukoianov"
-      ],
-      "published": "2026-10-15T19:51:50Z",
-      "updated": "2026-10-15T19:51:50Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.22599v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22599v1",
-      "comment": "15 pages, 9 figures, 1 table. Dataset: https://github.com/autolab-ai/EV-estimation",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.7465,
-          "matched": [
-            "learning",
-            "machine",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4547,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1518,
-          "matched": [
-            "prediction"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.674,
-        "relevance": 0.7185,
-        "quality": 0.51,
-        "novelty": 0.8268,
-        "freshness": 0.4458,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference.",
-        "problem": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible.",
-        "method": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
-        "evidence": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "machine",
-          "reliable"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
-    },
-    {
       "id": "conf:icml:2026:71100",
       "title": "Position: The AI Imperative: Scaling High-Quality Peer Review in Machine Learning",
       "abstract": "Peer review, the bedrock of scientific advancement in machine learning (ML), is strained by a crisis of scale. Exponential growth in manuscript submissions to premier ML venues such as NeurIPS, ICML, and ICLR is outpacing the finite capacity of qualified reviewers, leading to concerns about review quality, consistency, and reviewer fatigue. This position paper argues that AI-assisted peer review must become an urgent research and infrastructure priority. We advocate for a comprehensive AI-augmented ecosystem, leveraging Large Language Models (LLMs) not as replacements for human judgment, but as sophisticated collaborators for authors, reviewers, and Area Chairs (ACs). We propose specific roles for AI in enhancing factual verification, guiding reviewer performance, assisting authors in quality improvement, and supporting ACs in decision-making. Crucially, we contend that the development of such systems hinges on access to more granular, structured, and ethically-sourced peer review process data. We outline a research agenda, including illustrative experiments, to develop and validate these AI assistants, and discuss significant technical and ethical challenges. We call upon the ML community to proactively build this AI-assisted future, ensuring the continued integrity and scalability of scientific validation, while maintaining high standards of peer review.",
@@ -668,96 +439,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-21T15:13:28.101189+00:00"
-    },
-    {
-      "id": "2610.22636",
-      "title": "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness",
-      "abstract": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential. We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response. We propose the causal robustness margin, defined as the minimum internal intervention required to deviate the model's output, and operationalize it using Jacobian Lens (Jlens) concept steering vectors. Across three open-source models and five question-answering datasets, we show incorrect and uncertain responses exhibit smaller margins, indicating greater sensitivity to internal interventions, and the causal robustness margin complements conventional output-based uncertainty methods. Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
-      "authors": [
-        "Aneesh Komanduri",
-        "Majid Afshar",
-        "Timothy A. Miller",
-        "Yanjun Gao"
-      ],
-      "published": "2026-10-15T20:46:06Z",
-      "updated": "2026-10-15T20:46:06Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.22636v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22636v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.8413,
-          "matched": [
-            "uncertainty"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "reliable"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6673,
-        "relevance": 0.7025,
-        "quality": 0.51,
-        "novelty": 0.8611,
-        "freshness": 0.4511,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "dataset evidence",
-        "open source"
-      ],
-      "summary": {
-        "takeaway": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
-        "problem": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential.",
-        "method": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
-        "evidence": "Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
     },
     {
       "id": "conf:acl:2026:3090-main",
@@ -882,27 +563,24 @@
       "recommended_at": "2026-10-22T15:15:21.077508+00:00"
     },
     {
-      "id": "2610.22858",
-      "title": "Uncertainty-Aware Budget Allocation for Efficient LLM Tree Search",
-      "abstract": "Tree search enhances multi-step reasoning in large language models (LLMs), yet prevailing methods expand every step with a fixed budget, irrespective of the marginal utility of expansion. We first show, across existing search algorithms, that continuations sampled from a shared intermediate state are largely duplicates and collapse to a few distinct answers. Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion. An information-theoretic analysis motivates this: treating the per-step budget as the Monte Carlo sample size for estimating a step's residual answer entropy, we derive a sufficient budget that shrinks with sibling dispersion. We accordingly propose $\\textbf{Uncertainty-Aware Allocation}$ (UAA), a training-free framework that decouples value from uncertainty: values determine which candidates are promising, while uncertainty, estimated from sibling dispersion at no additional model cost, determines how many merit expansion, via uncertainty-aware pruning and uncertainty-aware budgeting. Across mathematical reasoning, logical reasoning, and planning benchmarks, UAA reduces token usage by up to $90\\%$ and latency by up to $9\\times$ at comparable accuracy, generalizing across four tree search algorithms and both open- and closed-source LLMs.",
+      "id": "2610.35804",
+      "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models",
+      "abstract": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response. Efficient generation depends not only on which tokens are easy to predict, but also on how committing to them helps predict the remaining positions. A highly predictable token may provide little useful context, while revealing a less predictable token can help several other positions become predictable sooner. We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation. To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding. We then distill these schedules into the model to enable faster parallel sampling, with a KL-divergence regularizer to help preserve generation quality. We extensively evaluate our approach across mathematical reasoning and code generation tasks. On GSM8K, our method achieves remarkable 10.12$\\times$ and 5.12$\\times$ speedups over the various baselines on LLaDA-8B-Instruct and Dream-7B-Instruct, respectively, while maintaining superior task performance. Our code is available at https://github.com/VILA-Lab/dSpark.",
       "authors": [
-        "Jianguo Huang",
-        "Zhiyi Lyu",
-        "Fuxiang Zhang",
-        "Yanchen Deng",
-        "Deheng Ye",
-        "Bo An"
+        "Aidar Myrzakhan",
+        "Zhiqiang Shen"
       ],
-      "published": "2026-10-16T03:03:28Z",
-      "updated": "2026-10-16T03:03:28Z",
+      "published": "2026-10-26T17:35:58Z",
+      "updated": "2026-10-26T17:35:58Z",
       "categories": [
         "cs.CL",
-        "cs.AI"
+        "cs.AI",
+        "cs.LG"
       ],
       "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.22858v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22858v1",
-      "comment": "",
+      "abs_url": "https://arxiv.org/abs/2610.35804v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35804v1",
+      "comment": "Code is available at https://github.com/VILA-Lab/dSpark",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -913,49 +591,59 @@
         "large language model",
         "large language models",
         "language model",
-        "language models",
-        "llm"
+        "language models"
       ],
       "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4555,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4555,
+          "matched": [
+            "learning"
+          ]
+        },
         {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.8413,
+          "score": 0.2732,
           "matched": [
             "uncertainty"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "analysis"
           ]
         }
       ],
       "scores": {
-        "total": 0.6458,
-        "relevance": 0.6819,
-        "quality": 0.48,
-        "novelty": 0.8214,
-        "freshness": 0.4886,
+        "total": 0.6126,
+        "relevance": 0.5101,
+        "quality": 0.78,
+        "novelty": 0.8162,
+        "freshness": 0.8674,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "benchmark evaluation",
+        "code available",
+        "GitHub link",
+        "baseline comparison",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion.",
-        "problem": "Tree search enhances multi-step reasoning in large language models (LLMs), yet prevailing methods expand every step with a fixed budget, irrespective of the marginal utility of expansion.",
-        "method": "We first show, across existing search algorithms, that continuations sampled from a shared intermediate state are largely duplicates and collapse to a few distinct answers.",
-        "evidence": "Critically, we find that the semantic dispersion of sibling actions predicts the redundancy of their downstream continuations, permitting a subtree's budget to be fixed before expansion.",
+        "takeaway": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
+        "problem": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response.",
+        "method": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
+        "evidence": "To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -964,13 +652,13 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "uncertainty"
+          "learning"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
+      "recommended_at": "2026-10-27T15:52:30.919516+00:00"
     },
     {
       "id": "2610.32951",
@@ -1276,6 +964,347 @@
         "topic": "Conformal prediction",
         "matched": [
           "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-24T14:00:34.921589+00:00"
+    },
+    {
+      "id": "2610.29395",
+      "title": "CertMoE: Robustness Certification for Mixture-of-Experts LLMs via Routing-Aware Smoothing",
+      "abstract": "Provable robustness is a cornerstone of trustworthy machine learning, aiming to guarantee model predictions under adversarial perturbations. Existing certification frameworks, inspired by abstract interpretation or symbolic execution, typically assume a fixed computation graph, where input perturbations or variations affect only model outputs but not the underlying execution path. This assumption, however, is violated in Mixture-of-Experts (MoE) Large Language Models (LLMs), whose input-dependent routing induces discrete and dynamic execution paths. Crucially, this dynamic computation changes the certified object from a single fixed function to a composition of input-dependent sub-functions, leading to unreliable certification guarantees. This paper presents \\textsc{CertMoE}, the first routing-aware robustness certification framework for MoE LLMs, which explicitly accounts for input-induced routing dynamics in certification. Specifically, we introduce a relaxed routing-containment criterion, which certifies that perturbed Top-$K$ routing is contained within a larger certified expert pool. Based on this guarantee, \\textsc{CertMoE} then constructs the corresponding induced sub-network and certifies its prediction consistency. This hierarchical certification procedure yields a joint probabilistic guarantee over routing containment and sub-network robustness, providing sufficient conditions under which the original prediction remains invariant. Extensive experiments across recent MoE LLMs demonstrate that dynamic routing makes certificates issued by existing methods frequently violated, while \\textsc{CertMoE} reduces the empirical violation rate with routing-aware guarantees, e.g., from more than $30\\%$ to $0$, yielding certificates that more faithfully reflect the robustness of MoE models.",
+      "authors": [
+        "Qingyue Wang",
+        "Yudong Gao",
+        "Lixia Wang",
+        "Ruixuan Huang",
+        "Yuanyuan Yuan",
+        "Yangqiu Song",
+        "Shuai Wang"
+      ],
+      "published": "2026-10-21T08:25:15Z",
+      "updated": "2026-10-21T08:25:15Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2610.29395v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.29395v1",
+      "comment": "12 pages",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6248,
+          "matched": [
+            "Trustworthy machine learning",
+            "trustworthy machine learning",
+            "learning",
+            "machine",
+            "trustworthy"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2773,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1523,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "dependent"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "dependent"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5874,
+        "relevance": 0.5858,
+        "quality": 0.47,
+        "novelty": 0.8578,
+        "freshness": 0.5382,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Specifically, we introduce a relaxed routing-containment criterion, which certifies that perturbed Top-$K$ routing is contained within a larger certified expert pool.",
+        "problem": "Provable robustness is a cornerstone of trustworthy machine learning, aiming to guarantee model predictions under adversarial perturbations.",
+        "method": "Existing certification frameworks, inspired by abstract interpretation or symbolic execution, typically assume a fixed computation graph, where input perturbations or variations affect only model outputs but not the underlying execution path.",
+        "evidence": "Extensive experiments across recent MoE LLMs demonstrate that dynamic routing makes certificates issued by existing methods frequently violated, while \\textsc{CertMoE} reduces the empirical violation rate with routing-aware guarantees, e.g., from more than $30\\%$ to $0$, yielding certificates that more faithfully reflect the robustness of MoE models.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "Trustworthy machine learning",
+          "trustworthy machine learning",
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-24T14:00:34.921589+00:00"
+    },
+    {
+      "id": "2610.31421",
+      "title": "How Depth Growth and Looping Shape In-Context Learning in Language Models",
+      "abstract": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities. Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability. Our analysis spans pretrained language models up to 3B parameters and controlled tasks. The experiments provide evidence for a shared inductive bias toward learning from context: grown and looped models rely more on information in context and, compared with a full-depth dense reference, acquire ICL earlier in controlled tasks and retain it more strongly when learning fixed associations in the weights is also possible. Tracing attention heads through training reveals that depth growth propagates early induction heads across layers. Ablations show that grown and looped models rely more strongly on induction-ranked heads for both few-shot performance and later-token prediction. Together, these findings provide evidence for a shared inductive bias toward learning from context and suggest that (soft) parameter reuse shapes how this ability develops and which attention mechanisms support it.",
+      "authors": [
+        "Ferdinand Kapl",
+        "Kaitlin Maile",
+        "Stefan Bauer",
+        "Johannes von Oswald"
+      ],
+      "published": "2026-10-22T15:21:22Z",
+      "updated": "2026-10-22T15:21:22Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.31421v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.31421v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5263,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5263,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1343,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5854,
+        "relevance": 0.5532,
+        "quality": 0.49,
+        "novelty": 0.8495,
+        "freshness": 0.8588,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "experiments"
+      ],
+      "summary": {
+        "takeaway": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
+        "problem": "Looped and depth-grown language models reuse computations across depth and have attracted interest for their reasoning capabilities.",
+        "method": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
+        "evidence": "Building on prior suggestive evidence of improved in-context-learning (ICL), we investigate how such reuse favors ICL, including how it shapes the acquisition, retention, and mechanisms of this ability.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-23T15:04:37.613853+00:00"
+    },
+    {
+      "id": "2610.29289",
+      "title": "Approximate Solomonoff Induction: On the Robustness of Learned Universal Predictors",
+      "abstract": "Why large language models trained via log-loss minimization over massive and diverse datasets exhibit broad capabilities and generalizable skills is not yet fully understood. Grau-Moya et al. (ICML 2024) offer a conceptual explanation through the lens of meta-learning: if sequence-generating environments $ν$ are drawn from a prior $w_ν$, minimizing population log-loss recovers the corresponding Bayesian mixture predictor $ξ=\\sum_νw_νν$. In the idealized limit in which $w$ is a universal prior, the optimal predictor corresponds to Solomonoff universal induction. Practical machine learning algorithms, however, generally produce only \\emph{approximately} optimal predictors. This raises a natural question: \\emph{Does the prediction performance remain robust under approximation}? In this paper, we first provide a tight bound on the worst-case effect of approximation on prediction error. We show any predictor $ρ$ satisfying $D_{KL}(ξ\\|ρ)\\leq η$ retains bounded cumulative-expected-squared prediction error. However, while the Bayesian mixture predictor $ξ$ has error $O(\\log(1/w_μ))$ in an environment $μ$, we establish a tight $Θ(η/w_μ)$ bound on the excess error of $ρ$ relative to $ξ$. Thus, approximation can substantially degrade performance in environments assigned small prior probability. In sharp contrast, when environments are averaged according to prior $w$, we prove that the excess prediction error is only $O(η)$. Furthermore, we establish a distribution-shift theorem for dominated shifts from a training prior $w$ to a test prior $w'$, interpolating our average-case and worst-case guarantees. Finally, we extend our robustness analysis to a finite-sampling setting relevant to learning universal predictors with neural networks and Transformers, where $D_{KL}(ξ\\|ρ)$ could be unbounded. [For the full abstract, see the paper.]",
+      "authors": [
+        "Qian Li",
+        "Shang-Hua Teng"
+      ],
+      "published": "2026-10-21T06:44:09Z",
+      "updated": "2026-10-21T06:44:09Z",
+      "categories": [
+        "cs.LG",
+        "stat.ML"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.29289v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.29289v1",
+      "comment": "24 pages",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "transformers"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4536,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3646,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3646,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5842,
+        "relevance": 0.5087,
+        "quality": 0.71,
+        "novelty": 0.8512,
+        "freshness": 0.5281,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "theoretical result",
+        "proof",
+        "formal bound",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We show any predictor $ρ$ satisfying $D_{KL}(ξ\\|ρ)\\leq η$ retains bounded cumulative-expected-squared prediction error.",
+        "problem": "Why large language models trained via log-loss minimization over massive and diverse datasets exhibit broad capabilities and generalizable skills is not yet fully understood.",
+        "method": "Practical machine learning algorithms, however, generally produce only \\emph{approximately} optimal predictors.",
+        "evidence": "In sharp contrast, when environments are averaged according to prior $w$, we prove that the excess prediction error is only $O(η)$.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
         ],
         "lane": "llm"
       },

@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-10-26T16:47:04.462055+00:00",
+  "generated_at": "2026-10-27T15:52:30.919516+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 416,
-  "source_total": 416,
-  "source_lookback_days": 4,
+  "source_count": 63,
+  "source_total": 63,
+  "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 416,
-  "previously_recommended_count": 391,
-  "eligible_count": 13,
+  "unseen_source_count": 63,
+  "previously_recommended_count": 397,
+  "eligible_count": 4,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-10-26T16:47:04.462055+00:00",
+    "generated_at": "2026-10-27T15:52:30.919516+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,23 +130,24 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2610.32951",
-      "title": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
-      "abstract": "Reinforcement learning for large language models often uses separate systems for inference and training. Even with identical weights and BF16 tensors, implementation differences can make an intended on-policy update off-policy and destabilize training. Existing remedies align the entire inference and training stacks, change global precision, or modify the learning algorithm. We ask whether aligning selected parts of the execution stack can stabilize BF16 RL while other implementation differences remain. We align training-side rounding locations with inference in three regions---RoPE, SwiGLU, and residual RMSNorm---by retaining selected intermediates in FP32 until their BF16 outputs. Across four Qwen-family models, aligning all three regions prevents the collapse observed under the default BF16 baseline; RoPE-path alignment alone also suffices in the studied runs, despite remaining numerical discrepancies. The interventions keep the inference engine, matrix-multiplication and attention kernels, and learning objective unchanged.",
+      "id": "2610.35804",
+      "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models",
+      "abstract": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response. Efficient generation depends not only on which tokens are easy to predict, but also on how committing to them helps predict the remaining positions. A highly predictable token may provide little useful context, while revealing a less predictable token can help several other positions become predictable sooner. We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation. To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding. We then distill these schedules into the model to enable faster parallel sampling, with a KL-divergence regularizer to help preserve generation quality. We extensively evaluate our approach across mathematical reasoning and code generation tasks. On GSM8K, our method achieves remarkable 10.12$\\times$ and 5.12$\\times$ speedups over the various baselines on LLaDA-8B-Instruct and Dream-7B-Instruct, respectively, while maintaining superior task performance. Our code is available at https://github.com/VILA-Lab/dSpark.",
       "authors": [
-        "Yijing Ke",
-        "Tianle Cai",
-        "Ruosong Wang"
+        "Aidar Myrzakhan",
+        "Zhiqiang Shen"
       ],
-      "published": "2026-10-23T17:45:03Z",
-      "updated": "2026-10-23T17:45:03Z",
+      "published": "2026-10-26T17:35:58Z",
+      "updated": "2026-10-26T17:35:58Z",
       "categories": [
+        "cs.CL",
+        "cs.AI",
         "cs.LG"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.32951v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.32951v1",
-      "comment": "",
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.35804v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35804v1",
+      "comment": "Code is available at https://github.com/VILA-Lab/dSpark",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -157,15 +158,14 @@
         "large language model",
         "large language models",
         "language model",
-        "language models",
-        "llm"
+        "language models"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.6047,
+          "score": 0.4555,
           "matched": [
             "learning"
           ]
@@ -174,38 +174,41 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.6047,
+          "score": 0.4555,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "time_series_inference",
-          "name": "Time series inference",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.1155,
+          "score": 0.2732,
           "matched": [
-            "inference"
+            "uncertainty"
           ]
         }
       ],
       "scores": {
-        "total": 0.6023,
-        "relevance": 0.6278,
-        "quality": 0.4,
-        "novelty": 0.8541,
-        "freshness": 0.5772,
+        "total": 0.6126,
+        "relevance": 0.5101,
+        "quality": 0.78,
+        "novelty": 0.8162,
+        "freshness": 0.8674,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "baseline comparison"
+        "code available",
+        "GitHub link",
+        "baseline comparison",
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "Reinforcement learning for large language models often uses separate systems for inference and training.",
-        "problem": "Reinforcement learning for large language models often uses separate systems for inference and training.",
-        "method": "Existing remedies align the entire inference and training stacks, change global precision, or modify the learning algorithm.",
-        "evidence": "Existing remedies align the entire inference and training stacks, change global precision, or modify the learning algorithm.",
+        "takeaway": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
+        "problem": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response.",
+        "method": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
+        "evidence": "To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -224,24 +227,151 @@
       }
     },
     {
-      "id": "2610.32193",
-      "title": "Evidence-Grounded SLM Behavioral Prediction Architecture for Future Assistance Use",
-      "abstract": "Users often exhibit changes in interaction behavior before explicitly seeking assistance, enabling systems to anticipate future assistance use. This is especially important in high-stakes environments, where delayed assistance can have operational, financial, or safety consequences. However, conventional Large Language Models (LLMs) are often unsuitable for continuous on-device behavioral prediction because of their computational and memory demands. Behavioral patterns are also highly individual and device-specific, motivating local processing that preserves privacy and data sovereignty. Small Language Models (SLMs) offer a promising alternative, but their ability to reason reliably over low-level sequential interaction events remains underexplored. This study introduces Evidence-Grounded Local Behavioral Prediction (ELBP), a four-layer architecture combining deterministic interaction processing, dual-view behavioral representation, SLM-based prediction, and evidence verification with abstention. Three instruction-tuned models of 3B parameters or fewer were evaluated using raw, structured, dual-view, and complete ELBP configurations. The best-performing model, Qwen2.5-3B with ELBP, achieved a full-set F1-score of 0.80 and PR-AUC of 0.84, representing a 15.9\\% relative improvement over raw-event prompting and 17.6\\% over XGBoost, while full-set ECE decreased by 43.2\\% relative to raw-event prompting. With evidence verification and abstention, selective F1 increased to 0.84 at 91\\% coverage and evidence support reached 96\\%. These results show that structured behavioral representation and evidence-verified selective prediction can improve the reliability of behavioral forecasting in SLMs.",
+      "id": "2610.35801",
+      "title": "FOCUS: Active Critic Learning for Long-Horizon Language Model Agents",
+      "abstract": "Sparse outcome rewards make it difficult for long-horizon language-model agents to assign credit to earlier actions. Learned critics provide value estimates for intermediate states, but these estimates can be inaccurate, while estimating intermediate values with repetitive continuation samples from points within a trajectory incurs substantial costs. To mitigate these issues, we introduce FOCUS, an RL method that uses selective branching to help the critic network learn its value estimator. The rollout controller facilitates active learning for the critic by sampling continuations from states that are expected to most reduce the critic's estimation error. These refined value estimates then score the segment between consecutive states with a TD($λ$) advantage, while the sampled evidence supplies training targets for the critic. FOCUS supports long-horizon agentic reinforcement learning through a modular context-management interface that decouples context management from rollout allocation. Our experiments show that using compaction-induced segment boundaries for value estimation and credit assignment, FOCUS outperforms GRPO and VinePPO with matched per-step generation budgets on legal reasoning, deep search, and code localization benchmarks, improving held-out accuracy at Qwen3.5-9B scale by 7.2 points over the strongest baseline on BrowseComp-Plus (55.4 vs. 48.2) and by 4.1 points on DeonticBench (56.5 vs. 52.4).",
       "authors": [
-        "Adeyemi Adeseye",
-        "Aisvarya Adeseye",
-        "Hannu Tenhunen",
-        "Jouni Isoaho"
+        "Zhengping Jiang",
+        "William Jurayj",
+        "Liaoyaqi Wang",
+        "Chunsheng Zuo",
+        "Anqi Liu",
+        "Benjamin Van Durme"
       ],
-      "published": "2026-10-23T05:39:31Z",
-      "updated": "2026-10-23T05:39:31Z",
+      "published": "2026-10-26T17:34:47Z",
+      "updated": "2026-10-26T17:34:47Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.35801v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35801v1",
+      "comment": "32 pages, 5 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3803,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3803,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1047,
+          "matched": [
+            "selective"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0591,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0582,
+          "matched": [
+            "estimation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5473,
+        "relevance": 0.4012,
+        "quality": 0.81,
+        "novelty": 0.811,
+        "freshness": 0.8673,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "formal bound"
+      ],
+      "summary": {
+        "takeaway": "To mitigate these issues, we introduce FOCUS, an RL method that uses selective branching to help the critic network learn its value estimator.",
+        "problem": "Sparse outcome rewards make it difficult for long-horizon language-model agents to assign credit to earlier actions.",
+        "method": "To mitigate these issues, we introduce FOCUS, an RL method that uses selective branching to help the critic network learn its value estimator.",
+        "evidence": "Our experiments show that using compaction-induced segment boundaries for value estimation and credit assignment, FOCUS outperforms GRPO and VinePPO with matched per-step generation budgets on legal reasoning, deep search, and code localization benchmarks, improving held-out accuracy at Qwen3.5-9B scale by 7.2 points over the strongest baseline on BrowseComp-Plus (55.4 vs.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.35847",
+      "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
+      "abstract": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway. Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context. Curated from longitudinal records of 405 patients across two cancer centers, the benchmark comprises 941 patient-phase units across six sequential care phases and 17,688 patient-specific atomic criteria spanning five evaluation dimensions, with each assessment strictly restricted to decision-time clinical evidence. Evaluating 30 general-purpose and medical LLMs revealed that strong diagnostic performance does not carry over to downstream care. We evaluated 30 general-purpose and medical LLMs, showing that high diagnostic performance did not translate into improved downstream care. Instead, the dominant failure modes reversed across phases. Explicit decision errors dominated anatomical staging at 48.2%, whereas decision omissions dominated initial work-up and post-treatment follow-up at 33.4% and 30.4%, respectively. In the evaluated model set, medically adapted models showed higher omission rates than general-purpose models. Moreover, varying query granularity exposes a critical specification trade-off: broad open-ended requests degrade Decision Quality across all 30 models, while more detailed, checklist-like prompts raise Decision Quality but reduce Evidence Faithfulness and Safety Adherence. Furthermore, NPC-RubricBench demonstrates that static diagnostic benchmarks are insufficient to ensure consistent clinical reliability over time, highlighting the importance of phase-adaptive safeguards in multistage medical AI.",
+      "authors": [
+        "Wei-Wei Zhang",
+        "Pengkai Wang",
+        "Yan Li",
+        "Zhijie Sang",
+        "Guan-Qun Zhou",
+        "Jun-Yan Li",
+        "Shu-Han Zhou",
+        "Pei-Wen Liu",
+        "Ting-Xi Tang",
+        "Min Tang",
+        "Zhitian Hou",
+        "Jianmin Wu",
+        "Jian Guan",
+        "i Lin",
+        "Hongxia Yang",
+        "Ying Sun"
+      ],
+      "published": "2026-10-26T17:56:26Z",
+      "updated": "2026-10-26T17:56:26Z",
       "categories": [
         "cs.AI"
       ],
       "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.32193v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.32193v1",
-      "comment": "Accepted for publication at the 2027 International Conference on Artificial Intelligence and Applied Intelligent Systems (AIAIS 2027), to be held in Hong Kong from 22 to 24 January 2027",
+      "abs_url": "https://arxiv.org/abs/2610.35847v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35847v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -260,48 +390,58 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.6767,
+          "score": 0.5328,
           "matched": [
-            "prediction",
-            "selective"
+            "evaluation",
+            "evaluations"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.083,
           "matched": [
-            "data"
+            "time"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.083,
           "matched": [
-            "data"
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "adaptive"
           ]
         }
       ],
       "scores": {
-        "total": 0.5528,
-        "relevance": 0.5582,
-        "quality": 0.41,
-        "novelty": 0.8273,
-        "freshness": 0.5052,
+        "total": 0.5261,
+        "relevance": 0.4594,
+        "quality": 0.48,
+        "novelty": 0.8795,
+        "freshness": 0.8694,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Users often exhibit changes in interaction behavior before explicitly seeking assistance, enabling systems to anticipate future assistance use.",
-        "problem": "Users often exhibit changes in interaction behavior before explicitly seeking assistance, enabling systems to anticipate future assistance use.",
-        "method": "This is especially important in high-stakes environments, where delayed assistance can have operational, financial, or safety consequences.",
-        "evidence": "The best-performing model, Qwen2.5-3B with ELBP, achieved a full-set F1-score of 0.80 and PR-AUC of 0.84, representing a 15.9\\% relative improvement over raw-event prompting and 17.6\\% over XGBoost, while full-set ECE decreased by 43.2\\% relative to raw-event prompting.",
+        "takeaway": "Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context.",
+        "problem": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway.",
+        "method": "Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context.",
+        "evidence": "We evaluated 30 general-purpose and medical LLMs, showing that high diagnostic performance did not translate into improved downstream care.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
@@ -314,28 +454,30 @@
       "recommendation_reason": {
         "topic": "Conformal prediction",
         "matched": [
-          "prediction",
-          "selective"
+          "evaluation",
+          "evaluations"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.31820",
-      "title": "Free Lunch for LLMs Confidence: The RL Critic Already Knows",
-      "abstract": "Reliable confidence estimation is essential for trustworthy deployment of large language models (LLMs), but dedicated confidence training stage requires additional data and compute. We ask a fundamental question: what prediction problem does confidence training actually solve? Inspired by prior work on external confidence estimation, we compare self- and external estimators of comparable capacity trained on the same (question, response, correctness) triples. We show that an external model trained solely on a policy's behavioral traces can estimate the policy's confidence as accurately as the policy itself, without accessing the policy's internal representations. This points to a deeper connection with value function learning in reinforcement learning (RL): under a correctness-based outcome, we prove that confidence estimation and critic training are equivalent, both predicting the likelihood that a policy's response will be correct from its trajectory. A simple consequence follows: for LLMs trained with value-based RL, the existing critic can be reused as an off-the-shelf confidence estimator with no additional training or data. The policy remains unchanged, so its task performance is preserved, and the critic provides confidence throughout generation, including intermediate reasoning steps. Across math, code, tool calling, and general reasoning spanning a dozen domains, the reused critic is the best confidence estimator on every in-distribution split and the best-calibrated on 14 of 16, without hurting the task performance.",
+      "id": "2610.35787",
+      "title": "Selective Tie Learning: Mitigating Spurious Correlations in Preference Optimization",
+      "abstract": "Preference optimization can learn spurious correlations, and augmenting the preference data with ties (equally preferred responses) can reduce spurious reliance. However, ties differ in their corrective effect, making their selection for augmentation important. For log-linear policies, we derive each tie's influence on spurious reliance and show that taking the largest predicted reductions is first-order optimal among subsets of equal size. Computing these influences requires knowledge of the spurious features and the curvature of the training objective, which is often unavailable or expensive to estimate. To this end, we explore using the magnitude of a tie's implicit reward margin and characterize the conditions under which it is a useful proxy for predicted influence. To test the theory and its qualitative transfer to neural models, we estimate influence with a counterfactual proxy for spurious reliance and use a generalized Gauss--Newton approximation to curvature for language models. Across log-linear policies, neural models, and large language models, our selection rules consistently achieve comparable reductions in spurious reliance with fewer ties than uniform selection.",
       "authors": [
-        "Shujin Wu",
-        "Heng Ji"
+        "Christian Moya",
+        "Purav Matlia",
+        "Elliott Thornley",
+        "Guang Lin"
       ],
-      "published": "2026-10-22T18:57:52Z",
-      "updated": "2026-10-22T18:57:52Z",
+      "published": "2026-10-26T17:26:32Z",
+      "updated": "2026-10-26T17:26:32Z",
       "categories": [
-        "cs.CL"
+        "cs.LG"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.31820v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.31820v1",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.35787v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35787v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -347,388 +489,79 @@
         "large language model",
         "large language models",
         "language model",
-        "language models",
-        "llms"
+        "language models"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.4785,
+          "score": 0.3153,
           "matched": [
-            "learning",
-            "trustworthy",
-            "reliable"
+            "learning"
           ]
         },
         {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.2779,
+          "score": 0.3153,
           "matched": [
             "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1649,
-          "matched": [
-            "data",
-            "estimation"
           ]
         },
         {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.1529,
+          "score": 0.3107,
           "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.1153,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5379,
-        "relevance": 0.4714,
-        "quality": 0.65,
-        "novelty": 0.7945,
-        "freshness": 0.4415,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "proof",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We show that an external model trained solely on a policy's behavioral traces can estimate the policy's confidence as accurately as the policy itself, without accessing the policy's internal representations.",
-        "problem": "Reliable confidence estimation is essential for trustworthy deployment of large language models (LLMs), but dedicated confidence training stage requires additional data and compute.",
-        "method": "We ask a fundamental question: what prediction problem does confidence training actually solve?",
-        "evidence": "This points to a deeper connection with value function learning in reinforcement learning (RL): under a correctness-based outcome, we prove that confidence estimation and critic training are equivalent, both predicting the likelihood that a policy's response will be correct from its trajectory.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "trustworthy",
-          "reliable"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.32114",
-      "title": "Tampered ML: Evaluating LLM Judgment of Machine Learning Research",
-      "abstract": "One approach to accelerating progress on AI alignment is to automate parts of alignment research itself. Doing so requires systems that can perform reliably on hard-to-supervise research tasks, including identifying flaws in research proposals and evaluating whether a proposed experiment supports its intended claim. To evaluate this capability, we introduce Tampered ML, a benchmark of 1,858 item-pairs, each consisting of an experiment proposal reconstructed from a published machine learning paper and a minimally edited counterfactual that introduces a targeted methodological flaw. Models must identify the more methodologically sound proposal in both presentation orders. A human validation study on a stratified sample estimates that 86% of items are valid (95% CI: 81-91%). Frontier models perform above chance but remain far from reliable (with Opus 5 achieving 77.9% accuracy). They are highly sensitive to the order of presentation and favor flawed designs that appear more specific, transparent, or conventional.",
-      "authors": [
-        "Soroush Ebadian",
-        "Parand A. Alamdari",
-        "Joe Benton",
-        "Hailey Joren"
-      ],
-      "published": "2026-10-23T03:32:38Z",
-      "updated": "2026-10-23T03:32:38Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.DL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.32114v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.32114v1",
-      "comment": "28 pages, 10 figures. Accepted at EMNLP 2026 (Main Conference)",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5312,
-          "matched": [
-            "learning",
-            "machine",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.324,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5346,
-        "relevance": 0.4898,
-        "quality": 0.54,
-        "novelty": 0.8361,
-        "freshness": 0.4926,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To evaluate this capability, we introduce Tampered ML, a benchmark of 1,858 item-pairs, each consisting of an experiment proposal reconstructed from a published machine learning paper and a minimally edited counterfactual that introduces a targeted methodological flaw.",
-        "problem": "One approach to accelerating progress on AI alignment is to automate parts of alignment research itself.",
-        "method": "To evaluate this capability, we introduce Tampered ML, a benchmark of 1,858 item-pairs, each consisting of an experiment proposal reconstructed from a published machine learning paper and a minimally edited counterfactual that introduces a targeted methodological flaw.",
-        "evidence": "Doing so requires systems that can perform reliably on hard-to-supervise research tasks, including identifying flaws in research proposals and evaluating whether a proposed experiment supports its intended claim.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "machine",
-          "reliable"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.32096",
-      "title": "DELA: Learning Controllable Edits for Diffusion Language Models",
-      "abstract": "Diffusion language models (DLMs) support bidirectional denoising and iterative refinement, but generation remains largely controlled by token-level masking schedules. This leaves draft-level refinement implicit and limits explicit control over when to insert missing content, delete redundant spans, revisit uncertain regions, or stop editing. We introduce Diffusion Editing Language Adapter (DELA), a plug-in framework that enables controllable draft refinement with a frozen DLM. DELA operates on clean, variable-length drafts using four explicit editing actions: Insert, Delete, Remask, and Stop. The controller determines when and where to edit the draft, while the frozen DLM fills masked regions through denoising, separating high-level edit control from token-level generation. A naive single-phase editor would be computationally expensive because arbitrary interior edits can disrupt prefix stability and limit reliable KV-cache reuse. To address this, DELA uses a two-phase decoding procedure: a fast, append-only drafting phase that supports KV-cache reuse, followed by a global refinement phase that enables targeted non-monotonic edits to the full draft. We train the controller using a staged curriculum that begins with learning local edit priors from synthetic recovery tasks and mined actions that improve draft quality. Subsequent stages refine edit selection through rollout-based outcome preferences and alignment with downstream task feedback. Experiments on mathematical reasoning and code generation show that DELA achieves gains of up to 5.5 percentage points over direct diffusion decoding while keeping the backbone frozen. DELA thus provides a modular approach to explicit draft-level control in diffusion language models.",
-      "authors": [
-        "Xinsong Feng",
-        "Chenan Wang",
-        "Leshu Tang",
-        "Johnny Liu",
-        "Dong Li",
-        "Da Li",
-        "Haipeng Chen"
-      ],
-      "published": "2026-10-23T02:57:27Z",
-      "updated": "2026-10-23T02:57:27Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.32096v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.32096v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4657,
-          "matched": [
-            "learning",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3958,
-          "matched": [
-            "learning"
+            "selective"
           ]
         },
         {
           "id": "bandwidth_selection",
           "name": "Bandwidth selection",
           "status": "emerging",
-          "score": 0.0723,
+          "score": 0.1006,
           "matched": [
-            "selection",
-            "plug-in"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5346,
-        "relevance": 0.4662,
-        "quality": 0.61,
-        "novelty": 0.8512,
-        "freshness": 0.4891,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We introduce Diffusion Editing Language Adapter (DELA), a plug-in framework that enables controllable draft refinement with a frozen DLM.",
-        "problem": "Diffusion language models (DLMs) support bidirectional denoising and iterative refinement, but generation remains largely controlled by token-level masking schedules.",
-        "method": "We introduce Diffusion Editing Language Adapter (DELA), a plug-in framework that enables controllable draft refinement with a frozen DLM.",
-        "evidence": "We train the controller using a staged curriculum that begins with learning local edit priors from synthetic recovery tasks and mined actions that improve draft quality.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "reliable"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.32150",
-      "title": "From Promises to Accountability: Comparative AI Modeling and Visualization of Electoral Commitments in Nepali Political Texts",
-      "abstract": "Election Commitment Mining refers to the analysis of election commitments made by electoral candidates or political parties during election campaigns. However, many elected candidates and political parties, especially in developing South Asian countries, do not fully deliver on the promises they make before elections. Even after the elections, commitments presented through election manifestos, posters, pamphlets, videos, and other campaign materials are often not systematically or transparently archived. As a result, these promises tend to fade away over time, making it difficult to hold the elected candidates accountable for their commitments. To address this persistent issue, this research aims to develop a system capable of structuring the commitments made by candidates during election periods. In this work, we created the first gold-standard dataset of Nepali political texts (Cohen's kappa = 0.777) and evaluated machine learning, deep learning and large language models to automatically extract and analyze election commitments. LaBSE-LR achieved the best results among machine learning models (0.897 accuracy, 0.896 macro F1-score, 0.947 AUROC), while fastText-LSTM achieved the highest performance among deep learning models (0.914 accuracy, 0.913 macro F1-score, 0.961 AUROC). Among the three evaluated large language models, Qwen3-8B performed best in the few-shot setting (0.848 macro F1-score). The outcome of this work is integrated into a mobile application, where commitments can be visualized with the support of GAI, enhancing transparency, civic engagement, and electoral accountability.",
-      "authors": [
-        "Prakash Poudyal",
-        "Nischal Karki",
-        "Amrit Dahal",
-        "Rajani Chulyadyo",
-        "Sameer Tamrakar",
-        "Bal Krishna Bal"
-      ],
-      "published": "2026-10-23T04:32:17Z",
-      "updated": "2026-10-23T04:32:17Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.32150v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.32150v1",
-      "comment": "Under review at Natural Language Processing (Cambridge University Press); revision submitted. 34 pages, 5 figures, 13 tables",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4831,
-          "matched": [
-            "learning",
-            "machine"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3343,
-          "matched": [
-            "learning"
+            "selection"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0725,
+          "score": 0.0385,
           "matched": [
-            "time",
-            "analysis"
+            "data"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.0398,
+          "score": 0.0385,
           "matched": [
-            "time"
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.5047,
-        "relevance": 0.4678,
-        "quality": 0.45,
-        "novelty": 0.8569,
-        "freshness": 0.4985,
+        "total": 0.4402,
+        "relevance": 0.3774,
+        "quality": 0.33,
+        "novelty": 0.8556,
+        "freshness": 0.8665,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
-      "quality_signals": [
-        "dataset evidence",
-        "quantitative results"
-      ],
+      "quality_signals": [],
       "summary": {
-        "takeaway": "Election Commitment Mining refers to the analysis of election commitments made by electoral candidates or political parties during election campaigns.",
-        "problem": "Election Commitment Mining refers to the analysis of election commitments made by electoral candidates or political parties during election campaigns.",
-        "method": "However, many elected candidates and political parties, especially in developing South Asian countries, do not fully deliver on the promises they make before elections.",
-        "evidence": "LaBSE-LR achieved the best results among machine learning models (0.897 accuracy, 0.896 macro F1-score, 0.947 AUROC), while fastText-LSTM achieved the highest performance among deep learning models (0.914 accuracy, 0.913 macro F1-score, 0.961 AUROC).",
+        "takeaway": "Preference optimization can learn spurious correlations, and augmenting the preference data with ties (equally preferred responses) can reduce spurious reliance.",
+        "problem": "Preference optimization can learn spurious correlations, and augmenting the preference data with ties (equally preferred responses) can reduce spurious reliance.",
+        "method": "However, ties differ in their corrective effect, making their selection for augmentation important.",
+        "evidence": "Across log-linear policies, neural models, and large language models, our selection rules consistently achieve comparable reductions in spurious reliance with fewer ties than uniform selection.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -741,8 +574,7 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning",
-          "machine"
+          "learning"
         ],
         "lane": "llm"
       }

@@ -1,6 +1,460 @@
 {
-  "generated_at": "2026-10-26T16:47:04.462055+00:00",
+  "generated_at": "2026-10-27T15:52:30.919516+00:00",
   "papers": [
+    {
+      "id": "2610.35804",
+      "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models",
+      "abstract": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response. Efficient generation depends not only on which tokens are easy to predict, but also on how committing to them helps predict the remaining positions. A highly predictable token may provide little useful context, while revealing a less predictable token can help several other positions become predictable sooner. We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation. To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding. We then distill these schedules into the model to enable faster parallel sampling, with a KL-divergence regularizer to help preserve generation quality. We extensively evaluate our approach across mathematical reasoning and code generation tasks. On GSM8K, our method achieves remarkable 10.12$\\times$ and 5.12$\\times$ speedups over the various baselines on LLaDA-8B-Instruct and Dream-7B-Instruct, respectively, while maintaining superior task performance. Our code is available at https://github.com/VILA-Lab/dSpark.",
+      "authors": [
+        "Aidar Myrzakhan",
+        "Zhiqiang Shen"
+      ],
+      "published": "2026-10-26T17:35:58Z",
+      "updated": "2026-10-26T17:35:58Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.35804v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35804v1",
+      "comment": "Code is available at https://github.com/VILA-Lab/dSpark",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4555,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4555,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2732,
+          "matched": [
+            "uncertainty"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6126,
+        "relevance": 0.5101,
+        "quality": 0.78,
+        "novelty": 0.8162,
+        "freshness": 0.8674,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
+        "problem": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response.",
+        "method": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
+        "evidence": "To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-27T15:52:30.919516+00:00"
+    },
+    {
+      "id": "2610.35801",
+      "title": "FOCUS: Active Critic Learning for Long-Horizon Language Model Agents",
+      "abstract": "Sparse outcome rewards make it difficult for long-horizon language-model agents to assign credit to earlier actions. Learned critics provide value estimates for intermediate states, but these estimates can be inaccurate, while estimating intermediate values with repetitive continuation samples from points within a trajectory incurs substantial costs. To mitigate these issues, we introduce FOCUS, an RL method that uses selective branching to help the critic network learn its value estimator. The rollout controller facilitates active learning for the critic by sampling continuations from states that are expected to most reduce the critic's estimation error. These refined value estimates then score the segment between consecutive states with a TD($λ$) advantage, while the sampled evidence supplies training targets for the critic. FOCUS supports long-horizon agentic reinforcement learning through a modular context-management interface that decouples context management from rollout allocation. Our experiments show that using compaction-induced segment boundaries for value estimation and credit assignment, FOCUS outperforms GRPO and VinePPO with matched per-step generation budgets on legal reasoning, deep search, and code localization benchmarks, improving held-out accuracy at Qwen3.5-9B scale by 7.2 points over the strongest baseline on BrowseComp-Plus (55.4 vs. 48.2) and by 4.1 points on DeonticBench (56.5 vs. 52.4).",
+      "authors": [
+        "Zhengping Jiang",
+        "William Jurayj",
+        "Liaoyaqi Wang",
+        "Chunsheng Zuo",
+        "Anqi Liu",
+        "Benjamin Van Durme"
+      ],
+      "published": "2026-10-26T17:34:47Z",
+      "updated": "2026-10-26T17:34:47Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.35801v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35801v1",
+      "comment": "32 pages, 5 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3803,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3803,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1047,
+          "matched": [
+            "selective"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0591,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0582,
+          "matched": [
+            "estimation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5473,
+        "relevance": 0.4012,
+        "quality": 0.81,
+        "novelty": 0.811,
+        "freshness": 0.8673,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "formal bound"
+      ],
+      "summary": {
+        "takeaway": "To mitigate these issues, we introduce FOCUS, an RL method that uses selective branching to help the critic network learn its value estimator.",
+        "problem": "Sparse outcome rewards make it difficult for long-horizon language-model agents to assign credit to earlier actions.",
+        "method": "To mitigate these issues, we introduce FOCUS, an RL method that uses selective branching to help the critic network learn its value estimator.",
+        "evidence": "Our experiments show that using compaction-induced segment boundaries for value estimation and credit assignment, FOCUS outperforms GRPO and VinePPO with matched per-step generation budgets on legal reasoning, deep search, and code localization benchmarks, improving held-out accuracy at Qwen3.5-9B scale by 7.2 points over the strongest baseline on BrowseComp-Plus (55.4 vs.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-27T15:52:30.919516+00:00"
+    },
+    {
+      "id": "2610.35847",
+      "title": "Patient-specific rubric-based evaluation of large language models across longitudinal cancer care",
+      "abstract": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway. Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context. Curated from longitudinal records of 405 patients across two cancer centers, the benchmark comprises 941 patient-phase units across six sequential care phases and 17,688 patient-specific atomic criteria spanning five evaluation dimensions, with each assessment strictly restricted to decision-time clinical evidence. Evaluating 30 general-purpose and medical LLMs revealed that strong diagnostic performance does not carry over to downstream care. We evaluated 30 general-purpose and medical LLMs, showing that high diagnostic performance did not translate into improved downstream care. Instead, the dominant failure modes reversed across phases. Explicit decision errors dominated anatomical staging at 48.2%, whereas decision omissions dominated initial work-up and post-treatment follow-up at 33.4% and 30.4%, respectively. In the evaluated model set, medically adapted models showed higher omission rates than general-purpose models. Moreover, varying query granularity exposes a critical specification trade-off: broad open-ended requests degrade Decision Quality across all 30 models, while more detailed, checklist-like prompts raise Decision Quality but reduce Evidence Faithfulness and Safety Adherence. Furthermore, NPC-RubricBench demonstrates that static diagnostic benchmarks are insufficient to ensure consistent clinical reliability over time, highlighting the importance of phase-adaptive safeguards in multistage medical AI.",
+      "authors": [
+        "Wei-Wei Zhang",
+        "Pengkai Wang",
+        "Yan Li",
+        "Zhijie Sang",
+        "Guan-Qun Zhou",
+        "Jun-Yan Li",
+        "Shu-Han Zhou",
+        "Pei-Wen Liu",
+        "Ting-Xi Tang",
+        "Min Tang",
+        "Zhitian Hou",
+        "Jianmin Wu",
+        "Jian Guan",
+        "i Lin",
+        "Hongxia Yang",
+        "Ying Sun"
+      ],
+      "published": "2026-10-26T17:56:26Z",
+      "updated": "2026-10-26T17:56:26Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.35847v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35847v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5328,
+          "matched": [
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.083,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.083,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5261,
+        "relevance": 0.4594,
+        "quality": 0.48,
+        "novelty": 0.8795,
+        "freshness": 0.8694,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context.",
+        "problem": "Large language models (LLMs) show promise in specialty medicine, yet existing evaluations largely focus on isolated clinical encounters rather than tracking how clinical responsibilities evolve across a longitudinal care pathway.",
+        "method": "Here we introduce NPC-RubricBench, a phase-aware benchmark for evaluating multistage clinical reasoning across the cancer care continuum, using nasopharyngeal carcinoma as a defined disease context.",
+        "evidence": "We evaluated 30 general-purpose and medical LLMs, showing that high diagnostic performance did not translate into improved downstream care.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-27T15:52:30.919516+00:00"
+    },
+    {
+      "id": "2610.35787",
+      "title": "Selective Tie Learning: Mitigating Spurious Correlations in Preference Optimization",
+      "abstract": "Preference optimization can learn spurious correlations, and augmenting the preference data with ties (equally preferred responses) can reduce spurious reliance. However, ties differ in their corrective effect, making their selection for augmentation important. For log-linear policies, we derive each tie's influence on spurious reliance and show that taking the largest predicted reductions is first-order optimal among subsets of equal size. Computing these influences requires knowledge of the spurious features and the curvature of the training objective, which is often unavailable or expensive to estimate. To this end, we explore using the magnitude of a tie's implicit reward margin and characterize the conditions under which it is a useful proxy for predicted influence. To test the theory and its qualitative transfer to neural models, we estimate influence with a counterfactual proxy for spurious reliance and use a generalized Gauss--Newton approximation to curvature for language models. Across log-linear policies, neural models, and large language models, our selection rules consistently achieve comparable reductions in spurious reliance with fewer ties than uniform selection.",
+      "authors": [
+        "Christian Moya",
+        "Purav Matlia",
+        "Elliott Thornley",
+        "Guang Lin"
+      ],
+      "published": "2026-10-26T17:26:32Z",
+      "updated": "2026-10-26T17:26:32Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.35787v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.35787v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3153,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3153,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3107,
+          "matched": [
+            "selective"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.1006,
+          "matched": [
+            "selection"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4402,
+        "relevance": 0.3774,
+        "quality": 0.33,
+        "novelty": 0.8556,
+        "freshness": 0.8665,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [],
+      "summary": {
+        "takeaway": "Preference optimization can learn spurious correlations, and augmenting the preference data with ties (equally preferred responses) can reduce spurious reliance.",
+        "problem": "Preference optimization can learn spurious correlations, and augmenting the preference data with ties (equally preferred responses) can reduce spurious reliance.",
+        "method": "However, ties differ in their corrective effect, making their selection for augmentation important.",
+        "evidence": "Across log-linear policies, neural models, and large language models, our selection rules consistently achieve comparable reductions in spurious reliance with fewer ties than uniform selection.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-27T15:52:30.919516+00:00"
+    },
     {
       "id": "2610.32951",
       "title": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
@@ -10014,420 +10468,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-06T16:47:55.194651+00:00"
-    },
-    {
-      "id": "2610.02695",
-      "title": "Test-time Calibration Learning for Large Language Model Reasoning",
-      "abstract": "Reliable large language models (LLMs) must not only produce accurate answers but also express confidence that faithfully reflects their probability of being correct. Such calibration is essential for identifying uncertain predictions and supporting reliable decision-making in real-world deployment. Recent studies incorporate calibration learning into reinforcement learning (RL), jointly optimizing answer correctness and verbalized confidence using ground-truth correctness supervision. However, their reliance on labeled data limits their applicability in practical test-time settings, where ground-truth labels are unavailable and calibration may need to adapt to newly encountered target tasks. To address this challenge, we propose Test-Time Calibration Learning (TTCL), a label-free framework that jointly adapts reasoning accuracy and verbalized confidence directly on unlabeled target-task data. Specifically, TTCL derives self-supervision signals for both correctness and calibration from multiple model-generated responses, enabling calibration learning at test time without ground-truth labels. Theoretical analysis further establishes TTCL as a bounded surrogate for the ideal calibration objective. Extensive experiments on mathematical reasoning and factual question answering demonstrate that TTCL consistently improves both accuracy and calibration across diverse models and tasks. On base models, TTCL achieves an average relative accuracy improvement of +40.13% and an ECE reduction of +70.80% across eight benchmarks. Moreover, TTCL can further improve both accuracy and calibration for already calibrated models under domain shift, particularly when source-domain calibration transfers poorly to target tasks. In the math-to-factQA setting, TTCL achieves an average relative accuracy gain of +20.35% and reduces ECE by +53.83%. The source code is released at https://github.com/tmlr-group/TTCL.",
-      "authors": [
-        "Zizhuo Zhang",
-        "Xiong Peng",
-        "Jingwei Sun",
-        "Rong Yao",
-        "Shixiong Kai",
-        "Mingxuan Yuan",
-        "Bo Han"
-      ],
-      "published": "2026-10-02T02:17:17Z",
-      "updated": "2026-10-02T02:17:17Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.02695v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02695v1",
-      "comment": "34 pages",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.712,
-          "matched": [
-            "learning",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.6038,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.2263,
-          "matched": [
-            "time",
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.2136,
-          "matched": [
-            "time",
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7594,
-        "relevance": 0.7356,
-        "quality": 0.9,
-        "novelty": 0.7774,
-        "freshness": 0.4702,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "benchmark evaluation",
-        "experiments",
-        "formal bound"
-      ],
-      "summary": {
-        "takeaway": "To address this challenge, we propose Test-Time Calibration Learning (TTCL), a label-free framework that jointly adapts reasoning accuracy and verbalized confidence directly on unlabeled target-task data.",
-        "problem": "Reliable large language models (LLMs) must not only produce accurate answers but also express confidence that faithfully reflects their probability of being correct.",
-        "method": "To address this challenge, we propose Test-Time Calibration Learning (TTCL), a label-free framework that jointly adapts reasoning accuracy and verbalized confidence directly on unlabeled target-task data.",
-        "evidence": "Extensive experiments on mathematical reasoning and factual question answering demonstrate that TTCL consistently improves both accuracy and calibration across diverse models and tasks.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "reliable"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-05T19:17:22.699404+00:00"
-    },
-    {
-      "id": "2610.02877",
-      "title": "Evaluating LLM-as-a-Judge Beyond Score Alignment: A Psychometric Analysis of Residual Judging Difficulty",
-      "abstract": "Large language models (LLMs) are widely used as automatic judges, with validity typically assessed via alignment with human scores. However, aggregate agreement fails to reveal whether humans and LLMs find the same evaluation cases difficult. In this paper, we study this problem in summarization evaluation from a psychometric perspective. We fit Many-Facet Rasch Models separately to human and LLM ratings to decompose scores into latent summary quality, rater severity, dimension severity, and rating-scale thresholds. Building on this decomposition, we define residual hardness as a model-adjusted measure of judging difficulty and compare whether human and LLM judges share the same hardness structure. Across 17 open-weight LLM judges on SummEval, we find that moderate alignment in latent summary quality does not imply alignment in residual hardness. Human and LLM judges differ in which summary--dimension units remain difficult, and this mismatch is strongly dimension-dependent. Consistency shows a pronounced LLM-hard shift, whereas coherence shows a human-hard shift. We further show that human-easy but LLM-hard cases are partially predictable from observable source--summary properties. These findings suggest that aggregate human alignment reflects only part of LLM-as-a-judge reliability, while psychometric residual diagnostics support more informative judge evaluation and more targeted human--LLM collaboration.",
-      "authors": [
-        "Longwei Cong",
-        "Sonja Hahn",
-        "Sebastian Gombert",
-        "Leon Camus",
-        "Fabian Zehner",
-        "Hendrik Drachsler",
-        "Ulf Kroehne"
-      ],
-      "published": "2026-10-02T06:13:00Z",
-      "updated": "2026-10-02T06:13:00Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.02877v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02877v1",
-      "comment": "Accepted at AACL-IJCNLP 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6996,
-          "matched": [
-            "llm-as-a-judge"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.3804,
-          "matched": [
-            "evaluation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1356,
-          "matched": [
-            "analysis",
-            "dependent"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "dependent"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6227,
-        "relevance": 0.6629,
-        "quality": 0.41,
-        "novelty": 0.852,
-        "freshness": 0.4936,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Across 17 open-weight LLM judges on SummEval, we find that moderate alignment in latent summary quality does not imply alignment in residual hardness.",
-        "problem": "Large language models (LLMs) are widely used as automatic judges, with validity typically assessed via alignment with human scores.",
-        "method": "However, aggregate agreement fails to reveal whether humans and LLMs find the same evaluation cases difficult.",
-        "evidence": "In this paper, we study this problem in summarization evaluation from a psychometric perspective.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "llm-as-a-judge"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-05T19:17:22.699404+00:00"
-    },
-    {
-      "id": "2610.02972",
-      "title": "CreateScore: Domain-Theory-Informed Bayesian Routing for LLM-Based CV Screening",
-      "abstract": "Large language models (LLMs) can support rubric-based screening of CVs, but applying a high-capability model to every candidate and criterion is costly. We present CreateScore, a domain-theory-informed Bayesian network for criterion-level LLM routing. A hand-specified directed acyclic graph with Dirichlet-multinomial conditional probability tables converts CV evidence into posterior uncertainty; low-uncertainty decisions are resolved by a local 8B model and uncertain ones are escalated to a 120B reference model. The graph is causally motivated, but the system performs standard Bayesian conditioning, not causal inference. The escalation threshold is calibrated on a training fold (target: 70% resolved locally) and then frozen. On 200 synthetic Data Science CVs (139 training and 61 test candidates, five criteria), 77.7% of criterion decisions were resolved locally (237 of 305). Relative to a reference condition in which the 120B model adjudicated every criterion, routed escalation reduced token use by 65.2% and raised exact score agreement from 32.8% (8B alone) to 42.6% (95% CI 31.0-55.1%); at n = 61 the gain was not statistically distinguishable. The uncertainty signal did not, however, identify the decisions on which the 8B model erred: disagreement with the reference was 16.2% among escalated and 19.4% among locally resolved decisions (AUROC 0.47, 95% CI 0.39-0.56), no better than random selection. We also document how an earlier evaluation was invalidated when truncated reasoning-model outputs were silently replaced by local labels, and we recommend safeguards for cascade evaluation. CreateScore is supported as an auditable cost-reduction mechanism, not yet as a targeted error detector, and is not an autonomous hiring system.",
-      "authors": [
-        "Rupsa Roy"
-      ],
-      "published": "2026-10-02T08:06:24Z",
-      "updated": "2026-10-02T08:06:24Z",
-      "categories": [
-        "cs.AI",
-        "stat.AP"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.02972v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02972v1",
-      "comment": "11 pages, 5 figures, 7 tables (Excluding Appendix). CreateScore Planner App GitHub repo link: https://github.com/rupsa-arc1-2441139/createscore",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7209,
-          "matched": [
-            "uncertainty",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0832,
-          "matched": [
-            "inference",
-            "data"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0457,
-          "matched": [
-            "selection"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5819,
-        "relevance": 0.6025,
-        "quality": 0.41,
-        "novelty": 0.8298,
-        "freshness": 0.5049,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We present CreateScore, a domain-theory-informed Bayesian network for criterion-level LLM routing.",
-        "problem": "Large language models (LLMs) can support rubric-based screening of CVs, but applying a high-capability model to every candidate and criterion is costly.",
-        "method": "We present CreateScore, a domain-theory-informed Bayesian network for criterion-level LLM routing.",
-        "evidence": "A hand-specified directed acyclic graph with Dirichlet-multinomial conditional probability tables converts CV evidence into posterior uncertainty; low-uncertainty decisions are resolved by a local 8B model and uncertain ones are escalated to a 120B reference model.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-05T19:17:22.699404+00:00"
-    },
-    {
-      "id": "2610.02622",
-      "title": "CuBEs: Culturally-Situated Behavioral Evaluations and the Limitations of Culture-Blind LLM Judges",
-      "abstract": "Evaluating the occurrence and triggers of large language model (LLM) behaviors - such as sycophancy, self-preference, or over-confidence - is critical for predicting real-world model deployment risks. However, existing situated behavioral evaluations typically ignore cultural context, limiting their generalizability across an increasingly global user base. To address this gap, we propose CuBEs - Culturally-situated Behavior Evaluations that probe for response patterns across diverse user cultures. We first extend an automated testing pipeline to inject cultural context into behavioral test scenarios and subsequent evaluation. We assess the cultural adaptability of this pipeline by building a human-labeled dataset that captures nuanced dimensions of behavior understanding across 12 distinct cultures. Our dataset reveals significant cross-cultural variations that one-size-fits all judgments fail to capture. Through evaluating 13 open- and closed-source LLMs, we find that introducing cultural situatedness in the evaluation scenario creates significant variation in the presence of a behavior. For example, while our baseline experiments testing for political bias capture localized Western political dimensions like the American conservative-progressive divide, non-Western culturally situated evaluations surface entirely different axes of bias such as religious and colonial political issues. Our findings demonstrate that standard, culturally-agnostic evaluations fail to capture these shifts, highlighting the necessity of culturally situated behavioral testing for global deployments.",
-      "authors": [
-        "Hoda Ayad",
-        "Tanu Mitra",
-        "Abhishek Mukherji"
-      ],
-      "published": "2026-10-02T00:26:55Z",
-      "updated": "2026-10-02T00:26:55Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.02622v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.02622v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.675,
-          "matched": [
-            "evaluation",
-            "evaluations"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5778,
-        "relevance": 0.54,
-        "quality": 0.58,
-        "novelty": 0.8786,
-        "freshness": 0.4593,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address this gap, we propose CuBEs - Culturally-situated Behavior Evaluations that probe for response patterns across diverse user cultures.",
-        "problem": "Evaluating the occurrence and triggers of large language model (LLM) behaviors - such as sycophancy, self-preference, or over-confidence - is critical for predicting real-world model deployment risks.",
-        "method": "To address this gap, we propose CuBEs - Culturally-situated Behavior Evaluations that probe for response patterns across diverse user cultures.",
-        "evidence": "For example, while our baseline experiments testing for political bias capture localized Western political dimensions like the American conservative-progressive divide, non-Western culturally situated evaluations surface entirely different axes of bias such as religious and colonial political issues.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "evaluations"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-05T19:17:22.699404+00:00"
     }
   ]
 }
