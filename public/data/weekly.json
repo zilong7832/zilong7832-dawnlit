@@ -1,126 +1,6 @@
 {
-  "generated_at": "2026-10-28T16:36:51.734079+00:00",
+  "generated_at": "2026-10-29T16:55:36.494222+00:00",
   "papers": [
-    {
-      "id": "2610.29895",
-      "title": "Automated Materials Data and Knowledge Extraction using Machine Learning and Large Language Models",
-      "abstract": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature. This review traces the evolution of these methods from heuristic, rule-based pipelines through natural language processing (NLP) models and transformer-based encoders to, lastly, large language models (LLMs) and agentic systems capable of extracting materials information across multiple modalities, including text, tables, and figures. Beside construction of large, queryable materials databases and knowledge graphs that support downstream materials discovery, we discuss how these advances have enabled new capabilities, such as, generic question answering across materials science, AI co-scientists and chatbots for research assistance, and closed-loop optimization and discovery when integrated with autonomous laboratories. We critically assess the datasets generated using these approaches, their extraction accuracy and computational costs, and the respective strengths and limitations of different methodologies, and even provide practical guidelines for developing more reliable and scalable materials data extraction pipelines. Finally, we identify key open challenges, including the extraction of full materials structure-property-processing-performance tetrahedron at the sample level, the scarcity of reliable benchmark datasets for systematic evaluation, and the resolution of non-standard materials terminology across different document modalities.",
-      "authors": [
-        "Aravindan Kamatchi Sundaram",
-        "B. Pabitramohan Prusty",
-        "Rohit Batra"
-      ],
-      "published": "2026-10-21T15:38:05Z",
-      "updated": "2026-10-21T15:38:05Z",
-      "categories": [
-        "cond-mat.mtrl-sci",
-        "cs.AI"
-      ],
-      "primary_category": "cond-mat.mtrl-sci",
-      "abs_url": "https://arxiv.org/abs/2610.29895v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.29895v1",
-      "comment": "25 pages, 5 figures",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.7844,
-          "matched": [
-            "learning",
-            "machine",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4554,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1598,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1598,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7323,
-        "relevance": 0.7506,
-        "quality": 0.58,
-        "novelty": 0.8549,
-        "freshness": 0.8594,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "dataset evidence"
-      ],
-      "summary": {
-        "takeaway": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature.",
-        "problem": "Over the past decade, substantial efforts have been devoted to developing machine learning (ML) methods for extracting materials data and, where possible, materials knowledge directly from the scientific literature.",
-        "method": "This review traces the evolution of these methods from heuristic, rule-based pipelines through natural language processing (NLP) models and transformer-based encoders to, lastly, large language models (LLMs) and agentic systems capable of extracting materials information across multiple modalities, including text, tables, and figures.",
-        "evidence": "Beside construction of large, queryable materials databases and knowledge graphs that support downstream materials discovery, we discuss how these advances have enabled new capabilities, such as, generic question answering across materials science, AI co-scientists and chatbots for research assistance, and closed-loop optimization and discovery when integrated with autonomous laboratories.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "machine",
-          "reliable"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-22T15:15:21.077508+00:00"
-    },
     {
       "id": "2610.28937",
       "title": "Auditing Conformal Prediction for Language Models Under Inference-Time Model Shift",
@@ -357,14 +237,13 @@
       "recommended_at": "2026-10-28T16:36:51.734079+00:00"
     },
     {
-      "id": "conf:acl:2026:3090-main",
-      "title": "DR-Arena: an Automated Evaluation Framework for Deep Research Agents",
-      "abstract": "As Large Language Models (LLMs) increasingly operate as Deep Research (DR) Agents capable of autonomous investigation and information synthesis, reliable evaluation of their task performance has become a critical bottleneck. Current benchmarks predominantly rely on static datasets, which suffer from several limitations: limited task generality, temporal misalignment, and data contamination. To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation. DR-Arena constructs real-time Information Trees from fresh web trends to ensure the evaluation rubric is synchronized with the live world state, and employs an automated Examiner to generate structured tasks testing two orthogonal capabilities: Deep reasoning and Wide coverage. DR-Arena further adopts Adaptive Evolvement Loop, a state-machine controller that dynamically escalates task complexity based on real-time performance, demanding deeper deduction or wider aggregation until a decisive capability boundary emerges. Experiments with six advanced DR agents demonstrate that DR-Arena achieves a Spearman correlation of 0.94 with the LMSYS Search Arena leaderboard. This represents state-of-the-art alignment with human preferences without any manual efforts, validating DR-Arena as a reliable alternative for costly human adjudication.",
+      "id": "conf:acl:2026:96-main",
+      "title": "SAGE: A Search-AuGmented Evaluation of Large Language Models on Free‑Form QA",
+      "abstract": "As Large Language Models (LLMs) become increasingly used for question-answering (QA), relying on static, pre-annotated references for evaluation poses significant challenges in cost, scalability, and completeness. Meanwhile, using LLMs themselves as evaluators without external grounding remains unreliable for objective tasks, as they systematically over-accept incorrect answers, fabricate supporting rationales, and degrade sharply on questions that fall outside their training data. We propose Search-AuGmented Evaluation (SAGE), a framework to assess LLM outputs without fixed ground-truth answers. Unlike conventional metrics that compare to static references or depend solely on LLM-as-a-judge knowledge, SAGE acts as an agent that actively retrieves and synthesizes external evidence. It iteratively generates web queries, collects information, summarizes findings, and refines subsequent searches through reflection. By reducing dependence on static reference-driven evaluation protocols, SAGE offers a scalable and adaptive alternative for evaluating the factuality of LLMs. Experimental results on multiple free-form QA benchmarks show that SAGE achieves substantial to perfect agreement with human evaluations.",
       "authors": [
-        "Yiwen Gao",
-        "Ruochen Zhao",
-        "Yang Deng",
-        "Wenxuan Zhang"
+        "Sher Badshah",
+        "Ali Emami",
+        "Hassan Sajjad"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -387,45 +266,34 @@
         "large language models",
         "language model",
         "language models",
-        "llms"
+        "llm"
       ],
       "topics": [
         {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.5716,
+          "score": 0.6604,
           "matched": [
-            "evaluation"
+            "evaluation",
+            "evaluations"
           ]
         },
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.3614,
+          "score": 0.2732,
           "matched": [
-            "machine",
-            "reliable"
+            "llm-as-a-judge"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.1084,
+          "score": 0.0442,
           "matched": [
-            "time",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1084,
-          "matched": [
-            "time",
             "data"
           ]
         },
@@ -433,17 +301,26 @@
           "id": "bandwidth_selection",
           "name": "Bandwidth selection",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.0442,
           "matched": [
             "adaptive"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.6667,
-        "relevance": 0.5512,
-        "quality": 0.88,
-        "novelty": 0.8241,
+        "total": 0.6607,
+        "relevance": 0.5918,
+        "quality": 0.7,
+        "novelty": 0.8605,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
@@ -451,15 +328,14 @@
       "quality_signals": [
         "benchmark evaluation",
         "experiments",
-        "formal bound",
-        "dataset evidence",
-        "quantitative results"
+        "publication metadata",
+        "conference oral"
       ],
       "summary": {
-        "takeaway": "To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation.",
-        "problem": "As Large Language Models (LLMs) increasingly operate as Deep Research (DR) Agents capable of autonomous investigation and information synthesis, reliable evaluation of their task performance has become a critical bottleneck.",
-        "method": "To address these, we introduce DR-Arena, a fully automated evaluation framework that pushes DR agents to their capability limits through dynamic investigation.",
-        "evidence": "Experiments with six advanced DR agents demonstrate that DR-Arena achieves a Spearman correlation of 0.94 with the LMSYS Search Arena leaderboard.",
+        "takeaway": "We propose Search-AuGmented Evaluation (SAGE), a framework to assess LLM outputs without fixed ground-truth answers.",
+        "problem": "As Large Language Models (LLMs) become increasingly used for question-answering (QA), relying on static, pre-annotated references for evaluation poses significant challenges in cost, scalability, and completeness.",
+        "method": "We propose Search-AuGmented Evaluation (SAGE), a framework to assess LLM outputs without fixed ground-truth answers.",
+        "evidence": "Experimental results on multiple free-form QA benchmarks show that SAGE achieves substantial to perfect agreement with human evaluations.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
         "source": "abstract",
@@ -472,11 +348,222 @@
       "recommendation_reason": {
         "topic": "Conformal prediction",
         "matched": [
-          "evaluation"
+          "evaluation",
+          "evaluations"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-22T15:15:21.077508+00:00"
+      "recommended_at": "2026-10-29T16:55:36.494222+00:00"
+    },
+    {
+      "id": "conf:acl:2026:4340-main",
+      "title": "\"Excuse me, may I say something...\" CoLabScience, A Proactive AI Assistant for Biomedical Discovery and LLM-Expert Collaborations",
+      "abstract": "The integration of Large Language Models (LLMs) into scientific workflows presents exciting opportunities to accelerate biomedical discovery. However, the reactive nature of LLMs, which respond only when prompted, limits their effectiveness in collaborative settings that demand foresight and autonomous engagement. In this study, we introduce CoLabScience, a proactive LLM assistant designed to enhance biomedical collaboration between AI systems and human experts through timely, context-aware interventions. At the core of our method is PULI (Positive-Unlabeled Learning-to-Intervene), a novel framework trained with a reinforcement learning objective to determine when and how to intervene in streaming scientific discussions, by leveraging the team's project proposal and long- and short-term conversational memory. To support this work, we introduce BSDD (Biomedical Streaming Dialogue Dataset), a new benchmark of simulated research discussion dialogues with intervention points derived from PubMed articles. Experimental results show that PULI significantly outperforms existing baselines in both intervention precision and collaborative task utility, highlighting the potential of proactive LLMs as intelligent scientific assistants.",
+      "authors": [
+        "Yang Wu",
+        "Jinhong Yu",
+        "Jingwei Xiong",
+        "Zhimin Tao",
+        "Xiaozhong Liu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.5912,
+          "matched": [
+            "Positive-unlabeled learning",
+            "positive-unlabeled learning",
+            "learning",
+            "positive-unlabeled"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.2782,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6417,
+        "relevance": 0.5286,
+        "quality": 0.81,
+        "novelty": 0.8615,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "In this study, we introduce CoLabScience, a proactive LLM assistant designed to enhance biomedical collaboration between AI systems and human experts through timely, context-aware interventions.",
+        "problem": "The integration of Large Language Models (LLMs) into scientific workflows presents exciting opportunities to accelerate biomedical discovery.",
+        "method": "In this study, we introduce CoLabScience, a proactive LLM assistant designed to enhance biomedical collaboration between AI systems and human experts through timely, context-aware interventions.",
+        "evidence": "Experimental results show that PULI significantly outperforms existing baselines in both intervention precision and collaborative task utility, highlighting the potential of proactive LLMs as intelligent scientific assistants.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "Positive-unlabeled learning",
+          "positive-unlabeled learning",
+          "learning",
+          "positive-unlabeled"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-29T16:55:36.494222+00:00"
+    },
+    {
+      "id": "conf:acl:2026:1740-main",
+      "title": "CoAct: Co-Active LLM Preference Learning with Human-AI Synergy",
+      "abstract": "Learning from preference-based feedback has become an effective approach for aligning LLMs across diverse tasks. However, high-quality human-annotated preference data remains expensive and scarce. Existing methods address this challenge through either self-rewarding, which scales by using purely AI-generated labels but risks unreliability, or active learning, which ensures quality through oracle annotation but cannot fully leverage unlabeled data. In this paper, we present CoAct, a novel framework that synergistically combines self-rewarding and active learning through strategic human-AI collaboration. CoAct leverages self-consistency to identify both reliable self-labeled data and samples requiring oracle verification. Additionally, oracle feedback guides the model to generate new instructions within its solvable capability. Evaluated on three reasoning benchmarks across two model families, CoAct achieves average improvements of +13.25% on GSM8K, +8.19% on MATH, and +13.16% on WebInstruct, consistently outperforming all baselines.",
+      "authors": [
+        "Ruiyao Xu",
+        "Mihir Parmar",
+        "Tiankai Yang",
+        "Zhengyu Hu",
+        "Yue Zhao",
+        "Kaize Ding"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5238,
+          "matched": [
+            "learning",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4778,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0901,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0901,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6362,
+        "relevance": 0.5326,
+        "quality": 0.79,
+        "novelty": 0.8199,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we present CoAct, a novel framework that synergistically combines self-rewarding and active learning through strategic human-AI collaboration.",
+        "problem": "Learning from preference-based feedback has become an effective approach for aligning LLMs across diverse tasks.",
+        "method": "In this paper, we present CoAct, a novel framework that synergistically combines self-rewarding and active learning through strategic human-AI collaboration.",
+        "evidence": "Evaluated on three reasoning benchmarks across two model families, CoAct achieves average improvements of +13.25% on GSM8K, +8.19% on MATH, and +13.16% on WebInstruct, consistently outperforming all baselines.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-29T16:55:36.494222+00:00"
     },
     {
       "id": "2610.35804",
@@ -1225,104 +1312,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-24T14:00:34.921589+00:00"
-    },
-    {
-      "id": "2610.32193",
-      "title": "Evidence-Grounded SLM Behavioral Prediction Architecture for Future Assistance Use",
-      "abstract": "Users often exhibit changes in interaction behavior before explicitly seeking assistance, enabling systems to anticipate future assistance use. This is especially important in high-stakes environments, where delayed assistance can have operational, financial, or safety consequences. However, conventional Large Language Models (LLMs) are often unsuitable for continuous on-device behavioral prediction because of their computational and memory demands. Behavioral patterns are also highly individual and device-specific, motivating local processing that preserves privacy and data sovereignty. Small Language Models (SLMs) offer a promising alternative, but their ability to reason reliably over low-level sequential interaction events remains underexplored. This study introduces Evidence-Grounded Local Behavioral Prediction (ELBP), a four-layer architecture combining deterministic interaction processing, dual-view behavioral representation, SLM-based prediction, and evidence verification with abstention. Three instruction-tuned models of 3B parameters or fewer were evaluated using raw, structured, dual-view, and complete ELBP configurations. The best-performing model, Qwen2.5-3B with ELBP, achieved a full-set F1-score of 0.80 and PR-AUC of 0.84, representing a 15.9\\% relative improvement over raw-event prompting and 17.6\\% over XGBoost, while full-set ECE decreased by 43.2\\% relative to raw-event prompting. With evidence verification and abstention, selective F1 increased to 0.84 at 91\\% coverage and evidence support reached 96\\%. These results show that structured behavioral representation and evidence-verified selective prediction can improve the reliability of behavioral forecasting in SLMs.",
-      "authors": [
-        "Adeyemi Adeseye",
-        "Aisvarya Adeseye",
-        "Hannu Tenhunen",
-        "Jouni Isoaho"
-      ],
-      "published": "2026-10-23T05:39:31Z",
-      "updated": "2026-10-23T05:39:31Z",
-      "categories": [
-        "cs.AI"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.32193v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.32193v1",
-      "comment": "Accepted for publication at the 2027 International Conference on Artificial Intelligence and Applied Intelligent Systems (AIAIS 2027), to be held in Hong Kong from 22 to 24 January 2027",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6767,
-          "matched": [
-            "prediction",
-            "selective"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5528,
-        "relevance": 0.5582,
-        "quality": 0.41,
-        "novelty": 0.8273,
-        "freshness": 0.5052,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Users often exhibit changes in interaction behavior before explicitly seeking assistance, enabling systems to anticipate future assistance use.",
-        "problem": "Users often exhibit changes in interaction behavior before explicitly seeking assistance, enabling systems to anticipate future assistance use.",
-        "method": "This is especially important in high-stakes environments, where delayed assistance can have operational, financial, or safety consequences.",
-        "evidence": "The best-performing model, Qwen2.5-3B with ELBP, achieved a full-set F1-score of 0.80 and PR-AUC of 0.84, representing a 15.9\\% relative improvement over raw-event prompting and 17.6\\% over XGBoost, while full-set ECE decreased by 43.2\\% relative to raw-event prompting.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction",
-          "selective"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-26T16:47:04.462055+00:00"
     }
   ]
 }
