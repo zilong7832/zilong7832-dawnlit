@@ -1,24 +1,30 @@
 {
-  "generated_at": "2026-10-30T16:41:41.737649+00:00",
+  "generated_at": "2026-10-31T15:43:19.817370+00:00",
   "papers": [
     {
-      "id": "2610.28937",
-      "title": "Auditing Conformal Prediction for Language Models Under Inference-Time Model Shift",
-      "abstract": "Conformal prediction (CP) for language models is typically evaluated under a matched protocol, in which calibration and deployment use the same post-training inference configuration, such as quantization mode and inference temperature. In deployment, these choices often differ from those used at calibration to meet memory or throughput constraints or serving policies. We argue that this exposes a limitation in current CP evaluation protocols for language models. We formalize the underlying phenomenon as inference-time model shift: a change in the conformal score distribution induced by inference configuration rather than by the input--label distribution, and theoretically characterize how it breaks split-conformal exchangeability even when the task distribution and trained model are unchanged. We then evaluate its consequences across 8 language models, 4 finite-label benchmarks, and 12 inference configurations. We find that matched evaluation can substantially overstate deployment-time coverage, and that the effect is heterogeneous across models and datasets. We argue that inference configuration should be reported as a first-class experimental axis in CP evaluations for language-model systems.",
+      "id": "2610.39671",
+      "title": "Incentivizing Self-Learning in Large Language Models via Reinforcement Learning",
+      "abstract": "Large language models (LLMs) draw on parametric knowledge and retrieval-augmented generation (RAG) to solve knowledge-intensive tasks. Yet problem solving in unfamiliar domains calls for tightly coupled knowledge acquisition and reasoning, beyond factual retrieval and aggregation or learning solely from a preassembled context. We study self-learning -- autonomously retrieving, studying, and applying knowledge from long-form reference materials on the fly. To investigate this capability, we formulate a textbook-based mathematical problem-solving task. LLMs must navigate textbook exposition, learn and apply relevant principles, and construct proofs for exercises, with reference solutions withheld. We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards. Experiments show that our method improves performance across in-domain and out-of-domain textbooks and subjects, raising Intern-S2-Preview-35B's overall proof accuracy from 51.5% to 79.5% and outperforming RL-trained textbook-free and fixed-retrieval baselines. These gains extend to complex long-context benchmarks involving different task types, with improvements over the base model of 1.7 and 2.3 percentage points on BrowseComp-Plus and CL-bench, respectively. Together, these findings suggest that RL can foster a domain-agnostic self-learning strategy, highlighting the potential of self-learning from long-form corpora to strengthen broader problem-solving capabilities on complex, long-context tasks.",
       "authors": [
-        "Achref Doula",
-        "Max Mühlhäuser"
+        "Lingkai Kong",
+        "Yuzhe Gu",
+        "Haiteng Zhao",
+        "Zijian Wu",
+        "Youqing Fang",
+        "Zhouqi Hua",
+        "Yanan Sun",
+        "Kai Chen",
+        "Wenwei Zhang"
       ],
-      "published": "2026-10-20T21:30:43Z",
-      "updated": "2026-10-20T21:30:43Z",
+      "published": "2026-10-29T09:21:26Z",
+      "updated": "2026-10-29T09:21:26Z",
       "categories": [
-        "cs.LG",
-        "stat.ML"
+        "cs.CL"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.28937v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.28937v1",
-      "comment": "Accepted at the 40th Conference on Neural Information Processing Systems (NeurIPS 2026). Track on Evaluations and Datasets",
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2610.39671v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.39671v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -26,74 +32,54 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
+        "large language model",
+        "large language models",
         "language model",
-        "language models"
+        "language models",
+        "llms"
       ],
       "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.8157,
-          "matched": [
-            "Conformal prediction",
-            "conformal",
-            "prediction",
-            "evaluation",
-            "evaluations"
-          ]
-        },
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.3107,
+          "score": 0.7454,
           "matched": [
-            "auditing"
+            "learning"
           ]
         },
         {
-          "id": "time_series_inference",
-          "name": "Time series inference",
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.2128,
+          "score": 0.7454,
           "matched": [
-            "inference",
-            "time"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.139,
-          "matched": [
-            "time"
+            "learning"
           ]
         }
       ],
       "scores": {
-        "total": 0.7189,
-        "relevance": 0.7573,
-        "quality": 0.58,
-        "novelty": 0.8702,
-        "freshness": 0.4732,
+        "total": 0.7251,
+        "relevance": 0.7454,
+        "quality": 0.61,
+        "novelty": 0.848,
+        "freshness": 0.6764,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "baseline comparison",
         "benchmark evaluation",
         "experiments",
-        "dataset evidence",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "We find that matched evaluation can substantially overstate deployment-time coverage, and that the effect is heterogeneous across models and datasets.",
-        "problem": "Conformal prediction (CP) for language models is typically evaluated under a matched protocol, in which calibration and deployment use the same post-training inference configuration, such as quantization mode and inference temperature.",
-        "method": "In deployment, these choices often differ from those used at calibration to meet memory or throughput constraints or serving policies.",
-        "evidence": "We argue that inference configuration should be reported as a first-class experimental axis in CP evaluations for language-model systems.",
+        "takeaway": "We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards.",
+        "problem": "Large language models (LLMs) draw on parametric knowledge and retrieval-augmented generation (RAG) to solve knowledge-intensive tasks.",
+        "method": "We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards.",
+        "evidence": "Experiments show that our method improves performance across in-domain and out-of-domain textbooks and subjects, raising Intern-S2-Preview-35B's overall proof accuracy from 51.5% to 79.5% and outperforming RL-trained textbook-free and fixed-retrieval baselines.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -102,16 +88,137 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "Conformal prediction",
-          "conformal",
-          "prediction",
-          "evaluation"
+          "learning"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-24T14:00:34.921589+00:00"
+      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
+    },
+    {
+      "id": "2610.38335",
+      "title": "Learning a Prior-Data Fitted Network for Graph Foundation Models via Structural Causal Model Priors",
+      "abstract": "Graph Foundation Models (GFMs) have recently emerged as a promising paradigm for learning transferable representations across different graphs and domains. However, existing GFMs face notable limitations, including limited pre-training scale or reliance on aligning with textual information in Large Language Models (LLMs). To overcome these limitations, recent studies have drawn inspiration from prior-data fitted networks (PFNs), which learn from large synthetic datasets and support multi-domain prediction backed by causal learning. However, existing graph PFNs encounter severe difficulties in modeling causal relationships within and across node and edge sets, generating diverse graph structures, and designing suitable architectures that can learn from complex synthetic datasets. To address these challenges, we propose **GSCM-PFN** (Graph SCM-based Prior-Data Fitted Network), a graph PFN pre-trained on synthetic data generated from an SCM-based prior that jointly models nodes and graph topology. Specifically, we (1) design a joint feature-edge-label structural causal model (SCM) to guide synthetic graph generation and capture causal relationships within and across node and edge sets; (2) introduce prior-guided node-edge dependency modeling to instantiate diverse graph generation strategies, and prove that our SCM-based generation prior is more expressive than existing priors; and (3) propose a feature-permutation-invariant dual-path graph network with theoretical guarantees for learning from diverse synthetic graphs. Experiments on 23 real-world benchmarks show that GSCM-PFN outperforms both conventional GFMs and PFN-based GFMs, without utilizing real-world graph data for pre-training. Code: https://anonymous.4open.science/r/GSCM-PFN-A3A3/",
+      "authors": [
+        "Ziwei Zhang",
+        "Tianyin Liao",
+        "Chunyu Hu",
+        "Ge Lan",
+        "Nuo Xu",
+        "Yi Huang",
+        "Qingyun Sun",
+        "Xingxuan Zhang",
+        "Peng Cui",
+        "Jianxin Li"
+      ],
+      "published": "2026-10-28T06:35:34Z",
+      "updated": "2026-10-28T06:35:34Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.38335v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.38335v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6041,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6041,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1805,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1805,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1527,
+          "matched": [
+            "prediction"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6693,
+        "relevance": 0.6402,
+        "quality": 0.72,
+        "novelty": 0.8329,
+        "freshness": 0.5171,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address these challenges, we propose **GSCM-PFN** (Graph SCM-based Prior-Data Fitted Network), a graph PFN pre-trained on synthetic data generated from an SCM-based prior that jointly models nodes and graph topology.",
+        "problem": "Graph Foundation Models (GFMs) have recently emerged as a promising paradigm for learning transferable representations across different graphs and domains.",
+        "method": "To address these challenges, we propose **GSCM-PFN** (Graph SCM-based Prior-Data Fitted Network), a graph PFN pre-trained on synthetic data generated from an SCM-based prior that jointly models nodes and graph topology.",
+        "evidence": "Specifically, we (1) design a joint feature-edge-label structural causal model (SCM) to guide synthetic graph generation and capture causal relationships within and across node and edge sets; (2) introduce prior-guided node-edge dependency modeling to instantiate diverse graph generation strategies, and prove that our SCM-based generation prior is more expressive than existing priors; and (3) propose a feature-permutation-invariant dual-path graph network with theoretical guarantees for learning from diverse synthetic graphs.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
     },
     {
       "id": "conf:acl:2026:2526-main",
@@ -354,6 +461,87 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-29T16:55:36.494222+00:00"
+    },
+    {
+      "id": "2610.40278",
+      "title": "Neighborhood Elites: Quality-Diversity Search for Uncertainty Quantification in Question Answering",
+      "abstract": "Large language models (LLMs) are increasingly capable, yet they produce wrong answers indistinguishable from correct ones. In question answering (QA), such an error propagates unnoticed into downstream tasks. Perturbation-based uncertainty quantification (UQ) addresses this by probing a model over a set of input rewrites and reading uncertainty from how much its predictions vary. Yet this set is usually built generically, by free paraphrasing, token-level perturbation, or adversarial search. Such rewrites leave two things uncontrolled that matter in QA: what kind of change is made to the context, and how explicitly the context supports the answer. When neither is controlled, the composition of the set is determined by the generator rather than by design, and the estimate inherits whatever that generator happens to produce. Quality-diversity (QD) search is built to cover a predefined exploration space, so we recast input perturbation as a QD problem and propose \\emph{neighborhood elites (NE)}, a neighborhood constructor that spreads answer-preserving rewrites across two axes, the kind of edit and the explicitness of support. We compare NE against three other neighborhood constructors, holding the editor, QA model, uncertainty measure and search objective fixed, and against three scores read from the original context. Across five extractive-QA datasets and five instruction-tuned LLMs, NE improves failure detection against every other constructor in at least 24 of the 25 dataset-model pairs, reaching 0.726 AUROC and 0.211 AUPRC lift over the base rate. Additionally, NE detects failure better than semantic entropy computed over decoder samples, by 0.074 AUROC and 0.062 AUPRC lift, and this advantage widens as the neighborhood grows.",
+      "authors": [
+        "Mesut Ceylan",
+        "Arda Baris Basaran",
+        "Elgar Fleisch",
+        "Filipe Barata"
+      ],
+      "published": "2026-10-29T15:32:57Z",
+      "updated": "2026-10-29T15:32:57Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.40278v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.40278v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.7992,
+          "matched": [
+            "uncertainty"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6529,
+        "relevance": 0.6394,
+        "quality": 0.59,
+        "novelty": 0.8361,
+        "freshness": 0.7133,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Large language models (LLMs) are increasingly capable, yet they produce wrong answers indistinguishable from correct ones.",
+        "problem": "Large language models (LLMs) are increasingly capable, yet they produce wrong answers indistinguishable from correct ones.",
+        "method": "In question answering (QA), such an error propagates unnoticed into downstream tasks.",
+        "evidence": "Across five extractive-QA datasets and five instruction-tuned LLMs, NE improves failure detection against every other constructor in at least 24 of the 25 dataset-model pairs, reaching 0.726 AUROC and 0.211 AUPRC lift over the base rate.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
     },
     {
       "id": "conf:acl:2026:4340-main",
@@ -784,6 +972,94 @@
       "recommended_at": "2026-10-30T16:41:41.737649+00:00"
     },
     {
+      "id": "2610.37926",
+      "title": "GARDEN: Generalist Autonomous Reward Design Through Evidence Navigation for Cooperative Multi-Agent Reinforcement Learning",
+      "abstract": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function. Because task success alone provides too little guidance for learning, intermediate rewards are usually designed by hand, and this effort must often be repeated whenever the environment or the team changes. Large language models (LLMs) can automate the effort by writing reward functions as code, yet the resulting rewards are typically designed and tested in a single setting. To enable their reuse across settings, GARDEN (Generalist Autonomous Reward Design through Evidence Navigation) is proposed, in which one reward program is developed for a family of related scenarios and transferred, unchanged, to scenarios that were not available during its design. During development, environment code, training records, and agent behavior are investigated by an LLM reward engineer, and draft rewards are tested in trial training runs, while the learning algorithm and the rule for selecting the final reward are held fixed. On unseen scenarios of the Overcooked and SMAX benchmarks, task returns were increased by 58.2% and 52.5% over the default rewards on two kitchen layouts, and the mean win rate in two combat scenarios was raised from 51.0% to 89.9%. Under matched candidate and probe budgets, this exceeded the 84.2% and 79.2% obtained with fixed diagnostic feedback and Eureka-inspired reward reflection. These results show that a single autonomously engineered reward can be reused effectively across related cooperative scenarios.",
+      "authors": [
+        "Dogan Urgun"
+      ],
+      "published": "2026-10-27T20:11:29Z",
+      "updated": "2026-10-27T20:11:29Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA",
+        "eess.SY"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2610.37926v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37926v1",
+      "comment": "8 pages, 3 figures, 5 tables. Code: https://github.com/DoganUrgun/GARDEN",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.6039,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6038,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.624,
+        "relevance": 0.6039,
+        "quality": 0.62,
+        "novelty": 0.8474,
+        "freshness": 0.4552,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function.",
+        "problem": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function.",
+        "method": "During development, environment code, training records, and agent behavior are investigated by an LLM reward engineer, and draft rewards are tested in trial training runs, while the learning algorithm and the rule for selecting the final reward are held fixed.",
+        "evidence": "Large language models (LLMs) can automate the effort by writing reward functions as code, yet the resulting rewards are typically designed and tested in a single setting.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
+    },
+    {
       "id": "2610.35804",
       "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models",
       "abstract": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response. Efficient generation depends not only on which tokens are easy to predict, but also on how committing to them helps predict the remaining positions. A highly predictable token may provide little useful context, while revealing a less predictable token can help several other positions become predictable sooner. We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation. To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding. We then distill these schedules into the model to enable faster parallel sampling, with a KL-divergence regularizer to help preserve generation quality. We extensively evaluate our approach across mathematical reasoning and code generation tasks. On GSM8K, our method achieves remarkable 10.12$\\times$ and 5.12$\\times$ speedups over the various baselines on LLaDA-8B-Instruct and Dream-7B-Instruct, respectively, while maintaining superior task performance. Our code is available at https://github.com/VILA-Lab/dSpark.",
@@ -882,235 +1158,26 @@
       "recommended_at": "2026-10-27T15:52:30.919516+00:00"
     },
     {
-      "id": "2610.32951",
-      "title": "Where Rounding Happens Matters: Rounding-Location Alignment Stabilizes LLM Reinforcement Learning",
-      "abstract": "Reinforcement learning for large language models often uses separate systems for inference and training. Even with identical weights and BF16 tensors, implementation differences can make an intended on-policy update off-policy and destabilize training. Existing remedies align the entire inference and training stacks, change global precision, or modify the learning algorithm. We ask whether aligning selected parts of the execution stack can stabilize BF16 RL while other implementation differences remain. We align training-side rounding locations with inference in three regions---RoPE, SwiGLU, and residual RMSNorm---by retaining selected intermediates in FP32 until their BF16 outputs. Across four Qwen-family models, aligning all three regions prevents the collapse observed under the default BF16 baseline; RoPE-path alignment alone also suffices in the studied runs, despite remaining numerical discrepancies. The interventions keep the inference engine, matrix-multiplication and attention kernels, and learning objective unchanged.",
+      "id": "2610.38076",
+      "title": "Prompt Lottery in LLM-as-a-Judge: Measuring and Mitigating Sensitivity to Syntactic Rephrasing",
+      "abstract": "LLM-as-a-Judge has become a standard for evaluating large language models, yet most approaches implicitly assume that a single judge prompt functions as a stable evaluation instrument. Prior work has primarily explored deliberate prompt modifications such as scoring rubrics, role descriptions, or chain-of-thought reasoning in order to optimize accuracy. In contrast, we investigate whether validated prompt variants intended to preserve evaluation semantics while differing in surface realization (\\textit{paraphrastic rephrasings}) yield consistent judgments under a fixed evaluation task. We introduce \\textit{Prompt Lottery}, a phenomenon in which paraphrastic rephrasings produce different LLMaJ judgments. Across a large-scale study spanning diverse evaluation tasks, judge families, and model backbones, we find that these variations can alter evaluation outcomes and, in some settings, reverse relative model rankings. A user study with 10 human annotators shows that LLMaJ judges exhibit 6-9$\\times$ larger agreement degradation under prompt rephrasings than humans, falling below the generally accepted threshold in usability studies. This indicates that single-prompt evaluation is insufficiently robust for model ranking. Finally, we show that multi-prompt aggregation substantially improves robustness by emphasizing judgments that remain consistent across prompt variants.",
       "authors": [
-        "Yijing Ke",
-        "Tianle Cai",
-        "Ruosong Wang"
+        "Ilija Subasic",
+        "Brett Levert",
+        "Andrew Rabinovich",
+        "Sajjad Pakdamansavoji",
+        "Zhao Chen"
       ],
-      "published": "2026-10-23T17:45:03Z",
-      "updated": "2026-10-23T17:45:03Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.32951v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.32951v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6047,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.6047,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1155,
-          "matched": [
-            "inference"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6023,
-        "relevance": 0.6278,
-        "quality": 0.4,
-        "novelty": 0.8541,
-        "freshness": 0.5772,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison"
-      ],
-      "summary": {
-        "takeaway": "Reinforcement learning for large language models often uses separate systems for inference and training.",
-        "problem": "Reinforcement learning for large language models often uses separate systems for inference and training.",
-        "method": "Existing remedies align the entire inference and training stacks, change global precision, or modify the learning algorithm.",
-        "evidence": "Existing remedies align the entire inference and training stacks, change global precision, or modify the learning algorithm.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-26T16:47:04.462055+00:00"
-    },
-    {
-      "id": "2610.30435",
-      "title": "Self-Assessment Reinforcement Learning for Search-State Awareness in Retrieval-Augmented Large Language Models",
-      "abstract": "Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information. However, existing search agents often lack search-state awareness, i.e., the ability to recognize what information has been obtained and what remains missing, leading to hallucinated reasoning and prematurely terminated search. To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time. SARL achieves this through a dual reward design that captures the corrective effect of each assessment while penalizing excessive reliance on it, jointly encouraging effective and efficient search trajectories. Under this setup, SARL achieves a 24.3% relative improvement over the strongest baseline, with average gains of 35.9% on multi-hop reasoning and 27.9% on deep research benchmarks against the strongest per-benchmark baselines. SARL further surpasses methods built on auxiliary supervision or multi-agent coordination, despite operating as a standalone RL framework with no inference-time scaffolding. Beyond final performance, SARL maintains training stability under extended search horizons, a regime where existing methods consistently degrade, enabling sustained gains as task complexity grows.",
-      "authors": [
-        "Taewhoo Lee",
-        "Minju Song",
-        "Jungwoo Park",
-        "Chanwoong Yoon",
-        "Junha Jung",
-        "Hyeon Hwang",
-        "Sanghoon Lee",
-        "Minbyul Jeong",
-        "Jaewoo Kang"
-      ],
-      "published": "2026-10-21T20:46:24Z",
-      "updated": "2026-10-21T20:46:24Z",
+      "published": "2026-10-27T23:45:24Z",
+      "updated": "2026-10-27T23:45:24Z",
       "categories": [
         "cs.CL",
         "cs.AI"
       ],
       "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.30435v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.30435v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5356,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5356,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1152,
-          "matched": [
-            "inference",
-            "time"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0833,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5905,
-        "relevance": 0.5586,
-        "quality": 0.55,
-        "novelty": 0.8676,
-        "freshness": 0.6117,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time.",
-        "problem": "Recent advances in search agents have enabled large language models to tackle complex tasks by retrieving and synthesizing external information.",
-        "method": "To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time.",
-        "evidence": "To address this limitation, we propose Self-Assessment Reinforcement Learning (SARL), a reinforcement learning framework in which models learn to recognize their own search state during training and improve their search behavior accordingly, without requiring additional assessment at test time.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-24T14:00:34.921589+00:00"
-    },
-    {
-      "id": "2610.30690",
-      "title": "From Clinical Judgment to Checkable Rules: Clinician-Led Guardrails for Mental-Health Chatbots",
-      "abstract": "Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain. Common approaches to improving safety rely on prompt engineering, LLM-as-a-Judge, and Constitutional AI. In this work, we describe a clinician-led alternative in which two clinicians define, finalize, and adjudicate the four safety checks of a rule base, which is formally verified for internal consistency and applied as a guardrail over LLM outputs. Here and in the title, clinician-led refers to this rule base, not to the fact extractor or the uncertainty default, which are ours. Every verdict of the resulting verification layer is recomputable from a named rule and sixteen facts. Against an LLM judge matched in model, revision, quantization, rule text, and decoding but without the layer's computed 988/911 fact, the largest disagreement class, the satisfied-rule class, is structured: the Llama-3.3-70B judge, on its primary prompt, demands a crisis resource from 55 of the 65 replies (84.6%) that already contain one, while the same model, asked as a fact extractor, reports a recognized resource present on 54 of the 55. The verification layer never raises that demand, by construction. We report with equal prominence where this judge is stronger: fewer false crisis alarms on the one reference-scored check. We also report the measured cost (a specification revision raised block-class outcomes on held-out boundary prompts of an over-refusal benchmark from 6.0% to 16.0%, chiefly by changing fact extraction), the clinicians' decision to keep our uncertainty default, and the analysis of the result. The contribution is not a safer verdict. It is a guardrail whose disagreements with the judge localize to named rules and facts and whose measured costs trace to named facts and the uncertainty default.",
-      "authors": [
-        "Chenhan Lyu",
-        "Kit Wislocki",
-        "Sarah Elizabeth Stoeckl",
-        "Maitreyi Sinha",
-        "Amir Rahmani"
-      ],
-      "published": "2026-10-22T04:02:51Z",
-      "updated": "2026-10-22T04:02:51Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CY"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.30690v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.30690v1",
-      "comment": "",
+      "abs_url": "https://arxiv.org/abs/2610.38076v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.38076v1",
+      "comment": "55 pages (11 with no appendix), 10 figures",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -1126,175 +1193,41 @@
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6161,
-          "matched": [
-            "uncertainty"
-          ]
-        },
-        {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.2732,
+          "score": 0.6996,
           "matched": [
             "llm-as-a-judge"
           ]
         },
         {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "analysis"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5894,
-        "relevance": 0.5564,
-        "quality": 0.54,
-        "novelty": 0.8699,
-        "freshness": 0.655,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "formal bound",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain.",
-        "problem": "Large language models (LLMs) deployed in mental-health contexts can be evaluated for safety failures, but the resulting judgments are often difficult to inspect or explain.",
-        "method": "Common approaches to improving safety rely on prompt engineering, LLM-as-a-Judge, and Constitutional AI.",
-        "evidence": "In this work, we describe a clinician-led alternative in which two clinicians define, finalize, and adjudicate the four safety checks of a rule base, which is formally verified for internal consistency and applied as a guardrail over LLM outputs.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-24T14:00:34.921589+00:00"
-    },
-    {
-      "id": "2610.29395",
-      "title": "CertMoE: Robustness Certification for Mixture-of-Experts LLMs via Routing-Aware Smoothing",
-      "abstract": "Provable robustness is a cornerstone of trustworthy machine learning, aiming to guarantee model predictions under adversarial perturbations. Existing certification frameworks, inspired by abstract interpretation or symbolic execution, typically assume a fixed computation graph, where input perturbations or variations affect only model outputs but not the underlying execution path. This assumption, however, is violated in Mixture-of-Experts (MoE) Large Language Models (LLMs), whose input-dependent routing induces discrete and dynamic execution paths. Crucially, this dynamic computation changes the certified object from a single fixed function to a composition of input-dependent sub-functions, leading to unreliable certification guarantees. This paper presents \\textsc{CertMoE}, the first routing-aware robustness certification framework for MoE LLMs, which explicitly accounts for input-induced routing dynamics in certification. Specifically, we introduce a relaxed routing-containment criterion, which certifies that perturbed Top-$K$ routing is contained within a larger certified expert pool. Based on this guarantee, \\textsc{CertMoE} then constructs the corresponding induced sub-network and certifies its prediction consistency. This hierarchical certification procedure yields a joint probabilistic guarantee over routing containment and sub-network robustness, providing sufficient conditions under which the original prediction remains invariant. Extensive experiments across recent MoE LLMs demonstrate that dynamic routing makes certificates issued by existing methods frequently violated, while \\textsc{CertMoE} reduces the empirical violation rate with routing-aware guarantees, e.g., from more than $30\\%$ to $0$, yielding certificates that more faithfully reflect the robustness of MoE models.",
-      "authors": [
-        "Qingyue Wang",
-        "Yudong Gao",
-        "Lixia Wang",
-        "Ruixuan Huang",
-        "Yuanyuan Yuan",
-        "Yangqiu Song",
-        "Shuai Wang"
-      ],
-      "published": "2026-10-21T08:25:15Z",
-      "updated": "2026-10-21T08:25:15Z",
-      "categories": [
-        "cs.CR",
-        "cs.SE"
-      ],
-      "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2610.29395v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.29395v1",
-      "comment": "12 pages",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6248,
-          "matched": [
-            "Trustworthy machine learning",
-            "trustworthy machine learning",
-            "learning",
-            "machine",
-            "trustworthy"
-          ]
-        },
-        {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.2773,
+          "score": 0.3804,
           "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1523,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "dependent"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "dependent"
+            "evaluation"
           ]
         }
       ],
       "scores": {
-        "total": 0.5874,
-        "relevance": 0.5858,
-        "quality": 0.47,
-        "novelty": 0.8578,
-        "freshness": 0.5382,
+        "total": 0.6063,
+        "relevance": 0.6358,
+        "quality": 0.41,
+        "novelty": 0.8719,
+        "freshness": 0.4764,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "experiments",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Specifically, we introduce a relaxed routing-containment criterion, which certifies that perturbed Top-$K$ routing is contained within a larger certified expert pool.",
-        "problem": "Provable robustness is a cornerstone of trustworthy machine learning, aiming to guarantee model predictions under adversarial perturbations.",
-        "method": "Existing certification frameworks, inspired by abstract interpretation or symbolic execution, typically assume a fixed computation graph, where input perturbations or variations affect only model outputs but not the underlying execution path.",
-        "evidence": "Extensive experiments across recent MoE LLMs demonstrate that dynamic routing makes certificates issued by existing methods frequently violated, while \\textsc{CertMoE} reduces the empirical violation rate with routing-aware guarantees, e.g., from more than $30\\%$ to $0$, yielding certificates that more faithfully reflect the robustness of MoE models.",
+        "takeaway": "We introduce \\textit{Prompt Lottery}, a phenomenon in which paraphrastic rephrasings produce different LLMaJ judgments.",
+        "problem": "LLM-as-a-Judge has become a standard for evaluating large language models, yet most approaches implicitly assume that a single judge prompt functions as a stable evaluation instrument.",
+        "method": "We introduce \\textit{Prompt Lottery}, a phenomenon in which paraphrastic rephrasings produce different LLMaJ judgments.",
+        "evidence": "Finally, we show that multi-prompt aggregation substantially improves robustness by emphasizing judgments that remain consistent across prompt variants.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
         "source": "abstract",
@@ -1307,14 +1240,11 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "Trustworthy machine learning",
-          "trustworthy machine learning",
-          "learning",
-          "machine"
+          "llm-as-a-judge"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-10-24T14:00:34.921589+00:00"
+      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
     }
   ]
 }
