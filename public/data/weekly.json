@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T17:06:54.092294+00:00",
+  "generated_at": "2026-11-02T20:45:04.696521+00:00",
   "papers": [
     {
       "id": "2610.39671",
@@ -95,6 +95,212 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-31T15:43:19.817370+00:00"
+    },
+    {
+      "id": "2610.41745",
+      "title": "Do LLMs Know When They Are Wrong About Molecules? In-Context Property Prediction with Self-Reported Uncertainty",
+      "abstract": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored. In this work we evaluate the capability of 7 frontier LLMs to predict molecular properties together with a self-reported uncertainty from in-context examples, and compare them with classical baselines trained on the same molecules. We use 4 datasets and screen each for contamination of the training data of the LLMs: three are clean, and the fourth, ESOL, is memorised by most of the models and serves as a comparison. On the clean datasets every LLM improves with the context, at 30 examples the most accurate one beats every baseline. The requested reasoning effort changes accuracy little. The self-reported uncertainty ranks the prediction errors weakly, with Spearman rank correlations of up to 0.46, about the level reached by the uncertainties of the baselines. Combining uncertainty and prediction, on lipophilicity the most certain half of the best LLM is the most accurate at small context sizes; on BACE and antiviral, and on lipophilicity at large context sizes, the best LLMs are on par with the best baseline. On the contaminated ESOL dataset the LLMs show no improvement with the context size, as expected for a memorised dataset, and their stated uncertainty is smaller on the molecules whose value they recall.",
+      "authors": [
+        "Matthias Busch",
+        "Marius Tacke",
+        "Tamadur Albaraghtheh",
+        "Sviatlana V. Lamaka",
+        "Mikhail L. Zheludkevich",
+        "Roland C. Aydin",
+        "Christian Feiler",
+        "Christian J. Cyron"
+      ],
+      "published": "2026-10-30T13:50:11Z",
+      "updated": "2026-10-30T13:50:11Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.41745v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41745v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.9373,
+          "matched": [
+            "uncertainty",
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7153,
+        "relevance": 0.7675,
+        "quality": 0.52,
+        "novelty": 0.8588,
+        "freshness": 0.5303,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored.",
+        "problem": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored.",
+        "method": "In this work we evaluate the capability of 7 frontier LLMs to predict molecular properties together with a self-reported uncertainty from in-context examples, and compare them with classical baselines trained on the same molecules.",
+        "evidence": "On the clean datasets every LLM improves with the context, at 30 examples the most accurate one beats every baseline.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-02T20:45:04.696521+00:00"
+    },
+    {
+      "id": "2610.42024",
+      "title": "Know When the Equation Is Wrong: Structural Uncertainty for LLM-Guided Symbolic Regression under Extrapolation",
+      "abstract": "Large language models (LLMs) can help discover mathematical equations from data, but most LLM-guided symbolic regression methods focus on a single best equation without quantifying uncertainty over alternative functional forms. This is challenging because distinct equations can fit the observed data similarly while producing substantially different extrapolations. Our experiments on the LLM-SRBench dataset show that standard conformal intervals achieve nominal in-distribution coverage but frequently fail under extrapolation. To tackle this challenge, we introduce LLM-SR-UQ, a framework that retains competing equation structures and uses their disagreement to characterize uncertainty about the underlying functional form. We extend the standard fixed-width conformal approach to quantify structural intervals, which measure disagreement among candidate equations and identify where prediction intervals should widen. Extensive experiments show our framework substantially improves coverage attainment by incorporating structural disagreement while preserving in-distribution coverage. Our approach also shows good generalizability when it is applied to other symbolic-regression methods.",
+      "authors": [
+        "Mostafa Cham",
+        "Bayu Adhi Tama",
+        "Jianwu Wang"
+      ],
+      "published": "2026-10-30T16:54:16Z",
+      "updated": "2026-10-30T16:54:16Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.42024v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42024v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8669,
+          "matched": [
+            "uncertainty",
+            "conformal",
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1428,
+          "matched": [
+            "functional",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6752,
+        "relevance": 0.7385,
+        "quality": 0.43,
+        "novelty": 0.8181,
+        "freshness": 0.5485,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "To tackle this challenge, we introduce LLM-SR-UQ, a framework that retains competing equation structures and uses their disagreement to characterize uncertainty about the underlying functional form.",
+        "problem": "Large language models (LLMs) can help discover mathematical equations from data, but most LLM-guided symbolic regression methods focus on a single best equation without quantifying uncertainty over alternative functional forms.",
+        "method": "To tackle this challenge, we introduce LLM-SR-UQ, a framework that retains competing equation structures and uses their disagreement to characterize uncertainty about the underlying functional form.",
+        "evidence": "Our experiments on the LLM-SRBench dataset show that standard conformal intervals achieve nominal in-distribution coverage but frequently fail under extrapolation.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "conformal",
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-02T20:45:04.696521+00:00"
     },
     {
       "id": "2610.38335",
@@ -1054,193 +1260,6 @@
         "topic": "Positive-unlabeled learning",
         "matched": [
           "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
-    },
-    {
-      "id": "2610.35804",
-      "title": "Learning When to Commit: Schedule Distillation for Fast Diffusion Language Models",
-      "abstract": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response. Efficient generation depends not only on which tokens are easy to predict, but also on how committing to them helps predict the remaining positions. A highly predictable token may provide little useful context, while revealing a less predictable token can help several other positions become predictable sooner. We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation. To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding. We then distill these schedules into the model to enable faster parallel sampling, with a KL-divergence regularizer to help preserve generation quality. We extensively evaluate our approach across mathematical reasoning and code generation tasks. On GSM8K, our method achieves remarkable 10.12$\\times$ and 5.12$\\times$ speedups over the various baselines on LLaDA-8B-Instruct and Dream-7B-Instruct, respectively, while maintaining superior task performance. Our code is available at https://github.com/VILA-Lab/dSpark.",
-      "authors": [
-        "Aidar Myrzakhan",
-        "Zhiqiang Shen"
-      ],
-      "published": "2026-10-26T17:35:58Z",
-      "updated": "2026-10-26T17:35:58Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.35804v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.35804v1",
-      "comment": "Code is available at https://github.com/VILA-Lab/dSpark",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4555,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4555,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2732,
-          "matched": [
-            "uncertainty"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6126,
-        "relevance": 0.5101,
-        "quality": 0.78,
-        "novelty": 0.8162,
-        "freshness": 0.8674,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "baseline comparison",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
-        "problem": "Diffusion large language models (dLLMs) can generate multiple tokens in parallel, but often require many decoding rounds to complete a response.",
-        "method": "We propose dSpark, a new schedule distillation-based framework for learning when to commit tokens for faster diffusion language generation.",
-        "evidence": "To achieve this, we construct unmasking schedules that prioritize tokens whose reveal makes other positions easier to predict, reducing uncertainty earlier in decoding.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-27T15:52:30.919516+00:00"
-    },
-    {
-      "id": "2610.38076",
-      "title": "Prompt Lottery in LLM-as-a-Judge: Measuring and Mitigating Sensitivity to Syntactic Rephrasing",
-      "abstract": "LLM-as-a-Judge has become a standard for evaluating large language models, yet most approaches implicitly assume that a single judge prompt functions as a stable evaluation instrument. Prior work has primarily explored deliberate prompt modifications such as scoring rubrics, role descriptions, or chain-of-thought reasoning in order to optimize accuracy. In contrast, we investigate whether validated prompt variants intended to preserve evaluation semantics while differing in surface realization (\\textit{paraphrastic rephrasings}) yield consistent judgments under a fixed evaluation task. We introduce \\textit{Prompt Lottery}, a phenomenon in which paraphrastic rephrasings produce different LLMaJ judgments. Across a large-scale study spanning diverse evaluation tasks, judge families, and model backbones, we find that these variations can alter evaluation outcomes and, in some settings, reverse relative model rankings. A user study with 10 human annotators shows that LLMaJ judges exhibit 6-9$\\times$ larger agreement degradation under prompt rephrasings than humans, falling below the generally accepted threshold in usability studies. This indicates that single-prompt evaluation is insufficiently robust for model ranking. Finally, we show that multi-prompt aggregation substantially improves robustness by emphasizing judgments that remain consistent across prompt variants.",
-      "authors": [
-        "Ilija Subasic",
-        "Brett Levert",
-        "Andrew Rabinovich",
-        "Sajjad Pakdamansavoji",
-        "Zhao Chen"
-      ],
-      "published": "2026-10-27T23:45:24Z",
-      "updated": "2026-10-27T23:45:24Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.38076v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.38076v1",
-      "comment": "55 pages (11 with no appendix), 10 figures",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6996,
-          "matched": [
-            "llm-as-a-judge"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.3804,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6063,
-        "relevance": 0.6358,
-        "quality": 0.41,
-        "novelty": 0.8719,
-        "freshness": 0.4764,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We introduce \\textit{Prompt Lottery}, a phenomenon in which paraphrastic rephrasings produce different LLMaJ judgments.",
-        "problem": "LLM-as-a-Judge has become a standard for evaluating large language models, yet most approaches implicitly assume that a single judge prompt functions as a stable evaluation instrument.",
-        "method": "We introduce \\textit{Prompt Lottery}, a phenomenon in which paraphrastic rephrasings produce different LLMaJ judgments.",
-        "evidence": "Finally, we show that multi-prompt aggregation substantially improves robustness by emphasizing judgments that remain consistent across prompt variants.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "llm-as-a-judge"
         ],
         "lane": "llm"
       },

@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-01T17:06:54.092294+00:00",
+  "generated_at": "2026-11-02T20:45:04.696521+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 473,
-  "source_total": 473,
+  "source_count": 327,
+  "source_total": 327,
   "source_lookback_days": 4,
   "source_truncated": false,
-  "unseen_source_count": 470,
-  "previously_recommended_count": 416,
-  "eligible_count": 22,
+  "unseen_source_count": 327,
+  "previously_recommended_count": 422,
+  "eligible_count": 18,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-01T17:06:54.092294+00:00",
+    "generated_at": "2026-11-02T20:45:04.696521+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,152 +130,28 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2610.38851",
-      "title": "Learning to Reason from Reference Samples Alone: Reinforced Adversarial Learning for Modern LLM Post-Training",
-      "abstract": "In many settings where LLM post-training is desirable, high-quality answers are recognizable but difficult to score with explicit rewards. Reinforcement learning with verifiable rewards (RLVR) is limited to tasks where an explicit correctness signal is available. Prior adversarial approaches to training reasoning LLMs either complement verifiable rewards with co-trained critics or require reference reasoning traces. We ask whether a co-trained LLM judge can turn reference answers alone into the sole reward for on-policy post-training of reasoning LLMs. We call this method Reinforced Adversarial Learning (RAL). We first validate RAL on three verifiable tasks (integer multiplication, code-based arithmetic-expression synthesis, and SMILES-to-formula translation), using the verifiers only for evaluation. With sufficiently capable judges and enough training, RAL matches direct RLVR. We then apply RAL to scientific abstract generation in two settings. In the first setting, RAL guides the generator to produce abstracts in the scientific domain of the reference abstracts, even though the prompt leaves that domain unspecified. In the second setting, we generate abstracts for U.S. National Institutes of Health grant proposals conditioned on the grant title. Human scientists and an ensemble of LLM judges find our generations harder to distinguish from real abstracts than those of frontier-LLM baselines. These results suggest a path toward post-training reasoning models in scientific and other high-value domains, where increasingly capable judges infer hard-to-specify reward functions from example answers.",
+      "id": "2610.41745",
+      "title": "Do LLMs Know When They Are Wrong About Molecules? In-Context Property Prediction with Self-Reported Uncertainty",
+      "abstract": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored. In this work we evaluate the capability of 7 frontier LLMs to predict molecular properties together with a self-reported uncertainty from in-context examples, and compare them with classical baselines trained on the same molecules. We use 4 datasets and screen each for contamination of the training data of the LLMs: three are clean, and the fourth, ESOL, is memorised by most of the models and serves as a comparison. On the clean datasets every LLM improves with the context, at 30 examples the most accurate one beats every baseline. The requested reasoning effort changes accuracy little. The self-reported uncertainty ranks the prediction errors weakly, with Spearman rank correlations of up to 0.46, about the level reached by the uncertainties of the baselines. Combining uncertainty and prediction, on lipophilicity the most certain half of the best LLM is the most accurate at small context sizes; on BACE and antiviral, and on lipophilicity at large context sizes, the best LLMs are on par with the best baseline. On the contaminated ESOL dataset the LLMs show no improvement with the context size, as expected for a memorised dataset, and their stated uncertainty is smaller on the molecules whose value they recall.",
       "authors": [
-        "Albert Bou",
-        "Javier Valdes-Aleman",
-        "Jon M. Laurent",
-        "Samuel G. Rodriques",
-        "Andrew D. White",
-        "Michaela Hinks",
-        "Siddharth Narayanan"
+        "Matthias Busch",
+        "Marius Tacke",
+        "Tamadur Albaraghtheh",
+        "Sviatlana V. Lamaka",
+        "Mikhail L. Zheludkevich",
+        "Roland C. Aydin",
+        "Christian Feiler",
+        "Christian J. Cyron"
       ],
-      "published": "2026-10-28T20:34:15Z",
-      "updated": "2026-10-28T20:34:15Z",
+      "published": "2026-10-30T13:50:11Z",
+      "updated": "2026-10-30T13:50:11Z",
       "categories": [
-        "cs.AI",
         "cs.LG"
       ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.38851v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.38851v1",
-      "comment": "31 pages, 6 figures, 10 tables, including references and appendices",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5541,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.554,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1165,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5893,
-        "relevance": 0.5774,
-        "quality": 0.54,
-        "novelty": 0.8355,
-        "freshness": 0.4491,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison"
-      ],
-      "summary": {
-        "takeaway": "In many settings where LLM post-training is desirable, high-quality answers are recognizable but difficult to score with explicit rewards.",
-        "problem": "In many settings where LLM post-training is desirable, high-quality answers are recognizable but difficult to score with explicit rewards.",
-        "method": "Reinforcement learning with verifiable rewards (RLVR) is limited to tasks where an explicit correctness signal is available.",
-        "evidence": "Prior adversarial approaches to training reasoning LLMs either complement verifiable rewards with co-trained critics or require reference reasoning traces.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.40031",
-      "title": "AI Cosmos: An Agentic Infra for Situated Learning",
-      "abstract": "Large language models (LLMs) can improve task performance during learning, yet these gains do not necessarily reflect learners' ability to thereafter apply the knowledge and skills independently. We present AI Cosmos, an agentic infrastructure for situated learning that organizes learning around two complementary principles: scenario-based participation and cumulative assets of practice. AI Cosmos organizes learners and role-specialized agents within learning scenarios that integrate task-relevant knowledge and, when needed, executable workbenches. An asset-memory loop preserves the processes and outcomes of practice as reusable assets with explicit provenance and dependencies. We evaluate scenario-based interaction through two preregistered randomized controlled studies examining the acquisition of legal reasoning and programming competence, holding the same underlying LLM across conditions. AI Cosmos achieves greater learning gains than a conventional LLM in legal reasoning and higher mastery of unseen programming problems than an LLM-as-Teacher baseline.",
-      "authors": [
-        "AI Cosmos Team",
-        "Jinfeng Zhou",
-        "Yuxuan Chen",
-        "Fangming Chang",
-        "Mingyu Su",
-        "Yifan Zhu",
-        "Yuan Wang",
-        "Bo Zhang",
-        "Bosi Wen",
-        "Chenhao Yuan",
-        "Chenwen Liao",
-        "Dazhi Jiang",
-        "Deyao Hong",
-        "Erle Zhu",
-        "Genrui Zhang",
-        "Guchan Li",
-        "Hongwen Gan",
-        "Huichao Bi",
-        "Jiahao Yan",
-        "Jincheng Fan",
-        "Kehan Zheng",
-        "Qinren Luo",
-        "Qiran Liu",
-        "Ruoqi Cao",
-        "Shizhi Zhang",
-        "Sihan Chen",
-        "Siyan Deng",
-        "Xuehan Zhou",
-        "Xujun Li",
-        "Yang Dang",
-        "Yanzhuo Zhu",
-        "Yu Zhang",
-        "Zheyu Chen",
-        "Hongning Wang",
-        "Manli Li"
-      ],
-      "published": "2026-10-29T13:36:31Z",
-      "updated": "2026-10-29T13:36:31Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.40031v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40031v1",
-      "comment": "https://github.com/THU-AICosmos",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.41745v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41745v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -291,10 +167,209 @@
       ],
       "topics": [
         {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.9373,
+          "matched": [
+            "uncertainty",
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.7153,
+        "relevance": 0.7675,
+        "quality": 0.52,
+        "novelty": 0.8588,
+        "freshness": 0.5303,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored.",
+        "problem": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored.",
+        "method": "In this work we evaluate the capability of 7 frontier LLMs to predict molecular properties together with a self-reported uncertainty from in-context examples, and compare them with classical baselines trained on the same molecules.",
+        "evidence": "On the clean datasets every LLM improves with the context, at 30 examples the most accurate one beats every baseline.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "prediction"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.42024",
+      "title": "Know When the Equation Is Wrong: Structural Uncertainty for LLM-Guided Symbolic Regression under Extrapolation",
+      "abstract": "Large language models (LLMs) can help discover mathematical equations from data, but most LLM-guided symbolic regression methods focus on a single best equation without quantifying uncertainty over alternative functional forms. This is challenging because distinct equations can fit the observed data similarly while producing substantially different extrapolations. Our experiments on the LLM-SRBench dataset show that standard conformal intervals achieve nominal in-distribution coverage but frequently fail under extrapolation. To tackle this challenge, we introduce LLM-SR-UQ, a framework that retains competing equation structures and uses their disagreement to characterize uncertainty about the underlying functional form. We extend the standard fixed-width conformal approach to quantify structural intervals, which measure disagreement among candidate equations and identify where prediction intervals should widen. Extensive experiments show our framework substantially improves coverage attainment by incorporating structural disagreement while preserving in-distribution coverage. Our approach also shows good generalizability when it is applied to other symbolic-regression methods.",
+      "authors": [
+        "Mostafa Cham",
+        "Bayu Adhi Tama",
+        "Jianwu Wang"
+      ],
+      "published": "2026-10-30T16:54:16Z",
+      "updated": "2026-10-30T16:54:16Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.42024v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.42024v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.8669,
+          "matched": [
+            "uncertainty",
+            "conformal",
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1428,
+          "matched": [
+            "functional",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6752,
+        "relevance": 0.7385,
+        "quality": 0.43,
+        "novelty": 0.8181,
+        "freshness": 0.5485,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "To tackle this challenge, we introduce LLM-SR-UQ, a framework that retains competing equation structures and uses their disagreement to characterize uncertainty about the underlying functional form.",
+        "problem": "Large language models (LLMs) can help discover mathematical equations from data, but most LLM-guided symbolic regression methods focus on a single best equation without quantifying uncertainty over alternative functional forms.",
+        "method": "To tackle this challenge, we introduce LLM-SR-UQ, a framework that retains competing equation structures and uses their disagreement to characterize uncertainty about the underlying functional form.",
+        "evidence": "Our experiments on the LLM-SRBench dataset show that standard conformal intervals achieve nominal in-distribution coverage but frequently fail under extrapolation.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "conformal",
+          "prediction"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.41143",
+      "title": "TalentRL: Strategy-Guided Reinforcement Learning for Hierarchical Skill Routing",
+      "abstract": "Natural-language skills enable large language model (LLM) agents to reuse procedures across tasks, yet most systems retrieve individual skills from a flat SkillBank without explicitly modeling the high-level strategy that governs their selection and use. We introduce TalentRL, a strategy-guided reinforcement learning framework for hierarchical routing over procedural memory. Coarse-grained talents represent recurring strategies for skill use, while fine-grained skills provide executable procedures. For each task, the policy model selects a talent that guides execution and softly prioritizes its associated skills during similarity-based retrieval. However, since task outcomes depend jointly on talent selection, retrieved skill context, and downstream execution, terminal rewards alone cannot isolate the contribution of the routing decision. TalentRL therefore trains talent routing with reward contrasts between rollouts of the same task under matched interventions on the talent-conditioned context, and optimizes downstream execution with group-relative advantages. Across seven open-domain and multi-hop question-answering benchmarks, talent-aware supervised fine-tuning improves average success rate by 7.53%, 6.71%, and 9.21% over the corresponding zero-shot baselines for Qwen2.5-7B, Qwen3-8B, and Llama-3.1-8B, respectively. Reinforcement learning further improves these SFT checkpoints by 7.58% to 9.32%, and TalentRL achieves the highest average success rate among all compared methods on all three backbones. On the agentic benchmarks ALFWorld and WebShop, TalentRL achieves the highest ALFWorld success rate (99.3%) and the highest WebShop score (90.7) among all compared methods.",
+      "authors": [
+        "Huancheng Chen",
+        "Xiaodi Sun",
+        "Zhaoqiong Huang",
+        "Michelle Chang",
+        "Jingwen Lu"
+      ],
+      "published": "2026-10-30T02:03:55Z",
+      "updated": "2026-10-30T02:03:55Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.41143v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41143v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.605,
+          "score": 0.423,
           "matched": [
             "learning"
           ]
@@ -303,29 +378,40 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.605,
+          "score": 0.423,
           "matched": [
             "learning"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0657,
+          "matched": [
+            "selection"
           ]
         }
       ],
       "scores": {
-        "total": 0.5845,
-        "relevance": 0.605,
-        "quality": 0.4,
-        "novelty": 0.8369,
-        "freshness": 0.5506,
+        "total": 0.4989,
+        "relevance": 0.4361,
+        "quality": 0.55,
+        "novelty": 0.8241,
+        "freshness": 0.4602,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "baseline comparison"
+        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "We present AI Cosmos, an agentic infrastructure for situated learning that organizes learning around two complementary principles: scenario-based participation and cumulative assets of practice.",
-        "problem": "Large language models (LLMs) can improve task performance during learning, yet these gains do not necessarily reflect learners' ability to thereafter apply the knowledge and skills independently.",
-        "method": "We present AI Cosmos, an agentic infrastructure for situated learning that organizes learning around two complementary principles: scenario-based participation and cumulative assets of practice.",
-        "evidence": "An asset-memory loop preserves the processes and outcomes of practice as reusable assets with explicit provenance and dependencies.",
+        "takeaway": "We introduce TalentRL, a strategy-guided reinforcement learning framework for hierarchical routing over procedural memory.",
+        "problem": "Natural-language skills enable large language model (LLM) agents to reuse procedures across tasks, yet most systems retrieve individual skills from a flat SkillBank without explicitly modeling the high-level strategy that governs their selection and use.",
+        "method": "We introduce TalentRL, a strategy-guided reinforcement learning framework for hierarchical routing over procedural memory.",
+        "evidence": "Across seven open-domain and multi-hop question-answering benchmarks, talent-aware supervised fine-tuning improves average success rate by 7.53%, 6.71%, and 9.21% over the corresponding zero-shot baselines for Qwen2.5-7B, Qwen3-8B, and Llama-3.1-8B, respectively.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -344,23 +430,26 @@
       }
     },
     {
-      "id": "2610.38977",
-      "title": "Beyond Passing Tests: A Systematic Review and Controlled Re-evaluation of Techniques for Improving the Quality of LLM-Generated Code",
-      "abstract": "Large language models pass most functional-correctness benchmarks, but passing tests says little about whether their code is readable, efficient or secure. Many techniques claim to improve these qualities, yet their evidence is scattered, usually covers one quality dimension and is rarely compared at an equal compute budget. We contribute a systematic review and a controlled re-evaluation. A systematic literature review of 628 primary studies (July 2021 to October 2026), with disclosed, author-reviewed LLM assistance, organizes the techniques by stage, signal source and quality target. Most studies measure only the dimension they target, gains often come with unchanged or unreported correctness, single automated quality signals are gamed, and compute, variance and contamination are rarely reported. A controlled re-evaluation runs ten techniques on four models at matched budgets on correctness, maintainability, efficiency and security benchmarks, extends it to thirteen current models and repository-level tasks, and compares 66 highlighted techniques head-to-head on Gemma 4 31B. At one call, quality prompting raises analyzer issue counts and leaves complexity and judge scores almost unchanged. At matched budgets, best-of-n sampling with an analyzer-weighted ranker matches or beats prompting, planning, self-refinement, a reviewer agent and retrieval on measures the ranker does not optimize, while an analyzer feedback loop and fine-tuning beat it only on analyzer issue counts. Large correctness losses on HumanEval+, a likely contaminated benchmark near its ceiling, do not appear on contests held after the models' training cutoffs. In the head-to-head, 1 of 66 techniques beats best-of-n on its primary target beyond the 95% interval, a rate consistent with chance. Gains should be reported against a budget-matched sampling baseline and on measures independent of the technique's own signal.",
+      "id": "2610.41401",
+      "title": "When Safety Checks Become Privacy Risks: A Privacy-Preserving Paradigm for LLM Agent Safety Auditing",
+      "abstract": "Large language model agents interact with online services through tool calls that may access private data or perform sensitive actions. Specialized providers can supply and maintain pre-execution safety auditing capabilities for agent operators. However, sending task descriptions, call arguments, and interaction histories to an external auditor may expose sensitive user information. In this work, we propose a paradigm for privacy-preserving safety auditing that separates delegated audit computation from plaintext access and execution authority. Grounded in a three-domain auditing model, the paradigm connects trusted representation construction, encrypted audit computation, and trusted decision and execution through explicit interfaces. These interfaces accommodate alternative representations and scorers, while encrypted computation protects audit inputs from a semi-honest auditor. We instantiate this paradigm in SealCall, a framework combining learned audit representations, CKKS-based encrypted similarity computation, and execution control bound to audited tool calls. Evaluated on 1,252 public binary candidates, SealCall achieves a mean F1 score of 0.840 under grouped nested evaluation, while preserving plaintext audit decisions in all measured cases. A representative configuration completes each encrypted scoring operation in 0.176 s.",
       "authors": [
-        "Prashank Kadam"
+        "Yixiang Luo",
+        "Ziheng Ma",
+        "Ke Chang",
+        "Jian Wang",
+        "Jiqiang Liu"
       ],
-      "published": "2026-10-28T22:02:40Z",
-      "updated": "2026-10-28T22:02:40Z",
+      "published": "2026-10-30T08:12:45Z",
+      "updated": "2026-10-30T08:12:45Z",
       "categories": [
-        "cs.SE",
-        "cs.CL",
-        "cs.LG"
+        "cs.CR",
+        "cs.AI"
       ],
-      "primary_category": "cs.SE",
-      "abs_url": "https://arxiv.org/abs/2610.38977v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.38977v1",
-      "comment": "55 pages, 5 figures, plus 120 pages of supplementary material",
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2610.41401v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41401v1",
+      "comment": "12 pages, 2 figures, 10 tables",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -369,9 +458,110 @@
       "lane": "llm",
       "scope_matches": [
         "large language model",
-        "large language models",
         "language model",
-        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5235,
+          "matched": [
+            "auditing"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1283,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4994,
+        "relevance": 0.4522,
+        "quality": 0.47,
+        "novelty": 0.8667,
+        "freshness": 0.4968,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "formal bound",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this work, we propose a paradigm for privacy-preserving safety auditing that separates delegated audit computation from plaintext access and execution authority.",
+        "problem": "Large language model agents interact with online services through tool calls that may access private data or perform sensitive actions.",
+        "method": "In this work, we propose a paradigm for privacy-preserving safety auditing that separates delegated audit computation from plaintext access and execution authority.",
+        "evidence": "Evaluated on 1,252 public binary candidates, SealCall achieves a mean F1 score of 0.840 under grouped nested evaluation, while preserving plaintext audit decisions in all measured cases.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "auditing"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2610.41803",
+      "title": "What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer",
+      "abstract": "Detectors can flag hijacked large language model (LLM) agents from the traces of the tools they call. In the eleven evaluations we audited, attacks or anomalies make up 16% to 86% of the test samples, no evaluation varies that share, and six report no test on data from a second benchmark or source. We ask what such evaluations hide. On the AgentDrift and AgentDojo benchmarks we test trained detectors that read tool identities, behavior, call sequences, step embeddings or text, and a released LLM action monitor, AlignmentCheck, with thresholds fixed on training data or set by the monitor's released decision rule. First, at a 2% attack rate a detector with an area under the receiver operating characteristic curve (AUROC) of 0.879 reaches a precision of 0.076, and the mix of negatives alone moves that precision between 0.039 and 0.117. Second, as tool coverage, the share of test tool calls whose tool was seen in training, falls, detector rankings cross near 50% coverage and reverse below it, because unseen tools map to inputs that training never reached. Dropout on tool inputs largely removes the reversal. Third, no detector trained on AgentDrift ranks AgentDojo traces better than chance (AUROC 0.47 to 0.52), including one that reaches 0.996 within AgentDojo. The monitor, trained on neither, reaches 0.930, but with its open backbone its released decision rule would still mostly raise false alerts at a 2% attack rate (precision 0.096). We turn these findings into a checklist for evaluating trace detectors.",
+      "authors": [
+        "Mahmoud Abbasi",
+        "Juan M. Núñez V.",
+        "Amin Shahraki"
+      ],
+      "published": "2026-10-30T14:30:47Z",
+      "updated": "2026-10-30T14:30:47Z",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2610.41803v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41803v1",
+      "comment": "14 pages, 4 figures, 6 tables. Code, data and every monitor call: https://github.com/Mahmoud-Abbasi-svg/agent-trace-detector-eval",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
         "llm"
       ],
       "topics": [
@@ -379,42 +569,49 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.6017,
+          "score": 0.5235,
           "matched": [
             "evaluation",
-            "interval"
+            "evaluations"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0442,
+          "score": 0.0713,
           "matched": [
-            "functional"
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0713,
+          "matched": [
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.5598,
-        "relevance": 0.4902,
-        "quality": 0.69,
-        "novelty": 0.803,
-        "freshness": 0.4579,
+        "total": 0.4978,
+        "relevance": 0.4473,
+        "quality": 0.48,
+        "novelty": 0.8429,
+        "freshness": 0.5343,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "baseline comparison",
         "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Large language models pass most functional-correctness benchmarks, but passing tests says little about whether their code is readable, efficient or secure.",
-        "problem": "Large language models pass most functional-correctness benchmarks, but passing tests says little about whether their code is readable, efficient or secure.",
-        "method": "Many techniques claim to improve these qualities, yet their evidence is scattered, usually covers one quality dimension and is rarely compared at an equal compute budget.",
-        "evidence": "Many techniques claim to improve these qualities, yet their evidence is scattered, usually covers one quality dimension and is rarely compared at an equal compute budget.",
+        "takeaway": "Detectors can flag hijacked large language model (LLM) agents from the traces of the tools they call.",
+        "problem": "Detectors can flag hijacked large language model (LLM) agents from the traces of the tools they call.",
+        "method": "In the eleven evaluations we audited, attacks or anomalies make up 16% to 86% of the test samples, no evaluation varies that share, and six report no test on data from a second benchmark or source.",
+        "evidence": "We ask what such evaluations hide.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
@@ -428,32 +625,28 @@
         "topic": "Conformal prediction",
         "matched": [
           "evaluation",
-          "interval"
+          "evaluations"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2610.39020",
-      "title": "Distilling the Shape of Uncertainty: What On-Policy Distillation Learns and How to Predict It",
-      "abstract": "On-policy distillation (OPD) is increasingly adopted in the post-training of large language models. However, a stronger teacher may fail to improve the student. Prior work attributes this to a lack of new knowledge, but what that knowledge is remains unclear. We show that OPD learns not only \\textit{how to branch}, i.e., which candidate tokens to consider, but also \\textit{where to branch}, i.e., where to keep reasoning paths open. The existing token-overlap metric captures only the former. We introduce the entropy shape, the sequence of next-token entropies, to characterize the latter, and propose the Entropy Shape Correlation (ESC) to measure student-teacher agreement in entropy shape. Tracking ESC throughout training and intervening on a teacher's entropy while preserving its token preferences, we empirically show that \\textit{where to branch} causally drives OPD gains, independently of \\textit{how to branch}. Finally, we formulate OPD outcome prediction as a teacher selection task and establish an evaluation protocol for it, under which pre-OPD ESC selects the best teacher for both students and outperforms existing predictors. Code is available at https://github.com/maybenotime/opd-esc.",
+      "id": "2610.41459",
+      "title": "NormDetect: Anchored Calibration for Low-False-Positive Detection of Machine-Generated Web Text",
+      "abstract": "Web platforms screen posts for text written by large language models, and every false flag hits a human writer. Detectors must therefore run at a very low false positive rate (FPR). Zero-shot detectors such as Binoculars score text with frozen language models, but invisible edits such as homoglyphs shatter tokenization and push machine text into the human range. Unicode normalization undoes these edits, yet the normalized score still misses half of the machine text at a strict FPR, under attacks that leave nothing to clean. We find that with the Falcon-7B scoring pair, heads on token statistics recall less than the normalized score at this FPR, and several flag too many human posts in some sections. We propose NormDetect, which anchors a learned per-section head to the normalized zero-shot score. A blend weight chosen on training folds under a human FPR cap combines the two scores, and one threshold is calibrated on human text only. On eight sections of the RAID benchmark with eleven attacks, NormDetect raises recall at a 0.1% calibrated FPR by 5.0 points over normalized Binoculars. Its human FPR bound stays at most 1% in every section, and no other detector within this bound recalls as much.",
       "authors": [
-        "Shiping Yang",
-        "Chuanqi Tang",
-        "Hossein Hajimirsadeghi",
-        "Layla El Asri",
-        "Mohammad Amin Shabani",
-        "Angel X. Chang"
+        "Hanshuai Cui",
+        "Fanshuai Meng",
+        "Zhiqing Tang"
       ],
-      "published": "2026-10-28T22:53:06Z",
-      "updated": "2026-10-28T22:53:06Z",
+      "published": "2026-10-30T09:09:32Z",
+      "updated": "2026-10-30T09:09:32Z",
       "categories": [
-        "cs.CL",
-        "cs.AI"
+        "cs.LG"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.39020v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.39020v1",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2610.41459v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.41459v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -469,230 +662,37 @@
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.6106,
+          "score": 0.4661,
           "matched": [
-            "uncertainty",
-            "prediction",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0401,
-          "matched": [
-            "selection"
+            "machine"
           ]
         }
       ],
       "scores": {
-        "total": 0.5566,
-        "relevance": 0.4965,
-        "quality": 0.63,
-        "novelty": 0.8476,
-        "freshness": 0.4629,
+        "total": 0.4902,
+        "relevance": 0.3729,
+        "quality": 0.68,
+        "novelty": 0.867,
+        "freshness": 0.5024,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "code available",
-        "GitHub link"
-      ],
-      "summary": {
-        "takeaway": "We show that OPD learns not only \\textit{how to branch}, i.e., which candidate tokens to consider, but also \\textit{where to branch}, i.e., where to keep reasoning paths open.",
-        "problem": "On-policy distillation (OPD) is increasingly adopted in the post-training of large language models.",
-        "method": "We introduce the entropy shape, the sequence of next-token entropies, to characterize the latter, and propose the Entropy Shape Correlation (ESC) to measure student-teacher agreement in entropy shape.",
-        "evidence": "However, a stronger teacher may fail to improve the student.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "prediction",
-          "evaluation"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.39840",
-      "title": "Surprise Alone Learns Lies: Evidence-Gated Continual Learning for LLMs from Streaming Claims",
-      "abstract": "Continual learning methods for large language models increasingly decide what to learn by surprise, keeping the inputs the model finds least predictable. This rule is unsafe when the stream contains lies. A planted falsehood about something the model knows has low probability under the model's belief, so it is highly surprising by construction, and a surprise-driven learner absorbs nearly every such lie, at a rate similar to random selection with the same budget. We study the problem with LoRA-adapted students (Qwen2.5-1.5B, Qwen2.5-3B and Llama-3.2-3B) that learn from a stream of true and false claims about invented people and real CounterFact facts. We report four findings. (1) A verifier key, a judge that must approve each claim, removes lies to the extent that its verifier is accurate; real LLM judges are cautious and reject unsourced truths and even source-backed updates. (2) Calibrated regression tests on unrelated knowledge slow learning down without filtering out lies. (3) The original model's own prior flags claims that contradict what it knows, without a judge. It separates lies about known facts from true new facts (AUC 0.78-0.83 across three models) but not from legitimate updates of the same kind of fact (AUC 0.53). It saves 43% of judge calls, but an attacker with access to the model can choose lies that pass it. (4) If trusted sources exist that an attacker cannot plant, routing contradicted claims to evidence recovers legitimate updates and the combined system has the lowest poison rate among learned claims; when an attacker plants matching sources for 30% of the lies, the system ends up worse than the judge alone. The acceptance signals answer different questions, and none of them decides on its own whether a claim is true.",
-      "authors": [
-        "Abdelkader Metales",
-        "Miriam Grabenheinrich"
-      ],
-      "published": "2026-10-29T11:19:08Z",
-      "updated": "2026-10-29T11:19:08Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.39840v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.39840v1",
-      "comment": "21 pages, 5 figures. Code: https://github.com/Metalesaek/sura-metales",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.535,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.535,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0455,
-          "matched": [
-            "selection"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5466,
-        "relevance": 0.5441,
-        "quality": 0.41,
-        "novelty": 0.8414,
-        "freshness": 0.5369,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Continual learning methods for large language models increasingly decide what to learn by surprise, keeping the inputs the model finds least predictable.",
-        "problem": "Continual learning methods for large language models increasingly decide what to learn by surprise, keeping the inputs the model finds least predictable.",
-        "method": "This rule is unsafe when the stream contains lies.",
-        "evidence": "We report four findings. (1) A verifier key, a judge that must approve each claim, removes lies to the extent that its verifier is accurate; real LLM judges are cautious and reject unsourced truths and even source-backed updates. (2) Calibrated regression tests on unrelated knowledge slow learning down without filtering out lies. (3) The original model's own prior flags claims that contradict what it knows, without a judge.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2610.39934",
-      "title": "H$^2$R: Hierarchical Hint-Based Reward for Mathematical Reasoning via Reinforcement Learning",
-      "abstract": "Reinforcement Learning with Verifiable Rewards has shown great promise in enhancing mathematical reasoning in large language models. However, existing approaches provide limited intermediate supervision for complex, multi-step reasoning tasks. To bridge this gap, we propose \\textbf{Hierarchical Hint-based Reward}, a framework that leverages the intrinsic sub-question structure of mathematical problems as structured intermediate conditioning signals during RLVR training. Unlike chain-of-thought prompting, these hierarchical hints serve as logically grounded intermediate milestones that effectively reduce the reasoning horizon toward the final answer. To validate this framework, we introduce \\textbf{HiMath}, a benchmark of hierarchically structured mathematical problems. Across diverse LLMs, hierarchical hints consistently improve reasoning performance even without task-specific training. When integrated into RL training via H$^2$R, they boost Qwen2.5-Math-7B accuracy on HiMath from 30.4\\% to 39.1\\% using hierarchical hints, and up to 45.6\\% with Oracle Hierarchical Hints. This pronounced improvement demonstrates that incorporating reliable intermediate checkpoints into reward design is essential for sustaining complex mathematical reasoning.",
-      "authors": [
-        "He Tu",
-        "Siye Li",
-        "Hongyi Wen"
-      ],
-      "published": "2026-10-29T12:36:21Z",
-      "updated": "2026-10-29T12:36:21Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.39934v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.39934v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5097,
-          "matched": [
-            "learning",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4335,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5286,
-        "relevance": 0.4945,
-        "quality": 0.48,
-        "novelty": 0.8392,
-        "freshness": 0.5446,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
         "benchmark evaluation",
+        "formal bound",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "To bridge this gap, we propose \\textbf{Hierarchical Hint-based Reward}, a framework that leverages the intrinsic sub-question structure of mathematical problems as structured intermediate conditioning signals during RLVR training.",
-        "problem": "Reinforcement Learning with Verifiable Rewards has shown great promise in enhancing mathematical reasoning in large language models.",
-        "method": "To bridge this gap, we propose \\textbf{Hierarchical Hint-based Reward}, a framework that leverages the intrinsic sub-question structure of mathematical problems as structured intermediate conditioning signals during RLVR training.",
-        "evidence": "Across diverse LLMs, hierarchical hints consistently improve reasoning performance even without task-specific training.",
+        "takeaway": "We find that with the Falcon-7B scoring pair, heads on token statistics recall less than the normalized score at this FPR, and several flag too many human posts in some sections.",
+        "problem": "Web platforms screen posts for text written by large language models, and every false flag hits a human writer.",
+        "method": "We propose NormDetect, which anchors a learned per-section head to the normalized zero-shot score.",
+        "evidence": "Zero-shot detectors such as Binoculars score text with frozen language models, but invisible edits such as homoglyphs shatter tokenization and push machine text into the human range.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -703,8 +703,7 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning",
-          "reliable"
+          "machine"
         ],
         "lane": "llm"
       }
