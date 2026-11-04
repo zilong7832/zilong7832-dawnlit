@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-03T18:25:14.094493+00:00",
+  "generated_at": "2026-11-04T18:38:58.738323+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 27,
-  "source_total": 27,
+  "source_count": 12,
+  "source_total": 12,
   "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 27,
-  "previously_recommended_count": 428,
-  "eligible_count": 1,
+  "unseen_source_count": 12,
+  "previously_recommended_count": 431,
+  "eligible_count": 0,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-03T18:25:14.094493+00:00",
+    "generated_at": "2026-11-04T18:38:58.738323+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -124,9 +124,9 @@
   "semantic_feedback_count": 0,
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
-  "conference_supplement_count": 2,
-  "conference_eligible_count": 142,
-  "conference_pool_updated_at": "2026-10-28T16:36:51.734079+00:00",
+  "conference_supplement_count": 3,
+  "conference_eligible_count": 140,
+  "conference_pool_updated_at": "2026-11-04T18:38:58.738323+00:00",
   "conference_source_status": {
     "ICLR:2026": "ok:223",
     "ICML:2026": "ok:742",
@@ -141,91 +141,100 @@
   },
   "papers": [
     {
-      "id": "2611.03627",
-      "title": "Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR",
-      "abstract": "Reinforcement learning with verifiable rewards (RLVR) can enable generalizable improvement for large language model (LLM) reasoning. This paper studies how to incentivize such generalization via reasoning strategies. We study this question with a controllable equation-solving framework: finding multiple inputs x for equations f(x)=y, where f is a non-bijective string function. This setting makes reasoning strategies observable while supporting a clear definition of easy-to-hard out-of-distribution (OOD) shifts, e.g., more solutions, longer y, etc. We uncover a subtle RLVR failure: it teaches the model to solve in-distribution tasks with high accuracy and structured step-by-step derivation, yet under OOD shifts, the same model abandons derivation and collapses to ineffective brute-force enumeration, causing sharp accuracy drops. This observation reveals the deeper challenges of RLVR generalization as it is neither incapable base model nor reward hacking, since the model succeeds in-distribution with the correct reasoning strategy. The key to mitigating this failure is an indirect intervention that surprisingly helps: co-training with bijective inversion tasks. Although these bijective tasks are actually not uniformly harder and even further from the non-bijective OOD evaluation, they make derivation more certain and substantially restore the correct strategy and accuracy under OOD shifts. This effect further motivates our theoretical analysis: outcome-only RLVR can shape reasoning processes through implicitly crediting the effective reasoning strategies more, even without process supervision. To conclude, our analysis framework and findings systematically reveal the crucial role and incentivization of reasoning strategies in RLVR generalization under OOD shifts. Code is available at https://github.com/ziqipang/rl_meta_thinking.",
+      "id": "conf:acl:2026:2343-main",
+      "title": "TamEdit: Trajectory-Aware Meta-Learning for Specificity-Preserving Continual Knowledge Editing",
+      "abstract": "Knowledge editing is a promising method for updating Large Language Models efficiently. However, previous studies often suffer from poor specificity in continual editing, as they typically focus on single edits or preventing knowledge forgetting. To address this, we propose TamEdit, a trajectory-aware meta-learning method that preserves specificity for continual knowledge editing. TamEdit unifies three levels: Inner Optimization performs multi-step fast fine-tuning on the single edit; Trajectory-based Editing unifies continual edits with a growing memory; and Outer Optimization leverages meta-learning to distill cross-task strategies for preserving specificity. By capturing the relationships between different single edits within the trajectory, our method learns how to effectively avoid specificity drift. Experiments across multiple LLMs show TamEdit significantly outperforms baselines in continual editing, improving specificity by 14.81% with fast speed (requiring only 8.84% of the time cost of most baselines), while preserving general capabilities.",
       "authors": [
-        "Ziqi Pang",
-        "Yu-Xiong Wang"
+        "Shiqiang Tian",
+        "Cheng Ding",
+        "Qin Chen",
+        "Jie Zhou",
+        "Liang He"
       ],
-      "published": "2026-11-02T18:53:54Z",
-      "updated": "2026-11-02T18:53:54Z",
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
       "categories": [
-        "cs.LG"
+        "ACL 2026",
+        "Oral"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.03627v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.03627v1",
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
       "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
         "large language model",
+        "large language models",
         "language model",
-        "llm"
+        "language models",
+        "llms"
       ],
       "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3593,
-          "matched": [
-            "learning"
-          ]
-        },
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.3592,
+          "score": 0.5062,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.1165,
+          "score": 0.5062,
           "matched": [
-            "evaluation"
+            "learning"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0648,
+          "score": 0.0443,
           "matched": [
-            "analysis"
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0443,
+          "matched": [
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.5009,
-        "relevance": 0.3826,
-        "quality": 0.63,
-        "novelty": 0.8324,
-        "freshness": 0.86,
+        "total": 0.6224,
+        "relevance": 0.5151,
+        "quality": 0.78,
+        "novelty": 0.8158,
+        "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "GitHub link"
+        "baseline comparison",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
       ],
       "summary": {
-        "takeaway": "Reinforcement learning with verifiable rewards (RLVR) can enable generalizable improvement for large language model (LLM) reasoning.",
-        "problem": "Reinforcement learning with verifiable rewards (RLVR) can enable generalizable improvement for large language model (LLM) reasoning.",
-        "method": "We study this question with a controllable equation-solving framework: finding multiple inputs x for equations f(x)=y, where f is a non-bijective string function.",
-        "evidence": "We study this question with a controllable equation-solving framework: finding multiple inputs x for equations f(x)=y, where f is a non-bijective string function.",
+        "takeaway": "To address this, we propose TamEdit, a trajectory-aware meta-learning method that preserves specificity for continual knowledge editing.",
+        "problem": "Knowledge editing is a promising method for updating Large Language Models efficiently.",
+        "method": "To address this, we propose TamEdit, a trajectory-aware meta-learning method that preserves specificity for continual knowledge editing.",
+        "evidence": "Experiments across multiple LLMs show TamEdit significantly outperforms baselines in continual editing, improving specificity by 14.81% with fast speed (requiring only 8.84% of the time cost of most baselines), while preserving general capabilities.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -234,7 +243,7 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
+        "topic": "Trustworthy machine learning",
         "matched": [
           "learning"
         ],
@@ -242,17 +251,16 @@
       }
     },
     {
-      "id": "conf:acl:2026:2139-main",
-      "title": "Maximizing Local Entropy Where It Matters: Prefix-Aware Localized LLM Unlearning",
-      "abstract": "Machine unlearning aims to forget sensitive knowledge from Large Language Models (LLMs) while maintaining general utility. However, existing approaches typically treat all tokens in a response indiscriminately and enforce uncertainty over the entire vocabulary. This global treatment results in unnecessary utility degradation and extends optimization to content-agnostic regions. To address these limitations, we propose PALU (Prefix-Aware Localized Unlearning), a framework driven by a local entropy maximization objective across both temporal and vocabulary dimensions. PALU reveals that (i) suppressing the sensitive prefix alone is sufficient to sever the causal generation link, and (ii) flattening only the top-K logits is adequate to maximize uncertainty in the critical subspace. These findings allow PALU to alleviate redundant optimization across the full vocabulary and parameter space while minimizing collateral damage to general model performance. Comprehensive evaluations validate that PALU achieves superior forgetting efficacy and utility preservation compared to state-of-the-art baselines. Our code is available at https://github.com/nxZhai/PALU.",
+      "id": "conf:acl:2026:214-main",
+      "title": "SCAN: Structured Capability Assessment and Navigation for LLMs",
+      "abstract": "Evaluating Large Language Models (LLMs) has become increasingly important, with automatic evaluation benchmarks gaining prominence as alternatives to human evaluation. While existing research has focused on approximating model rankings, such benchmarks fail to provide users and developers with a comprehensive and fine-grained understanding of a specific model's capabilities. To fill this gap, we propose SCAN (Structured Capability Assessment and Navigation), a practical framework that enables detailed characterization of LLM capabilities through comprehensive and fine-grained evaluation. SCAN incorporates four key components: (1) TaxBuilder, which extracts capability-indicating tags from extensive queries to construct a hierarchical taxonomy automatically; (2) RealMix, a query synthesis and filtering mechanism that ensures sufficient evaluation data for each capability tag; (3) a suite of visualization and analysis tools that facilitate efficient navigation and analysis of model capabilities; and (4) a PC$^{2}$-based (Pre-Comparison-derived Criteria) LLM-as-a-Judge approach that achieves significantly higher accuracy compared to classic LLM-as-a-Judge method. Using SCAN, we conduct a comprehensive evaluation of 21 mainstream LLMs. Our detailed analysis of the GPT-OSS family reveals substantial performance variations, even within sub-capabilities belonging to the same category of capability. This finding highlights the importance of fine-grained evaluation in accurately understanding LLM behavior. Project homepage and resources are available at https://github.com/liudan193/SCAN.",
       "authors": [
-        "Naixin Zhai",
-        "Pengyang Shao",
-        "Binbin Zheng",
-        "Yonghui Yang",
-        "Fei Shen",
-        "Long Bai",
-        "Xun Yang"
+        "Zongqi Wang",
+        "Tianle Gu",
+        "Chen Gong",
+        "Xin Tian",
+        "Siqi Bao",
+        "Yujiu Yang"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -279,48 +287,66 @@
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5496,
-          "matched": [
-            "uncertainty",
-            "evaluations"
-          ]
-        },
-        {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.1535,
+          "score": 0.4717,
           "matched": [
-            "machine"
+            "llm-as-a-judge"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3804,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1415,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.6303,
-        "relevance": 0.4704,
-        "quality": 0.94,
-        "novelty": 0.866,
+        "total": 0.6211,
+        "relevance": 0.4817,
+        "quality": 0.88,
+        "novelty": 0.8198,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
         "GitHub link",
-        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results",
         "publication metadata",
         "conference oral"
       ],
       "summary": {
-        "takeaway": "To address these limitations, we propose PALU (Prefix-Aware Localized Unlearning), a framework driven by a local entropy maximization objective across both temporal and vocabulary dimensions.",
-        "problem": "Machine unlearning aims to forget sensitive knowledge from Large Language Models (LLMs) while maintaining general utility.",
-        "method": "To address these limitations, we propose PALU (Prefix-Aware Localized Unlearning), a framework driven by a local entropy maximization objective across both temporal and vocabulary dimensions.",
-        "evidence": "Comprehensive evaluations validate that PALU achieves superior forgetting efficacy and utility preservation compared to state-of-the-art baselines.",
+        "takeaway": "To fill this gap, we propose SCAN (Structured Capability Assessment and Navigation), a practical framework that enables detailed characterization of LLM capabilities through comprehensive and fine-grained evaluation.",
+        "problem": "Evaluating Large Language Models (LLMs) has become increasingly important, with automatic evaluation benchmarks gaining prominence as alternatives to human evaluation.",
+        "method": "To fill this gap, we propose SCAN (Structured Capability Assessment and Navigation), a practical framework that enables detailed characterization of LLM capabilities through comprehensive and fine-grained evaluation.",
+        "evidence": "SCAN incorporates four key components: (1) TaxBuilder, which extracts capability-indicating tags from extensive queries to construct a hierarchical taxonomy automatically; (2) RealMix, a query synthesis and filtering mechanism that ensures sufficient evaluation data for each capability tag; (3) a suite of visualization and analysis tools that facilitate efficient navigation and analysis of model capabilities; and (4) a PC$^{2}$-based (Pre-Comparison-derived Criteria) LLM-as-a-Judge approach that achieves significantly higher accuracy compared to classic LLM-as-a-Judge method.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -329,24 +355,26 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "uncertainty",
-          "evaluations"
+          "llm-as-a-judge"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "conf:acl:2026:33-ind",
-      "title": "Calibrating LLM Judges: Linear Probes for Fast and Reliable Uncertainty Estimation",
-      "abstract": "As LLM-based judges become integral to industry applications, obtaining well-calibrated uncertainty estimates efficiently has become critical for production deployment. However, existing techniques, such as verbalized confidence and multi-generation methods, are often either poorly calibrated or computationally expensive. We introduce linear probes trained with a Brier score-based loss to provide calibrated uncertainty estimates from reasoning judges' hidden states, requiring no additional model training. We evaluate our approach on both objective tasks (reasoning, mathematics, factuality, coding) and subjective human preference judgments. Our results demonstrate that probes achieve superior calibration compared to existing methods with x computational savings, generalize robustly to unseen evaluation domains, and deliver higher accuracy on high-confidence predictions. However, probes produce conservative estimates that underperform on easier datasets but may benefit safety-critical deployments prioritizing low false-positive rates. Overall, our work demonstrates that interpretability-based uncertainty estimation provides a practical and scalable plug-and-play solution for LLM judges in production.",
+      "id": "conf:acl:2026:1671-main",
+      "title": "Not All Tokens Matter: Towards Efficient LLM Reasoning via Token Significance in Reinforcement Learning",
+      "abstract": "Large language models (LLMs) show strong reasoning abilities but often produce unnecessarily long explanations that reduce efficiency. Although reinforcement learning (RL) has been used to improve reasoning, most methods focus on accuracy and rely on uniform length-based rewards that overlook the differing contributions of individual tokens, often harming correctness. We revisit length optimization in RL through the perspective of token significance. Observing that many chain-of-thought (CoT) tokens contribute little to the final answer, we introduce a significance-aware length reward that selectively penalizes insignificance tokens, reducing redundancy while preserving essential reasoning. We also propose a dynamic length reward that encourages more detailed reasoning early in training and gradually shifts toward conciseness as learning progresses. Integrating these components into standard policy optimization yields a framework that improves both reasoning efficiency and accuracy. Experiments across multiple benchmarks demonstrate substantial reductions in response length while preserving or improving correctness, highlighting the importance of modeling token significance for efficient LLM reasoning.",
       "authors": [
-        "Bhaktipriya Radharapu",
-        "Eshika Saxena",
-        "Kenneth Li",
-        "Adina Williams",
-        "Nicola Cancedda"
+        "Hanbing Liu",
+        "Lang Cao",
+        "Yuanyi Ren",
+        "Mengyu Zhou",
+        "Haoyu Dong",
+        "Xiaojun Ma",
+        "Shi Han",
+        "Dongmei Zhang"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -365,68 +393,54 @@
       "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
         "llm"
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6139,
-          "matched": [
-            "uncertainty",
-            "evaluation"
-          ]
-        },
-        {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.2535,
+          "score": 0.5362,
           "matched": [
-            "reliable"
+            "learning"
           ]
         },
         {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.0971,
+          "score": 0.5362,
           "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0963,
-          "matched": [
-            "estimation"
+            "learning"
           ]
         }
       ],
       "scores": {
-        "total": 0.6214,
-        "relevance": 0.5612,
-        "quality": 0.61,
-        "novelty": 0.8456,
+        "total": 0.6224,
+        "relevance": 0.5362,
+        "quality": 0.7,
+        "novelty": 0.839,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "dataset evidence",
+        "benchmark evaluation",
+        "experiments",
         "publication metadata",
         "conference oral"
       ],
       "summary": {
-        "takeaway": "We introduce linear probes trained with a Brier score-based loss to provide calibrated uncertainty estimates from reasoning judges' hidden states, requiring no additional model training.",
-        "problem": "As LLM-based judges become integral to industry applications, obtaining well-calibrated uncertainty estimates efficiently has become critical for production deployment.",
-        "method": "We introduce linear probes trained with a Brier score-based loss to provide calibrated uncertainty estimates from reasoning judges' hidden states, requiring no additional model training.",
-        "evidence": "Our results demonstrate that probes achieve superior calibration compared to existing methods with x computational savings, generalize robustly to unseen evaluation domains, and deliver higher accuracy on high-confidence predictions.",
+        "takeaway": "Observing that many chain-of-thought (CoT) tokens contribute little to the final answer, we introduce a significance-aware length reward that selectively penalizes insignificance tokens, reducing redundancy while preserving essential reasoning.",
+        "problem": "Large language models (LLMs) show strong reasoning abilities but often produce unnecessarily long explanations that reduce efficiency.",
+        "method": "Observing that many chain-of-thought (CoT) tokens contribute little to the final answer, we introduce a significance-aware length reward that selectively penalizes insignificance tokens, reducing redundancy while preserving essential reasoning.",
+        "evidence": "Although reinforcement learning (RL) has been used to improve reasoning, most methods focus on accuracy and rely on uniform length-based rewards that overlook the differing contributions of individual tokens, often harming correctness.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -435,10 +449,9 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "uncertainty",
-          "evaluation"
+          "learning"
         ],
         "lane": "llm"
       }

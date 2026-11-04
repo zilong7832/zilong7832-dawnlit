@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T18:25:14.094493+00:00",
+  "updated_at": "2026-11-04T18:38:58.738323+00:00",
   "paper_ids": [
     "2606.26027",
     "2606.26036",
@@ -393,9 +393,12 @@
     "conf:acl:2026:1334-main",
     "conf:acl:2026:1448-main",
     "conf:acl:2026:151-main",
+    "conf:acl:2026:1671-main",
     "conf:acl:2026:1740-main",
     "conf:acl:2026:1925-main",
     "conf:acl:2026:2139-main",
+    "conf:acl:2026:214-main",
+    "conf:acl:2026:2343-main",
     "conf:acl:2026:2353-main",
     "conf:acl:2026:2526-main",
     "conf:acl:2026:2565-main",
