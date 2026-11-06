@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T18:44:11.900991+00:00",
+  "generated_at": "2026-11-06T17:56:45.003114+00:00",
   "papers": [
     {
       "id": "2610.39671",
@@ -605,224 +605,6 @@
       "recommended_at": "2026-11-03T18:25:14.094493+00:00"
     },
     {
-      "id": "conf:acl:2026:2353-main",
-      "title": "MTR-Bench: A Comprehensive Benchmark for Multi-Turn Reasoning Evaluation",
-      "abstract": "Recent advances in Large Language Models (LLMs) have shown promising results in complex reasoning tasks. However, current evaluations predominantly focus on single-turn reasoning scenarios, leaving interactive tasks largely unexplored. We attribute it to the absence of comprehensive datasets and scalable automatic evaluation protocols. To fill these gaps, we present MTR-Bench for LLMs' Multi-Turn Reasoning evaluation. Comprising 4 classes, 40 tasks and 3600 instances, MTR-Bench covers diverse reasoning capabilities, fine-grained difficulty granularity, and necessitates multi-turn interactions with the environments. Moreover, MTR-Bench features fully-automated framework spanning both dataset constructions and model evaluations, which enables scalable assessment without human interventions. Extensive experiments reveal that even the cutting-edge reasoning models fall short of multi-turn, interactive reasoning tasks. And the further analysis upon these results brings valuable insights for future research in interactive AI systems.",
-      "authors": [
-        "Xiaoyuan Li",
-        "Keqin Bao",
-        "Yubo Ma",
-        "Moxin Li",
-        "Wenjie Wang",
-        "Rui Men",
-        "Yichang Zhang",
-        "Fuli Feng",
-        "Dayiheng Liu"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6274,
-          "matched": [
-            "evaluation",
-            "evaluations"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "analysis"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6301,
-        "relevance": 0.5103,
-        "quality": 0.82,
-        "novelty": 0.8436,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "dataset evidence",
-        "quantitative results",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "To fill these gaps, we present MTR-Bench for LLMs' Multi-Turn Reasoning evaluation.",
-        "problem": "Recent advances in Large Language Models (LLMs) have shown promising results in complex reasoning tasks.",
-        "method": "Moreover, MTR-Bench features fully-automated framework spanning both dataset constructions and model evaluations, which enables scalable assessment without human interventions.",
-        "evidence": "Extensive experiments reveal that even the cutting-edge reasoning models fall short of multi-turn, interactive reasoning tasks.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "evaluations"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-30T16:41:41.737649+00:00"
-    },
-    {
-      "id": "conf:iclr:2026:10008351",
-      "title": "Revela: Dense Retriever Learning via Language Modeling",
-      "abstract": "Dense retrievers play a vital role in accessing external and specialized knowledge to augment language models (LMs). Training dense retrievers typically requires annotated query-document pairs, which are costly to create and scarce in specialized domains (e.g., code) or in complex settings (e.g., requiring reasoning). These practical challenges have sparked growing interest in self-supervised retriever learning. Since LMs are trained to capture token-level dependencies through a self-supervised learning objective (i.e., next token prediction), we can analogously cast retrieval as learning dependencies among chunks of tokens. This analogy naturally leads to the question: How can we adapt self‑supervised learning objectives in the spirit of language modeling to train retrievers? To answer this question, we introduce Revela, a unified and scalable training framework for self-supervised retriever learning via language modeling. Revela models semantic dependencies among documents by conditioning next token prediction on local and cross-document context through an in-batch attention mechanism. This attention is weighted by retriever-computed similarity scores, enabling the retriever to be optimized as part of language modeling. We evaluate Revela on domain-specific (CoIR), reasoning-intensive (BRIGHT), and general-domain (BEIR) benchmarks across various retriever backbones. Without annotated or synthetic query-document pairs, Revela surpasses larger supervised models and proprietary APIs on both CoIR and BRIGHT. It achieves BEIR's unsupervised SoTA with ~1000x less training data and 10x less compute. Performance increases with batch size and model size, highlighting Revela's scalability and its promise for self‑supervised retriever learning.",
-      "authors": [
-        "Fengyu Cai",
-        "Tong Chen",
-        "Xinran Zhao",
-        "Sihao Chen",
-        "Hongming Zhang",
-        "Sherry Wu",
-        "Iryna Gurevych",
-        "Heinz Koeppl"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10008351",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10008351",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4772,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4772,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2192,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0349,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0349,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6298,
-        "relevance": 0.521,
-        "quality": 0.78,
-        "novelty": 0.8517,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To answer this question, we introduce Revela, a unified and scalable training framework for self-supervised retriever learning via language modeling.",
-        "problem": "Dense retrievers play a vital role in accessing external and specialized knowledge to augment language models (LMs).",
-        "method": "To answer this question, we introduce Revela, a unified and scalable training framework for self-supervised retriever learning via language modeling.",
-        "evidence": "It achieves BEIR's unsupervised SoTA with ~1000x less training data and 10x less compute.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-30T16:41:41.737649+00:00"
-    },
-    {
       "id": "2610.37926",
       "title": "GARDEN: Generalist Autonomous Reward Design Through Evidence Navigation for Cooperative Multi-Agent Reinforcement Learning",
       "abstract": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function. Because task success alone provides too little guidance for learning, intermediate rewards are usually designed by hand, and this effort must often be repeated whenever the environment or the team changes. Large language models (LLMs) can automate the effort by writing reward functions as code, yet the resulting rewards are typically designed and tested in a single setting. To enable their reuse across settings, GARDEN (Generalist Autonomous Reward Design through Evidence Navigation) is proposed, in which one reward program is developed for a family of related scenarios and transferred, unchanged, to scenarios that were not available during its design. During development, environment code, training records, and agent behavior are investigated by an LLM reward engineer, and draft rewards are tested in trial training runs, while the learning algorithm and the rule for selecting the final reward are held fixed. On unseen scenarios of the Overcooked and SMAX benchmarks, task returns were increased by 58.2% and 52.5% over the default rewards on two kitchen layouts, and the mean win rate in two combat scenarios was raised from 51.0% to 89.9%. Under matched candidate and probe budgets, this exceeded the 84.2% and 79.2% obtained with fixed diagnostic feedback and Eureka-inspired reward reflection. These results show that a single autonomously engineered reward can be reused effectively across related cooperative scenarios.",
@@ -1222,6 +1004,206 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-03T18:25:14.094493+00:00"
+    },
+    {
+      "id": "conf:acl:2026:214-main",
+      "title": "SCAN: Structured Capability Assessment and Navigation for LLMs",
+      "abstract": "Evaluating Large Language Models (LLMs) has become increasingly important, with automatic evaluation benchmarks gaining prominence as alternatives to human evaluation. While existing research has focused on approximating model rankings, such benchmarks fail to provide users and developers with a comprehensive and fine-grained understanding of a specific model's capabilities. To fill this gap, we propose SCAN (Structured Capability Assessment and Navigation), a practical framework that enables detailed characterization of LLM capabilities through comprehensive and fine-grained evaluation. SCAN incorporates four key components: (1) TaxBuilder, which extracts capability-indicating tags from extensive queries to construct a hierarchical taxonomy automatically; (2) RealMix, a query synthesis and filtering mechanism that ensures sufficient evaluation data for each capability tag; (3) a suite of visualization and analysis tools that facilitate efficient navigation and analysis of model capabilities; and (4) a PC$^{2}$-based (Pre-Comparison-derived Criteria) LLM-as-a-Judge approach that achieves significantly higher accuracy compared to classic LLM-as-a-Judge method. Using SCAN, we conduct a comprehensive evaluation of 21 mainstream LLMs. Our detailed analysis of the GPT-OSS family reveals substantial performance variations, even within sub-capabilities belonging to the same category of capability. This finding highlights the importance of fine-grained evaluation in accurately understanding LLM behavior. Project homepage and resources are available at https://github.com/liudan193/SCAN.",
+      "authors": [
+        "Zongqi Wang",
+        "Tianle Gu",
+        "Chen Gong",
+        "Xin Tian",
+        "Siqi Bao",
+        "Yujiu Yang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "llm-as-a-judge"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3804,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1415,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6211,
+        "relevance": 0.4817,
+        "quality": 0.88,
+        "novelty": 0.8198,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "GitHub link",
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To fill this gap, we propose SCAN (Structured Capability Assessment and Navigation), a practical framework that enables detailed characterization of LLM capabilities through comprehensive and fine-grained evaluation.",
+        "problem": "Evaluating Large Language Models (LLMs) has become increasingly important, with automatic evaluation benchmarks gaining prominence as alternatives to human evaluation.",
+        "method": "To fill this gap, we propose SCAN (Structured Capability Assessment and Navigation), a practical framework that enables detailed characterization of LLM capabilities through comprehensive and fine-grained evaluation.",
+        "evidence": "SCAN incorporates four key components: (1) TaxBuilder, which extracts capability-indicating tags from extensive queries to construct a hierarchical taxonomy automatically; (2) RealMix, a query synthesis and filtering mechanism that ensures sufficient evaluation data for each capability tag; (3) a suite of visualization and analysis tools that facilitate efficient navigation and analysis of model capabilities; and (4) a PC$^{2}$-based (Pre-Comparison-derived Criteria) LLM-as-a-Judge approach that achieves significantly higher accuracy compared to classic LLM-as-a-Judge method.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "llm-as-a-judge"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-04T18:38:58.738323+00:00"
+    },
+    {
+      "id": "conf:iclr:2026:10011209",
+      "title": "CounselBench: A Large-Scale Expert Evaluation and Adversarial Benchmarking of Large Language Models in Mental Health Question Answering",
+      "abstract": "Medical question answering (QA) benchmarks often focus on multiple-choice or fact-based tasks, leaving open-ended answers to real patient questions underexplored. This gap is particularly critical in mental health, where patient questions often mix symptoms, treatment concerns, and emotional needs, requiring answers that balance clinical caution with contextual sensitivity. We present CounselBench, a large-scale benchmark developed with 100 mental health professionals to evaluate and stress-test large language models (LLMs) in realistic help-seeking scenarios. The first component, CounselBench-EVAL, contains 2,000 expert evaluations of answers from GPT-4, LLaMA 3, Gemini, and online human therapists on patient questions from the public forum CounselChat. Each answer is rated across six clinically grounded dimensions, with span-level annotations and written rationales. Expert evaluations show that while LLMs achieve high scores on several dimensions, they also exhibit recurring issues, including unconstructive feedback, overgeneralization, and limited personalization or relevance. Responses were frequently flagged for safety risks, most notably unauthorized medical advice. Follow-up experiments show that LLM judges systematically overrate model responses and overlook safety concerns identified by human experts. To probe failure modes more directly, we construct CounselBench-Adv, an adversarial dataset of 120 expert-authored mental health questions designed to trigger specific model issues. Expert evaluation of 1,080 responses from nine LLMs reveals consistent, model-specific failure patterns. Together, CounselBench establishes a clinically grounded framework for benchmarking LLMs in mental health QA.",
+      "authors": [
+        "Yahan Li",
+        "Jifan Yao",
+        "John Bunyi",
+        "Adam Frank",
+        "Angel Hwang",
+        "Ruishan Liu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10011209",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10011209",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6017,
+          "matched": [
+            "evaluation",
+            "evaluations"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6131,
+        "relevance": 0.4814,
+        "quality": 0.82,
+        "novelty": 0.8621,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "We present CounselBench, a large-scale benchmark developed with 100 mental health professionals to evaluate and stress-test large language models (LLMs) in realistic help-seeking scenarios.",
+        "problem": "Medical question answering (QA) benchmarks often focus on multiple-choice or fact-based tasks, leaving open-ended answers to real patient questions underexplored.",
+        "method": "Together, CounselBench establishes a clinically grounded framework for benchmarking LLMs in mental health QA.",
+        "evidence": "Expert evaluations show that while LLMs achieve high scores on several dimensions, they also exhibit recurring issues, including unconstructive feedback, overgeneralization, and limited personalization or relevance.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-05T18:44:11.900991+00:00"
     }
   ]
 }

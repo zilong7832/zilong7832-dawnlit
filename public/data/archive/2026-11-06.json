@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-11-06T17:56:45.003114+00:00",
+  "profile_updated_at": "2026-08-23",
+  "content_language": "zh",
+  "source_count": 30,
+  "source_total": 30,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 30,
+  "previously_recommended_count": 437,
+  "eligible_count": 1,
+  "feedback_count": 0,
+  "topic_feedback": {
+    "enabled": true,
+    "generated_at": "2026-11-06T17:56:45.003114+00:00",
+    "feedback_records": 0,
+    "latest_feedback_papers": 0,
+    "labeled_papers": 0,
+    "adjusted_topics": 0,
+    "minimum_effective_samples": 4.0,
+    "topics": [
+      {
+        "id": "functional_time_series",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "long_run_covariance_estimation",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "bandwidth_selection",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "time_series_inference",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "trustworthy_machine_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "positive_unlabeled_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "conformal_prediction",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      }
+    ]
+  },
+  "semantic_feedback_count": 0,
+  "minimum_daily_target": 3,
+  "minimum_daily_met": true,
+  "conference_supplement_count": 2,
+  "conference_eligible_count": 134,
+  "conference_pool_updated_at": "2026-11-04T18:38:58.738323+00:00",
+  "conference_source_status": {
+    "ICLR:2026": "ok:223",
+    "ICML:2026": "ok:742",
+    "NeurIPS:2026": "ok:0",
+    "ACL:2026": "ok:478",
+    "EMNLP:2026": "awaiting_verified_schedule",
+    "ICLR:2025": "ok:213",
+    "ICML:2025": "ok:344",
+    "NeurIPS:2025": "ok:808",
+    "EMNLP:2025": "awaiting_verified_schedule",
+    "ACL:2025": "awaiting_verified_schedule"
+  },
+  "papers": [
+    {
+      "id": "2611.08383",
+      "title": "FedReason: Large Language Models as Weight-Space Meta-Aggregators for Heterogeneous Federated Learning",
+      "abstract": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity. We study whether a large language model (LLM) that inspects the client models can choose the rule itself, without any training on the server. In FedReason, the LLM is called every ten rounds. It analyses the weights by running code in a restricted server-side sandbox, sees only the printed results, may score a few candidates on a 500-image proxy set, and submits a short Python aggregation program. The server applies the program until the next call and falls back to FedAvg whenever its output is invalid. Full weight tensors never leave the server. We evaluated FedReason with Claude Opus 5.5 on CIFAR-10 and CIFAR-100 with ResNet-18 under Dirichlet label skew, width-heterogeneous sub-models and Byzantine clients, in 168 runs against 14 baselines. Across 12 paired label-skew runs it beat FedAvg by 1.26 percentage points on average (10 wins), and a control that spends the same per-round proxy budget on choosing among standard rules by 1.08 points. It was the strongest server-side rule on CIFAR-100 but did not beat SCAFFOLD, which changes client training. With three of ten clients malicious, it excluded all sign-flipping clients from the first round and stayed about one point below FLTrust without training a root model. Without proxy feedback, accuracy fell from 73.8% to 38.8% in one seed. A 60-round run cost 0.79 USD in API fees on average.",
+      "authors": [
+        "Ali Mohammadi Ruzbahani",
+        "Abbas Yazdinejad",
+        "Hadis Karimipour"
+      ],
+      "published": "2026-11-05T18:00:58Z",
+      "updated": "2026-11-05T18:00:58Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2611.08383v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08383v1",
+      "comment": "Ali Mohammadi Ruzbahani (corresponding)",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4549,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4548,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5493,
+        "relevance": 0.4549,
+        "quality": 0.62,
+        "novelty": 0.8675,
+        "freshness": 0.8576,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity.",
+        "problem": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity.",
+        "method": "We study whether a large language model (LLM) that inspects the client models can choose the rule itself, without any training on the server.",
+        "evidence": "In FedReason, the LLM is called every ten rounds.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:147-ind",
+      "title": "AIDA-SEAT: Towards Reliable AI Doctor Assistant via State-Evaluation-Action Tree Enhanced LLMs in Online Hospital",
+      "abstract": "Artificial intelligence doctor assistants (AIDAs) are popular in medical dialogue systems, helping doctors make clinical decisions and reduce their workload. Existing methods for healthcare primarily focus on LLM-based approaches or knowledge retrieval-augmented generation (RAG). However, we argue that existing retrieval methods primarily focus on passages and lack the logical expression of knowledge. In this paper, we propose an AIDA-SEAT framework to provide reliable clinical decision-making support. First, we design the state-evaluation-action tree (SEAT), which covers diagnosis, treatment, and examination. To develop this tree, we refine and transform SEAT collected from medical documents and doctors. Then, we propose an adaptive method to select optimal trees tailored to the current patients' state. Finally, we leverage LLMs to perform state assessment, evaluation, and action execution based on the tree, thereby generating reliable responses. To evaluate the effectiveness of our method, we conducted extensive experiments on a self-built dataset. Our method achieves 1.01\\% higher than current state-of-the-art (SOTA) baselines across five departments, including common RAG-based methods. Furthermore, analysis of 200 consultation records during deployment on an online hospital revealed that system-assisted responses are 24.16 seconds faster on average than manual ones, improving efficiency by 26.85\\%.",
+      "authors": [
+        "Lianxin Sun",
+        "Xiaoying Ying",
+        "Guangya Yu",
+        "Weiyan Zhang",
+        "Chenhao Guan",
+        "Hao He",
+        "Mingxi Shang",
+        "Jianhua Li",
+        "ChunMing Wang",
+        "Tong Ruan"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4635,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4635,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.605,
+        "relevance": 0.4712,
+        "quality": 0.82,
+        "novelty": 0.847,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose an AIDA-SEAT framework to provide reliable clinical decision-making support.",
+        "problem": "Artificial intelligence doctor assistants (AIDAs) are popular in medical dialogue systems, helping doctors make clinical decisions and reduce their workload.",
+        "method": "In this paper, we propose an AIDA-SEAT framework to provide reliable clinical decision-making support.",
+        "evidence": "To evaluate the effectiveness of our method, we conducted extensive experiments on a self-built dataset.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "reliable"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:240-srw",
+      "title": "One Panel Does Not Fit All: Case-Adaptive Multi-Agent Deliberation for Clinical Prediction",
+      "abstract": "Large language models applied to clinical prediction exhibit case-level heterogeneity: simple cases yield consistent outputs, while complex cases produce divergent predictions under minor prompt changes. Existing single-agent strategies sample from one role-conditioned distribution, and multi-agent frameworks use fixed roles with flat majority voting, discarding the diagnostic signal in disagreement. We propose CAMP (Case-Adaptive Multi-agent Panel), where an attending-physician agent dynamically assembles a specialist panel tailored to each case's diagnostic uncertainty. Each specialist evaluates candidates via three-valued voting (KEEP/REFUSE/NEUTRAL), enabling principled abstention outside one's expertise. A hybrid router directs each diagnosis through strong consensus, fallback to the attending physician's judgment, or evidence-based arbitration that weighs argument quality over vote counts. On diagnostic prediction and brief hospital course generation from MIMIC-IV across four LLM backbones, CAMP consistently outperforms strong baselines while consuming fewer tokens than most competing multi-agent methods, with voting records and arbitration traces offering transparent decision audits.",
+      "authors": [
+        "Yuxing Lu; Yushuhong Lin; Jason Zhang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6294,
+          "matched": [
+            "uncertainty",
+            "prediction"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.1288,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.608,
+        "relevance": 0.5293,
+        "quality": 0.64,
+        "novelty": 0.8596,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose CAMP (Case-Adaptive Multi-agent Panel), where an attending-physician agent dynamically assembles a specialist panel tailored to each case's diagnostic uncertainty.",
+        "problem": "Large language models applied to clinical prediction exhibit case-level heterogeneity: simple cases yield consistent outputs, while complex cases produce divergent predictions under minor prompt changes.",
+        "method": "Existing single-agent strategies sample from one role-conditioned distribution, and multi-agent frameworks use fixed roles with flat majority voting, discarding the diagnostic signal in disagreement.",
+        "evidence": "On diagnostic prediction and brief hospital course generation from MIMIC-IV across four LLM backbones, CAMP consistently outperforms strong baselines while consuming fewer tokens than most competing multi-agent methods, with voting records and arbitration traces offering transparent decision audits.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "prediction"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

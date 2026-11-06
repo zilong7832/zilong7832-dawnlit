@@ -1,6 +1,297 @@
 {
-  "generated_at": "2026-11-05T18:44:11.900991+00:00",
+  "generated_at": "2026-11-06T17:56:45.003114+00:00",
   "papers": [
+    {
+      "id": "2611.08383",
+      "title": "FedReason: Large Language Models as Weight-Space Meta-Aggregators for Heterogeneous Federated Learning",
+      "abstract": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity. We study whether a large language model (LLM) that inspects the client models can choose the rule itself, without any training on the server. In FedReason, the LLM is called every ten rounds. It analyses the weights by running code in a restricted server-side sandbox, sees only the printed results, may score a few candidates on a 500-image proxy set, and submits a short Python aggregation program. The server applies the program until the next call and falls back to FedAvg whenever its output is invalid. Full weight tensors never leave the server. We evaluated FedReason with Claude Opus 5.5 on CIFAR-10 and CIFAR-100 with ResNet-18 under Dirichlet label skew, width-heterogeneous sub-models and Byzantine clients, in 168 runs against 14 baselines. Across 12 paired label-skew runs it beat FedAvg by 1.26 percentage points on average (10 wins), and a control that spends the same per-round proxy budget on choosing among standard rules by 1.08 points. It was the strongest server-side rule on CIFAR-100 but did not beat SCAFFOLD, which changes client training. With three of ten clients malicious, it excluded all sign-flipping clients from the first round and stayed about one point below FLTrust without training a root model. Without proxy feedback, accuracy fell from 73.8% to 38.8% in one seed. A 60-round run cost 0.79 USD in API fees on average.",
+      "authors": [
+        "Ali Mohammadi Ruzbahani",
+        "Abbas Yazdinejad",
+        "Hadis Karimipour"
+      ],
+      "published": "2026-11-05T18:00:58Z",
+      "updated": "2026-11-05T18:00:58Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2611.08383v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08383v1",
+      "comment": "Ali Mohammadi Ruzbahani (corresponding)",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4549,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4548,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5493,
+        "relevance": 0.4549,
+        "quality": 0.62,
+        "novelty": 0.8675,
+        "freshness": 0.8576,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "baseline comparison",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity.",
+        "problem": "Federated learning servers combine client models with a fixed aggregation rule, and each rule in common use is designed for one kind of heterogeneity.",
+        "method": "We study whether a large language model (LLM) that inspects the client models can choose the rule itself, without any training on the server.",
+        "evidence": "In FedReason, the LLM is called every ten rounds.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-06T17:56:45.003114+00:00"
+    },
+    {
+      "id": "conf:acl:2026:147-ind",
+      "title": "AIDA-SEAT: Towards Reliable AI Doctor Assistant via State-Evaluation-Action Tree Enhanced LLMs in Online Hospital",
+      "abstract": "Artificial intelligence doctor assistants (AIDAs) are popular in medical dialogue systems, helping doctors make clinical decisions and reduce their workload. Existing methods for healthcare primarily focus on LLM-based approaches or knowledge retrieval-augmented generation (RAG). However, we argue that existing retrieval methods primarily focus on passages and lack the logical expression of knowledge. In this paper, we propose an AIDA-SEAT framework to provide reliable clinical decision-making support. First, we design the state-evaluation-action tree (SEAT), which covers diagnosis, treatment, and examination. To develop this tree, we refine and transform SEAT collected from medical documents and doctors. Then, we propose an adaptive method to select optimal trees tailored to the current patients' state. Finally, we leverage LLMs to perform state assessment, evaluation, and action execution based on the tree, thereby generating reliable responses. To evaluate the effectiveness of our method, we conducted extensive experiments on a self-built dataset. Our method achieves 1.01\\% higher than current state-of-the-art (SOTA) baselines across five departments, including common RAG-based methods. Furthermore, analysis of 200 consultation records during deployment on an online hospital revealed that system-assisted responses are 24.16 seconds faster on average than manual ones, improving efficiency by 26.85\\%.",
+      "authors": [
+        "Lianxin Sun",
+        "Xiaoying Ying",
+        "Guangya Yu",
+        "Weiyan Zhang",
+        "Chenhao Guan",
+        "Hao He",
+        "Mingxi Shang",
+        "Jianhua Li",
+        "ChunMing Wang",
+        "Tong Ruan"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4635,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4635,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.605,
+        "relevance": 0.4712,
+        "quality": 0.82,
+        "novelty": 0.847,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose an AIDA-SEAT framework to provide reliable clinical decision-making support.",
+        "problem": "Artificial intelligence doctor assistants (AIDAs) are popular in medical dialogue systems, helping doctors make clinical decisions and reduce their workload.",
+        "method": "In this paper, we propose an AIDA-SEAT framework to provide reliable clinical decision-making support.",
+        "evidence": "To evaluate the effectiveness of our method, we conducted extensive experiments on a self-built dataset.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-06T17:56:45.003114+00:00"
+    },
+    {
+      "id": "conf:acl:2026:240-srw",
+      "title": "One Panel Does Not Fit All: Case-Adaptive Multi-Agent Deliberation for Clinical Prediction",
+      "abstract": "Large language models applied to clinical prediction exhibit case-level heterogeneity: simple cases yield consistent outputs, while complex cases produce divergent predictions under minor prompt changes. Existing single-agent strategies sample from one role-conditioned distribution, and multi-agent frameworks use fixed roles with flat majority voting, discarding the diagnostic signal in disagreement. We propose CAMP (Case-Adaptive Multi-agent Panel), where an attending-physician agent dynamically assembles a specialist panel tailored to each case's diagnostic uncertainty. Each specialist evaluates candidates via three-valued voting (KEEP/REFUSE/NEUTRAL), enabling principled abstention outside one's expertise. A hybrid router directs each diagnosis through strong consensus, fallback to the attending physician's judgment, or evidence-based arbitration that weighs argument quality over vote counts. On diagnostic prediction and brief hospital course generation from MIMIC-IV across four LLM backbones, CAMP consistently outperforms strong baselines while consuming fewer tokens than most competing multi-agent methods, with voting records and arbitration traces offering transparent decision audits.",
+      "authors": [
+        "Yuxing Lu; Yushuhong Lin; Jason Zhang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.6294,
+          "matched": [
+            "uncertainty",
+            "prediction"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.1288,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.608,
+        "relevance": 0.5293,
+        "quality": 0.64,
+        "novelty": 0.8596,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose CAMP (Case-Adaptive Multi-agent Panel), where an attending-physician agent dynamically assembles a specialist panel tailored to each case's diagnostic uncertainty.",
+        "problem": "Large language models applied to clinical prediction exhibit case-level heterogeneity: simple cases yield consistent outputs, while complex cases produce divergent predictions under minor prompt changes.",
+        "method": "Existing single-agent strategies sample from one role-conditioned distribution, and multi-agent frameworks use fixed roles with flat majority voting, discarding the diagnostic signal in disagreement.",
+        "evidence": "On diagnostic prediction and brief hospital course generation from MIMIC-IV across four LLM backbones, CAMP consistently outperforms strong baselines while consuming fewer tokens than most competing multi-agent methods, with voting records and arbitration traces offering transparent decision audits.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-06T17:56:45.003114+00:00"
+    },
     {
       "id": "2611.06914",
       "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
@@ -9984,341 +10275,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-15T14:59:50.911792+00:00"
-    },
-    {
-      "id": "2610.20401",
-      "title": "Training Language Models to Fail Gracefully",
-      "abstract": "Reinforcement learning makes language models better at solving tasks, but the same mechanism also rewards guessing. When success is the only way to earn reward, opting for a safe fallback is always worse than a long-shot attempt. When a wrong action can corrupt a database or ship broken code, that incentive can be costly. Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable. However, naively using policy gradients with intermediate reward for fallback behavior is brittle due to unfavorable optimization dynamics. We address this challenge with GracefulRL, which reshapes the optimization landscape to promote graceful failure. Importantly, this behavior emerges directly from outcome-level reward signals, without annotations specifying when to fall back or additional inference-time machinery such as a verifier. Across a range of tasks and scales, we train models that largely preserve their task-solving capability while selectively falling back when acting would be unreliable. More broadly, our results show that reinforcement learning can not only incentivize models to succeed, but also to reason about the limits of their capabilities and change course when they determine that success is out of reach.",
-      "authors": [
-        "Daman Arora",
-        "Xuecheng Liu",
-        "Himanshu Gaurav Singh",
-        "Fahim Tajwar",
-        "Abitha Thankaraj",
-        "Ruslan Salakhutdinov",
-        "Haiwen Feng",
-        "Yuda Song",
-        "Andrea Zanette"
-      ],
-      "published": "2026-10-14T16:03:12Z",
-      "updated": "2026-10-14T16:03:12Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.20401v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.20401v1",
-      "comment": "preprint",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3344,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3344,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0713,
-          "matched": [
-            "inference",
-            "time"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4476,
-        "relevance": 0.3487,
-        "quality": 0.47,
-        "novelty": 0.8375,
-        "freshness": 0.8634,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available"
-      ],
-      "summary": {
-        "takeaway": "Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable.",
-        "problem": "Reinforcement learning makes language models better at solving tasks, but the same mechanism also rewards guessing.",
-        "method": "Therefore, we propose training models to fail gracefully: to preserve successful behavior whenever possible while learning to execute a safe fallback policy when acting would be unreliable.",
-        "evidence": "When a wrong action can corrupt a database or ship broken code, that incentive can be costly.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-15T14:59:50.911792+00:00"
-    },
-    {
-      "id": "2610.18807",
-      "title": "SkillScaffold: Scaffolding Agentic Reinforcement Learning with Policy-Adaptive Skill Credit Assignment and Selective Injection",
-      "abstract": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes. Textual skills can improve exploration by distilling prior interactions into reusable guidance. However, existing skill-based RL approaches often either assume skill injection is beneficial or rely on indirect feedback or rollout-intensive evaluation to assess its utility. Our pilot studies show that rollout-based utility estimation for skill credit assignment is costly and unstable under limited sampling, while skill benefits vary across candidates and depend on the current policy's competence on each query. To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection. By reusing outcome-verified training trajectories, SkillScaffold generates candidate skills and estimates their utility through outcome-aware likelihood comparisons, without candidate-specific environment rollouts. The resulting utility guides whether and which skill to inject, retaining skill-free execution when no candidate is estimated to help. Joint training enables the Generator to produce skills tailored to the evolving Executor. Scaffolded RL encourages skill internalization for skill-free inference. Experiments on ALFWorld, WebShop, ScienceWorld, and $τ^2$-Bench demonstrate gains over strong agentic-RL and skill-based RL baselines across both short- and long-horizon tasks. Ablations and further analyses support the importance of utility-based selection and abstention. Our code is available at https://github.com/Vaidurya00/SkillScaffold.",
-      "authors": [
-        "Wenlin Zhong",
-        "Hao Wang",
-        "Kun Yuan",
-        "Fan Yang",
-        "Jinluan Yang",
-        "Dian Jin",
-        "Xu Tan",
-        "Yiquan Wu",
-        "Kun Kuang"
-      ],
-      "published": "2026-10-13T17:46:25Z",
-      "updated": "2026-10-13T17:46:25Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.18807v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18807v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5062,
-          "matched": [
-            "evaluation",
-            "selective"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4321,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4321,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.1526,
-          "matched": [
-            "selection",
-            "adaptive"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1093,
-          "matched": [
-            "inference",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0789,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6906,
-        "relevance": 0.5778,
-        "quality": 0.94,
-        "novelty": 0.8336,
-        "freshness": 0.8729,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "ablation study",
-        "baseline comparison",
-        "experiments"
-      ],
-      "summary": {
-        "takeaway": "To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection.",
-        "problem": "Agentic reinforcement learning (RL) enables large language models (LLMs) to learn from multi-turn interactions with verifiable outcomes.",
-        "method": "To address these challenges, we introduce SkillScaffold, a policy-adaptive training scaffold that combines low-cost skill-utility estimation with selective skill injection.",
-        "evidence": "Textual skills can improve exploration by distilling prior interactions into reusable guidance.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "selective"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-14T15:07:09.738974+00:00"
-    },
-    {
-      "id": "2610.18724",
-      "title": "AIRRI: Towards a Human-Readable, Machine-Resistant Reading Interface",
-      "abstract": "The rapid advancement of image-to-text extraction systems and large language models (LLMs) poses new challenges for educational assessment by making assignment materials easy to transcribe and solve with minimal human effort. To address this problem, we present AIRRI (Artificial Intelligence Resilient Reading Interface), a framework for generating machine-resistant educational content, a dataset of higher-education assignments for evaluation, and an initial evaluation of the human readability of AIRRI machine-resistant text designs. AIRRI employs two categories of machine-resistance techniques. First, AIRRI applies image transformations including character spacing, word spacing, line spacing, character opacity variation, stripe overlays, and image noise. Second, AIRRI applies decision-based adversarial attacks: RayS, SurFree, and ADBA. We evaluate AIRRI against three image-to-text systems: Tesseract, EasyOCR, and the transformer-based GOT-OCR2 model. Our results show that AIRRI substantially degrades automated text extraction performance. AIRRI increased character error rates for EasyOCR (6.9% to 55.9%), Tesseract (2.3% to 100.0%), and GOT-OCR2 (30.7% to 48.1%). Word error rates increased for EasyOCR (24.9% to 96.7%) and Tesseract (10.7% to 100.0%). Among the evaluated decision-based attacks, ADBA consistently produced the largest degradation in image-to-text performance, while RayS and SurFree produced more moderate reductions. EasyOCR and Tesseract were generally more susceptible to both image-based and adversarial perturbations than the transformer-based GOT-OCR2 model. Our findings suggest that AIRRI can significantly reduce the reliability of image-to-text-to-LLM workflows, increasing the effort required for AI-assisted assignment completion.",
-      "authors": [
-        "Emory Salaun",
-        "Syed Ayon",
-        "Kaleel Mahmood",
-        "Shaun Wallace"
-      ],
-      "published": "2026-10-13T17:04:33Z",
-      "updated": "2026-10-13T17:04:33Z",
-      "categories": [
-        "cs.CV",
-        "cs.HC",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CV",
-      "abs_url": "https://arxiv.org/abs/2610.18724v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.18724v1",
-      "comment": "12 pages, 2 figures, 6 tables",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6017,
-          "matched": [
-            "machine"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2732,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5673,
-        "relevance": 0.536,
-        "quality": 0.45,
-        "novelty": 0.855,
-        "freshness": 0.8688,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address this problem, we present AIRRI (Artificial Intelligence Resilient Reading Interface), a framework for generating machine-resistant educational content, a dataset of higher-education assignments for evaluation, and an initial evaluation of the human readability of AIRRI machine-resistant text designs.",
-        "problem": "The rapid advancement of image-to-text extraction systems and large language models (LLMs) poses new challenges for educational assessment by making assignment materials easy to transcribe and solve with minimal human effort.",
-        "method": "To address this problem, we present AIRRI (Artificial Intelligence Resilient Reading Interface), a framework for generating machine-resistant educational content, a dataset of higher-education assignments for evaluation, and an initial evaluation of the human readability of AIRRI machine-resistant text designs.",
-        "evidence": "AIRRI employs two categories of machine-resistance techniques.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "machine"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-14T15:07:09.738974+00:00"
     }
   ]
 }
