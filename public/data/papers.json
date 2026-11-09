@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-08T17:01:48.275217+00:00",
+  "generated_at": "2026-11-09T21:25:48.426389+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 445,
-  "source_total": 445,
+  "source_count": 338,
+  "source_total": 338,
   "source_lookback_days": 4,
   "source_truncated": false,
-  "unseen_source_count": 440,
-  "previously_recommended_count": 446,
-  "eligible_count": 9,
+  "unseen_source_count": 338,
+  "previously_recommended_count": 452,
+  "eligible_count": 16,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-08T17:01:48.275217+00:00",
+    "generated_at": "2026-11-09T21:25:48.426389+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,25 +130,29 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2611.07530",
-      "title": "JailBound: FOL-Guided Jailbreak Evaluation for Exploring LLM Behavioral Boundaries",
-      "abstract": "As large language models (LLMs) are increasingly deployed as general-purpose conversational assistants, they must handle diverse user requests while reliably refusing harmful ones. Jailbreak attacks craft adversarial instructions or conversational contexts to elicit unsafe responses despite these safeguards. However, existing jailbreak benchmarks often rely on manually designed or collected prompts, making it difficult to systematically extend coverage to new threat conditions. Moreover, existing attack search methods typically optimize for attack success rate (ASR), providing limited insight into how model behavior changes locally between safe refusal and unsafe response. To address these limitations, we present JailBound, a unified jailbreak evaluation framework that combines automated benchmark construction with first-order loss (FOL)-guided dual-branch search. JailBound organizes threats by risk category, application domain, and attack type. Conditioned on this taxonomy, a fine-tuned meta-attack generator synthesizes evaluation prompts across diverse threat conditions. FOL serves as a local sensitivity signal for exploring high-value attack states and behavior-sensitive states. We evaluate JailBound across 46 LLMs from 13 model families under a unified experimental protocol. Under matched settings, the High-Value Branch improves average ASR over a ZOL-only baseline by 5.1 and 4.9 percentage points across the two evaluation settings. Under local perturbations, states from the Safety-Sensitivity Branch exhibit higher behavioral flip rates than those from the High-Value Branch across all tested radii for JailBound and S-Eval, indicating greater local sensitivity of judge-assigned safety labels. Warning: this paper includes examples that may be offensive or harmful.",
+      "id": "2611.09446",
+      "title": "Logit Laundering: Evading Data-Use Auditing in Large Language Models",
+      "abstract": "Data-use auditing in Large Language Models (LLMs) aims to determine whether the given data has been used for training, thereby supporting data ownership safeguards. A dominant solution is data watermarking, which embeds traceable signals into training data and detects them in model outputs. Recent studies have proposed many watermarking-based auditing methods in LLMs. However, systematic investigation from an adversarial perspective remains limited: non-compliant LLM providers would use unauthorized copyrighted datasets for training their own models to enhance model capabilities, while attempting to evade detection by auditors, thereby avoiding legal liability. To fill this research gap, we propose a novel evasion framework, termed Logit Laundering, where the non-compliant LLM provider manipulates model outputs at inference time to undermine detectable watermark signals. Specifically, we design a logit reshaping module to suppress watermark-induced statistical signals by integrating a statistical bias estimator as a plug-and-play component. This design keeps the model parameters unchanged and performs manipulation only in the logit space, thereby enabling auditing evasion while minimizing the impact on model's learned knowledge. To further balance evasion effectiveness and model utility, we introduce a confidence-aware scaling module to adaptively calibrate the suppression strength based on next-token prediction confidence. Extensive evaluations show that Logit Laundering can successfully evade existing various state-of-the-art auditing methods, significantly attenuating detectable signals, while preserving model utility on downstream tasks. Our work highlights the need for exploring more robust auditing methods to guard against evasion behaviors.",
       "authors": [
-        "Fazong Wu",
-        "Xin Wang",
-        "Ming Yang",
-        "Zhenyong Zhang",
-        "Xiaoming Wu"
+        "Ruihan Hu",
+        "Wei Luo",
+        "Yu-Ming Shang",
+        "Jiakai Wang",
+        "Chuxuan Zhang",
+        "Mei Li",
+        "Xi Zhang",
+        "Meikang Qiu"
       ],
-      "published": "2026-11-05T06:41:14Z",
-      "updated": "2026-11-05T06:41:14Z",
+      "published": "2026-11-06T13:20:30Z",
+      "updated": "2026-11-06T13:20:30Z",
       "categories": [
-        "cs.CR"
+        "cs.CR",
+        "cs.AI"
       ],
       "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2611.07530v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.07530v1",
-      "comment": "Accepted by 40th Conference on Neural Information Processing Systems (NeurIPS 2026)",
+      "abs_url": "https://arxiv.org/abs/2611.09446v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.09446v1",
+      "comment": "Accepted to ACM CCS 2026",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -164,38 +168,65 @@
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
           "score": 0.6017,
           "matched": [
-            "evaluation"
+            "auditing"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.277,
+          "matched": [
+            "prediction",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2141,
+          "matched": [
+            "inference",
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1987,
+          "matched": [
+            "time",
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.5549,
-        "relevance": 0.4814,
-        "quality": 0.67,
-        "novelty": 0.8248,
-        "freshness": 0.5099,
+        "total": 0.5642,
+        "relevance": 0.5796,
+        "quality": 0.37,
+        "novelty": 0.8727,
+        "freshness": 0.5233,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments",
-        "formal bound",
-        "quantitative results"
+        "dataset evidence"
       ],
       "summary": {
-        "takeaway": "To address these limitations, we present JailBound, a unified jailbreak evaluation framework that combines automated benchmark construction with first-order loss (FOL)-guided dual-branch search.",
-        "problem": "As large language models (LLMs) are increasingly deployed as general-purpose conversational assistants, they must handle diverse user requests while reliably refusing harmful ones.",
-        "method": "To address these limitations, we present JailBound, a unified jailbreak evaluation framework that combines automated benchmark construction with first-order loss (FOL)-guided dual-branch search.",
-        "evidence": "We evaluate JailBound across 46 LLMs from 13 model families under a unified experimental protocol.",
+        "takeaway": "To fill this research gap, we propose a novel evasion framework, termed Logit Laundering, where the non-compliant LLM provider manipulates model outputs at inference time to undermine detectable watermark signals.",
+        "problem": "Data-use auditing in Large Language Models (LLMs) aims to determine whether the given data has been used for training, thereby supporting data ownership safeguards.",
+        "method": "To fill this research gap, we propose a novel evasion framework, termed Logit Laundering, where the non-compliant LLM provider manipulates model outputs at inference time to undermine detectable watermark signals.",
+        "evidence": "Recent studies have proposed many watermarking-based auditing methods in LLMs.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -204,29 +235,34 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "evaluation"
+          "auditing"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2611.08232",
-      "title": "Signals, Evidence, and Context: User Scrutiny in Real-World LLM Conversations",
-      "abstract": "Large language models (LLMs) often present synthesized answers without making their supporting evidence easy to inspect. We study how features of these answers relate to users' subsequent accepting, checking, and challenging in 489,283 assistant-user response pairs from ShareChat and WildChat. Broad attribution language appears in 31.9% of qualifying responses, compared with explicit URLs in 1.33%, revealing a gap between claims of grounding and preserved inspectable support. Attribution, uncertainty, and other response cues generally accompany both checking and challenging; only uncertainty shows a small statistically distinguishable pooled association favoring checking. Within Technical Help, uncertainty favors checking relative to challenging; refusals and reasoning traces favor challenging in Seeking Information. Scrutiny is concentrated in some conversations, while its apparent turn-to-turn persistence becomes much smaller when conversation-level differences and response ordering are examined separately. These results suggest that supporting verification requires attention to what evidence can be inspected, which question a user is trying to resolve, and the history of the interaction.",
+      "id": "2611.09061",
+      "title": "Does Reasoning Improve Psychological Depth in Large Language Models?",
+      "abstract": "Benchmark gains from reasoning-enhanced large language models encourage the assumption that these models should broadly perform better on complex generative tasks, but this remains underexplored in open-ended, creative domains shaped by nuances of reader experience. We tested this assumption through the lens of psychological depth in short stories. We compared DeepSeek-R1 vs. DeepSeek-V3, our closest available contrast for reasoning-oriented post-training, and GPT-5 vs. GPT-4o, through 60 blinded pairwise evaluations in which seven human annotators and an ensemble LLM-as-a-Judge rated prompt-matched story outputs. Human evaluations showed no universal reasoning advantage: GPT-5 was slightly preferred over GPT-4o (60.0-62.9% across two reasoning-effort settings), whereas DeepSeek-R1 fell behind DeepSeek-V3 (42.9%). Although this pattern was marked by low inter-annotator agreement (Krippendorff's $α= 0.070$), our annotation-quality checks suggested genuine evaluative subjectivity, plausibly reflecting distinct annotator decision schemes rather than annotation failure. In contrast, the LLM-as-a-Judge showed a strong pro-reasoning bias (98.3% of pairs vs. 55.2% of human votes), consistent across its five configurations and partly tracking sentence length. These findings suggest that, at the frontier, reasoning-related quality differences are small enough to be dominated by reader subjectivity, and that LLM-as-a-Judge evaluators can obscure this subjectivity in nuanced creative-generation tasks.",
       "authors": [
-        "Ahana Biswas",
-        "Yu-Ru Lin"
+        "Ruichen Zheng",
+        "Yihe Wang",
+        "Fabrice Harel-Canada",
+        "Sara Khosravi",
+        "Zeynep Senahan Yildiz",
+        "Amit Sahai",
+        "Nanyun Peng"
       ],
-      "published": "2026-11-05T16:16:08Z",
-      "updated": "2026-11-05T16:16:08Z",
+      "published": "2026-11-06T06:39:24Z",
+      "updated": "2026-11-06T06:39:24Z",
       "categories": [
-        "cs.AI"
+        "cs.CL"
       ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2611.08232v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.08232v1",
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.09061v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.09061v1",
       "comment": "",
       "journal_ref": "",
       "source": "arxiv",
@@ -243,34 +279,44 @@
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
           "score": 0.6161,
           "matched": [
-            "uncertainty"
+            "llm-as-a-judge"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2732,
+          "matched": [
+            "evaluations"
           ]
         }
       ],
       "scores": {
-        "total": 0.5165,
-        "relevance": 0.4929,
-        "quality": 0.41,
-        "novelty": 0.8575,
-        "freshness": 0.5669,
+        "total": 0.5635,
+        "relevance": 0.5475,
+        "quality": 0.48,
+        "novelty": 0.8743,
+        "freshness": 0.4835,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Large language models (LLMs) often present synthesized answers without making their supporting evidence easy to inspect.",
-        "problem": "Large language models (LLMs) often present synthesized answers without making their supporting evidence easy to inspect.",
-        "method": "We study how features of these answers relate to users' subsequent accepting, checking, and challenging in 489,283 assistant-user response pairs from ShareChat and WildChat.",
-        "evidence": "Broad attribution language appears in 31.9% of qualifying responses, compared with explicit URLs in 1.33%, revealing a gap between claims of grounding and preserved inspectable support.",
+        "takeaway": "Benchmark gains from reasoning-enhanced large language models encourage the assumption that these models should broadly perform better on complex generative tasks, but this remains underexplored in open-ended, creative domains shaped by nuances of reader experience.",
+        "problem": "Benchmark gains from reasoning-enhanced large language models encourage the assumption that these models should broadly perform better on complex generative tasks, but this remains underexplored in open-ended, creative domains shaped by nuances of reader experience.",
+        "method": "We tested this assumption through the lens of psychological depth in short stories.",
+        "evidence": "We compared DeepSeek-R1 vs.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -279,31 +325,34 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Trustworthy machine learning",
         "matched": [
-          "uncertainty"
+          "llm-as-a-judge"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2611.07847",
-      "title": "Computation, not weight access: large language models as auditors of clinical prediction networks",
-      "abstract": "Frontier large language models (LLMs) have been reported to read, edit and write the weights of small neural networks, raising the prospect of auditing clinical prediction models from their files alone. Public demonstrations, however, mixed reading raw weights with running code. We separated these conditions in internally pre-specified simulation experiments. Tanh networks of 105 to 38,401 weights were trained on simulated cohorts of patients with subarachnoid haemorrhage, each with a planted relationship or none, and one network was trained on labels that under-recorded deaths in a subgroup. GPT-6 Astra and four other GPT models answered single prompts under a default or an explicit system instruction, either with the weights in the prompt and no tools, or with a calculation-only tool that exposed the weights (white box) or only the network's predictions (black box). Without tools, Astra recovered planted relationships in 353-weight networks but became unreliable at 3,457 weights, and under the default instruction it declined 11 of 12 audit and repair tasks as unidentifiable; the explicit instruction removed these refusals. With the tool, it recovered the planted relationship in all 29 runs on networks of up to 38,401 weights, raised no false alarm in 15 runs on null networks, and found the biased subgroup in 6 of 6 runs. Black-box access performed as well as white-box access, and other GPT-6 models read as accurately. A well-designed script matched the comparator models on the audit and the best LLM repair. For auditing these networks, what mattered was computation and elicitation, not access to the weights.",
+      "id": "2611.08864",
+      "title": "Adaptive Scheduling Pipeline for Multi-Instance Asynchronous Reinforcement Learning",
+      "abstract": "We present the Adaptive Scheduling Pipeline (ASP), an offline rollout scheduler for multi-instance asynchronous reinforcement learning (RL) of large language models (LLMs). ASP jointly reduces three sources of rollout underutilization - padding bubbles from intra-minibatch length heterogeneity, skewness bubbles from long-tail outputs, and sorting bubbles from fluctuations in training-queue occupancy induced by length-sorted dispatch - through a single offline preprocessing pass. This enables efficient multi-instance rollout that overcomes the early scaling plateau of single-instance inference while smoothing the arrival of generated samples at the trainer. We integrate the scheduler into an asynchronous architecture that decouples rollout from training while keeping policy lag observable and bounded. Complete ASP improves end-to-end throughput by up to 3.22 times and reduces iteration time by up to 76.8% relative to MindSpeed-RL, while reducing iteration time by up to 62.5% relative to verl. Within ASP, scheduling reduces mean iteration time by 10.9%. ASP also scales more robustly with additional generation resources than these baselines and shows no visible convergence degradation in the measured bounded-lag regime. ASP has since been used in an internal telecom-domain RL post-training workflow, reducing the reported training period from more than three months to about two months and producing a domain-enhanced model for knowledge answering and tool calling.",
       "authors": [
-        "Zhiyu Liu",
-        "Xinyu Yang"
+        "Salah Chikhi",
+        "Luis Zuin",
+        "Entong Li",
+        "Zeng Li"
       ],
-      "published": "2026-11-05T11:28:04Z",
-      "updated": "2026-11-05T11:28:04Z",
+      "published": "2026-11-06T01:47:52Z",
+      "updated": "2026-11-06T01:47:52Z",
       "categories": [
-        "cs.LG",
-        "cs.AI"
+        "cs.DC",
+        "cs.AI",
+        "cs.LG"
       ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.07847v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.07847v1",
-      "comment": "13 pages, 2 figures, 6 tables. Code, simulated networks, prompts and replies: https://github.com/Chth1z/llm-clinical-network-audit",
+      "primary_category": "cs.DC",
+      "abs_url": "https://arxiv.org/abs/2611.08864v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08864v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -315,112 +364,14 @@
         "large language models",
         "language model",
         "language models",
-        "llm"
+        "llms"
       ],
       "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4553,
-          "matched": [
-            "prediction"
-          ]
-        },
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.2732,
-          "matched": [
-            "auditing"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5075,
-        "relevance": 0.4189,
-        "quality": 0.61,
-        "novelty": 0.8631,
-        "freshness": 0.5383,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Frontier large language models (LLMs) have been reported to read, edit and write the weights of small neural networks, raising the prospect of auditing clinical prediction models from their files alone.",
-        "problem": "Frontier large language models (LLMs) have been reported to read, edit and write the weights of small neural networks, raising the prospect of auditing clinical prediction models from their files alone.",
-        "method": "Public demonstrations, however, mixed reading raw weights with running code.",
-        "evidence": "We separated these conditions in internally pre-specified simulation experiments.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.07735",
-      "title": "Evaluating Token Probabilities as Confidence Estimators in Human Behavior Simulations: A Case Study in Luxembourgish Next Like Prediction",
-      "abstract": "As large language models (LLMs) are increasingly used to simulate human behavior, their operational validity is typically assessed through accuracy alone, implicitly treating human behavior as deterministic. We argue that on noisy digital trace data, a model's performance depends not only on predicting the correct outcome but on its calibration. We present a case study testing whether the token probabilities of open-weight LLMs can serve as confidence estimates in a Next Like Prediction task: predicting how a user of the Luxembourgish news platform RTL.lu rates a comment, conditioned on their prior interactions. Evaluating Ministral 3 (3B, 8B), we find that, with in-context learning only, the tested models are overconfident and are outperformed on accuracy and calibration by a simple statistical baseline. Accuracy and calibration do not move together: scaling from 3B to 8B improves accuracy while degrading calibration, and longer behavioral histories raise accuracy while confidence declines. Task-specific supervised fine-tuning acts as an effective calibration intervention, reducing Expected Calibration Error from 0.2 to 0.006 while improving accuracy from 0.536 to 0.758. We conclude that confidence estimation should be evaluated alongside accuracy to improve validity when using LLM-based agents.",
-      "authors": [
-        "Nils Schwager",
-        "Simon Münker",
-        "Alistair Plum",
-        "Achim Rettinger"
-      ],
-      "published": "2026-11-05T09:45:49Z",
-      "updated": "2026-11-05T09:45:49Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2611.07735v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.07735v1",
-      "comment": "12 pages, 1 figure, 2 tables. Accepted to 11th Workshop on Natural User-generated Text (W-NUT) at EMNLP 2026, Budapest, Hungary",
-      "journal_ref": "Proceedings of the 11th Workshop on Natural User-generated Text (W-NUT), 2026",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4558,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1534,
+          "score": 0.4328,
           "matched": [
             "learning"
           ]
@@ -429,123 +380,26 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.1534,
+          "score": 0.4328,
           "matched": [
             "learning"
           ]
         },
         {
-          "id": "time_series_inference",
-          "name": "Time series inference",
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
           "status": "emerging",
-          "score": 0.082,
+          "score": 0.1715,
           "matched": [
-            "data",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.046,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.494,
-        "relevance": 0.426,
-        "quality": 0.54,
-        "novelty": 0.8273,
-        "freshness": 0.5282,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "quantitative results",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "We present a case study testing whether the token probabilities of open-weight LLMs can serve as confidence estimates in a Next Like Prediction task: predicting how a user of the Luxembourgish news platform RTL.lu rates a comment, conditioned on their prior interactions.",
-        "problem": "As large language models (LLMs) are increasingly used to simulate human behavior, their operational validity is typically assessed through accuracy alone, implicitly treating human behavior as deterministic.",
-        "method": "We argue that on noisy digital trace data, a model's performance depends not only on predicting the correct outcome but on its calibration.",
-        "evidence": "Evaluating Ministral 3 (3B, 8B), we find that, with in-context learning only, the tested models are overconfident and are outperformed on accuracy and calibration by a simple statistical baseline.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.07558",
-      "title": "SKIM: Pruning Large Language Model Agents via Selective Knowledge Informed Masking",
-      "abstract": "Large Language Model (LLM) agents are increasingly deployed under structured generation, where grammar constraints enforce output format at inference time. Whereas existing compression methods target unconstrained generation, we first identify a fundamental mismatch: under structured generation, grammar constraints reduce the model's output distribution to valid tokens, and the logits matter most at the small set of positions that decide the agent's action. Motivated by this finding, we propose SKIM (Selective Knowledge-Informed Masking), the first pruning and distillation framework for LLM agents under structured generation, with both stages guided by token role. SKIM partitions token positions into context, decision, and format categories, and this partition drives two complementary axes: (1) category-aware pruning saliency scores that preserve parameters most relevant for decision positions; and (2) an on-policy distillation objective that aligns student and teacher on valid tokens, paired with category-aware feature matching. We evaluate SKIM on tool-calling benchmarks and within multi-step agent loops, across multiple model scales and sparsity levels. SKIM consistently improves accuracy over baselines, with its superiority becoming most striking in high-sparsity regimes where conventional methods struggle, demonstrating the potential of category-aware compression for deployment-time grammar-constrained agents.",
-      "authors": [
-        "Moonseok Choi",
-        "Jongwon Jeong",
-        "Minki Kang",
-        "Giung Nam",
-        "Juho Lee"
-      ],
-      "published": "2026-11-05T07:04:45Z",
-      "updated": "2026-11-05T07:04:45Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2611.07558v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.07558v1",
-      "comment": "NeurIPS 2026. Project page: https://moon4sake.github.io/skim",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4293,
-          "matched": [
-            "selective"
+            "adaptive",
+            "lag"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.1108,
+          "score": 0.1365,
           "matched": [
             "inference",
             "time"
@@ -555,33 +409,321 @@
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0792,
+          "score": 0.1096,
           "matched": [
             "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.4669,
-        "relevance": 0.3814,
-        "quality": 0.55,
-        "novelty": 0.8339,
-        "freshness": 0.5122,
+        "total": 0.5214,
+        "relevance": 0.4671,
+        "quality": 0.54,
+        "novelty": 0.8702,
+        "freshness": 0.4546,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "baseline comparison",
+        "formal bound",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present the Adaptive Scheduling Pipeline (ASP), an offline rollout scheduler for multi-instance asynchronous reinforcement learning (RL) of large language models (LLMs).",
+        "problem": "We present the Adaptive Scheduling Pipeline (ASP), an offline rollout scheduler for multi-instance asynchronous reinforcement learning (RL) of large language models (LLMs).",
+        "method": "ASP jointly reduces three sources of rollout underutilization - padding bubbles from intra-minibatch length heterogeneity, skewness bubbles from long-tail outputs, and sorting bubbles from fluctuations in training-queue occupancy induced by length-sorted dispatch - through a single offline preprocessing pass.",
+        "evidence": "Complete ASP improves end-to-end throughput by up to 3.22 times and reduces iteration time by up to 76.8% relative to MindSpeed-RL, while reducing iteration time by up to 62.5% relative to verl.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.08855",
+      "title": "Learning Whom to Trust About the Unseen: Source Credibility and Reliability Transfer in Language Models",
+      "abstract": "A source who has been right before deserves attention, but about what? We ask how far a demonstrated record of reliability travels in language models when the new claim cannot be checked, and whether the answer depends on the kind of claim. Three behavioral studies across six models approach the question from three angles. Study 1 adapts the Einstein-effect paradigm and finds that models, unlike the human sample, favor a spiritual leader over a scientist for the same obscure statement, and that the preference largely reverses when the statement is reworded in the vocabulary of physics. Study 2 adapts a paradigm in which a trusted expert calls a scientific or religious explanation unknown or a mystery; models reproduce the human domain asymmetry in exaggerated form. Study 3, the central test, gives two fictional informants different records on checkable river forecasts and then has them endorse matched claims about hidden natural and spiritual causes of the same village events. Most models carry the record to natural causes and barely at all to spiritual ones; one model transfers it weakly to either. Telling the model that the reliable informant forecasts by spiritual guidance rather than by measurement lowers that informant's influence on natural claims in every model and produces no comparable gain on spiritual claims in any. Demonstrated reliability thus has a scope in these models, and the account a source gives of how they came to be reliable can narrow it. Whether this reflects a judgment about relevance or the low prior credence of spiritual claims is the question the design leaves open, and we outline the experiment that would settle it.",
+      "authors": [
+        "Ruijia Guan"
+      ],
+      "published": "2026-11-06T01:22:18Z",
+      "updated": "2026-11-06T01:22:18Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2611.08855v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08855v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4655,
+          "matched": [
+            "learning",
+            "reliable"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3135,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5023,
+        "relevance": 0.4351,
+        "quality": 0.55,
+        "novelty": 0.8684,
+        "freshness": 0.452,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "reproducibility",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "A source who has been right before deserves attention, but about what?",
+        "problem": "A source who has been right before deserves attention, but about what?",
+        "method": "We ask how far a demonstrated record of reliability travels in language models when the new claim cannot be checked, and whether the answer depends on the kind of claim.",
+        "evidence": "We ask how far a demonstrated record of reliability travels in language models when the new claim cannot be checked, and whether the answer depends on the kind of claim.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "reliable"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.09607",
+      "title": "ReplayAudit: Auditing Outsourced LLM Fine-Tuning via Sealed Records and Selective Replay",
+      "abstract": "Auditing outsourced LLM fine-tuning requires checking an untrusted provider's training while controlling verification cost. Uniform sampling ignores training-time signals, while checking a suspicious record can require replaying several preceding steps. We present ReplayAudit, a telemetry-guided auditing system that seals training records before challenges and independently replays sampled intervals from sealed checkpoints. Loss changes and parameter-update norms guide stratified random sampling; replay determines whether the selected computation agrees with its records. We relate sampling probabilities to replay work and evaluate the system on real LoRA training. A 7B BF16 prototype rejects a false update-norm report during a random audit; targeted checks also reject false loss reports and skipped updates. We calibrate sampling budgets offline to at least a 90% probability of directly selecting an injected step. For two learning-rate deviation settings, executing these budgets on the same honest 1.5B trajectory reduces median complete-audit wall time by 49% and 67% relative to uniform sampling. When skipped updates evade the high-anomaly stratum, the corresponding audit instead costs 38% more. These results show how deviation capture and actual replay work jointly determine the cost of telemetry-guided auditing.",
+      "authors": [
+        "Yihan Xia",
+        "Wenxin Xu",
+        "Taotao Wang"
+      ],
+      "published": "2026-11-06T15:32:00Z",
+      "updated": "2026-11-06T15:32:00Z",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2611.09607v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.09607v1",
+      "comment": "23 pages, 5 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4689,
+          "matched": [
+            "learning",
+            "auditing"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2535,
+          "matched": [
+            "selective"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1047,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0591,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0591,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4842,
+        "relevance": 0.4468,
+        "quality": 0.41,
+        "novelty": 0.8498,
+        "freshness": 0.5363,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present ReplayAudit, a telemetry-guided auditing system that seals training records before challenges and independently replays sampled intervals from sealed checkpoints.",
+        "problem": "Auditing outsourced LLM fine-tuning requires checking an untrusted provider's training while controlling verification cost.",
+        "method": "Uniform sampling ignores training-time signals, while checking a suspicious record can require replaying several preceding steps.",
+        "evidence": "We present ReplayAudit, a telemetry-guided auditing system that seals training records before challenges and independently replays sampled intervals from sealed checkpoints.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "auditing"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.08845",
+      "title": "Jev as an LLM Safety Guardrail: An Empirical Study of Input Filtering, Selective Output Review, and Over-Refusal",
+      "abstract": "External safety filters can prevent unsafe requests from reaching a large language model (LLM), but may also reject legitimate queries. We present an end-to-end empirical evaluation of Jev, a probabilistic decision model, as a safety guardrail for a Qwen2.5-1.5B-based pipeline. Three configurations are compared on 970 benchmark prompts: an unfiltered LLM, Jev input filtering, and tiered Jev input filtering with selective output review. Across 720 prompts labeled harmful (520 AdvBench and 200 XSTest-unsafe), the fraction recorded as answered decreases from 527/720 (73.2%) without filtering to 17/720 (2.4%) with input filtering. On 250 XSTest-safe prompts, however, non-answer/refusal increases from 3/250 (1.2%) to 27/250 (10.8%). Tiered filtering yields 40/720 (5.6%) harmful-prompt answers and 10/250 (4.0%) benign-prompt refusals, with 79/970 (8.1%) of prompts requiring output review. Joint optimization of the tiered thresholds improves macro-F1 from 0.9351 to 0.9512, while reducing harmful-prompt answers and output-review frequency at the same benign-refusal rate. Matched-budget comparisons reveal modest additional gains over a retuned single gate on the evaluation data, although these gains are not consistently observed on a held-out split.",
+      "authors": [
+        "Olivia Cognetti",
+        "Bhaskar Krishnamachari"
+      ],
+      "published": "2026-11-06T01:03:36Z",
+      "updated": "2026-11-06T01:03:36Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2611.08845v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.08845v1",
+      "comment": "9 pages, 5 figures, 6 tables. Code and data: https://github.com/ANRGUSC/llm-safe-jev",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5235,
+          "matched": [
+            "evaluation",
+            "selective"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4829,
+        "relevance": 0.4342,
+        "quality": 0.48,
+        "novelty": 0.8211,
+        "freshness": 0.4502,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
         "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "Motivated by this finding, we propose SKIM (Selective Knowledge-Informed Masking), the first pruning and distillation framework for LLM agents under structured generation, with both stages guided by token role.",
-        "problem": "Large Language Model (LLM) agents are increasingly deployed under structured generation, where grammar constraints enforce output format at inference time.",
-        "method": "Motivated by this finding, we propose SKIM (Selective Knowledge-Informed Masking), the first pruning and distillation framework for LLM agents under structured generation, with both stages guided by token role.",
-        "evidence": "SKIM consistently improves accuracy over baselines, with its superiority becoming most striking in high-sparsity regimes where conventional methods struggle, demonstrating the potential of category-aware compression for deployment-time grammar-constrained agents.",
+        "takeaway": "We present an end-to-end empirical evaluation of Jev, a probabilistic decision model, as a safety guardrail for a Qwen2.5-1.5B-based pipeline.",
+        "problem": "External safety filters can prevent unsafe requests from reaching a large language model (LLM), but may also reject legitimate queries.",
+        "method": "We present an end-to-end empirical evaluation of Jev, a probabilistic decision model, as a safety guardrail for a Qwen2.5-1.5B-based pipeline.",
+        "evidence": "Joint optimization of the tiered thresholds improves macro-F1 from 0.9351 to 0.9512, while reducing harmful-prompt answers and output-review frequency at the same benign-refusal rate.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -592,95 +734,8 @@
       "recommendation_reason": {
         "topic": "Conformal prediction",
         "matched": [
+          "evaluation",
           "selective"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.07825",
-      "title": "Generate-then-Rank: Learning Symbolic Goal Interpretation for Embodied Agents",
-      "abstract": "Goal interpretation is to translate a natural language instruction into a formal symbolic goal that a planner can execute. It is critical for embodied agents because any error here propagates to every downstream planning and action step. Doing it well requires both generating suitable candidates and reliably selecting among them. We present a two-stage generate-then-rank approach to Goal Interpretation in the Embodied Agent Interface (EAI). First, supervised fine-tuning adapts a Large Language Model (LLM) to EAI's output convention. Second, Candidate-Output Ranking from Errors (CORE) learns preferences over complete outputs from the model's own generated alternatives. We conducted experiments on the household scenes of the Embodied Agent Interface Benchmark. Multiple open source LLMs including DeepSeek-V3 chat, DeepSeek-Reasoner, and Qwen2.5-7B and Qwen2.5-72B were evaluated. The proposed method outperformed the baseline models including LLMs with simple prompting, chain-of-thought, and knowledge graph based approaches.",
-      "authors": [
-        "Jisen Lei",
-        "Huizhi Liang"
-      ],
-      "published": "2026-11-05T11:05:53Z",
-      "updated": "2026-11-05T11:05:53Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL",
-        "cs.RO"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2611.07825v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.07825v1",
-      "comment": "14 pages, 2 figures. Accepted at the 10th Euro-China Conference on Intelligent Data Analysis and Applications (ECC 2026)",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3153,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.3152,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4408,
-        "relevance": 0.3153,
-        "quality": 0.61,
-        "novelty": 0.8706,
-        "freshness": 0.5361,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We present a two-stage generate-then-rank approach to Goal Interpretation in the Embodied Agent Interface (EAI).",
-        "problem": "Goal interpretation is to translate a natural language instruction into a formal symbolic goal that a planner can execute.",
-        "method": "It is critical for embodied agents because any error here propagates to every downstream planning and action step.",
-        "evidence": "We conducted experiments on the household scenes of the Embodied Agent Interface Benchmark.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
         ],
         "lane": "llm"
       }
