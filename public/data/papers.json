@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-10T18:39:47.608554+00:00",
+  "generated_at": "2026-11-11T18:41:02.009489+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 11,
-  "source_total": 11,
+  "source_count": 15,
+  "source_total": 15,
   "source_lookback_days": 1,
   "source_truncated": false,
-  "unseen_source_count": 11,
-  "previously_recommended_count": 458,
-  "eligible_count": 0,
+  "unseen_source_count": 15,
+  "previously_recommended_count": 461,
+  "eligible_count": 3,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-10T18:39:47.608554+00:00",
+    "generated_at": "2026-11-11T18:41:02.009489+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -124,156 +124,50 @@
   "semantic_feedback_count": 0,
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
-  "conference_supplement_count": 3,
-  "conference_eligible_count": 132,
-  "conference_pool_updated_at": "2026-11-04T18:38:58.738323+00:00",
-  "conference_source_status": {
-    "ICLR:2026": "ok:223",
-    "ICML:2026": "ok:742",
-    "NeurIPS:2026": "ok:0",
-    "ACL:2026": "ok:478",
-    "EMNLP:2026": "awaiting_verified_schedule",
-    "ICLR:2025": "ok:213",
-    "ICML:2025": "ok:344",
-    "NeurIPS:2025": "ok:808",
-    "EMNLP:2025": "awaiting_verified_schedule",
-    "ACL:2025": "awaiting_verified_schedule"
-  },
+  "conference_supplement_count": 0,
+  "conference_eligible_count": 0,
+  "conference_pool_updated_at": null,
+  "conference_source_status": {},
   "papers": [
     {
-      "id": "conf:acl:2026:102-main",
-      "title": "Reinforcement Learning for Self-Improving Agent with Skill Library",
-      "abstract": "Large Language Model (LLM)-based agents have demonstrated remarkable capabilities in complex reasoning and multi-turn interactions but struggle to continuously improve and adapt when deployed in new environments. One promising approach is implementing skill libraries that allow agents to learn, validate, and apply new skills. However, current skill library approaches rely primarily on LLM prompting, making consistent skill library implementation challenging. To overcome these challenges, we propose a Reinforcement Learning (RL)-based approach to enhance agents' self-improvement capabilities with a skill library. Specifically, we introduce Skill Augmented GRPO for self-Evolution (SAGE), a novel RL framework that systematically incorporates skills into learning. The framework's key component, Sequential Rollout, iteratively deploys agents across a chain of similar tasks for each rollout. As agents navigate through the task chain, skills generated from previous tasks accumulate in the library and become available for subsequent tasks. Additionally, the framework enhances skill generation and utilization through a Skill-integrated Reward that complements the original outcome-based rewards. Experimental results on AppWorld demonstrate that SAGE, when applied to supervised-finetuned model with expert experience, achieves 8.9\\% higher Scenario Goal Completion while requiring 26\\% fewer interaction steps and generating 59\\% fewer tokens, substantially outperforming existing approaches in both accuracy and efficiency. Our code is available at https://github.com/amazon-science/SAGE.",
+      "id": "2611.14515",
+      "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
+      "abstract": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused. Training-time scaffolds, such as strategies or hints added to the prompt during training, offer a natural way to turn this information into guidance, but their design and adaptation are largely left to humans and tailored to specific domains. We introduce AutoScaffold, a unified AI-for-AI framework that turns a student's training experience into adaptive scaffolds, with minimal domain-specific information and no human intervention during training. A frozen teacher periodically examines this experience, diagnoses bottlenecks, and designs scaffolds in two forms: (i) strategies shared across a class of tasks and (ii) hints for individual hard tasks, adjusting the content and amount of support as the student learns. The scaffolds are removed at evaluation. We apply the same framework to ALFWorld, search-based QA, mathematical reasoning, and GPU kernel generation. When evaluated without scaffolds, students trained with AutoScaffold outperform those trained with the corresponding RL baselines in all four domains, with gains of 7.2 points in ALFWorld success and 4.0 points in average QA exact match. On GPU kernel generation, AutoScaffold increases the fraction of tasks with a correct kernel that runs faster than the PyTorch reference by up to 5.0 points. On math, our student surpasses QuestA's reported accuracy using approximately one-third as many student training steps. Analyses show that the teacher identifies a different failure in each task class and shifts its scaffolds from step-by-step workflows to targeted fixes as the student improves, and that its revised scaffolds help the student learn more than keeping the previous scaffold or using no scaffold.",
       "authors": [
-        "Jiongxiao Wang",
-        "Qiaojing Yan",
-        "Yawei Wang",
-        "Yijun Tian",
-        "Soumya Smruti Mishra",
-        "Zhichao Xu",
-        "Megha Gandhi",
-        "Panpan Xu",
-        "Lin Lee Cheong"
+        "Zijian Zhang",
+        "Rizhen Hu",
+        "Jiangweizhi Peng",
+        "Shiyang Li",
+        "Sujay Bhatt",
+        "Sihan Zeng",
+        "Mingyi Hong"
       ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
+      "published": "2026-11-10T18:58:46Z",
+      "updated": "2026-11-10T18:58:46Z",
       "categories": [
-        "ACL 2026",
-        "Oral"
+        "cs.LG",
+        "cs.CL"
       ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2611.14515v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.14515v1",
       "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "large language model",
         "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4231,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.423,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6104,
-        "relevance": 0.4231,
-        "quality": 1.0,
-        "novelty": 0.8544,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "experiments",
-        "quantitative results",
-        "publication metadata"
-      ],
-      "summary": {
-        "takeaway": "To overcome these challenges, we propose a Reinforcement Learning (RL)-based approach to enhance agents' self-improvement capabilities with a skill library.",
-        "problem": "Large Language Model (LLM)-based agents have demonstrated remarkable capabilities in complex reasoning and multi-turn interactions but struggle to continuously improve and adapt when deployed in new environments.",
-        "method": "To overcome these challenges, we propose a Reinforcement Learning (RL)-based approach to enhance agents' self-improvement capabilities with a skill library.",
-        "evidence": "To overcome these challenges, we propose a Reinforcement Learning (RL)-based approach to enhance agents' self-improvement capabilities with a skill library.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "conf:iclr:2026:10010192",
-      "title": "LongWriter-Zero: Mastering Ultra-Long Text Generation via Reinforcement Learning",
-      "abstract": "Ultra-long generation by large language models (LLMs) is a widely demanded scenario, yet it remains a significant challenge due to their maximum generation length limit and overall quality degradation as sequence length increases. Previous approaches, exemplified by LongWriter, typically rely on ''teaching'', which involves supervised fine-tuning (SFT) on synthetic long-form outputs. However, this strategy heavily depends on synthetic SFT data, which is difficult and costly to construct, often lacks coherence and consistency, and tends to be overly artificial and structurally monotonous. In this work, we propose an incentivization-based approach that, starting entirely from scratch and without relying on any annotated or synthetic data, leverages reinforcement learning (RL) to foster the emergence of ultra-long, high-quality text generation capabilities in LLMs. We perform RL training starting from a base model, similar to R1-Zero, guiding it to engage in reasoning that facilitates planning and refinement during the writing process. To support this, we employ specialized reward models that steer the LLM towards improved length control, writing quality, and structural formatting. Experimental evaluations show that our LongWriter-Zero model, trained from Qwen2.5-32B, consistently outperforms traditional SFT methods on long-form writing tasks, achieving state-of-the-art results across all metrics on WritingBench and Arena-Write, and even surpassing 100B+ models such as DeepSeek R1 and Qwen3-235B.",
-      "authors": [
-        "Yuhao Wu",
-        "Yushi Bai",
-        "Zhiqiang Hu",
-        "Roy Ka-Wei Lee",
-        "Juanzi Li"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10010192",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10010192",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
+        "language models"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.4552,
+          "score": 0.3956,
           "matched": [
             "learning"
           ]
@@ -282,7 +176,7 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4552,
+          "score": 0.3956,
           "matched": [
             "learning"
           ]
@@ -291,50 +185,57 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.1475,
+          "score": 0.1283,
           "matched": [
-            "evaluations"
+            "evaluation"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.082,
+          "score": 0.0385,
           "matched": [
-            "data"
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "adaptive"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.082,
+          "score": 0.0385,
           "matched": [
-            "data"
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.5919,
-        "relevance": 0.4847,
-        "quality": 0.71,
-        "novelty": 0.8487,
-        "freshness": 1.0,
+        "total": 0.4948,
+        "relevance": 0.4213,
+        "quality": 0.48,
+        "novelty": 0.8206,
+        "freshness": 0.8589,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
+        "baseline comparison",
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "In this work, we propose an incentivization-based approach that, starting entirely from scratch and without relying on any annotated or synthetic data, leverages reinforcement learning (RL) to foster the emergence of ultra-long, high-quality text generation capabilities in LLMs.",
-        "problem": "Ultra-long generation by large language models (LLMs) is a widely demanded scenario, yet it remains a significant challenge due to their maximum generation length limit and overall quality degradation as sequence length increases.",
-        "method": "In this work, we propose an incentivization-based approach that, starting entirely from scratch and without relying on any annotated or synthetic data, leverages reinforcement learning (RL) to foster the emergence of ultra-long, high-quality text generation capabilities in LLMs.",
-        "evidence": "To support this, we employ specialized reward models that steer the LLM towards improved length control, writing quality, and structural formatting.",
+        "takeaway": "We introduce AutoScaffold, a unified AI-for-AI framework that turns a student's training experience into adaptive scaffolds, with minimal domain-specific information and no human intervention during training.",
+        "problem": "Reinforcement learning with verifiable rewards (RLVR) produces rich training experience, yet outcome rewards reduce each attempt to a single number and leave most of this information unused.",
+        "method": "We introduce AutoScaffold, a unified AI-for-AI framework that turns a student's training experience into adaptive scaffolds, with minimal domain-specific information and no human intervention during training.",
+        "evidence": "When evaluated without scaffolds, students trained with AutoScaffold outperform those trained with the corresponding RL baselines in all four domains, with gains of 7.2 points in ALFWorld success and 4.0 points in average QA exact match.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -353,94 +254,100 @@
       }
     },
     {
-      "id": "conf:iclr:2026:10009461",
-      "title": "Steering the Herd: A Framework for LLM-based Control of Social Learning",
-      "abstract": "Algorithms increasingly serve as information mediators -- from social media feeds and targeted advertising to the increasing ubiquity of LLMs. This engenders a joint process where agents combine private, algorithmically-mediated signals with observational learning from peers to arrive at decisions. To study such settings, we introduce a model of controlled sequential social learning in which an information-mediating planner (e.g., an LLM) controls the information precision of agents while they also learn from the decisions of earlier agents. The planner may seek to improve social welfare (an altruistic planner) or to induce a specific action the planner prefers (a biased planner). Our framework presents a new optimization problem for social learning that combines dynamic programming with decentralized action choices and Bayesian belief updates. In this setting, we prove the convexity of the value function and characterize the optimal policies of altruistic and biased planners, which attain desired tradeoffs between the costs they incur and the payoffs they earn from induced agent choices. The characterization reveals that the optimal planner operates in different modes depending on the range of belief values. The modes include investing the maximum allowed resource, not investing any resource, or the investment increasing or decreasing with increase in the belief. Notably, for some ranges of belief the biased planner even intentionally obfuscates the agents' signals. Even under stringent transparency constraints—information parity with individuals, no lying or cherry‑picking, and full observability—we show that information mediation can substantially shift social welfare in either direction. We complement our theory with simulations in which LLMs act as both planner and agents. Notably, the LLM-based planner in our simulations exhibits emergent strategic behavior in steering public opinion that broadly mirrors the trends predicted, though key deviations suggest the influence of non-Bayesian reasoning—consistent with the cognitive patterns of both human users and LLMs trained on human-like data. Together, we establish our framework as a tractable basis for studying the impact and regulation of LLM information mediators that corresponds to real behavior.",
+      "id": "2611.14480",
+      "title": "Pterodactyl: Pushing the Limits of Efficient Automated Translation Evaluation",
+      "abstract": "In this paper, we present 1020 Group's submission to the WMT26 shared task on automated quality evaluation. Our system, Pterodactyl, was engineered specifically for subtasks 2 and 3, that is, segment-level quality score prediction and the detection of error-free segments. Pterodactyl is a highly customizable, ultra-low cost system optimized for binary classification in translation triage and data curation. It is based on an LLM-as-a-judge approach, with prompt engineering and model selection guided by ROC analysis. We also developed several variants of Pterodactyl that were specifically adapted for subtasks 3.",
       "authors": [
-        "Raghu Arghal",
-        "Kevin He",
-        "Shirin Saeedi Bidokhti",
-        "Saswati Sarkar"
+        "Evelyn Y. Garland",
+        "Carola F. Berger"
       ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
+      "published": "2026-11-10T18:41:37Z",
+      "updated": "2026-11-10T18:41:37Z",
       "categories": [
-        "ICLR 2026",
-        "Oral"
+        "cs.CL"
       ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10009461",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009461",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.14480v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.14480v1",
+      "comment": "6 pages, 4 figures",
+      "journal_ref": "Proceedings of the Eleventh Conference on Machine Translation (WMT 2026), pp. 1638-1643, 2026",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "llm",
-        "llms"
+        "llm"
       ],
       "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3397,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        },
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.4766,
+          "score": 0.1721,
           "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4766,
-          "matched": [
-            "learning"
+            "llm-as-a-judge"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0349,
+          "score": 0.0517,
           "matched": [
+            "analysis",
             "data"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0301,
+          "matched": [
+            "selection"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.0349,
+          "score": 0.0278,
           "matched": [
             "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.5864,
-        "relevance": 0.4836,
-        "quality": 0.67,
-        "novelty": 0.8809,
-        "freshness": 1.0,
+        "total": 0.4227,
+        "relevance": 0.3165,
+        "quality": 0.42,
+        "novelty": 0.9009,
+        "freshness": 0.8572,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "proof",
-        "publication metadata",
-        "conference oral"
+        "quantitative results",
+        "publication metadata"
       ],
       "summary": {
-        "takeaway": "To study such settings, we introduce a model of controlled sequential social learning in which an information-mediating planner (e.g., an LLM) controls the information precision of agents while they also learn from the decisions of earlier agents.",
-        "problem": "Algorithms increasingly serve as information mediators -- from social media feeds and targeted advertising to the increasing ubiquity of LLMs.",
-        "method": "Algorithms increasingly serve as information mediators -- from social media feeds and targeted advertising to the increasing ubiquity of LLMs.",
-        "evidence": "The planner may seek to improve social welfare (an altruistic planner) or to induce a specific action the planner prefers (a biased planner).",
+        "takeaway": "In this paper, we present 1020 Group's submission to the WMT26 shared task on automated quality evaluation.",
+        "problem": "In this paper, we present 1020 Group's submission to the WMT26 shared task on automated quality evaluation.",
+        "method": "Our system, Pterodactyl, was engineered specifically for subtasks 2 and 3, that is, segment-level quality score prediction and the detection of error-free segments.",
+        "evidence": "Pterodactyl is a highly customizable, ultra-low cost system optimized for binary classification in translation triage and data curation.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -449,9 +356,98 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
+        "topic": "Conformal prediction",
         "matched": [
-          "learning"
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.14493",
+      "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+      "abstract": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation paradigm (trace-based LLM judging, text-only LLM judging with red-teaming, and deterministic heuristics), applied to two analytics agents in a controlled research setting using frozen execution traces. Phase 1 quantifies evaluation harness stability through repeated measurements, finding that 97% of configurations meet the stability threshold and that stability patterns are agent-independent. Phase 2 measures known risk detection on 72 ground-truth test cases, where the trace-based framework achieves the best precision-recall balance (F1=0.90) while text-only evaluation matches on recall but generates 5x more false alarms. Phase 3 evaluates unknown risk discovery, uncovering 24 novel failures with zero overlap between functional testing and security red-teaming. Our results demonstrate that (1) the information available to the evaluation harness determines evaluation quality, (2) functional and security evaluation are complementary, and (3) LLM-based evaluation harnesses surface subtle errors that human reviewers miss. We recommend a two-framework strategy: trace-based evaluation for functional assessment and adversarial red-teaming for security validation.",
+      "authors": [
+        "Howard Zhang",
+        "Chuck Arvin",
+        "Logan Brown",
+        "Mihir Bhatia",
+        "Neelu Choudhary",
+        "Lily Miao"
+      ],
+      "published": "2026-11-10T18:50:06Z",
+      "updated": "2026-11-10T18:50:06Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2611.14493v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.14493v1",
+      "comment": "Accepted to KDD 2026, Jeju, Korea. 9 pages, 3 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3791,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1142,
+          "matched": [
+            "functional",
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4204,
+        "relevance": 0.3261,
+        "quality": 0.41,
+        "novelty": 0.8348,
+        "freshness": 0.858,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation paradigm (trace-based LLM judging, text-only LLM judging with red-teaming, and deterministic heuristics), applied to two analytics agents in a controlled research setting using frozen execution traces.",
+        "problem": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows.",
+        "method": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows.",
+        "evidence": "Phase 2 measures known risk detection on 72 ground-truth test cases, where the trace-based framework achieves the best precision-recall balance (F1=0.90) while text-only evaluation matches on recall but generates 5x more false alarms.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
         ],
         "lane": "llm"
       }
