@@ -1,6 +1,352 @@
 {
-  "generated_at": "2026-11-11T18:41:02.009489+00:00",
+  "generated_at": "2026-11-12T18:53:20.840176+00:00",
   "papers": [
+    {
+      "id": "conf:acl:2026:371-main",
+      "title": "Timely Machine: Awareness of Time Makes Test-Time Scaling Agentic",
+      "abstract": "As large language models (LLMs) increasingly tackle complex reasoning tasks, test-time scaling has become critical for enhancing capabilities. However, in agentic scenarios with frequent tool calls, the traditional generation-length-based definition breaks down: tool latency decouples inference time from generation length. We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets. We introduce Timely-Eval, a benchmark spanning high-frequency tool calls, low-frequency tool calls, and time-constrained reasoning. By varying tool latency, we find smaller models excel with fast feedback through more interactions, while larger models dominate high-latency settings via superior interaction quality. Moreover, existing models fail to adapt reasoning to time budgets. We propose Timely-RL to address this gap. After cold-start supervised fine-tuning, we use reinforcement learning to enhance temporal planning. Timely-RL improves time budget awareness and consistently boosts performance across Timely-Eval. We hope our work offers a new perspective on test-time scaling for the agentic era.",
+      "authors": [
+        "Yichuan Ma",
+        "Linyang Li",
+        "Yongkang Chen",
+        "Peiji Li",
+        "Xiaozhe Li",
+        "Qipeng Guo",
+        "Dahua Lin",
+        "Kai Chen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5126,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2237,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.2125,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1461,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5885,
+        "relevance": 0.4973,
+        "quality": 0.64,
+        "novelty": 0.8727,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets.",
+        "problem": "As large language models (LLMs) increasingly tackle complex reasoning tasks, test-time scaling has become critical for enhancing capabilities.",
+        "method": "We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets.",
+        "evidence": "Timely-RL improves time budget awareness and consistently boosts performance across Timely-Eval.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-12T18:53:20.840176+00:00"
+    },
+    {
+      "id": "conf:icml:2026:71120",
+      "title": "Information Flow Reveals When to Trust Language Models",
+      "abstract": "In retrieval-augmented generation, language models can generate incorrect responses if they fail to utilize query-relevant content from the retrieved evidence. This shifts the focus of uncertainty quantification (UQ) toward assessing contextual grounding, i.e., whether predictions are supported by query-relevant tokens. Recent UQ methods unpack language models to characterize how inputs are processed. Nevertheless, these methods focus on a few layers and overlook the whole progressive propagation within the model, thereby failing to fully capture the grounding dynamics essential for reliable uncertainty estimation. We use information flow to build a layer-wise trace that reveals each context token’s contribution to the output, providing an interpretable basis for assessing reliability. From this analysis, we introduce two measures to calibrate prediction confidence. The first, \\textit{simulatability}, posits that a prediction is more likely to be correct when context token contributions align closely with their true relevance. The second, \\textit{concentration}, asserts that a response is more likely to be correct when it is derived from a narrow, focused subset of tokens. Experiments show that our method achieves an average AUROC of 0.709, exceeding the runner-up performance of 0.676, while maintaining moderate computational cost.",
+      "authors": [
+        "Rui Xu",
+        "Yi Chen",
+        "Jiujiu Chen",
+        "Sihong Xie"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71120",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71120",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5382,
+          "matched": [
+            "uncertainty",
+            "prediction"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1283,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0399,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "estimation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5802,
+        "relevance": 0.4642,
+        "quality": 0.71,
+        "novelty": 0.8648,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "From this analysis, we introduce two measures to calibrate prediction confidence.",
+        "problem": "In retrieval-augmented generation, language models can generate incorrect responses if they fail to utilize query-relevant content from the retrieved evidence.",
+        "method": "From this analysis, we introduce two measures to calibrate prediction confidence.",
+        "evidence": "Experiments show that our method achieves an average AUROC of 0.709, exceeding the runner-up performance of 0.676, while maintaining moderate computational cost.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-12T18:53:20.840176+00:00"
+    },
+    {
+      "id": "conf:acl:2026:2004-main",
+      "title": "Enhancing Linguistic Competence of Language Models through Pre-training with Language Learning Tasks",
+      "abstract": "Language models (LMs) are pre-trained on raw text datasets to generate text sequences token-by-token. While this approach facilitates the learning of world knowledge and reasoning, it does not explicitly optimize for linguistic competence. To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction. Inspired by human language acquisition, L2T transforms raw text into structured input-output pairs to provide explicit linguistic stimulation. Pre-training LMs on a mixture of raw text and L2T data not only improves overall performance on linguistic competence benchmarks but accelerates their acquisition, while maintaining competitive performance on general reasoning tasks.",
+      "authors": [
+        "Atsuki Yamaguchi",
+        "Maggie Mi",
+        "Nikolaos Aletras"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4684,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4683,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1372,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5855,
+        "relevance": 0.4958,
+        "quality": 0.63,
+        "novelty": 0.8723,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "dataset evidence",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction.",
+        "problem": "Language models (LMs) are pre-trained on raw text datasets to generate text sequences token-by-token.",
+        "method": "To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction.",
+        "evidence": "Pre-training LMs on a mixture of raw text and L2T data not only improves overall performance on linguistic competence benchmarks but accelerates their acquisition, while maintaining competitive performance on general reasoning tasks.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-12T18:53:20.840176+00:00"
+    },
     {
       "id": "2611.14515",
       "title": "AutoScaffold: AI-Guided Scaffolding for Reinforcement Learning of Language Models",
@@ -9895,325 +10241,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-10-20T15:03:27.175811+00:00"
-    },
-    {
-      "id": "conf:iclr:2026:10009494",
-      "title": "GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning",
-      "abstract": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks. We argue that the interpretable nature of language often provides a much richer learning medium for LLMs, compared to policy gradients derived from sparse, scalar rewards. To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error. Given any AI system containing one or more LLM prompts, GEPA samples trajectories (e.g., reasoning, tool calls, and tool outputs) and reflects on them in natural language to diagnose problems, propose and test prompt updates, and combine complementary lessons from the Pareto frontier of its own attempts. As a result of GEPA's design, it can often turn even just a few rollouts into a large quality gain. Across six tasks, GEPA outperforms GRPO by 6 percentage points on average and by up to 19pp, while using up to 35x fewer rollouts. GEPA also outperforms the leading prompt optimizer, MIPROv2, by over 10 percentage points (e.g., +12pp on AIME-2025), and demonstrates promising results as an inference-time search strategy for code optimization. We release our code at https://github.com/gepa-ai/gepa.",
-      "authors": [
-        "Lakshya A Agrawal",
-        "Shangyin Tan",
-        "Dilara Soylu",
-        "Noah Ziems",
-        "Rishi Khare",
-        "Krista Opsahl-Ong",
-        "Arnav Singhvi",
-        "Herumb Shandilya",
-        "Michael J Ryan",
-        "Meng Jiang",
-        "Christopher Potts",
-        "Koushik Sen",
-        "Alex Dimakis",
-        "Ion Stoica",
-        "Dan Klein",
-        "Matei Zaharia",
-        "Omar Khattab"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10009494",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10009494",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5357,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5356,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "inference",
-            "time"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6814,
-        "relevance": 0.5521,
-        "quality": 0.95,
-        "novelty": 0.8255,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error.",
-        "problem": "Large language models (LLMs) are increasingly adapted to downstream tasks via reinforcement learning (RL) methods like Group Relative Policy Optimization (GRPO), which often require thousands of rollouts to learn new tasks.",
-        "method": "To test this, we introduce GEPA (Genetic-Pareto), a prompt optimizer that thoroughly incorporates natural language reflection to learn high-level rules from trial and error.",
-        "evidence": "Across six tasks, GEPA outperforms GRPO by 6 percentage points on average and by up to 19pp, while using up to 35x fewer rollouts.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-20T15:03:27.175811+00:00"
-    },
-    {
-      "id": "2610.22599",
-      "title": "Can LLMs predict the outcomes of machine learning experiments?",
-      "abstract": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible. Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments. However, the space of possible design choices in ML is vast. An LLM that proposes an experiment needs a reliable intuition of whether it is worth running given the timing constraints of long training runs. In this work, we measure such intuition in current frontier LLMs by evaluating how accurately they predict the impact of self-generated ML experiment ideas before these are put into training runs. To this end, we construct a dataset of 288 LLM-proposed ideas on eight MLE-bench tasks. We then prompt five frontier LLMs (GPT-6 Astra, Claude Opus 5.5, Claude Fable 5.1, Kimi K3, and GLM-5.3) to predict the impact of each idea and compare their predictions with the actual outcomes after training. We report four main findings. First, LLM predictions are substantially better than random chance but far from accurate: even the best model, Claude Opus 5.5, explains only half of the variance in outcomes (R^2 = 0.49). Second, we notice that all tested models systematically underestimate the magnitude of the changes. Third, prediction quality varies widely across tasks. Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference. Higher reasoning settings and additional context lead to modest gains. Overall, our results show that current LLMs have useful but limited intuition about which ML ideas will work. We release our dataset to support further study.",
-      "authors": [
-        "Ayush Bansal",
-        "Aldo Pareja",
-        "Sean Klein",
-        "Serge Didenko",
-        "Artem Lukoianov"
-      ],
-      "published": "2026-10-15T19:51:50Z",
-      "updated": "2026-10-15T19:51:50Z",
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.22599v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22599v1",
-      "comment": "15 pages, 9 figures, 1 table. Dataset: https://github.com/autolab-ai/EV-estimation",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.7465,
-          "matched": [
-            "learning",
-            "machine",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4547,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1518,
-          "matched": [
-            "prediction"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.674,
-        "relevance": 0.7185,
-        "quality": 0.51,
-        "novelty": 0.8268,
-        "freshness": 0.4458,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Finally, the choice of the coding harness that actually implements the ideas has little effect on outcomes, and we find no evidence of self-preference.",
-        "problem": "Recent advances in AI make Recursive Self-Improvement (RSI) increasingly plausible.",
-        "method": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
-        "evidence": "Large Language Models (LLMs) can already propose, select, and run Machine Learning (ML) experiments.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "machine",
-          "reliable"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
-    },
-    {
-      "id": "2610.22636",
-      "title": "Measuring Mechanistic Uncertainty in Large Language Models via Causal Robustness",
-      "abstract": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential. We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response. We propose the causal robustness margin, defined as the minimum internal intervention required to deviate the model's output, and operationalize it using Jacobian Lens (Jlens) concept steering vectors. Across three open-source models and five question-answering datasets, we show incorrect and uncertain responses exhibit smaller margins, indicating greater sensitivity to internal interventions, and the causal robustness margin complements conventional output-based uncertainty methods. Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
-      "authors": [
-        "Aneesh Komanduri",
-        "Majid Afshar",
-        "Timothy A. Miller",
-        "Yanjun Gao"
-      ],
-      "published": "2026-10-15T20:46:06Z",
-      "updated": "2026-10-15T20:46:06Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.22636v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.22636v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.8413,
-          "matched": [
-            "uncertainty"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1475,
-          "matched": [
-            "reliable"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6673,
-        "relevance": 0.7025,
-        "quality": 0.51,
-        "novelty": 0.8611,
-        "freshness": 0.4511,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "dataset evidence",
-        "open source"
-      ],
-      "summary": {
-        "takeaway": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
-        "problem": "Large language models (LLMs) are increasingly used in critical domains, where their susceptibility to hallucinations makes reliable and interpretable uncertainty quantification essential.",
-        "method": "We introduce the concept of mechanistic uncertainty, which characterizes uncertainty through the stability of the internal mechanisms supporting a model's response.",
-        "evidence": "Finally, in a controlled knowledge injection experiment, correctly learned facts show increased margins after training, suggesting that causal robustness provides a mechanistically grounded signal of uncertainty.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-19T16:58:35.105974+00:00"
     }
   ]
 }

@@ -1,0 +1,487 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-11-12T18:53:20.840176+00:00",
+  "profile_updated_at": "2026-08-23",
+  "content_language": "zh",
+  "source_count": 0,
+  "source_total": 0,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 0,
+  "previously_recommended_count": 464,
+  "eligible_count": 0,
+  "feedback_count": 0,
+  "topic_feedback": {
+    "enabled": true,
+    "generated_at": "2026-11-12T18:53:20.840176+00:00",
+    "feedback_records": 0,
+    "latest_feedback_papers": 0,
+    "labeled_papers": 0,
+    "adjusted_topics": 0,
+    "minimum_effective_samples": 4.0,
+    "topics": [
+      {
+        "id": "functional_time_series",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "long_run_covariance_estimation",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "bandwidth_selection",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "time_series_inference",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "trustworthy_machine_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "positive_unlabeled_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "conformal_prediction",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      }
+    ]
+  },
+  "semantic_feedback_count": 0,
+  "minimum_daily_target": 3,
+  "minimum_daily_met": true,
+  "conference_supplement_count": 3,
+  "conference_eligible_count": 129,
+  "conference_pool_updated_at": "2026-11-12T18:53:20.840176+00:00",
+  "conference_source_status": {
+    "ICLR:2026": "ok:223",
+    "ICML:2026": "ok:742",
+    "NeurIPS:2026": "ok:0",
+    "ACL:2026": "ok:478",
+    "EMNLP:2026": "awaiting_verified_schedule",
+    "ICLR:2025": "ok:213",
+    "ICML:2025": "ok:344",
+    "NeurIPS:2025": "ok:808",
+    "EMNLP:2025": "awaiting_verified_schedule",
+    "ACL:2025": "awaiting_verified_schedule"
+  },
+  "papers": [
+    {
+      "id": "conf:acl:2026:371-main",
+      "title": "Timely Machine: Awareness of Time Makes Test-Time Scaling Agentic",
+      "abstract": "As large language models (LLMs) increasingly tackle complex reasoning tasks, test-time scaling has become critical for enhancing capabilities. However, in agentic scenarios with frequent tool calls, the traditional generation-length-based definition breaks down: tool latency decouples inference time from generation length. We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets. We introduce Timely-Eval, a benchmark spanning high-frequency tool calls, low-frequency tool calls, and time-constrained reasoning. By varying tool latency, we find smaller models excel with fast feedback through more interactions, while larger models dominate high-latency settings via superior interaction quality. Moreover, existing models fail to adapt reasoning to time budgets. We propose Timely-RL to address this gap. After cold-start supervised fine-tuning, we use reinforcement learning to enhance temporal planning. Timely-RL improves time budget awareness and consistently boosts performance across Timely-Eval. We hope our work offers a new perspective on test-time scaling for the agentic era.",
+      "authors": [
+        "Yichuan Ma",
+        "Linyang Li",
+        "Yongkang Chen",
+        "Peiji Li",
+        "Xiaozhe Li",
+        "Qipeng Guo",
+        "Dahua Lin",
+        "Kai Chen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.5126,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2237,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.2125,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1461,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5885,
+        "relevance": 0.4973,
+        "quality": 0.64,
+        "novelty": 0.8727,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets.",
+        "problem": "As large language models (LLMs) increasingly tackle complex reasoning tasks, test-time scaling has become critical for enhancing capabilities.",
+        "method": "We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets.",
+        "evidence": "Timely-RL improves time budget awareness and consistently boosts performance across Timely-Eval.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:icml:2026:71120",
+      "title": "Information Flow Reveals When to Trust Language Models",
+      "abstract": "In retrieval-augmented generation, language models can generate incorrect responses if they fail to utilize query-relevant content from the retrieved evidence. This shifts the focus of uncertainty quantification (UQ) toward assessing contextual grounding, i.e., whether predictions are supported by query-relevant tokens. Recent UQ methods unpack language models to characterize how inputs are processed. Nevertheless, these methods focus on a few layers and overlook the whole progressive propagation within the model, thereby failing to fully capture the grounding dynamics essential for reliable uncertainty estimation. We use information flow to build a layer-wise trace that reveals each context token’s contribution to the output, providing an interpretable basis for assessing reliability. From this analysis, we introduce two measures to calibrate prediction confidence. The first, \\textit{simulatability}, posits that a prediction is more likely to be correct when context token contributions align closely with their true relevance. The second, \\textit{concentration}, asserts that a response is more likely to be correct when it is derived from a narrow, focused subset of tokens. Experiments show that our method achieves an average AUROC of 0.709, exceeding the runner-up performance of 0.676, while maintaining moderate computational cost.",
+      "authors": [
+        "Rui Xu",
+        "Yi Chen",
+        "Jiujiu Chen",
+        "Sihong Xie"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71120",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71120",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5382,
+          "matched": [
+            "uncertainty",
+            "prediction"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1283,
+          "matched": [
+            "reliable"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0399,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "analysis"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "estimation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5802,
+        "relevance": 0.4642,
+        "quality": 0.71,
+        "novelty": 0.8648,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "From this analysis, we introduce two measures to calibrate prediction confidence.",
+        "problem": "In retrieval-augmented generation, language models can generate incorrect responses if they fail to utilize query-relevant content from the retrieved evidence.",
+        "method": "From this analysis, we introduce two measures to calibrate prediction confidence.",
+        "evidence": "Experiments show that our method achieves an average AUROC of 0.709, exceeding the runner-up performance of 0.676, while maintaining moderate computational cost.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty",
+          "prediction"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:2004-main",
+      "title": "Enhancing Linguistic Competence of Language Models through Pre-training with Language Learning Tasks",
+      "abstract": "Language models (LMs) are pre-trained on raw text datasets to generate text sequences token-by-token. While this approach facilitates the learning of world knowledge and reasoning, it does not explicitly optimize for linguistic competence. To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction. Inspired by human language acquisition, L2T transforms raw text into structured input-output pairs to provide explicit linguistic stimulation. Pre-training LMs on a mixture of raw text and L2T data not only improves overall performance on linguistic competence benchmarks but accelerates their acquisition, while maintaining competitive performance on general reasoning tasks.",
+      "authors": [
+        "Atsuki Yamaguchi",
+        "Maggie Mi",
+        "Nikolaos Aletras"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4684,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4683,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1372,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5855,
+        "relevance": 0.4958,
+        "quality": 0.63,
+        "novelty": 0.8723,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "dataset evidence",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction.",
+        "problem": "Language models (LMs) are pre-trained on raw text datasets to generate text sequences token-by-token.",
+        "method": "To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction.",
+        "evidence": "Pre-training LMs on a mixture of raw text and L2T data not only improves overall performance on linguistic competence benchmarks but accelerates their acquisition, while maintaining competitive performance on general reasoning tasks.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Positive-unlabeled learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}
