@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-15T17:41:34.898134+00:00",
+  "generated_at": "2026-11-16T21:00:14.960205+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 353,
-  "source_total": 353,
+  "source_count": 294,
+  "source_total": 294,
   "source_lookback_days": 4,
   "source_truncated": false,
-  "unseen_source_count": 347,
-  "previously_recommended_count": 476,
-  "eligible_count": 12,
+  "unseen_source_count": 294,
+  "previously_recommended_count": 482,
+  "eligible_count": 11,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-15T17:41:34.898134+00:00",
+    "generated_at": "2026-11-16T21:00:14.960205+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,238 +130,27 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2611.16882",
-      "title": "Pretraining Data Statistics Shape the Phases of Learning Entity Comparison in Language Models",
-      "abstract": "How does data shape language model (LM) behavior throughout pretraining? We investigate this question through a case study on entity comparison, e.g., Between France and Brazil, which country is larger?, across nine comparison tasks spanning five entity types. We begin with controlled experiments in which we train small LMs (163M parameters) on mixtures of natural text from pretraining corpora and synthetic task data. Our analysis identifies three distinct phases of learning: (1) an early phase where the LM selects entities by frequency, (2) a middle phase where the LM selects entities by position in the prompt (first vs. last mentioned entity), and (3) a late phase where the LM selects the entity that is the correct answer. We show that the emergence of these three phases is causally determined by statistical properties of the training data. With small amounts of task-specific synthetic data, we observe only the first two phases and the model fails to learn the task; with large amounts, the model jumps directly from the frequency-based heuristic to solving the task correctly. Moreover, changing the entity frequency distribution from a naturally occurring Zipfian distribution (a small number of entities are very common and the vast majority are rare) to a uniform one weakens the frequency phase and speeds up learning of the task. Lastly, we show that the three phases of training dynamics from our controlled experiments appear in the open source model OLMo-2 32B. Together, our findings demonstrate that properties of pretraining data are causal drivers of heuristic learning and show that small-scale synthetic experiments can predict training dynamics at larger scales.",
+      "id": "2611.18453",
+      "title": "Black-Box Uncertainty Quantification for Large Language Models via Ensemble-of-Ensembles",
+      "abstract": "Reliable use of large language models (LLMs) requires uncertainty estimates that separate ambiguity intrinsic to a prompt from genuine knowledge gaps. Bayesian and deep-ensemble methods deliver this aleatoric/epistemic decomposition in principle, but are computationally prohibitive at LLM scale and require white-box access. Existing black-box methods, in contrast, summarize to a single scalar that cannot make the distinction. We introduce a two-level ensemble that bridges this gap. Stochastic decoding of a fixed prompt forms the inner ensemble; meaning-preserving semantic perturbations of the prompt form the outer ensemble. Variability is measured in a continuous embedding space, and the law of total covariance gives an exact within-/between-perturbation decomposition to estimate aleatoric and epistemic uncertainty (AU/EU); it requires only black-box sampling access. On top of this estimator, we contribute three theoretical results that ground the framework: (i) a finite-sample bias identity for nested Monte Carlo with a closed-form bias-corrected epistemic estimator; (ii) a Bayesian bridge bounding the gap between perturbation-population AU/EU and Bayesian targets; and (iii) a separation result identifying a class of failure modes that any consistency-only black-box method provably misses while perturbation-based EU detects. Across five short QA benchmarks and four instruction-tuned LLMs spanning two families and two scales, our estimator is competitive with strong white-box baselines, and at a matched generation budget it matches leading black-box methods on error ranking while decomposing AU and EU; controlled paired interventions show that AU and EU respond selectively to distinct, actionable sources of failure: prompt ambiguity and model knowledge gaps; and a long-form pilot on the NQ long-answer split shows the framework extends to claim-level factuality without retraining.",
       "authors": [
-        "Yik Siu Chan",
-        "Jing Huang",
-        "Yanai Elazar",
-        "Atticus Geiger"
+        "Wang Ma",
+        "Debarun Bhattacharjya",
+        "Junkyu Lee",
+        "Nhan H Pham",
+        "Harsha Kokel",
+        "Qiang Ji"
       ],
-      "published": "2026-11-12T14:45:34Z",
-      "updated": "2026-11-12T14:45:34Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2611.16882v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.16882v1",
-      "comment": "29 pages, 20 figures. NeurIPS 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5257,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5257,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1723,
-          "matched": [
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.157,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5712,
-        "relevance": 0.5602,
-        "quality": 0.47,
-        "novelty": 0.8536,
-        "freshness": 0.554,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We show that the emergence of these three phases is causally determined by statistical properties of the training data.",
-        "problem": "How does data shape language model (LM) behavior throughout pretraining?",
-        "method": "We investigate this question through a case study on entity comparison, e.g., Between France and Brazil, which country is larger?, across nine comparison tasks spanning five entity types.",
-        "evidence": "We begin with controlled experiments in which we train small LMs (163M parameters) on mixtures of natural text from pretraining corpora and synthetic task data.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.16736",
-      "title": "On the Difficulty of Sequence-Level Supervised Learning for Autoregressive Language Models",
-      "abstract": "During the supervised learning phase, autoregressive language models are typically trained by minimizing the negative log-likelihood of the training data, which decomposes as a sum of token-level cross-entropies via teacher forcing. This objective is simple and efficient but potentially suffers from so-called exposure bias: a mismatch between the way the model is trained and the way it is used at inference time. Can we instead design sequence-level loss functions that incorporate inference-time decoding procedures, such as greedy decoding or autoregressive sampling? We show that two natural attempts lead to loss functions that are fundamentally flawed: unbounded below. We further show that these two flawed loss functions are intimately connected: using autoregressive Gumbel tricks, the sampling based loss is the expected greedy loss under Gumbel perturbations. Since the pathology stems from the dependence of the decoded sequence on the model parameters, we analyze the update direction obtained by applying a stop gradient on the sampling procedure, leading to a moment matching direction. While it is not the gradient of any loss function, we prove that it defines a valid descent direction in function space for the autoregressive negative log-likelihood. Despite these theoretical insights, the moment matching direction suffers from high variance. We conclude that teacher forcing may well be ``all you need'' for supervised learning of autoregressive models.",
-      "authors": [
-        "Mathieu Blondel",
-        "Michaël E. Sander",
-        "Germain Vivier-Ardisson",
-        "Tianlin Liu",
-        "Vincent Roulet"
-      ],
-      "published": "2026-11-12T12:51:08Z",
-      "updated": "2026-11-12T12:51:08Z",
+      "published": "2026-11-13T17:26:39Z",
+      "updated": "2026-11-13T17:26:39Z",
       "categories": [
         "cs.LG",
-        "stat.ML"
+        "cs.AI"
       ],
       "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.16736v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.16736v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4662,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4662,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.145,
-          "matched": [
-            "inference",
-            "time",
-            "data"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1004,
-          "matched": [
-            "time",
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5582,
-        "relevance": 0.4952,
-        "quality": 0.63,
-        "novelty": 0.8316,
-        "freshness": 0.5426,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "proof",
-        "formal bound"
-      ],
-      "summary": {
-        "takeaway": "We show that two natural attempts lead to loss functions that are fundamentally flawed: unbounded below.",
-        "problem": "During the supervised learning phase, autoregressive language models are typically trained by minimizing the negative log-likelihood of the training data, which decomposes as a sum of token-level cross-entropies via teacher forcing.",
-        "method": "This objective is simple and efficient but potentially suffers from so-called exposure bias: a mismatch between the way the model is trained and the way it is used at inference time.",
-        "evidence": "While it is not the gradient of any loss function, we prove that it defines a valid descent direction in function space for the autoregressive negative log-likelihood.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.16369",
-      "title": "Bait: Mitigating Harmful Agentic Reinforcement Learning via Probing Reward Function",
-      "abstract": "We expose a safety vulnerability on nascent agentic reinforcement-learning-as-a-service. Specifically, with a cost as low as \\$20, we show that safety alignment of a large language model (e.g., Inkling) can be completely subverted through rounds of harmful agentic reinforcement learning (agentic RL) with a toxic environment from its users. We also demonstrate that upon a successful harmful agentic RL attack via the service API, the attackers can potentially use the safety-degraded model to assist with real-world harmful activities, e.g., exploit software vulnerabilities and launch code re-use attacks. To mitigate harmful agentic RL, we propose Bait, a defense that mitigates the attack via proactively probing the reward function. Experimental results show that such a simple defense can sufficiently mitigate learning from a harmful reward function and can still learn from a benign reward function that promotes benign agentic tasks. Further analysis on both empirical and theoretical aspects shows that an adaptive attacker who assumes the knowledge of Bait defense cannot perfectly subvert it due to a systematic challenge. Source code is available at https://github.com/git-disl/Bait.",
-      "authors": [
-        "Tiansheng Huang",
-        "Ananth Balashankar",
-        "Virat Shejwalkar",
-        "Santosh Pande",
-        "Ling Liu"
-      ],
-      "published": "2026-11-12T06:34:34Z",
-      "updated": "2026-11-12T06:34:34Z",
-      "categories": [
-        "cs.LG",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.16369v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.16369v1",
-      "comment": "",
+      "abs_url": "https://arxiv.org/abs/2611.18453v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.18453v1",
+      "comment": "Accepted at NeurIPS 2026. 54 pages (10 pages main text), 3 figures, 38 tables. Code: https://github.com/wma17/Black-box_UQ_for_LLMs_Ensemble_of_Ensemble",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -370,109 +159,7 @@
       "lane": "llm",
       "scope_matches": [
         "large language model",
-        "language model"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4295,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4295,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0314,
-          "matched": [
-            "analysis"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0314,
-          "matched": [
-            "adaptive"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.549,
-        "relevance": 0.4358,
-        "quality": 0.77,
-        "novelty": 0.8647,
-        "freshness": 0.5053,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Specifically, with a cost as low as \\$20, we show that safety alignment of a large language model (e.g., Inkling) can be completely subverted through rounds of harmful agentic reinforcement learning (agentic RL) with a toxic environment from its users.",
-        "problem": "We expose a safety vulnerability on nascent agentic reinforcement-learning-as-a-service.",
-        "method": "To mitigate harmful agentic RL, we propose Bait, a defense that mitigates the attack via proactively probing the reward function.",
-        "evidence": "We also demonstrate that upon a successful harmful agentic RL attack via the service API, the attackers can potentially use the safety-degraded model to assist with real-world harmful activities, e.g., exploit software vulnerabilities and launch code re-use attacks.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.17053",
-      "title": "Evaluating Pretrained Language Semantics for Structured EHR Prediction Tasks",
-      "abstract": "Structured Electronic Health Records (EHR) models typically treat each clinical concept as a dataset-specific token, discarding the natural-language semantics associated with the event. As a result, relationships between concepts must largely be learned from EHR co-occurrence, without directly exploiting any prior semantic knowledge. We investigate how pretrained causal language models can be adapted for longitudinal EHR prediction by developing tEHR. Here, we represent events with their natural language description and use this text stream to apply EHR-adaptive continued pretraining, followed by task-specific discriminative fine-tuning using LoRA, utilising the LLM as a longitudinal patient-encoder. We evaluate this approach across four prediction tasks on the MIMIC-IV dataset and pancreatic cancer prediction on the CPRD dataset at 1 to 12 month horizons, with tEHR using the Mistral-7B-v0.3 backbone achieving the strongest overall performance. Ablations show that performance declines when clinical descriptions are removed or misaligned, when numerical values are omitted, and when either stage of adaptation is removed, while explicit elapsed-time descriptions provide little additional benefit. Analysis of the learned patient representations further reveals clinically coherent structure associated with distinct patterns of disease risk and clinical history.",
-      "authors": [
-        "Ashvin Gupta",
-        "Brendan Delaney",
-        "Alessandra Russo"
-      ],
-      "published": "2026-11-12T16:34:49Z",
-      "updated": "2026-11-12T16:34:49Z",
-      "categories": [
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2611.17053v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.17053v1",
-      "comment": "Accepted for publication in Proceedings of Machine Learning Research (PMLR), Vol. 346, 2026",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
+        "large language models",
         "language model",
         "language models",
         "llm"
@@ -482,62 +169,51 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.4773,
+          "score": 0.7817,
           "matched": [
-            "prediction"
+            "uncertainty"
           ]
         },
         {
-          "id": "functional_time_series",
-          "name": "Functional time series",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.0648,
+          "score": 0.1475,
           "matched": [
-            "time",
-            "analysis"
+            "reliable"
           ]
         },
         {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
           "status": "emerging",
-          "score": 0.0349,
+          "score": 0.0455,
           "matched": [
-            "adaptive"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0349,
-          "matched": [
-            "time"
+            "covariance"
           ]
         }
       ],
       "scores": {
-        "total": 0.5133,
-        "relevance": 0.4018,
-        "quality": 0.69,
-        "novelty": 0.8586,
-        "freshness": 0.5648,
+        "total": 0.6506,
+        "relevance": 0.664,
+        "quality": 0.53,
+        "novelty": 0.8554,
+        "freshness": 0.5502,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "ablation study",
-        "dataset evidence",
-        "quantitative results"
+        "baseline comparison",
+        "benchmark evaluation",
+        "formal bound"
       ],
       "summary": {
-        "takeaway": "Structured Electronic Health Records (EHR) models typically treat each clinical concept as a dataset-specific token, discarding the natural-language semantics associated with the event.",
-        "problem": "Structured Electronic Health Records (EHR) models typically treat each clinical concept as a dataset-specific token, discarding the natural-language semantics associated with the event.",
-        "method": "As a result, relationships between concepts must largely be learned from EHR co-occurrence, without directly exploiting any prior semantic knowledge.",
-        "evidence": "We investigate how pretrained causal language models can be adapted for longitudinal EHR prediction by developing tEHR.",
+        "takeaway": "We introduce a two-level ensemble that bridges this gap.",
+        "problem": "Reliable use of large language models (LLMs) requires uncertainty estimates that separate ambiguity intrinsic to a prompt from genuine knowledge gaps.",
+        "method": "We introduce a two-level ensemble that bridges this gap.",
+        "evidence": "Existing black-box methods, in contrast, summarize to a single scalar that cannot make the distinction.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -548,31 +224,244 @@
       "recommendation_reason": {
         "topic": "Conformal prediction",
         "matched": [
-          "prediction"
+          "uncertainty"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2611.16409",
-      "title": "Experience-Handoff Reinforcement Learning for Recursive Self-Improvement",
-      "abstract": "It is common to train Large Language Models (LLMs) for agentic tasks with Reinforcement Learning (RL) from scalar rewards. However, this throws away the fine-grained information about the environment that the agent experienced during the trial (e.g., error logs). To utilize this rich information, recent works wrap the agent in a harness that refines its own inputs through reflection or compaction and hands past experience to future rollouts, but the construction of the handed-off artifacts (e.g., a playbook) is itself not learned. We want the best of both worlds: gradient updates from a scalar reward, while also utilizing environment information to hand off experience. As a concrete testbed, we fix the Agentic Context Engineering (\\ace{}) harness and train one model to act, reflect, and curate task-local playbooks. Our method, \\acerl{}, evaluates candidate experience-handoff artifacts by their downstream effect on future actor rollouts, and co-optimizes the role-specific behaviors (action generator, insight reflector, and playbook curator) under a fixed scaffold. Across agentic benchmarks, \\acerl{} achieves higher held-out performance than baseline methods. The results suggest that agent training should optimize not only the actions in the current rollout, but also the model-written experience that future rollouts inherit.",
+      "id": "2611.18419",
+      "title": "LECAT: Measuring LLM Category Learning from Pretraining Data",
+      "abstract": "Humans know that airplanes are fast, that this extends to red airplanes, but that it does not hold for broken airplanes. How do LLMs acquire category knowledge that humans learn and apply effortlessly? We introduce LeCat, a two-part framework to analyze LLM's Learning of Category knowledge. First, we use LeCat to evaluate models on their ability to learn category knowledge, distinguishing between three cases: memorization of in-domain category knowledge, generalization to unseen instances, and ability to flexibly use knowledge in appropriate contexts. Then, we use LeCat to trace how this knowledge can be learned in pretraining from text that may encode category knowledge in various ways, such as verbatim repetition or exceptions, which we refer to as forms of \"knowledge expression\". We first assess open-source pretrained models using 199 curated category-feature pairs and analyze their training data. Our findings suggest that strengthening context and category-feature co-occurrence likelihood (PMI) improve learning for larger models and verbatim rule-like statements diminish flexible category learning. To systematically isolate these effects, we then train a 68M model from scratch with precise control over the categorical information each sees in their training data, confirming that verbatim repetition reduces flexible learning but mixture of diverse knowledge expressions lead to more robust category learning. Together, our findings highlight that while contextual flexibility is persistently difficult for models, how category knowledge is expressed in pretraining greatly impacts models' acquisition of robust category knowledge.",
       "authors": [
-        "Doyoung Kim",
-        "Byeongguk Jeon",
-        "Kailin Zhang",
-        "Sherry Yang"
+        "Jimin Mun",
+        "Maarten Sap",
+        "Yanai Elazar"
       ],
-      "published": "2026-11-12T07:18:30Z",
-      "updated": "2026-11-12T07:18:30Z",
+      "published": "2026-11-13T16:59:46Z",
+      "updated": "2026-11-13T16:59:46Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2611.18419v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.18419v1",
+      "comment": "21 pages, 4 figures, 8 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4772,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4772,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1262,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1262,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.562,
+        "relevance": 0.5024,
+        "quality": 0.63,
+        "novelty": 0.8208,
+        "freshness": 0.5476,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We introduce LeCat, a two-part framework to analyze LLM's Learning of Category knowledge.",
+        "problem": "Humans know that airplanes are fast, that this extends to red airplanes, but that it does not hold for broken airplanes.",
+        "method": "We introduce LeCat, a two-part framework to analyze LLM's Learning of Category knowledge.",
+        "evidence": "Our findings suggest that strengthening context and category-feature co-occurrence likelihood (PMI) improve learning for larger models and verbatim rule-like statements diminish flexible category learning.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.17534",
+      "title": "I2C-GRPO: Insight Importance Checklist for Reinforcement Learning in a Multi-Agent DDoS Alert Triage Workflow",
+      "abstract": "Large language model (LLM) agents are increasingly used for investigative tasks over incomplete evidence, such as cybersecurity alert triage, but reinforcement learning (RL) for such tasks is difficult: intermediate steps have no verifiable labels, rollouts are costly, and outcome rewards are sparse. We propose Insight Importance Checklist (I2C)-GRPO, a checklist reward for intermediate investigation steps. For each decision point, a panel of expert LLMs proposes investigative actions, their atomic forensic insights are extracted, and a separate three-model ranker panel orders the insights by importance. A reward model checks which ranked insights a candidate action targets and returns their consensus-weighted coverage. Because actions are scored without being executed, the reward is a proxy for expected investigative value, and training reduces to a one-step contextual bandit over fixed investigation prefixes. From a soft-computing perspective, the reward is an additive fuzzy measure whose rank-exponent weights act as an ordered weighted averaging (OWA)-type operator; one exponent sets its orness, i.e., how strongly the reward concentrates on the top of the judges' consensus. We train an open-weight Qwen3-4B Triage Agent within a fixed multi-agent Distributed Denial of Service (DDoS) alert-triage workflow on DARPA 2000 LLDOS 1.0 and test it on an independent CSE-CIC-IDS2018 DDoS trace. Across three training seeds, the agent reaches a mean F1-score of 0.869, 5.9 and 9.7 points above uniform insight weights and DIVA, and a false-positive rate of 4.9% versus 16.4% for GPT-5-mini. Within the weighting family, false positives fall only at the highest-orness weighting evaluated. All claims are limited to DDoS alert triage; the code, task contexts, and ranked insight dataset will be released.",
+      "authors": [
+        "Eyal Zloof",
+        "Shaun Shuster",
+        "Aviram Zilberman",
+        "Chen Frydman",
+        "Inderjeet Singh",
+        "Andrés Murilo",
+        "Asaf Shabtai",
+        "Yuval Elovici",
+        "Rami Puzis"
+      ],
+      "published": "2026-11-12T21:41:24Z",
+      "updated": "2026-11-12T21:41:24Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "primary_category": "cs.CR",
+      "abs_url": "https://arxiv.org/abs/2611.17534v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17534v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3954,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3954,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0385,
+          "matched": [
+            "operator"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4832,
+        "relevance": 0.4031,
+        "quality": 0.59,
+        "novelty": 0.8156,
+        "freshness": 0.4327,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We propose Insight Importance Checklist (I2C)-GRPO, a checklist reward for intermediate investigation steps.",
+        "problem": "Large language model (LLM) agents are increasingly used for investigative tasks over incomplete evidence, such as cybersecurity alert triage, but reinforcement learning (RL) for such tasks is difficult: intermediate steps have no verifiable labels, rollouts are costly, and outcome rewards are sparse.",
+        "method": "We propose Insight Importance Checklist (I2C)-GRPO, a checklist reward for intermediate investigation steps.",
+        "evidence": "For each decision point, a panel of expert LLMs proposes investigative actions, their atomic forensic insights are extracted, and a separate three-model ranker panel orders the insights by importance.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.17924",
+      "title": "TIDE: Reclaiming Lost Performance In On-Policy Reinforcement Learning",
+      "abstract": "Synchronous, colocated RL post-training of large language models (LLMs) today suffers from severe under-utilization due to long-tail rollouts. Inference engines fall idle waiting for long-tail rollouts or decode at low, inefficient batch sizes. To address this, we present TIDE, an RL training system that preserves on-policy training semantics while recovering resource utilization. TIDE does so by two complementary techniques: (1) dynamically repurposing rollout GPUs for training while long-tail rollouts complete and (2) dynamically migrating rollouts between inference engines to boost decoding throughput. TIDE automatically determines the right time to repurpose rollout resources through an adaptive migration policy, obtaining performance improvements that generalize across multiple applications and hardware configurations without requiring bespoke configuration. In our evaluation, TIDE provides end-to-end speedups of up to 1.36x over colocated systems, outperforming all evaluated on-policy baselines and achieving up to 97% of optimal throughput.",
+      "authors": [
+        "Mathew Jacob",
+        "Morgan Borjigin-Wang",
+        "Kan Zhu",
+        "Po Hao Chen",
+        "Yi Pan",
+        "Andy Ruan",
+        "Nayani Modugula",
+        "Ethan Lavi",
+        "Luis Ceze",
+        "Malte Schwarzkopf",
+        "Akshay Narayan",
+        "Deepti Raghavan",
+        "Stephanie Wang"
+      ],
+      "published": "2026-11-13T09:03:23Z",
+      "updated": "2026-11-13T09:03:23Z",
       "categories": [
         "cs.LG",
-        "cs.CL"
+        "cs.DC",
+        "cs.PF"
       ],
       "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.16409v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.16409v1",
-      "comment": "",
+      "abs_url": "https://arxiv.org/abs/2611.17924v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.17924v1",
+      "comment": "15 pages, 9 figures",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -591,7 +480,7 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4327,
+          "score": 0.3443,
           "matched": [
             "learning"
           ]
@@ -600,30 +489,68 @@
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.4326,
+          "score": 0.3442,
           "matched": [
             "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1401,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1112,
+          "matched": [
+            "inference",
+            "time"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.044,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.042,
+          "matched": [
+            "adaptive"
           ]
         }
       ],
       "scores": {
-        "total": 0.482,
-        "relevance": 0.4327,
-        "quality": 0.47,
-        "novelty": 0.8124,
-        "freshness": 0.5096,
+        "total": 0.4766,
+        "relevance": 0.3723,
+        "quality": 0.62,
+        "novelty": 0.8561,
+        "freshness": 0.5003,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "code available",
         "baseline comparison",
-        "benchmark evaluation"
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "It is common to train Large Language Models (LLMs) for agentic tasks with Reinforcement Learning (RL) from scalar rewards.",
-        "problem": "It is common to train Large Language Models (LLMs) for agentic tasks with Reinforcement Learning (RL) from scalar rewards.",
-        "method": "Our method, \\acerl{}, evaluates candidate experience-handoff artifacts by their downstream effect on future actor rollouts, and co-optimizes the role-specific behaviors (action generator, insight reflector, and playbook curator) under a fixed scaffold.",
-        "evidence": "Across agentic benchmarks, \\acerl{} achieves higher held-out performance than baseline methods.",
+        "takeaway": "To address this, we present TIDE, an RL training system that preserves on-policy training semantics while recovering resource utilization.",
+        "problem": "Synchronous, colocated RL post-training of large language models (LLMs) today suffers from severe under-utilization due to long-tail rollouts.",
+        "method": "Inference engines fall idle waiting for long-tail rollouts or decode at low, inefficient batch sizes.",
+        "evidence": "TIDE automatically determines the right time to repurpose rollout resources through an adaptive migration policy, obtaining performance improvements that generalize across multiple applications and hardware configurations without requiring bespoke configuration.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
         "source": "abstract",
@@ -642,28 +569,21 @@
       }
     },
     {
-      "id": "2611.17052",
-      "title": "Auditing AI peer reviewers: a benchmark on real scientific papers",
-      "abstract": "LLM-based peer review is now used at production scale, but its evaluation remains limited. We introduce a benchmark that injects objective, localisable errors of four types (general issues, mathematics, numerics, citations) at three severity levels into real papers and measures each reviewer's detection rate by error type and severity, together with its false-positive rate on clean copies. We also present Skepthical, a multi-agent reviewer that verifies citation-backed claims by retrieving the cited papers, mathematics with computer algebra, and numerical claims with executed code. We apply the benchmark to two corpora of 15 recent arXiv preprints each, one in astrophysics and one in machine learning (ML), injecting a total of 357 errors, and evaluate twelve reviewer systems: six single-LLM reviewers, two Claude Code configurations, three publicly available reviewers, and Skepthical. The choice of model has the largest impact on detection rate: given the same prompt, three frontier LLMs differ by about 50 percentage points in total detection on both corpora. Tools and scaffolding help when they contribute what the model cannot supply on its own. In particular, on astrophysics, Claude Code improves on a single Claude call in mathematics and numerics detection, and enforced citation retrieval gives Skepthical the highest citation error detection rate of all systems by a large margin. This citation lead, however, is not observed on ML, where the models appear to know the literature better and Skepthical's citation detection rate is statistically indistinguishable from that of the best single LLM. False-positive rates are below 10% for most systems, but vary with prompt, model, and scaffolding, with mathematics flags the main source of false positives. The evaluation pipeline, the injected errors, and the adjudication logs are released as a benchmark.",
+      "id": "2611.18279",
+      "title": "GT-FENG: General Theory of Factual Evaluation and Normative Grounding in Language Models *Author(s)",
+      "abstract": "Whether a language model's answer is correct often depends on context: the same value can be right under one jurisdiction, date, or legal definition and wrong under another. We introduce GT-FENG (General Theory of Factual Evaluation and Normative Grounding), the first general framework to unify contextual/temporal correctness and rule-based error attribution across law, policy, and other rule-governed domains. GT-FENG checks answers against the applicable rules and identifies documented rules that match incorrect answers. It shows that when multiple rules give the same value, the answer alone cannot tell which rule the model used. In Medicaid income-limit answers from two models, documenting the asked state's own records reduces the number of wrong answers that match only other states' values by 68-78%, and more than half of stable wrong answers then match two or more documented sources. GT-FENG provides a foundation for evaluating language models in rule-governed domains and for future benchmarks and evaluation toolkits. We release GT-FENG as an open-source Python package, gtfeng.",
       "authors": [
-        "Íñigo Zubeldia",
-        "Boris Bolliet",
-        "Francisco Villaescusa-Navarro",
-        "Pablo Villanueva-Domingo",
-        "Miles Cranmer"
+        "Jiayu Feng"
       ],
-      "published": "2026-11-12T16:33:51Z",
-      "updated": "2026-11-12T16:33:51Z",
+      "published": "2026-11-13T15:11:11Z",
+      "updated": "2026-11-13T15:11:11Z",
       "categories": [
-        "cs.CL",
-        "astro-ph.IM",
-        "cs.AI",
-        "cs.DL"
+        "cs.CL"
       ],
       "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2611.17052v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.17052v1",
-      "comment": "Accepted at NeurIPS 2026",
+      "abs_url": "https://arxiv.org/abs/2611.18279v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.18279v1",
+      "comment": "7 pages, 4 tables. Code: https://github.com/VonFlair/gtfeng",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -671,61 +591,135 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "llm",
-        "llms"
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4635,
+          "matched": [
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4657,
+        "relevance": 0.3708,
+        "quality": 0.56,
+        "novelty": 0.8581,
+        "freshness": 0.5368,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We introduce GT-FENG (General Theory of Factual Evaluation and Normative Grounding), the first general framework to unify contextual/temporal correctness and rule-based error attribution across law, policy, and other rule-governed domains.",
+        "problem": "Whether a language model's answer is correct often depends on context: the same value can be right under one jurisdiction, date, or legal definition and wrong under another.",
+        "method": "We introduce GT-FENG (General Theory of Factual Evaluation and Normative Grounding), the first general framework to unify contextual/temporal correctness and rule-based error attribution across law, policy, and other rule-governed domains.",
+        "evidence": "GT-FENG checks answers against the applicable rules and identifies documented rules that match incorrect answers.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.18494",
+      "title": "ARCHER: From Rationale Imitation to Executable Reasoning in Small Language Models",
+      "abstract": "Small language models are attractive for local, low-cost, and privacy-sensitive deployment, but they remain unreliable on mathematical reasoning tasks that require decomposition, exact computation, tool use, and verification. We introduce \\textbf{ARCHER}: \\textbf{A}ction-trace \\textbf{R}einforcement for \\textbf{C}alculator-grounded \\textbf{H}ierarchical \\textbf{E}xecutable \\textbf{R}easoning, a two-stage framework for training small language models (SLMs) to produce executable and auditable reasoning trajectories. In the first stage, ARCHER compiles free-form chain-of-thought rationales into typed action traces containing reasoning steps, calculator calls, deterministic runtime observations, verification actions, and final answers. This shifts the supervision target from imitating explanatory text to learning a tool-grounded reasoning policy. In the second stage, ARCHER refines this policy through asymmetric hierarchical reinforcement learning, using grouped and conditionally gated trajectory rewards for answer correctness, tool grounding, process discipline, and trace alignment. Across five standard sub-10B backbones, ARCHER improves over the strongest tool-augmented baseline by 5.51 percentage points on macro-average across benchmark accuracies, including gains of 8.95 points on MATH-500 and 5.33 and 5.34 points on AIME-2024 and AIME-2025. Evaluations on two additional reasoning-specialized 7B backbones further show that executable grounding remains beneficial after reasoning-focused reinforcement learning or distillation. These results demonstrate that executable supervision and reward-guided behavioral refinement provide a general and effective training paradigm for compact mathematical reasoners.",
+      "authors": [
+        "Dhruv Dixit",
+        "Khushi Patel",
+        "Congcong Xu",
+        "Min Song"
+      ],
+      "published": "2026-11-13T18:05:33Z",
+      "updated": "2026-11-13T18:05:33Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2611.18494v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.18494v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.3816,
+          "score": 0.334,
           "matched": [
-            "learning",
-            "machine",
-            "auditing"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.194,
-          "matched": [
-            "evaluation"
+            "learning"
           ]
         },
         {
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.1078,
+          "score": 0.334,
           "matched": [
             "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1283,
+          "matched": [
+            "evaluations"
           ]
         }
       ],
       "scores": {
-        "total": 0.4748,
-        "relevance": 0.3656,
-        "quality": 0.62,
-        "novelty": 0.8489,
-        "freshness": 0.5647,
+        "total": 0.4581,
+        "relevance": 0.3597,
+        "quality": 0.55,
+        "novelty": 0.866,
+        "freshness": 0.5541,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
+        "baseline comparison",
         "benchmark evaluation",
         "quantitative results"
       ],
       "summary": {
-        "takeaway": "We introduce a benchmark that injects objective, localisable errors of four types (general issues, mathematics, numerics, citations) at three severity levels into real papers and measures each reviewer's detection rate by error type and severity, together with its false-positive rate on clean copies.",
-        "problem": "LLM-based peer review is now used at production scale, but its evaluation remains limited.",
-        "method": "We introduce a benchmark that injects objective, localisable errors of four types (general issues, mathematics, numerics, citations) at three severity levels into real papers and measures each reviewer's detection rate by error type and severity, together with its false-positive rate on clean copies.",
-        "evidence": "In particular, on astrophysics, Claude Code improves on a single Claude call in mathematics and numerics detection, and enforced citation retrieval gives Skepthical the highest citation error detection rate of all systems by a large margin.",
+        "takeaway": "We introduce \\textbf{ARCHER}: \\textbf{A}ction-trace \\textbf{R}einforcement for \\textbf{C}alculator-grounded \\textbf{H}ierarchical \\textbf{E}xecutable \\textbf{R}easoning, a two-stage framework for training small language models (SLMs) to produce executable and auditable reasoning trajectories.",
+        "problem": "Small language models are attractive for local, low-cost, and privacy-sensitive deployment, but they remain unreliable on mathematical reasoning tasks that require decomposition, exact computation, tool use, and verification.",
+        "method": "We introduce \\textbf{ARCHER}: \\textbf{A}ction-trace \\textbf{R}einforcement for \\textbf{C}alculator-grounded \\textbf{H}ierarchical \\textbf{E}xecutable \\textbf{R}easoning, a two-stage framework for training small language models (SLMs) to produce executable and auditable reasoning trajectories.",
+        "evidence": "Across five standard sub-10B backbones, ARCHER improves over the strongest tool-augmented baseline by 5.51 percentage points on macro-average across benchmark accuracies, including gains of 8.95 points on MATH-500 and 5.33 and 5.34 points on AIME-2024 and AIME-2025.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -736,9 +730,7 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning",
-          "machine",
-          "auditing"
+          "learning"
         ],
         "lane": "llm"
       }
