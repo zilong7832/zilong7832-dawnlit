@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-17T19:49:47.371360+00:00",
+  "generated_at": "2026-11-18T19:23:34.852655+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
   "source_count": 0,
@@ -9,12 +9,12 @@
   "source_lookback_days": 1,
   "source_truncated": false,
   "unseen_source_count": 0,
-  "previously_recommended_count": 488,
+  "previously_recommended_count": 491,
   "eligible_count": 0,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-17T19:49:47.371360+00:00",
+    "generated_at": "2026-11-18T19:23:34.852655+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -125,7 +125,7 @@
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
   "conference_supplement_count": 3,
-  "conference_eligible_count": 124,
+  "conference_eligible_count": 121,
   "conference_pool_updated_at": "2026-11-12T18:53:20.840176+00:00",
   "conference_source_status": {
     "ICLR:2026": "ok:223",
@@ -141,29 +141,28 @@
   },
   "papers": [
     {
-      "id": "conf:iclr:2026:10008999",
-      "title": "TROLL: Trust Regions Improve Reinforcement Learning for Large Language Models",
-      "abstract": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs). Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched. Originally introduced as a proxy for principled KL-based trust regions, clipping is a crude approximation that often causes unstable updates and suboptimal performance. We replace the clip objective with a novel discrete differentiable trust region projection, which provides principled token-level KL constraints. The projection operates on a sparse subset of the model’s most important token logits to balance computational cost and projection effectiveness. Our approach, Trust Region Optimization for Large Language Models (TROLL), serves as a direct replacement for PPO-like clipping during training and does not alter the model’s inference behavior. Across mathematical reasoning and code generation tasks, model families, as well as advantage-estimation methods, TROLL consistently outperforms PPO-like clipping in terms of training speed, stability, and final success rates.",
+      "id": "conf:icml:2026:71103",
+      "title": "Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking",
+      "abstract": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) *JBF-LIB* for shared contracts and reusable utilities; (ii) *JBF-FORGE* for the multi-agent paper-to-module translation; and (iii) *JBF-EVAL* for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by more than half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.",
       "authors": [
-        "Philipp Becker",
-        "Niklas Freymuth",
-        "Serge Thilges",
-        "Fabian Otto",
-        "Gerhard Neumann"
+        "Zhicheng Fang",
+        "Jingjie Zheng",
+        "Chenxu Fu",
+        "Wei Xu"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
       "categories": [
-        "ICLR 2026",
+        "ICML 2026",
         "Oral"
       ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10008999",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10008999",
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71103",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71103",
       "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
+      "journal_ref": "ICML 2026 Oral",
       "source": "conference",
-      "venue": "ICLR",
+      "venue": "ICML",
       "presentation": "Oral",
       "conference_year": 2026,
       "lane": "llm",
@@ -176,64 +175,39 @@
       ],
       "topics": [
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.456,
+          "score": 0.4481,
           "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.456,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0836,
-          "matched": [
-            "inference",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "estimation"
+            "evaluation",
+            "evaluations"
           ]
         }
       ],
       "scores": {
-        "total": 0.584,
-        "relevance": 0.4727,
-        "quality": 0.71,
-        "novelty": 0.8474,
+        "total": 0.5675,
+        "relevance": 0.3585,
+        "quality": 0.98,
+        "novelty": 0.8851,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "code available",
-        "publication metadata",
-        "conference oral"
+        "benchmark evaluation",
+        "dataset evidence",
+        "reproducibility",
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs).",
-        "problem": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs).",
-        "method": "Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched.",
-        "evidence": "Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched.",
+        "takeaway": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
+        "problem": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols.",
+        "method": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
+        "evidence": "Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -242,23 +216,22 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
+        "topic": "Conformal prediction",
         "matched": [
-          "learning"
+          "evaluation",
+          "evaluations"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "conf:acl:2026:3888-main",
-      "title": "Neuron-Aware Active Few-Shot Learning for LLMs",
-      "abstract": "Active Few-Shot Learning (AFSL) adapts LLMs to specialized domains by identifying the most valuable unlabeled samples for annotation and use as few-shot demonstrations, effectively reducing human annotation costs while promoting high performance. However, existing methods typically rely on output-level signals for the sample identification, such as predictive entropy or semantic similarities with test-time data based on external embeddings, which often overlook models' internal dynamics which could pinpoint specific knowledge gaps. To bridge this gap, we propose NeuFS, a Neuron-Aware Active Few-Shot Learning framework that shifts the selection paradigm from output-level proxies to models' internal dynamics. NeuFS utilizes neuron activation patterns to represent sample directly, and includes a dual-criteria selection strategy that: (1) ensures few-shot sample diversity with neuron patterns for broader example coverage, while (2) prioritizing on identifying informative and challenging few-shot samples LLMs tend to hallucinate by quantifying neuron consensus. Experiments on three datasets demonstrate that NeuFS excels in both reasoning and text classification tasks, outperforming existing AFSL baselines. Ablation studies further highlight that internal neuron activations provide a more principled and effective selection signal than external embeddings, validating the superiority of the proposed NeuFS.",
+      "id": "conf:acl:2026:2141-main",
+      "title": "When Bigger Isn’t Better: A Comprehensive Fairness Evaluation of Political Bias in Multi-News Summarisation",
+      "abstract": "Multi-document news summarisation systems are increasingly adopted for their convenience in processing vast daily news content, making fairness across diverse political perspectives critical. However, these systems can exhibit political bias through unequal representation of viewpoints, disproportionate emphasis on certain perspectives, and systematic underrepresentation of minority voices. This study presents a comprehensive evaluation of such bias in multi-document news summarisation using FairNews, a dataset of complete news articles with political orientation labels, examining how large language models (LLMs) handle sources with varying political leanings across 13 models and five fairness metrics. We investigate both baseline model performance and effectiveness of various debiasing interventions, including prompt-based and judge-based approaches. Our findings challenge the assumption that larger models yield fairer outputs, as mid-sized variants consistently outperform their larger counterparts, offering the best balance of fairness and efficiency. Prompt-based debiasing proves highly model dependent, while entity sentiment emerges as the most stubborn fairness dimension, resisting all intervention strategies tested. These results demonstrate that fairness in multi-document news summarisation requires multi-dimensional evaluation frameworks and targeted, architecture-aware debiasing rather than simply scaling up.",
       "authors": [
-        "Zhuowei Chen",
-        "Liwei Chen",
-        "Christian Schunn",
-        "Raquel Coelho",
-        "Xiang Lorraine Li"
+        "Nannan Huang",
+        "Iffat Maab",
+        "Junichi Yamagishi"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -277,80 +250,64 @@
       "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
         "llms"
       ],
       "topics": [
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.3804,
+          "score": 0.5062,
           "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3804,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0819,
-          "matched": [
-            "selection"
+            "evaluation"
           ]
         },
         {
           "id": "functional_time_series",
           "name": "Functional time series",
           "status": "emerging",
-          "score": 0.0582,
+          "score": 0.042,
           "matched": [
-            "time",
-            "data"
+            "dependent"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.0582,
+          "score": 0.042,
           "matched": [
-            "time",
-            "data"
+            "dependent"
           ]
         }
       ],
       "scores": {
-        "total": 0.5773,
-        "relevance": 0.3968,
-        "quality": 0.92,
-        "novelty": 0.8536,
+        "total": 0.5644,
+        "relevance": 0.4218,
+        "quality": 0.76,
+        "novelty": 0.8822,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "ablation study",
         "baseline comparison",
-        "experiments",
         "dataset evidence",
-        "quantitative results"
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
       ],
       "summary": {
-        "takeaway": "To bridge this gap, we propose NeuFS, a Neuron-Aware Active Few-Shot Learning framework that shifts the selection paradigm from output-level proxies to models' internal dynamics.",
-        "problem": "Active Few-Shot Learning (AFSL) adapts LLMs to specialized domains by identifying the most valuable unlabeled samples for annotation and use as few-shot demonstrations, effectively reducing human annotation costs while promoting high performance.",
-        "method": "To bridge this gap, we propose NeuFS, a Neuron-Aware Active Few-Shot Learning framework that shifts the selection paradigm from output-level proxies to models' internal dynamics.",
-        "evidence": "Experiments on three datasets demonstrate that NeuFS excels in both reasoning and text classification tasks, outperforming existing AFSL baselines.",
+        "takeaway": "Multi-document news summarisation systems are increasingly adopted for their convenience in processing vast daily news content, making fairness across diverse political perspectives critical.",
+        "problem": "Multi-document news summarisation systems are increasingly adopted for their convenience in processing vast daily news content, making fairness across diverse political perspectives critical.",
+        "method": "These results demonstrate that fairness in multi-document news summarisation requires multi-dimensional evaluation frameworks and targeted, architecture-aware debiasing rather than simply scaling up.",
+        "evidence": "Our findings challenge the assumption that larger models yield fairer outputs, as mid-sized variants consistently outperform their larger counterparts, offering the best balance of fairness and efficiency.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -359,26 +316,42 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
+        "topic": "Conformal prediction",
         "matched": [
-          "learning"
+          "evaluation"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "conf:iclr:2026:10007708",
-      "title": "Planner Aware Path Learning in Diffusion Language Models Training",
-      "abstract": "Diffusion language models have emerged as a powerful alternative to autoregressive models, enabling fast inference through more flexible and parallel generation paths. This flexibility of sampling is unlocked by new engineered sampling strategies, or *planners*, that select more favorable generation paths by iteratively planning---versus uniformly at random---where to denoise along the sequence. However, by modifying the reverse paths via planning, planners create an irrevocable mismatch between the uniformly random denoising paths during training and planning-based inference. In this paper, we systematically investigate the mismatch of discrete diffusion training and inference under planning and theoretically prove that the standard discrete diffusion training evidence lower bound (ELBO) does not accurately describe a denoiser that uses a non-uniform planner. To address this gap, we derive a new planned evidence lower bound (P-ELBO) that incorporates planner-based reverse dynamics directly into the training objective. Using the P-ELBO, we introduce *Planner Aware Path Learning* (PAPL), a novel training scheme that aligns training and inference under a planned denoiser. PAPL is implemented as a simple yet effective modification to the standard masked discrete diffusion loss, making it widely applicable and easy to adopt. Empirically, we show PAPL delivers consistent gains across domains, including a 40\\% relative improvement in protein sequences, improved text generation with up to a $4\\times$ relative MAUVE gain, and 23\\% relative improvement in code generation HumanEval pass@10.",
+      "id": "conf:iclr:2026:10007487",
+      "title": "BIRD-INTERACT: Re-imagining Text-to-SQL Evaluation via Lens of Dynamic Interactions",
+      "abstract": "Large language models (LLMs) have demonstrated remarkable performance on single-turn text-to-SQL tasks, but real-world database applications predominantly require multi-turn interactions to handle ambiguous queries, execution errors, and evolving user requirements. Existing multi-turn benchmarks fall short of capturing this complexity, either by treating conversation histories as static context or by limiting evaluation to narrow, read-only (SELECT-ONLY) operations, thereby potentially failing to reflect the challenges encountered in production-grade database assistant. In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases. Each task features ambiguous and follow-up sub-tasks, requiring LLMs to engage in dynamic interaction. The suite is organized into two sets: a full set (BIRD-INTERACT-FULL) of 600 tasks which unfold up to 11,796 dynamic interactions for a comprehensive overview of performance and a lite set (BIRD-INTERACT-LITE) of 300 tasks, with simplified databases for detailed behavioral analysis of interactions, and fast development of methods. Our empirical results highlight the difficulty of BIRD-INTERACT: the most recent flagship model GPT-5 completes only 8.67% of tasks in the c-Interact setting and 17.00% in the a-Interact setting on the full task suite. Further analysis via memory grafting and Interaction Test-time Scaling (ITS) validates the importance of effective interaction for achieving success in dynamic text-to-SQL tasks.",
       "authors": [
-        "Zhangzhi Peng",
-        "Zachary Bezemek",
-        "Jarrid Rector-Brooks",
-        "Shuibai Zhang",
-        "Michael Bronstein",
-        "Anru Zhang",
-        "Joey Bose",
-        "Alexander Tong"
+        "Nan Huo",
+        "Xiaohan Xu",
+        "Jinyang Li",
+        "Per Jacobsson",
+        "Shipei Lin",
+        "Bowen Qin",
+        "Binyuan Hui",
+        "Xiaolong Li",
+        "Ge Qu",
+        "Shuzheng Si",
+        "Linheng Han",
+        "Edward Alexander",
+        "Xintong Zhu",
+        "Rui Qin",
+        "Ruihan Yu",
+        "Yiyao Jin",
+        "Feige Zhou",
+        "Weihao Zhong",
+        "Yun Chen",
+        "Hongyu Liu",
+        "Chenhao Ma",
+        "Fatma Ozcan",
+        "Yannis Papakonstantinou",
+        "Reynold Cheng"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -387,8 +360,8 @@
         "Oral"
       ],
       "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10007708",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10007708",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10007487",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10007487",
       "comment": "",
       "journal_ref": "ICLR 2026 Oral",
       "source": "conference",
@@ -397,61 +370,64 @@
       "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
+        "large language model",
+        "large language models",
         "language model",
-        "language models"
+        "language models",
+        "llms"
       ],
       "topics": [
         {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.3963,
+          "score": 0.5062,
           "matched": [
-            "learning"
+            "evaluation"
           ]
         },
         {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
+          "id": "functional_time_series",
+          "name": "Functional time series",
           "status": "emerging",
-          "score": 0.3963,
+          "score": 0.1084,
           "matched": [
-            "learning"
+            "time",
+            "analysis"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.1003,
+          "score": 0.042,
           "matched": [
-            "inference"
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.5781,
-        "relevance": 0.4164,
-        "quality": 0.85,
-        "novelty": 0.8747,
+        "total": 0.5625,
+        "relevance": 0.435,
+        "quality": 0.72,
+        "novelty": 0.8575,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "formal bound",
+        "benchmark evaluation",
         "quantitative results",
         "publication metadata",
         "conference oral"
       ],
       "summary": {
-        "takeaway": "Using the P-ELBO, we introduce *Planner Aware Path Learning* (PAPL), a novel training scheme that aligns training and inference under a planned denoiser.",
-        "problem": "Diffusion language models have emerged as a powerful alternative to autoregressive models, enabling fast inference through more flexible and parallel generation paths.",
-        "method": "Using the P-ELBO, we introduce *Planner Aware Path Learning* (PAPL), a novel training scheme that aligns training and inference under a planned denoiser.",
-        "evidence": "In this paper, we systematically investigate the mismatch of discrete diffusion training and inference under planning and theoretically prove that the standard discrete diffusion training evidence lower bound (ELBO) does not accurately describe a denoiser that uses a non-uniform planner.",
+        "takeaway": "In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases.",
+        "problem": "Large language models (LLMs) have demonstrated remarkable performance on single-turn text-to-SQL tasks, but real-world database applications predominantly require multi-turn interactions to handle ambiguous queries, execution errors, and evolving user requirements.",
+        "method": "In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases.",
+        "evidence": "In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -460,9 +436,9 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
+        "topic": "Conformal prediction",
         "matched": [
-          "learning"
+          "evaluation"
         ],
         "lane": "llm"
       }

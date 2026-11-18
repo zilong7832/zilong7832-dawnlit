@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T19:49:47.371360+00:00",
+  "updated_at": "2026-11-18T19:23:34.852655+00:00",
   "paper_ids": [
     "2606.26027",
     "2606.26036",
@@ -444,6 +444,7 @@
     "conf:acl:2026:2004-main",
     "conf:acl:2026:2139-main",
     "conf:acl:2026:214-main",
+    "conf:acl:2026:2141-main",
     "conf:acl:2026:2343-main",
     "conf:acl:2026:2353-main",
     "conf:acl:2026:240-srw",
@@ -469,6 +470,7 @@
     "conf:acl:2026:543-main",
     "conf:acl:2026:905-main",
     "conf:acl:2026:96-main",
+    "conf:iclr:2026:10007487",
     "conf:iclr:2026:10007708",
     "conf:iclr:2026:10008351",
     "conf:iclr:2026:10008999",
@@ -490,6 +492,7 @@
     "conf:icml:2026:71092",
     "conf:icml:2026:71094",
     "conf:icml:2026:71100",
+    "conf:icml:2026:71103",
     "conf:icml:2026:71112",
     "conf:icml:2026:71120"
   ]
