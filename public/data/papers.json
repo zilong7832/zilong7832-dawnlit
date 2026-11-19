@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-18T19:23:34.852655+00:00",
+  "generated_at": "2026-11-19T19:28:29.967486+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
   "source_count": 0,
@@ -9,12 +9,12 @@
   "source_lookback_days": 1,
   "source_truncated": false,
   "unseen_source_count": 0,
-  "previously_recommended_count": 491,
+  "previously_recommended_count": 494,
   "eligible_count": 0,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-18T19:23:34.852655+00:00",
+    "generated_at": "2026-11-19T19:28:29.967486+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -125,12 +125,12 @@
   "minimum_daily_target": 3,
   "minimum_daily_met": true,
   "conference_supplement_count": 3,
-  "conference_eligible_count": 121,
-  "conference_pool_updated_at": "2026-11-12T18:53:20.840176+00:00",
+  "conference_eligible_count": 123,
+  "conference_pool_updated_at": "2026-11-19T19:28:29.967486+00:00",
   "conference_source_status": {
     "ICLR:2026": "ok:223",
     "ICML:2026": "ok:742",
-    "NeurIPS:2026": "ok:0",
+    "NeurIPS:2026": "ok:227",
     "ACL:2026": "ok:478",
     "EMNLP:2026": "awaiting_verified_schedule",
     "ICLR:2025": "ok:213",
@@ -141,28 +141,26 @@
   },
   "papers": [
     {
-      "id": "conf:icml:2026:71103",
-      "title": "Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking",
-      "abstract": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) *JBF-LIB* for shared contracts and reusable utilities; (ii) *JBF-FORGE* for the multi-agent paper-to-module translation; and (iii) *JBF-EVAL* for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by more than half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.",
+      "id": "conf:neurips:2026:139266",
+      "title": "ALTER: An Allen's Algebra-Based Evaluation Framework for Temporal Reasoning of LLMs",
+      "abstract": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities. To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra. By combining basic relations into complex networks and converting these structures into natural language forms through an automated pipeline, we construct a validated benchmark of 2,500 question-answer pairs, ensuring a controllable and scalable evaluation environment. We conduct experiments on a representative selection of LLMs. Empirical evaluations on diverse LLMs yield three key findings: (1) identifying performance decline of LLMs in highly complex scenarios involving dense events; (2) isolating complex logical interactions—rather than linguistic comprehension—as an unresolved bottleneck; and (3) revealing a critical evaluation bias induced by narrative chronology, with LLMs exploiting textual shortcuts. In summary, these findings reveal the blind spots of current evaluation paradigms, providing a rigorous foundation for the robust evaluation of complex temporal reasoning.",
       "authors": [
-        "Zhicheng Fang",
-        "Jingjie Zheng",
-        "Chenxu Fu",
-        "Wei Xu"
+        "Hongkai Zhou",
+        "Yanhui Li"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
       "categories": [
-        "ICML 2026",
+        "NeurIPS 2026",
         "Oral"
       ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/oral/71103",
-      "pdf_url": "https://icml.cc/virtual/2026/oral/71103",
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/oral/139266",
+      "pdf_url": "https://neurips.cc/virtual/2026/oral/139266",
       "comment": "",
-      "journal_ref": "ICML 2026 Oral",
+      "journal_ref": "NeurIPS 2026 Oral",
       "source": "conference",
-      "venue": "ICML",
+      "venue": "NeurIPS",
       "presentation": "Oral",
       "conference_year": 2026,
       "lane": "llm",
@@ -178,36 +176,64 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.4481,
+          "score": 0.7105,
           "matched": [
             "evaluation",
-            "evaluations"
+            "evaluations",
+            "interval"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "selection"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.5675,
-        "relevance": 0.3585,
-        "quality": 0.98,
-        "novelty": 0.8851,
+        "total": 0.6734,
+        "relevance": 0.5868,
+        "quality": 0.78,
+        "novelty": 0.8596,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
         "benchmark evaluation",
-        "dataset evidence",
-        "reproducibility",
-        "quantitative results"
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
       ],
       "summary": {
-        "takeaway": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
-        "problem": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols.",
-        "method": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
-        "evidence": "Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points.",
+        "takeaway": "To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra.",
+        "problem": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities.",
+        "method": "To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra.",
+        "evidence": "We conduct experiments on a representative selection of LLMs.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -219,19 +245,149 @@
         "topic": "Conformal prediction",
         "matched": [
           "evaluation",
-          "evaluations"
+          "evaluations",
+          "interval"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "conf:acl:2026:2141-main",
-      "title": "When Bigger Isn’t Better: A Comprehensive Fairness Evaluation of Political Bias in Multi-News Summarisation",
-      "abstract": "Multi-document news summarisation systems are increasingly adopted for their convenience in processing vast daily news content, making fairness across diverse political perspectives critical. However, these systems can exhibit political bias through unequal representation of viewpoints, disproportionate emphasis on certain perspectives, and systematic underrepresentation of minority voices. This study presents a comprehensive evaluation of such bias in multi-document news summarisation using FairNews, a dataset of complete news articles with political orientation labels, examining how large language models (LLMs) handle sources with varying political leanings across 13 models and five fairness metrics. We investigate both baseline model performance and effectiveness of various debiasing interventions, including prompt-based and judge-based approaches. Our findings challenge the assumption that larger models yield fairer outputs, as mid-sized variants consistently outperform their larger counterparts, offering the best balance of fairness and efficiency. Prompt-based debiasing proves highly model dependent, while entity sentiment emerges as the most stubborn fairness dimension, resisting all intervention strategies tested. These results demonstrate that fairness in multi-document news summarisation requires multi-dimensional evaluation frameworks and targeted, architecture-aware debiasing rather than simply scaling up.",
+      "id": "conf:neurips:2026:138961",
+      "title": "Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs",
+      "abstract": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable. Score inflation and selective reporting have eroded the authority of standard benchmarks, leaving the community uncertain about which evaluation results remain trustworthy. We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem. By distilling **158** validated benchmarks from the technical reports of **117** representative models released between **2025** and **April 2026**, we systematically characterize the evaluation landscape. BHI is the **first framework** to quantify benchmark health at a macro level, providing a well-grounded quantitative basis for benchmark selection and supporting the dynamic filtering and continuous updating of evaluation sets. Our comprehensive analysis not only identifies benchmarks that remain highly credible but also exposes pervasive structural issues. By establishing a rigorous foundation for selection and management, BHI elevates evaluation practice from heuristic-based judgment to a quantifiable and interpretable scientific process. Our code is available online at",
       "authors": [
-        "Nannan Huang",
-        "Iffat Maab",
-        "Junichi Yamagishi"
+        "Longyuan Zhu",
+        "Hairan Hua",
+        "Linlin Miao",
+        "Wei Wang",
+        "必应 赵"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/oral/138961",
+      "pdf_url": "https://neurips.cc/virtual/2026/oral/138961",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "evaluation",
+            "selective"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.2774,
+          "matched": [
+            "trustworthy",
+            "auditing"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0832,
+          "matched": [
+            "selection"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6004,
+        "relevance": 0.4495,
+        "quality": 0.86,
+        "novelty": 0.8627,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
+        "problem": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable.",
+        "method": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
+        "evidence": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "selective"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:1472-main",
+      "title": "DPWriter: Reinforcement Learning with Diverse Planning Branching for Creative Writing",
+      "abstract": "Reinforcement learning (RL)-based enhancement of large language models (LLMs) often leads to reduced output diversity, undermining their utility in open-ended tasks like creative writing. Current methods lack explicit mechanisms for guiding diverse exploration and instead prioritize optimization efficiency and performance over diversity. This paper proposes an RL framework structured around a semi-structured long Chain-of-Thought (CoT), in which the generation process is decomposed into explicitly planned intermediate steps. We introduce a Diverse Planning Branching method that strategically introduces divergence at the planning phase based on diversity variation, alongside a group-aware diversity reward to encourage distinct trajectories. Experimental results on creative writing benchmarks demonstrate that our approach significantly improves output diversity without compromising generation quality, consistently outperforming existing baselines.",
+      "authors": [
+        "Qian Cao",
+        "Yahui Liu",
+        "Wei Bi",
+        "Yi Zhao",
+        "Ruihua Song",
+        "Xiting Wang",
+        "Ruiming Tang",
+        "Guorui Zhou",
+        "Han Li"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -258,176 +414,47 @@
       ],
       "topics": [
         {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.5062,
+          "score": 0.4342,
           "matched": [
-            "evaluation"
+            "learning"
           ]
         },
         {
-          "id": "functional_time_series",
-          "name": "Functional time series",
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.4341,
           "matched": [
-            "dependent"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "dependent"
+            "learning"
           ]
         }
       ],
       "scores": {
-        "total": 0.5644,
-        "relevance": 0.4218,
-        "quality": 0.76,
-        "novelty": 0.8822,
+        "total": 0.5626,
+        "relevance": 0.4342,
+        "quality": 0.72,
+        "novelty": 0.8641,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "baseline comparison",
-        "dataset evidence",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "Multi-document news summarisation systems are increasingly adopted for their convenience in processing vast daily news content, making fairness across diverse political perspectives critical.",
-        "problem": "Multi-document news summarisation systems are increasingly adopted for their convenience in processing vast daily news content, making fairness across diverse political perspectives critical.",
-        "method": "These results demonstrate that fairness in multi-document news summarisation requires multi-dimensional evaluation frameworks and targeted, architecture-aware debiasing rather than simply scaling up.",
-        "evidence": "Our findings challenge the assumption that larger models yield fairer outputs, as mid-sized variants consistently outperform their larger counterparts, offering the best balance of fairness and efficiency.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "conf:iclr:2026:10007487",
-      "title": "BIRD-INTERACT: Re-imagining Text-to-SQL Evaluation via Lens of Dynamic Interactions",
-      "abstract": "Large language models (LLMs) have demonstrated remarkable performance on single-turn text-to-SQL tasks, but real-world database applications predominantly require multi-turn interactions to handle ambiguous queries, execution errors, and evolving user requirements. Existing multi-turn benchmarks fall short of capturing this complexity, either by treating conversation histories as static context or by limiting evaluation to narrow, read-only (SELECT-ONLY) operations, thereby potentially failing to reflect the challenges encountered in production-grade database assistant. In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases. Each task features ambiguous and follow-up sub-tasks, requiring LLMs to engage in dynamic interaction. The suite is organized into two sets: a full set (BIRD-INTERACT-FULL) of 600 tasks which unfold up to 11,796 dynamic interactions for a comprehensive overview of performance and a lite set (BIRD-INTERACT-LITE) of 300 tasks, with simplified databases for detailed behavioral analysis of interactions, and fast development of methods. Our empirical results highlight the difficulty of BIRD-INTERACT: the most recent flagship model GPT-5 completes only 8.67% of tasks in the c-Interact setting and 17.00% in the a-Interact setting on the full task suite. Further analysis via memory grafting and Interaction Test-time Scaling (ITS) validates the importance of effective interaction for achieving success in dynamic text-to-SQL tasks.",
-      "authors": [
-        "Nan Huo",
-        "Xiaohan Xu",
-        "Jinyang Li",
-        "Per Jacobsson",
-        "Shipei Lin",
-        "Bowen Qin",
-        "Binyuan Hui",
-        "Xiaolong Li",
-        "Ge Qu",
-        "Shuzheng Si",
-        "Linheng Han",
-        "Edward Alexander",
-        "Xintong Zhu",
-        "Rui Qin",
-        "Ruihan Yu",
-        "Yiyao Jin",
-        "Feige Zhou",
-        "Weihao Zhong",
-        "Yun Chen",
-        "Hongyu Liu",
-        "Chenhao Ma",
-        "Fatma Ozcan",
-        "Yannis Papakonstantinou",
-        "Reynold Cheng"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10007487",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10007487",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5062,
-          "matched": [
-            "evaluation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1084,
-          "matched": [
-            "time",
-            "analysis"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5625,
-        "relevance": 0.435,
-        "quality": 0.72,
-        "novelty": 0.8575,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
         "benchmark evaluation",
-        "quantitative results",
+        "experiments",
         "publication metadata",
         "conference oral"
       ],
       "summary": {
-        "takeaway": "In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases.",
-        "problem": "Large language models (LLMs) have demonstrated remarkable performance on single-turn text-to-SQL tasks, but real-world database applications predominantly require multi-turn interactions to handle ambiguous queries, execution errors, and evolving user requirements.",
-        "method": "In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases.",
-        "evidence": "In this work, we introduce BIRD-INTERACT, a benchmark that restores this missing realism through: (1) a **comprehensive interaction environment** that couples each database with a hierarchical knowledge base, metadata files, and a function-driven user simulator, enabling models to solicit clarifications, retrieve knowledge, and recover from execution errors without human supervision; (2) two **evaluation settings** reflecting real-world interaction settings which contain a pre-defined conversational protocol (c-Interact) and a more open-ended agentic setting (a-Interact) in which the model autonomously decides when to query the user simulator or explore the DB environment; (3) a **challenging task suite** that covers the full CRUD spectrum for both business-intelligence and operational use cases, guarded by executable test cases.",
+        "takeaway": "We introduce a Diverse Planning Branching method that strategically introduces divergence at the planning phase based on diversity variation, alongside a group-aware diversity reward to encourage distinct trajectories.",
+        "problem": "Reinforcement learning (RL)-based enhancement of large language models (LLMs) often leads to reduced output diversity, undermining their utility in open-ended tasks like creative writing.",
+        "method": "This paper proposes an RL framework structured around a semi-structured long Chain-of-Thought (CoT), in which the generation process is decomposed into explicitly planned intermediate steps.",
+        "evidence": "Experimental results on creative writing benchmarks demonstrate that our approach significantly improves output diversity without compromising generation quality, consistently outperforming existing baselines.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -436,9 +463,9 @@
       },
       "analysis_status": "pending",
       "recommendation_reason": {
-        "topic": "Conformal prediction",
+        "topic": "Positive-unlabeled learning",
         "matched": [
-          "evaluation"
+          "learning"
         ],
         "lane": "llm"
       }

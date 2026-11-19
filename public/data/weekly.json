@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T19:23:34.852655+00:00",
+  "generated_at": "2026-11-19T19:28:29.967486+00:00",
   "papers": [
     {
       "id": "2611.15735",
@@ -100,6 +100,118 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-14T17:04:48.088049+00:00"
+    },
+    {
+      "id": "conf:neurips:2026:139266",
+      "title": "ALTER: An Allen's Algebra-Based Evaluation Framework for Temporal Reasoning of LLMs",
+      "abstract": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities. To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra. By combining basic relations into complex networks and converting these structures into natural language forms through an automated pipeline, we construct a validated benchmark of 2,500 question-answer pairs, ensuring a controllable and scalable evaluation environment. We conduct experiments on a representative selection of LLMs. Empirical evaluations on diverse LLMs yield three key findings: (1) identifying performance decline of LLMs in highly complex scenarios involving dense events; (2) isolating complex logical interactions—rather than linguistic comprehension—as an unresolved bottleneck; and (3) revealing a critical evaluation bias induced by narrative chronology, with LLMs exploiting textual shortcuts. In summary, these findings reveal the blind spots of current evaluation paradigms, providing a rigorous foundation for the robust evaluation of complex temporal reasoning.",
+      "authors": [
+        "Hongkai Zhou",
+        "Yanhui Li"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/oral/139266",
+      "pdf_url": "https://neurips.cc/virtual/2026/oral/139266",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.7105,
+          "matched": [
+            "evaluation",
+            "evaluations",
+            "interval"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "selection"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0459,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6734,
+        "relevance": 0.5868,
+        "quality": 0.78,
+        "novelty": 0.8596,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation",
+        "experiments",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra.",
+        "problem": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities.",
+        "method": "To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra.",
+        "evidence": "We conduct experiments on a representative selection of LLMs.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations",
+          "interval"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-19T19:28:29.967486+00:00"
     },
     {
       "id": "2611.18453",
@@ -548,6 +660,130 @@
       "recommended_at": "2026-11-14T17:04:48.088049+00:00"
     },
     {
+      "id": "conf:neurips:2026:138961",
+      "title": "Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs",
+      "abstract": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable. Score inflation and selective reporting have eroded the authority of standard benchmarks, leaving the community uncertain about which evaluation results remain trustworthy. We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem. By distilling **158** validated benchmarks from the technical reports of **117** representative models released between **2025** and **April 2026**, we systematically characterize the evaluation landscape. BHI is the **first framework** to quantify benchmark health at a macro level, providing a well-grounded quantitative basis for benchmark selection and supporting the dynamic filtering and continuous updating of evaluation sets. Our comprehensive analysis not only identifies benchmarks that remain highly credible but also exposes pervasive structural issues. By establishing a rigorous foundation for selection and management, BHI elevates evaluation practice from heuristic-based judgment to a quantifiable and interpretable scientific process. Our code is available online at",
+      "authors": [
+        "Longyuan Zhu",
+        "Hairan Hua",
+        "Linlin Miao",
+        "Wei Wang",
+        "必应 赵"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/oral/138961",
+      "pdf_url": "https://neurips.cc/virtual/2026/oral/138961",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "evaluation",
+            "selective"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.2774,
+          "matched": [
+            "trustworthy",
+            "auditing"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0832,
+          "matched": [
+            "selection"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "analysis",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.6004,
+        "relevance": 0.4495,
+        "quality": 0.86,
+        "novelty": 0.8627,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
+        "problem": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable.",
+        "method": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
+        "evidence": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "selective"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-19T19:28:29.967486+00:00"
+    },
+    {
       "id": "2611.16831",
       "title": "A Modular Framework for ESG Prediction through Domain-Specific Language Modeling and Graph Learning",
       "abstract": "Environmental, Social and Governance (ESG) scores are increasingly used to evaluate corporate sustainability, supporting investment decisions, ensuring regulatory compliance and assessing risk. However, current ESG evaluations largely rely on proprietary methodologies that often produce inconsistent ratings. This motivates the development of data-driven prediction frameworks. In this paper, we present ESGPred, a modular framework for predicting ESG scores by combining domain-specific language modeling with graph-based learning over a network that models the relationships among the companies being evaluated. In addition to presenting the rationale behind ESGPred and detailing its ESG score prediction process, we show that ESGPred can effectively predict both overall ESG ratings and their individual Environmental, Social, and Governance components. We evaluated ESGPred using a dataset of 5,266 sustainability reports published by 2,134 publicly listed companies between 2020 and 2023. In this evaluation, we used ESG ratings provided by LSEG Data & Analytics as ground truth. Our experimental results demonstrated that integrating graph-based relational learning improves prediction performance over purely text-based baselines.",
@@ -794,235 +1030,6 @@
       "recommended_at": "2026-11-14T17:04:48.088049+00:00"
     },
     {
-      "id": "conf:acl:2026:371-main",
-      "title": "Timely Machine: Awareness of Time Makes Test-Time Scaling Agentic",
-      "abstract": "As large language models (LLMs) increasingly tackle complex reasoning tasks, test-time scaling has become critical for enhancing capabilities. However, in agentic scenarios with frequent tool calls, the traditional generation-length-based definition breaks down: tool latency decouples inference time from generation length. We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets. We introduce Timely-Eval, a benchmark spanning high-frequency tool calls, low-frequency tool calls, and time-constrained reasoning. By varying tool latency, we find smaller models excel with fast feedback through more interactions, while larger models dominate high-latency settings via superior interaction quality. Moreover, existing models fail to adapt reasoning to time budgets. We propose Timely-RL to address this gap. After cold-start supervised fine-tuning, we use reinforcement learning to enhance temporal planning. Timely-RL improves time budget awareness and consistently boosts performance across Timely-Eval. We hope our work offers a new perspective on test-time scaling for the agentic era.",
-      "authors": [
-        "Yichuan Ma",
-        "Linyang Li",
-        "Yongkang Chen",
-        "Peiji Li",
-        "Xiaozhe Li",
-        "Qipeng Guo",
-        "Dahua Lin",
-        "Kai Chen"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5126,
-          "matched": [
-            "learning",
-            "machine"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.2237,
-          "matched": [
-            "inference",
-            "time"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.2125,
-          "matched": [
-            "time"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.1461,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5885,
-        "relevance": 0.4973,
-        "quality": 0.64,
-        "novelty": 0.8727,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets.",
-        "problem": "As large language models (LLMs) increasingly tackle complex reasoning tasks, test-time scaling has become critical for enhancing capabilities.",
-        "method": "We propose Timely Machine, redefining test-time as wall-clock time, where models dynamically adjust strategies based on time budgets.",
-        "evidence": "Timely-RL improves time budget awareness and consistently boosts performance across Timely-Eval.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Time series inference.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "machine"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-12T18:53:20.840176+00:00"
-    },
-    {
-      "id": "conf:acl:2026:2004-main",
-      "title": "Enhancing Linguistic Competence of Language Models through Pre-training with Language Learning Tasks",
-      "abstract": "Language models (LMs) are pre-trained on raw text datasets to generate text sequences token-by-token. While this approach facilitates the learning of world knowledge and reasoning, it does not explicitly optimize for linguistic competence. To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction. Inspired by human language acquisition, L2T transforms raw text into structured input-output pairs to provide explicit linguistic stimulation. Pre-training LMs on a mixture of raw text and L2T data not only improves overall performance on linguistic competence benchmarks but accelerates their acquisition, while maintaining competitive performance on general reasoning tasks.",
-      "authors": [
-        "Atsuki Yamaguchi",
-        "Maggie Mi",
-        "Nikolaos Aletras"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4684,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4683,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1372,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5855,
-        "relevance": 0.4958,
-        "quality": 0.63,
-        "novelty": 0.8723,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "dataset evidence",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction.",
-        "problem": "Language models (LMs) are pre-trained on raw text datasets to generate text sequences token-by-token.",
-        "method": "To bridge this gap, we propose L2T, a pre-training framework integrating Language Learning Tasks alongside standard next-token prediction.",
-        "evidence": "Pre-training LMs on a mixture of raw text and L2T data not only improves overall performance on linguistic competence benchmarks but accelerates their acquisition, while maintaining competitive performance on general reasoning tasks.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-12T18:53:20.840176+00:00"
-    },
-    {
       "id": "conf:iclr:2026:10008999",
       "title": "TROLL: Trust Regions Improve Reinforcement Learning for Large Language Models",
       "abstract": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs). Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched. Originally introduced as a proxy for principled KL-based trust regions, clipping is a crude approximation that often causes unstable updates and suboptimal performance. We replace the clip objective with a novel discrete differentiable trust region projection, which provides principled token-level KL constraints. The projection operates on a sparse subset of the model’s most important token logits to balance computational cost and projection effectiveness. Our approach, Trust Region Optimization for Large Language Models (TROLL), serves as a direct replacement for PPO-like clipping during training and does not alter the model’s inference behavior. Across mathematical reasoning and code generation tasks, model families, as well as advantage-estimation methods, TROLL consistently outperforms PPO-like clipping in terms of training speed, stability, and final success rates.",
@@ -1133,123 +1140,6 @@
       "recommended_at": "2026-11-17T19:49:47.371360+00:00"
     },
     {
-      "id": "conf:icml:2026:71120",
-      "title": "Information Flow Reveals When to Trust Language Models",
-      "abstract": "In retrieval-augmented generation, language models can generate incorrect responses if they fail to utilize query-relevant content from the retrieved evidence. This shifts the focus of uncertainty quantification (UQ) toward assessing contextual grounding, i.e., whether predictions are supported by query-relevant tokens. Recent UQ methods unpack language models to characterize how inputs are processed. Nevertheless, these methods focus on a few layers and overlook the whole progressive propagation within the model, thereby failing to fully capture the grounding dynamics essential for reliable uncertainty estimation. We use information flow to build a layer-wise trace that reveals each context token’s contribution to the output, providing an interpretable basis for assessing reliability. From this analysis, we introduce two measures to calibrate prediction confidence. The first, \\textit{simulatability}, posits that a prediction is more likely to be correct when context token contributions align closely with their true relevance. The second, \\textit{concentration}, asserts that a response is more likely to be correct when it is derived from a narrow, focused subset of tokens. Experiments show that our method achieves an average AUROC of 0.709, exceeding the runner-up performance of 0.676, while maintaining moderate computational cost.",
-      "authors": [
-        "Rui Xu",
-        "Yi Chen",
-        "Jiujiu Chen",
-        "Sihong Xie"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Oral"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/oral/71120",
-      "pdf_url": "https://icml.cc/virtual/2026/oral/71120",
-      "comment": "",
-      "journal_ref": "ICML 2026 Oral",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5382,
-          "matched": [
-            "uncertainty",
-            "prediction"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1283,
-          "matched": [
-            "reliable"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0399,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "analysis"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0385,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5802,
-        "relevance": 0.4642,
-        "quality": 0.71,
-        "novelty": 0.8648,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "From this analysis, we introduce two measures to calibrate prediction confidence.",
-        "problem": "In retrieval-augmented generation, language models can generate incorrect responses if they fail to utilize query-relevant content from the retrieved evidence.",
-        "method": "From this analysis, we introduce two measures to calibrate prediction confidence.",
-        "evidence": "Experiments show that our method achieves an average AUROC of 0.709, exceeding the runner-up performance of 0.676, while maintaining moderate computational cost.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "prediction"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-12T18:53:20.840176+00:00"
-    },
-    {
       "id": "conf:iclr:2026:10007708",
       "title": "Planner Aware Path Learning in Diffusion Language Models Training",
       "abstract": "Diffusion language models have emerged as a powerful alternative to autoregressive models, enabling fast inference through more flexible and parallel generation paths. This flexibility of sampling is unlocked by new engineered sampling strategies, or *planners*, that select more favorable generation paths by iteratively planning---versus uniformly at random---where to denoise along the sequence. However, by modifying the reverse paths via planning, planners create an irrevocable mismatch between the uniformly random denoising paths during training and planning-based inference. In this paper, we systematically investigate the mismatch of discrete diffusion training and inference under planning and theoretically prove that the standard discrete diffusion training evidence lower bound (ELBO) does not accurately describe a denoiser that uses a non-uniform planner. To address this gap, we derive a new planned evidence lower bound (P-ELBO) that incorporates planner-based reverse dynamics directly into the training objective. Using the P-ELBO, we introduce *Planner Aware Path Learning* (PAPL), a novel training scheme that aligns training and inference under a planned denoiser. PAPL is implemented as a simple yet effective modification to the standard masked discrete diffusion loss, making it widely applicable and easy to adopt. Empirically, we show PAPL delivers consistent gains across domains, including a 40\\% relative improvement in protein sequences, improved text generation with up to a $4\\times$ relative MAUVE gain, and 23\\% relative improvement in code generation HumanEval pass@10.",
@@ -1350,6 +1240,122 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-17T19:49:47.371360+00:00"
+    },
+    {
+      "id": "conf:acl:2026:4788-main",
+      "title": "Teaching LLMs Human-Like Editing of Inappropriate Argumentation via Reinforcement Learning",
+      "abstract": "Editing human-written text has become a standard use case of large language models (LLMs), for example, to make one's arguments more appropriate for a discussion. Comparing human to LLM-generated edits, however, we observe a mismatch in editing strategies: While LLMs often perform multiple scattered edits and tend to change meaning notably, humans rather encapsulate dependent changes in self-contained, meaning-preserving edits. In this paper, we present a reinforcement learning approach that teaches LLMs human-like editing to improve the appropriateness of arguments. Our approach produces self-contained sentence-level edit suggestions that can be accepted or rejected independently. We train the approach using group relative policy optimization with a multi-component reward function that jointly optimizes edit-level semantic similarity, fluency, and pattern conformity as well as argument-level appropriateness. In automatic and human evaluation, it outperforms competitive baselines and the state of the art in human-like editing, with multi-round editing achieving appropriateness close to full rewriting.",
+      "authors": [
+        "Timon Ziegenbein",
+        "Maja Stahl",
+        "Henning Wachsmuth"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4562,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4562,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "dependent"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "dependent"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5779,
+        "relevance": 0.4857,
+        "quality": 0.64,
+        "novelty": 0.842,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we present a reinforcement learning approach that teaches LLMs human-like editing to improve the appropriateness of arguments.",
+        "problem": "Editing human-written text has become a standard use case of large language models (LLMs), for example, to make one's arguments more appropriate for a discussion.",
+        "method": "Comparing human to LLM-generated edits, however, we observe a mismatch in editing strategies: While LLMs often perform multiple scattered edits and tend to change meaning notably, humans rather encapsulate dependent changes in self-contained, meaning-preserving edits.",
+        "evidence": "In this paper, we present a reinforcement learning approach that teaches LLMs human-like editing to improve the appropriateness of arguments.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-13T18:30:09.334632+00:00"
     }
   ]
 }

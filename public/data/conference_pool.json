@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T18:53:20.840176+00:00",
+  "updated_at": "2026-11-19T19:28:29.967486+00:00",
   "profile_updated_at": "2026-08-23",
   "scanned_years": [
     2026,
@@ -9,7 +9,7 @@
   "source_status": {
     "ICLR:2026": "ok:223",
     "ICML:2026": "ok:742",
-    "NeurIPS:2026": "ok:0",
+    "NeurIPS:2026": "ok:227",
     "ACL:2026": "ok:478",
     "EMNLP:2026": "awaiting_verified_schedule",
     "ICLR:2025": "ok:213",
@@ -2194,6 +2194,36 @@
       "conference_year": 2026
     },
     {
+      "id": "conf:neurips:2026:151482",
+      "title": "Can In-Context Learning Support Intrinsic Curiosity?",
+      "abstract": "Effective machine learning depends not only on how we model data, but also on what data we choose to collect. While large sequence models have revolutionized data modeling, the problem of automated data selection, or \"intrinsic curiosity\", remains a significant challenge. Classic approaches incentivize exploration by rewarding an agent based on its \"learning progress\", which measures how much a newly acquired observation improves a world model's predictive ability. However, evaluating these rewards traditionally requires expensive inner loops of gradient descent updates within each trajectory, rendering them computationally impractical at scale. In this work, we investigate whether the emergent in-context learning (ICL) capabilities of sequence models can eliminate this bottleneck by serving as immediate, update-free world models. Specifically, we evaluate whether an exploration policy can be trained to maximize learning progress, using solely the prediction errors and counterfactual context manipulations of an in-context learner. We first prove that in general Markov decision processes, this is in fact impossible in an unbiased way: the resulting intrinsic rewards either suffer from nuisance terms that bias their estimation of true learning progress, or they cannot be implemented using an in-context learner's prediction errors. Conversely, we prove a positive result for a broad subclass of non-temporal settings, encompassing active learning and Bayesian Experimental Design: here, ICL-derived rewards successfully bound and asymptotically converge to the true learning progress. We corroborate our theory with controlled experiments across continuous and symbolic environments, demonstrating that our ICL-driven framework successfully trains curious data-collection policies that explore optimally.",
+      "authors": [
+        "Eric Elmoznino",
+        "Sangnie Bhardwaj",
+        "Johannes von Oswald",
+        "Rajai Nasser",
+        "Blaise Aguera y Arcas",
+        "João Sacramento",
+        "Rif A. Saurous",
+        "Guillaume Lajoie"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/oral/151482",
+      "pdf_url": "https://neurips.cc/virtual/2026/oral/151482",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Oral",
+      "conference_year": 2026
+    },
+    {
       "id": "conf:acl:2026:33-ind",
       "title": "Calibrating LLM Judges: Linear Probes for Fast and Reliable Uncertainty Estimation",
       "abstract": "As LLM-based judges become integral to industry applications, obtaining well-calibrated uncertainty estimates efficiently has become critical for production deployment. However, existing techniques, such as verbalized confidence and multi-generation methods, are often either poorly calibrated or computationally expensive. We introduce linear probes trained with a Brier score-based loss to provide calibrated uncertainty estimates from reasoning judges' hidden states, requiring no additional model training. We evaluate our approach on both objective tasks (reasoning, mathematics, factuality, coding) and subjective human preference judgments. Our results demonstrate that probes achieve superior calibration compared to existing methods with x computational savings, generalize robustly to unseen evaluation domains, and deliver higher accuracy on high-confidence predictions. However, probes produce conservative estimates that underperform on easier datasets but may benefit safety-critical deployments prioritizing low false-positive rates. Overall, our work demonstrates that interpretability-based uncertainty estimation provides a practical and scalable plug-and-play solution for LLM judges in production.",
@@ -2267,6 +2297,33 @@
       "conference_year": 2026
     },
     {
+      "id": "conf:neurips:2026:138961",
+      "title": "Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs",
+      "abstract": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable. Score inflation and selective reporting have eroded the authority of standard benchmarks, leaving the community uncertain about which evaluation results remain trustworthy. We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem. By distilling **158** validated benchmarks from the technical reports of **117** representative models released between **2025** and **April 2026**, we systematically characterize the evaluation landscape. BHI is the **first framework** to quantify benchmark health at a macro level, providing a well-grounded quantitative basis for benchmark selection and supporting the dynamic filtering and continuous updating of evaluation sets. Our comprehensive analysis not only identifies benchmarks that remain highly credible but also exposes pervasive structural issues. By establishing a rigorous foundation for selection and management, BHI elevates evaluation practice from heuristic-based judgment to a quantifiable and interpretable scientific process. Our code is available online at",
+      "authors": [
+        "Longyuan Zhu",
+        "Hairan Hua",
+        "Linlin Miao",
+        "Wei Wang",
+        "必应 赵"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/oral/138961",
+      "pdf_url": "https://neurips.cc/virtual/2026/oral/138961",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Oral",
+      "conference_year": 2026
+    },
+    {
       "id": "conf:acl:2026:5089-main",
       "title": "Assessing the Belief Consistency of Large Language Models on the Logical Conversation Process",
       "abstract": "To reliably interpret the evolving context of an LLM as a reasoning trace, the underlying belief of the LLM needs to transition consistently with the progression of the context. We focus on evaluating whether the beliefs held by a model remain consistent before and after the extension of the context. Previous research on consistency evaluation typically uses datasets with ground-truth answers, which is problematic because task-solving ability acts as a confounding factor, obscuring the direct evaluation of consistency. Furthermore, evaluating cases where inconsistency stems from multiple errors poses difficulties. We propose a new evaluation method to assess the consistency of LLMs in a multiple-choice question answering format, designed so that any option chosen is correct, allowing for the evaluation of the proposed belief consistency. It also supports isolation of errors such as reasoning failures and biases. We reveal that the belief consistency does not improve solely with model size scaling, whereas continual pre-training on code and mathematics text improves it. Furthermore, models trained on code and mathematics text show a seemingly contradictory result of increased logical failures, indicating that belief consistency and superficial consistency are not necessarily directly linked.",
@@ -2322,6 +2379,30 @@
       "journal_ref": "ACL 2026 Oral",
       "source": "conference",
       "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026
+    },
+    {
+      "id": "conf:neurips:2026:139266",
+      "title": "ALTER: An Allen's Algebra-Based Evaluation Framework for Temporal Reasoning of LLMs",
+      "abstract": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities. To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra. By combining basic relations into complex networks and converting these structures into natural language forms through an automated pipeline, we construct a validated benchmark of 2,500 question-answer pairs, ensuring a controllable and scalable evaluation environment. We conduct experiments on a representative selection of LLMs. Empirical evaluations on diverse LLMs yield three key findings: (1) identifying performance decline of LLMs in highly complex scenarios involving dense events; (2) isolating complex logical interactions—rather than linguistic comprehension—as an unresolved bottleneck; and (3) revealing a critical evaluation bias induced by narrative chronology, with LLMs exploiting textual shortcuts. In summary, these findings reveal the blind spots of current evaluation paradigms, providing a rigorous foundation for the robust evaluation of complex temporal reasoning.",
+      "authors": [
+        "Hongkai Zhou",
+        "Yanhui Li"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Oral"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/oral/139266",
+      "pdf_url": "https://neurips.cc/virtual/2026/oral/139266",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Oral",
+      "source": "conference",
+      "venue": "NeurIPS",
       "presentation": "Oral",
       "conference_year": 2026
     },
@@ -2530,6 +2611,37 @@
       "source": "conference",
       "venue": "ACL",
       "presentation": "Oral",
+      "conference_year": 2026
+    },
+    {
+      "id": "conf:neurips:2026:150288",
+      "title": "TSQAgent: Rating Time Series Data Quality via Dedicated Agentic Reasoning",
+      "abstract": "Assessing the quality of time series (TS) data is fundamental yet inherently challenging due to the multifaceted nature of quality dimensions. Recently, large language models (LLMs) have emerged as a promising paradigm for TS quality assessment via pairwise comparison and per-dimension evaluation. However, existing approaches rely on manually predefined quality dimensions and purely text-based reasoning, leaving it unknown whether LLMs can identify truly relevant quality dimensions or perform grounded and quantitative quality comparisons. To investigate this, we construct TSQBench, a dedicated benchmark for evaluating LLMs’ capabilities in TS quality assessment, which measures two progressive capabilities: (i) understanding and identifying relevant quality dimensions, and (ii) performing quality comparison under specific dimensions. Our analysis reveals that both open-source and proprietary LLMs consistently struggle with identifying critical quality dimensions and conducting precise, evidence-grounded reasoning over quality characteristics. To address these limitations, we propose TSQAgent, a novel agentic reasoning framework for dedicated TS data quality rating, comprising three collaborative roles: Perceiver for focused dimension selection, Inspector for dimension-wise quantitative analysis, and Adjudicator that aggregates and refines the final judgment. In particular, we introduce an agentic reasoning strategy that instills the ability to identify and prioritize the most relevant quality dimensions, and further propose an agent workflow equipped with external analytical tools to enable precise quantitative comparisons over selected dimensions. Experiments on both the proposed benchmark and eleven real-world datasets demonstrate that our framework not only substantially improves LLMs’ capabilities in quality understanding and quantitative comparison but also effectively translates these improvements into better quality-aware data selection, leading to enhanced downstream performance and data efficiency.",
+      "authors": [
+        "Shunyu Wu",
+        "Dan Li",
+        "Haozheng Ye",
+        "Weibin Feng",
+        "Jian Lou",
+        "Bo Zhang",
+        "Wenjie Feng",
+        "Chenjuan Guo",
+        "See-Kiong Ng"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/poster/150288",
+      "pdf_url": "https://neurips.cc/virtual/2026/poster/150288",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
       "conference_year": 2026
     },
     {
@@ -2948,6 +3060,33 @@
       "conference_year": 2026
     },
     {
+      "id": "conf:neurips:2026:139074",
+      "title": "Large Language Model Selection with Limited Annotations",
+      "abstract": "Choosing a Large Language Model (LLM) for a given task requires comparing many strong candidates, yet standard evaluation relies on costly annotations over fixed evaluation sets. To address this challenge, we develop Select-LLM, the first framework for active model selection of LLMs. Select-LLM aims to find a small set of queries whose annotations are most informative for identifying the best LLM for a given task. To this end, we introduce a query selection rule based on expected information gain, computed from pairwise similarities between candidate model outputs. Because this rule only uses generated model responses, Select-LLM can be applied across candidate models without assumptions about their architecture or access to model weights. This makes it suitable for both open-weight and black-box LLMs. We evaluate Select-LLM across 23 datasets, 156 evaluated models, diverse task families, and multiple text evaluation metrics. Across all experiments, Select-LLM improves over the strongest baseline in every setting, with annotation cost reductions up to 81.8% for best model selection and up to 84.78% for near-best model selection.",
+      "authors": [
+        "Yavuz Durmazkeser",
+        "Patrik Okanovic",
+        "Andreas Kirsch",
+        "Torsten Hoefler",
+        "Nezihe Merve Gürel"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/poster/139074",
+      "pdf_url": "https://neurips.cc/virtual/2026/poster/139074",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
+      "presentation": "Spotlight",
+      "conference_year": 2026
+    },
+    {
       "id": "conf:icml:2026:61517",
       "title": "Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates",
       "abstract": "While Large Language Model (LLM) agents excel at general tasks, they inherently struggle with continual adaptation due to the frozen weights after deployment. Conventional reinforcement learning (RL) offers a solution but incurs prohibitive computational costs and the risk of catastrophic forgetting. We introduce Just-In-Time Reinforcement Learning (JitRL), a training-free framework that enables test-time policy optimization without any gradient updates. JitRL maintains a dynamic, non-parametric memory of experiences and retrieves relevant trajectories to estimate action advantages on-the-fly. These estimates are then used to directly modulate the LLM's output logits. We theoretically prove that this additive update rule is the exact closed-form solution to the KL-constrained policy optimization objective. Extensive experiments on WebArena and Jericho demonstrate that JitRL establishes a new state-of-the-art among training-free methods. Crucially, JitRL outperforms the performance of computationally expensive fine-tuning methods (e.g., WebRL) while reducing monetary costs by over 30 times, offering a scalable path for continual learning agents. The code is available at https://anonymous.4open.science/r/JitRL-D485.",
@@ -3166,6 +3305,35 @@
       "journal_ref": "ICML 2026 Spotlight",
       "source": "conference",
       "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026
+    },
+    {
+      "id": "conf:neurips:2026:155856",
+      "title": "CoreQ: Learning-Free Mismatch Correction and Successive Rounding for Quantization",
+      "abstract": "Post-training quantization (PTQ) enables efficient deployment of large language models by mapping pretrained weights to low-bit formats without retraining, typically using a small calibration set to minimize a layer-wise calibration objective. However, this sequential procedure induces a mismatch: errors from earlier quantized layers alter the inputs received by later layers, causing the activations to deviate from those of the full-precision model. Recent approaches introduce mismatch-aware calibration objectives to compensate for this effect, but leave open how much of the observed mismatch should shift each layer's calibration target. Fully applying this correction can overfit limited calibration data, while scaling the mismatch correction with a fixed coefficient ignores varying reliability of mismatch estimates across layers. To address these limitations, we propose CoreQ, a learning-free PTQ framework that applies a closed-form coefficient for mismatch correction derived from a geometric decomposition of the mismatch. The resulting coefficient adapts the correction across layers, reduces overfitting to finite calibration data, and requires no hyperparameter tuning. Given the corrected target, CoreQ minimizes the induced triangular least-squares objective with an efficient greedy successive-rounding solver and a bounded beam-search extension, K-CoreQ, that trades modest additional compute for improved performance. Across multiple LLM families, scales, bit-widths, and quantization settings, CoreQ improves perplexity and downstream accuracy over strong PTQ baselines.",
+      "authors": [
+        "Seohyeon Cha",
+        "Huancheng Chen",
+        "Dongjun Kim",
+        "Haoran Zhang",
+        "Kevin Chan",
+        "Gustavo De Veciana",
+        "Haris Vikalo"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "NeurIPS 2026",
+        "Spotlight"
+      ],
+      "primary_category": "NeurIPS 2026",
+      "abs_url": "https://neurips.cc/virtual/2026/poster/155856",
+      "pdf_url": "https://neurips.cc/virtual/2026/poster/155856",
+      "comment": "",
+      "journal_ref": "NeurIPS 2026 Spotlight",
+      "source": "conference",
+      "venue": "NeurIPS",
       "presentation": "Spotlight",
       "conference_year": 2026
     },
