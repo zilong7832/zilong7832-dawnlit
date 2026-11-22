@@ -1,20 +1,20 @@
 {
   "schema_version": 1,
   "demo": false,
-  "generated_at": "2026-11-21T17:57:13.230731+00:00",
+  "generated_at": "2026-11-22T18:29:29.101544+00:00",
   "profile_updated_at": "2026-08-23",
   "content_language": "zh",
-  "source_count": 908,
-  "source_total": 908,
+  "source_count": 478,
+  "source_total": 478,
   "source_lookback_days": 4,
   "source_truncated": false,
-  "unseen_source_count": 908,
-  "previously_recommended_count": 500,
-  "eligible_count": 36,
+  "unseen_source_count": 472,
+  "previously_recommended_count": 506,
+  "eligible_count": 15,
   "feedback_count": 0,
   "topic_feedback": {
     "enabled": true,
-    "generated_at": "2026-11-21T17:57:13.230731+00:00",
+    "generated_at": "2026-11-22T18:29:29.101544+00:00",
     "feedback_records": 0,
     "latest_feedback_papers": 0,
     "labeled_papers": 0,
@@ -130,24 +130,25 @@
   "conference_source_status": {},
   "papers": [
     {
-      "id": "2611.26069",
-      "title": "SheetAlign: Grounded Interaction and Stage-Isolated Learning for Spreadsheet Agents",
-      "abstract": "Spreadsheets are widely used for data analysis and supporting decision-making. Automating spreadsheet analysis while protecting sensitive data and controlling deployment costs motivates locally deployed open-weight large language models (LLMs). Meanwhile, complex spreadsheet tasks require both task reasoning and workbook understanding, while predefined operation interfaces impose additional tool-selection and invocation demands. We introduce SheetAlign, a spreadsheet manipulation framework with stage-isolated policy learning, organized around where to operate, what to change, and how to implement transformations. Task-guided inspection and API grounding anchor code generation in workbook observations and available operations, while stage-isolated learning optimizes program generation and review using edit-progress rewards. At inference, execution consistency selects programs through agreement among workbook states. On SpreadsheetBench, our grounded task interface improves Qwen3-4B's accuracy from 13.5% to 29.2% on average without training. With learning and execution consistency, SheetAlign achieves 32.8% accuracy on average on SpreadsheetBench and 30.1% on Domain-Spreadsheet, outperforming comparable baselines. The code will be made publicly available upon publication.",
+      "id": "2611.26264",
+      "title": "A Statistical Framework for Training Data Auditing of Large Language Models",
+      "abstract": "Training-data auditing asks whether data of interest were used to train a large language model (LLM), a question central to privacy auditing, copyright protection, and benchmark-contamination detection. These concerns are particularly relevant to the use of copyrighted books and scientific papers in pre-training, as well as synthetic text and medical question-answer records in fine-tuning. In practice, training membership signals may be concentrated in only a few passages of a long document, making it important to aggregate evidence within each document without diluting these localized signals. Beyond individual documents, auditing a target collection requires an overall assessment based on the document-level evidence. In this paper, we propose a unified statistical framework for document-level membership inference, target-collection global auditing, and suspicious-subset identification. We integrate complementary chunk-level membership evidence with Cauchy combination to construct document scores for document-level membership inference. The document scores and their calibrated p-values further enable an overall assessment of training-data collection use and the identification of suspicious documents through multiple testing. Under the stated exchangeability conditions, we establish finite-sample validity of document-level p-values, type-I error control for global auditing, and false discovery rate control for subset identification. Case studies on BookTection, Pile-arXiv, Cosmopedia, and HealthCareMagic demonstrate the effectiveness and reliability of the proposed framework in auditing pre-training and fine-tuning data.",
       "authors": [
-        "Yuxiang Wang",
-        "Junhao Gan",
-        "Jianzhong Qi"
+        "Shengjie Niu",
+        "Yeheng Ge",
+        "Jian Huang"
       ],
-      "published": "2026-11-19T13:13:12Z",
-      "updated": "2026-11-19T13:13:12Z",
+      "published": "2026-11-19T15:34:44Z",
+      "updated": "2026-11-19T15:34:44Z",
       "categories": [
-        "cs.CL",
-        "cs.SE"
+        "stat.ML",
+        "cs.LG",
+        "stat.AP"
       ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2611.26069v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.26069v1",
-      "comment": "conference paper preprint",
+      "primary_category": "stat.ML",
+      "abs_url": "https://arxiv.org/abs/2611.26264v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26264v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -159,78 +160,57 @@
         "large language models",
         "language model",
         "language models",
-        "llms"
+        "llm"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.5743,
+          "score": 0.6017,
           "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5743,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1344,
-          "matched": [
-            "analysis",
-            "data"
+            "auditing"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.1096,
+          "score": 0.2137,
           "matched": [
             "inference",
             "data"
           ]
         },
         {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
+          "id": "functional_time_series",
+          "name": "Functional time series",
           "status": "emerging",
-          "score": 0.042,
+          "score": 0.1805,
           "matched": [
-            "selection"
+            "data"
           ]
         }
       ],
       "scores": {
-        "total": 0.636,
-        "relevance": 0.6012,
-        "quality": 0.62,
-        "novelty": 0.8694,
-        "freshness": 0.6861,
+        "total": 0.5544,
+        "relevance": 0.5602,
+        "quality": 0.4,
+        "novelty": 0.8257,
+        "freshness": 0.5541,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "quantitative results"
+        "benchmark evaluation"
       ],
       "summary": {
-        "takeaway": "We introduce SheetAlign, a spreadsheet manipulation framework with stage-isolated policy learning, organized around where to operate, what to change, and how to implement transformations.",
-        "problem": "Spreadsheets are widely used for data analysis and supporting decision-making.",
-        "method": "We introduce SheetAlign, a spreadsheet manipulation framework with stage-isolated policy learning, organized around where to operate, what to change, and how to implement transformations.",
-        "evidence": "On SpreadsheetBench, our grounded task interface improves Qwen3-4B's accuracy from 13.5% to 29.2% on average without training.",
+        "takeaway": "In this paper, we propose a unified statistical framework for document-level membership inference, target-collection global auditing, and suspicious-subset identification.",
+        "problem": "Training-data auditing asks whether data of interest were used to train a large language model (LLM), a question central to privacy auditing, copyright protection, and benchmark-contamination detection.",
+        "method": "In this paper, we propose a unified statistical framework for document-level membership inference, target-collection global auditing, and suspicious-subset identification.",
+        "evidence": "Case studies on BookTection, Pile-arXiv, Cosmopedia, and HealthCareMagic demonstrate the effectiveness and reliability of the proposed framework in auditing pre-training and fine-tuning data.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Time series inference.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -241,31 +221,35 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning"
+          "auditing"
         ],
         "lane": "llm"
       }
     },
     {
-      "id": "2611.26077",
-      "title": "Same Judgement, Different Scores: Numerical Scoring Topology in LLM-as-a-Judge Evaluation",
-      "abstract": "LLMs are increasingly used as automated evaluators to reduce the cost and time required for human annotation. However, the role of scoring-scheme design in the reliability of LLM-as-a-Judge evaluation remains underexplored. To address this problem, we introduce numerical scoring topology, which characterizes the structural design of a scoring scheme in terms of its scale width, granularity, offset, symmetry, and boundary placement. Building on this definition, we conduct the first systematic study of how numerical scoring topology influences zero-shot LLM-as-a-Judge evaluation across diverse benchmarks and judge models. Our results show that numerical scoring topology systematically affects judge scores, calibration, and robustness, particularly in judgment-intensive evaluations. Shifted and narrow ranges tend to induce some of the largest score deviations across many settings. We further find that stronger and larger judge models generally achieve higher discriminative validity and greater robustness to scoring-topology changes. These findings suggest that numerical scoring topology should be treated as an integral component of LLM-as-a-Judge evaluation and highlight the need for more principled and standardized scoring protocols.",
+      "id": "2611.25433",
+      "title": "RoCoKV: Accelerating LLM Inference Serving through Uncertainty and Redundancy Aware KV Cache Compression",
+      "abstract": "KV cache compression is critical for large reasoning models, where most of the cost comes from long generated reasoning traces rather than the input prompt. These traces often contain redundant and low-utility tokens due to looping, self-verification, and corrections. However, such tokens may still receive high attention scores, making it difficult to remove them without harming the reasoning process. We propose RoCoKV, a KV cache compression method designed for large reasoning models. RoCoKV introduces two key components. First, uncertainty-guided adaptive pruning adjusts the compression strength based on the model's confidence, allocating more memory during uncertain phases and applying stronger pruning when the model is confident. Second, redundancy-aware token selection reduces the impact of tokens that are highly similar to recent reasoning content, encouraging the model to retain more informative and diverse tokens. Beyond the algorithm, we co-design RoCoKV with the serving stack: we develop fused three-phase CUDA decode kernels and integrate them into vLLM as a drop-in plugin that preserves its paged KV layout and CUDA graph capture, turning algorithmic savings into real end-to-end speedups. Extensive experiments across three reasoning benchmarks and two reasoning models demonstrate that RoCoKV consistently improves reasoning accuracy under constrained KV cache budgets, achieving higher accuracy compared to state-of-the-art KV cache compression methods. For DeepSeek-R1-Distill-Llama-8B in vLLM, RoCoKV achieves a 1.27X speedup and 38% higher throughput on AIME25, the most challenging evaluated reasoning benchmark, and a 1.43X speedup and 45% higher throughput on the long synthetic benchmark, compared with Full-KV.",
       "authors": [
-        "Doyun Kim",
-        "Chanwoo Kim",
-        "Jiwoo Kum",
-        "Minsoo Song",
-        "Chanjun Park"
+        "Payman Behnam",
+        "Elaheh Sobhani",
+        "Saad Amin",
+        "Yahya Hassan",
+        "Daniyal Khan",
+        "Biswadeep Chakraborty",
+        "Tanish Patwa",
+        "Souvik Kundu",
+        "Alexey Tumanov"
       ],
-      "published": "2026-11-19T13:17:49Z",
-      "updated": "2026-11-19T13:17:49Z",
+      "published": "2026-11-19T03:16:18Z",
+      "updated": "2026-11-19T03:16:18Z",
       "categories": [
         "cs.CL"
       ],
       "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2611.26077v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.26077v1",
-      "comment": "Accepted to Findings of EACL 2027",
+      "abs_url": "https://arxiv.org/abs/2611.25433v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25433v1",
+      "comment": "",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -273,115 +257,6 @@
       "conference_year": null,
       "lane": "llm",
       "scope_matches": [
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6646,
-          "matched": [
-            "llm-as-a-judge"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5217,
-          "matched": [
-            "evaluation",
-            "evaluations"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0363,
-          "matched": [
-            "time"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0363,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6315,
-        "relevance": 0.6433,
-        "quality": 0.46,
-        "novelty": 0.8702,
-        "freshness": 0.6866,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "formal bound"
-      ],
-      "summary": {
-        "takeaway": "To address this problem, we introduce numerical scoring topology, which characterizes the structural design of a scoring scheme in terms of its scale width, granularity, offset, symmetry, and boundary placement.",
-        "problem": "LLMs are increasingly used as automated evaluators to reduce the cost and time required for human annotation.",
-        "method": "To address this problem, we introduce numerical scoring topology, which characterizes the structural design of a scoring scheme in terms of its scale width, granularity, offset, symmetry, and boundary placement.",
-        "evidence": "We further find that stronger and larger judge models generally achieve higher discriminative validity and greater robustness to scoring-topology changes.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "llm-as-a-judge"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.25592",
-      "title": "From Data Alignment to Parameter Generation: Few-Shot Cross-City Traffic Prediction with Conditional Diffusion",
-      "abstract": "Accurate mobile traffic forecasting is crucial for network service management, supporting proactive capacity provisioning, congestion mitigation, and energy-efficient operation. However, many cities and regions are data-scarce (e.g., newly deployed or poorly instrumented areas), thus making traffic prediction a few-shot learning problem and limiting the practicality of standard data-driven models. Existing cross-city solutions primarily rely on data-space alignment to match traffic distributions between data-rich and data-scarce cities, but such alignment is often brittle under real-world distribution shifts, measurement noise, and city-specific bias. To address these limitations, we propose a Conditional Diffusion-based Parameter Generation (CDPG) framework. Instead of aligning raw data, CDPG learns the conditional distribution of high-performing predictor parameters for source cities and directly generates node-specific model parameters for the target city. To support reliable adaptation for network traffic prediction, CDPG conditions parameter generation on multi-modal spatio-temporal context. Specifically, CDPG captures spatial environment cues by combining satellite imagery with large language model (LLM)-derived semantic descriptions, and summarizes complex temporal behaviors via unsupervised pattern clustering. These contextual components guide CDPG in producing parameters tailored to each base station's operational context, thereby improving robustness under cross-city and cross-region shifts. Extensive experiments on three large-scale datasets show that CDPG consistently outperforms state-of-the-art cross-city few-shot baselines by up to 9.72% on standard forecasting metrics and remains robust for few-shot multi-step prediction. The code is available at https://github.com/LingoodBoy/CDPG.",
-      "authors": [
-        "Shengchun Wang",
-        "Yuhang Lin",
-        "Tong Li",
-        "Pengyuan Zhou",
-        "Andy Chi Lok Tai",
-        "Wenjie Chen",
-        "Zhu Xiao",
-        "Zhu Han"
-      ],
-      "published": "2026-11-19T06:37:24Z",
-      "updated": "2026-11-19T06:37:24Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.25592v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.25592v1",
-      "comment": "25 pages",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
         "llm"
       ],
       "topics": [
@@ -389,72 +264,145 @@
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.4768,
+          "score": 0.4967,
           "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.2187,
-          "matched": [
-            "learning",
-            "reliable"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1426,
-          "matched": [
-            "data"
+            "uncertainty"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.1426,
+          "score": 0.0768,
           "matched": [
-            "data"
+            "inference"
           ]
         },
         {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
           "status": "emerging",
-          "score": 0.1198,
+          "score": 0.059,
           "matched": [
-            "learning"
+            "selection",
+            "adaptive"
           ]
         }
       ],
       "scores": {
-        "total": 0.5851,
-        "relevance": 0.4537,
-        "quality": 0.88,
-        "novelty": 0.8184,
-        "freshness": 0.6468,
+        "total": 0.519,
+        "relevance": 0.4245,
+        "quality": 0.68,
+        "novelty": 0.8302,
+        "freshness": 0.4808,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "code available",
-        "GitHub link",
-        "baseline comparison",
+        "benchmark evaluation",
         "experiments",
-        "dataset evidence"
+        "quantitative results"
       ],
       "summary": {
-        "takeaway": "To address these limitations, we propose a Conditional Diffusion-based Parameter Generation (CDPG) framework.",
-        "problem": "Accurate mobile traffic forecasting is crucial for network service management, supporting proactive capacity provisioning, congestion mitigation, and energy-efficient operation.",
-        "method": "To address these limitations, we propose a Conditional Diffusion-based Parameter Generation (CDPG) framework.",
-        "evidence": "Extensive experiments on three large-scale datasets show that CDPG consistently outperforms state-of-the-art cross-city few-shot baselines by up to 9.72% on standard forecasting metrics and remains robust for few-shot multi-step prediction.",
+        "takeaway": "We propose RoCoKV, a KV cache compression method designed for large reasoning models.",
+        "problem": "KV cache compression is critical for large reasoning models, where most of the cost comes from long generated reasoning traces rather than the input prompt.",
+        "method": "We propose RoCoKV, a KV cache compression method designed for large reasoning models.",
+        "evidence": "Extensive experiments across three reasoning benchmarks and two reasoning models demonstrate that RoCoKV consistently improves reasoning accuracy under constrained KV cache budgets, achieving higher accuracy compared to state-of-the-art KV cache compression methods.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.25970",
+      "title": "The Depth of a Prediction: Where Language Models Resolve a Word Predicts Human Reading Time",
+      "abstract": "Surprisal from a language model's final layer predicts how long people read a word, yet the model computes its prediction across many layers. We read each word's prediction at every layer with the tuned lens and summarize this layerwise surprisal trajectory by its resolution depth, the depth around which its change is centered. On eight English eye-tracking and self-paced reading corpora (81,957 words) and ten GPT-2, OPT and Pythia models, words that a model resolves later, and the words after them, are read more slowly than equally surprising words. Resolution depth improves held-out prediction beyond final-layer surprisal, entropy and the best single layer by 0.26 millinats per word (pooled p = 0.001), about a third of entropy's gain, and each model family gains, GPT-2 and Pythia through one corpus each. The net gain varies between corpora (random-effects mean 0.07, p = 0.37); against layer-shuffled depth, which adds as many coefficients, it is positive in seven of eight corpora (random-effects mean 0.23, p = 0.016), and untrained networks show no gain under the logit lens. Pooled over corpora, the effect holds with corrected word probabilities and beyond first-to-last-layer divergences, and a whole-trajectory functional regression adds no significant information beyond resolution depth.",
+      "authors": [
+        "Donato Riccio",
+        "Fabrizio Maturo"
+      ],
+      "published": "2026-11-19T11:53:48Z",
+      "updated": "2026-11-19T11:53:48Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.25970v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25970v1",
+      "comment": "17 pages, 4 figures, 7 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5261,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1201,
+          "matched": [
+            "functional",
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0945,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4949,
+        "relevance": 0.4638,
+        "quality": 0.41,
+        "novelty": 0.8486,
+        "freshness": 0.5322,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Surprisal from a language model's final layer predicts how long people read a word, yet the model computes its prediction across many layers.",
+        "problem": "Surprisal from a language model's final layer predicts how long people read a word, yet the model computes its prediction across many layers.",
+        "method": "We read each word's prediction at every layer with the tuned lens and summarize this layerwise surprisal trajectory by its resolution depth, the depth around which its change is centered.",
+        "evidence": "Resolution depth improves held-out prediction beyond final-layer surprisal, entropy and the best single layer by 0.26 millinats per word (pooled p = 0.001), about a third of entropy's gain, and each model family gains, GPT-2 and Pythia through one corpus each.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -471,23 +419,219 @@
       }
     },
     {
-      "id": "2611.25597",
-      "title": "Decision-Focused Reinforcement Learning for LLM Post-Training",
-      "abstract": "Large language models (LLMs) have shown promise as predictors across various tasks, benefiting from their ability to use information from unstructured context. However, when predictions serve as parameters of downstream optimization problems, higher prediction accuracy does not necessarily translate into lower decision costs. We propose decision-focused reinforcement learning (DFRL), a framework for post-training LLMs to predict optimization parameters using negative downstream decision regret as reward. DFRL trains LLM predictors to minimize the costs of the decisions induced by their predictions, without requiring downstream convexity or differentiability, and integrates readily into existing RL post-training frameworks. To address expensive reward evaluation, we develop two approaches. Heuristic warm-starting uses inexpensive approximate rewards during an initial phase before switching to refinement with exact rewards. Reward correction combines inexpensive estimates with randomized exact evaluations, preserving the expected policy gradient while reducing the expected number of exact solves per update. Experiments on three synthetic optimization problems demonstrate improvements over prediction-loss baselines, while a larger knapsack experiment shows faster early improvement under short training budgets. On inventory planning with H&M transactions and product descriptions, our best configuration, in which the LLM reasons before predicting, reduces regret by 31.4% relative to the SFT baseline and 12.4% relative to the strongest evaluated conventional forecasting baseline.",
+      "id": "2611.25211",
+      "title": "Learning to Read Events for Exact State Tracking with Frozen Language Models",
+      "abstract": "Long event streams require identifying each change and applying the changes in order. We train a selector on a frozen language model to read each transition. With API-only access, we ask the model to list the transitions. An external integer register composes them in order. A confidence rule can flag uncertain updates or retain several candidates. We study products of permutations of five items, a task that fixed-depth, log-precision transformers cannot solve on all input lengths under the standard conjecture that $\\mathrm{TC}^0 \\ne \\mathrm{NC}^1$. On two-event windows, a 27B model answered 3 of 100 correctly without visible reasoning and 96 of 100 when it generated intermediate steps. A frozen 0.8B model with a trained selector read every event in 299 of 299 windows of 43,687 events each. The same package passed 298 of 299 new windows on a fresh machine, missing the target of 0.99 for the one-sided 95% lower confidence bound. A separate follow-up sized to allow one failure yielded 472 of 473. On 1,000-event room-swap documents, three of ten models solved all five documents by reasoning alone. All seven models tested both ways at this length solved all five with extraction and the register, with no chain of thought requested. With concurrent extraction, median wall-clock time fell from 136.1 to 10.4 s for Sonnet 5.5 and from 313.5 to 28.0 s for GPT-6.1 Sol. At fixed per-token rates, mean cost per document fell by 55% for Sonnet 5.5 and 44% for GPT-6.1 Sol. A regular expression with an executor also solved all 15 fixed-format documents. On 500 free-form issue-tracker comments, a separately adapted 4B reader identified the recorded value in 68.8% of cases, compared with 61.0% for a frequency baseline fitted on the same training projects.",
       "authors": [
-        "Haotian Zhai",
-        "Leqi Liu"
+        "Jeonghoon Lee"
       ],
-      "published": "2026-11-19T06:44:35Z",
-      "updated": "2026-11-19T06:44:35Z",
+      "published": "2026-11-18T21:38:05Z",
+      "updated": "2026-11-18T21:38:05Z",
       "categories": [
         "cs.LG",
-        "cs.AI"
+        "cs.CL"
       ],
       "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.25597v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.25597v1",
-      "comment": "",
+      "abs_url": "https://arxiv.org/abs/2611.25211v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25211v1",
+      "comment": "11 pages, 5 figures. Data and code: https://github.com/jeonghoon-ad/learning-to-read-events",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models",
+        "transformers"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4347,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3424,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0432,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0432,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4937,
+        "relevance": 0.4249,
+        "quality": 0.54,
+        "novelty": 0.8718,
+        "freshness": 0.4473,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "formal bound",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Long event streams require identifying each change and applying the changes in order.",
+        "problem": "Long event streams require identifying each change and applying the changes in order.",
+        "method": "We train a selector on a frozen language model to read each transition.",
+        "evidence": "With API-only access, we ask the model to list the transitions.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.25976",
+      "title": "Energy estimates of open-weight large language models across stated food weights: a dose-response evaluation",
+      "abstract": "We tested whether energy estimates of open-weight large language models (LLMs) scale proportionally with an exactly stated food weight, and whether computing energy density times weight removes the error. Under a prespecified protocol, seven open-weight LLMs estimated the energy of 168 randomly drawn foods from the USDA Food and Nutrient Database for Dietary Studies at nine stated weights, from 0.25 to 4 times the default amount. The primary outcome was the elasticity of the estimate with respect to weight (1: proportional scaling). A two-step estimate multiplied each model's own stated energy density by the weight in code. All seven models compressed their estimates, with elasticities from 0.548 to 0.979 (every 95% CI below 1); four compressed severely (0.548 to 0.709). These four overestimated a quarter of the default amount by 47% to 130% and underestimated four times it by 20% to 34%. Supplying the density restored near-proportional scaling in three of the four, and the two-step estimate cut the typical error factor at these extremes from 1.47-2.43 to 1.20-1.38. Compression persisted at full precision and grew in five of seven models under a plain question. The models hold the energy densities needed for proportional scaling and answer near a typical serving, reproducing the flat-slope syndrome of dietary recall. Accuracy at usual portions does not reveal it. Food-logging tools should compute the energy of weighed entries as density times weight, and evaluations should test fixed foods across stated weights.",
+      "authors": [
+        "Donato Riccio",
+        "Fabrizio Maturo",
+        "Iulia Brezeanu"
+      ],
+      "published": "2026-11-19T12:00:23Z",
+      "updated": "2026-11-19T12:00:23Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.25976v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25976v1",
+      "comment": "18 pages, 4 figures, 4 tables; supplementary material and TRIPOD-LLM checklist as ancillary files",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4519,
+          "matched": [
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "density"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4895,
+        "relevance": 0.3843,
+        "quality": 0.63,
+        "novelty": 0.8706,
+        "freshness": 0.5328,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "reproducibility",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We tested whether energy estimates of open-weight large language models (LLMs) scale proportionally with an exactly stated food weight, and whether computing energy density times weight removes the error.",
+        "problem": "We tested whether energy estimates of open-weight large language models (LLMs) scale proportionally with an exactly stated food weight, and whether computing energy density times weight removes the error.",
+        "method": "Under a prespecified protocol, seven open-weight LLMs estimated the energy of 168 randomly drawn foods from the USDA Food and Nutrient Database for Dietary Studies at nine stated weights, from 0.25 to 4 times the default amount.",
+        "evidence": "The primary outcome was the elasticity of the estimate with respect to weight (1: proportional scaling).",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.25588",
+      "title": "Rubric Semantics or Numerical Priors? Auditing Scale-Direction Bias in LLM Judges",
+      "abstract": "Recent benchmark evaluations increasingly rely on Large Language Models (LLMs) as automatic judges. This paradigm assumes LLMs evaluate based on the rubric's semantic meaning rather than its numeric scale. We question this assumption by introducing semantic faithfulness: the principle that semantically equivalent rubrics must yield consistent scores. To quantify this, we propose a scale-reversal probe that inverts score anchors without altering evaluation criteria. Furthermore, we introduce floor normalization to calibrate reversal disagreement against intrinsic model variability, enabling fair cross-model comparisons. Experiments across five meta-evaluation benchmarks with seven diverse LLM judges spanning open-weight and proprietary models reveal widespread violations of semantic faithfulness, showing that raw reversal agreement alone is misleading. Finally, we demonstrate that bidirectional anchor averaging reduces dependence on any single anchor direction without compromising alignment with human judgments. Our findings emphasize that trustworthy LLM judges must reliably follow rubric semantics, not just correlate with human ratings.",
+      "authors": [
+        "Chanwoo Kim",
+        "Doyun Kim",
+        "Minsoo Song",
+        "Sihyeon Lee",
+        "Chanjun Park"
+      ],
+      "published": "2026-11-19T06:31:51Z",
+      "updated": "2026-11-19T06:31:51Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.25588v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.25588v1",
+      "comment": "Accepted for EACL 2027 Findings",
       "journal_ref": "",
       "source": "arxiv",
       "venue": "",
@@ -503,172 +647,46 @@
       ],
       "topics": [
         {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4556,
+          "matched": [
+            "trustworthy",
+            "auditing"
+          ]
+        },
+        {
           "id": "conformal_prediction",
           "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.4747,
+          "score": 0.3804,
           "matched": [
-            "prediction",
             "evaluation",
             "evaluations"
           ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.455,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4549,
-          "matched": [
-            "learning"
-          ]
         }
       ],
       "scores": {
-        "total": 0.5844,
-        "relevance": 0.5617,
-        "quality": 0.54,
-        "novelty": 0.7891,
-        "freshness": 0.6476,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We propose decision-focused reinforcement learning (DFRL), a framework for post-training LLMs to predict optimization parameters using negative downstream decision regret as reward.",
-        "problem": "Large language models (LLMs) have shown promise as predictors across various tasks, benefiting from their ability to use information from unstructured context.",
-        "method": "We propose decision-focused reinforcement learning (DFRL), a framework for post-training LLMs to predict optimization parameters using negative downstream decision regret as reward.",
-        "evidence": "Experiments on three synthetic optimization problems demonstrate improvements over prediction-loss baselines, while a larger knapsack experiment shows faster early improvement under short training budgets.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "prediction",
-          "evaluation",
-          "evaluations"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.25292",
-      "title": "Cross-Question Reliable Reinforcement Learning",
-      "abstract": "AI systems operating near the limits of their capabilities can maximize utility while minimizing the risk of error by abstaining or deferring questions they are not confident about to a human or a stronger model. Recently, large language models (LLMs) have been post-trained to estimate confidence in their own answers. To achieve this, methods reinforce confidence scores based on the correctness signal to each question-answer pair individually, with rewards that encourage assigning confidence 1 to correct answers and 0 to incorrect answers. However, estimating confidence scores is useful in that it enables selecting only the most confident answers, to maximize the share of solved questions while accommodating the user's risk tolerance. Assigning confidence 1 to correct answers and 0 to incorrect ones is theoretically optimal, but unattainable in practice and detrimental for selective prediction with a non-zero risk tolerance: confidences pushed to 0 and 1 carry no information about how answers compare to one another. We therefore introduce CARE (Cross-question Abstention Reward Estimation), which computes rewards over a set of question-answer pairs: At each of several risk tolerances, the confidences across the set induce an abstention threshold, and each confidence is rewarded for lying on the correct side of it. Since the threshold itself comes from the set, every verbalized confidence is reinforced relative to other questions' confidence, not against its own binary correctness label. On math, CARE increases the coverage at 5% risk (C@5) across MATH-500, GSM8K, and Big-Math-Digits from 0.8% to 42.4%, compared to existing pointwise correctness-matching rewards. When trained on multi-hop Wikipedia QA from HotpotQA, CARE improves C@5 in out-of-distribution general-knowledge, reasoning, and math benchmarks (including CommonsenseQA, GPQA, SimpleQA, and TriviaQA) from 12.3% to 23.6%.",
-      "authors": [
-        "Hector G. Rodriguez",
-        "Marcus Rohrbach"
-      ],
-      "published": "2026-11-18T23:41:15Z",
-      "updated": "2026-11-18T23:41:15Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2611.25292v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.25292v1",
-      "comment": "27 pages. Code: https://github.com/multimodal-ai-lab/CARE",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5595,
-          "matched": [
-            "learning",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.3426,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.2632,
-          "matched": [
-            "prediction",
-            "selective"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0433,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.042,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5811,
-        "relevance": 0.5688,
-        "quality": 0.48,
-        "novelty": 0.8512,
-        "freshness": 0.6056,
+        "total": 0.4856,
+        "relevance": 0.4406,
+        "quality": 0.46,
+        "novelty": 0.8221,
+        "freshness": 0.5002,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "benchmark evaluation",
-        "quantitative results"
+        "experiments"
       ],
       "summary": {
-        "takeaway": "AI systems operating near the limits of their capabilities can maximize utility while minimizing the risk of error by abstaining or deferring questions they are not confident about to a human or a stronger model.",
-        "problem": "AI systems operating near the limits of their capabilities can maximize utility while minimizing the risk of error by abstaining or deferring questions they are not confident about to a human or a stronger model.",
-        "method": "Recently, large language models (LLMs) have been post-trained to estimate confidence in their own answers.",
-        "evidence": "To achieve this, methods reinforce confidence scores based on the correctness signal to each question-answer pair individually, with rewards that encourage assigning confidence 1 to correct answers and 0 to incorrect answers.",
+        "takeaway": "To quantify this, we propose a scale-reversal probe that inverts score anchors without altering evaluation criteria.",
+        "problem": "Recent benchmark evaluations increasingly rely on Large Language Models (LLMs) as automatic judges.",
+        "method": "To quantify this, we propose a scale-reversal probe that inverts score anchors without altering evaluation criteria.",
+        "evidence": "Experiments across five meta-evaluation benchmarks with seven diverse LLM judges spanning open-weight and proprietary models reveal widespread violations of semantic faithfulness, showing that raw reversal agreement alone is misleading.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -679,129 +697,8 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning",
-          "reliable"
-        ],
-        "lane": "llm"
-      }
-    },
-    {
-      "id": "2611.25073",
-      "title": "PriTabICL: Differentially Private Tabular In-Context Learning with Task-Aligned Cluster-Wise Synthesis",
-      "abstract": "Tabular in-context learning (TabICL) enables large language models (LLMs) to predict target records using a handful of labeled demonstrations in their prompts. However, these demonstrations often contain sensitive personal information. Differential privacy (DP) offers principled protection, but noise-based methods introduce substantial noise, distorting the feature-label relationships essential for accurate prediction, especially as data dimensionality grows. In this work, we study DP data synthesis for generating privacy-preserving TabICL demonstrations. We identify two limitations of directly applying general-purpose DP synthesis to entire datasets: modeling a global distribution can obscure local structure and minority patterns in heterogeneous data, while measuring broad attribute dependencies under a limited privacy budget can reduce the accuracy available for relationships most relevant to prediction. More broadly, global statistical fidelity may fail to preserve heterogeneous structures needed by downstream predictive and generative models. To address these challenges, we propose PriTabICL, a general framework compatible with existing DP synthesis algorithms. It partitions records into DP clusters and synthesizes each independently, using a fixed feature-target workload to prioritize prediction-relevant statistical relationships. At inference, each query is routed to a DP cluster, and demonstrations are sampled from its synthetic dataset without additional privacy loss for the original records. Experiments on four real-world datasets demonstrate the effectiveness of our methods across heterogeneous datasets. In particular, one of our instantiations, PriTabICL-PrivSyn, improves over global PrivSyn in 8 out of 12 settings and outperforms existing private TabICL approaches in nearly all evaluated settings. Open-source code is available.",
-      "authors": [
-        "Syed Ahzaz Shah",
-        "Evan Bramblett",
-        "Héber H. Arcolezi",
-        "Chen Gong",
-        "Qianqian Tong",
-        "Xiaochen Li"
-      ],
-      "published": "2026-11-18T19:15:01Z",
-      "updated": "2026-11-18T19:15:01Z",
-      "categories": [
-        "cs.CR",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2611.25073v1",
-      "pdf_url": "https://arxiv.org/pdf/2611.25073v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4319,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4319,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.3642,
-          "matched": [
-            "prediction"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1352,
-          "matched": [
-            "inference",
-            "data"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1084,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5844,
-        "relevance": 0.5047,
-        "quality": 0.73,
-        "novelty": 0.8139,
-        "freshness": 0.5791,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "experiments",
-        "dataset evidence",
-        "open source",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address these challenges, we propose PriTabICL, a general framework compatible with existing DP synthesis algorithms.",
-        "problem": "Tabular in-context learning (TabICL) enables large language models (LLMs) to predict target records using a handful of labeled demonstrations in their prompts.",
-        "method": "To address these challenges, we propose PriTabICL, a general framework compatible with existing DP synthesis algorithms.",
-        "evidence": "Experiments on four real-world datasets demonstrate the effectiveness of our methods across heterogeneous datasets.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
+          "trustworthy",
+          "auditing"
         ],
         "lane": "llm"
       }
