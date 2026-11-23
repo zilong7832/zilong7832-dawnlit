@@ -1,6 +1,670 @@
 {
-  "generated_at": "2026-11-22T18:29:29.101544+00:00",
+  "generated_at": "2026-11-23T22:37:10.303910+00:00",
   "papers": [
+    {
+      "id": "2611.27652",
+      "title": "Auditing Post-Training Unlearning in Diffusion Language Models using Sparse Autoencoders",
+      "abstract": "Machine unlearning is an approach to privacy protection: it aims to remove the influence of designated data while preserving the model's behavior on information that should be retained. While a growing body of work investigates this objective in autoregressive large language models, machine unlearning remains underexplored in diffusion language models (DLMs). DLMs generate text through iterative denoising, exposing partially masked states whose internal representations change throughout the generation process. This raises a DLM-specific question: can selective forgetting improve by identifying forget-data-associated features and adapting their suppression across denoising stages? We conduct a controlled investigation of this question in LLaDA-8B-Instruct. To evaluate the unlearning of knowledge plausibly encoded during pre-training, we use WMDP as our forget-domain benchmark. Using top-k sparse autoencoders and denoising-state replay, we compare static and stage-adaptive feature suppression. We find substantial shifts in forget-data-associated features across denoising stages, but tracking these dynamics alone does not reliably improve the forget-retain trade-off at the evaluated operating points. Together, our study provides an initial empirical foundation for developing and evaluating machine unlearning as a post-training privacy mechanism in DLMs.",
+      "authors": [
+        "Yunha Seo",
+        "Changhoon Kim"
+      ],
+      "published": "2026-11-20T14:17:08Z",
+      "updated": "2026-11-20T14:17:08Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.27652v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27652v1",
+      "comment": "14 pages, 1 figure. Accepted at the NeurIPS 2026 Workshop on Inference-Time AI Privacy (InfPriv 2026)",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6043,
+          "matched": [
+            "machine",
+            "auditing"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "selective"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.57,
+        "relevance": 0.5358,
+        "quality": 0.54,
+        "novelty": 0.8765,
+        "freshness": 0.5218,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation"
+      ],
+      "summary": {
+        "takeaway": "We find substantial shifts in forget-data-associated features across denoising stages, but tracking these dynamics alone does not reliably improve the forget-retain trade-off at the evaluated operating points.",
+        "problem": "Machine unlearning is an approach to privacy protection: it aims to remove the influence of designated data while preserving the model's behavior on information that should be retained.",
+        "method": "While a growing body of work investigates this objective in autoregressive large language models, machine unlearning remains underexplored in diffusion language models (DLMs).",
+        "evidence": "This raises a DLM-specific question: can selective forgetting improve by identifying forget-data-associated features and adapting their suppression across denoising stages?",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "machine",
+          "auditing"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
+    {
+      "id": "2611.26875",
+      "title": "How Long Will My Language Model Run? A Benchmark for Pre-Execution Runtime Prediction",
+      "abstract": "Researchers submitting deep learning jobs to shared GPU clusters need runtime estimates to request time limits, choose hardware, and budget compute. Large language models (LLMs) offer a tempting shortcut: describe the job and ask. We introduce PreRun, a benchmark for predicting deep learning training and inference runtime from information available before execution. PreRun contains 801 training and 1,884 inference records of language and vision models collected on a GPU cluster, paired with workload configurations and explicitly defined timing targets. It also includes 64 text-generation configurations measured under standardized conditions, each in three separate program launches. We compare three LLMs (Qwen3.5-9B, GPT-OSS-120B, and Claude Opus 5.5) with regression baselines and evaluate analytical estimates on a supported forward-pass subset. On 16 held-out generation configurations, the open-weight LLMs underestimate latency by 90-99% on average without examples. Claude's zero-shot mean absolute error is 4.5 times that of a Random Forest fit on 32 configurations. Five labeled examples substantially reduce Claude's generation error, but their benefit varies across timing targets. We will open-source our data and evaluation pipeline upon acceptance.",
+      "authors": [
+        "Ashish Molakalapalli",
+        "Kangda Wei",
+        "Haonan Duan",
+        "Alex Carter",
+        "Ruihong Huang"
+      ],
+      "published": "2026-11-19T22:40:56Z",
+      "updated": "2026-11-19T22:40:56Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.26875v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26875v1",
+      "comment": "25 pages, 2 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4555,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.2779,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.2779,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1436,
+          "matched": [
+            "inference",
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0834,
+          "matched": [
+            "time",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5414,
+        "relevance": 0.4756,
+        "quality": 0.63,
+        "novelty": 0.8482,
+        "freshness": 0.4289,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We introduce PreRun, a benchmark for predicting deep learning training and inference runtime from information available before execution.",
+        "problem": "Researchers submitting deep learning jobs to shared GPU clusters need runtime estimates to request time limits, choose hardware, and budget compute.",
+        "method": "We introduce PreRun, a benchmark for predicting deep learning training and inference runtime from information available before execution.",
+        "evidence": "We introduce PreRun, a benchmark for predicting deep learning training and inference runtime from information available before execution.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
+    {
+      "id": "2611.27119",
+      "title": "CTRL: Concurrent Training and Rollout for LLM Reinforcement Learning via GPU Co-Residency",
+      "abstract": "Reinforcement learning (RL) post-training of large language models runs two GPU workloads with different hardware demands: rollout decoding, which is dominated by memory access and whose batch shrinks as responses finish, and a dense learner. Current systems either time-share every GPU between them, paying serial phases and switches, or split GPUs into pools whose sizes change only in whole devices. We present CTRL, which makes co-residency a third RL execution layout: every GPU runs a learner rank beside a persistent rollout engine, sharing the device under CUDA MPS. A host-owned learner makes the layout fit: optimizer state stays in host memory, and policy weights stream layer by layer through a bounded GPU window. A publication gate trains each ready batch first and waits only before releasing the next policy, keeping a dropless staleness bound. A step-time bound guides compute-share selection, and a GPU-time ledger explains overlap and sharing costs. On H100, A800, and RTX 4090 GPUs with Qwen3 models, CTRL achieves 1.11-2.24$\\times$ the throughput of the stronger of verl's asynchronous baselines across 24 workload settings with the staleness limit set to two, and 1.23$\\times$ verl's colocate_async on eight H100 GPUs. With the same learner, co-residency is 1.10-1.26$\\times$ faster than time-sharing on all three platforms and 1.10-1.30$\\times$ faster than the best measured whole-GPU split on H100 DAPO-Math workloads at 256-528 trajectories per step, on four and eight GPUs.",
+      "authors": [
+        "Ruijia Yang",
+        "Ruikai Li",
+        "Zeyi Wen"
+      ],
+      "published": "2026-11-20T04:42:26Z",
+      "updated": "2026-11-20T04:42:26Z",
+      "categories": [
+        "cs.DC",
+        "cs.LG"
+      ],
+      "primary_category": "cs.DC",
+      "abs_url": "https://arxiv.org/abs/2611.27119v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27119v1",
+      "comment": "13 pages, 12 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4549,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4549,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "time"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0831,
+          "matched": [
+            "selection",
+            "window"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5267,
+        "relevance": 0.4777,
+        "quality": 0.54,
+        "novelty": 0.849,
+        "freshness": 0.4648,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "formal bound",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present CTRL, which makes co-residency a third RL execution layout: every GPU runs a learner rank beside a persistent rollout engine, sharing the device under CUDA MPS.",
+        "problem": "Reinforcement learning (RL) post-training of large language models runs two GPU workloads with different hardware demands: rollout decoding, which is dominated by memory access and whose batch shrinks as responses finish, and a dense learner.",
+        "method": "Current systems either time-share every GPU between them, paying serial phases and switches, or split GPUs into pools whose sizes change only in whole devices.",
+        "evidence": "On H100, A800, and RTX 4090 GPUs with Qwen3 models, CTRL achieves 1.11-2.24$\\times$ the throughput of the stronger of verl's asynchronous baselines across 24 workload settings with the staleness limit set to two, and 1.23$\\times$ verl's colocate_async on eight H100 GPUs.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
+    {
+      "id": "2611.27656",
+      "title": "Beyond Sample Hardness: Adaptive Data Selection through Learning Dynamics",
+      "abstract": "Data selection has emerged as an effective approach to reducing the model training costs. However, most existing methods often rely heavily on sample hardness, which may overlook differences in sample learning dynamics and lead to suboptimal sample selection. In this paper, we propose LeDAS, an end-to-end Learning Dynamics-Aware Selection framework for dynamic data selection, which jointly characterizes sample importance through hardness, learning progress, and deterioration, enabling adaptive sample prioritization throughout training with marginal additional computational overhead. Specifically, we track per-sample loss dynamics using exponential moving averages (EMA) to obtain three complementary signals that capture current learning difficulty, ongoing learning improvements, and potential degradation. To accommodate evolving training dynamics, we introduce Adaptive Metric Fusion, a contextual bandit-based mechanism that dynamically adjusts the relative importance of these signals based on training feedback. Furthermore, a bounded staleness compensation mechanism accounts for historical selection patterns by increasing the selection priority of samples that have not been selected for extended periods. Extensive experiments across diverse vision and language tasks demonstrate the effectiveness and generality of LeDAS. Compared with state-of-the-art baselines, LeDAS consistently achieves superior performance, matching or surpassing full-dataset training at a 50\\% selection ratio on ImageNet-1K and in LLM supervised fine-tuning. Moreover, its modular and task-agnostic design enables the integration of complementary selection signals, demonstrating strong robustness to noisy and corrupted datasets.",
+      "authors": [
+        "Hai Gan",
+        "Suorong Yang",
+        "Guang Li",
+        "Baile Xu",
+        "Furao Shen"
+      ],
+      "published": "2026-11-20T14:21:10Z",
+      "updated": "2026-11-20T14:21:10Z",
+      "categories": [
+        "cs.LG",
+        "cs.CV"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2611.27656v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27656v1",
+      "comment": "9 pages, 3 figures",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3805,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3805,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.154,
+          "matched": [
+            "selection",
+            "adaptive"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1007,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1007,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.502,
+        "relevance": 0.4113,
+        "quality": 0.64,
+        "novelty": 0.8056,
+        "freshness": 0.5222,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "experiments",
+        "formal bound",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose LeDAS, an end-to-end Learning Dynamics-Aware Selection framework for dynamic data selection, which jointly characterizes sample importance through hardness, learning progress, and deterioration, enabling adaptive sample prioritization throughout training with marginal additional computational overhead.",
+        "problem": "Data selection has emerged as an effective approach to reducing the model training costs.",
+        "method": "In this paper, we propose LeDAS, an end-to-end Learning Dynamics-Aware Selection framework for dynamic data selection, which jointly characterizes sample importance through hardness, learning progress, and deterioration, enabling adaptive sample prioritization throughout training with marginal additional computational overhead.",
+        "evidence": "Specifically, we track per-sample loss dynamics using exponential moving averages (EMA) to obtain three complementary signals that capture current learning difficulty, ongoing learning improvements, and potential degradation.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
+    {
+      "id": "2611.27106",
+      "title": "Schema-Validated LLM Workflows: A Benchmark Protocol and Comparative Evaluation Across Six Python Implementations",
+      "abstract": "Large language models are increasingly used to extract records, generate SQL, summarize reports, answer policy questions, and route operational work. At these software boundaries, parseable output is necessary but does not establish task correctness. We present a reproducible benchmark protocol, a public executable artifact, and a confirmatory live API evaluation that separate structural validity from task-specific correctness across five business workflow tasks and six Python implementation conditions: PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference. We hypothesize that (H1) schema validity and task quality are separable, (H2) structured-output binding paths are heterogeneous under a shared model and lowest-common-denominator contract, and (H3) condition-by-task interactions concentrate failures rather than shifting all tasks equally. Confirmatory analysis uses distinct task instances (100 extraction and 50 per other task, with three nested replicates) under a frozen analysis plan, yielding a 5400-row primary matrix with equivalence margins and Holm-adjusted contrasts against the SDK reference. In the eligible confirmatory run, overall schema validity was 0.684 and mean automated quality was 0.638. PydanticAI, LangGraph, and DSPy retained near-ceiling schema validity with mean quality 0.91-0.94, while the plain SDK, Agno, and CrewAI conditions were substantially lower in this package and model configuration. Schema-valid rows still produced many task-score flags, especially in extraction and compliance QA, and quality residuals show strong condition-by-task interactions (including a workflow collapse for CrewAI). Labelled ablations address retry budgets and feature-using mechanisms; primary contrasts remain system-configuration findings, not causal attributions to marketed library features.",
+      "authors": [
+        "Sidney Shapiro",
+        "Sanad Al-Khatib",
+        "Aurora Pinzón Arzola",
+        "Emiliano Sebastian Gonzalez Venegas",
+        "Daniel Pearson"
+      ],
+      "published": "2026-11-20T04:32:13Z",
+      "updated": "2026-11-20T04:32:13Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "primary_category": "cs.SE",
+      "abs_url": "https://arxiv.org/abs/2611.27106v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27106v1",
+      "comment": "28 pages, 1 figure; code at github.com/ULDataProfessor/schema-validated-llm-workflows",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4519,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "analysis"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4988,
+        "relevance": 0.3779,
+        "quality": 0.72,
+        "novelty": 0.8592,
+        "freshness": 0.4638,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "ablation study",
+        "benchmark evaluation",
+        "formal bound",
+        "reproducibility",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We present a reproducible benchmark protocol, a public executable artifact, and a confirmatory live API evaluation that separate structural validity from task-specific correctness across five business workflow tasks and six Python implementation conditions: PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference.",
+        "problem": "Large language models are increasingly used to extract records, generate SQL, summarize reports, answer policy questions, and route operational work.",
+        "method": "We present a reproducible benchmark protocol, a public executable artifact, and a confirmatory live API evaluation that separate structural validity from task-specific correctness across five business workflow tasks and six Python implementation conditions: PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference.",
+        "evidence": "We present a reproducible benchmark protocol, a public executable artifact, and a confirmatory live API evaluation that separate structural validity from task-specific correctness across five business workflow tasks and six Python implementation conditions: PydanticAI, LangGraph, DSPy, CrewAI, Agno, and a framework-free SDK reference.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
+    {
+      "id": "2611.27180",
+      "title": "Learning Adaptive Defense Strategies: Fine-Tuned LLMs for Network Security Games under Network Mobility",
+      "abstract": "Large language models(LLM) show promise for strategic reasoning, yet their ability to compute game-theoretic equilibria under dynamic conditions remains largely unexplored. This work investigates whether fine-tuned LLMs can serve as solver-free surrogates for online equilibrium computation in honeypot allocation, a setting in which network mobility continuously reshapes the underlying attack graph and forces repeated re-solving of a two-player zero-sum game. We construct a dataset of 270 security games on networks of 8--25 nodes with solver-grounded equilibrium labels, and evaluate four classes of predictor over 1{,}524 held-out mobility events: non-learned baselines, six open-weight architectures evaluated zero-shot, the same six after LoRA fine-tuning, and four proprietary models as an external reference point. Predictions are scored without post-hoc repair against exact game-theoretic criteria: exploitability against an optimal attacker best-response, equilibrium support accuracy, and distributional distance. Fine-tuning reduces exploitability across every architecture, and fine-tuned open-weight models of modest size outperform every zero-shot predictor, including proprietary ones; no zero-shot model at any tier reaches the floor set by uniform allocation. Stratifying by mobility type exposes a qualitative shift that aggregate metrics conceal: zero-shot models do not condition on whether a departing node lies on an attack path, while fine-tuned models recover this distinction. We further find that validation loss is negatively rank-correlated with task performance, and that output validity, rather than predictive accuracy, is the binding constraint on further progress.",
+      "authors": [
+        "Md Abu Sayed",
+        "Asif Rahman",
+        "Ahmed Ryen",
+        "Ahmed Hemida",
+        "Charles Kamhoua",
+        "Christopher Kiekintveld"
+      ],
+      "published": "2026-11-20T06:10:59Z",
+      "updated": "2026-11-20T06:10:59Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2611.27180v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27180v1",
+      "comment": "Submitted in ICNC",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3603,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3603,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.1071,
+          "matched": [
+            "adaptive"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4616,
+        "relevance": 0.3817,
+        "quality": 0.52,
+        "novelty": 0.8577,
+        "freshness": 0.4736,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Large language models(LLM) show promise for strategic reasoning, yet their ability to compute game-theoretic equilibria under dynamic conditions remains largely unexplored.",
+        "problem": "Large language models(LLM) show promise for strategic reasoning, yet their ability to compute game-theoretic equilibria under dynamic conditions remains largely unexplored.",
+        "method": "This work investigates whether fine-tuned LLMs can serve as solver-free surrogates for online equilibrium computation in honeypot allocation, a setting in which network mobility continuously reshapes the underlying attack graph and forces repeated re-solving of a two-player zero-sum game.",
+        "evidence": "Fine-tuning reduces exploitability across every architecture, and fine-tuned open-weight models of modest size outperform every zero-shot predictor, including proprietary ones; no zero-shot model at any tier reaches the floor set by uniform allocation.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
     {
       "id": "2611.26264",
       "title": "A Statistical Framework for Training Data Auditing of Large Language Models",
@@ -9748,579 +10412,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-01T17:06:54.092294+00:00"
-    },
-    {
-      "id": "2610.39840",
-      "title": "Surprise Alone Learns Lies: Evidence-Gated Continual Learning for LLMs from Streaming Claims",
-      "abstract": "Continual learning methods for large language models increasingly decide what to learn by surprise, keeping the inputs the model finds least predictable. This rule is unsafe when the stream contains lies. A planted falsehood about something the model knows has low probability under the model's belief, so it is highly surprising by construction, and a surprise-driven learner absorbs nearly every such lie, at a rate similar to random selection with the same budget. We study the problem with LoRA-adapted students (Qwen2.5-1.5B, Qwen2.5-3B and Llama-3.2-3B) that learn from a stream of true and false claims about invented people and real CounterFact facts. We report four findings. (1) A verifier key, a judge that must approve each claim, removes lies to the extent that its verifier is accurate; real LLM judges are cautious and reject unsourced truths and even source-backed updates. (2) Calibrated regression tests on unrelated knowledge slow learning down without filtering out lies. (3) The original model's own prior flags claims that contradict what it knows, without a judge. It separates lies about known facts from true new facts (AUC 0.78-0.83 across three models) but not from legitimate updates of the same kind of fact (AUC 0.53). It saves 43% of judge calls, but an attacker with access to the model can choose lies that pass it. (4) If trusted sources exist that an attacker cannot plant, routing contradicted claims to evidence recovers legitimate updates and the combined system has the lowest poison rate among learned claims; when an attacker plants matching sources for 30% of the lies, the system ends up worse than the judge alone. The acceptance signals answer different questions, and none of them decides on its own whether a claim is true.",
-      "authors": [
-        "Abdelkader Metales",
-        "Miriam Grabenheinrich"
-      ],
-      "published": "2026-10-29T11:19:08Z",
-      "updated": "2026-10-29T11:19:08Z",
-      "categories": [
-        "cs.LG",
-        "cs.CL",
-        "cs.CR"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.39840v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.39840v1",
-      "comment": "21 pages, 5 figures. Code: https://github.com/Metalesaek/sura-metales",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.535,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.535,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0455,
-          "matched": [
-            "selection"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5466,
-        "relevance": 0.5441,
-        "quality": 0.41,
-        "novelty": 0.8414,
-        "freshness": 0.5369,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Continual learning methods for large language models increasingly decide what to learn by surprise, keeping the inputs the model finds least predictable.",
-        "problem": "Continual learning methods for large language models increasingly decide what to learn by surprise, keeping the inputs the model finds least predictable.",
-        "method": "This rule is unsafe when the stream contains lies.",
-        "evidence": "We report four findings. (1) A verifier key, a judge that must approve each claim, removes lies to the extent that its verifier is accurate; real LLM judges are cautious and reject unsourced truths and even source-backed updates. (2) Calibrated regression tests on unrelated knowledge slow learning down without filtering out lies. (3) The original model's own prior flags claims that contradict what it knows, without a judge.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-01T17:06:54.092294+00:00"
-    },
-    {
-      "id": "2610.39934",
-      "title": "H$^2$R: Hierarchical Hint-Based Reward for Mathematical Reasoning via Reinforcement Learning",
-      "abstract": "Reinforcement Learning with Verifiable Rewards has shown great promise in enhancing mathematical reasoning in large language models. However, existing approaches provide limited intermediate supervision for complex, multi-step reasoning tasks. To bridge this gap, we propose \\textbf{Hierarchical Hint-based Reward}, a framework that leverages the intrinsic sub-question structure of mathematical problems as structured intermediate conditioning signals during RLVR training. Unlike chain-of-thought prompting, these hierarchical hints serve as logically grounded intermediate milestones that effectively reduce the reasoning horizon toward the final answer. To validate this framework, we introduce \\textbf{HiMath}, a benchmark of hierarchically structured mathematical problems. Across diverse LLMs, hierarchical hints consistently improve reasoning performance even without task-specific training. When integrated into RL training via H$^2$R, they boost Qwen2.5-Math-7B accuracy on HiMath from 30.4\\% to 39.1\\% using hierarchical hints, and up to 45.6\\% with Oracle Hierarchical Hints. This pronounced improvement demonstrates that incorporating reliable intermediate checkpoints into reward design is essential for sustaining complex mathematical reasoning.",
-      "authors": [
-        "He Tu",
-        "Siye Li",
-        "Hongyi Wen"
-      ],
-      "published": "2026-10-29T12:36:21Z",
-      "updated": "2026-10-29T12:36:21Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.39934v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.39934v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.5097,
-          "matched": [
-            "learning",
-            "reliable"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4335,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5286,
-        "relevance": 0.4945,
-        "quality": 0.48,
-        "novelty": 0.8392,
-        "freshness": 0.5446,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To bridge this gap, we propose \\textbf{Hierarchical Hint-based Reward}, a framework that leverages the intrinsic sub-question structure of mathematical problems as structured intermediate conditioning signals during RLVR training.",
-        "problem": "Reinforcement Learning with Verifiable Rewards has shown great promise in enhancing mathematical reasoning in large language models.",
-        "method": "To bridge this gap, we propose \\textbf{Hierarchical Hint-based Reward}, a framework that leverages the intrinsic sub-question structure of mathematical problems as structured intermediate conditioning signals during RLVR training.",
-        "evidence": "Across diverse LLMs, hierarchical hints consistently improve reasoning performance even without task-specific training.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning",
-          "reliable"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-01T17:06:54.092294+00:00"
-    },
-    {
-      "id": "2610.39671",
-      "title": "Incentivizing Self-Learning in Large Language Models via Reinforcement Learning",
-      "abstract": "Large language models (LLMs) draw on parametric knowledge and retrieval-augmented generation (RAG) to solve knowledge-intensive tasks. Yet problem solving in unfamiliar domains calls for tightly coupled knowledge acquisition and reasoning, beyond factual retrieval and aggregation or learning solely from a preassembled context. We study self-learning -- autonomously retrieving, studying, and applying knowledge from long-form reference materials on the fly. To investigate this capability, we formulate a textbook-based mathematical problem-solving task. LLMs must navigate textbook exposition, learn and apply relevant principles, and construct proofs for exercises, with reference solutions withheld. We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards. Experiments show that our method improves performance across in-domain and out-of-domain textbooks and subjects, raising Intern-S2-Preview-35B's overall proof accuracy from 51.5% to 79.5% and outperforming RL-trained textbook-free and fixed-retrieval baselines. These gains extend to complex long-context benchmarks involving different task types, with improvements over the base model of 1.7 and 2.3 percentage points on BrowseComp-Plus and CL-bench, respectively. Together, these findings suggest that RL can foster a domain-agnostic self-learning strategy, highlighting the potential of self-learning from long-form corpora to strengthen broader problem-solving capabilities on complex, long-context tasks.",
-      "authors": [
-        "Lingkai Kong",
-        "Yuzhe Gu",
-        "Haiteng Zhao",
-        "Zijian Wu",
-        "Youqing Fang",
-        "Zhouqi Hua",
-        "Yanan Sun",
-        "Kai Chen",
-        "Wenwei Zhang"
-      ],
-      "published": "2026-10-29T09:21:26Z",
-      "updated": "2026-10-29T09:21:26Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.39671v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.39671v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.7454,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.7454,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7251,
-        "relevance": 0.7454,
-        "quality": 0.61,
-        "novelty": 0.848,
-        "freshness": 0.6764,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards.",
-        "problem": "Large language models (LLMs) draw on parametric knowledge and retrieval-augmented generation (RAG) to solve knowledge-intensive tasks.",
-        "method": "We introduce a BookNavigator interface to support this human-inspired study process and incentivize self-learning through reinforcement learning (RL) with fine-grained rewards.",
-        "evidence": "Experiments show that our method improves performance across in-domain and out-of-domain textbooks and subjects, raising Intern-S2-Preview-35B's overall proof accuracy from 51.5% to 79.5% and outperforming RL-trained textbook-free and fixed-retrieval baselines.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
-    },
-    {
-      "id": "2610.38335",
-      "title": "Learning a Prior-Data Fitted Network for Graph Foundation Models via Structural Causal Model Priors",
-      "abstract": "Graph Foundation Models (GFMs) have recently emerged as a promising paradigm for learning transferable representations across different graphs and domains. However, existing GFMs face notable limitations, including limited pre-training scale or reliance on aligning with textual information in Large Language Models (LLMs). To overcome these limitations, recent studies have drawn inspiration from prior-data fitted networks (PFNs), which learn from large synthetic datasets and support multi-domain prediction backed by causal learning. However, existing graph PFNs encounter severe difficulties in modeling causal relationships within and across node and edge sets, generating diverse graph structures, and designing suitable architectures that can learn from complex synthetic datasets. To address these challenges, we propose **GSCM-PFN** (Graph SCM-based Prior-Data Fitted Network), a graph PFN pre-trained on synthetic data generated from an SCM-based prior that jointly models nodes and graph topology. Specifically, we (1) design a joint feature-edge-label structural causal model (SCM) to guide synthetic graph generation and capture causal relationships within and across node and edge sets; (2) introduce prior-guided node-edge dependency modeling to instantiate diverse graph generation strategies, and prove that our SCM-based generation prior is more expressive than existing priors; and (3) propose a feature-permutation-invariant dual-path graph network with theoretical guarantees for learning from diverse synthetic graphs. Experiments on 23 real-world benchmarks show that GSCM-PFN outperforms both conventional GFMs and PFN-based GFMs, without utilizing real-world graph data for pre-training. Code: https://anonymous.4open.science/r/GSCM-PFN-A3A3/",
-      "authors": [
-        "Ziwei Zhang",
-        "Tianyin Liao",
-        "Chunyu Hu",
-        "Ge Lan",
-        "Nuo Xu",
-        "Yi Huang",
-        "Qingyun Sun",
-        "Xingxuan Zhang",
-        "Peng Cui",
-        "Jianxin Li"
-      ],
-      "published": "2026-10-28T06:35:34Z",
-      "updated": "2026-10-28T06:35:34Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.38335v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.38335v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6041,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.6041,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1805,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1805,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1527,
-          "matched": [
-            "prediction"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6693,
-        "relevance": 0.6402,
-        "quality": 0.72,
-        "novelty": 0.8329,
-        "freshness": 0.5171,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "experiments",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "To address these challenges, we propose **GSCM-PFN** (Graph SCM-based Prior-Data Fitted Network), a graph PFN pre-trained on synthetic data generated from an SCM-based prior that jointly models nodes and graph topology.",
-        "problem": "Graph Foundation Models (GFMs) have recently emerged as a promising paradigm for learning transferable representations across different graphs and domains.",
-        "method": "To address these challenges, we propose **GSCM-PFN** (Graph SCM-based Prior-Data Fitted Network), a graph PFN pre-trained on synthetic data generated from an SCM-based prior that jointly models nodes and graph topology.",
-        "evidence": "Specifically, we (1) design a joint feature-edge-label structural causal model (SCM) to guide synthetic graph generation and capture causal relationships within and across node and edge sets; (2) introduce prior-guided node-edge dependency modeling to instantiate diverse graph generation strategies, and prove that our SCM-based generation prior is more expressive than existing priors; and (3) propose a feature-permutation-invariant dual-path graph network with theoretical guarantees for learning from diverse synthetic graphs.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
-    },
-    {
-      "id": "2610.40278",
-      "title": "Neighborhood Elites: Quality-Diversity Search for Uncertainty Quantification in Question Answering",
-      "abstract": "Large language models (LLMs) are increasingly capable, yet they produce wrong answers indistinguishable from correct ones. In question answering (QA), such an error propagates unnoticed into downstream tasks. Perturbation-based uncertainty quantification (UQ) addresses this by probing a model over a set of input rewrites and reading uncertainty from how much its predictions vary. Yet this set is usually built generically, by free paraphrasing, token-level perturbation, or adversarial search. Such rewrites leave two things uncontrolled that matter in QA: what kind of change is made to the context, and how explicitly the context supports the answer. When neither is controlled, the composition of the set is determined by the generator rather than by design, and the estimate inherits whatever that generator happens to produce. Quality-diversity (QD) search is built to cover a predefined exploration space, so we recast input perturbation as a QD problem and propose \\emph{neighborhood elites (NE)}, a neighborhood constructor that spreads answer-preserving rewrites across two axes, the kind of edit and the explicitness of support. We compare NE against three other neighborhood constructors, holding the editor, QA model, uncertainty measure and search objective fixed, and against three scores read from the original context. Across five extractive-QA datasets and five instruction-tuned LLMs, NE improves failure detection against every other constructor in at least 24 of the 25 dataset-model pairs, reaching 0.726 AUROC and 0.211 AUPRC lift over the base rate. Additionally, NE detects failure better than semantic entropy computed over decoder samples, by 0.074 AUROC and 0.062 AUPRC lift, and this advantage widens as the neighborhood grows.",
-      "authors": [
-        "Mesut Ceylan",
-        "Arda Baris Basaran",
-        "Elgar Fleisch",
-        "Filipe Barata"
-      ],
-      "published": "2026-10-29T15:32:57Z",
-      "updated": "2026-10-29T15:32:57Z",
-      "categories": [
-        "cs.AI",
-        "cs.CL"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.40278v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40278v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7992,
-          "matched": [
-            "uncertainty"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6529,
-        "relevance": 0.6394,
-        "quality": 0.59,
-        "novelty": 0.8361,
-        "freshness": 0.7133,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Large language models (LLMs) are increasingly capable, yet they produce wrong answers indistinguishable from correct ones.",
-        "problem": "Large language models (LLMs) are increasingly capable, yet they produce wrong answers indistinguishable from correct ones.",
-        "method": "In question answering (QA), such an error propagates unnoticed into downstream tasks.",
-        "evidence": "Across five extractive-QA datasets and five instruction-tuned LLMs, NE improves failure detection against every other constructor in at least 24 of the 25 dataset-model pairs, reaching 0.726 AUROC and 0.211 AUPRC lift over the base rate.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
-    },
-    {
-      "id": "2610.37926",
-      "title": "GARDEN: Generalist Autonomous Reward Design Through Evidence Navigation for Cooperative Multi-Agent Reinforcement Learning",
-      "abstract": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function. Because task success alone provides too little guidance for learning, intermediate rewards are usually designed by hand, and this effort must often be repeated whenever the environment or the team changes. Large language models (LLMs) can automate the effort by writing reward functions as code, yet the resulting rewards are typically designed and tested in a single setting. To enable their reuse across settings, GARDEN (Generalist Autonomous Reward Design through Evidence Navigation) is proposed, in which one reward program is developed for a family of related scenarios and transferred, unchanged, to scenarios that were not available during its design. During development, environment code, training records, and agent behavior are investigated by an LLM reward engineer, and draft rewards are tested in trial training runs, while the learning algorithm and the rule for selecting the final reward are held fixed. On unseen scenarios of the Overcooked and SMAX benchmarks, task returns were increased by 58.2% and 52.5% over the default rewards on two kitchen layouts, and the mean win rate in two combat scenarios was raised from 51.0% to 89.9%. Under matched candidate and probe budgets, this exceeded the 84.2% and 79.2% obtained with fixed diagnostic feedback and Eureka-inspired reward reflection. These results show that a single autonomously engineered reward can be reused effectively across related cooperative scenarios.",
-      "authors": [
-        "Dogan Urgun"
-      ],
-      "published": "2026-10-27T20:11:29Z",
-      "updated": "2026-10-27T20:11:29Z",
-      "categories": [
-        "cs.AI",
-        "cs.MA",
-        "eess.SY"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.37926v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.37926v1",
-      "comment": "8 pages, 3 figures, 5 tables. Code: https://github.com/DoganUrgun/GARDEN",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.6039,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.6038,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.624,
-        "relevance": 0.6039,
-        "quality": 0.62,
-        "novelty": 0.8474,
-        "freshness": 0.4552,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function.",
-        "problem": "Cooperative multi-agent reinforcement learning (MARL) enables teams of agents, such as robots and autonomous vehicles, to learn coordinated behavior, but what such teams learn is largely determined by their reward function.",
-        "method": "During development, environment code, training records, and agent behavior are investigated by an LLM reward engineer, and draft rewards are tested in trial training runs, while the learning algorithm and the rule for selecting the final reward are held fixed.",
-        "evidence": "Large language models (LLMs) can automate the effort by writing reward functions as code, yet the resulting rewards are typically designed and tested in a single setting.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-10-31T15:43:19.817370+00:00"
     }
   ]
 }
