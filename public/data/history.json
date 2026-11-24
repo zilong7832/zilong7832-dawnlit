@@ -1,6 +1,314 @@
 {
-  "generated_at": "2026-11-23T22:37:10.303910+00:00",
+  "generated_at": "2026-11-24T21:09:42.445432+00:00",
   "papers": [
+    {
+      "id": "conf:acl:2026:691-main",
+      "title": "Revisiting the Reliability of Language Models in Instruction-Following",
+      "abstract": "Advanced LLMs have achieved near-ceiling instruction-following accuracy on benchmarks such as IFEval. However, these impressive scores do not necessarily translate to reliable services in real-world use, where users often vary their phrasing, contextual framing, and task formulations. In this paper, we study \\emph{nuance-oriented reliability}: whether models exhibit consistent competence across cousin prompts that convey analogous user intents but with subtle nuances. To quantify this, we introduce a new metric, reliable@k, and develop an automated pipeline that generates high-quality cousin prompts via data augmentation. Building upon this, we construct IFEval++ for systematic evaluation. Across 20 proprietary and 26 open-source LLMs, we find that current models exhibit substantial insufficiency in nuance-oriented reliability---their performance can drop by up to 61.8% with nuanced prompt modifications. What's more, we characterize it and explore three potential improvement recipes. Our findings highlight nuance-oriented reliability as a crucial yet underexplored next step toward more dependable and trustworthy LLM behavior. Our code and benchmark are accessible: https://github.com/jianshuod/IFEval-pp.",
+      "authors": [
+        "Jianshuo Dong",
+        "Yutong Zhang",
+        "Liu Yan",
+        "Zhenyu Zhong",
+        "Tao Wei",
+        "Chao Zhang",
+        "Han Qiu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3844,
+          "matched": [
+            "trustworthy",
+            "reliable"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5591,
+        "relevance": 0.3459,
+        "quality": 1.0,
+        "novelty": 0.8425,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "benchmark evaluation",
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To quantify this, we introduce a new metric, reliable@k, and develop an automated pipeline that generates high-quality cousin prompts via data augmentation.",
+        "problem": "Advanced LLMs have achieved near-ceiling instruction-following accuracy on benchmarks such as IFEval.",
+        "method": "To quantify this, we introduce a new metric, reliable@k, and develop an automated pipeline that generates high-quality cousin prompts via data augmentation.",
+        "evidence": "What's more, we characterize it and explore three potential improvement recipes.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "trustworthy",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-24T21:09:42.445432+00:00"
+    },
+    {
+      "id": "conf:acl:2026:531-main",
+      "title": "CiteGuard: Faithful Citation Attribution for LLMs via Retrieval-Augmented Validation",
+      "abstract": "Large Language Models (LLMs) have emerged as powerful assistants for scientific writing. However, concerns remain about the quality and reliability of the generated text, including citation accuracy and faithfulness. While most recent work relies on methods such as LLM-as-a-Judge, the reliability of LLM-as-a-Judge alone is also in doubt. In this work, we reframe citation evaluation as a problem of citation attribution alignment, which assesses whether LLM-generated citations match those a human author would include for the same text. We propose CiteGuard, a retrieval-aware agent framework designed to provide more faithful grounding for citation validation. CiteGuard improves over the prior baseline by 10 percentage points and achieves up to 68.1% accuracy on the CiteME benchmark, approaching human performance (69.2%). It also identifies alternative valid citations and demonstrates generalization ability for cross-domain citation attribution.",
+      "authors": [
+        "Yee Man Choi",
+        "Xuehang Guo",
+        "Yi R. Fung",
+        "Qingyun Wang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "llm-as-a-judge"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5576,
+        "relevance": 0.4069,
+        "quality": 0.79,
+        "novelty": 0.8512,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose CiteGuard, a retrieval-aware agent framework designed to provide more faithful grounding for citation validation.",
+        "problem": "Large Language Models (LLMs) have emerged as powerful assistants for scientific writing.",
+        "method": "We propose CiteGuard, a retrieval-aware agent framework designed to provide more faithful grounding for citation validation.",
+        "evidence": "CiteGuard improves over the prior baseline by 10 percentage points and achieves up to 68.1% accuracy on the CiteME benchmark, approaching human performance (69.2%).",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "llm-as-a-judge"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-24T21:09:42.445432+00:00"
+    },
+    {
+      "id": "conf:iclr:2026:10007173",
+      "title": "Reducing Belief Deviation in Reinforcement Learning for Active Reasoning of LLM Agents",
+      "abstract": "Active reasoning requires large language model (LLM) agents to interact with external sources and strategically gather information to solve problems in multiple turns. Central to this process is belief tracking: maintaining an accurate representation of the underlying state and uncertainty in understanding and solving the problem. However, due to limited reasoning capabilities, LLM-based agents often suffer belief deviation: their internal beliefs drift from the true problem state, leading to loss of state awareness and uninformative or repetitive actions. Once this happens, errors compound in the trajectories used for reinforcement learning (RL), leading to misattributed credits and limited exploration. To address this issue, we propose to track belief deviation and develop $\\mathbf{T^3}$, a simple yet principled method that detects excessive deviation and truncates training trajectories to suppress uninformative tail effects. Hence, $\\mathbf{T^3}$ preserves credits for informative prefixes and systematically improves policy optimization. Across 5 challenging tasks, $\\mathbf{T^3}$ consistently enhances training stability and yields performance gains of up to 30 points while cutting token cost by up to 34%. These results highlight belief control as a key principle for building robust LLM agents capable of active reasoning.",
+      "authors": [
+        "Deyu Zou",
+        "Yongqiang Chen",
+        "Jianxiang Wang",
+        "Garry YANG",
+        "Mufei Li",
+        "Qing Da",
+        "James Cheng",
+        "Pan Li",
+        "Yu Gong"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10007173",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10007173",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3964,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3964,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2377,
+          "matched": [
+            "uncertainty"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5537,
+        "relevance": 0.4439,
+        "quality": 0.65,
+        "novelty": 0.8518,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "To address this issue, we propose to track belief deviation and develop $\\mathbf{T^3}$, a simple yet principled method that detects excessive deviation and truncates training trajectories to suppress uninformative tail effects.",
+        "problem": "Active reasoning requires large language model (LLM) agents to interact with external sources and strategically gather information to solve problems in multiple turns.",
+        "method": "To address this issue, we propose to track belief deviation and develop $\\mathbf{T^3}$, a simple yet principled method that detects excessive deviation and truncates training trajectories to suppress uninformative tail effects.",
+        "evidence": "Hence, $\\mathbf{T^3}$ preserves credits for informative prefixes and systematically improves policy optimization.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-24T21:09:42.445432+00:00"
+    },
     {
       "id": "2611.27652",
       "title": "Auditing Post-Training Unlearning in Diffusion Language Models using Sparse Autoencoders",
@@ -10105,309 +10413,6 @@
         "topic": "Positive-unlabeled learning",
         "matched": [
           "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-01T17:06:54.092294+00:00"
-    },
-    {
-      "id": "2610.40031",
-      "title": "AI Cosmos: An Agentic Infra for Situated Learning",
-      "abstract": "Large language models (LLMs) can improve task performance during learning, yet these gains do not necessarily reflect learners' ability to thereafter apply the knowledge and skills independently. We present AI Cosmos, an agentic infrastructure for situated learning that organizes learning around two complementary principles: scenario-based participation and cumulative assets of practice. AI Cosmos organizes learners and role-specialized agents within learning scenarios that integrate task-relevant knowledge and, when needed, executable workbenches. An asset-memory loop preserves the processes and outcomes of practice as reusable assets with explicit provenance and dependencies. We evaluate scenario-based interaction through two preregistered randomized controlled studies examining the acquisition of legal reasoning and programming competence, holding the same underlying LLM across conditions. AI Cosmos achieves greater learning gains than a conventional LLM in legal reasoning and higher mastery of unseen programming problems than an LLM-as-Teacher baseline.",
-      "authors": [
-        "AI Cosmos Team",
-        "Jinfeng Zhou",
-        "Yuxuan Chen",
-        "Fangming Chang",
-        "Mingyu Su",
-        "Yifan Zhu",
-        "Yuan Wang",
-        "Bo Zhang",
-        "Bosi Wen",
-        "Chenhao Yuan",
-        "Chenwen Liao",
-        "Dazhi Jiang",
-        "Deyao Hong",
-        "Erle Zhu",
-        "Genrui Zhang",
-        "Guchan Li",
-        "Hongwen Gan",
-        "Huichao Bi",
-        "Jiahao Yan",
-        "Jincheng Fan",
-        "Kehan Zheng",
-        "Qinren Luo",
-        "Qiran Liu",
-        "Ruoqi Cao",
-        "Shizhi Zhang",
-        "Sihan Chen",
-        "Siyan Deng",
-        "Xuehan Zhou",
-        "Xujun Li",
-        "Yang Dang",
-        "Yanzhuo Zhu",
-        "Yu Zhang",
-        "Zheyu Chen",
-        "Hongning Wang",
-        "Manli Li"
-      ],
-      "published": "2026-10-29T13:36:31Z",
-      "updated": "2026-10-29T13:36:31Z",
-      "categories": [
-        "cs.CL"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.40031v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.40031v1",
-      "comment": "https://github.com/THU-AICosmos",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.605,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.605,
-          "matched": [
-            "learning"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5845,
-        "relevance": 0.605,
-        "quality": 0.4,
-        "novelty": 0.8369,
-        "freshness": 0.5506,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison"
-      ],
-      "summary": {
-        "takeaway": "We present AI Cosmos, an agentic infrastructure for situated learning that organizes learning around two complementary principles: scenario-based participation and cumulative assets of practice.",
-        "problem": "Large language models (LLMs) can improve task performance during learning, yet these gains do not necessarily reflect learners' ability to thereafter apply the knowledge and skills independently.",
-        "method": "We present AI Cosmos, an agentic infrastructure for situated learning that organizes learning around two complementary principles: scenario-based participation and cumulative assets of practice.",
-        "evidence": "An asset-memory loop preserves the processes and outcomes of practice as reusable assets with explicit provenance and dependencies.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-01T17:06:54.092294+00:00"
-    },
-    {
-      "id": "2610.38977",
-      "title": "Beyond Passing Tests: A Systematic Review and Controlled Re-evaluation of Techniques for Improving the Quality of LLM-Generated Code",
-      "abstract": "Large language models pass most functional-correctness benchmarks, but passing tests says little about whether their code is readable, efficient or secure. Many techniques claim to improve these qualities, yet their evidence is scattered, usually covers one quality dimension and is rarely compared at an equal compute budget. We contribute a systematic review and a controlled re-evaluation. A systematic literature review of 628 primary studies (July 2021 to October 2026), with disclosed, author-reviewed LLM assistance, organizes the techniques by stage, signal source and quality target. Most studies measure only the dimension they target, gains often come with unchanged or unreported correctness, single automated quality signals are gamed, and compute, variance and contamination are rarely reported. A controlled re-evaluation runs ten techniques on four models at matched budgets on correctness, maintainability, efficiency and security benchmarks, extends it to thirteen current models and repository-level tasks, and compares 66 highlighted techniques head-to-head on Gemma 4 31B. At one call, quality prompting raises analyzer issue counts and leaves complexity and judge scores almost unchanged. At matched budgets, best-of-n sampling with an analyzer-weighted ranker matches or beats prompting, planning, self-refinement, a reviewer agent and retrieval on measures the ranker does not optimize, while an analyzer feedback loop and fine-tuning beat it only on analyzer issue counts. Large correctness losses on HumanEval+, a likely contaminated benchmark near its ceiling, do not appear on contests held after the models' training cutoffs. In the head-to-head, 1 of 66 techniques beats best-of-n on its primary target beyond the 95% interval, a rate consistent with chance. Gains should be reported against a budget-matched sampling baseline and on measures independent of the technique's own signal.",
-      "authors": [
-        "Prashank Kadam"
-      ],
-      "published": "2026-10-28T22:02:40Z",
-      "updated": "2026-10-28T22:02:40Z",
-      "categories": [
-        "cs.SE",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "primary_category": "cs.SE",
-      "abs_url": "https://arxiv.org/abs/2610.38977v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.38977v1",
-      "comment": "55 pages, 5 figures, plus 120 pages of supplementary material",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6017,
-          "matched": [
-            "evaluation",
-            "interval"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "functional"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5598,
-        "relevance": 0.4902,
-        "quality": 0.69,
-        "novelty": 0.803,
-        "freshness": 0.4579,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison",
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Large language models pass most functional-correctness benchmarks, but passing tests says little about whether their code is readable, efficient or secure.",
-        "problem": "Large language models pass most functional-correctness benchmarks, but passing tests says little about whether their code is readable, efficient or secure.",
-        "method": "Many techniques claim to improve these qualities, yet their evidence is scattered, usually covers one quality dimension and is rarely compared at an equal compute budget.",
-        "evidence": "Many techniques claim to improve these qualities, yet their evidence is scattered, usually covers one quality dimension and is rarely compared at an equal compute budget.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "interval"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-01T17:06:54.092294+00:00"
-    },
-    {
-      "id": "2610.39020",
-      "title": "Distilling the Shape of Uncertainty: What On-Policy Distillation Learns and How to Predict It",
-      "abstract": "On-policy distillation (OPD) is increasingly adopted in the post-training of large language models. However, a stronger teacher may fail to improve the student. Prior work attributes this to a lack of new knowledge, but what that knowledge is remains unclear. We show that OPD learns not only \\textit{how to branch}, i.e., which candidate tokens to consider, but also \\textit{where to branch}, i.e., where to keep reasoning paths open. The existing token-overlap metric captures only the former. We introduce the entropy shape, the sequence of next-token entropies, to characterize the latter, and propose the Entropy Shape Correlation (ESC) to measure student-teacher agreement in entropy shape. Tracking ESC throughout training and intervening on a teacher's entropy while preserving its token preferences, we empirically show that \\textit{where to branch} causally drives OPD gains, independently of \\textit{how to branch}. Finally, we formulate OPD outcome prediction as a teacher selection task and establish an evaluation protocol for it, under which pre-OPD ESC selects the best teacher for both students and outperforms existing predictors. Code is available at https://github.com/maybenotime/opd-esc.",
-      "authors": [
-        "Shiping Yang",
-        "Chuanqi Tang",
-        "Hossein Hajimirsadeghi",
-        "Layla El Asri",
-        "Mohammad Amin Shabani",
-        "Angel X. Chang"
-      ],
-      "published": "2026-10-28T22:53:06Z",
-      "updated": "2026-10-28T22:53:06Z",
-      "categories": [
-        "cs.CL",
-        "cs.AI"
-      ],
-      "primary_category": "cs.CL",
-      "abs_url": "https://arxiv.org/abs/2610.39020v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.39020v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6106,
-          "matched": [
-            "uncertainty",
-            "prediction",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0401,
-          "matched": [
-            "selection"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5566,
-        "relevance": 0.4965,
-        "quality": 0.63,
-        "novelty": 0.8476,
-        "freshness": 0.4629,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link"
-      ],
-      "summary": {
-        "takeaway": "We show that OPD learns not only \\textit{how to branch}, i.e., which candidate tokens to consider, but also \\textit{where to branch}, i.e., where to keep reasoning paths open.",
-        "problem": "On-policy distillation (OPD) is increasingly adopted in the post-training of large language models.",
-        "method": "We introduce the entropy shape, the sequence of next-token entropies, to characterize the latter, and propose the Entropy Shape Correlation (ESC) to measure student-teacher agreement in entropy shape.",
-        "evidence": "However, a stronger teacher may fail to improve the student.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Bandwidth selection.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "prediction",
-          "evaluation"
         ],
         "lane": "llm"
       },

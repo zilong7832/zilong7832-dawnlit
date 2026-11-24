@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T22:37:10.303910+00:00",
+  "generated_at": "2026-11-24T21:09:42.445432+00:00",
   "papers": [
     {
       "id": "conf:neurips:2026:139266",
@@ -1029,116 +1029,6 @@
       "recommended_at": "2026-11-21T17:57:13.230731+00:00"
     },
     {
-      "id": "conf:iclr:2026:10008999",
-      "title": "TROLL: Trust Regions Improve Reinforcement Learning for Large Language Models",
-      "abstract": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs). Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched. Originally introduced as a proxy for principled KL-based trust regions, clipping is a crude approximation that often causes unstable updates and suboptimal performance. We replace the clip objective with a novel discrete differentiable trust region projection, which provides principled token-level KL constraints. The projection operates on a sparse subset of the model’s most important token logits to balance computational cost and projection effectiveness. Our approach, Trust Region Optimization for Large Language Models (TROLL), serves as a direct replacement for PPO-like clipping during training and does not alter the model’s inference behavior. Across mathematical reasoning and code generation tasks, model families, as well as advantage-estimation methods, TROLL consistently outperforms PPO-like clipping in terms of training speed, stability, and final success rates.",
-      "authors": [
-        "Philipp Becker",
-        "Niklas Freymuth",
-        "Serge Thilges",
-        "Fabian Otto",
-        "Gerhard Neumann"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICLR 2026",
-        "Oral"
-      ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10008999",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10008999",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.456,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.456,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0836,
-          "matched": [
-            "inference",
-            "estimation"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.584,
-        "relevance": 0.4727,
-        "quality": 0.71,
-        "novelty": 0.8474,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs).",
-        "problem": "Reinforcement Learning (RL) with PPO-like clip objectives has become the standard choice for reward-based fine-tuning of large language models (LLMs).",
-        "method": "Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched.",
-        "evidence": "Although recent work has explored improved estimators of advantages and normalization, the clipping mechanism itself has remained untouched.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-17T19:49:47.371360+00:00"
-    },
-    {
       "id": "2611.25292",
       "title": "Cross-Question Reliable Reinforcement Learning",
       "abstract": "AI systems operating near the limits of their capabilities can maximize utility while minimizing the risk of error by abstaining or deferring questions they are not confident about to a human or a stronger model. Recently, large language models (LLMs) have been post-trained to estimate confidence in their own answers. To achieve this, methods reinforce confidence scores based on the correctness signal to each question-answer pair individually, with rewards that encourage assigning confidence 1 to correct answers and 0 to incorrect answers. However, estimating confidence scores is useful in that it enables selecting only the most confident answers, to maximize the share of solved questions while accommodating the user's risk tolerance. Assigning confidence 1 to correct answers and 0 to incorrect ones is theoretically optimal, but unattainable in practice and detrimental for selective prediction with a non-zero risk tolerance: confidences pushed to 0 and 1 carry no information about how answers compare to one another. We therefore introduce CARE (Cross-question Abstention Reward Estimation), which computes rewards over a set of question-answer pairs: At each of several risk tolerances, the confidences across the set induce an abstention threshold, and each confidence is rewarded for lying on the correct side of it. Since the threshold itself comes from the set, every verbalized confidence is reinforced relative to other questions' confidence, not against its own binary correctness label. On math, CARE increases the coverage at 5% risk (C@5) across MATH-500, GSM8K, and Big-Math-Digits from 0.8% to 42.4%, compared to existing pointwise correctness-matching rewards. When trained on multi-hop Wikipedia QA from HotpotQA, CARE improves C@5 in out-of-distribution general-knowledge, reasoning, and math benchmarks (including CommonsenseQA, GPQA, SimpleQA, and TriviaQA) from 12.3% to 23.6%.",
@@ -1255,36 +1145,31 @@
       "recommended_at": "2026-11-21T17:57:13.230731+00:00"
     },
     {
-      "id": "conf:iclr:2026:10007708",
-      "title": "Planner Aware Path Learning in Diffusion Language Models Training",
-      "abstract": "Diffusion language models have emerged as a powerful alternative to autoregressive models, enabling fast inference through more flexible and parallel generation paths. This flexibility of sampling is unlocked by new engineered sampling strategies, or *planners*, that select more favorable generation paths by iteratively planning---versus uniformly at random---where to denoise along the sequence. However, by modifying the reverse paths via planning, planners create an irrevocable mismatch between the uniformly random denoising paths during training and planning-based inference. In this paper, we systematically investigate the mismatch of discrete diffusion training and inference under planning and theoretically prove that the standard discrete diffusion training evidence lower bound (ELBO) does not accurately describe a denoiser that uses a non-uniform planner. To address this gap, we derive a new planned evidence lower bound (P-ELBO) that incorporates planner-based reverse dynamics directly into the training objective. Using the P-ELBO, we introduce *Planner Aware Path Learning* (PAPL), a novel training scheme that aligns training and inference under a planned denoiser. PAPL is implemented as a simple yet effective modification to the standard masked discrete diffusion loss, making it widely applicable and easy to adopt. Empirically, we show PAPL delivers consistent gains across domains, including a 40\\% relative improvement in protein sequences, improved text generation with up to a $4\\times$ relative MAUVE gain, and 23\\% relative improvement in code generation HumanEval pass@10.",
+      "id": "2611.27652",
+      "title": "Auditing Post-Training Unlearning in Diffusion Language Models using Sparse Autoencoders",
+      "abstract": "Machine unlearning is an approach to privacy protection: it aims to remove the influence of designated data while preserving the model's behavior on information that should be retained. While a growing body of work investigates this objective in autoregressive large language models, machine unlearning remains underexplored in diffusion language models (DLMs). DLMs generate text through iterative denoising, exposing partially masked states whose internal representations change throughout the generation process. This raises a DLM-specific question: can selective forgetting improve by identifying forget-data-associated features and adapting their suppression across denoising stages? We conduct a controlled investigation of this question in LLaDA-8B-Instruct. To evaluate the unlearning of knowledge plausibly encoded during pre-training, we use WMDP as our forget-domain benchmark. Using top-k sparse autoencoders and denoising-state replay, we compare static and stage-adaptive feature suppression. We find substantial shifts in forget-data-associated features across denoising stages, but tracking these dynamics alone does not reliably improve the forget-retain trade-off at the evaluated operating points. Together, our study provides an initial empirical foundation for developing and evaluating machine unlearning as a post-training privacy mechanism in DLMs.",
       "authors": [
-        "Zhangzhi Peng",
-        "Zachary Bezemek",
-        "Jarrid Rector-Brooks",
-        "Shuibai Zhang",
-        "Michael Bronstein",
-        "Anru Zhang",
-        "Joey Bose",
-        "Alexander Tong"
+        "Yunha Seo",
+        "Changhoon Kim"
       ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
+      "published": "2026-11-20T14:17:08Z",
+      "updated": "2026-11-20T14:17:08Z",
       "categories": [
-        "ICLR 2026",
-        "Oral"
+        "cs.CL"
       ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10007708",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10007708",
-      "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
-      "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
-      "conference_year": 2026,
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.27652v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.27652v1",
+      "comment": "14 pages, 1 figure. Accepted at the NeurIPS 2026 Workshop on Inference-Time AI Privacy (InfPriv 2026)",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
       "lane": "llm",
       "scope_matches": [
+        "large language model",
+        "large language models",
         "language model",
         "language models"
       ],
@@ -1293,53 +1178,69 @@
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.3963,
+          "score": 0.6043,
           "matched": [
-            "learning"
+            "machine",
+            "auditing"
           ]
         },
         {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
           "status": "emerging",
-          "score": 0.3963,
+          "score": 0.1475,
           "matched": [
-            "learning"
+            "selective"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "data"
           ]
         },
         {
           "id": "time_series_inference",
           "name": "Time series inference",
           "status": "emerging",
-          "score": 0.1003,
+          "score": 0.1141,
           "matched": [
-            "inference"
+            "data"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "adaptive"
           ]
         }
       ],
       "scores": {
-        "total": 0.5781,
-        "relevance": 0.4164,
-        "quality": 0.85,
-        "novelty": 0.8747,
-        "freshness": 1.0,
+        "total": 0.57,
+        "relevance": 0.5358,
+        "quality": 0.54,
+        "novelty": 0.8765,
+        "freshness": 0.5218,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
         "code available",
-        "formal bound",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
+        "benchmark evaluation"
       ],
       "summary": {
-        "takeaway": "Using the P-ELBO, we introduce *Planner Aware Path Learning* (PAPL), a novel training scheme that aligns training and inference under a planned denoiser.",
-        "problem": "Diffusion language models have emerged as a powerful alternative to autoregressive models, enabling fast inference through more flexible and parallel generation paths.",
-        "method": "Using the P-ELBO, we introduce *Planner Aware Path Learning* (PAPL), a novel training scheme that aligns training and inference under a planned denoiser.",
-        "evidence": "In this paper, we systematically investigate the mismatch of discrete diffusion training and inference under planning and theoretically prove that the standard discrete diffusion training evidence lower bound (ELBO) does not accurately describe a denoiser that uses a non-uniform planner.",
+        "takeaway": "We find substantial shifts in forget-data-associated features across denoising stages, but tracking these dynamics alone does not reliably improve the forget-retain trade-off at the evaluated operating points.",
+        "problem": "Machine unlearning is an approach to privacy protection: it aims to remove the influence of designated data while preserving the model's behavior on information that should be retained.",
+        "method": "While a growing body of work investigates this objective in autoregressive large language models, machine unlearning remains underexplored in diffusion language models (DLMs).",
+        "evidence": "This raises a DLM-specific question: can selective forgetting improve by identifying forget-data-associated features and adapting their suppression across denoising stages?",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
         "source": "abstract",
         "generated_by": "extractive",
         "language": "en",
@@ -1350,11 +1251,97 @@
       "recommendation_reason": {
         "topic": "Trustworthy machine learning",
         "matched": [
-          "learning"
+          "machine",
+          "auditing"
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-11-17T19:49:47.371360+00:00"
+      "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
+    {
+      "id": "conf:icml:2026:71103",
+      "title": "Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking",
+      "abstract": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) *JBF-LIB* for shared contracts and reusable utilities; (ii) *JBF-FORGE* for the multi-agent paper-to-module translation; and (iii) *JBF-EVAL* for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by more than half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.",
+      "authors": [
+        "Zhicheng Fang",
+        "Jingjie Zheng",
+        "Chenxu Fu",
+        "Wei Xu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Oral"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/oral/71103",
+      "pdf_url": "https://icml.cc/virtual/2026/oral/71103",
+      "comment": "",
+      "journal_ref": "ICML 2026 Oral",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4481,
+          "matched": [
+            "evaluation",
+            "evaluations"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5675,
+        "relevance": 0.3585,
+        "quality": 0.98,
+        "novelty": 0.8851,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "dataset evidence",
+        "reproducibility",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
+        "problem": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols.",
+        "method": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
+        "evidence": "Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-18T19:23:34.852655+00:00"
     }
   ]
 }
