@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-11-25T20:27:42.752514+00:00",
+  "profile_updated_at": "2026-08-23",
+  "content_language": "zh",
+  "source_count": 0,
+  "source_total": 0,
+  "source_lookback_days": 1,
+  "source_truncated": false,
+  "unseen_source_count": 0,
+  "previously_recommended_count": 521,
+  "eligible_count": 0,
+  "feedback_count": 0,
+  "topic_feedback": {
+    "enabled": true,
+    "generated_at": "2026-11-25T20:27:42.752514+00:00",
+    "feedback_records": 0,
+    "latest_feedback_papers": 0,
+    "labeled_papers": 0,
+    "adjusted_topics": 0,
+    "minimum_effective_samples": 4.0,
+    "topics": [
+      {
+        "id": "functional_time_series",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "long_run_covariance_estimation",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "bandwidth_selection",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "time_series_inference",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "trustworthy_machine_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "positive_unlabeled_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "conformal_prediction",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      }
+    ]
+  },
+  "semantic_feedback_count": 0,
+  "minimum_daily_target": 3,
+  "minimum_daily_met": true,
+  "conference_supplement_count": 3,
+  "conference_eligible_count": 114,
+  "conference_pool_updated_at": "2026-11-19T19:28:29.967486+00:00",
+  "conference_source_status": {
+    "ICLR:2026": "ok:223",
+    "ICML:2026": "ok:742",
+    "NeurIPS:2026": "ok:227",
+    "ACL:2026": "ok:478",
+    "EMNLP:2026": "awaiting_verified_schedule",
+    "ICLR:2025": "ok:213",
+    "ICML:2025": "ok:344",
+    "NeurIPS:2025": "ok:808",
+    "EMNLP:2025": "awaiting_verified_schedule",
+    "ACL:2025": "awaiting_verified_schedule"
+  },
+  "papers": [
+    {
+      "id": "conf:icml:2026:64918",
+      "title": "MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems",
+      "abstract": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption. Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature. Yet, existing benchmarks for LLM memory often focus on evaluating the system on homogeneous reading comprehension tasks with long-form inputs rather than testing their abilities to learn from accumulated user feedback in service time. Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys. Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms.",
+      "authors": [
+        "Qingyao Ai",
+        "Yichen Tang",
+        "Changyue Wang",
+        "Jianming Long",
+        "Weihang Su",
+        "Yiqun LIU"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/64918",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/64918",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4292,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4292,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1013,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1013,
+          "matched": [
+            "time",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5861,
+        "relevance": 0.4495,
+        "quality": 0.79,
+        "novelty": 0.8591,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "formal bound",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys.",
+        "problem": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption.",
+        "method": "Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature.",
+        "evidence": "Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:2071-main",
+      "title": "TLSA: LLM-Guided Text-Label Space Alignment with Contrastive Learning for Generalized Category Discovery",
+      "abstract": "Generalized Category Discovery (GCD) aims to classify data from partially labeled datasets by jointly recognizing known categories and discovering novel ones. Despite recent advances, existing methods still suffer from weak text–label alignment, inconsistent objectives across known and novel categories, and poor discrimination of semantically similar clusters. To mitigate these issues, we propose TLSA, a unified framework that enforces contrastive alignment between text and label representations within a shared semantic space. Specifically, we first design a label-semantic aware dual-encoder equipped with a symmetric contrastive objective to achieve text-label alignment. Then, we leverage LLM-based label induction to generate explicit and semantically meaningful names for previously unseen categories, followed by a graph-based refinement strategy that disambiguates semantically overlapping clusters through forced renaming. Finally, a confidence-aware sampling strategy ensures balanced learning across both easy and hard instances. Extensive experiments on four benchmark datasets show that TLSA consistently outperforms state-of-the-art GCD methods. The code is available at https://github.com/Wenxi-Xu/TLSA.",
+      "authors": [
+        "Wenxi Xu",
+        "Chuan Qin",
+        "Xi Chen",
+        "Chuyu Fang",
+        "Yuanchun Zhou",
+        "Hengshu Zhu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3235,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3235,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0314,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0314,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5514,
+        "relevance": 0.3298,
+        "quality": 1.0,
+        "novelty": 0.8706,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "To mitigate these issues, we propose TLSA, a unified framework that enforces contrastive alignment between text and label representations within a shared semantic space.",
+        "problem": "Generalized Category Discovery (GCD) aims to classify data from partially labeled datasets by jointly recognizing known categories and discovering novel ones.",
+        "method": "To mitigate these issues, we propose TLSA, a unified framework that enforces contrastive alignment between text and label representations within a shared semantic space.",
+        "evidence": "Specifically, we first design a label-semantic aware dual-encoder equipped with a symmetric contrastive objective to achieve text-label alignment.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "conf:acl:2026:3419-main",
+      "title": "Modal Dependency Parsing as Structured Prediction over Source-Cue Scope",
+      "abstract": "Modal dependency parsing-the task of identifying a semantic graph that represents who is responsible for an event-centered claim and with what degree of certainty-relies on recognizing source-introducing cues and correctly linking them to their associated content. However, prior work has largely focused on identifying sources only, treating cue expressions and their modal coverage as auxiliary signals. In this work, we propose a structured prediction framework that leverages large language models (LLMs) to explicitly identify source-cue pairs as well as their respective scope, which together define the modal contexts governing downstream source attribution for events. By concentrating learning at the source-cue level and constraining event-level decisions to a small, scope-defined candidate set, our top-down approach enables more efficient inference in long, event-rich documents. Experiments show this approach surpasses prior state-of-the-art results by 3 and 4% for English and Chinese datasets, respectively.",
+      "authors": [
+        "Jayeol Chun",
+        "Nianwen Xue"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4335,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1466,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1466,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.044,
+          "matched": [
+            "inference"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5479,
+        "relevance": 0.4054,
+        "quality": 0.75,
+        "novelty": 0.8441,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "In this work, we propose a structured prediction framework that leverages large language models (LLMs) to explicitly identify source-cue pairs as well as their respective scope, which together define the modal contexts governing downstream source attribution for events.",
+        "problem": "Modal dependency parsing-the task of identifying a semantic graph that represents who is responsible for an event-centered claim and with what degree of certainty-relies on recognizing source-introducing cues and correctly linking them to their associated content.",
+        "method": "In this work, we propose a structured prediction framework that leverages large language models (LLMs) to explicitly identify source-cue pairs as well as their respective scope, which together define the modal contexts governing downstream source attribution for events.",
+        "evidence": "Experiments show this approach surpasses prior state-of-the-art results by 3 and 4% for English and Chinese datasets, respectively.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}

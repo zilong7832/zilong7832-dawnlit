@@ -1,6 +1,332 @@
 {
-  "generated_at": "2026-11-24T21:09:42.445432+00:00",
+  "generated_at": "2026-11-25T20:27:42.752514+00:00",
   "papers": [
+    {
+      "id": "conf:icml:2026:64918",
+      "title": "MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems",
+      "abstract": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption. Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature. Yet, existing benchmarks for LLM memory often focus on evaluating the system on homogeneous reading comprehension tasks with long-form inputs rather than testing their abilities to learn from accumulated user feedback in service time. Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys. Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms.",
+      "authors": [
+        "Qingyao Ai",
+        "Yichen Tang",
+        "Changyue Wang",
+        "Jianming Long",
+        "Weihang Su",
+        "Yiqun LIU"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/64918",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/64918",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4292,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4292,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1013,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1013,
+          "matched": [
+            "time",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5861,
+        "relevance": 0.4495,
+        "quality": 0.79,
+        "novelty": 0.8591,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "formal bound",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys.",
+        "problem": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption.",
+        "method": "Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature.",
+        "evidence": "Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-25T20:27:42.752514+00:00"
+    },
+    {
+      "id": "conf:acl:2026:2071-main",
+      "title": "TLSA: LLM-Guided Text-Label Space Alignment with Contrastive Learning for Generalized Category Discovery",
+      "abstract": "Generalized Category Discovery (GCD) aims to classify data from partially labeled datasets by jointly recognizing known categories and discovering novel ones. Despite recent advances, existing methods still suffer from weak text–label alignment, inconsistent objectives across known and novel categories, and poor discrimination of semantically similar clusters. To mitigate these issues, we propose TLSA, a unified framework that enforces contrastive alignment between text and label representations within a shared semantic space. Specifically, we first design a label-semantic aware dual-encoder equipped with a symmetric contrastive objective to achieve text-label alignment. Then, we leverage LLM-based label induction to generate explicit and semantically meaningful names for previously unseen categories, followed by a graph-based refinement strategy that disambiguates semantically overlapping clusters through forced renaming. Finally, a confidence-aware sampling strategy ensures balanced learning across both easy and hard instances. Extensive experiments on four benchmark datasets show that TLSA consistently outperforms state-of-the-art GCD methods. The code is available at https://github.com/Wenxi-Xu/TLSA.",
+      "authors": [
+        "Wenxi Xu",
+        "Chuan Qin",
+        "Xi Chen",
+        "Chuyu Fang",
+        "Yuanchun Zhou",
+        "Hengshu Zhu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3235,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3235,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0314,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0314,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5514,
+        "relevance": 0.3298,
+        "quality": 1.0,
+        "novelty": 0.8706,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "benchmark evaluation",
+        "experiments",
+        "dataset evidence"
+      ],
+      "summary": {
+        "takeaway": "To mitigate these issues, we propose TLSA, a unified framework that enforces contrastive alignment between text and label representations within a shared semantic space.",
+        "problem": "Generalized Category Discovery (GCD) aims to classify data from partially labeled datasets by jointly recognizing known categories and discovering novel ones.",
+        "method": "To mitigate these issues, we propose TLSA, a unified framework that enforces contrastive alignment between text and label representations within a shared semantic space.",
+        "evidence": "Specifically, we first design a label-semantic aware dual-encoder equipped with a symmetric contrastive objective to achieve text-label alignment.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-25T20:27:42.752514+00:00"
+    },
+    {
+      "id": "conf:acl:2026:3419-main",
+      "title": "Modal Dependency Parsing as Structured Prediction over Source-Cue Scope",
+      "abstract": "Modal dependency parsing-the task of identifying a semantic graph that represents who is responsible for an event-centered claim and with what degree of certainty-relies on recognizing source-introducing cues and correctly linking them to their associated content. However, prior work has largely focused on identifying sources only, treating cue expressions and their modal coverage as auxiliary signals. In this work, we propose a structured prediction framework that leverages large language models (LLMs) to explicitly identify source-cue pairs as well as their respective scope, which together define the modal contexts governing downstream source attribution for events. By concentrating learning at the source-cue level and constraining event-level decisions to a small, scope-defined candidate set, our top-down approach enables more efficient inference in long, event-rich documents. Experiments show this approach surpasses prior state-of-the-art results by 3 and 4% for English and Chinese datasets, respectively.",
+      "authors": [
+        "Jayeol Chun",
+        "Nianwen Xue"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4335,
+          "matched": [
+            "prediction"
+          ]
+        },
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.1466,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.1466,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.044,
+          "matched": [
+            "inference"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5479,
+        "relevance": 0.4054,
+        "quality": 0.75,
+        "novelty": 0.8441,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "experiments",
+        "dataset evidence",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "In this work, we propose a structured prediction framework that leverages large language models (LLMs) to explicitly identify source-cue pairs as well as their respective scope, which together define the modal contexts governing downstream source attribution for events.",
+        "problem": "Modal dependency parsing-the task of identifying a semantic graph that represents who is responsible for an event-centered claim and with what degree of certainty-relies on recognizing source-introducing cues and correctly linking them to their associated content.",
+        "method": "In this work, we propose a structured prediction framework that leverages large language models (LLMs) to explicitly identify source-cue pairs as well as their respective scope, which together define the modal contexts governing downstream source attribution for events.",
+        "evidence": "Experiments show this approach surpasses prior state-of-the-art results by 3 and 4% for English and Chinese datasets, respectively.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-25T20:27:42.752514+00:00"
+    },
     {
       "id": "conf:acl:2026:691-main",
       "title": "Revisiting the Reliability of Language Models in Instruction-Following",
@@ -10143,280 +10469,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-02T20:45:04.696521+00:00"
-    },
-    {
-      "id": "2610.41803",
-      "title": "What Standard Evaluations Hide About Detectors of Hijacked LLM Agents: Rare Attacks, Unseen Tools and Benchmark Transfer",
-      "abstract": "Detectors can flag hijacked large language model (LLM) agents from the traces of the tools they call. In the eleven evaluations we audited, attacks or anomalies make up 16% to 86% of the test samples, no evaluation varies that share, and six report no test on data from a second benchmark or source. We ask what such evaluations hide. On the AgentDrift and AgentDojo benchmarks we test trained detectors that read tool identities, behavior, call sequences, step embeddings or text, and a released LLM action monitor, AlignmentCheck, with thresholds fixed on training data or set by the monitor's released decision rule. First, at a 2% attack rate a detector with an area under the receiver operating characteristic curve (AUROC) of 0.879 reaches a precision of 0.076, and the mix of negatives alone moves that precision between 0.039 and 0.117. Second, as tool coverage, the share of test tool calls whose tool was seen in training, falls, detector rankings cross near 50% coverage and reverse below it, because unseen tools map to inputs that training never reached. Dropout on tool inputs largely removes the reversal. Third, no detector trained on AgentDrift ranks AgentDojo traces better than chance (AUROC 0.47 to 0.52), including one that reaches 0.996 within AgentDojo. The monitor, trained on neither, reaches 0.930, but with its open backbone its released decision rule would still mostly raise false alerts at a 2% attack rate (precision 0.096). We turn these findings into a checklist for evaluating trace detectors.",
-      "authors": [
-        "Mahmoud Abbasi",
-        "Juan M. Núñez V.",
-        "Amin Shahraki"
-      ],
-      "published": "2026-10-30T14:30:47Z",
-      "updated": "2026-10-30T14:30:47Z",
-      "categories": [
-        "cs.CR",
-        "cs.LG"
-      ],
-      "primary_category": "cs.CR",
-      "abs_url": "https://arxiv.org/abs/2610.41803v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.41803v1",
-      "comment": "14 pages, 4 figures, 6 tables. Code, data and every monitor call: https://github.com/Mahmoud-Abbasi-svg/agent-trace-detector-eval",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "language model",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5235,
-          "matched": [
-            "evaluation",
-            "evaluations"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0713,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0713,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4978,
-        "relevance": 0.4473,
-        "quality": 0.48,
-        "novelty": 0.8429,
-        "freshness": 0.5343,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Detectors can flag hijacked large language model (LLM) agents from the traces of the tools they call.",
-        "problem": "Detectors can flag hijacked large language model (LLM) agents from the traces of the tools they call.",
-        "method": "In the eleven evaluations we audited, attacks or anomalies make up 16% to 86% of the test samples, no evaluation varies that share, and six report no test on data from a second benchmark or source.",
-        "evidence": "We ask what such evaluations hide.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "evaluations"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-02T20:45:04.696521+00:00"
-    },
-    {
-      "id": "2610.41459",
-      "title": "NormDetect: Anchored Calibration for Low-False-Positive Detection of Machine-Generated Web Text",
-      "abstract": "Web platforms screen posts for text written by large language models, and every false flag hits a human writer. Detectors must therefore run at a very low false positive rate (FPR). Zero-shot detectors such as Binoculars score text with frozen language models, but invisible edits such as homoglyphs shatter tokenization and push machine text into the human range. Unicode normalization undoes these edits, yet the normalized score still misses half of the machine text at a strict FPR, under attacks that leave nothing to clean. We find that with the Falcon-7B scoring pair, heads on token statistics recall less than the normalized score at this FPR, and several flag too many human posts in some sections. We propose NormDetect, which anchors a learned per-section head to the normalized zero-shot score. A blend weight chosen on training folds under a human FPR cap combines the two scores, and one threshold is calibrated on human text only. On eight sections of the RAID benchmark with eleven attacks, NormDetect raises recall at a 0.1% calibrated FPR by 5.0 points over normalized Binoculars. Its human FPR bound stays at most 1% in every section, and no other detector within this bound recalls as much.",
-      "authors": [
-        "Hanshuai Cui",
-        "Fanshuai Meng",
-        "Zhiqing Tang"
-      ],
-      "published": "2026-10-30T09:09:32Z",
-      "updated": "2026-10-30T09:09:32Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.41459v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.41459v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4661,
-          "matched": [
-            "machine"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.4902,
-        "relevance": 0.3729,
-        "quality": 0.68,
-        "novelty": 0.867,
-        "freshness": 0.5024,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "formal bound",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We find that with the Falcon-7B scoring pair, heads on token statistics recall less than the normalized score at this FPR, and several flag too many human posts in some sections.",
-        "problem": "Web platforms screen posts for text written by large language models, and every false flag hits a human writer.",
-        "method": "We propose NormDetect, which anchors a learned per-section head to the normalized zero-shot score.",
-        "evidence": "Zero-shot detectors such as Binoculars score text with frozen language models, but invisible edits such as homoglyphs shatter tokenization and push machine text into the human range.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "machine"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-02T20:45:04.696521+00:00"
-    },
-    {
-      "id": "2610.38851",
-      "title": "Learning to Reason from Reference Samples Alone: Reinforced Adversarial Learning for Modern LLM Post-Training",
-      "abstract": "In many settings where LLM post-training is desirable, high-quality answers are recognizable but difficult to score with explicit rewards. Reinforcement learning with verifiable rewards (RLVR) is limited to tasks where an explicit correctness signal is available. Prior adversarial approaches to training reasoning LLMs either complement verifiable rewards with co-trained critics or require reference reasoning traces. We ask whether a co-trained LLM judge can turn reference answers alone into the sole reward for on-policy post-training of reasoning LLMs. We call this method Reinforced Adversarial Learning (RAL). We first validate RAL on three verifiable tasks (integer multiplication, code-based arithmetic-expression synthesis, and SMILES-to-formula translation), using the verifiers only for evaluation. With sufficiently capable judges and enough training, RAL matches direct RLVR. We then apply RAL to scientific abstract generation in two settings. In the first setting, RAL guides the generator to produce abstracts in the scientific domain of the reference abstracts, even though the prompt leaves that domain unspecified. In the second setting, we generate abstracts for U.S. National Institutes of Health grant proposals conditioned on the grant title. Human scientists and an ensemble of LLM judges find our generations harder to distinguish from real abstracts than those of frontier-LLM baselines. These results suggest a path toward post-training reasoning models in scientific and other high-value domains, where increasingly capable judges infer hard-to-specify reward functions from example answers.",
-      "authors": [
-        "Albert Bou",
-        "Javier Valdes-Aleman",
-        "Jon M. Laurent",
-        "Samuel G. Rodriques",
-        "Andrew D. White",
-        "Michaela Hinks",
-        "Siddharth Narayanan"
-      ],
-      "published": "2026-10-28T20:34:15Z",
-      "updated": "2026-10-28T20:34:15Z",
-      "categories": [
-        "cs.AI",
-        "cs.LG"
-      ],
-      "primary_category": "cs.AI",
-      "abs_url": "https://arxiv.org/abs/2610.38851v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.38851v1",
-      "comment": "31 pages, 6 figures, 10 tables, including references and appendices",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "llm",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.5541,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.554,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.1165,
-          "matched": [
-            "evaluation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5893,
-        "relevance": 0.5774,
-        "quality": 0.54,
-        "novelty": 0.8355,
-        "freshness": 0.4491,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "baseline comparison"
-      ],
-      "summary": {
-        "takeaway": "In many settings where LLM post-training is desirable, high-quality answers are recognizable but difficult to score with explicit rewards.",
-        "problem": "In many settings where LLM post-training is desirable, high-quality answers are recognizable but difficult to score with explicit rewards.",
-        "method": "Reinforcement learning with verifiable rewards (RLVR) is limited to tasks where an explicit correctness signal is available.",
-        "evidence": "Prior adversarial approaches to training reasoning LLMs either complement verifiable rewards with co-trained critics or require reference reasoning traces.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-01T17:06:54.092294+00:00"
     }
   ]
 }

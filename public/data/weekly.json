@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T21:09:42.445432+00:00",
+  "generated_at": "2026-11-25T20:27:42.752514+00:00",
   "papers": [
     {
       "id": "conf:neurips:2026:139266",
@@ -685,6 +685,116 @@
       "recommended_at": "2026-11-20T19:05:21.068817+00:00"
     },
     {
+      "id": "conf:icml:2026:64918",
+      "title": "MemoryBench: A Benchmark for Memory and Continual Learning in LLM Systems",
+      "abstract": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption. Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature. Yet, existing benchmarks for LLM memory often focus on evaluating the system on homogeneous reading comprehension tasks with long-form inputs rather than testing their abilities to learn from accumulated user feedback in service time. Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys. Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms.",
+      "authors": [
+        "Qingyao Ai",
+        "Yichen Tang",
+        "Changyue Wang",
+        "Jianming Long",
+        "Weihang Su",
+        "Yiqun LIU"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/64918",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/64918",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4292,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4292,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1013,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1013,
+          "matched": [
+            "time",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5861,
+        "relevance": 0.4495,
+        "quality": 0.79,
+        "novelty": 0.8591,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "experiments",
+        "formal bound",
+        "publication metadata"
+      ],
+      "summary": {
+        "takeaway": "Therefore, we propose a user feedback simulation framework and a comprehensive benchmark covering multiple domains, languages, and types of tasks to evaluate the continual learning abilities of LLMsys.",
+        "problem": "Scaling up data, parameters, and test-time computation has been the mainstream methods to improve LLM systems (LLMsys), but their upper bounds are almost reached due to the gradual depletion of high-quality data and marginal gains obtained from larger computational resource consumption.",
+        "method": "Inspired by the abilities of human and traditional AI systems in learning from practice, constructing memory and continual learning frameworks for LLMsys has become an important and popular research direction in recent literature.",
+        "evidence": "Experiments show that the effectiveness and efficiency of state-of-the-art baselines are far from satisfying, and we hope this benchmark could pave the way for future studies on LLM memory and optimization algorithms.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-25T20:27:42.752514+00:00"
+    },
+    {
       "id": "2611.25592",
       "title": "From Data Alignment to Parameter Generation: Few-Shot Cross-City Traffic Prediction with Conditional Diffusion",
       "abstract": "Accurate mobile traffic forecasting is crucial for network service management, supporting proactive capacity provisioning, congestion mitigation, and energy-efficient operation. However, many cities and regions are data-scarce (e.g., newly deployed or poorly instrumented areas), thus making traffic prediction a few-shot learning problem and limiting the practicality of standard data-driven models. Existing cross-city solutions primarily rely on data-space alignment to match traffic distributions between data-rich and data-scarce cities, but such alignment is often brittle under real-world distribution shifts, measurement noise, and city-specific bias. To address these limitations, we propose a Conditional Diffusion-based Parameter Generation (CDPG) framework. Instead of aligning raw data, CDPG learns the conditional distribution of high-performing predictor parameters for source cities and directly generates node-specific model parameters for the target city. To support reliable adaptation for network traffic prediction, CDPG conditions parameter generation on multi-modal spatio-temporal context. Specifically, CDPG captures spatial environment cues by combining satellite imagery with large language model (LLM)-derived semantic descriptions, and summarizes complex temporal behaviors via unsupervised pattern clustering. These contextual components guide CDPG in producing parameters tailored to each base station's operational context, thereby improving robustness under cross-city and cross-region shifts. Extensive experiments on three large-scale datasets show that CDPG consistently outperforms state-of-the-art cross-city few-shot baselines by up to 9.72% on standard forecasting metrics and remains robust for few-shot multi-step prediction. The code is available at https://github.com/LingoodBoy/CDPG.",
@@ -1257,91 +1367,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-23T22:37:10.303910+00:00"
-    },
-    {
-      "id": "conf:icml:2026:71103",
-      "title": "Jailbreak Foundry: From Papers to Runnable Attacks for Reproducible Benchmarking",
-      "abstract": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols. We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness. JBF features three core components: (i) *JBF-LIB* for shared contracts and reusable utilities; (ii) *JBF-FORGE* for the multi-agent paper-to-module translation; and (iii) *JBF-EVAL* for standardizing evaluations. Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points. By leveraging shared infrastructure, JBF reduces attack-specific implementation code by more than half relative to original repositories and achieves an 82.5% mean reused-code ratio. This system enables a standardized AdvBench evaluation of all 30 attacks across 10 victim models using a consistent GPT-4o judge. By automating both attack integration and standardized evaluation, JBF offers a scalable solution for creating living benchmarks that keep pace with the rapidly shifting security landscape.",
-      "authors": [
-        "Zhicheng Fang",
-        "Jingjie Zheng",
-        "Chenxu Fu",
-        "Wei Xu"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Oral"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/oral/71103",
-      "pdf_url": "https://icml.cc/virtual/2026/oral/71103",
-      "comment": "",
-      "journal_ref": "ICML 2026 Oral",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4481,
-          "matched": [
-            "evaluation",
-            "evaluations"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5675,
-        "relevance": 0.3585,
-        "quality": 0.98,
-        "novelty": 0.8851,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "dataset evidence",
-        "reproducibility",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
-        "problem": "Jailbreak techniques for large language models (LLMs) evolve faster than benchmarks, making robustness estimates stale and difficult to compare across papers due to drift in datasets, harnesses, and judging protocols.",
-        "method": "We introduce **JAILBREAK FOUNDRY (JBF)**, a system that addresses this gap via a multi-agent workflow to translate jailbreak papers into executable modules for immediate evaluation within a unified harness.",
-        "evidence": "Across 30 reproduced attacks, JBF achieves high fidelity with a mean (reproduced$-$reported) attack success rate (ASR) deviation of $+0.26$ percentage points.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "evaluations"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-18T19:23:34.852655+00:00"
     }
   ]
 }
