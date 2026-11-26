@@ -1,118 +1,6 @@
 {
-  "generated_at": "2026-11-25T20:27:42.752514+00:00",
+  "generated_at": "2026-11-26T20:09:39.834454+00:00",
   "papers": [
-    {
-      "id": "conf:neurips:2026:139266",
-      "title": "ALTER: An Allen's Algebra-Based Evaluation Framework for Temporal Reasoning of LLMs",
-      "abstract": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities. To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra. By combining basic relations into complex networks and converting these structures into natural language forms through an automated pipeline, we construct a validated benchmark of 2,500 question-answer pairs, ensuring a controllable and scalable evaluation environment. We conduct experiments on a representative selection of LLMs. Empirical evaluations on diverse LLMs yield three key findings: (1) identifying performance decline of LLMs in highly complex scenarios involving dense events; (2) isolating complex logical interactions—rather than linguistic comprehension—as an unresolved bottleneck; and (3) revealing a critical evaluation bias induced by narrative chronology, with LLMs exploiting textual shortcuts. In summary, these findings reveal the blind spots of current evaluation paradigms, providing a rigorous foundation for the robust evaluation of complex temporal reasoning.",
-      "authors": [
-        "Hongkai Zhou",
-        "Yanhui Li"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "NeurIPS 2026",
-        "Oral"
-      ],
-      "primary_category": "NeurIPS 2026",
-      "abs_url": "https://neurips.cc/virtual/2026/oral/139266",
-      "pdf_url": "https://neurips.cc/virtual/2026/oral/139266",
-      "comment": "",
-      "journal_ref": "NeurIPS 2026 Oral",
-      "source": "conference",
-      "venue": "NeurIPS",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.7105,
-          "matched": [
-            "evaluation",
-            "evaluations",
-            "interval"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0459,
-          "matched": [
-            "time"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0459,
-          "matched": [
-            "selection"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0459,
-          "matched": [
-            "time"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6734,
-        "relevance": 0.5868,
-        "quality": 0.78,
-        "novelty": 0.8596,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "benchmark evaluation",
-        "experiments",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra.",
-        "problem": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities.",
-        "method": "To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra.",
-        "evidence": "We conduct experiments on a representative selection of LLMs.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "evaluations",
-          "interval"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-19T19:28:29.967486+00:00"
-    },
     {
       "id": "2611.26069",
       "title": "SheetAlign: Grounded Interaction and Stage-Isolated Learning for Spreadsheet Agents",
@@ -335,130 +223,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-21T17:57:13.230731+00:00"
-    },
-    {
-      "id": "conf:neurips:2026:138961",
-      "title": "Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs",
-      "abstract": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable. Score inflation and selective reporting have eroded the authority of standard benchmarks, leaving the community uncertain about which evaluation results remain trustworthy. We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem. By distilling **158** validated benchmarks from the technical reports of **117** representative models released between **2025** and **April 2026**, we systematically characterize the evaluation landscape. BHI is the **first framework** to quantify benchmark health at a macro level, providing a well-grounded quantitative basis for benchmark selection and supporting the dynamic filtering and continuous updating of evaluation sets. Our comprehensive analysis not only identifies benchmarks that remain highly credible but also exposes pervasive structural issues. By establishing a rigorous foundation for selection and management, BHI elevates evaluation practice from heuristic-based judgment to a quantifiable and interpretable scientific process. Our code is available online at",
-      "authors": [
-        "Longyuan Zhu",
-        "Hairan Hua",
-        "Linlin Miao",
-        "Wei Wang",
-        "必应 赵"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "NeurIPS 2026",
-        "Oral"
-      ],
-      "primary_category": "NeurIPS 2026",
-      "abs_url": "https://neurips.cc/virtual/2026/oral/138961",
-      "pdf_url": "https://neurips.cc/virtual/2026/oral/138961",
-      "comment": "",
-      "journal_ref": "NeurIPS 2026 Oral",
-      "source": "conference",
-      "venue": "NeurIPS",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.4717,
-          "matched": [
-            "evaluation",
-            "selective"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.2774,
-          "matched": [
-            "trustworthy",
-            "auditing"
-          ]
-        },
-        {
-          "id": "bandwidth_selection",
-          "name": "Bandwidth selection",
-          "status": "emerging",
-          "score": 0.0832,
-          "matched": [
-            "selection"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.082,
-          "matched": [
-            "analysis",
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6004,
-        "relevance": 0.4495,
-        "quality": 0.86,
-        "novelty": 0.8627,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "benchmark evaluation",
-        "quantitative results",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
-        "problem": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable.",
-        "method": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
-        "evidence": "We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "evaluation",
-          "selective"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-19T19:28:29.967486+00:00"
     },
     {
       "id": "conf:icml:2026:66381",
@@ -1367,6 +1131,215 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-23T22:37:10.303910+00:00"
+    },
+    {
+      "id": "conf:iclr:2026:10010608",
+      "title": "The Art of Scaling Reinforcement Learning Compute for LLMs",
+      "abstract": "Reinforcement learning (RL) has become central to training large language models (LLMs), yet the field lacks predictive scaling methodologies comparable to those established for pre-training. Despite rapidly rising compute budgets, there is no principled understanding of how to evaluate algorithmic improvements for scaling RL compute. We present the first large-scale systematic study, amounting to more than 400,000 GPU-hours, that defines a principled framework for analyzing and predicting RL scaling in LLMs. We fit sigmoidal compute-performance curves for RL training and ablate a wide range of common design choices to analyze their effects on asymptotic performance and compute efficiency. We observe: (1) Not all recipes yield similar asymptotic performance, Details such as loss aggregation, normalization, curriculum, and off-policy algorithm primarily modulate compute efficiency without materially shifting the asymptote, and (3) Stable, scalable recipes follow predictable scaling trajectories, enabling extrapolation from smaller-scale runs. Combining these insights, we propose a _best-practice_ recipe, ScaleRL, and demonstrate its effectiveness by successfully scaling and predicting validation performance on a single RL run scaled up to 100,000 GPU-hours. Our work provides both a _scientific framework_ for analyzing scaling in RL and a practical recipe that brings RL training closer to the predictability long achieved in pre-training.",
+      "authors": [
+        "Devvrit Khatri",
+        "Lovish Madaan",
+        "Rishabh Tiwari",
+        "Rachit Bansal",
+        "Venkata Sai Surya Subramanyam Duvvuri",
+        "Manzil Zaheer",
+        "Inderjit Dhillon",
+        "David Brandfonbrener",
+        "Rishabh Agarwal"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICLR 2026",
+        "Oral"
+      ],
+      "primary_category": "ICLR 2026",
+      "abs_url": "https://iclr.cc/virtual/2026/oral/10010608",
+      "pdf_url": "https://iclr.cc/virtual/2026/oral/10010608",
+      "comment": "",
+      "journal_ref": "ICLR 2026 Oral",
+      "source": "conference",
+      "venue": "ICLR",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4554,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.4554,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5603,
+        "relevance": 0.4554,
+        "quality": 0.65,
+        "novelty": 0.8432,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We present the first large-scale systematic study, amounting to more than 400,000 GPU-hours, that defines a principled framework for analyzing and predicting RL scaling in LLMs.",
+        "problem": "Reinforcement learning (RL) has become central to training large language models (LLMs), yet the field lacks predictive scaling methodologies comparable to those established for pre-training.",
+        "method": "Despite rapidly rising compute budgets, there is no principled understanding of how to evaluate algorithmic improvements for scaling RL compute.",
+        "evidence": "Despite rapidly rising compute budgets, there is no principled understanding of how to evaluate algorithmic improvements for scaling RL compute.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-20T19:05:21.068817+00:00"
+    },
+    {
+      "id": "conf:acl:2026:691-main",
+      "title": "Revisiting the Reliability of Language Models in Instruction-Following",
+      "abstract": "Advanced LLMs have achieved near-ceiling instruction-following accuracy on benchmarks such as IFEval. However, these impressive scores do not necessarily translate to reliable services in real-world use, where users often vary their phrasing, contextual framing, and task formulations. In this paper, we study \\emph{nuance-oriented reliability}: whether models exhibit consistent competence across cousin prompts that convey analogous user intents but with subtle nuances. To quantify this, we introduce a new metric, reliable@k, and develop an automated pipeline that generates high-quality cousin prompts via data augmentation. Building upon this, we construct IFEval++ for systematic evaluation. Across 20 proprietary and 26 open-source LLMs, we find that current models exhibit substantial insufficiency in nuance-oriented reliability---their performance can drop by up to 61.8% with nuanced prompt modifications. What's more, we characterize it and explore three potential improvement recipes. Our findings highlight nuance-oriented reliability as a crucial yet underexplored next step toward more dependable and trustworthy LLM behavior. Our code and benchmark are accessible: https://github.com/jianshuod/IFEval-pp.",
+      "authors": [
+        "Jianshuo Dong",
+        "Yutong Zhang",
+        "Liu Yan",
+        "Zhenyu Zhong",
+        "Tao Wei",
+        "Chao Zhang",
+        "Han Qiu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models",
+        "llm",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3844,
+          "matched": [
+            "trustworthy",
+            "reliable"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "evaluation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0442,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5591,
+        "relevance": 0.3459,
+        "quality": 1.0,
+        "novelty": 0.8425,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "benchmark evaluation",
+        "open source",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To quantify this, we introduce a new metric, reliable@k, and develop an automated pipeline that generates high-quality cousin prompts via data augmentation.",
+        "problem": "Advanced LLMs have achieved near-ceiling instruction-following accuracy on benchmarks such as IFEval.",
+        "method": "To quantify this, we introduce a new metric, reliable@k, and develop an automated pipeline that generates high-quality cousin prompts via data augmentation.",
+        "evidence": "What's more, we characterize it and explore three potential improvement recipes.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "trustworthy",
+          "reliable"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-24T21:09:42.445432+00:00"
     }
   ]
 }

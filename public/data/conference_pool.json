@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T19:28:29.967486+00:00",
+  "updated_at": "2026-11-26T20:09:39.834454+00:00",
   "profile_updated_at": "2026-08-23",
   "scanned_years": [
     2026,
@@ -9,7 +9,7 @@
   "source_status": {
     "ICLR:2026": "ok:223",
     "ICML:2026": "ok:742",
-    "NeurIPS:2026": "ok:227",
+    "NeurIPS:2026": "ok:231",
     "ACL:2026": "ok:478",
     "EMNLP:2026": "awaiting_verified_schedule",
     "ICLR:2025": "ok:213",
@@ -2299,7 +2299,7 @@
     {
       "id": "conf:neurips:2026:138961",
       "title": "Benchmark Health Index: A Systematic Framework for Benchmarking the Benchmarks of LLMs",
-      "abstract": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable. Score inflation and selective reporting have eroded the authority of standard benchmarks, leaving the community uncertain about which evaluation results remain trustworthy. We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three orthogonal and complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem. By distilling **158** validated benchmarks from the technical reports of **117** representative models released between **2025** and **April 2026**, we systematically characterize the evaluation landscape. BHI is the **first framework** to quantify benchmark health at a macro level, providing a well-grounded quantitative basis for benchmark selection and supporting the dynamic filtering and continuous updating of evaluation sets. Our comprehensive analysis not only identifies benchmarks that remain highly credible but also exposes pervasive structural issues. By establishing a rigorous foundation for selection and management, BHI elevates evaluation practice from heuristic-based judgment to a quantifiable and interpretable scientific process. Our code is available online at",
+      "abstract": "Large Language Models (LLMs) are advancing rapidly, yet the benchmarks used to measure this progress are becoming increasingly unreliable. Score inflation and selective reporting have eroded the authority of standard benchmarks, leaving the community uncertain about which evaluation results remain trustworthy. We introduce the **Benchmark Health Index (BHI)**, a pure data-driven framework for auditing evaluation sets along three complementary axes: (1) **Capability Discrimination**, measuring how sharply a benchmark separates model performance beyond noise; (2) **Anti-Saturation**, estimating remaining headroom before ceiling effects erode resolution and thus the benchmark's expected longevity; and (3) **Impact**, measuring capability-weighted benchmark adoption across the model ecosystem. By distilling **158** validated benchmarks from the technical reports of **117** representative models released between **2025** and **April 2026**, we systematically characterize the evaluation landscape. BHI is the **first framework** to quantify benchmark health at a macro level, providing a well-grounded quantitative basis for benchmark selection and supporting the dynamic filtering and continuous updating of evaluation sets. Our comprehensive analysis not only identifies benchmarks that remain highly credible but also exposes pervasive structural issues. By establishing a rigorous foundation for selection and management, BHI elevates evaluation practice from heuristic-based judgment to a quantifiable and interpretable scientific process. Our code is available online at",
       "authors": [
         "Longyuan Zhu",
         "Hairan Hua",
@@ -2385,7 +2385,7 @@
     {
       "id": "conf:neurips:2026:139266",
       "title": "ALTER: An Allen's Algebra-Based Evaluation Framework for Temporal Reasoning of LLMs",
-      "abstract": "Despite the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely assess questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities. To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra. By combining basic relations into complex networks and converting these structures into natural language forms through an automated pipeline, we construct a validated benchmark of 2,500 question-answer pairs, ensuring a controllable and scalable evaluation environment. We conduct experiments on a representative selection of LLMs. Empirical evaluations on diverse LLMs yield three key findings: (1) identifying performance decline of LLMs in highly complex scenarios involving dense events; (2) isolating complex logical interactions—rather than linguistic comprehension—as an unresolved bottleneck; and (3) revealing a critical evaluation bias induced by narrative chronology, with LLMs exploiting textual shortcuts. In summary, these findings reveal the blind spots of current evaluation paradigms, providing a rigorous foundation for the robust evaluation of complex temporal reasoning.",
+      "abstract": "Given the critical role of temporal reasoning in Large Language Models (LLMs), current synthetic benchmarks fall short: they either introduce information leakage or, upon addressing this issue, merely evaluate questions with explicit time points, failing to rigorously evaluate implicit temporal reasoning capabilities. To bridge this gap, we propose a formally grounded evaluation framework, ALTER, based on Allen’s Interval Algebra. By combining basic relations into complex networks and converting these structures into natural language forms through an automated pipeline, we construct a validated benchmark of 2,500 question-answer pairs, ensuring a contamination-free and complexity-scalable evaluation paradigm. We conduct experiments on a representative selection of LLMs. Empirical evaluations on diverse LLMs yield three key findings: (1) identifying the performance decline of LLMs in highly complex scenarios involving dense events; (2) isolating complex logical interactions—rather than linguistic comprehension—as an unresolved bottleneck; and (3) revealing a critical evaluation bias induced by narrative chronology, with LLMs exploiting textual shortcuts. In summary, these findings reveal the blind spots of current evaluation paradigms, providing a rigorous foundation for the robust evaluation of complex temporal reasoning. Code and data are available: https://github.com/MorganLFXx/Evaluation-Framework-based-Allen-Algebra.",
       "authors": [
         "Hongkai Zhou",
         "Yanhui Li"
@@ -2616,7 +2616,7 @@
     {
       "id": "conf:neurips:2026:150288",
       "title": "TSQAgent: Rating Time Series Data Quality via Dedicated Agentic Reasoning",
-      "abstract": "Assessing the quality of time series (TS) data is fundamental yet inherently challenging due to the multifaceted nature of quality dimensions. Recently, large language models (LLMs) have emerged as a promising paradigm for TS quality assessment via pairwise comparison and per-dimension evaluation. However, existing approaches rely on manually predefined quality dimensions and purely text-based reasoning, leaving it unknown whether LLMs can identify truly relevant quality dimensions or perform grounded and quantitative quality comparisons. To investigate this, we construct TSQBench, a dedicated benchmark for evaluating LLMs’ capabilities in TS quality assessment, which measures two progressive capabilities: (i) understanding and identifying relevant quality dimensions, and (ii) performing quality comparison under specific dimensions. Our analysis reveals that both open-source and proprietary LLMs consistently struggle with identifying critical quality dimensions and conducting precise, evidence-grounded reasoning over quality characteristics. To address these limitations, we propose TSQAgent, a novel agentic reasoning framework for dedicated TS data quality rating, comprising three collaborative roles: Perceiver for focused dimension selection, Inspector for dimension-wise quantitative analysis, and Adjudicator that aggregates and refines the final judgment. In particular, we introduce an agentic reasoning strategy that instills the ability to identify and prioritize the most relevant quality dimensions, and further propose an agent workflow equipped with external analytical tools to enable precise quantitative comparisons over selected dimensions. Experiments on both the proposed benchmark and eleven real-world datasets demonstrate that our framework not only substantially improves LLMs’ capabilities in quality understanding and quantitative comparison but also effectively translates these improvements into better quality-aware data selection, leading to enhanced downstream performance and data efficiency.",
+      "abstract": "Assessing the quality of time series (TS) data is fundamental yet inherently challenging due to the multifaceted nature of quality dimensions. Recently, large language models (LLMs) have emerged as a promising paradigm for TS quality assessment via pairwise comparison and per-dimension evaluation. However, existing approaches rely on manually predefined quality dimensions and purely text-based reasoning, leaving it unknown whether LLMs can identify truly relevant quality dimensions or perform grounded and quantitative quality comparisons. To investigate this, we construct TSQBench, a dedicated benchmark for evaluating LLMs on two progressive capabilities: (i) understanding and identifying relevant quality dimensions, and (ii) performing quality comparison under specific dimensions. Our analysis reveals that current LLMs consistently struggle with both dimension identification and evidence-grounded quality comparison. To address these limitations, we propose TSQAgent, a novel agentic reasoning framework for TS quality rating consisting of three collaborative roles: Perceiver for focused dimension selection, Inspector for dimension-wise quantitative analysis, and Adjudicator that aggregates and refines the final judgment. In particular, we introduce an agentic reasoning strategy that instills the ability to identify and prioritize the most relevant quality dimensions, and further propose an agent workflow equipped with external analytical tools to enable precise quantitative comparisons over selected dimensions. Experiments on both the proposed benchmark and eleven real-world datasets demonstrate that our framework not only substantially improves LLMs' capabilities in quality understanding and quantitative comparison but also effectively translates these improvements into better quality-aware data selection, leading to enhanced downstream performance and data efficiency.",
       "authors": [
         "Shunyu Wu",
         "Dan Li",
@@ -3060,15 +3060,15 @@
       "conference_year": 2026
     },
     {
-      "id": "conf:neurips:2026:139074",
-      "title": "Large Language Model Selection with Limited Annotations",
-      "abstract": "Choosing a Large Language Model (LLM) for a given task requires comparing many strong candidates, yet standard evaluation relies on costly annotations over fixed evaluation sets. To address this challenge, we develop Select-LLM, the first framework for active model selection of LLMs. Select-LLM aims to find a small set of queries whose annotations are most informative for identifying the best LLM for a given task. To this end, we introduce a query selection rule based on expected information gain, computed from pairwise similarities between candidate model outputs. Because this rule only uses generated model responses, Select-LLM can be applied across candidate models without assumptions about their architecture or access to model weights. This makes it suitable for both open-weight and black-box LLMs. We evaluate Select-LLM across 23 datasets, 156 evaluated models, diverse task families, and multiple text evaluation metrics. Across all experiments, Select-LLM improves over the strongest baseline in every setting, with annotation cost reductions up to 81.8% for best model selection and up to 84.78% for near-best model selection.",
+      "id": "conf:neurips:2026:140098",
+      "title": "Language Models Can Benefit from Domain-Specific Inductive Biases",
+      "abstract": "Language models are typically trained with a single choice of architecture on diverse domains and data sources. Modern transformers have been extensively refined for such general-purpose learning, but are they equally effective across different subsets of the pretraining data? **Methods.** We investigate this question by training small language models from scratch on representative subsets of pretraining data such as web text, code, and mathematics. We introduce variants of transformers in which standard activation functions are replaced with learned splines tuned on specific datasets, providing a simple way to modify their inductive biases. Using a mix-and-match of architectures and datasets, we evaluate cross-domain transfer, i.e. how well does an architecture tuned for one domain perform on data from another? **Findings.** The tuned transformer variants improve training efficiency or generalization on all seven of our tested datasets, but the gains are often domain-specific. For example, architectures tuned on a natural language dataset such as FineWeb perform well on TinyStories, whereas those tuned on mathematics perform poorly on natural language. We identify several mechanisms underlying these improvements, including wider loss basins and more abundant \"lottery tickets\". **Implications.** Our results show that different subsets of pretraining data can benefit from different learning mechanisms, highlighting a limitation of the prevailing trend towards a small set of general-purpose architectures and optimizers. This points to an opportunity to improve data efficiency by developing domain-specific learning strategies that retain the ability to train general-purpose models.",
       "authors": [
-        "Yavuz Durmazkeser",
-        "Patrik Okanovic",
-        "Andreas Kirsch",
-        "Torsten Hoefler",
-        "Nezihe Merve Gürel"
+        "Damien Teney",
+        "Liangze Jiang",
+        "Zachary Shinnick",
+        "Hemanth Saratchandran",
+        "Simon Lucey"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -3077,8 +3077,8 @@
         "Spotlight"
       ],
       "primary_category": "NeurIPS 2026",
-      "abs_url": "https://neurips.cc/virtual/2026/poster/139074",
-      "pdf_url": "https://neurips.cc/virtual/2026/poster/139074",
+      "abs_url": "https://neurips.cc/virtual/2026/poster/140098",
+      "pdf_url": "https://neurips.cc/virtual/2026/poster/140098",
       "comment": "",
       "journal_ref": "NeurIPS 2026 Spotlight",
       "source": "conference",
@@ -3309,17 +3309,15 @@
       "conference_year": 2026
     },
     {
-      "id": "conf:neurips:2026:155856",
-      "title": "CoreQ: Learning-Free Mismatch Correction and Successive Rounding for Quantization",
-      "abstract": "Post-training quantization (PTQ) enables efficient deployment of large language models by mapping pretrained weights to low-bit formats without retraining, typically using a small calibration set to minimize a layer-wise calibration objective. However, this sequential procedure induces a mismatch: errors from earlier quantized layers alter the inputs received by later layers, causing the activations to deviate from those of the full-precision model. Recent approaches introduce mismatch-aware calibration objectives to compensate for this effect, but leave open how much of the observed mismatch should shift each layer's calibration target. Fully applying this correction can overfit limited calibration data, while scaling the mismatch correction with a fixed coefficient ignores varying reliability of mismatch estimates across layers. To address these limitations, we propose CoreQ, a learning-free PTQ framework that applies a closed-form coefficient for mismatch correction derived from a geometric decomposition of the mismatch. The resulting coefficient adapts the correction across layers, reduces overfitting to finite calibration data, and requires no hyperparameter tuning. Given the corrected target, CoreQ minimizes the induced triangular least-squares objective with an efficient greedy successive-rounding solver and a bounded beam-search extension, K-CoreQ, that trades modest additional compute for improved performance. Across multiple LLM families, scales, bit-widths, and quantization settings, CoreQ improves perplexity and downstream accuracy over strong PTQ baselines.",
+      "id": "conf:neurips:2026:151209",
+      "title": "Do LLMs Learn from Rewards in Context? : Rethinking the role of reward in In-Context RL",
+      "abstract": "In-context reinforcement learning (ICRL) is often described as inference-time RL in which an LLM improves by accumulating trajectory-reward pairs in its context, with the reward acting as a learning signal. This framing poses a central question: is ICRL genuine inference-time RL, or better understood as a form of in-context learning (ICL)? We investigate this in the context of direct ICRL, where the model directly uses trajectory-reward pairs. Through controlled experiments on three benchmarks across six models, we find that the reward is read, but its effect is small; randomizing or removing the reward leaves the improvement curve almost unchanged. Trajectories drive improvement, but not through their semantic content: shuffled or corrupted trajectories work as well as real ones. These patterns closely mirror those known in ICL, suggesting that direct ICRL is better understood as a special case of ICL than as inference-time RL. This reframing has implications for ICRL memory design: ICL factors such as input distribution and demonstrations may matter more than RL elements such as reward shaping and exploration.",
       "authors": [
-        "Seohyeon Cha",
-        "Huancheng Chen",
-        "Dongjun Kim",
-        "Haoran Zhang",
-        "Kevin Chan",
-        "Gustavo De Veciana",
-        "Haris Vikalo"
+        "Minchan Kwon",
+        "Seunghee Koh",
+        "Sunghyun Baek",
+        "Minsung Bae",
+        "Junmo Kim"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
@@ -3328,8 +3326,8 @@
         "Spotlight"
       ],
       "primary_category": "NeurIPS 2026",
-      "abs_url": "https://neurips.cc/virtual/2026/poster/155856",
-      "pdf_url": "https://neurips.cc/virtual/2026/poster/155856",
+      "abs_url": "https://neurips.cc/virtual/2026/poster/151209",
+      "pdf_url": "https://neurips.cc/virtual/2026/poster/151209",
       "comment": "",
       "journal_ref": "NeurIPS 2026 Spotlight",
       "source": "conference",
