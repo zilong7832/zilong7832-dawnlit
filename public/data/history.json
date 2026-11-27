@@ -1,6 +1,314 @@
 {
-  "generated_at": "2026-11-26T20:09:39.834454+00:00",
+  "generated_at": "2026-11-27T19:55:59.183776+00:00",
   "papers": [
+    {
+      "id": "conf:acl:2026:371-ind",
+      "title": "From Pixels to Policies: Reinforcing Spatial Reasoning in Language Models for Content-Aware Layout Design",
+      "abstract": "We introduce LaySPA, a reinforcement learning framework that equips large language models (LLMs) with explicit and interpretable spatial reasoning for content-aware graphic layout design. LaySPA addresses two key challenges: LLMs’ limited spatial reasoning and the lack of opacity in design decision making. Instead of operating at the pixel level, we reformulate layout design as a policy learning problem over a structured textual spatial environment that explicitly encodes canvas geometry, element attributes, and inter-element relationships. LaySPA produces dual-level outputs comprising interpretable reasoning traces and structured layout specifications, enabling transparent and controllable design decision making. Layout design policy is optimized via a multi-objective spatial critique that decomposes layout quality into geometric validity, relational coherence, and aesthetic consistency, and is trained using relative group optimization to stabilize learning in open-ended design spaces. Experiments demonstrate that LaySPA improves structural validity and visual quality, outperforming larger proprietary LLMs and achieving performance comparable to specialized SOTA layout generators while requiring fewer annotated samples and reduced latency.",
+      "authors": [
+        "Sha Li",
+        "Stefano Petrangeli",
+        "Yu Shen",
+        "Xiang Chen"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llms"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3849,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3849,
+          "matched": [
+            "learning"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5407,
+        "relevance": 0.3849,
+        "quality": 0.77,
+        "novelty": 0.8647,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "experiments",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We introduce LaySPA, a reinforcement learning framework that equips large language models (LLMs) with explicit and interpretable spatial reasoning for content-aware graphic layout design.",
+        "problem": "We introduce LaySPA, a reinforcement learning framework that equips large language models (LLMs) with explicit and interpretable spatial reasoning for content-aware graphic layout design.",
+        "method": "We introduce LaySPA, a reinforcement learning framework that equips large language models (LLMs) with explicit and interpretable spatial reasoning for content-aware graphic layout design.",
+        "evidence": "Experiments demonstrate that LaySPA improves structural validity and visual quality, outperforming larger proprietary LLMs and achieving performance comparable to specialized SOTA layout generators while requiring fewer annotated samples and reduced latency.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-27T19:55:59.183776+00:00"
+    },
+    {
+      "id": "conf:icml:2026:65888",
+      "title": "Learning to Discover at Test Time",
+      "abstract": "How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test time, so the LLM can continue to train, but now with experience specific to the test problem. This form of continual learning is quite special, because its goal is to produce one great solution rather than many good ones on average, and to solve this very problem rather than generalize to other problems. Therefore, our learning objective and search subroutine are designed to prioritize the most promising solutions. We call this method Test-Time Training to Discover (TTT-Discover). Following prior work, we focus on problems with continuous rewards. We report results for every problem we attempted, across mathematics, GPU kernel engineering, algorithm design, and biology. TTT-Discover sets the new state of the art in almost all of them: (i) Erdős' minimum overlap problem and an autocorrelation inequality; (ii) a GPUMode kernel competition (up to 2× faster than prior art); (iii) past AtCoder algorithm competitions; and (iv) denoising problem in single-cell analysis. Our solutions are reviewed by experts or the organizers. All our results are achieved with an open model, OpenAI gpt-oss-120b, and can be reproduced with our publicly available code, in contrast to previous best results that required closed frontier models. Our test-time training runs are performed using Tinker, an API by Thinking Machines, with a cost of only a few hundred dollars per problem.",
+      "authors": [
+        "Mert Yuksekgonul",
+        "Daniel Koceja",
+        "Xinhao Li",
+        "Federico Bianchi",
+        "Jed McCaleb",
+        "Xiaolong Wang",
+        "Jan Kautz",
+        "Yejin Choi",
+        "James Zou",
+        "Carlos Guestrin",
+        "Yu Sun"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ICML 2026",
+        "Spotlight"
+      ],
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/65888",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/65888",
+      "comment": "",
+      "journal_ref": "ICML 2026 Spotlight",
+      "source": "conference",
+      "venue": "ICML",
+      "presentation": "Spotlight",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3804,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3804,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1252,
+          "matched": [
+            "time",
+            "analysis"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "time"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5659,
+        "relevance": 0.4054,
+        "quality": 0.83,
+        "novelty": 0.8635,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "reproducibility",
+        "quantitative results",
+        "publication metadata",
+        "conference spotlight"
+      ],
+      "summary": {
+        "takeaway": "How can we use AI to discover a new state of the art for a scientific problem?",
+        "problem": "How can we use AI to discover a new state of the art for a scientific problem?",
+        "method": "We report results for every problem we attempted, across mathematics, GPU kernel engineering, algorithm design, and biology.",
+        "evidence": "All our results are achieved with an open model, OpenAI gpt-oss-120b, and can be reproduced with our publicly available code, in contrast to previous best results that required closed frontier models.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-27T19:55:59.183776+00:00"
+    },
+    {
+      "id": "conf:acl:2026:1015-main",
+      "title": "From Past To Path: Masked History Learning for Next-Item Prediction in Generative Recommendation",
+      "abstract": "Generative recommendation, which directly generates item identifiers, has emerged as a promising paradigm for recommendation systems. However, this left-to-right paradigm inherently biases the model towards local contexts, failing to capture deeper historical dependencies necessary for understanding complex user intents. To address this limitation, we propose Masked History Learning (MHL), a novel training framework that shifts the objective from simple next-step prediction to deep comprehension of history. MHL augments the standard autoregressive objective with an auxiliary task of reconstructing masked historical items, compelling the model to understand \"why'' an item path is formed from the user's past behaviors, rather than just \"what'' item comes next. We introduce two key contributions to enhance this framework: (1) an entropy-guided masking policy that intelligently targets the most informative historical items for reconstruction, and (2) a curriculum learning scheduler that progressively transitions from history reconstruction to future prediction. Experiments on three public datasets show that our method significantly outperforms state-of-the-art generative models, highlighting that a comprehensive understanding of the past is crucial for accurately predicting a user's future path. The code is available at https://github.com/CQU-MM-Intelligent-Lab/MHL.",
+      "authors": [
+        "Kaiwen Wei",
+        "Kejun He",
+        "Xiaomian Kang",
+        "Jie Zhang",
+        "Yuming Yang",
+        "Li Jin",
+        "Zhenyang Li",
+        "Jiang Zhong",
+        "He Bai",
+        "Junnan Zhu"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "transferable",
+      "scope_matches": [
+        "curriculum learning"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.2572,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.2572,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.2572,
+          "matched": [
+            "prediction"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5374,
+        "relevance": 0.3086,
+        "quality": 1.0,
+        "novelty": 0.8675,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "experiments",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "To address this limitation, we propose Masked History Learning (MHL), a novel training framework that shifts the objective from simple next-step prediction to deep comprehension of history.",
+        "problem": "Generative recommendation, which directly generates item identifiers, has emerged as a promising paradigm for recommendation systems.",
+        "method": "To address this limitation, we propose Masked History Learning (MHL), a novel training framework that shifts the objective from simple next-step prediction to deep comprehension of history.",
+        "evidence": "Experiments on three public datasets show that our method significantly outperforms state-of-the-art generative models, highlighting that a comprehensive understanding of the past is crucial for accurately predicting a user's future path.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "transferable"
+      },
+      "recommended_at": "2026-11-27T19:55:59.183776+00:00"
+    },
     {
       "id": "conf:iclr:2026:10010370",
       "title": "WSM: Decay-Free Learning Rate Schedule via Checkpoint Merging for LLM Pre-training",
@@ -10176,314 +10484,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-03T18:25:14.094493+00:00"
-    },
-    {
-      "id": "conf:acl:2026:2139-main",
-      "title": "Maximizing Local Entropy Where It Matters: Prefix-Aware Localized LLM Unlearning",
-      "abstract": "Machine unlearning aims to forget sensitive knowledge from Large Language Models (LLMs) while maintaining general utility. However, existing approaches typically treat all tokens in a response indiscriminately and enforce uncertainty over the entire vocabulary. This global treatment results in unnecessary utility degradation and extends optimization to content-agnostic regions. To address these limitations, we propose PALU (Prefix-Aware Localized Unlearning), a framework driven by a local entropy maximization objective across both temporal and vocabulary dimensions. PALU reveals that (i) suppressing the sensitive prefix alone is sufficient to sever the causal generation link, and (ii) flattening only the top-K logits is adequate to maximize uncertainty in the critical subspace. These findings allow PALU to alleviate redundant optimization across the full vocabulary and parameter space while minimizing collateral damage to general model performance. Comprehensive evaluations validate that PALU achieves superior forgetting efficacy and utility preservation compared to state-of-the-art baselines. Our code is available at https://github.com/nxZhai/PALU.",
-      "authors": [
-        "Naixin Zhai",
-        "Pengyang Shao",
-        "Binbin Zheng",
-        "Yonghui Yang",
-        "Fei Shen",
-        "Long Bai",
-        "Xun Yang"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.5496,
-          "matched": [
-            "uncertainty",
-            "evaluations"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.1535,
-          "matched": [
-            "machine"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6303,
-        "relevance": 0.4704,
-        "quality": 0.94,
-        "novelty": 0.866,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "GitHub link",
-        "baseline comparison",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "To address these limitations, we propose PALU (Prefix-Aware Localized Unlearning), a framework driven by a local entropy maximization objective across both temporal and vocabulary dimensions.",
-        "problem": "Machine unlearning aims to forget sensitive knowledge from Large Language Models (LLMs) while maintaining general utility.",
-        "method": "To address these limitations, we propose PALU (Prefix-Aware Localized Unlearning), a framework driven by a local entropy maximization objective across both temporal and vocabulary dimensions.",
-        "evidence": "Comprehensive evaluations validate that PALU achieves superior forgetting efficacy and utility preservation compared to state-of-the-art baselines.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "evaluations"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-03T18:25:14.094493+00:00"
-    },
-    {
-      "id": "conf:acl:2026:33-ind",
-      "title": "Calibrating LLM Judges: Linear Probes for Fast and Reliable Uncertainty Estimation",
-      "abstract": "As LLM-based judges become integral to industry applications, obtaining well-calibrated uncertainty estimates efficiently has become critical for production deployment. However, existing techniques, such as verbalized confidence and multi-generation methods, are often either poorly calibrated or computationally expensive. We introduce linear probes trained with a Brier score-based loss to provide calibrated uncertainty estimates from reasoning judges' hidden states, requiring no additional model training. We evaluate our approach on both objective tasks (reasoning, mathematics, factuality, coding) and subjective human preference judgments. Our results demonstrate that probes achieve superior calibration compared to existing methods with x computational savings, generalize robustly to unseen evaluation domains, and deliver higher accuracy on high-confidence predictions. However, probes produce conservative estimates that underperform on easier datasets but may benefit safety-critical deployments prioritizing low false-positive rates. Overall, our work demonstrates that interpretability-based uncertainty estimation provides a practical and scalable plug-and-play solution for LLM judges in production.",
-      "authors": [
-        "Bhaktipriya Radharapu",
-        "Eshika Saxena",
-        "Kenneth Li",
-        "Adina Williams",
-        "Nicola Cancedda"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ACL 2026",
-        "Oral"
-      ],
-      "primary_category": "ACL 2026",
-      "abs_url": "https://2026.aclweb.org/program/",
-      "pdf_url": "https://2026.aclweb.org/program/",
-      "comment": "",
-      "journal_ref": "ACL 2026 Oral",
-      "source": "conference",
-      "venue": "ACL",
-      "presentation": "Oral",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.6139,
-          "matched": [
-            "uncertainty",
-            "evaluation"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.2535,
-          "matched": [
-            "reliable"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.0971,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0963,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.6214,
-        "relevance": 0.5612,
-        "quality": 0.61,
-        "novelty": 0.8456,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "dataset evidence",
-        "publication metadata",
-        "conference oral"
-      ],
-      "summary": {
-        "takeaway": "We introduce linear probes trained with a Brier score-based loss to provide calibrated uncertainty estimates from reasoning judges' hidden states, requiring no additional model training.",
-        "problem": "As LLM-based judges become integral to industry applications, obtaining well-calibrated uncertainty estimates efficiently has become critical for production deployment.",
-        "method": "We introduce linear probes trained with a Brier score-based loss to provide calibrated uncertainty estimates from reasoning judges' hidden states, requiring no additional model training.",
-        "evidence": "Our results demonstrate that probes achieve superior calibration compared to existing methods with x computational savings, generalize robustly to unseen evaluation domains, and deliver higher accuracy on high-confidence predictions.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "evaluation"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-03T18:25:14.094493+00:00"
-    },
-    {
-      "id": "2610.41745",
-      "title": "Do LLMs Know When They Are Wrong About Molecules? In-Context Property Prediction with Self-Reported Uncertainty",
-      "abstract": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored. In this work we evaluate the capability of 7 frontier LLMs to predict molecular properties together with a self-reported uncertainty from in-context examples, and compare them with classical baselines trained on the same molecules. We use 4 datasets and screen each for contamination of the training data of the LLMs: three are clean, and the fourth, ESOL, is memorised by most of the models and serves as a comparison. On the clean datasets every LLM improves with the context, at 30 examples the most accurate one beats every baseline. The requested reasoning effort changes accuracy little. The self-reported uncertainty ranks the prediction errors weakly, with Spearman rank correlations of up to 0.46, about the level reached by the uncertainties of the baselines. Combining uncertainty and prediction, on lipophilicity the most certain half of the best LLM is the most accurate at small context sizes; on BACE and antiviral, and on lipophilicity at large context sizes, the best LLMs are on par with the best baseline. On the contaminated ESOL dataset the LLMs show no improvement with the context size, as expected for a memorised dataset, and their stated uncertainty is smaller on the molecules whose value they recall.",
-      "authors": [
-        "Matthias Busch",
-        "Marius Tacke",
-        "Tamadur Albaraghtheh",
-        "Sviatlana V. Lamaka",
-        "Mikhail L. Zheludkevich",
-        "Roland C. Aydin",
-        "Christian Feiler",
-        "Christian J. Cyron"
-      ],
-      "published": "2026-10-30T13:50:11Z",
-      "updated": "2026-10-30T13:50:11Z",
-      "categories": [
-        "cs.LG"
-      ],
-      "primary_category": "cs.LG",
-      "abs_url": "https://arxiv.org/abs/2610.41745v1",
-      "pdf_url": "https://arxiv.org/pdf/2610.41745v1",
-      "comment": "",
-      "journal_ref": "",
-      "source": "arxiv",
-      "venue": "",
-      "presentation": "",
-      "conference_year": null,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "conformal_prediction",
-          "name": "Conformal prediction",
-          "status": "emerging",
-          "score": 0.9373,
-          "matched": [
-            "uncertainty",
-            "prediction"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.0442,
-          "matched": [
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.7153,
-        "relevance": 0.7675,
-        "quality": 0.52,
-        "novelty": 0.8588,
-        "freshness": 0.5303,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "dataset evidence",
-        "quantitative results"
-      ],
-      "summary": {
-        "takeaway": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored.",
-        "problem": "Large language models (LLMs) are used in many domains, but molecular property prediction with them is still little explored.",
-        "method": "In this work we evaluate the capability of 7 frontier LLMs to predict molecular properties together with a self-reported uncertainty from in-context examples, and compare them with classical baselines trained on the same molecules.",
-        "evidence": "On the clean datasets every LLM improves with the context, at 30 examples the most accurate one beats every baseline.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Conformal prediction",
-        "matched": [
-          "uncertainty",
-          "prediction"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-02T20:45:04.696521+00:00"
     }
   ]
 }

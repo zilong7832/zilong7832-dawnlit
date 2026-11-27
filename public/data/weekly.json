@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T20:09:39.834454+00:00",
+  "generated_at": "2026-11-27T19:55:59.183776+00:00",
   "papers": [
     {
       "id": "2611.26069",
@@ -223,230 +223,6 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-21T17:57:13.230731+00:00"
-    },
-    {
-      "id": "conf:icml:2026:66381",
-      "title": "Linear Causal Representation Learning by Topological Ordering, Pruning, and Disentanglement",
-      "abstract": "Causal representation learning (CRL) has garnered increasing interests from the causal inference and artificial intelligence community, due to its capability of disentangling potentially complex data-generating mechanism into causally interpretable latent features, by leveraging the heterogeneity of modern datasets. In this paper, we further contribute to the CRL literature, by focusing on the stylized linear structural causal model over the latent features and assuming a linear mixing function that maps latent features to the observed data or measurements. Existing linear CRL methods often rely on stringent assumptions, such as accessibility to single-node interventional data or restrictive distributional constraints on latent features and exogenous measurement noise. However, these prerequisites can be challenging to satisfy in certain scenarios. In this work, we propose a novel linear CRL algorithm that, unlike most existing linear CRL methods, operates under weaker assumptions about environment heterogeneity and data-generating distributions while still recovering latent causal features up to an equivalence class. We further validate our new algorithm via synthetic experiments and an interpretability analysis of large language models (LLMs), demonstrating both its superiority over competing methods in finite samples and its potential in integrating causality into AI. Source code is available at \\href{https://anonymous.4open.science/r/creator-883D/}{the anonymous link}.",
-      "authors": [
-        "Hao Chen",
-        "Lin Liu",
-        "Yuguang Wang"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Spotlight"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/poster/66381",
-      "pdf_url": "https://icml.cc/virtual/2026/poster/66381",
-      "comment": "",
-      "journal_ref": "ICML 2026 Spotlight",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Spotlight",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
-      ],
-      "topics": [
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4326,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4326,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1354,
-          "matched": [
-            "inference",
-            "data"
-          ]
-        },
-        {
-          "id": "functional_time_series",
-          "name": "Functional time series",
-          "status": "emerging",
-          "score": 0.1344,
-          "matched": [
-            "analysis",
-            "data"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5906,
-        "relevance": 0.4597,
-        "quality": 0.77,
-        "novelty": 0.8783,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "code available",
-        "experiments",
-        "dataset evidence",
-        "publication metadata",
-        "conference spotlight"
-      ],
-      "summary": {
-        "takeaway": "In this work, we propose a novel linear CRL algorithm that, unlike most existing linear CRL methods, operates under weaker assumptions about environment heterogeneity and data-generating distributions while still recovering latent causal features up to an equivalence class.",
-        "problem": "Causal representation learning (CRL) has garnered increasing interests from the causal inference and artificial intelligence community, due to its capability of disentangling potentially complex data-generating mechanism into causally interpretable latent features, by leveraging the heterogeneity of modern datasets.",
-        "method": "In this work, we propose a novel linear CRL algorithm that, unlike most existing linear CRL methods, operates under weaker assumptions about environment heterogeneity and data-generating distributions while still recovering latent causal features up to an equivalence class.",
-        "evidence": "We further validate our new algorithm via synthetic experiments and an interpretability analysis of large language models (LLMs), demonstrating both its superiority over competing methods in finite samples and its potential in integrating causality into AI.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Trustworthy machine learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-20T19:05:21.068817+00:00"
-    },
-    {
-      "id": "conf:icml:2026:62546",
-      "title": "Hista and Numca: Estimate State Value Effectively for Large Language Model Reinforcement Learning",
-      "abstract": "Reinforcement Learning (RL) refines large language models (LLMs) by directly optimizing model behavior with reward signals. Although accurate state value estimation is essential for stable training in classical RL settings, it remains an understudied challenge in LLM post-training. In this work, we demonstrate that accurate value estimation can stabilize and improve post-training. First, we construct State Value Estimation Benchmark (SVEB) and show that critics of standard approaches like PPO simply degenerate toward a coarse group-average baseline. To overcome this, we propose two techniques. One is a heuristic method *Numca*, which uses numbers in responses as state representation to calculate state value. Another is a general hidden-state-based framework *Hista*, which utilize the semantic information in hidden states to group disjoint responses. Experiments show that when equipped with these improved estimates, training gains better performance consistently with different RL algorithms.",
-      "authors": [
-        "Zizhe Chen",
-        "Jiqian Dong",
-        "Yizhou Tian",
-        "Garry YANG",
-        "Yongqiang Chen",
-        "Zhitang Chen",
-        "James Cheng"
-      ],
-      "published": "2026-01-01T00:00:00Z",
-      "updated": "2026-01-01T00:00:00Z",
-      "categories": [
-        "ICML 2026",
-        "Spotlight"
-      ],
-      "primary_category": "ICML 2026",
-      "abs_url": "https://icml.cc/virtual/2026/poster/62546",
-      "pdf_url": "https://icml.cc/virtual/2026/poster/62546",
-      "comment": "",
-      "journal_ref": "ICML 2026 Spotlight",
-      "source": "conference",
-      "venue": "ICML",
-      "presentation": "Spotlight",
-      "conference_year": 2026,
-      "lane": "llm",
-      "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llm"
-      ],
-      "topics": [
-        {
-          "id": "positive_unlabeled_learning",
-          "name": "Positive-unlabeled learning",
-          "status": "emerging",
-          "score": 0.4565,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "trustworthy_machine_learning",
-          "name": "Trustworthy machine learning",
-          "status": "emerging",
-          "score": 0.4564,
-          "matched": [
-            "learning"
-          ]
-        },
-        {
-          "id": "long_run_covariance_estimation",
-          "name": "Long-run covariance estimation",
-          "status": "emerging",
-          "score": 0.1156,
-          "matched": [
-            "estimation"
-          ]
-        },
-        {
-          "id": "time_series_inference",
-          "name": "Time series inference",
-          "status": "emerging",
-          "score": 0.1141,
-          "matched": [
-            "estimation"
-          ]
-        }
-      ],
-      "scores": {
-        "total": 0.5901,
-        "relevance": 0.4796,
-        "quality": 0.73,
-        "novelty": 0.824,
-        "freshness": 1.0,
-        "feedback_adjustment": 0.0,
-        "semantic_feedback": 0.0
-      },
-      "quality_signals": [
-        "baseline comparison",
-        "benchmark evaluation",
-        "experiments",
-        "publication metadata",
-        "conference spotlight"
-      ],
-      "summary": {
-        "takeaway": "In this work, we demonstrate that accurate value estimation can stabilize and improve post-training.",
-        "problem": "Reinforcement Learning (RL) refines large language models (LLMs) by directly optimizing model behavior with reward signals.",
-        "method": "To overcome this, we propose two techniques.",
-        "evidence": "In this work, we demonstrate that accurate value estimation can stabilize and improve post-training.",
-        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
-        "why_for_you": "Matches your research profile: Positive-unlabeled learning, Trustworthy machine learning.",
-        "source": "abstract",
-        "generated_by": "extractive",
-        "language": "en",
-        "schema_version": 3,
-        "prompt_version": 0
-      },
-      "analysis_status": "pending",
-      "recommendation_reason": {
-        "topic": "Positive-unlabeled learning",
-        "matched": [
-          "learning"
-        ],
-        "lane": "llm"
-      },
-      "recommended_at": "2026-11-20T19:05:21.068817+00:00"
     },
     {
       "id": "conf:icml:2026:64918",
@@ -1133,49 +909,47 @@
       "recommended_at": "2026-11-23T22:37:10.303910+00:00"
     },
     {
-      "id": "conf:iclr:2026:10010608",
-      "title": "The Art of Scaling Reinforcement Learning Compute for LLMs",
-      "abstract": "Reinforcement learning (RL) has become central to training large language models (LLMs), yet the field lacks predictive scaling methodologies comparable to those established for pre-training. Despite rapidly rising compute budgets, there is no principled understanding of how to evaluate algorithmic improvements for scaling RL compute. We present the first large-scale systematic study, amounting to more than 400,000 GPU-hours, that defines a principled framework for analyzing and predicting RL scaling in LLMs. We fit sigmoidal compute-performance curves for RL training and ablate a wide range of common design choices to analyze their effects on asymptotic performance and compute efficiency. We observe: (1) Not all recipes yield similar asymptotic performance, Details such as loss aggregation, normalization, curriculum, and off-policy algorithm primarily modulate compute efficiency without materially shifting the asymptote, and (3) Stable, scalable recipes follow predictable scaling trajectories, enabling extrapolation from smaller-scale runs. Combining these insights, we propose a _best-practice_ recipe, ScaleRL, and demonstrate its effectiveness by successfully scaling and predicting validation performance on a single RL run scaled up to 100,000 GPU-hours. Our work provides both a _scientific framework_ for analyzing scaling in RL and a practical recipe that brings RL training closer to the predictability long achieved in pre-training.",
+      "id": "conf:icml:2026:65888",
+      "title": "Learning to Discover at Test Time",
+      "abstract": "How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test time, so the LLM can continue to train, but now with experience specific to the test problem. This form of continual learning is quite special, because its goal is to produce one great solution rather than many good ones on average, and to solve this very problem rather than generalize to other problems. Therefore, our learning objective and search subroutine are designed to prioritize the most promising solutions. We call this method Test-Time Training to Discover (TTT-Discover). Following prior work, we focus on problems with continuous rewards. We report results for every problem we attempted, across mathematics, GPU kernel engineering, algorithm design, and biology. TTT-Discover sets the new state of the art in almost all of them: (i) Erdős' minimum overlap problem and an autocorrelation inequality; (ii) a GPUMode kernel competition (up to 2× faster than prior art); (iii) past AtCoder algorithm competitions; and (iv) denoising problem in single-cell analysis. Our solutions are reviewed by experts or the organizers. All our results are achieved with an open model, OpenAI gpt-oss-120b, and can be reproduced with our publicly available code, in contrast to previous best results that required closed frontier models. Our test-time training runs are performed using Tinker, an API by Thinking Machines, with a cost of only a few hundred dollars per problem.",
       "authors": [
-        "Devvrit Khatri",
-        "Lovish Madaan",
-        "Rishabh Tiwari",
-        "Rachit Bansal",
-        "Venkata Sai Surya Subramanyam Duvvuri",
-        "Manzil Zaheer",
-        "Inderjit Dhillon",
-        "David Brandfonbrener",
-        "Rishabh Agarwal"
+        "Mert Yuksekgonul",
+        "Daniel Koceja",
+        "Xinhao Li",
+        "Federico Bianchi",
+        "Jed McCaleb",
+        "Xiaolong Wang",
+        "Jan Kautz",
+        "Yejin Choi",
+        "James Zou",
+        "Carlos Guestrin",
+        "Yu Sun"
       ],
       "published": "2026-01-01T00:00:00Z",
       "updated": "2026-01-01T00:00:00Z",
       "categories": [
-        "ICLR 2026",
-        "Oral"
+        "ICML 2026",
+        "Spotlight"
       ],
-      "primary_category": "ICLR 2026",
-      "abs_url": "https://iclr.cc/virtual/2026/oral/10010608",
-      "pdf_url": "https://iclr.cc/virtual/2026/oral/10010608",
+      "primary_category": "ICML 2026",
+      "abs_url": "https://icml.cc/virtual/2026/poster/65888",
+      "pdf_url": "https://icml.cc/virtual/2026/poster/65888",
       "comment": "",
-      "journal_ref": "ICLR 2026 Oral",
+      "journal_ref": "ICML 2026 Spotlight",
       "source": "conference",
-      "venue": "ICLR",
-      "presentation": "Oral",
+      "venue": "ICML",
+      "presentation": "Spotlight",
       "conference_year": 2026,
       "lane": "llm",
       "scope_matches": [
-        "large language model",
-        "large language models",
-        "language model",
-        "language models",
-        "llms"
+        "llm"
       ],
       "topics": [
         {
           "id": "trustworthy_machine_learning",
           "name": "Trustworthy machine learning",
           "status": "emerging",
-          "score": 0.4554,
+          "score": 0.3804,
           "matched": [
             "learning"
           ]
@@ -1184,31 +958,52 @@
           "id": "positive_unlabeled_learning",
           "name": "Positive-unlabeled learning",
           "status": "emerging",
-          "score": 0.4554,
+          "score": 0.3804,
           "matched": [
             "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1252,
+          "matched": [
+            "time",
+            "analysis"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1141,
+          "matched": [
+            "time"
           ]
         }
       ],
       "scores": {
-        "total": 0.5603,
-        "relevance": 0.4554,
-        "quality": 0.65,
-        "novelty": 0.8432,
+        "total": 0.5659,
+        "relevance": 0.4054,
+        "quality": 0.83,
+        "novelty": 0.8635,
         "freshness": 1.0,
         "feedback_adjustment": 0.0,
         "semantic_feedback": 0.0
       },
       "quality_signals": [
+        "code available",
+        "reproducibility",
         "quantitative results",
         "publication metadata",
-        "conference oral"
+        "conference spotlight"
       ],
       "summary": {
-        "takeaway": "We present the first large-scale systematic study, amounting to more than 400,000 GPU-hours, that defines a principled framework for analyzing and predicting RL scaling in LLMs.",
-        "problem": "Reinforcement learning (RL) has become central to training large language models (LLMs), yet the field lacks predictive scaling methodologies comparable to those established for pre-training.",
-        "method": "Despite rapidly rising compute budgets, there is no principled understanding of how to evaluate algorithmic improvements for scaling RL compute.",
-        "evidence": "Despite rapidly rising compute budgets, there is no principled understanding of how to evaluate algorithmic improvements for scaling RL compute.",
+        "takeaway": "How can we use AI to discover a new state of the art for a scientific problem?",
+        "problem": "How can we use AI to discover a new state of the art for a scientific problem?",
+        "method": "We report results for every problem we attempted, across mathematics, GPU kernel engineering, algorithm design, and biology.",
+        "evidence": "All our results are achieved with an open model, OpenAI gpt-oss-120b, and can be reproduced with our publicly available code, in contrast to previous best results that required closed frontier models.",
         "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
         "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
         "source": "abstract",
@@ -1225,7 +1020,7 @@
         ],
         "lane": "llm"
       },
-      "recommended_at": "2026-11-20T19:05:21.068817+00:00"
+      "recommended_at": "2026-11-27T19:55:59.183776+00:00"
     },
     {
       "id": "conf:acl:2026:691-main",
@@ -1340,6 +1135,196 @@
         "lane": "llm"
       },
       "recommended_at": "2026-11-24T21:09:42.445432+00:00"
+    },
+    {
+      "id": "conf:acl:2026:531-main",
+      "title": "CiteGuard: Faithful Citation Attribution for LLMs via Retrieval-Augmented Validation",
+      "abstract": "Large Language Models (LLMs) have emerged as powerful assistants for scientific writing. However, concerns remain about the quality and reliability of the generated text, including citation accuracy and faithfulness. While most recent work relies on methods such as LLM-as-a-Judge, the reliability of LLM-as-a-Judge alone is also in doubt. In this work, we reframe citation evaluation as a problem of citation attribution alignment, which assesses whether LLM-generated citations match those a human author would include for the same text. We propose CiteGuard, a retrieval-aware agent framework designed to provide more faithful grounding for citation validation. CiteGuard improves over the prior baseline by 10 percentage points and achieves up to 68.1% accuracy on the CiteME benchmark, approaching human performance (69.2%). It also identifies alternative valid citations and demonstrates generalization ability for cross-domain citation attribution.",
+      "authors": [
+        "Yee Man Choi",
+        "Xuehang Guo",
+        "Yi R. Fung",
+        "Qingyun Wang"
+      ],
+      "published": "2026-01-01T00:00:00Z",
+      "updated": "2026-01-01T00:00:00Z",
+      "categories": [
+        "ACL 2026",
+        "Oral"
+      ],
+      "primary_category": "ACL 2026",
+      "abs_url": "https://2026.aclweb.org/program/",
+      "pdf_url": "https://2026.aclweb.org/program/",
+      "comment": "",
+      "journal_ref": "ACL 2026 Oral",
+      "source": "conference",
+      "venue": "ACL",
+      "presentation": "Oral",
+      "conference_year": 2026,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "llm-as-a-judge"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.1475,
+          "matched": [
+            "evaluation"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5576,
+        "relevance": 0.4069,
+        "quality": 0.79,
+        "novelty": 0.8512,
+        "freshness": 1.0,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "baseline comparison",
+        "benchmark evaluation",
+        "quantitative results",
+        "publication metadata",
+        "conference oral"
+      ],
+      "summary": {
+        "takeaway": "We propose CiteGuard, a retrieval-aware agent framework designed to provide more faithful grounding for citation validation.",
+        "problem": "Large Language Models (LLMs) have emerged as powerful assistants for scientific writing.",
+        "method": "We propose CiteGuard, a retrieval-aware agent framework designed to provide more faithful grounding for citation validation.",
+        "evidence": "CiteGuard improves over the prior baseline by 10 percentage points and achieves up to 68.1% accuracy on the CiteME benchmark, approaching human performance (69.2%).",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "llm-as-a-judge"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-24T21:09:42.445432+00:00"
+    },
+    {
+      "id": "2611.26264",
+      "title": "A Statistical Framework for Training Data Auditing of Large Language Models",
+      "abstract": "Training-data auditing asks whether data of interest were used to train a large language model (LLM), a question central to privacy auditing, copyright protection, and benchmark-contamination detection. These concerns are particularly relevant to the use of copyrighted books and scientific papers in pre-training, as well as synthetic text and medical question-answer records in fine-tuning. In practice, training membership signals may be concentrated in only a few passages of a long document, making it important to aggregate evidence within each document without diluting these localized signals. Beyond individual documents, auditing a target collection requires an overall assessment based on the document-level evidence. In this paper, we propose a unified statistical framework for document-level membership inference, target-collection global auditing, and suspicious-subset identification. We integrate complementary chunk-level membership evidence with Cauchy combination to construct document scores for document-level membership inference. The document scores and their calibrated p-values further enable an overall assessment of training-data collection use and the identification of suspicious documents through multiple testing. Under the stated exchangeability conditions, we establish finite-sample validity of document-level p-values, type-I error control for global auditing, and false discovery rate control for subset identification. Case studies on BookTection, Pile-arXiv, Cosmopedia, and HealthCareMagic demonstrate the effectiveness and reliability of the proposed framework in auditing pre-training and fine-tuning data.",
+      "authors": [
+        "Shengjie Niu",
+        "Yeheng Ge",
+        "Jian Huang"
+      ],
+      "published": "2026-11-19T15:34:44Z",
+      "updated": "2026-11-19T15:34:44Z",
+      "categories": [
+        "stat.ML",
+        "cs.LG",
+        "stat.AP"
+      ],
+      "primary_category": "stat.ML",
+      "abs_url": "https://arxiv.org/abs/2611.26264v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.26264v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.6017,
+          "matched": [
+            "auditing"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.2137,
+          "matched": [
+            "inference",
+            "data"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1805,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5544,
+        "relevance": 0.5602,
+        "quality": 0.4,
+        "novelty": 0.8257,
+        "freshness": 0.5541,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "benchmark evaluation"
+      ],
+      "summary": {
+        "takeaway": "In this paper, we propose a unified statistical framework for document-level membership inference, target-collection global auditing, and suspicious-subset identification.",
+        "problem": "Training-data auditing asks whether data of interest were used to train a large language model (LLM), a question central to privacy auditing, copyright protection, and benchmark-contamination detection.",
+        "method": "In this paper, we propose a unified statistical framework for document-level membership inference, target-collection global auditing, and suspicious-subset identification.",
+        "evidence": "Case studies on BookTection, Pile-arXiv, Cosmopedia, and HealthCareMagic demonstrate the effectiveness and reliability of the proposed framework in auditing pre-training and fine-tuning data.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "auditing"
+        ],
+        "lane": "llm"
+      },
+      "recommended_at": "2026-11-22T18:29:29.101544+00:00"
     }
   ]
 }
