@@ -1,0 +1,758 @@
+{
+  "schema_version": 1,
+  "demo": false,
+  "generated_at": "2026-11-28T18:54:52.212507+00:00",
+  "profile_updated_at": "2026-08-23",
+  "content_language": "zh",
+  "source_count": 460,
+  "source_total": 460,
+  "source_lookback_days": 4,
+  "source_truncated": false,
+  "unseen_source_count": 460,
+  "previously_recommended_count": 530,
+  "eligible_count": 14,
+  "feedback_count": 0,
+  "topic_feedback": {
+    "enabled": true,
+    "generated_at": "2026-11-28T18:54:52.212507+00:00",
+    "feedback_records": 0,
+    "latest_feedback_papers": 0,
+    "labeled_papers": 0,
+    "adjusted_topics": 0,
+    "minimum_effective_samples": 4.0,
+    "topics": [
+      {
+        "id": "functional_time_series",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "long_run_covariance_estimation",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "bandwidth_selection",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "time_series_inference",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 0.3,
+        "effective_weight": 0.3,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "trustworthy_machine_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "positive_unlabeled_learning",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      },
+      {
+        "id": "conformal_prediction",
+        "useful": 0.0,
+        "irrelevant": 0.0,
+        "samples": 0.0,
+        "effective_samples": 0.0,
+        "hit_rate": null,
+        "smoothed_hit_rate": 0.5,
+        "confidence": 0.0,
+        "base_weight": 1.0,
+        "effective_weight": 1.0,
+        "adjustment": 0.0,
+        "active": false
+      }
+    ]
+  },
+  "semantic_feedback_count": 0,
+  "minimum_daily_target": 3,
+  "minimum_daily_met": true,
+  "conference_supplement_count": 0,
+  "conference_eligible_count": 0,
+  "conference_pool_updated_at": null,
+  "conference_source_status": {},
+  "papers": [
+    {
+      "id": "2611.33622",
+      "title": "How Many Sources, Not Just How Many Problems: Planning the Precision of LLM Evaluations from Earlier Results",
+      "abstract": "When benchmark problems share sources, such as variants of one template or tasks from one repository, an evaluation budget must fix the number of sources as well as the number of problems. We ask whether pilot data or earlier evaluation results can predict, before an evaluation is run, how much the standard deviation (SD) of the score grows when the same budget is concentrated on fewer sources. We use the classical design effect with an intraclass correlation estimated on data disjoint from those used to check the prediction. On GSM-Symbolic, 100 problems drawn as 10 templates x 10 variants have an SD of 9.2 pp against 2.7 pp from 100 templates; pilot data on 15 other questions predict the ratio as 3.49 against 3.52 measured on held-out questions (medians over 20 splits; single splits err by -13% to +16%), once the actual sampling plan is included. On SWE-bench Verified, 10 randomly selected public submissions predict the median ratio for 119 other submissions within 3% for 2 or more repositories, and 3 submissions are nearly as good. Dropping the finite-population terms from the design prediction gives errors of 13-21% on GSM-Symbolic, where it reduces to the textbook formula, and 25-35% on SWE-bench. Widening iid intervals by the square root of the pilot design effect brings pass@1 coverage on concentrated designs to 0.93-0.98, but not pass@16 (0.85, 0.76). We also report two lessons for anyone validating such predictions: split pilot and held-out data by question source, not by difficulty version, and do not read a good fit of the formula as evidence of source clustering (MATH-500). The method is not new; we contribute a held-out test of its advance predictions and a recipe for using them. Code: https://github.com/Guang627/deff-eval",
+      "authors": [
+        "Guang Qiu"
+      ],
+      "published": "2026-11-25T01:53:37Z",
+      "updated": "2026-11-25T01:53:37Z",
+      "categories": [
+        "stat.ME",
+        "stat.ML"
+      ],
+      "primary_category": "stat.ME",
+      "abs_url": "https://arxiv.org/abs/2611.33622v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.33622v1",
+      "comment": "13 pages, 4 figures, 6 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.5055,
+          "matched": [
+            "prediction",
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.081,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.081,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5458,
+        "relevance": 0.4368,
+        "quality": 0.78,
+        "novelty": 0.8233,
+        "freshness": 0.4701,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "When benchmark problems share sources, such as variants of one template or tasks from one repository, an evaluation budget must fix the number of sources as well as the number of problems.",
+        "problem": "When benchmark problems share sources, such as variants of one template or tasks from one repository, an evaluation budget must fix the number of sources as well as the number of problems.",
+        "method": "We ask whether pilot data or earlier evaluation results can predict, before an evaluation is run, how much the standard deviation (SD) of the score grows when the same budget is concentrated on fewer sources.",
+        "evidence": "We use the classical design effect with an intraclass correlation estimated on data disjoint from those used to check the prediction.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Functional time series.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "prediction",
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.34190",
+      "title": "SOLO: Towards Sample-Faithful and Detectable LLM Watermarking under Repeated Sampling via Content-Anchored Single-Owner Contexts",
+      "abstract": "Providers watermark the outputs of large language models, while applications sample many responses per prompt for self-consistency, best-of-n selection, and uncertainty estimation. We show that deployed configurations of distortion-free watermarks, which deduplicate keyed contexts only within a response, couple the responses of a request: answer templates make all responses query the watermark with the same context before the answer, so collisions across responses, usually assumed rare, become the norm. Key pools reduce or avoid the coupling at the cost of multiple testing, and the exact remedy of a context history shared across the request leaves many positions unwatermarked. We propose SOLO, which keeps a request-scoped context history but anchors its keyed contexts on content selected by min-hash, so that siblings rarely compete for a context and random edits stay local. Its responses are jointly distributed as independent unwatermarked responses, each detectable with a single key. On five language models from three families and three benchmarks, SOLO preserves self-consistency and uncertainty estimation and, at a 1% false positive rate, detects more responses than four-token key pools on most tasks, also after randomly editing 10% of the tokens, and more than the context history on most clean tasks. Code is available at https://github.com/ZhongliangGuo/solo-watermark.",
+      "authors": [
+        "Zhongliang Guo",
+        "Yan Lin",
+        "Yifei Qian",
+        "Shuai Zhao",
+        "Luwei Xiao",
+        "Daizong Liu",
+        "Chun Pong Lau"
+      ],
+      "published": "2026-11-25T11:19:40Z",
+      "updated": "2026-11-25T11:19:40Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2611.34190v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34190v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.0833,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "bandwidth_selection",
+          "name": "Bandwidth selection",
+          "status": "emerging",
+          "score": 0.0458,
+          "matched": [
+            "selection"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.5331,
+        "relevance": 0.4104,
+        "quality": 0.78,
+        "novelty": 0.8397,
+        "freshness": 0.5263,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "GitHub link",
+        "benchmark evaluation",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "We show that deployed configurations of distortion-free watermarks, which deduplicate keyed contexts only within a response, couple the responses of a request: answer templates make all responses query the watermark with the same context before the answer, so collisions across responses, usually assumed rare, become the norm.",
+        "problem": "Providers watermark the outputs of large language models, while applications sample many responses per prompt for self-consistency, best-of-n selection, and uncertainty estimation.",
+        "method": "We propose SOLO, which keeps a request-scoped context history but anchors its keyed contexts on content selected by min-hash, so that siblings rarely compete for a context and random edits stay local.",
+        "evidence": "Key pools reduce or avoid the coupling at the cost of multiple testing, and the exact remedy of a context history shared across the request leaves many positions unwatermarked.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Long-run covariance estimation.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "uncertainty"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.33788",
+      "title": "InterGenEHR$^+$: An Interactive Framework for Natural Language-Conditioned Generation of Longitudinal Patient Trajectories",
+      "abstract": "Objective: To develop and validate InterGenEHR$^+$, an interactive framework for natural language-conditioned generation of synthetic tabular electronic health records (EHRs) and longitudinal trajectories for scenario-based evaluation of machine learning models. Methods: An optional large language model (LLM) parser converts clinical requests into structured constraints. Conditional variational autoencoders and diffusion models generate single-time-point records, while diffusion models generate longitudinal trajectories. We evaluate parsing, distributional fidelity, imputation, clinical-constraint adherence, mortality prediction, and clinical plausibility using a multi-institutional cohort of 874 patients receiving venovenous extracorporeal membrane oxygenation (VV-ECMO). Results: Gemma 3 4B with few-shot prompting achieves the highest parsing performance with a low spurious slot rate. IGE-TabDDPM and IGE-PMVAE perform well in single-time-point generation; IGE-CSDI, IGE-FGTI, and IGE-MTSCI lead on different longitudinal fidelity metrics. Across five random seeds and three classifiers, synthetic cohorts retain predictive utility for mortality prediction on real test data. Clinician ratings support trajectory plausibility and alignment with requested scenarios. Conclusion: InterGenEHR$^+$ supports clinician-specified generation of EHR trajectories with statistical fidelity and downstream predictive utility in the evaluated VV-ECMO cohort. Extension to other clinical settings requires further validation. Significance: The framework supports scenario-based evaluation of machine learning models in data-sparse critical care settings.",
+      "authors": [
+        "Yu Yang",
+        "Jiafeng Song",
+        "Baraa F Abed",
+        "Christina Creel",
+        "Sagar B Dave",
+        "Henry Foote",
+        "Lisa Lima",
+        "Victor Moas",
+        "Craig S Jabaley",
+        "Rishikesan Kamaleswaran",
+        "Pan Xu"
+      ],
+      "published": "2026-11-25T05:13:55Z",
+      "updated": "2026-11-25T05:13:55Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "primary_category": "cs.AI",
+      "abs_url": "https://arxiv.org/abs/2611.33788v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.33788v1",
+      "comment": "31 pages including appendices, 2 figures. Author-accepted version of an article published in IEEE Transactions on Biomedical Engineering",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "language model",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3778,
+          "matched": [
+            "learning",
+            "machine"
+          ]
+        },
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.3752,
+          "matched": [
+            "prediction",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.2194,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.1118,
+          "matched": [
+            "time",
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1118,
+          "matched": [
+            "time",
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.497,
+        "relevance": 0.4212,
+        "quality": 0.55,
+        "novelty": 0.8876,
+        "freshness": 0.49,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Objective: To develop and validate InterGenEHR$^+$, an interactive framework for natural language-conditioned generation of synthetic tabular electronic health records (EHRs) and longitudinal trajectories for scenario-based evaluation of machine learning models.",
+        "problem": "Objective: To develop and validate InterGenEHR$^+$, an interactive framework for natural language-conditioned generation of synthetic tabular electronic health records (EHRs) and longitudinal trajectories for scenario-based evaluation of machine learning models.",
+        "method": "Objective: To develop and validate InterGenEHR$^+$, an interactive framework for natural language-conditioned generation of synthetic tabular electronic health records (EHRs) and longitudinal trajectories for scenario-based evaluation of machine learning models.",
+        "evidence": "Results: Gemma 3 4B with few-shot prompting achieves the highest parsing performance with a low spurious slot rate.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning",
+          "machine"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.34656",
+      "title": "Do We Still Need Reinforcement Learning When We Can Read the World Model?",
+      "abstract": "Reinforcement learning has achieved remarkable success in sequential decision-making, but learning effective policies often requires substantial interaction experience. Model-based reinforcement learning alleviates this dependence by leveraging world models, which are typically used to support planning or policy optimization. In this paper, we investigate an alternative paradigm in which autonomous LLM-based coding agents directly synthesize control policies by reasoning over readable world models. By examining environment source code, these agents translate environmental knowledge into executable decision rules and iteratively refine their policies using online feedback or offline data, without task-specific RL training. Experiments across diverse decision-making benchmarks show that synthesized policies match or outperform conventional RL methods while requiring substantially less experience. Further analyses reveal interpretable decision rules and how they evolve through feedback-driven refinement. Comparisons with policies generated without source code access and experiments under challenging conditions further demonstrate the benefits of readable world models. These findings suggest that direct policy synthesis can reduce reliance on trial and error, challenging the necessity of task-specific RL training.",
+      "authors": [
+        "Mingchao Zhang",
+        "Miduo Cui",
+        "Kangze He",
+        "Yuanjun Li",
+        "Dapeng Li",
+        "Ce Zhang",
+        "Chuanchen Luo",
+        "Xue Yan",
+        "Mingzhe Xing",
+        "Zhumin Chen",
+        "Hangyu Mao",
+        "Bin Zhang",
+        "Zhiwei Xu"
+      ],
+      "published": "2026-11-25T16:29:37Z",
+      "updated": "2026-11-25T16:29:37Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "primary_category": "cs.LG",
+      "abs_url": "https://arxiv.org/abs/2611.34656v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.34656v1",
+      "comment": "44 pages, 10 figures, 24 tables",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "trustworthy_machine_learning",
+          "name": "Trustworthy machine learning",
+          "status": "emerging",
+          "score": 0.3807,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "positive_unlabeled_learning",
+          "name": "Positive-unlabeled learning",
+          "status": "emerging",
+          "score": 0.3807,
+          "matched": [
+            "learning"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.0278,
+          "matched": [
+            "data"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.0278,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4825,
+        "relevance": 0.3863,
+        "quality": 0.6,
+        "novelty": 0.8357,
+        "freshness": 0.557,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "benchmark evaluation",
+        "experiments"
+      ],
+      "summary": {
+        "takeaway": "Reinforcement learning has achieved remarkable success in sequential decision-making, but learning effective policies often requires substantial interaction experience.",
+        "problem": "Reinforcement learning has achieved remarkable success in sequential decision-making, but learning effective policies often requires substantial interaction experience.",
+        "method": "Model-based reinforcement learning alleviates this dependence by leveraging world models, which are typically used to support planning or policy optimization.",
+        "evidence": "Experiments across diverse decision-making benchmarks show that synthesized policies match or outperform conventional RL methods while requiring substantially less experience.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Trustworthy machine learning, Positive-unlabeled learning.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Trustworthy machine learning",
+        "matched": [
+          "learning"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.33493",
+      "title": "Joint Estimation of Abilities and Item Parameters for Large Language Models Using Probability and Binary Responses: A Fractional-Response IRT Framework",
+      "abstract": "Large language model (LLM) evaluations provide two response types: probabilities assigned to correct answers and binary indicators of correctness. Restricting evaluation to one type narrows the range of available models or discards probability information. We propose a method to integrate both types through a common two-parameter logistic item response model and fractional-response quasi-maximum likelihood estimation. The framework includes binary-only models in common-scale evaluation without discarding available probabilityinformation; broader measurement coverage does not by itself ensure greater precision or measurement equivalence. Simulations evaluate statistical efficiency when both response types have the same expected value. Moreover, adding probability respondents improves item calibration more efficiently than adding binary respondents. However, adding noisier binary responses to an already precise probability sample can increase estimation error under equal observation weights. An application to Massive Multitask Language Understanding (MMLU) combines probability response data from the Open LLM Leaderboard with binary response data from Holistic Evaluation of Language Models (HELM) and reveals model-family response patterns, differences in item characteristics, and systematic ability shifts between evaluation protocols. The proposed framework extends common-scale IRT evaluation to models with different response formats while highlighting the roles of observation variability and evaluation-protocol comparability in statistical efficiency and interpretation.",
+      "authors": [
+        "Masayuki Takayama",
+        "Shohei Shimizu"
+      ],
+      "published": "2026-11-24T22:15:52Z",
+      "updated": "2026-11-24T22:15:52Z",
+      "categories": [
+        "stat.ME",
+        "cs.AI"
+      ],
+      "primary_category": "stat.ME",
+      "abs_url": "https://arxiv.org/abs/2611.33493v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.33493v1",
+      "comment": "",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "large language model",
+        "large language models",
+        "language model",
+        "language models",
+        "llm"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4717,
+          "matched": [
+            "evaluation",
+            "evaluations"
+          ]
+        },
+        {
+          "id": "time_series_inference",
+          "name": "Time series inference",
+          "status": "emerging",
+          "score": 0.1981,
+          "matched": [
+            "data",
+            "estimation"
+          ]
+        },
+        {
+          "id": "long_run_covariance_estimation",
+          "name": "Long-run covariance estimation",
+          "status": "emerging",
+          "score": 0.1607,
+          "matched": [
+            "estimation"
+          ]
+        },
+        {
+          "id": "functional_time_series",
+          "name": "Functional time series",
+          "status": "emerging",
+          "score": 0.082,
+          "matched": [
+            "data"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4664,
+        "relevance": 0.4491,
+        "quality": 0.33,
+        "novelty": 0.86,
+        "freshness": 0.4485,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [],
+      "summary": {
+        "takeaway": "We propose a method to integrate both types through a common two-parameter logistic item response model and fractional-response quasi-maximum likelihood estimation.",
+        "problem": "Large language model (LLM) evaluations provide two response types: probabilities assigned to correct answers and binary indicators of correctness.",
+        "method": "We propose a method to integrate both types through a common two-parameter logistic item response model and fractional-response quasi-maximum likelihood estimation.",
+        "evidence": "Moreover, adding probability respondents improves item calibration more efficiently than adding binary respondents.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction, Time series inference.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      }
+    },
+    {
+      "id": "2611.33428",
+      "title": "When the Knowledge Runs Out: A Part-Level Pilot Evaluation of How Language Models Handle Partially Covered Questions",
+      "abstract": "Assistants that answer from supplied reference material often receive material that covers some parts of a user's question and not others. Existing evaluations of insufficient context mostly score one answer per question, and often treat partially sufficient context as simply insufficient. We describe a small, open evaluation that scores each part of a three-part question separately, with a verdict for parts that are answered correctly from the material but carry an added unsupported claim. On 30 cases (five scenarios, six coverage patterns, five samples each) we test claude-haiku-4-5 and llama3.1:8b. Without an explicit instruction to stay within the material, both models fill most gaps from their own knowledge (unsupported-claim rates of 0.71 and 0.90). One added sentence instructing them to answer only from the material brings these rates to 0.00 and 0.06, consistent with prior work. What remains is less visible: answers that strengthen the material, for example turning \"many job sites prohibit bots\" into a flat \"no\". We also report on the judge. Three rounds of blind hand labelling show that this added-claim verdict is the hardest to apply, for the judge and the author alike; RAGAS faithfulness is unsuitable for this task because it penalises correct withholding; and a difference between the two models that is clear under one judge disappears when the judge model is replaced. The dataset, code, hand labels and per-run figures are public.",
+      "authors": [
+        "Vahid Mohammadi"
+      ],
+      "published": "2026-11-24T20:51:15Z",
+      "updated": "2026-11-24T20:51:15Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "primary_category": "cs.CL",
+      "abs_url": "https://arxiv.org/abs/2611.33428v1",
+      "pdf_url": "https://arxiv.org/pdf/2611.33428v1",
+      "comment": "8 pages, 4 tables. Code and data: https://github.com/vaahiiid/partial-knowledge-eval",
+      "journal_ref": "",
+      "source": "arxiv",
+      "venue": "",
+      "presentation": "",
+      "conference_year": null,
+      "lane": "llm",
+      "scope_matches": [
+        "language model",
+        "language models"
+      ],
+      "topics": [
+        {
+          "id": "conformal_prediction",
+          "name": "Conformal prediction",
+          "status": "emerging",
+          "score": 0.4635,
+          "matched": [
+            "evaluation",
+            "evaluations"
+          ]
+        }
+      ],
+      "scores": {
+        "total": 0.4655,
+        "relevance": 0.3708,
+        "quality": 0.59,
+        "novelty": 0.8449,
+        "freshness": 0.4401,
+        "feedback_adjustment": 0.0,
+        "semantic_feedback": 0.0
+      },
+      "quality_signals": [
+        "code available",
+        "dataset evidence",
+        "quantitative results"
+      ],
+      "summary": {
+        "takeaway": "Assistants that answer from supplied reference material often receive material that covers some parts of a user's question and not others.",
+        "problem": "Assistants that answer from supplied reference material often receive material that covers some parts of a user's question and not others.",
+        "method": "Existing evaluations of insufficient context mostly score one answer per question, and often treat partially sufficient context as simply insufficient.",
+        "evidence": "We describe a small, open evaluation that scores each part of a three-part question separately, with a verdict for parts that are answered correctly from the material but carry an added unsupported claim.",
+        "limitations": "The abstract does not state complete limitations; verify the experimental setup, baselines, and scope before relying on the result.",
+        "why_for_you": "Matches your research profile: Conformal prediction.",
+        "source": "abstract",
+        "generated_by": "extractive",
+        "language": "en",
+        "schema_version": 3,
+        "prompt_version": 0
+      },
+      "analysis_status": "pending",
+      "recommendation_reason": {
+        "topic": "Conformal prediction",
+        "matched": [
+          "evaluation",
+          "evaluations"
+        ],
+        "lane": "llm"
+      }
+    }
+  ]
+}
